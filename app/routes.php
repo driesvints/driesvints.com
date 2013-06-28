@@ -1,4 +1,4 @@
 <?php
 
-Route::get('/', array('as' => 'home', 'uses' => 'DriesVints\\Controllers\\HomeController@index'));
-Route::resource('posts', 'DriesVints\\Controllers\\PostsController');
+Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
+Route::resource('posts', 'PostsController');

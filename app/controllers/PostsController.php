@@ -1,6 +1,6 @@
-<?php namespace DriesVints\Controllers;
+<?php
 
-use DriesVints\Models\Post;
+use Models\Post;
 
 class PostsController extends BaseController {
 
