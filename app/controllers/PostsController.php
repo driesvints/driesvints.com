@@ -37,10 +37,10 @@ class PostsController extends BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  \Models\Post  $post
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(Post $post)
 	{
 		//
 	}
@@ -48,10 +48,10 @@ class PostsController extends BaseController {
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  \Models\Post  $post
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit(Post $post)
 	{
 		//
 	}
@@ -59,10 +59,10 @@ class PostsController extends BaseController {
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param  \Models\Post  $post
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Post $post)
 	{
 		//
 	}
@@ -70,10 +70,10 @@ class PostsController extends BaseController {
 	/**
 	 * Remove the specified resource from storage.
 	 *
-	 * @param  int  $id
+	 * @param  \Models\Post  $post
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(Post $post)
 	{
 		//
 	}

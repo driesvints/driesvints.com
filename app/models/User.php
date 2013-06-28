@@ -1,4 +1,4 @@
-<?php namespace DriesVints\Models;
+<?php namespace Models;
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
