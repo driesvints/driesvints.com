@@ -1,4 +1,4 @@
-<?php
+<?php namespace DriesVints\Controllers;
 
 class BaseController extends Controller {
 
