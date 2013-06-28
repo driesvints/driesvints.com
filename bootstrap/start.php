@@ -28,7 +28,7 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('your-machine-name'),
+	'local' => array('MacBook-Air-of-Dries-Vints-2.local', '*.loc'),
 
 ));
 
