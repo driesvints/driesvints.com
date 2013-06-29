@@ -16,7 +16,7 @@ Route::model('post', 'Models\\Post');
 
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
 
-Route::group(array('before' => 'auth'), function()
+Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 {
 	Route::resource('post', 'PostsController', array('except' => array('show')));
 });
