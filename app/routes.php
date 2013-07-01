@@ -51,4 +51,4 @@ Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 	Route::resource('post', 'PostsController', array('except' => array('show')));
 });
 
-Route::get('post/{post}', array('as' => 'post.show', 'uses' => 'PostsController@show'));
+Route::resource('blog', 'BlogController', array('only' => array('index', 'show')));

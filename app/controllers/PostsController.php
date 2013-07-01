@@ -35,17 +35,6 @@ class PostsController extends BaseController {
 	}
 
 	/**
-	 * Display the specified resource.
-	 *
-	 * @param  \Models\Post  $post
-	 * @return Response
-	 */
-	public function show(Post $post)
-	{
-		//
-	}
-
-	/**
 	 * Show the form for editing the specified resource.
 	 *
 	 * @param  \Models\Post  $post
