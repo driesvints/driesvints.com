@@ -7,22 +7,24 @@ class BlogController extends BaseController {
 	/**
 	 * Display a listing of the resource.
 	 *
-	 * @return Response
+	 * @return \Illuminate\View\View
 	 */
 	public function index()
 	{
-		return 'My latest blog posts.';
+		$posts = Post::all();
+
+		return View::make('blog.index', compact('posts'));
 	}
 
 	/**
 	 * Display the specified resource.
 	 *
 	 * @param  \Models\Post  $post
-	 * @return Response
+	 * @return \Illuminate\View\View
 	 */
 	public function show(Post $post)
 	{
-		return 'A specific blog post.';
+		return View::make('blog.show', compact('post'));
 	}
 
 }
