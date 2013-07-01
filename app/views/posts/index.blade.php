@@ -19,4 +19,6 @@
 		@endforeach
 	</tbody>
 </table>
+@else
+<p>No posts created yet.</p>
 @endif
