@@ -17,30 +17,9 @@ Route::model('blog', 'Models\\Post');
 
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
 
-Route::get('login', array('as' => 'login', function()
-{
-	return View::make('login');
-}));
-Route::post('login', function()
-{
-	$credentials = array(
-		'email'    => Input::get('email'),
-		'password' => Input::get('password'),
-	);
-
-	if (Auth::attempt($credentials))
-	{
-		return Redirect::route('admin');
-	}
-
-	return Redirect::back()->withInput()->withErrors;
-});
-Route::get('logout', array('as' => 'logout', function()
-{
-	Auth::logout();
-
-	return Redirect::route('home');
-}));
+Route::get('login', array('as' => 'login', 'uses' => 'AuthController@getLogin'));
+Route::post('login', 'AuthController@postLogin');
+Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));
 
 Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 {
