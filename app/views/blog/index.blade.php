@@ -2,7 +2,7 @@
 
 @if (count($posts))
 	@foreach ($posts as $post)
-	<h2>{{ $post->title }}</h2>
+	<h2>{{ HTML::linkRoute('blog.show', $post->title, $post->id) }}</h2>
 
 	{{ $post->body }}
 	@endforeach
