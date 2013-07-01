@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 */
 
-Route::model('post', 'Models\\Post');
+Route::model('posts', 'Models\\Post');
 Route::model('blog', 'Models\\Post');
 
 /*
@@ -27,5 +27,5 @@ Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 {
 	Route::get('/', array('as' => 'admin', 'uses' => 'AdminController@index'));
 
-	Route::resource('post', 'PostsController', array('except' => array('show')));
+	Route::resource('posts', 'PostsController', array('except' => array('show')));
 });
