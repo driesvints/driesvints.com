@@ -6,6 +6,11 @@
 </p>
 
 <p>
+	{{ Form::label('slug') }}
+	{{ Form::text('slug') }}
+</p>
+
+<p>
 	{{ Form::label('body') }}
 	{{ Form::textarea('body') }}
 </p>

@@ -35,7 +35,7 @@ class PostsController extends BaseController {
 	{
 		$post = new Post;
 		$post->title = Input::get('title');
-		$post->slug = Str::slug($post->title);
+		$post->slug = Input::get('slug') ?: Str::slug($post->title);
 		$post->body = Input::get('body');
 		$post->save();
 
@@ -62,6 +62,7 @@ class PostsController extends BaseController {
 	public function update(Post $post)
 	{
 		$post->title = Input::get('title');
+		$post->slug = Input::get('slug') ?: Str::slug($post->title);
 		$post->body = Input::get('body');
 		$post->save();
 
