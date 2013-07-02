@@ -1,3 +1,7 @@
+<h1>Posts</h1>
+
+<p>{{ HTML::linkRoute('admin', 'Return to dashboard') }}</p>
+
 <p>{{ HTML::linkRoute('admin.posts.create', 'Create post') }}</p>
 
 @if (count($posts))
@@ -14,7 +18,10 @@
 		<tr>
 			<td>{{ $post->title }}</td>
 			<td>{{ $post->created_at }}</td>
-			<td>{{ HTML::linkRoute('admin.posts.edit', 'Edit post', $post->id) }}</td>
+			<td>
+				{{ HTML::linkRoute('blog.show', 'View post', $post->id, array('target' => '_blank')) }}
+				{{ HTML::linkRoute('admin.posts.edit', 'Edit post', $post->id) }}
+			</td>
 		</tr>
 		@endforeach
 	</tbody>

@@ -10,7 +10,7 @@
 	{{ Form::textarea('body') }}
 </p>
 
-{{ Form::submit() }}
 {{ HTML::linkRoute('admin.posts.index', 'cancel') }}
+{{ Form::submit() }}
 
 {{ Form::close() }}
