@@ -37,6 +37,14 @@ class PostsController extends BaseController {
 		$post->title = Input::get('title');
 		$post->slug = Input::get('slug') ?: Str::slug($post->title);
 		$post->body = Input::get('body');
+
+		if ( ! $post->validate())
+		{
+			return Redirect::back()
+				->withInput()
+				->withErrors($post->getErrors());
+		}
+
 		$post->save();
 
 		return Redirect::route('admin.posts.edit', $post->id);
@@ -64,6 +72,14 @@ class PostsController extends BaseController {
 		$post->title = Input::get('title');
 		$post->slug = Input::get('slug') ?: Str::slug($post->title);
 		$post->body = Input::get('body');
+
+		if ( ! $post->validate())
+		{
+			return Redirect::back()
+				->withInput()
+				->withErrors($post->getErrors());
+		}
+
 		$post->save();
 
 		return Redirect::route('admin.posts.edit', $post->id);

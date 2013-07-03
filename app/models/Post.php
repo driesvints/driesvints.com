@@ -1,8 +1,6 @@
 <?php namespace Models;
 
-use Eloquent;
-
-class Post extends Eloquent {
+class Post extends BaseModel {
 
 	/**
 	 * The table associated with the model.
@@ -10,5 +8,18 @@ class Post extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'posts';
+
+	/**
+	 * Sets the validation rules on the model.
+	 *
+	 * @return void
+	 */
+	protected function setUpValidationRules()
+	{
+		static::$rules = array(
+			'title' => 'required',
+			'slug'  => 'required|unique:posts,slug,' . $this->id,
+		);
+	}
 
 }

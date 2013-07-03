@@ -3,11 +3,13 @@
 <p>
 	{{ Form::label('title') }}
 	{{ Form::text('title') }}
+	{{ $errors->first('title') }}
 </p>
 
 <p>
 	{{ Form::label('slug') }}
 	{{ Form::text('slug') }}
+	{{ $errors->first('slug') }}
 </p>
 
 <p>

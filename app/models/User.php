@@ -1,10 +1,9 @@
 <?php namespace Models;
 
-use Eloquent;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	/**
 	 * The database table used by the model.
@@ -59,6 +58,21 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function setPasswordAttribute($password)
 	{
 		$this->attributes['password'] = \Hash::make($password);
+	}
+
+	/**
+	 * Sets the validation rules on the model.
+	 *
+	 * @return void
+	 */
+	protected function setUpValidationRules()
+	{
+		static::$rules = array(
+			'email'      => 'required|email|unique:users,email,'.$this->id,
+			'password'   => 'required|confirmed',
+			'first_name' => 'required',
+			'last_name'  => 'required', 
+		);
 	}
 
 }
