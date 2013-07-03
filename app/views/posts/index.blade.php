@@ -9,6 +9,7 @@
 	<thead>
 		<tr>
 			<th>Title</th>
+			<th>Slug</th>
 			<th>Created at</th>
 			<th>Actions</th>
 		</tr>
@@ -17,6 +18,7 @@
 		@foreach($posts as $post)
 		<tr>
 			<td>{{ $post->title }}</td>
+			<td>{{ $post->slug }}</td>
 			<td>{{ $post->created_at }}</td>
 			<td>
 				{{ HTML::linkRoute('blog.show', 'View post', $post->id, array('target' => '_blank')) }}
