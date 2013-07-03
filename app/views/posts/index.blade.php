@@ -15,7 +15,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		@foreach($posts as $post)
+		@foreach ($posts as $post)
 		<tr>
 			<td>{{ $post->title }}</td>
 			<td>{{ $post->slug }}</td>
