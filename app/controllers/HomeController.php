@@ -1,15 +1,19 @@
 <?php
 
+use Models\Post;
+
 class HomeController extends BaseController {
 
 	/**
-	 * Display a listing of the resource.
+	 * Display the homepage.
 	 *
-	 * @return Response
+	 * @return \Illuminate\View\View
 	 */
 	public function index()
 	{
-		return 'Hello, World!';
+		$posts = Post::orderBy('created_at', 'desc')->take(5)->get();
+
+		return View::make('index', compact('posts'));
 	}
 
 }
