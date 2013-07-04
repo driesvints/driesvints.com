@@ -2,9 +2,9 @@
 
 @if (count($posts))
 	@foreach ($posts as $post)
-	<h2>{{ HTML::linkRoute('blog.show', $post->title, $post->id) }}</h2>
+	<h2>{{ HTML::link($post->slug(), $post->title()) }}</h2>
 
-	{{ $post->body }}
+	{{ $post->body() }}
 	@endforeach
 @else
 <p>No posts to show.</p>

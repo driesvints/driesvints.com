@@ -3,7 +3,8 @@
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
 	"require": {
-		"laravel/framework": "4.0.*"
+		"laravel/framework": "4.0.*",
+		"daylerees/kurenai": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -11,7 +12,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+			"app/Posts"
 		]
 	},
 	"scripts": {
