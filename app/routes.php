@@ -7,7 +7,14 @@
 */
 
 Route::model('posts', 'Models\\Post');
-Route::model('blog', 'Models\\Post');
+Route::bind('blog', function($value)
+{
+	$manager = new Posts\PostManager(get_posts());
+
+	if ($post = $manager->findBySlug($value)) return $post;
+
+	App::abort(404);
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +24,8 @@ Route::model('blog', 'Models\\Post');
 
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
 
-Route::resource('blog', 'BlogController', array('only' => array('index', 'show')));
+Route::get('blog', array('as' => 'blog.index', 'uses' => 'BlogController@index'));
+Route::get('blog/{blog}', array('as' => 'blog.show', 'uses' => 'BlogController@show'));
 
 Route::get('login', array('as' => 'login', 'uses' => 'AuthController@getLogin'));
 Route::post('login', 'AuthController@postLogin');

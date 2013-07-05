@@ -130,4 +130,20 @@ class PostManager {
 		return $this->posts;
 	}
 
+	/**
+	 * Tries to find and return a post by its slug.
+	 *
+	 * @param  string  $slug
+	 * @return \Posts\PostRepositoryInterface
+	 */
+	public function findBySlug($slug)
+	{
+		$results = $this->posts->filter(function($post) use ($slug)
+		{
+			return $post->slug() === $slug;
+		});
+
+		return $results->first();
+	}
+
 }
