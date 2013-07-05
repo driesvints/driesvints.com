@@ -31,9 +31,7 @@ class BlogController extends BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::all()->all();
-
-		$this->manager->addMultiple($posts);
+		$this->manager->addMultiple(get_posts());
 
 		$posts = $this->manager->all();
 
@@ -43,10 +41,10 @@ class BlogController extends BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  \Models\Post  $post
+	 * @param  \Posts\PostRepositoryInterface  $post
 	 * @return \Illuminate\View\View
 	 */
-	public function show(Post $post)
+	public function show(PostRepositoryInterface $post)
 	{
 		return View::make('blog.show', compact('post'));
 	}
