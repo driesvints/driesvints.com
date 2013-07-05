@@ -131,6 +131,17 @@ class PostManager {
 	}
 
 	/**
+	 * Take the first {$limit} posts.
+	 *
+	 * @param  int  $limit
+	 * @return \Illuminate\Support\Collection
+	 */
+	public function take($limit)
+	{
+		return $this->posts->slice(0, $limit);
+	}
+
+	/**
 	 * Tries to find and return a post by its slug.
 	 *
 	 * @param  string  $slug
