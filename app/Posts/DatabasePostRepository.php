@@ -2,7 +2,7 @@
 
 use Models\Post;
 
-class DatabasePostRepository implements PostRepositoryInterface {
+class DatabasePostRepository extends BasePostRepository implements PostRepositoryInterface {
 
 	/**
 	 * The Post Model.
@@ -45,11 +45,12 @@ class DatabasePostRepository implements PostRepositoryInterface {
 	/**
 	 * Returns the post date.
 	 *
+	 * @param  string  $format
 	 * @return string
 	 */
-	public function date()
+	public function date($format = 'Y/m/d H:i:s')
 	{
-		return $this->post->created_at;
+		return $this->formatDate($this->post->created_at, $format);
 	}
 
 	/**

@@ -2,7 +2,7 @@
 
 use Kurenai\DocumentParser;
 
-class MarkdownPostRepository implements PostRepositoryInterface {
+class MarkdownPostRepository extends BasePostRepository implements PostRepositoryInterface {
 
 	/**
 	 * The Kurenai Markdown parser.
@@ -78,11 +78,12 @@ class MarkdownPostRepository implements PostRepositoryInterface {
 	/**
 	 * Returns the post date.
 	 *
+	 * @param  string  $format
 	 * @return string
 	 */
-	public function date()
+	public function date($format = 'Y/m/d H:i:s')
 	{
-		return $this->meta('date');
+		return $this->formatDate($this->meta('date'), $format);
 	}
 
 	/**
