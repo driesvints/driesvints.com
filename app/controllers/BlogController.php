@@ -31,7 +31,7 @@ class BlogController extends BaseController {
 	 */
 	public function index()
 	{
-		$this->manager->addMultiple(get_posts());
+		$this->manager->add(get_posts());
 
 		$posts = $this->manager->all();
 

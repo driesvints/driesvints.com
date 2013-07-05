@@ -101,6 +101,11 @@ class PostManager {
 	 */
 	public function add($post)
 	{
+		if (is_array($post))
+		{
+			return $this->addMultiple($post);
+		}
+
 		$this->posts[] = $this->parse($post);
 	}
 
@@ -112,7 +117,7 @@ class PostManager {
 	 */
 	public function addMultiple(array $posts)
 	{
-		$this->posts = $this->posts->merge($this->parseMultiple($posts));
+		foreach ($posts as $post) $this->add($post);
 	}
 
 	/**
