@@ -83,7 +83,7 @@ class PostManager {
 	{
 		if ( ! is_string($post)) return false;
 
-		if ( ! file_exists($posts)) return false;
+		if ( ! file_exists($post)) return false;
 
 		if (pathinfo($post, PATHINFO_EXTENSION) === 'md')
 		{
