@@ -23,26 +23,6 @@ class DatabasePostRepository extends BasePostRepository implements PostRepositor
 	}
 
 	/**
-	 * Returns the post title.
-	 *
-	 * @return string
-	 */
-	public function title()
-	{
-		return $this->post->title;
-	}
-
-	/**
-	 * Returns the post slug.
-	 *
-	 * @return string
-	 */
-	public function slug()
-	{
-		return $this->post->slug;
-	}
-
-	/**
 	 * Returns the post date.
 	 *
 	 * @param  string  $format
@@ -50,17 +30,30 @@ class DatabasePostRepository extends BasePostRepository implements PostRepositor
 	 */
 	public function date($format = 'Y/m/d H:i:s')
 	{
-		return $this->formatDate($this->post->created_at, $format);
+		return $this->formatDate($this->getAttribute('created_at'), $format);
 	}
 
 	/**
-	 * Returns the post body.
+	 * Returns a specific post attribute.
 	 *
-	 * @return string
+	 * @param  string  $key
+	 * @return mixed
 	 */
-	public function body()
+	public function getAttribute($key)
 	{
-		return $this->post->body;
+		return $this->post->getAttribute($key);
+	}
+
+	/**
+	 * Sets a new value to a specific post attribute.
+	 *
+	 * @param  string  $key
+	 * @param  mixed   $value
+	 * @return mixed
+	 */
+	public function setAttribute($key, $value)
+	{
+		$this->post->setAttribute($key, $value);
 	}
 
 }

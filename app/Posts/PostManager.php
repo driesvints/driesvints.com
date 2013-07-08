@@ -151,7 +151,7 @@ class PostManager {
 	{
 		$results = $this->posts->filter(function($post) use ($slug)
 		{
-			return $post->slug() === $slug;
+			return $post->slug === $slug;
 		});
 
 		return $results->first();

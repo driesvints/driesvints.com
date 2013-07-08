@@ -45,37 +45,6 @@ class MarkdownPostRepository extends BasePostRepository implements PostRepositor
 	}
 
 	/**
-	 * Get metadata from the document.
-	 *
-	 * @param  string $key
-	 * @return mixed
-	 */
-	public function meta($key = null)
-	{
-		return $this->document->get($key);
-	}
-
-	/**
-	 * Returns the post title.
-	 *
-	 * @return string
-	 */
-	public function title()
-	{
-		return $this->meta('title');
-	}
-
-	/**
-	 * Returns the post slug.
-	 *
-	 * @return string
-	 */
-	public function slug()
-	{
-		return $this->meta('slug');
-	}
-
-	/**
 	 * Returns the post date.
 	 *
 	 * @param  string  $format
@@ -83,7 +52,7 @@ class MarkdownPostRepository extends BasePostRepository implements PostRepositor
 	 */
 	public function date($format = 'Y/m/d H:i:s')
 	{
-		return $this->formatDate($this->meta('date'), $format);
+		return $this->formatDate($this->getAttribute('date'), $format);
 	}
 
 	/**
@@ -94,6 +63,29 @@ class MarkdownPostRepository extends BasePostRepository implements PostRepositor
 	public function body()
 	{
 		return $this->document->getHtmlContent();
+	}
+
+	/**
+	 * Returns a specific post attribute.
+	 *
+	 * @param  string  $key
+	 * @return mixed
+	 */
+	public function getAttribute($key)
+	{
+		return $this->document->get($key);
+	}
+
+	/**
+	 * Sets a new value to a specific post attribute.
+	 *
+	 * @param  string  $key
+	 * @param  mixed   $value
+	 * @return mixed
+	 */
+	public function setAttribute($key, $value)
+	{
+		$this->document->add($key, $value);
 	}
 
 	/**

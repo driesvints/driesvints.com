@@ -10,8 +10,8 @@
 <h3>Latest Posts</h3>
 
 @foreach ($posts as $post)
-<h4>{{ HTML::linkRoute('blog.show', $post->title(), $post->slug()) }}</h4>
+<h4>{{ HTML::linkRoute('blog.show', $post->title, $post->slug) }}</h4>
 
-{{ $post->body() }}
+{{ $post->body }}
 @endforeach
 @endif

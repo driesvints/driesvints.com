@@ -3,31 +3,20 @@
 interface PostRepositoryInterface {
 
 	/**
-	 * Returns the post title.
+	 * Returns a specific post attribute.
 	 *
-	 * @return string
+	 * @param  string  $key
+	 * @return mixed
 	 */
-	public function title();
+	public function getAttribute($key);
 
 	/**
-	 * Returns the post slug.
+	 * Sets a new value to a specific post attribute.
 	 *
-	 * @return string
+	 * @param  string  $key
+	 * @param  mixed   $value
+	 * @return mixed
 	 */
-	public function slug();
-
-	/**
-	 * Returns the post date.
-	 *
-	 * @return string
-	 */
-	public function date();
-
-	/**
-	 * Returns the post body.
-	 *
-	 * @return string
-	 */
-	public function body();
+	public function setAttribute($key, $value);
 
 }
