@@ -21,7 +21,7 @@
 			<td>{{ $post->slug }}</td>
 			<td>{{ $post->created_at }}</td>
 			<td>
-				{{ HTML::linkRoute('blog.show', 'View post', $post->id, array('target' => '_blank')) }}
+				{{ HTML::linkRoute('blog.show', 'View post', $post->slug, array('target' => '_blank')) }}
 				{{ HTML::linkRoute('admin.posts.edit', 'Edit post', $post->id) }}
 			</td>
 		</tr>
