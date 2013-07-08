@@ -5,7 +5,7 @@ use Models\Post;
 class DatabasePostRepository extends BasePostRepository implements PostRepositoryInterface {
 
 	/**
-	 * The Post Model.
+	 * The Post model.
 	 *
 	 * @var \Models\Post
 	 */
@@ -54,6 +54,16 @@ class DatabasePostRepository extends BasePostRepository implements PostRepositor
 	public function setAttribute($key, $value)
 	{
 		$this->post->setAttribute($key, $value);
+	}
+
+	/**
+	 * Returns the Post model.
+	 *
+	 * @return \Models\Post
+	 */
+	public function getPost()
+	{
+		return $this->post;
 	}
 
 }
