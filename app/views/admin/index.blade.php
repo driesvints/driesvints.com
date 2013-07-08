@@ -4,5 +4,6 @@
 
 <ul>
 	<li>{{ HTML::linkRoute('admin.posts.index', 'Manage Posts') }}</li>
+	<li>{{ HTML::linkRoute('admin.pages.index', 'Manage Pages') }}</li>
 	<li>{{ HTML::linkRoute('logout', 'Logout') }}</li>
 </ul>

@@ -15,6 +15,14 @@ Route::bind('blog', function($value)
 
 	App::abort(404);
 });
+Route::bind('pages', function($value)
+{
+	$page = Models\Page::where('slug', $value)->first();
+
+	if ( ! is_null($page)) return $page;
+
+	App::abort(404);
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +44,7 @@ Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 	Route::get('/', array('as' => 'admin', 'uses' => 'AdminController@index'));
 
 	Route::resource('posts', 'PostsController', array('except' => array('show')));
+	Route::resource('pages', 'PagesController', array('except' => array('show')));
 });
+
+Route::get('{pages}', array('as' => 'pages.show', 'uses' => 'PagesController@show'));
