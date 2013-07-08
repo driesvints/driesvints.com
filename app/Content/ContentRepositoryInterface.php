@@ -1,9 +1,9 @@
-<?php namespace Posts;
+<?php namespace Content;
 
-interface PostRepositoryInterface {
+interface ContentRepositoryInterface {
 
 	/**
-	 * Returns a specific post attribute.
+	 * Returns a specific content item attribute.
 	 *
 	 * @param  string  $key
 	 * @return mixed
@@ -11,7 +11,7 @@ interface PostRepositoryInterface {
 	public function getAttribute($key);
 
 	/**
-	 * Sets a new value to a specific post attribute.
+	 * Sets a new value to a specific content item attribute.
 	 *
 	 * @param  string  $key
 	 * @param  mixed   $value

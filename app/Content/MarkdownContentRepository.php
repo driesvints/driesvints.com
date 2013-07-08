@@ -1,8 +1,8 @@
-<?php namespace Posts;
+<?php namespace Content;
 
 use Kurenai\DocumentParser;
 
-class MarkdownPostRepository extends BasePostRepository implements PostRepositoryInterface {
+class MarkdownContentRepository extends BaseContentRepository implements ContentRepositoryInterface {
 
 	/**
 	 * The Kurenai Markdown parser.
@@ -45,7 +45,7 @@ class MarkdownPostRepository extends BasePostRepository implements PostRepositor
 	}
 
 	/**
-	 * Returns the post date.
+	 * Returns the content item date.
 	 *
 	 * @param  string  $format
 	 * @return string
@@ -56,7 +56,7 @@ class MarkdownPostRepository extends BasePostRepository implements PostRepositor
 	}
 
 	/**
-	 * Returns the post body.
+	 * Returns the content item body.
 	 *
 	 * @return string
 	 */
@@ -66,7 +66,7 @@ class MarkdownPostRepository extends BasePostRepository implements PostRepositor
 	}
 
 	/**
-	 * Returns a specific post attribute.
+	 * Returns a specific content item attribute.
 	 *
 	 * @param  string  $key
 	 * @return mixed
@@ -77,7 +77,7 @@ class MarkdownPostRepository extends BasePostRepository implements PostRepositor
 	}
 
 	/**
-	 * Sets a new value to a specific post attribute.
+	 * Sets a new value to a specific content item attribute.
 	 *
 	 * @param  string  $key
 	 * @param  mixed   $value

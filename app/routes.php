@@ -9,7 +9,7 @@
 Route::model('posts', 'Models\\Post');
 Route::bind('blog', function($value)
 {
-	$manager = new Posts\PostManager(get_posts());
+	$manager = new Content\ContentManager(get_posts());
 
 	if ($post = $manager->findBySlug($value)) return $post;
 

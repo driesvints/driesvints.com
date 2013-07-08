@@ -1,24 +1,24 @@
 <?php
 
 use Models\Post;
-use Posts\PostManager;
+use Content\ContentManager;
 
 class HomeController extends BaseController {
 
 	/**
-	 * The Post Manager.
+	 * The Content Manager.
 	 *
-	 * @var \Posts\PostManager
+	 * @var \Content\ContentManager
 	 */
 	protected $manager;
 
 	/**
 	 * Initialize the Blog Controller.
 	 *
-	 * @param  \Posts\PostManager  $manager
+	 * @param  \Content\ContentManager  $manager
 	 * @return void
 	 */
-	public function __construct(PostManager $manager)
+	public function __construct(ContentManager $manager)
 	{
 		$this->manager = $manager;
 	}

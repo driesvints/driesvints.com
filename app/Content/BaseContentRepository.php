@@ -1,8 +1,8 @@
-<?php namespace Posts;
+<?php namespace Content;
 
 use Carbon\Carbon;
 
-abstract class BasePostRepository {
+abstract class BaseContentRepository {
 
 	/**
 	 * Returns a formatted date string.
@@ -19,7 +19,7 @@ abstract class BasePostRepository {
 	}
 
 	/**
-	 * Dynamically retrieve attributes on the post.
+	 * Dynamically retrieve attributes on the content item.
 	 *
 	 * @param  string  $key
 	 * @return mixed
@@ -34,7 +34,7 @@ abstract class BasePostRepository {
 	}
 
 	/**
-	 * Dynamically set attributes on the post.
+	 * Dynamically set attributes on the content item.
 	 *
 	 * @param  string  $key
 	 * @param  mixed   $value
