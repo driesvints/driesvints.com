@@ -2,7 +2,6 @@
 
 use ErrorException;
 use Kurenai\DocumentParser;
-use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
 
 class ContentManager {
@@ -10,9 +9,9 @@ class ContentManager {
 	/**
 	 * The currently set content items.
 	 *
-	 * @var \Illuminate\Support\Collection
+	 * @var array
 	 */
-	public $items;
+	public $items = array();
 
 	/**
 	 * Initialize the content manager instance.
@@ -29,7 +28,7 @@ class ContentManager {
 	 * Parses multiple content items into ContentRepositoryInterface instances.
 	 *
 	 * @param  array  $items
-	 * @return \Illuminate\Support\Collection
+	 * @return array
 	 */
 	protected function parseMultiple(array $items)
 	{
@@ -40,7 +39,7 @@ class ContentManager {
 			$content[] = $this->parse($item);
 		}
 
-		return new Collection($content);
+		return $content;
 	}
 
 	/**
@@ -116,7 +115,7 @@ class ContentManager {
 	/**
 	 * Returns all the items in the content manager.
 	 *
-	 * @return \Illuminate\Support\Collection
+	 * @return array
 	 */
 	public function all()
 	{
@@ -127,11 +126,11 @@ class ContentManager {
 	 * Take the first {$limit} items.
 	 *
 	 * @param  int  $limit
-	 * @return \Illuminate\Support\Collection
+	 * @return array
 	 */
 	public function take($limit)
 	{
-		return $this->items->slice(0, $limit);
+		return array_slice($this->items, 0, $limit);
 	}
 
 	/**
