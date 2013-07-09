@@ -97,10 +97,7 @@ class ContentManager {
 	 */
 	public function add($item)
 	{
-		if (is_array($item))
-		{
-			return $this->addMultiple($item);
-		}
+		if (is_array($item)) return $this->addMultiple($item);
 
 		$this->items[] = $this->parse($item);
 	}
