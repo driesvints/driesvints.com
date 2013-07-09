@@ -181,15 +181,4 @@ return array(
 
 	),
 
-	/*
-	|--------------------------------------------------------------------------
-	| Static Posts Directory
-	|--------------------------------------------------------------------------
-	|
-	| The directory with the static posts to load.
-	|
-	*/
-
-	'static_posts' => base_path().'/posts',
-
 );

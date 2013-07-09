@@ -2,7 +2,7 @@
 
 use ErrorException;
 use Kurenai\DocumentParser;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class ContentManager {
 
@@ -16,100 +16,34 @@ class ContentManager {
 	/**
 	 * Initialize the content manager instance.
 	 *
-	 * @param  array  $items
+	 * @param  mixed  $items
 	 * @return void
 	 */
-	public function __construct(array $items = array())
+	public function __construct($items = array())
 	{
-		$this->items = $this->parseMultiple($items);
+		$this->add($items);
 	}
 
 	/**
-	 * Parses multiple content items into ContentRepositoryInterface instances.
+	 * Adds content to the content manager.
 	 *
-	 * @param  array  $items
-	 * @return array
+	 * @param  mixed  $items
+	 * @return void
+	 * @throws ErrorException
 	 */
-	protected function parseMultiple(array $items)
+	public function add($items)
 	{
-		$content = array();
+		$items = (array) $items;
 
 		foreach ($items as $item)
 		{
-			$content[] = $this->parse($item);
+			if ( ! $this->validate($item))
+			{
+				throw new ErrorException('Item is not a valid content type.');
+			}
+
+			$this->items[] = $item;
 		}
-
-		return $content;
-	}
-
-	/**
-	 * Parses a single content item into a ContentRepositoryInterface instance.
-	 *
-	 * @param  mixed  $item
-	 * @return mixed
-	 * @throws ErrorException
-	 */
-	public function parse($item)
-	{
-		// If it is a Illuminate model.
-		if ($item instanceof Model)
-		{
-			return new DatabaseContentRepository($item);
-		}
-
-		// If it is a markdown file.
-		if ($this->validateMarkdownFile($item))
-		{
-			$parser = new DocumentParser;
-
-			return new MarkdownContentRepository($item, $parser);
-		}
-
-		throw new ErrorException("Not a valid content type.");
-	}
-
-	/**
-	 * Validates if a given file is a markdown file.
-	 *
-	 * @param  mixed  $file
-	 * @return bool
-	 */
-	protected function validateMarkdownFile($file)
-	{
-		if ( ! is_string($file)) return false;
-
-		if ( ! file_exists($file)) return false;
-
-		if (pathinfo($file, PATHINFO_EXTENSION) === 'md')
-		{
-			return true;
-		}
-
-		return false;
-	}
-
-	/**
-	 * Adds a single content item to the content manager.
-	 *
-	 * @param  mixed  $item
-	 * @return void
-	 */
-	public function add($item)
-	{
-		if (is_array($item)) return $this->addMultiple($item);
-
-		$this->items[] = $this->parse($item);
-	}
-
-	/**
-	 * Adds an array of items to the content manager.
-	 *
-	 * @param  array  $items
-	 * @return void
-	 */
-	public function addMultiple(array $items)
-	{
-		foreach ($items as $item) $this->add($item);
 	}
 
 	/**
@@ -141,12 +75,25 @@ class ContentManager {
 	 */
 	public function findBySlug($slug)
 	{
-		$results = $this->items->filter(function($item) use ($slug)
+		$items = new Collection($this->items);
+
+		$results = $items->filter(function($item) use ($slug)
 		{
 			return $item->slug === $slug;
 		});
 
 		return $results->first();
+	}
+
+	/**
+	 * Validates an item as a valid ContentRepositoryInterface.
+	 *
+	 * @param  mixed  $item
+	 * @return bool
+	 */
+	public function validate($item)
+	{
+		return $item instanceof ContentRepositoryInterface;
 	}
 
 }

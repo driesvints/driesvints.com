@@ -9,12 +9,10 @@ if ( ! function_exists('get_posts'))
 	 */
 	function get_posts()
 	{
-		// Get all the database Posts.
-		$dbPosts = Models\Post::all()->all();
+		$contentLoader = new Content\ContentLoader(app('files'));
 
-		// Get all the static posts.
-		$staticPosts = File::files(Config::get('app.static_posts'));
+		$sources = Config::get('content.posts');
 
-		return array_merge($dbPosts, $staticPosts);
+		return $contentLoader->get($sources);
 	}
 }
