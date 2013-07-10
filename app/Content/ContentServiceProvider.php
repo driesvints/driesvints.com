@@ -13,7 +13,12 @@ class ContentServiceProvider extends ServiceProvider {
 	{
 		$this->app['content_loader'] = $this->app->share(function($app)
 		{
-			return new ContentLoader($app['files']);
+			return new ContentLoader($app['config'], $app['files']);
+		});
+
+		$this->app['content_manager'] = $this->app->share(function($app)
+		{
+			return new ContentManager;
 		});
 	}
 
@@ -24,7 +29,7 @@ class ContentServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('content_loader');
+		return array('content_loader', 'content_manager');
 	}
 
 }

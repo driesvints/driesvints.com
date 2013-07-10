@@ -1,7 +1,6 @@
 <?php
 
 use Models\Page;
-use Content\ContentManager;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +11,7 @@ use Content\ContentManager;
 Route::model('posts', 'Models\\Post');
 Route::bind('blog', function($value)
 {
-	$manager = new ContentManager(get_posts());
+	$manager = content_manager('posts');
 
 	if ($post = $manager->findBySlug($value)) return $post;
 

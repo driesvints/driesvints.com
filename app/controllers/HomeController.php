@@ -1,6 +1,5 @@
 <?php
 
-use Models\Post;
 use Content\ContentManager;
 
 class HomeController extends BaseController {
@@ -20,7 +19,7 @@ class HomeController extends BaseController {
 	 */
 	public function __construct(ContentManager $manager)
 	{
-		$this->manager = $manager;
+		$this->manager = $manager->add(get_posts());
 	}
 
 	/**
@@ -30,8 +29,6 @@ class HomeController extends BaseController {
 	 */
 	public function index()
 	{
-		$this->manager->add(get_posts());
-
 		$posts = $this->manager->take(5);
 
 		return View::make('index', compact('posts'));

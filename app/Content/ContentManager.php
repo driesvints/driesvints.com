@@ -28,7 +28,7 @@ class ContentManager {
 	 * Adds content to the content manager.
 	 *
 	 * @param  mixed  $items
-	 * @return void
+	 * @return \Content\ContentManager
 	 * @throws ErrorException
 	 */
 	public function add($items)
@@ -44,6 +44,8 @@ class ContentManager {
 
 			$this->items[] = $item;
 		}
+
+		return $this;
 	}
 
 	/**

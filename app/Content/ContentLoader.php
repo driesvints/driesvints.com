@@ -1,10 +1,18 @@
 <?php namespace Content;
 
 use Kurenai\DocumentParser;
+use Illuminate\Config\Repository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Database\Eloquent\Model;
 
 class ContentLoader {
+
+	/**
+	 * The Illuminate Config Repository.
+	 *
+	 * @var \Illuminate\Config\Repository
+	 */
+	protected $config;
 
 	/**
 	 * The Illuminate Filesystem.
@@ -16,11 +24,13 @@ class ContentLoader {
 	/**
 	 * Initialize the Content Loader instance.
 	 *
+	 * @param  \Illuminate\Config\Repository  $config
 	 * @param  \Illuminate\Filesystem\Filesystem  $filesystem
 	 * @return void
 	 */
-	public function __construct(Filesystem $filesystem)
+	public function __construct(Repository $config, Filesystem $filesystem)
 	{
+		$this->config = $config;
 		$this->filesystem = $filesystem;
 	}
 
@@ -73,6 +83,19 @@ class ContentLoader {
 		}
 
 		return array();
+	}
+
+	/**
+	 * Loads content a configuration option's sources.
+	 *
+	 * @param  string  $type
+	 * @return array
+	 */
+	public function config($type)
+	{
+		$sources = $this->config->get("content.{$type}");
+
+		return $this->get($sources);
 	}
 
 	/**
@@ -144,6 +167,16 @@ class ContentLoader {
 	protected function validateMarkdownFile($file)
 	{
 		return $this->filesystem->extension($file) === 'md';
+	}
+
+	/**
+	 * Get the Illuminate Config Repository.
+	 *
+	 * @return \Illuminate\Config\Repository
+	 */
+	public function getConfig()
+	{
+		return $this->config;
 	}
 
 	/**

@@ -21,7 +21,7 @@ class BlogController extends BaseController {
 	 */
 	public function __construct(ContentManager $manager)
 	{
-		$this->manager = $manager;
+		$this->manager = $manager->add(get_posts());
 	}
 
 	/**
@@ -31,8 +31,6 @@ class BlogController extends BaseController {
 	 */
 	public function index()
 	{
-		$this->manager->add(get_posts());
-
 		$posts = $this->manager->all();
 
 		return View::make('blog.index', compact('posts'));
