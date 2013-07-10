@@ -1,5 +1,8 @@
 <?php
 
+use Models\Page;
+use Content\ContentManager;
+
 /*
 |--------------------------------------------------------------------------
 | Bindings
@@ -9,7 +12,7 @@
 Route::model('posts', 'Models\\Post');
 Route::bind('blog', function($value)
 {
-	$manager = new Content\ContentManager(get_posts());
+	$manager = new ContentManager(get_posts());
 
 	if ($post = $manager->findBySlug($value)) return $post;
 
@@ -17,7 +20,7 @@ Route::bind('blog', function($value)
 });
 Route::bind('pages', function($value)
 {
-	$page = Models\Page::where('slug', $value)->first();
+	$page = Page::where('slug', $value)->first();
 
 	if ( ! is_null($page)) return $page;
 

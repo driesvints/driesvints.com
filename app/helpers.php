@@ -9,10 +9,8 @@ if ( ! function_exists('get_posts'))
 	 */
 	function get_posts()
 	{
-		$contentLoader = new Content\ContentLoader(app('files'));
-
 		$sources = Config::get('content.posts');
 
-		return $contentLoader->get($sources);
+		return ContentLoader::get($sources);
 	}
 }
