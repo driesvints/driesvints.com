@@ -19,9 +19,9 @@ Route::bind('blog', function($value)
 });
 Route::bind('pages', function($value)
 {
-	$page = Page::where('slug', $value)->first();
+	$manager = content_manager('pages');
 
-	if ( ! is_null($page)) return $page;
+	if ($page = $manager->findBySlug($value)) return $page;
 
 	App::abort(404);
 });

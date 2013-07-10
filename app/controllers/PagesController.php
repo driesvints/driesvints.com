@@ -1,6 +1,7 @@
 <?php
 
 use Models\Page;
+use Content\ContentRepositoryInterface;
 
 class PagesController extends BaseController {
 
@@ -53,12 +54,12 @@ class PagesController extends BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  \Models\Page  $page
+	 * @param  \Content\ContentRepositoryInterface  $page
 	 * @return \Illuminate\View\View
 	 */
-	public function show(Page $page)
+	public function show(ContentRepositoryInterface $page)
 	{
-		return View::make('page', compact('page'));
+		return View::make('pages.show', compact('page'));
 	}
 
 	/**
