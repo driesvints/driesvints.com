@@ -1,28 +1,8 @@
-<?php
+<?php namespace Controllers;
 
-use Models\Post;
-use Content\ContentManager;
-use Content\ContentRepositoryInterface;
+use View;
 
-class BlogController extends BaseController {
-
-	/**
-	 * The Post Manager.
-	 *
-	 * @var \Content\ContentManager
-	 */
-	protected $manager;
-
-	/**
-	 * Initialize the Blog Controller.
-	 *
-	 * @param  \Content\ContentManager  $manager
-	 * @return void
-	 */
-	public function __construct(ContentManager $manager)
-	{
-		$this->manager = $manager->add(get_posts());
-	}
+class BlogController extends ContentController {
 
 	/**
 	 * Display a listing of the resource.
@@ -31,20 +11,11 @@ class BlogController extends BaseController {
 	 */
 	public function index()
 	{
+		$this->manager->add(get_posts());
+
 		$posts = $this->manager->all();
 
 		return View::make('blog.index', compact('posts'));
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  \Content\ContentRepositoryInterface  $post
-	 * @return \Illuminate\View\View
-	 */
-	public function show(ContentRepositoryInterface $post)
-	{
-		return View::make('blog.show', compact('post'));
 	}
 
 }

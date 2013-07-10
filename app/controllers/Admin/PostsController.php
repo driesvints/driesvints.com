@@ -1,6 +1,11 @@
-<?php
+<?php namespace Controllers\Admin;
 
+use Str;
+use View;
+use Input;
+use Redirect;
 use Models\Post;
+use Controllers\BaseController;
 
 class PostsController extends BaseController {
 

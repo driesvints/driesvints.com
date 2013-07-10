@@ -1,4 +1,9 @@
-<?php
+<?php namespace Controllers;
+
+use Auth;
+use View;
+use Input;
+use Redirect;
 
 class AuthController extends BaseController {
 

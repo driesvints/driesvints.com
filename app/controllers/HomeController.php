@@ -1,5 +1,6 @@
-<?php
+<?php namespace Controllers;
 
+use View;
 use Content\ContentManager;
 
 class HomeController extends BaseController {

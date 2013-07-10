@@ -8,6 +8,4 @@
 
 	{{ $post->body }}
 	@endforeach
-@else
-<p>No posts to show.</p>
 @endif

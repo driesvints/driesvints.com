@@ -32,21 +32,21 @@ Route::bind('pages', function($value)
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
+Route::get('/', array('as' => 'home', 'uses' => 'Controllers\\HomeController@index'));
 
-Route::get('blog', array('as' => 'blog.index', 'uses' => 'BlogController@index'));
-Route::get('blog/{blog}', array('as' => 'blog.show', 'uses' => 'BlogController@show'));
+Route::get('blog', array('as' => 'blog.index', 'uses' => 'Controllers\\BlogController@index'));
+Route::get('blog/{blog}', array('as' => 'blog.show', 'uses' => 'Controllers\\BlogController@show'));
 
-Route::get('login', array('as' => 'login', 'uses' => 'AuthController@getLogin'));
-Route::post('login', 'AuthController@postLogin');
-Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));
+Route::get('login', array('as' => 'login', 'uses' => 'Controllers\\AuthController@getLogin'));
+Route::post('login', 'Controllers\\AuthController@postLogin');
+Route::get('logout', array('as' => 'logout', 'uses' => 'Controllers\\AuthController@logout'));
 
 Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 {
-	Route::get('/', array('as' => 'admin', 'uses' => 'AdminController@index'));
+	Route::get('/', array('as' => 'admin', 'uses' => 'Controllers\\Admin\\AdminController@index'));
 
-	Route::resource('posts', 'PostsController', array('except' => array('show')));
-	Route::resource('pages', 'PagesController', array('except' => array('show')));
+	Route::resource('posts', 'Controllers\\Admin\\PostsController', array('except' => array('show')));
+	Route::resource('pages', 'Controllers\\Admin\\PagesController', array('except' => array('show')));
 });
 
-Route::get('{pages}', array('as' => 'pages.show', 'uses' => 'PagesController@show'));
+Route::get('{pages}', array('as' => 'pages.show', 'uses' => 'Controllers\\PagesController@show'));
