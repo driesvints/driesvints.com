@@ -4,7 +4,7 @@
 	@foreach ($items as $item)
 	<h2>{{ HTML::linkRoute('blog.show', $item->title, $item->slug) }}</h2>
 
-	<p>Posted on {{ $item->date }}</p>
+	<p>Posted on {{ $item->date('F d, Y') }}</p>
 
 	{{ $item->body }}
 	@endforeach

@@ -12,6 +12,8 @@
 @foreach ($posts as $post)
 <h4>{{ HTML::linkRoute('blog.show', $post->title, $post->slug) }}</h4>
 
+<p>Posted on {{ $post->date('F d, Y') }}</p>
+
 {{ $post->body }}
 @endforeach
 @endif
