@@ -1,7 +1,7 @@
 <?php namespace Content;
 
-use Str;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 abstract class BaseContentRepository {
 
