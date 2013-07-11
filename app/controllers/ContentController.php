@@ -30,9 +30,9 @@ abstract class ContentController extends BaseController {
 	 */
 	public function index()
 	{
-		$posts = $this->manager->all();
+		$items = $this->manager->all();
 
-		return $this->view('content.index', compact('posts'));
+		return $this->view('content.index', compact('items'));
 	}
 
 	/**

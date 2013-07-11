@@ -1,11 +1,11 @@
 <h1>{{ $title }}</h1>
 
-@if (count($posts))
-	@foreach ($posts as $post)
-	<h2>{{ HTML::linkRoute('blog.show', $post->title, $post->slug) }}</h2>
+@if (count($items))
+	@foreach ($items as $item)
+	<h2>{{ HTML::linkRoute('blog.show', $item->title, $item->slug) }}</h2>
 
-	<p>Posted on {{ $post->date }}</p>
+	<p>Posted on {{ $item->date }}</p>
 
-	{{ $post->body }}
+	{{ $item->body }}
 	@endforeach
 @endif
