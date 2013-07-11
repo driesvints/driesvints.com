@@ -18,7 +18,7 @@ class PostsController extends BaseController {
 	{
 		$posts = Post::all();
 
-		return View::make('posts.index', compact('posts'));
+		return View::make('admin.posts.index', compact('posts'));
 	}
 
 	/**
@@ -28,7 +28,7 @@ class PostsController extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('posts.create');
+		return View::make('admin.posts.create');
 	}
 
 	/**
@@ -63,7 +63,7 @@ class PostsController extends BaseController {
 	 */
 	public function edit(Post $post)
 	{
-		return View::make('posts.edit', compact('post'));
+		return View::make('admin.posts.edit', compact('post'));
 	}
 
 	/**

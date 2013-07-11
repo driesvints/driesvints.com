@@ -18,7 +18,7 @@ class PagesController extends BaseController {
 	{
 		$pages = Page::all();
 
-		return View::make('pages.index', compact('pages'));
+		return View::make('admin.pages.index', compact('pages'));
 	}
 
 	/**
@@ -28,7 +28,7 @@ class PagesController extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('pages.create');
+		return View::make('admin.pages.create');
 	}
 
 	/**
@@ -63,7 +63,7 @@ class PagesController extends BaseController {
 	 */
 	public function edit(Page $page)
 	{
-		return View::make('pages.edit', compact('page'));
+		return View::make('admin.pages.edit', compact('page'));
 	}
 
 	/**
