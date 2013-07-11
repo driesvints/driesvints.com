@@ -1,8 +1,13 @@
 <?php namespace Controllers;
 
-use View;
-
 class BlogController extends ContentController {
+
+	/**
+	 * The page title.
+	 *
+	 * @var string
+	 */
+	public $title = 'Blog';
 
 	/**
 	 * Display a listing of the resource.
@@ -13,9 +18,7 @@ class BlogController extends ContentController {
 	{
 		$this->manager->add(get_posts());
 
-		$posts = $this->manager->all();
-
-		return View::make('blog.index', compact('posts'));
+		return parent::index();
 	}
 
 }

@@ -1,6 +1,5 @@
 <?php namespace Controllers;
 
-use View;
 use Content\ContentManager;
 use Content\ContentRepositoryInterface;
 
@@ -25,6 +24,18 @@ abstract class ContentController extends BaseController {
 	}
 
 	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\View\View
+	 */
+	public function index()
+	{
+		$posts = $this->manager->all();
+
+		return $this->view('content.index', compact('posts'));
+	}
+
+	/**
 	 * Display the specified resource.
 	 *
 	 * @param  \Content\ContentRepositoryInterface  $item
@@ -32,7 +43,7 @@ abstract class ContentController extends BaseController {
 	 */
 	public function show(ContentRepositoryInterface $item)
 	{
-		return View::make('content.show', compact('item'));
+		return $this->view('content.show', compact('item'));
 	}
 
 }

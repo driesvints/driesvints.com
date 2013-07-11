@@ -1,4 +1,4 @@
-<h1>Blog</h1>
+<h1>{{ $title }}</h1>
 
 @if (count($posts))
 	@foreach ($posts as $post)

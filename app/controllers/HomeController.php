@@ -1,27 +1,6 @@
 <?php namespace Controllers;
 
-use View;
-use Content\ContentManager;
-
-class HomeController extends BaseController {
-
-	/**
-	 * The Content Manager.
-	 *
-	 * @var \Content\ContentManager
-	 */
-	protected $manager;
-
-	/**
-	 * Initialize the Blog Controller.
-	 *
-	 * @param  \Content\ContentManager  $manager
-	 * @return void
-	 */
-	public function __construct(ContentManager $manager)
-	{
-		$this->manager = $manager->add(get_posts());
-	}
+class HomeController extends ContentController {
 
 	/**
 	 * Display the homepage.
@@ -30,9 +9,11 @@ class HomeController extends BaseController {
 	 */
 	public function index()
 	{
+		$this->manager->add(get_posts());
+
 		$posts = $this->manager->take(5);
 
-		return View::make('index', compact('posts'));
+		return $this->view('index', compact('posts'));
 	}
 
 }
