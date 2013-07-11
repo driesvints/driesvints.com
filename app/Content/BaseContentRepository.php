@@ -1,8 +1,21 @@
 <?php namespace Content;
 
+use Str;
 use Carbon\Carbon;
 
 abstract class BaseContentRepository {
+
+	/**
+	 * Returns an excerpt of the page body.
+	 *
+	 * @param  int  $words
+	 * @return string
+	 * @todo Remove HTML except b,i,code tags.
+	 */
+	public function excerpt($words = 50)
+	{
+		return Str::words($this->body, $words);
+	}
 
 	/**
 	 * Returns a formatted date string.

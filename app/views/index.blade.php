@@ -14,6 +14,8 @@
 
 <p>Posted on {{ $post->date('F d, Y') }}</p>
 
-{{ $post->body }}
+<p>{{ $post->excerpt }}</p>
+
+<p>{{ HTML::linkRoute('blog.show', 'Read more...', $post->slug) }}</p>
 @endforeach
 @endif
