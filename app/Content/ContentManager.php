@@ -88,7 +88,7 @@ class ContentManager {
 	}
 
 	/**
-	 * Validates an item as a valid ContentRepositoryInterface.
+	 * Validates an item as a ContentRepositoryInterface.
 	 *
 	 * @param  mixed  $item
 	 * @return bool
