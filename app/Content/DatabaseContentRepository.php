@@ -12,6 +12,13 @@ class DatabaseContentRepository extends BaseContentRepository implements Content
 	protected $model;
 
 	/**
+	 * The date attribute key.
+	 *
+	 * @var string
+	 */
+	protected $dateKey = 'created_at';
+
+	/**
 	 * Initialize the repository.
 	 *
 	 * @param  \Illuminate\Database\Eloquent\Model  $model
@@ -20,17 +27,6 @@ class DatabaseContentRepository extends BaseContentRepository implements Content
 	public function __construct(Model $model)
 	{
 		$this->model = $model;
-	}
-
-	/**
-	 * Returns the content item date.
-	 *
-	 * @param  string  $format
-	 * @return string
-	 */
-	public function date($format = 'Y/m/d H:i:s')
-	{
-		return $this->formatDate($this->getAttribute('created_at'), $format);
 	}
 
 	/**

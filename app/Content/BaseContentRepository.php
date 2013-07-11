@@ -6,6 +6,26 @@ use Carbon\Carbon;
 abstract class BaseContentRepository {
 
 	/**
+	 * The date attribute key.
+	 *
+	 * @var string
+	 */
+	protected $dateKey;
+
+	/**
+	 * Returns the content item date.
+	 *
+	 * @param  string  $format
+	 * @return string
+	 */
+	public function date($format = 'Y/m/d H:i:s')
+	{
+		$date = new Carbon($this->getAttribute($this->dateKey));
+
+		return $date->format($format);
+	}
+
+	/**
 	 * Returns an excerpt of the page body.
 	 *
 	 * @param  int  $words
@@ -15,20 +35,6 @@ abstract class BaseContentRepository {
 	public function excerpt($words = 50)
 	{
 		return Str::words($this->body, $words);
-	}
-
-	/**
-	 * Returns a formatted date string.
-	 *
-	 * @param  string  $date
-	 * @param  string  $format
-	 * @return string
-	 */
-	protected function formatDate($date, $format)
-	{
-		$date = new Carbon($date);
-
-		return $date->format($format);
 	}
 
 	/**

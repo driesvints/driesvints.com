@@ -26,6 +26,13 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	protected $document;
 
 	/**
+	 * The date attribute key.
+	 *
+	 * @var string
+	 */
+	protected $dateKey = 'date';
+
+	/**
 	 * Initialize the repository.
 	 *
 	 * @param  string  $filepath
@@ -50,17 +57,6 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 		$file = file_get_contents($filepath);
 
 		return $this->parser->parse($file);
-	}
-
-	/**
-	 * Returns the content item date.
-	 *
-	 * @param  string  $format
-	 * @return string
-	 */
-	public function date($format = 'Y/m/d H:i:s')
-	{
-		return $this->formatDate($this->getAttribute('date'), $format);
 	}
 
 	/**
