@@ -39,7 +39,7 @@ class ContentManager {
 		{
 			if ( ! $this->validate($item))
 			{
-				throw new ErrorException('Item is not a valid content type.');
+				throw new ErrorException('Item is not a valid instance of ContentRepositoryInterface.');
 			}
 
 			$this->items[] = $item;
