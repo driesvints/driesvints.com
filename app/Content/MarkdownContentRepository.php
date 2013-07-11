@@ -5,6 +5,13 @@ use Kurenai\DocumentParser;
 class MarkdownContentRepository extends BaseContentRepository implements ContentRepositoryInterface {
 
 	/**
+	 * The filepath for this Markdown file.
+	 *
+	 * @var string
+	 */
+	protected $filepath;
+
+	/**
 	 * The Kurenai Markdown parser.
 	 *
 	 * @var \Kurenai\DocumentParser
@@ -21,27 +28,28 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	/**
 	 * Initialize the repository.
 	 *
-	 * @param  string  $source
+	 * @param  string  $filepath
 	 * @param  \Kurenai\DocumentParser  $parser
 	 * @return void
 	 */
-	public function __construct($source, DocumentParser $parser)
+	public function __construct($filepath, DocumentParser $parser)
 	{
 		$this->parser = $parser;
-		$this->document = $this->parse($source);
+		$this->filepath = $filepath;
+		$this->document = $this->parse($filepath);
 	}
 
-    /**
-     * Parse a markdown document.
-     *
-     * @param  string  $source
-     * @return \Kurenai\Document
-     */
-	protected function parse($source)
+	/**
+	 * Parse a markdown document.
+	 *
+	 * @param  string  $filepath
+	 * @return \Kurenai\Document
+	 */
+	protected function parse($filepath)
 	{
-		$source = file_get_contents($source);
+		$file = file_get_contents($filepath);
 
-		return $this->parser->parse($source);
+		return $this->parser->parse($file);
 	}
 
 	/**
