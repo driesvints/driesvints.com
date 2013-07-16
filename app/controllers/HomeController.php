@@ -11,6 +11,8 @@ class HomeController extends ContentController {
 	{
 		$this->manager->add(get_posts());
 
+		$this->manager->sortByDate();
+
 		$posts = $this->manager->take(5);
 
 		return $this->view('index', compact('posts'));

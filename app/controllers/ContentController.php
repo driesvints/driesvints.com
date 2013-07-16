@@ -30,6 +30,8 @@ abstract class ContentController extends BaseController {
 	 */
 	public function index()
 	{
+		$this->manager->sortByDate();
+
 		$items = $this->manager->all();
 
 		return $this->view('content.index', compact('items'));

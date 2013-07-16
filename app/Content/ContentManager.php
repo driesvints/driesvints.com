@@ -1,5 +1,6 @@
 <?php namespace Content;
 
+use Closure;
 use ErrorException;
 use Kurenai\DocumentParser;
 use Illuminate\Support\Collection;
@@ -67,6 +68,27 @@ class ContentManager {
 	public function take($limit)
 	{
 		return array_slice($this->items, 0, $limit);
+	}
+
+	/**
+	 * Sorts the content item by date.
+	 *
+	 * @return \Content\ContentManager
+	 */
+	public function sortByDate()
+	{
+		$items = new Collection($this->items);
+
+		$items->sort(function($a, $b)
+		{
+			if ($a->date == $b->date) return 0;
+
+			return ($a->date < $b->date) ? 1 : -1;
+		});
+
+		$this->items = $items->all();
+
+		return $this;
 	}
 
 	/**
