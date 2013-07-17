@@ -181,7 +181,6 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
 		'ContentLoader'   => 'Content\Facades\ContentLoader',
-		'ContentManager'  => 'Content\Facades\ContentManager',
 
 	),
 

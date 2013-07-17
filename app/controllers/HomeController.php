@@ -1,6 +1,6 @@
 <?php namespace Controllers;
 
-class HomeController extends ContentController {
+class HomeController extends BaseController {
 
 	/**
 	 * Display the homepage.
@@ -9,11 +9,9 @@ class HomeController extends ContentController {
 	 */
 	public function index()
 	{
-		$this->manager->add(get_posts());
+		$posts = get_posts();
 
-		$this->manager->sortByDate();
-
-		$posts = $this->manager->take(5);
+		$posts = $posts->sortByDate()->take(5);
 
 		return $this->view('index', compact('posts'));
 	}

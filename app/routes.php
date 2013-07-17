@@ -9,17 +9,17 @@
 Route::model('posts', 'Models\\Post');
 Route::bind('blog', function($value)
 {
-	$manager = content_manager('posts');
+	$posts = get_posts();
 
-	if ($post = $manager->findBySlug($value)) return $post;
+	if ($post = $posts->findBySlug($value)) return $post;
 
 	App::abort(404);
 });
 Route::bind('pages', function($value)
 {
-	$manager = content_manager('pages');
+	$pages = get_pages();
 
-	if ($page = $manager->findBySlug($value)) return $page;
+	if ($page = $pages->findBySlug($value)) return $page;
 
 	App::abort(404);
 });

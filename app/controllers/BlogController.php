@@ -1,6 +1,8 @@
 <?php namespace Controllers;
 
-class BlogController extends ContentController {
+use Content\ContentRepositoryInterface;
+
+class BlogController extends BaseController {
 
 	/**
 	 * The page title.
@@ -16,9 +18,22 @@ class BlogController extends ContentController {
 	 */
 	public function index()
 	{
-		$this->manager->add(get_posts());
+		$posts = get_posts();
 
-		return parent::index();
+		$posts->sortByDate();
+
+		return $this->view('content.index')->with('items', $posts->all());
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  \Content\ContentRepositoryInterface  $item
+	 * @return \Illuminate\View\View
+	 */
+	public function show(ContentRepositoryInterface $item)
+	{
+		return $this->view('content.show', compact('item'));
 	}
 
 }

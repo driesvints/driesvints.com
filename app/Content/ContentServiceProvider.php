@@ -15,11 +15,6 @@ class ContentServiceProvider extends ServiceProvider {
 		{
 			return new ContentLoader($app['config'], $app['files']);
 		});
-
-		$this->app['content_manager'] = $this->app->share(function($app)
-		{
-			return new ContentManager;
-		});
 	}
 
 	/**
@@ -29,7 +24,7 @@ class ContentServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('content_loader', 'content_manager');
+		return array('content_loader');
 	}
 
 }
