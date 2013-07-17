@@ -1,8 +1,8 @@
 <?php namespace Content;
 
-use Illuminate\Support\Collection as IlluminateCollection;
+use Illuminate\Support\Collection as BaseCollection;
 
-class Collection extends IlluminateCollection {
+class Collection extends BaseCollection {
 
 	/**
 	 * Take the first {$limit} items.
