@@ -38,7 +38,7 @@ class ContentLoader {
 	 * Gets content from a list of sources.
 	 *
 	 * @param  mixed  $sources
-	 * @return array
+	 * @return \Content\Collection
 	 */
 	public function get($sources)
 	{
@@ -53,7 +53,7 @@ class ContentLoader {
 			$items = array_merge($content, $items);
 		}
 
-		return $items;
+		return new Collection($items);
 	}
 
 	/**

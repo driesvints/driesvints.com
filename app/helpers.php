@@ -19,9 +19,7 @@ if ( ! function_exists('get_content'))
 	 */
 	function get_content($type)
 	{
-		$items = app('content_loader')->config($type);
-
-		return new Content\Collection($items);
+		return app('content_loader')->config($type);
 	}
 }
 
