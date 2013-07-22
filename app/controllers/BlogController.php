@@ -20,7 +20,7 @@ class BlogController extends BaseController {
 	{
 		$posts = get_posts();
 
-		$posts->sortByDate();
+		$posts->orderBy('date');
 
 		return $this->view('content.index')->with('items', $posts->all());
 	}

@@ -11,7 +11,7 @@ Route::bind('blog', function($value)
 {
 	$posts = get_posts();
 
-	if ($post = $posts->findBySlug($value)) return $post;
+	if ($post = $posts->filterBy('slug', $value)->first()) return $post;
 
 	App::abort(404);
 });
@@ -19,7 +19,7 @@ Route::bind('pages', function($value)
 {
 	$pages = get_pages();
 
-	if ($page = $pages->findBySlug($value)) return $page;
+	if ($page = $pages->filterBy('slug', $value)->first()) return $page;
 
 	App::abort(404);
 });

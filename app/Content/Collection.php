@@ -16,33 +16,34 @@ class Collection extends BaseCollection {
 	}
 
 	/**
-	 * Sorts the content item by date.
+	 * Tries to find and return a content item by a key and value.
 	 *
+	 * @param  string  $key
+	 * @param  mixed   $key
 	 * @return \Content\Collection
 	 */
-	public function sortByDate()
+	public function filterBy($key, $value)
 	{
-		return $this->sort(function($a, $b)
+		return $this->filter(function($item) use ($key, $value)
 		{
-			if ($a->date == $b->date) return 0;
-
-			return ($a->date < $b->date) ? 1 : -1;
+			return $item->$key == $value;
 		});
 	}
 
 	/**
-	 * Tries to find and return a content item by its slug.
+	 * Orders the content items by a key.
 	 *
-	 * @param  string  $slug
-	 * @return \Content\ContentRepositoryInterface
+	 * @param  string  $key
+	 * @return \Content\Collection
 	 */
-	public function findBySlug($slug)
+	public function orderBy($key)
 	{
-		return $this->filter(function($item) use ($slug)
+		return $this->sort(function($a, $b) use ($key)
 		{
-			return $item->slug === $slug;
-		})
-		->first();
+			if ($a->$key == $b->$key) return 0;
+
+			return ($a->$key < $b->$key) ? 1 : -1;
+		});
 	}
 
 }
