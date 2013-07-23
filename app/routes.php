@@ -10,17 +10,17 @@ Route::model('posts', 'Models\\Post');
 Route::model('pages', 'Models\\Page');
 Route::bind('post_slug', function($value)
 {
-	$posts = get_posts()->published();
+	$post = get_posts()->published()->filterBy('slug', $value)->first();
 
-	if ($post = $posts->filterBy('slug', $value)->first()) return $post;
+	if ($post) return $post;
 
 	App::abort(404);
 });
 Route::bind('page_slug', function($value)
 {
-	$pages = get_pages()->published();
+	$page = get_pages()->published()->filterBy('slug', $value)->first();
 
-	if ($page = $pages->filterBy('slug', $value)->first()) return $page;
+	if ($page) return $page;
 
 	App::abort(404);
 });
