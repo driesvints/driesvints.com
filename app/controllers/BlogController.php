@@ -18,11 +18,9 @@ class BlogController extends BaseController {
 	 */
 	public function index()
 	{
-		$posts = get_posts();
+		$posts = get_posts()->orderBy('date')->all();
 
-		$posts->orderBy('date');
-
-		return $this->view('content.index')->with('items', $posts->all());
+		return $this->view('content.index')->with('items', $posts);
 	}
 
 	/**
