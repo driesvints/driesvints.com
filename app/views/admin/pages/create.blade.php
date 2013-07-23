@@ -13,6 +13,12 @@
 </p>
 
 <p>
+	{{ Form::label('published_at') }}
+	{{ Form::text('published_at', Input::old('published_at', date('Y-m-d H:i:s'))) }}
+	{{ $errors->first('published_at') }}
+</p>
+
+<p>
 	{{ Form::label('body') }}
 	{{ Form::textarea('body') }}
 </p>

@@ -1,5 +1,6 @@
 <?php namespace Content;
 
+use DateTime;
 use Illuminate\Support\Collection as BaseCollection;
 
 class Collection extends BaseCollection {
@@ -16,7 +17,7 @@ class Collection extends BaseCollection {
 	}
 
 	/**
-	 * Tries to find and return a content item by a key and value.
+	 * Tries to find and return a content item by a key and a value.
 	 *
 	 * @param  string  $key
 	 * @param  mixed   $value
@@ -43,6 +44,21 @@ class Collection extends BaseCollection {
 			if ($a->$key == $b->$key) return 0;
 
 			return ($a->$key < $b->$key) ? 1 : -1;
+		});
+	}
+
+	/**
+	 * Only return content which has already been published.
+	 *
+	 * @return \Content\Collection
+	 */
+	public function published()
+	{
+		return $this->filter(function($item)
+		{
+			$date = new DateTime($item->date('Y-m-d H:i:s'));
+
+			return $date->getTimestamp() <= time();
 		});
 	}
 

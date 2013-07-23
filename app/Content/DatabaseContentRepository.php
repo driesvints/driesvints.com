@@ -16,7 +16,7 @@ class DatabaseContentRepository extends BaseContentRepository implements Content
 	 *
 	 * @var string
 	 */
-	protected $dateKey = 'created_at';
+	protected $dateKey = 'published_at';
 
 	/**
 	 * Initialize the repository.

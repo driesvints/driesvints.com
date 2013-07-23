@@ -10,7 +10,7 @@
 		<tr>
 			<th>Title</th>
 			<th>Slug</th>
-			<th>Created at</th>
+			<th>Published At</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -19,7 +19,7 @@
 		<tr>
 			<td>{{ $page->title }}</td>
 			<td>{{ $page->slug }}</td>
-			<td>{{ $page->created_at }}</td>
+			<td>{{ $page->published_at }}</td>
 			<td>
 				{{ HTML::linkRoute('pages.show', 'View page', $page->slug, array('target' => '_blank')) }}
 				{{ HTML::linkRoute('admin.pages.edit', 'Edit page', $page->id) }}

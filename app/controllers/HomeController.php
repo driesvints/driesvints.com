@@ -9,7 +9,7 @@ class HomeController extends BaseController {
 	 */
 	public function index()
 	{
-		$posts = get_posts()->orderBy('date')->take(5);
+		$posts = get_posts()->published()->orderBy('date')->take(5);
 
 		return $this->view('index', compact('posts'));
 	}

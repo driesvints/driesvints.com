@@ -10,7 +10,7 @@ Route::model('posts', 'Models\\Post');
 Route::model('pages', 'Models\\Page');
 Route::bind('post_slug', function($value)
 {
-	$posts = get_posts();
+	$posts = get_posts()->published();
 
 	if ($post = $posts->filterBy('slug', $value)->first()) return $post;
 
@@ -18,7 +18,7 @@ Route::bind('post_slug', function($value)
 });
 Route::bind('page_slug', function($value)
 {
-	$pages = get_pages();
+	$pages = get_pages()->published();
 
 	if ($page = $pages->filterBy('slug', $value)->first()) return $page;
 

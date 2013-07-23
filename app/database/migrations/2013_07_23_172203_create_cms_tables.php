@@ -27,6 +27,7 @@ class CreateCmsTables extends Migration {
 			$table->string('slug')->unique();
 			$table->string('title');
 			$table->text('body');
+			$table->timestamp('published_at');
 			$table->timestamps();
 		});
 
@@ -36,6 +37,7 @@ class CreateCmsTables extends Migration {
 			$table->string('slug')->unique();
 			$table->string('title');
 			$table->text('body');
+			$table->timestamp('published_at');
 			$table->timestamps();
 		});
 	}

@@ -41,6 +41,7 @@ class PagesController extends BaseController {
 		$page = new Page;
 		$page->title = Input::get('title');
 		$page->slug = Input::get('slug') ?: Str::slug($page->title);
+		$page->published_at = Input::get('published_at');
 		$page->body = Input::get('body');
 
 		if ( ! $page->validate())
@@ -76,6 +77,7 @@ class PagesController extends BaseController {
 	{
 		$page->title = Input::get('title');
 		$page->slug = Input::get('slug') ?: Str::slug($page->title);
+		$page->published_at = Input::get('published_at');
 		$page->body = Input::get('body');
 
 		if ( ! $page->validate())

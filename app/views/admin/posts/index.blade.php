@@ -10,7 +10,7 @@
 		<tr>
 			<th>Title</th>
 			<th>Slug</th>
-			<th>Created at</th>
+			<th>Published At</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -19,7 +19,7 @@
 		<tr>
 			<td>{{ $post->title }}</td>
 			<td>{{ $post->slug }}</td>
-			<td>{{ $post->created_at }}</td>
+			<td>{{ $post->published_at }}</td>
 			<td>
 				{{ HTML::linkRoute('blog.show', 'View post', $post->slug, array('target' => '_blank')) }}
 				{{ HTML::linkRoute('admin.posts.edit', 'Edit post', $post->id) }}

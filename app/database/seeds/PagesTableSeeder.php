@@ -17,18 +17,21 @@ class PagesTableSeeder extends Seeder {
 			'title' => 'Foo',
 			'slug' => 'foo',
 			'body' => 'This is some lorum ipsum text.',
+			'published_at' => new DateTime,
 		));
 
 		Page::create(array(
 			'title' => 'Bar',
 			'slug' => 'bar',
 			'body' => 'This is some lorum ipsum text.',
+			'published_at' => new DateTime,
 		));
 
 		Page::create(array(
 			'title' => 'Baz',
 			'slug' => 'baz',
 			'body' => 'This is some lorum ipsum text.',
+			'published_at' => new DateTime,
 		));
 	}
 

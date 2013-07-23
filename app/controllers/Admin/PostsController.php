@@ -41,6 +41,7 @@ class PostsController extends BaseController {
 		$post = new Post;
 		$post->title = Input::get('title');
 		$post->slug = Input::get('slug') ?: Str::slug($post->title);
+		$post->published_at = Input::get('published_at');
 		$post->body = Input::get('body');
 
 		if ( ! $post->validate())
@@ -76,6 +77,7 @@ class PostsController extends BaseController {
 	{
 		$post->title = Input::get('title');
 		$post->slug = Input::get('slug') ?: Str::slug($post->title);
+		$post->published_at = Input::get('published_at');
 		$post->body = Input::get('body');
 
 		if ( ! $post->validate())
