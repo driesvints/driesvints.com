@@ -19,7 +19,7 @@ class Collection extends BaseCollection {
 	 * Tries to find and return a content item by a key and value.
 	 *
 	 * @param  string  $key
-	 * @param  mixed   $key
+	 * @param  mixed   $value
 	 * @return \Content\Collection
 	 */
 	public function filterBy($key, $value)
