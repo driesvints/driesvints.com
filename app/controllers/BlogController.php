@@ -1,4 +1,4 @@
-<?php namespace Controllers;
+<?php
 
 use Content\ContentRepositoryInterface;
 
@@ -20,18 +20,7 @@ class BlogController extends BaseController {
 	{
 		$posts = get_posts()->published()->orderBy('date')->all();
 
-		return $this->view('content.index')->with('items', $posts);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  \Content\ContentRepositoryInterface  $item
-	 * @return \Illuminate\View\View
-	 */
-	public function show(ContentRepositoryInterface $item)
-	{
-		return $this->view('content.show', compact('item'));
+		return $this->view('posts.blog', compact('posts'));
 	}
 
 }

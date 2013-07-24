@@ -1,11 +1,7 @@
-<?php namespace Controllers\Admin;
+<?php
 
-use Str;
-use View;
-use Input;
-use Redirect;
 use Models\Post;
-use Controllers\BaseController;
+use Content\ContentRepositoryInterface;
 
 class PostsController extends BaseController {
 
@@ -18,7 +14,7 @@ class PostsController extends BaseController {
 	{
 		$posts = Post::all();
 
-		return View::make('admin.posts.index', compact('posts'));
+		return View::make('posts.index', compact('posts'));
 	}
 
 	/**
@@ -28,7 +24,7 @@ class PostsController extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('admin.posts.create');
+		return View::make('posts.create');
 	}
 
 	/**
@@ -53,7 +49,18 @@ class PostsController extends BaseController {
 
 		$post->save();
 
-		return Redirect::route('admin.posts.edit', $post->id);
+		return Redirect::route('posts.edit', $post->id);
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  \Content\ContentRepositoryInterface  $item
+	 * @return \Illuminate\View\View
+	 */
+	public function show(ContentRepositoryInterface $item)
+	{
+		return $this->view('content.show', compact('item'));
 	}
 
 	/**
@@ -64,7 +71,7 @@ class PostsController extends BaseController {
 	 */
 	public function edit(Post $post)
 	{
-		return View::make('admin.posts.edit', compact('post'));
+		return View::make('posts.edit', compact('post'));
 	}
 
 	/**
@@ -89,7 +96,7 @@ class PostsController extends BaseController {
 
 		$post->save();
 
-		return Redirect::route('admin.posts.edit', $post->id);
+		return Redirect::route('posts.edit', $post->id);
 	}
 
 	/**
@@ -102,7 +109,7 @@ class PostsController extends BaseController {
 	{
 		$post->delete();
 
-		return Redirect::route('admin.posts.index');
+		return Redirect::route('posts.index');
 	}
 
 }

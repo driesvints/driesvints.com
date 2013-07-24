@@ -1,4 +1,4 @@
-<?php namespace Controllers;
+<?php
 
 class HomeController extends BaseController {
 

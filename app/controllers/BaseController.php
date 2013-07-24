@@ -1,7 +1,4 @@
-<?php namespace Controllers;
-
-use View;
-use Controller;
+<?php
 
 class BaseController extends Controller {
 
