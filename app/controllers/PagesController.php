@@ -24,7 +24,9 @@ class PagesController extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('pages.create');
+		$statuses = Page::getStatuses();
+
+		return View::make('pages.create', compact('statuses'));
 	}
 
 	/**
@@ -37,6 +39,7 @@ class PagesController extends BaseController {
 		$page = new Page;
 		$page->title = Input::get('title');
 		$page->slug = Input::get('slug') ?: Str::slug($page->title);
+		$post->status = Input::get('status');
 		$page->published_at = Input::get('published_at');
 		$page->body = Input::get('body');
 
@@ -49,7 +52,7 @@ class PagesController extends BaseController {
 
 		$page->save();
 
-		return Redirect::route('pages.edit', $page->id);
+		return Redirect::route('admin.pages.edit', $page->id);
 	}
 
 	/**
@@ -71,7 +74,9 @@ class PagesController extends BaseController {
 	 */
 	public function edit(Page $page)
 	{
-		return View::make('pages.edit', compact('page'));
+		$statuses = Page::getStatuses();
+
+		return View::make('pages.edit', compact('page', 'statuses'));
 	}
 
 	/**
@@ -84,6 +89,7 @@ class PagesController extends BaseController {
 	{
 		$page->title = Input::get('title');
 		$page->slug = Input::get('slug') ?: Str::slug($page->title);
+		$post->status = Input::get('status');
 		$page->published_at = Input::get('published_at');
 		$page->body = Input::get('body');
 
@@ -96,7 +102,7 @@ class PagesController extends BaseController {
 
 		$page->save();
 
-		return Redirect::route('pages.edit', $page->id);
+		return Redirect::route('admin.pages.edit', $page->id);
 	}
 
 	/**
@@ -109,7 +115,7 @@ class PagesController extends BaseController {
 	{
 		$page->delete();
 
-		return Redirect::route('pages.index');
+		return Redirect::route('admin.pages.index');
 	}
 
 }

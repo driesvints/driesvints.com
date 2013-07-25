@@ -24,7 +24,9 @@ class PostsController extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('posts.create');
+		$statuses = Post::getStatuses();
+
+		return View::make('posts.create', compact('statuses'));
 	}
 
 	/**
@@ -37,6 +39,7 @@ class PostsController extends BaseController {
 		$post = new Post;
 		$post->title = Input::get('title');
 		$post->slug = Input::get('slug') ?: Str::slug($post->title);
+		$post->status = Input::get('status');
 		$post->published_at = Input::get('published_at');
 		$post->body = Input::get('body');
 
@@ -49,7 +52,7 @@ class PostsController extends BaseController {
 
 		$post->save();
 
-		return Redirect::route('posts.edit', $post->id);
+		return Redirect::route('admin.posts.edit', $post->id);
 	}
 
 	/**
@@ -71,7 +74,9 @@ class PostsController extends BaseController {
 	 */
 	public function edit(Post $post)
 	{
-		return View::make('posts.edit', compact('post'));
+		$statuses = Post::getStatuses();
+
+		return View::make('posts.edit', compact('post', 'statuses'));
 	}
 
 	/**
@@ -84,6 +89,7 @@ class PostsController extends BaseController {
 	{
 		$post->title = Input::get('title');
 		$post->slug = Input::get('slug') ?: Str::slug($post->title);
+		$post->status = Input::get('status');
 		$post->published_at = Input::get('published_at');
 		$post->body = Input::get('body');
 
@@ -96,7 +102,7 @@ class PostsController extends BaseController {
 
 		$post->save();
 
-		return Redirect::route('posts.edit', $post->id);
+		return Redirect::route('admin.posts.edit', $post->id);
 	}
 
 	/**
@@ -109,7 +115,7 @@ class PostsController extends BaseController {
 	{
 		$post->delete();
 
-		return Redirect::route('posts.index');
+		return Redirect::route('admin.posts.index');
 	}
 
 }

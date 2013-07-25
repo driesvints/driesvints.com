@@ -16,6 +16,7 @@ class PostsTableSeeder extends Seeder {
 		Post::create(array(
 			'title' => 'Foo',
 			'slug' => 'foo',
+			'status' => 'published',
 			'body' => 'This is some lorum ipsum text.',
 			'published_at' => new DateTime,
 		));
@@ -23,6 +24,7 @@ class PostsTableSeeder extends Seeder {
 		Post::create(array(
 			'title' => 'Bar',
 			'slug' => 'bar',
+			'status' => 'published',
 			'body' => 'This is some lorum ipsum text.',
 			'published_at' => new DateTime,
 		));
@@ -30,6 +32,7 @@ class PostsTableSeeder extends Seeder {
 		Post::create(array(
 			'title' => 'Baz',
 			'slug' => 'baz',
+			'status' => 'published',
 			'body' => 'This is some lorum ipsum text.',
 			'published_at' => new DateTime,
 		));

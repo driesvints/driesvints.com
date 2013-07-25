@@ -3,7 +3,7 @@
 use Eloquent;
 use Validator;
 
-abstract class BaseModel extends Eloquent {
+class BaseModel extends Eloquent {
 
 	/**
 	 * The validation rules for this model.
@@ -24,7 +24,7 @@ abstract class BaseModel extends Eloquent {
 	 *
 	 * @return void
 	 */
-	abstract protected function setUpValidationRules();
+	protected function setUpValidationRules(){}
 
 	/**
 	 * Validates a model against its rules.

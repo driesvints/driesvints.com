@@ -58,7 +58,10 @@ class Collection extends BaseCollection {
 		{
 			$date = new DateTime($item->date('Y-m-d H:i:s'));
 
-			return $date->getTimestamp() <= time();
+			return (
+				$date->getTimestamp() <= time() && 
+				$item->status === 'published'
+			);
 		});
 	}
 

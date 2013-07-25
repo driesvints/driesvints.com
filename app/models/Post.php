@@ -1,6 +1,6 @@
 <?php namespace Models;
 
-class Post extends BaseModel {
+class Post extends ContentModel {
 
 	/**
 	 * The table associated with the model.
@@ -16,9 +16,12 @@ class Post extends BaseModel {
 	 */
 	protected function setUpValidationRules()
 	{
+		$statuses = array_keys(static::$statuses);
+
 		static::$rules = array(
 			'title' => 'required',
 			'slug'  => 'required|unique:posts,slug,' . $this->id,
+			'status' => 'in:'.implode(',', $statuses),
 		);
 	}
 
