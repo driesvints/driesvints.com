@@ -1,15 +1,9 @@
-<h1>Dries Vints</h1>
+@extends('layout')
 
-<h2>
-	Freelance Web Developer<br>
-	Open-Source Enthusiast<br>
-	Available For Hire
-</h2>
+@section('content')
 
-@if (count($posts))
-	<h1>Latest Posts</h1>
-	
-	@foreach ($posts as $post)
-		@include('posts.excerpt')
-	@endforeach
-@endif
+<h2>Latest Posts</h2>
+
+@include('posts.list')
+
+@stop

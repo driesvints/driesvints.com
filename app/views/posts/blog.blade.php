@@ -1,7 +1,9 @@
-<h1>{{ $title }}</h1>
+@extends('layout')
 
-@if (count($posts))
-	@foreach ($posts as $post)
-		@include('posts.excerpt')
-	@endforeach
-@endif
+@section('content')
+
+<h2>{{ $title }}</h2>
+
+@include('posts.list')
+
+@stop

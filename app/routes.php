@@ -33,7 +33,10 @@ Route::bind('page_slug', function($value)
 
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
 
-Route::get('blog', array('as' => 'blog.index', 'uses' => 'BlogController@index'));
+Route::get('blog', function()
+{
+	return Redirect::home();
+});
 Route::get('blog/{post_slug}', array('as' => 'posts.show', 'uses' => 'PostsController@show'));
 
 Route::get('login', array('as' => 'login', 'uses' => 'AuthController@getLogin'));
