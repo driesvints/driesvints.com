@@ -10,7 +10,7 @@
 	<ul class="nav navbar-nav pull-right">
 		<li><a href="{{ route('logout') }}">Logout</a></li>
 	</ul>
-	<p class="navbar-text pull-right">Signed in as {{ Auth::user()->fullname() }}</p>
+	<p class="navbar-text pull-right">Signed in as <strong>{{ Auth::user()->fullname() }}</strong></p>
 </div>
 
 <div class="container">
