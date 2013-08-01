@@ -63,7 +63,7 @@ class PostsController extends BaseController {
 	 */
 	public function show(ContentRepositoryInterface $item)
 	{
-		return $this->view('content.show', compact('item'));
+		return $this->view('single', compact('item'));
 	}
 
 	/**

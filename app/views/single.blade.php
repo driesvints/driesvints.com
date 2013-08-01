@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('public-layout')
 
 @section('content')
 

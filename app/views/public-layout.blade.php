@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="page-header">
-			<h1><a href="{{ route('home') }}">Dries Vints</a> <small>Web Developer and Open-Source Enthusiast</small></h1>
+			<h1><a href="{{ route('home') }}">Dries Vints</a> <small>Web Developer with a passion for PHP, Open Source and Community</small></h1>
 		</div>
 	</div>
 </div>
