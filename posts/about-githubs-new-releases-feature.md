@@ -3,7 +3,7 @@ slug: about-githubs-new-releases-feature
 status: published
 date: 28 July 2013 9AM
 -------
-A couple of weeks ago [Github released a new feature](https://github.com/blog/1547-release-your-software) called *Releases* which allows you to track a project's history and easily add a changelog and manage your project's binary assets. I'm very excited about this because we finally got a place where we have a good overview of each released version of our projects.<!--more-->
+A couple of weeks ago [Github released a new feature](https://github.com/blog/1547-release-your-software) called *Releases* which allows you to track a project's history and easily add a changelog and manage your project's binary assets. I'm very excited about this because we finally got a place where we have a good overview of each released version of our projects.
 
 However, there's something that still bothers me. It's tightly coupled into Github which only allows us to enter the information into Github's Releases system. We can't transfer the data together with our Github repo if we decide to move the project from Github. We also can't versionize or collaborate on the changelogs through Pull Requests.
 
