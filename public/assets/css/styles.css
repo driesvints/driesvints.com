@@ -19,10 +19,10 @@ body {
  */
 .avatar-frame,
 .avatar-frame img {
-	width: 150px;
-	height: 150px;
-	-webkit-border-radius: 150px; /* Saf3+, Chrome */
-	border-radius: 150px; /* Opera 10.5, IE 9 */
+	width: 125px;
+	height: 125px;
+	-webkit-border-radius: 125px; /* Saf3+, Chrome */
+	border-radius: 125px; /* Opera 10.5, IE 9 */
 }
 .avatar-frame img {
 	border: 2px solid #bbb;
