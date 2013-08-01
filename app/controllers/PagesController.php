@@ -14,7 +14,7 @@ class PagesController extends BaseController {
 	{
 		$pages = Page::all();
 
-		return View::make('pages.index', compact('pages'));
+		return View::make('admin.pages.index', compact('pages'));
 	}
 
 	/**
@@ -26,7 +26,7 @@ class PagesController extends BaseController {
 	{
 		$statuses = Page::getStatuses();
 
-		return View::make('pages.create', compact('statuses'));
+		return View::make('admin.pages.create', compact('statuses'));
 	}
 
 	/**
@@ -63,7 +63,7 @@ class PagesController extends BaseController {
 	 */
 	public function show(ContentRepositoryInterface $item)
 	{
-		return $this->view('single', compact('item'));
+		return $this->view('public.single', compact('item'));
 	}
 
 	/**
@@ -76,7 +76,7 @@ class PagesController extends BaseController {
 	{
 		$statuses = Page::getStatuses();
 
-		return View::make('pages.edit', compact('page', 'statuses'));
+		return View::make('admin.pages.edit', compact('page', 'statuses'));
 	}
 
 	/**

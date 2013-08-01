@@ -61,6 +61,16 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	}
 
 	/**
+	 * Return the full name for this user.
+	 *
+	 * @return string
+	 */
+	public function fullname()
+	{
+		return trim($this->first_name.' '.$this->last_name);
+	}
+
+	/**
 	 * Sets the validation rules on the model.
 	 *
 	 * @return void

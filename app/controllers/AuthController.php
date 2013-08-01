@@ -9,7 +9,7 @@ class AuthController extends BaseController {
 	 */
 	public function getLogin()
 	{
-		return View::make('login');
+		return View::make('admin.login');
 	}
 
 	/**
@@ -19,14 +19,12 @@ class AuthController extends BaseController {
 	 */
 	public function postLogin()
 	{
-		$credentials = array(
-			'email'    => Input::get('email'),
-			'password' => Input::get('password'),
-		);
+		$credentials = Input::only('email', 'password');
+		$remember = Input::get('remember') ?: false;
 
-		if (Auth::attempt($credentials))
+		if (Auth::attempt($credentials, $remember))
 		{
-			return Redirect::route('admin');
+			return Redirect::route('dashboard');
 		}
 
 		return Redirect::back()->withInput();

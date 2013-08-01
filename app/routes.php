@@ -45,7 +45,7 @@ Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'))
 
 Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 {
-	Route::get('/', array('as' => 'admin', 'uses' => 'AdminController@dashboard'));
+	Route::get('/', array('as' => 'dashboard', 'uses' => 'AdminController@dashboard'));
 
 	Route::resource('posts', 'PostsController', array('except' => array('show')));
 	Route::resource('pages', 'PagesController', array('except' => array('show')));

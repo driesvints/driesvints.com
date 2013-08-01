@@ -1,5 +1,5 @@
 @if (count($posts))
 	@foreach ($posts as $post)
-		@include('posts.excerpt')
+		@include('public.posts.excerpt')
 	@endforeach
 @endif

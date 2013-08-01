@@ -11,7 +11,7 @@ class HomeController extends BaseController {
 	{
 		$posts = get_posts()->published()->orderBy('date')->take(5);
 
-		return $this->view('index', compact('posts'));
+		return $this->view('public.index', compact('posts'));
 	}
 
 }

@@ -1,4 +1,4 @@
-@include('header')
+@include('admin.header')
 
 <div class="row">
 	<div class="col-lg-6 col-offset-3">
@@ -20,9 +20,9 @@
 					{{ Form::password('password', array('class' => 'form-control')) }}
 
 					<div class="checkbox">
-					  <label>
-					    <input type="checkbox"> Remember me
-					  </label>
+						<label>
+							{{ Form::checkbox('remember') }} Remember me
+						</label>
 					</div>
 
 					{{ Form::submit(null, array('class' => 'btn btn-primary')) }}
@@ -34,4 +34,4 @@
 	</div>
 </div>
 
-@include('footer')
+@include('admin.footer')

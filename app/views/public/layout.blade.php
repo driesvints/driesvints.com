@@ -1,4 +1,4 @@
-@include('header')
+@include('public.header')
 
 <div class="row">
 	<div class="col-lg-12">
@@ -42,4 +42,4 @@
 	</div>
 </div>
 
-@include('footer')
+@include('public.footer')
