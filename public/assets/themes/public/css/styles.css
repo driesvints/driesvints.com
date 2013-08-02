@@ -24,9 +24,6 @@ body {
 	-webkit-border-radius: 125px; /* Saf3+, Chrome */
 	border-radius: 125px; /* Opera 10.5, IE 9 */
 }
-.avatar-frame img {
-	border: 2px solid #bbb;
-}
 
 /**
  * Social icons.
