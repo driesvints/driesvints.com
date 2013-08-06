@@ -2,6 +2,7 @@ title: About Github's New Releases Feature
 slug: about-githubs-new-releases-feature
 status: published
 date: 28 July 2013 9AM
+tags: github, open-source, documentation
 -------
 A couple of weeks ago [Github released a new feature](https://github.com/blog/1547-release-your-software) called *Releases* which allows you to track a project's history and easily add a changelog and manage your project's binary assets. I'm very excited about this because we finally got a place where we have a good overview of each released version of our projects.
 

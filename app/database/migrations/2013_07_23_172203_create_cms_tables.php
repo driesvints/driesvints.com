@@ -42,6 +42,14 @@ class CreateCmsTables extends Migration {
 			$table->timestamp('published_at');
 			$table->timestamps();
 		});
+
+		Schema::create('tags', function($table)
+		{
+			$table->increments('id');
+			$table->integer('post_id');
+			$table->string('title');
+			$table->timestamps();
+		});
 	}
 
 	/**
@@ -54,6 +62,7 @@ class CreateCmsTables extends Migration {
 		Schema::drop('users');
 		Schema::drop('posts');
 		Schema::drop('pages');
+		Schema::drop('tags');
 	}
 
 }

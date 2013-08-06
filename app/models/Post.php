@@ -10,6 +10,16 @@ class Post extends ContentModel {
 	protected $table = 'posts';
 
 	/**
+	 * The related tags.
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function tags()
+	{
+		return $this->hasMany('Models\\Tag');
+	}
+
+	/**
 	 * Sets the validation rules on the model.
 	 *
 	 * @return void

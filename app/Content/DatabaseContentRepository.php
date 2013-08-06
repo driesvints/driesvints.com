@@ -30,6 +30,16 @@ class DatabaseContentRepository extends BaseContentRepository implements Content
 	}
 
 	/**
+	 * Formats the related tags to an array.
+	 *
+	 * @return array
+	 */
+	public function tags()
+	{
+		return $this->model->tags->lists('title');
+	}
+
+	/**
 	 * Returns a specific content item attribute.
 	 *
 	 * @param  string  $key
