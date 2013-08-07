@@ -6,6 +6,7 @@
 |--------------------------------------------------------------------------
 */
 
+Route::model('users', 'Models\\User');
 Route::model('posts', 'Models\\Post');
 Route::model('pages', 'Models\\Page');
 Route::bind('post_slug', function($value)
@@ -53,6 +54,7 @@ Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 {
 	Route::get('/', array('as' => 'dashboard', 'uses' => 'AdminController@dashboard'));
 
+	Route::resource('users', 'UsersController', array('only' => array('edit', 'update')));
 	Route::resource('posts', 'PostsController', array('except' => array('show')));
 	Route::resource('pages', 'PagesController', array('except' => array('show')));
 });

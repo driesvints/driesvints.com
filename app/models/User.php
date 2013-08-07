@@ -79,9 +79,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	{
 		static::$rules = array(
 			'email'      => 'required|email|unique:users,email,'.$this->id,
-			'password'   => 'required|confirmed',
 			'first_name' => 'required',
-			'last_name'  => 'required', 
+			'last_name'  => 'required',
 		);
 	}
 
