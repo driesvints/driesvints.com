@@ -15,8 +15,8 @@
 
 	<div class="col-lg-3 about">
 		@section('about')
-			<p>
-				<span class="avatar-frame"><img src="http://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5.jpg?s=200" /><span>
+			<p class="avatar-frame">
+				<img class="img-circle" src="http://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5.jpg?s=200" />
 			</p>
 			
 			<p>

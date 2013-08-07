@@ -12,22 +12,11 @@ body {
 	font-style: italic;
 }
 
-/**
- * Round avatar.
- *
- * @source http://trentwalton.com/2010/08/03/css3-border-radius-rounded-avatars/
- */
-.avatar-frame,
 .avatar-frame img {
 	width: 100px;
 	height: 100px;
-	-webkit-border-radius: 100px; /* Saf3+, Chrome */
-	border-radius: 100px; /* Opera 10.5, IE 9 */
 }
 
-/**
- * Social icons.
- */
 .social-icons i {
 	font-size: 2.5em;
 	margin-right: 0.4em;
