@@ -8,8 +8,8 @@
 
 {{ $item->body }}
 
-@if ($tags = $item->tags)
-<p>Tagged in: {{ implode(', ', $tags) }}</p>
+@if (isset($tags))
+<p>Tagged in: {{ $tags }}</p>
 @endif
 
 @stop

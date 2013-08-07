@@ -39,6 +39,12 @@ Route::get('blog', function()
 });
 Route::get('blog/{post_slug}', array('as' => 'posts.show', 'uses' => 'PostsController@show'));
 
+Route::get('tag', function()
+{
+	return Redirect::home();
+});
+Route::get('tag/{tag}', array('as' => 'tags.show', 'uses' => 'TagsController@show'));
+
 Route::get('login', array('as' => 'login', 'uses' => 'AuthController@getLogin'));
 Route::post('login', 'AuthController@postLogin');
 Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));

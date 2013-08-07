@@ -63,7 +63,13 @@ class PostsController extends BaseController {
 	 */
 	public function show(ContentRepositoryInterface $item)
 	{
-		return $this->view('public.single', compact('item'));
+		$tags = array_map(function($tag)
+		{
+			return link_to_route('tags.show', $tag, $tag);
+		}, $item->tags);
+		$tags = implode(', ', $tags);
+
+		return $this->view('public.single', compact('item', 'tags'));
 	}
 
 	/**
