@@ -8,7 +8,7 @@
 
 {{ $item->body }}
 
-@if (isset($tags))
+@if (isset($tags) && ! empty($tags))
 <p>Tagged in: {{ $tags }}</p>
 @endif
 
