@@ -12,6 +12,6 @@
 	<!-- Stylsheets -->
 	{{ HTML::style('assets/libraries/bootstrap/css/bootstrap.min.css') }}
 	{{ HTML::style('assets/libraries/font-awesome/css/font-awesome.min.css') }}
-	{{ HTML::style('assets/themes/admin/css/styles.css') }}
+	{{ HTML::style('assets/css/styles.css') }}
 </head>
 <body>

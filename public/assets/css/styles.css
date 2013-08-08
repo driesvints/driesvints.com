@@ -1,7 +1,5 @@
-body {
-	background-color: #fff;
-	border-top: 8px solid #548DC4;
-}
+/* Public Area
+---------------------------------------------------------*/
 
 .no-line-break {
 	white-space: nowrap;
@@ -21,6 +19,13 @@ body {
 	font-size: 2.5em;
 	margin-right: 0.4em;
 }
-.social-icons a:hover{
+.social-icons a:hover {
 	text-decoration: none;
+}
+
+/* Admin Area
+---------------------------------------------------------*/
+
+.btn-create {
+	margin-top: 20px;
 }
