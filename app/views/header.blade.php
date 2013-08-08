@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width">
 
 	<!-- Site info -->
-	<title>Dashboard | Dries Vints</title>
+	<title>Dries Vints</title>
 
 	<!-- Stylsheets -->
 	{{ HTML::style('assets/libraries/bootstrap/css/bootstrap.min.css') }}
@@ -15,3 +15,9 @@
 	{{ HTML::style('assets/css/styles.css') }}
 </head>
 <body>
+
+@if (Auth::check())
+	@include('admin-bar')
+@endif
+
+<div class="container">

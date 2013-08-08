@@ -9,7 +9,7 @@ class AuthController extends BaseController {
 	 */
 	public function getLogin()
 	{
-		return View::make('admin.login');
+		return View::make('login');
 	}
 
 	/**
@@ -39,7 +39,7 @@ class AuthController extends BaseController {
 	{
 		Auth::logout();
 
-		return Redirect::route('home');
+		return Redirect::home();
 	}
 
 }
