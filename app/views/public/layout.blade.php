@@ -20,7 +20,7 @@
 			</p>
 			
 			<p>
-				Dries is a <strong>web developer</strong> from Belgium. He spends his days working a day time job in the city of Antwerp, collaborating on <strong>open-source</strong> projects or writing for his blog. He also does a weekly blog post series called <strong>Laravel Weekly</strong> at <a href="http://laravel.io">Laravel.io</a> and writes documentation manuals for <a href="http://cartalyst.com">Cartalyst</a>.
+				Hi, I'm Dries. A <strong>web developer</strong> from Belgium. I spend most of my days working a day time job in the city of Antwerp, collaborating on <strong>open-source</strong> projects or writing for his blog. I also do a weekly blog post series called &ldquo;<strong>Laravel</strong> Weekly&rdquo; at <a href="http://laravel.io">Laravel.io</a> and write documentation manuals for <a href="http://cartalyst.com">Cartalyst</a>.
 			</p>
 			
 			<p class="social-icons">
