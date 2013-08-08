@@ -12,7 +12,7 @@
 		<tr>
 			<th>Title</th>
 			<th>Slug</th>
-			<th>Published At</th>
+			<th>Last Modified At</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -21,7 +21,7 @@
 		<tr>
 			<td>{{ $page->title }}</td>
 			<td>{{ $page->slug }}</td>
-			<td>{{ $page->published_at }}</td>
+			<td>{{ $page->updated_at->toDayDateTimeString() }}</td>
 			<td>
 				{{ HTML::linkRoute('pages.show', 'View page', $page->slug, array('target' => '_blank', 'class' => 'btn btn-info btn-small')) }}
 				{{ HTML::linkRoute('admin.pages.edit', 'Edit page', $page->id, array('class' => 'btn btn-warning btn-small')) }}

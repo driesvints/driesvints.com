@@ -12,7 +12,7 @@
 		<tr>
 			<th>Title</th>
 			<th>Slug</th>
-			<th>Published At</th>
+			<th>Last Modified At</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -21,7 +21,7 @@
 		<tr>
 			<td>{{ $post->title }}</td>
 			<td>{{ $post->slug }}</td>
-			<td>{{ $post->published_at }}</td>
+			<td>{{ $post->updated_at->toDayDateTimeString() }}</td>
 			<td>
 				{{ HTML::linkRoute('posts.show', 'View post', $post->slug, array('target' => '_blank', 'class' => 'btn btn-info btn-small')) }}
 				{{ HTML::linkRoute('admin.posts.edit', 'Edit post', $post->id, array('class' => 'btn btn-warning btn-small')) }}
