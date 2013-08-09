@@ -4,7 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"require": {
 		"laravel/framework": "4.0.*",
-		"daylerees/kurenai": "dev-master"
+		"daylerees/kurenai": "dev-master",
+		"prologue/support": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
