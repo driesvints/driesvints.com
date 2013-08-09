@@ -10,6 +10,8 @@ However, there's something that still bothers me. It's tightly coupled into Gith
 
 Back in June, [Github released another feature](https://github.com/blog/1528-there-s-a-map-for-that) which provides support for visualizing geographic data through `.geojson` files. This is a great way to provide a feature and still keep the data inside your repository so you can versionize and ship it with your project.
 
+**Remember that the following is just a concept and doesn't actually work.**
+
 The same idea could be applied to the Releases feature. Changelog information could be provided through, for example, a `changelog.json` file which resides in the project root. I've seen this being used in some projects like [Laravel](http://laravel.com/) where a `changes.json` file is kept [in the framework's source code](https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/changes.json).
 
 Let's see how such a file could look like. I'm using the example from [the Github blog post](https://github.com/blog/1547-release-your-software).
