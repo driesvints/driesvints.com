@@ -4,12 +4,14 @@
 
 <h2>{{ $item->title }}</h2>
 
-<p class="post-date">Posted on {{ $item->date('F d, Y') }}</p>
+<p class="post-date">
+	Posted on {{ $item->date('F d, Y') }}
+
+	@if (isset($tags) && ! empty($tags))
+	| Tagged in: {{ $tags }}
+	@endif
+</p>
 
 {{ $item->body }}
-
-@if (isset($tags) && ! empty($tags))
-<p><em>Tagged in: {{ $tags }}</em></p>
-@endif
 
 @stop
