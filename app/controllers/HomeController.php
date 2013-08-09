@@ -12,7 +12,7 @@ class HomeController extends BaseController {
 		$posts = get_posts()
 		         ->published()
 		         ->orderBy('date', 'desc')
-		         ->paginate(10);
+		         ->paginate(5);
 
 		return $this->view('public.home', compact('posts'));
 	}

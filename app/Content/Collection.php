@@ -23,4 +23,21 @@ class Collection extends BaseCollection {
 		});
 	}
 
+	/**
+	 * Returns a paginator instance for this collection.
+	 *
+	 * @param  int  $perPage
+	 * @return \Illuminate\Pagination\Paginator
+	 */
+	public function paginate($perPage)
+	{
+		$paginator = app('paginator');
+
+		$start = ($paginator->getCurrentPage() - 1) * $perPage;
+
+		$sliced = $this->slice($start, $perPage)->all();
+
+		return $paginator->make($sliced, $this->count(), $perPage);
+	}
+
 }
