@@ -9,7 +9,7 @@
 {{ $item->body }}
 
 @if (isset($tags) && ! empty($tags))
-<p>Tagged in: {{ $tags }}</p>
+<p><em>Tagged in: {{ $tags }}</em></p>
 @endif
 
 @stop
