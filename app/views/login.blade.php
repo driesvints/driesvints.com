@@ -1,4 +1,4 @@
-@include('admin.header')
+@include('header')
 
 <div class="row">
 	<div class="col-lg-6 col-offset-3">
@@ -34,4 +34,4 @@
 	</div>
 </div>
 
-@include('admin.footer')
+@include('footer')
