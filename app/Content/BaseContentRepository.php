@@ -34,6 +34,16 @@ abstract class BaseContentRepository {
 	 */
 	public function excerpt($words = 50)
 	{
+		$body = $this->body;
+
+		// If a more tag was found we'll take the first part.
+		if (strpos($body, '<!--more-->'))
+		{
+			$parts = explode('<!--more-->', $body);
+
+			return $parts[0];
+		}
+
 		return Str::words($this->body, $words);
 	}
 
