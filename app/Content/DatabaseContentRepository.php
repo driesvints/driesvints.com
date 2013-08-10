@@ -1,5 +1,6 @@
 <?php namespace Content;
 
+use dflydev\markdown\MarkdownParser;
 use Illuminate\Database\Eloquent\Model;
 
 class DatabaseContentRepository extends BaseContentRepository implements ContentRepositoryInterface {
@@ -27,6 +28,19 @@ class DatabaseContentRepository extends BaseContentRepository implements Content
 	public function __construct(Model $model)
 	{
 		$this->model = $model;
+	}
+
+	/**
+	 * Returns the content item body.
+	 *
+	 * @return string
+	 */
+	public function body()
+	{
+		$body = $this->model->body;
+
+		// Parse content as Markdown.
+		return with(new MarkdownParser)->transformMarkdown($body);
 	}
 
 	/**
