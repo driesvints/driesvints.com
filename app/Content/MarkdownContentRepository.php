@@ -80,6 +80,16 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	}
 
 	/**
+	 * Determines if comments should be disabled or not.
+	 *
+	 * @return bool
+	 */
+	public function disable_comments()
+	{
+		return ($this->getAttribute('disable_comments') === 'true');
+	}
+
+	/**
 	 * Returns a specific content item attribute.
 	 *
 	 * @param  string  $key

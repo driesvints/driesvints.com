@@ -28,6 +28,7 @@ class CreateCmsTables extends Migration {
 			$table->string('status');
 			$table->string('title');
 			$table->text('body');
+			$table->boolean('disable_comments');
 			$table->timestamp('published_at');
 			$table->timestamps();
 		});
@@ -39,6 +40,7 @@ class CreateCmsTables extends Migration {
 			$table->string('status');
 			$table->string('title');
 			$table->text('body');
+			$table->boolean('disable_comments');
 			$table->timestamp('published_at');
 			$table->timestamps();
 		});

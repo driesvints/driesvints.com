@@ -42,6 +42,7 @@ class PostsController extends BaseController {
 		$post->status = Input::get('status');
 		$post->published_at = Input::get('published_at');
 		$post->body = Input::get('body');
+		$post->disable_comments = Input::get('disable_comments');
 
 		if ( ! $post->validate())
 		{
@@ -98,6 +99,7 @@ class PostsController extends BaseController {
 		$post->status = Input::get('status');
 		$post->published_at = Input::get('published_at');
 		$post->body = Input::get('body');
+		$post->disable_comments = Input::get('disable_comments');
 
 		if ( ! $post->validate())
 		{

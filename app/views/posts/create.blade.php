@@ -47,6 +47,13 @@
 				{{ $errors->first('published_at') }}
 			</div>
 
+			<div class="form-group">
+				<label class="checkbox">
+					{{ Form::checkbox('disable_comments') }}
+					Disable Comments
+				</label>
+			</div>
+
 			{{ HTML::linkRoute('admin.posts.index', 'Cancel', null, array('class' => 'btn btn-default')) }}
 			{{ Form::submit('Save post', array('class' => 'btn btn-primary')) }}
 		</fieldset>
