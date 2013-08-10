@@ -1,5 +1,5 @@
 title: Laravel Weekly has moved to Laravel.io
-slug: using-a-gpg-key-to-sign-off-git-commits-and-emails
+slug: laravel-weekly-has-moved-to-laravel-io
 status: published
 date: June 1 2013 10:35
 tags: laravel-weekly, laravel
