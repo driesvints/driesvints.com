@@ -14,7 +14,7 @@ class PostsController extends BaseController {
 	{
 		$posts = Post::all();
 
-		return View::make('admin.posts.index', compact('posts'));
+		return View::make('posts.index', compact('posts'));
 	}
 
 	/**
@@ -26,7 +26,7 @@ class PostsController extends BaseController {
 	{
 		$statuses = Post::getStatuses();
 
-		return View::make('admin.posts.create', compact('statuses'));
+		return View::make('posts.create', compact('statuses'));
 	}
 
 	/**
@@ -69,7 +69,7 @@ class PostsController extends BaseController {
 		}, $item->tags);
 		$tags = implode(', ', $tags);
 
-		return $this->view('public.single', compact('item', 'tags'));
+		return $this->view('single', compact('item', 'tags'));
 	}
 
 	/**
@@ -82,7 +82,7 @@ class PostsController extends BaseController {
 	{
 		$statuses = Post::getStatuses();
 
-		return View::make('admin.posts.edit', compact('post', 'statuses'));
+		return View::make('posts.edit', compact('post', 'statuses'));
 	}
 
 	/**

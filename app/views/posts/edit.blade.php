@@ -1,10 +1,10 @@
-@extends('admin.layout')
+@extends('layouts.admin')
 
 @section('content')
 
-<h1>Create New Page</h1>
+<h1>Edit Post</h1>
 
-{{ Form::open(array('route' => 'admin.pages.store')) }}
+{{ Form::model($post, array('route' => array('admin.posts.update', $post->id), 'method' => 'PUT')) }}
 
 <div class="row">
 	<div class="col-lg-9">
@@ -42,8 +42,8 @@
 				{{ $errors->first('published_at') }}
 			</div>
 
-			{{ HTML::linkRoute('admin.pages.index', 'Cancel', null, array('class' => 'btn btn-default')) }}
-			{{ Form::submit('Save page', array('class' => 'btn btn-primary')) }}
+			{{ HTML::linkRoute('admin.posts.index', 'Cancel', null, array('class' => 'btn btn-default')) }}
+			{{ Form::submit('Save post', array('class' => 'btn btn-primary')) }}
 		</fieldset>
 	</div>
 </div>

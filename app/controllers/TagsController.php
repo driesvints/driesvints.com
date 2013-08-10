@@ -18,7 +18,7 @@ class TagsController extends BaseController {
 			->orderBy('date', 'desc')
 			->paginate(5);
 
-		return View::make('public.tag', compact('tag', 'posts'));
+		return View::make('tag', compact('tag', 'posts'));
 	}
 
 }

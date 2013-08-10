@@ -12,7 +12,7 @@ class UsersController extends BaseController {
 	 */
 	public function edit(User $user)
 	{
-		return View::make('admin.users.edit', compact('user'));
+		return View::make('users.edit', compact('user'));
 	}
 
 	/**

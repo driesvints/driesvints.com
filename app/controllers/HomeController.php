@@ -14,7 +14,7 @@ class HomeController extends BaseController {
 		         ->orderBy('date', 'desc')
 		         ->paginate(5);
 
-		return $this->view('public.home', compact('posts'));
+		return $this->view('home', compact('posts'));
 	}
 
 }

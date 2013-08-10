@@ -1,10 +1,10 @@
-@extends('admin.layout')
+@extends('layouts.admin')
 
 @section('content')
 
-<h1>Edit Page</h1>
+<h1>Create New Page</h1>
 
-{{ Form::model($page, array('route' => array('admin.pages.update', $page->id), 'method' => 'PUT')) }}
+{{ Form::open(array('route' => 'admin.pages.store')) }}
 
 <div class="row">
 	<div class="col-lg-9">

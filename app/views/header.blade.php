@@ -17,7 +17,7 @@
 <body>
 
 @if (Auth::check())
-	@include('admin-bar')
+	@include('toolbar')
 @endif
 
 <div class="container">
