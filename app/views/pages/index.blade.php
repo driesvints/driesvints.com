@@ -30,6 +30,9 @@
 		@endforeach
 	</tbody>
 </table>
+
+{{ $pages->links() }}
+
 @else
 <p>No pages created yet.</p>
 @endif

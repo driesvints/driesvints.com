@@ -7,6 +7,7 @@
 <h1>Posts</h1>
 
 @if (count($posts))
+
 <table class="table">
 	<thead>
 		<tr>
@@ -30,6 +31,9 @@
 		@endforeach
 	</tbody>
 </table>
+
+{{ $posts->links() }}
+
 @else
 <p>No posts created yet.</p>
 @endif

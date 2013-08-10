@@ -12,7 +12,7 @@ class PagesController extends BaseController {
 	 */
 	public function index()
 	{
-		$pages = Page::all();
+		$pages = Page::paginate(10);
 
 		return View::make('pages.index', compact('pages'));
 	}
