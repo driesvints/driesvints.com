@@ -6,5 +6,3 @@
 </h3>
 
 <p>{{ $post->excerpt }}</p>
-
-<p><a href="{{ route('posts.show', $post->slug) }}">Read more <i class="icon-double-angle-right"></i></a></p>
