@@ -38,7 +38,12 @@
 
 			<div class="form-group">
 				{{ Form::label('published_at') }}
-				{{ Form::text('published_at', Input::old('published_at', date('Y-m-d H:i:s')), array('class' => 'form-control')) }}
+				<div class="input-append input-group date datetimepicker">
+					{{ Form::text('published_at', Input::old('published_at', date('Y-m-d H:i:s')), array('class' => 'form-control', 'data-format' => 'yyyy-MM-dd hh:mm:ss')) }}
+					<span class="add-on input-group-addon">
+						<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					</span>
+				</div>
 				{{ $errors->first('published_at') }}
 			</div>
 

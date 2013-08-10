@@ -12,6 +12,7 @@
 	<!-- Stylsheets -->
 	{{ HTML::style('assets/libraries/bootstrap/css/bootstrap.min.css') }}
 	{{ HTML::style('assets/libraries/font-awesome/css/font-awesome.min.css') }}
+	{{ HTML::style('assets/libraries/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css') }}
 	{{ HTML::style('assets/css/styles.css') }}
 </head>
 <body>
