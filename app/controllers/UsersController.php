@@ -40,6 +40,8 @@ class UsersController extends BaseController {
 					->withInput()
 					->withErrors($validator);
 			}
+
+			$user->password = Input::get('password');
 		}
 
 		if ( ! $user->validate())
