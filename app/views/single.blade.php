@@ -17,6 +17,8 @@
 {{ $item->body }}
 
 @if ( ! $item->disable_comments)
+<hr>
+
 <div id="disqus_thread"></div>
 <script type="text/javascript">
 	var disqus_shortname = 'driesvints';
