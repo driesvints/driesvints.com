@@ -74,14 +74,26 @@ a:hover {
 	margin-bottom: 50px;
 }
 #header .btn {
+    background-color: #2ECC71;
 	box-shadow: 0 0 6px rgba(0,0,0,0.5);
     font-size: 1em;
 	margin-bottom: 35px;
     padding: 10px 30px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#header .btn:hover {
+    background-color: #27AE60;
 }
 #header .next {
 	color: rgba(220,220,220,0.5);
 	font-size: 3.5em;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 #header .next:hover {
 	color: rgba(235,235,235,0.75);
