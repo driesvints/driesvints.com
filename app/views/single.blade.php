@@ -8,8 +8,8 @@
 	<small class="post-info">
 		{{ $item->date('F d, Y') }}
 
-		@if (isset($tags) && ! empty($tags))
-		| Tagged in: {{ $tags }}
+		@if (count($item->tags))
+		| Tagged in: {{ $item->listTags() }}
 		@endif
 	</small>
 </p>

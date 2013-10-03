@@ -47,6 +47,21 @@ abstract class BaseContentRepository {
 		return Str::words($this->body, $words);
 	}
 
+    /**
+     * Lists the tags in a comma separated list.
+     *
+     * @return string
+     */
+    public function listTags()
+    {
+        $tags = array_map(function($tag)
+        {
+            return link_to_route('tags.show', $tag, $tag);
+        }, $this->tags);
+
+        return implode(', ', $tags);
+    }
+
 	/**
 	 * Dynamically retrieve attributes on the content item.
 	 *

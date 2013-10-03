@@ -50,7 +50,9 @@ class DatabaseContentRepository extends BaseContentRepository implements Content
 	 */
 	public function tags()
 	{
-		return $this->model->tags->lists('title');
+        if (! count($tags = $this->model->tags)) return array();
+
+		return $tags->lists('title');
 	}
 
 	/**

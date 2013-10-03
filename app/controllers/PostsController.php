@@ -5,6 +5,18 @@ use Content\ContentRepositoryInterface;
 
 class PostsController extends BaseController {
 
+    /**
+     * Display all blog posts in an archive list.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function archive()
+    {
+        $posts = Post::orderBy('published_at')->get();
+
+        return View::make('archive', compact('posts'));
+    }
+
 	/**
 	 * Display a list of blog posts.
 	 *
@@ -64,13 +76,7 @@ class PostsController extends BaseController {
 	 */
 	public function show(ContentRepositoryInterface $item)
 	{
-		$tags = array_map(function($tag)
-		{
-			return link_to_route('tags.show', $tag, $tag);
-		}, $item->tags);
-		$tags = implode(', ', $tags);
-
-		return $this->view('single', compact('item', 'tags'));
+		return $this->view('single', compact('item'));
 	}
 
 	/**
