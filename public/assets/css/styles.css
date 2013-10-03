@@ -1,30 +1,146 @@
-/* Public Area
+/* General
 ---------------------------------------------------------*/
 
-.no-line-break {
-	white-space: nowrap;
+body {
+    color: #333;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2em;
 }
 
-.post-info {
-	color: #999;
-	font-style: italic;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.avatar-frame img {
-	width: 100px;
-	height: 100px;
+a {
+}
+a:hover {
 }
 
-.social-icons i {
-	font-size: 2.5em;
-	margin-right: 0.4em;
+/* Home
+---------------------------------------------------------*/
+
+#header {
+	color: white;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	min-height: 800px;
+	padding: 150px 0;
+	text-align: center;
 }
-.social-icons a:hover {
+#header ul {
+    font-weight: 100;
+	margin-left: 40px; /* Make header name stand in center */
+	position: relative;
+	text-transform: uppercase;
+	z-index: 10;
+}
+#header ul li {
+	margin-right: 9%;
+}
+#header ul li.second {
+	margin-right: 20%;
+}
+#header ul li.third {
+	margin-left: 20%;
+}
+#header ul li:last-child {
+	margin-right: 0;
+}
+#header ul a {
+	color: #ddd;
+	text-shadow: 0 0 4px rgba(0,0,0,0.75);
+}
+#header ul a:hover {
+	color: white;
+	text-decoration: none;
+}
+#header .about {
+	margin-top: -58px;
+	position: relative;
+	z-index: 1;
+}
+#header h1,
+#header h2 {
+	text-shadow: 0 0 6px #000;
+}
+#header h1 {
+    font-size: 2.4em;
+    font-weight: bold;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+}
+#header h2 {
+    font-weight: 300;
+	line-height: 1.3em;
+	margin-bottom: 50px;
+}
+#header .btn {
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    font-size: 1em;
+	margin-bottom: 35px;
+    padding: 10px 30px;
+}
+#header .next {
+	color: rgba(220,220,220,0.5);
+	font-size: 3.5em;
+}
+#header .next:hover {
+	color: rgba(235,235,235,0.75);
 	text-decoration: none;
 }
 
-/* Admin Area
+/* Posts
 ---------------------------------------------------------*/
+
+#posts {
+    font-family: "ff-tisa-web-pro", Georgia, serif;
+    line-height: 1.6em;
+    max-width: 700px;
+    padding: 50px 0;
+}
+#posts h2 {
+    font-family: "ff-tisa-web-pro", Georgia, serif;
+    font-size: 2.4em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+#posts .post {
+    color: #ddd;
+    display: block;
+    margin-bottom: 75px;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+#posts .post:hover {
+    color: #333;
+    text-decoration: none;
+}
+#posts .post:hover h3 {
+    color: #333;
+}
+#posts .post .post-date {
+    font-size: 0.9em;
+    font-style: italic;
+}
+#posts .post h3 {
+    color: #ccc;
+    font-size: 1.8em;
+    font-weight: 900;
+    margin-top: 5px;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+/* Admin
+---------------------------------------------------------*/
+
+.navbar {
+    margin-bottom: 0;
+}
 
 .btn-create {
 	margin-top: 20px;

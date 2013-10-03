@@ -1,8 +1,7 @@
-<h3>
-	{{ HTML::linkRoute('posts.show', $post->title, $post->slug) }} 
-	<small class="post-info">
-		{{ $post->date('F d, Y') }}
-	</small>
-</h3>
+<a href="{{ route('posts.show', $post->slug) }}" class="post">
+    <p class="post-date">{{ $post->date('F d, Y') }}</p>
 
-<p>{{ $post->excerpt }}</p>
+    <h3>{{ $post->title }}</h3>
+
+    <p>{{ strip_tags($post->excerpt) }}</p>
+</a>

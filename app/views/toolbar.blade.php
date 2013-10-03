@@ -1,4 +1,4 @@
-<div class="navbar navbar-static-top">
+<div class="navbar navbar-static-top navbar-inverse">
 	<div class="container">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 			<span class="icon-bar"></span>

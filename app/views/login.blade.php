@@ -1,7 +1,8 @@
 @include('header')
 
+<div class="container">
 <div class="row">
-	<div class="col-lg-6 col-offset-3">
+	<div class="col-lg-6 col-lg-offset-3">
 		<h1>Login to your account</h1>
 
 		{{ Form::open(array('route' => 'login', 'class' => 'form-horizontal')) }}
@@ -32,6 +33,7 @@
 
 		{{ Form::close() }}
 	</div>
+</div>
 </div>
 
 @include('footer')
