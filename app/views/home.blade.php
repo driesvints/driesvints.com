@@ -3,7 +3,7 @@
 <div id="header">
     <div class="container">
         <ul class="list-inline">
-        	<li><a href="#recent-posts">Blog</a></li>
+        	<li><a href="{{ route('home') }}#recent-posts">Blog</a></li>
         	<li class="second"><a href="#">Work</a></li>
         	<li class="third"><a href="#">About</a></li>
         	<li><a href="#">Contact</a></li>
@@ -18,7 +18,7 @@
         		Community &amp; Laravel
         	</h2>
 
-        	<p><a class="btn btn-success btn-large" href="mailto:dries.vints@gmail.com">Available For Hire</a></p>
+        	<p><a class="btn btn-success btn-large" href="{{ route('home') }}#contact">Available For Hire</a></p>
 
         	<p><a class="next" href="#recent-posts"><i class="icon-chevron-sign-down"></i></a></p>
         </div>
