@@ -231,7 +231,7 @@ body.home #content .post h3 {
     font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman" ,Times, serif;
     line-height: 1.6em;
     max-width: 700px;
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
 #content h1.title,
 #content h2.title {
@@ -241,6 +241,29 @@ body.home #content .post h3 {
     margin-bottom: 40px;
     padding-top: 50px; 
     text-align: center;
+}
+#content .single-post p.post-info {
+    font-style: italic;
+    margin-bottom: 0;
+}
+#content .single-post h1 {
+    font-size: 2.2em;
+}
+#content .single-post h2 {
+    margin-top: 50px;
+}
+#content .single-post h1,
+#content .single-post h2,
+#content .single-post h3,
+#content .single-post h4,
+#content .single-post h5,
+#content .single-post h6,
+#content .single-post p,
+#content .single-post ul,
+#content .single-post ol,
+#content .single-post pre,
+#content .single-post blockquote {
+    margin-bottom: 25px;
 }
 
 /* Admin

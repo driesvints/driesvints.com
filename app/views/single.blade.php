@@ -2,33 +2,35 @@
 
 @section('content')
 
-<h2>{{ $item->title }}</h2>
+<div class="single-post">
+    <p class="post-info">
+        <small>
+            {{ $item->date('F d, Y') }}
+    
+            @if (count($item->tags))
+            &bull; Tags: {{ $item->listTags() }}
+            @endif
+        </small>
+    </p>
 
-<p>
-	<small class="post-info">
-		{{ $item->date('F d, Y') }}
+    <h1>{{ $item->title }}</h1>
 
-		@if (count($item->tags))
-		| Tagged in: {{ $item->listTags() }}
-		@endif
-	</small>
-</p>
+    {{ $item->body }}
 
-{{ $item->body }}
-
-@if ( ! $item->disable_comments)
-<hr>
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-	var disqus_shortname = 'driesvints';
-
-	(function() {
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-@endif
+    @if ( ! $item->disable_comments)
+    <hr>
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    	var disqus_shortname = 'driesvints';
+    
+    	(function() {
+    		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    	})();
+    </script>
+    @endif
+</div>
 
 @stop
