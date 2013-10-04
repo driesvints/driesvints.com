@@ -9,24 +9,35 @@ body {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
 }
 
 a {
+    color: #3498db;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
 }
 a:hover {
+    color: #2980b9;
+    text-decoration: none;
 }
 
-/* Home
+/* Headers
 ---------------------------------------------------------*/
 
 #header {
+    background-color: #333;
 	color: white;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	min-height: 800px;
 	padding: 150px 0;
 	text-align: center;
 }
-#header ul {
+
+#header ul,
+#page-header ul {
     font-weight: 100;
 	margin-left: 40px; /* Make header name stand in center */
 	position: relative;
@@ -45,7 +56,8 @@ a:hover {
 #header ul li:last-child {
 	margin-right: 0;
 }
-#header ul a {
+#header ul a,
+#page-header ul a {
 	color: #ddd;
 	text-shadow: 0 0 4px rgba(0,0,0,0.75);
 }
@@ -76,6 +88,7 @@ a:hover {
 }
 #header .btn {
     background-color: #2ECC71;
+    border: 0;
 	box-shadow: 0 0 6px rgba(0,0,0,0.5);
     font-size: 1em;
 	margin-bottom: 35px;
@@ -101,23 +114,30 @@ a:hover {
 	text-decoration: none;
 }
 
-/* Posts
+#page-header {
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px; 
+}
+#page-header a {
+    color: #eee;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+#page-header a:hover {
+    color: #777;
+}
+#page-header a i {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+/* Homepage - Posts
 ---------------------------------------------------------*/
 
-#posts {
-    font-family: "ff-tisa-web-pro", Georgia, serif;
-    line-height: 1.6em;
-    max-width: 700px;
-    padding: 50px 0;
-}
-#posts h2 {
-    font-family: "ff-tisa-web-pro", Georgia, serif;
-    font-size: 2.4em;
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-align: center;
-}
-#posts .post {
+body.home #content .post {
     color: #ddd;
     display: block;
     margin-bottom: 75px;
@@ -126,18 +146,18 @@ a:hover {
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
-#posts .post:hover {
+body.home #content .post:hover {
     color: #333;
     text-decoration: none;
 }
-#posts .post:hover h3 {
+body.home #content .post:hover h3 {
     color: #333;
 }
-#posts .post .post-date {
+body.home #content .post .post-date {
     font-size: 0.9em;
     font-style: italic;
 }
-#posts .post h3 {
+body.home #content .post h3 {
     color: #ccc;
     font-size: 1.8em;
     font-weight: 900;
@@ -146,6 +166,81 @@ a:hover {
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
+}
+
+.archive-btn {
+    text-align: center;
+}
+.archive-btn .btn {
+    background-color: #eee;
+    border: none;
+    color: white;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.archive-btn .btn i {
+    font-size: .8em;
+}
+.archive-btn .btn:hover {
+    background-color: #bbb;
+}
+
+/* Archive
+---------------------------------------------------------*/
+
+#content #archive h1.title {
+    padding-top: 30px;
+}
+#archive h3 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+#archive .item {
+    color: #ddd;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+#archive .item:hover {
+    color: #333;
+}
+#archive .item .item-date,
+#archive .item .item-title {
+    float: left;
+}
+#archive .item .item-date {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: right;
+    width: 20%;
+}
+#archive .item .item-title {
+    padding-left: 2%;
+    width: 78%;
+}
+
+/* Content
+---------------------------------------------------------*/
+
+#content {
+    font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman" ,Times, serif;
+    line-height: 1.6em;
+    max-width: 700px;
+    padding-bottom: 50px;
+}
+#content h1.title,
+#content h2.title {
+    font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman" ,Times, serif;
+    font-size: 2.4em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 50px; 
+    text-align: center;
 }
 
 /* Admin

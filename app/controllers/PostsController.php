@@ -12,7 +12,9 @@ class PostsController extends BaseController {
      */
     public function archive()
     {
-        $posts = Post::orderBy('published_at')->get();
+        $posts = get_posts()
+                 ->published()
+                 ->orderBy('date', 'desc');
 
         return View::make('archive', compact('posts'));
     }

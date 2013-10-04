@@ -25,11 +25,15 @@
     </div>
 </div>
 
-<div id="posts" class="container">
+<div id="content" class="container">
 
-<h2 id="recent-posts">Recent Posts</h2>
+<h2 id="recent-posts" class="title">Recent Posts</h2>
 
 @include('posts.list')
+
+<p class="archive-btn">
+    <a class="btn btn-default" href="{{ route('archive') }}">View All <i class="icon-chevron-right"></i></a>
+</p>
 
 </div><!-- .container -->
 

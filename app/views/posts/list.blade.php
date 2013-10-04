@@ -3,7 +3,3 @@
 		@include('posts.excerpt')
 	@endforeach
 @endif
-
-@if ($posts instanceof \Illuminate\Pagination\Paginator)
-	{{ $posts->links() }}
-@endif

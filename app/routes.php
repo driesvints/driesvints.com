@@ -34,10 +34,7 @@ Route::bind('page_slug', function($value)
 
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
 
-Route::get('blog', function()
-{
-	return Redirect::home();
-});
+Route::get('blog', array('as' => 'archive', 'uses' => 'PostsController@archive'));
 Route::get('blog/{post_slug}', array('as' => 'posts.show', 'uses' => 'PostsController@show'));
 
 Route::get('tags', function()
