@@ -14,7 +14,7 @@ If you'd like to know more about GPG keys to secure your Git commits, you can re
 
 Warning: this tutorial is written for OS X.
 
-### Generating a GPG Key
+## Generating a GPG Key
 
 To get started we first need to generate a GPG key. For OS X, there is a great tool which makes it dead-simple to install GPG keys on your machine. You can [download GPGTools here](https://gpgtools.org/) (you can use [Gpg4win](http://gpg4win.org/) if you're using Windows).
 
@@ -26,14 +26,14 @@ After creating your key, you can list them by running the following command in y
 	sec   4096R/8EE30EAB 2011-06-16 [expires: 2014-04-18]
 	#           ^^^^^^^^
 
-### Configuring Git With the GPG Key
+## Configuring Git With the GPG Key
 
 Now that we have our key set up we should configure Git to use it when we sign our commits. Run the following command in your CLI. Please note that you have to replace the `8EE30EAB` part with your own code which you listed with the command above (marked with the `^^^^^^^^`).
 
 	$ git config --global user.signingkey 8EE30EAB
 	#                                        ^ replace with your key id
 
-### Signing Commits
+## Signing Commits
 
 We've added our GPG key to our Git configuration. Let's try signing a commit. Go to a local Git repository, make some changes, stage them and then run the following command.
 
@@ -62,7 +62,7 @@ By default, Git won't show the GPG signature when running `git log`. To check if
 
 Your Git commit is now signed with your GPG key, making sure it identifies you as its actual creator.
 
-### Signing Emails in Mail
+## Signing Emails in Mail
 
 When you installed the GPGTools a plugin for OS X mail should have been installed as well. When you now go to your Mail settings, a new preference panel for [GPGMail](https://gpgtools.org/gpgmail/index.html) should have been added. Additionally, when you create a new email which you're sending from the email, some new options are available.
 
@@ -76,7 +76,7 @@ Signing off emails will verify you as the actual sender for the email message.
 
 [Image courtesy of GPGTools](https://gpgtools.org/gpgmail/index.html)
 
-### Conclusion
+## Conclusion
 
 Using GPG keys will help you to make sure to identify yourself as the actual creator of your commits and email messages. This can help to prevent commit or email spoofing. While it will not stop others from attempting to spoof your emails or commits, you can prove the author of the spoofed items isn't you because you securely sign your emails and commits with your GPG key.
 
