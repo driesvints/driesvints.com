@@ -18,7 +18,7 @@
         		Community &amp; Laravel
         	</h2>
 
-        	<p><a class="btn btn-success btn-large" href="#">Available For Hire</a></p>
+        	<p><a class="btn btn-success btn-large" href="mailto:dries.vints@gmail.com">Available For Hire</a></p>
 
         	<p><a class="next" href="#recent-posts"><i class="icon-chevron-sign-down"></i></a></p>
         </div>
