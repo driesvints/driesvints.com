@@ -20,7 +20,12 @@
     <script type="text/javascript" src="//use.typekit.net/rzl7dlz.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
+
+@if (is_home())
+<body class="home">
+@else
 <body>
+@endif
 
 @if (Auth::check())
 	@include('toolbar')
