@@ -14,7 +14,9 @@
 {{ HTML::script('assets/libraries/bootstrap/js/bootstrap.min.js') }}
 {{ HTML::script('assets/libraries/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js') }}
 {{ HTML::script('assets/libraries/jquery.backstretch.min.js') }}
+{{ HTML::script('assets/libraries/highlight.js/highlight.pack.js') }}
 {{ HTML::script('assets/js/script.js') }}
+<script>hljs.initHighlightingOnLoad();</script>
 
 <script type="text/javascript">
 	var _gaq = _gaq || [];

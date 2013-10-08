@@ -24,6 +24,21 @@ a:hover {
     text-decoration: none;
 }
 
+pre,
+code {
+	font-family: "source-code-pro", "Courier New", Courier, sans-serif;
+}
+pre {
+    background-color: none;
+    border: none;
+    font-size: 0.85em;
+    line-height: 1.8em;
+    padding: 0;
+}
+pre code {
+    padding: 10px 15px;
+}
+
 /* Headers
 ---------------------------------------------------------*/
 
@@ -231,7 +246,7 @@ body.home #content .post h3 {
 #content {
     font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman" ,Times, serif;
     line-height: 1.6em;
-    max-width: 700px;
+    max-width: 740px;
     padding: 50px 0;
 }
 #content h1.title,
@@ -262,9 +277,23 @@ body.home #content .post h3 {
 #content .single-post p,
 #content .single-post ul,
 #content .single-post ol,
-#content .single-post pre,
-#content .single-post blockquote {
+#content .single-post blockquote,
+#disqus_thread {
+    padding: 0 20px;
     margin-bottom: 25px;
+}
+#content .single-post ul,
+#content .single-post ol {
+    margin-left: 30px;
+}
+#content .single-post pre {
+    margin-bottom: 25px;
+}
+#content .single-post pre code {
+    padding: 15px 20px;
+}
+#content .single-post hr {
+    max-width: 700px;
 }
 
 /* Admin

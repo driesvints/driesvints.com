@@ -14,6 +14,7 @@
 	{{ HTML::style('assets/libraries/font-awesome/css/font-awesome.min.css') }}
 	{{ HTML::style('assets/libraries/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css') }}
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	{{ HTML::style('assets/libraries/highlight.js/styles/solarized_dark.css') }}
 	{{ HTML::style('assets/css/styles.css') }}
 
     <!-- Scripts -->
