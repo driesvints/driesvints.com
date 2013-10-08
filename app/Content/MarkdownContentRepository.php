@@ -1,6 +1,6 @@
 <?php namespace Content;
 
-use Kurenai\DocumentParser;
+use Dries\Extensions\Kurenai\DocumentParser;
 
 class MarkdownContentRepository extends BaseContentRepository implements ContentRepositoryInterface {
 
@@ -14,14 +14,14 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	/**
 	 * The Kurenai Markdown parser.
 	 *
-	 * @var \Kurenai\DocumentParser
+	 * @var \Dries\Extensions\Kurenai\DocumentParser
 	 */
 	protected $parser;
 
 	/**
 	 * The Markdown Document.
 	 *
-	 * @var \Kurenai\Document
+	 * @var \Dries\Extensions\Kurenai\Document
 	 */
 	protected $document;
 
@@ -36,7 +36,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	 * Initialize the repository.
 	 *
 	 * @param  string  $filepath
-	 * @param  \Kurenai\DocumentParser  $parser
+	 * @param  \Dries\Extensions\Kurenai\DocumentParser  $parser
 	 * @return void
 	 */
 	public function __construct($filepath, DocumentParser $parser)
@@ -50,7 +50,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	 * Parse a markdown document.
 	 *
 	 * @param  string  $filepath
-	 * @return \Kurenai\Document
+	 * @return \Dries\Extensions\Kurenai\Document
 	 */
 	protected function parse($filepath)
 	{
@@ -115,7 +115,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	/**
 	 * Returns the Kurenai Parser.
 	 *
-	 * @return \Kurenai\Parser
+	 * @return \Dries\Extensions\Kurenai\Parser
 	 */
 	public function getParser()
 	{
@@ -125,7 +125,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	/**
 	 * Returns the Kurenai Document.
 	 *
-	 * @return \Kurenai\Document
+	 * @return \Dries\Extensions\Kurenai\Document
 	 */
 	public function getDocument()
 	{

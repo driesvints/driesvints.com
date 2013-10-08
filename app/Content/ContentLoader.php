@@ -1,9 +1,9 @@
 <?php namespace Content;
 
-use Kurenai\DocumentParser;
 use Illuminate\Config\Repository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Database\Eloquent\Model;
+use Dries\Extensions\Kurenai\DocumentParser;
 
 class ContentLoader {
 
