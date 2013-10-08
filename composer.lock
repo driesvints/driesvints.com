@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/daylerees/kurenai.git",
-                "reference": "ea1727f3cac25c0163621ddc8b3581fcacdb8917"
+                "reference": "2a1dada1cf163925634a4d815e3d686f1e940a73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/daylerees/kurenai/zipball/ea1727f3cac25c0163621ddc8b3581fcacdb8917",
-                "reference": "ea1727f3cac25c0163621ddc8b3581fcacdb8917",
+                "url": "https://api.github.com/repos/daylerees/kurenai/zipball/2a1dada1cf163925634a4d815e3d686f1e940a73",
+                "reference": "2a1dada1cf163925634a4d815e3d686f1e940a73",
                 "shasum": ""
             },
             "require": {
@@ -87,7 +87,7 @@
                 "markdown",
                 "metadata"
             ],
-            "time": "2013-08-12 08:00:11"
+            "time": "2013-10-08 15:18:46"
         },
         {
             "name": "dflydev/markdown",
