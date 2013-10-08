@@ -15,8 +15,7 @@ class TagsController extends BaseController {
 			{
 				return in_array($tag, $post->tags);
 			})
-			->orderBy('date', 'desc')
-			->paginate(5);
+			->orderBy('date', 'desc');
 
 		return View::make('tag', compact('tag', 'posts'));
 	}
