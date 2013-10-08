@@ -197,6 +197,7 @@ body.home #content .post h3 {
     padding-top: 30px;
 }
 #archive h3 {
+	font-weight: normal;
     margin-bottom: 25px;
     text-align: center;
 }

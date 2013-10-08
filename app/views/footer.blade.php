@@ -1,6 +1,6 @@
 <div class="container">
 	<hr>
-	
+
 	<div class="row">
 		<div class="col-lg-12">
 			<p class="pull-left">Copyright &copy; {{ date('Y') }} Dries Vints</p>
