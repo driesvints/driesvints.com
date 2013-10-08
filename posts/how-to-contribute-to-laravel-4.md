@@ -8,7 +8,7 @@ A lot of people are submitting issues these days to [the Laravel 4 Framework rep
 
 Before we begin I really recommend you check out [this video](https://tutsplus.com/lesson/contributing-to-the-framework/) by **[Jeffrey Way](https://twitter.com/jeffrey_way)** which goes over the basic steps of submitting a pull request to Laravel 4.
 
-### Make sure it’s a framework bug
+## Make sure it’s a framework bug
 
 This is the first step and by far the most overlooked one. Some times, a bug you’re experiencing isn’t necessarily related to the framework itself. There could be a 3rd party plugin or package involved, some of your own code could trigger the issue, your web host could be the problem,… there are tons of reasons why the bug at hand could be triggered.
 
@@ -20,7 +20,7 @@ Something that people often neglect to do is actually read the error message the
 
 Always do your research properly before clicking the issue button.
 
-### Is the new feature actually necessary?
+## Is the new feature actually necessary?
 
 Something that I also see a lot is people trying to improve the framework in ways where it is not needed. Always think twice about the feature you’re requesting or the improvement you’re proposing. Perhaps a 3rd party package already solved an problem?
 
@@ -28,7 +28,7 @@ A framework shouldn’t be able to do everything. It should be a basic layer on 
 
 In the end, it’s up to **[Taylor](https://twitter.com/taylorotwell)** to decide what’s best for Laravel and what functionality goes into the framework.
 
-### Search the issue queue before posting
+## Search the issue queue before posting
 
 Always search [the issue queue on Github](https://github.com/laravel/framework/issues) before posting your issue. It could be that someone that someone already mentioned the issue. If so, help them prove their statement by verifying that you’re experiencing the same problem.
 
@@ -36,7 +36,7 @@ When you’re submitting a proposal for a feature, make sure that nobody asked f
 
 Should you still be convinced that the improvement would make a valid addition to the framework, then make sure you state your case better than the ones before you and try to say as best you could why the improvement is (still) needed, preferably with a few use cases. It’s also a good idea to have these discussions in [the Laravel forum](http://forums.laravel.io/viewforum.php?id=13) first before opening a new issue.
 
-### Preparing your issue
+## Preparing your issue
 
 When you’re writing your issue title and description try to be as thorough as possible. Always try to sum up your issue description in a descriptive title of less than 50 characters. People should be able to figure out more or less what your issue is about by glimpsing your title quickly.
 
@@ -52,27 +52,33 @@ Else if you’re just requesting a feature but don’t plan on implementing it y
 
 If you just wanted to file a bug report or request a feature you’re done now! If your proposed feature got approved or want to fix a large bug, read on!
 
-### Forking the repository and setting up your development repo
+## Forking the repository and setting up your development repo
 
 The next step should be forking the repository to your personal Github account. Just click the button on the right about that says “fork” and choose one of your Github accounts/organisations to fork the repo to.
 
 When it’s done forking the repo, clone the repository to your local development machine.
 
-	$ git clone <github url to your cloned repo> <local directory to clone to>
+~~~ .bash
+$ git clone <github url to your cloned repo> <local directory to clone to>
+~~~
 
 Next, let’s create a separate branch to work on. If it’s a bug fix, prefix it to `bugfix/`. If it’s a proposed feature, prefix it to `feature/`.
 
-	$ git checkout -b prefix/short-descriptive-title
+~~~ .bash
+$ git checkout -b prefix/short-descriptive-title
+~~~
 
 When your branch is set up, let’s run a composer update to install the required packages for the framework.
 
-	$ composer update --dev
+~~~ .bash
+$ composer update --dev
+~~~
 
 Notice that I’m adding `—dev`. This is necessary to pull in packages that are required for development (like Mockery for unit testing).
 
 We’re now all set to begin our work.
 
-### Implementing the bug-fix or feature
+## Implementing the bug-fix or feature
 
 Now that we’ve got a separate branch set up let’s start writing our bug-fix or feature.
 
@@ -84,7 +90,7 @@ When you’re done with implementing, commit your changes (or commit it in piece
 
 Didn’t forget your unit tests? Good! Let’s proceed.
 
-### Setting up Travis-ci with your forked repo
+## Setting up Travis-ci with your forked repo
 
 This is something I don’t think much people know that they can do before submitting their Pull Request. [Travis-ci](https://travis-ci.org) is a free service which runs a `.travis.yml` file in your project and basically runs all your unit tests. It sends you an e-mail notification on wether your builds have failed, passed or didn’t finish for some reason. This means there’s a better chance at catching bugs before the pull request will be made. You don’t have to do a thing but push to your forked repo and Travis will automatically start a new build. Just wait for the e-mail notification or check on [travis-ci.org](https://travis-ci.org) if your build has finished to know if your unit tests failed or succeeded.
 
@@ -92,38 +98,44 @@ Now how do you set it up with your forked repo? It’s pretty easy actually. Go 
 
 Should your build fail you can do a couple of things. You could try to fix your code, commit again and push to your Pull Request branch again and start a new build but I prefer to do it a little different. I’ll just delete the Pull Request branch on Github, roll back some of my commits on my local development repo and commit again with the fixed code to keep the commits minimal and the Pull Request as small as possible. I suggest you do the same to prevent the Pull Request from growing so large with commits which are just attempts at fixing the unit tests.
 
-### Submitting the Pull Request
+## Submitting the Pull Request
 
 So you’ve written your code, run your unit tests and you’re good to go to submit your pull request. Proceed to your forked repo on Github, select the branch you’ve worked on and hit the button “Pull Request”. Set a descriptive title (optionally with `Fixes #XX` again), create a description which details the bug you’re fixing or the feature you’re implementing and go ahead and submit your Pull Request.
 
-### Update your Pull Request (optional)
+## Update your Pull Request (optional)
 
 During the time that you submit your PR and it gets accepted (or closed), Taylor (or others) can suggest further improvements for the PR. If so, you should try to write some new code, commit it again and push to the branch you’ve created the PR from. The PR will automatically be updated with the latest changes. You might have to do this a couple of times before the PR gets accepted.
 
-### Cleaning up
+## Cleaning up
 
 You’re all done and your Pull Request was finally accepted and merged into the master branch. Congratulations, you’ve now successfully contributed to the Laravel 4 framework!
 
 You can now go to your local repo and do the following. First, add the Laravel Github repo as a remote:
 
-	$ git remote add upstream https://github.com/laravel/framework.git
+~~~ .bash
+$ git remote add upstream https://github.com/laravel/framework.git
+~~~
 
 Next, checkout to the master branch, pull from the latest changes into your own master branch and update your forked repo on Github by pushing to the master branch.
 
-	$ git checkout master
-	$ git pull upstream master
-	$ git push origin master
+~~~ .bash
+$ git checkout master
+$ git pull upstream master
+$ git push origin master
+~~~
 
 We won’t be needing the branch anymore on which we created the feature or fixed the bug so let’s delete them on the forked repo and locally.
 
-	$ git push origin :prefix/short-descriptive-title
-	$ git branch -d prefix/short-descriptive-title
+~~~ .bash
+$ git push origin :prefix/short-descriptive-title
+$ git branch -d prefix/short-descriptive-title
+~~~
 
 Now we’re all set. Next time you need to create a new feature, pull the latest changes in from the Laravel repo master branch and only then create your feature branch. This makes sure you have the latest changes when you start building your pull request.
 
 Should your PR get closed rather than accepted, don’t think of it as a negative point. See if Taylor provided a reason, learn from what you did wrong and next time you might be able to submit a better one. Everyone who wants to become better at submitting Pull Requests goes through this. You can only learn from these experiences and improve yourself as a developer. And the next time you submit a PR you’ll be that much wiser from your last experience.
 
-### Thanks for reading
+## Thanks for reading
 
 Thank you for reading through this insanely long post!
 
