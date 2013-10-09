@@ -314,15 +314,17 @@ body.home #content .post h3 {
     text-align: center;
 }
 #about a {
-    color: #2ecc71;
+    color: #1abc9c;
 }
 #about a:hover {
-    color: #27ae60;
+    color: #16a085;
 }
 @media (min-width: 768px) {
     #about {
         padding: 50px 0;
     }
+}
+@media (min-width: 992px) {
     #about .avatar img {
         max-width: 100%;
     }
@@ -337,7 +339,7 @@ body.home #content .post h3 {
 #contact {
     background-color: #16a085;
     color: white;
-    font-size: 5em;
+    font-size: 3em;
     padding: 20px 0;
     text-align: center;
 }
@@ -345,7 +347,7 @@ body.home #content .post h3 {
     color: white;
 }
 #contact a:hover {
-    color: #2c3e50;
+    color: #2f3238;
 }
 @media (min-width: 768px) {
     #contact {
