@@ -5,15 +5,15 @@
         <ul class="list-inline">
         	<li><a href="{{ route('home') }}#recent-posts">Blog</a></li>
         	<li class="second"><a href="#">Work</a></li>
-        	<li class="third"><a href="#">About</a></li>
-        	<li><a href="#">Contact</a></li>
+        	<li class="third"><a href="#about">About</a></li>
+        	<li><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="about">
         	<h1>Dries Vints</h1>
 
         	<h2>
-        		Freelance PHP Developer with<br>
+        		Freelance Web Developer with<br>
         		a passion for Open-Source,<br>
         		Community &amp; Laravel
         	</h2>

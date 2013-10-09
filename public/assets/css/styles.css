@@ -294,6 +294,82 @@ body.home #content .post h3 {
     max-width: 700px;
 }
 
+/* About
+---------------------------------------------------------*/
+
+#about {
+    background-color: #2f3238;
+    color: #ddd;
+    padding: 20px 0;
+}
+#about .avatar {
+    text-align: center;
+}
+#about .avatar img {
+    max-width: 50%;
+}
+#about h2 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+#about a {
+    color: #2ecc71;
+}
+#about a:hover {
+    color: #27ae60;
+}
+@media (min-width: 768px) {
+    #about {
+        padding: 50px 0;
+    }
+    #about .avatar img {
+        max-width: 100%;
+    }
+    #about h2 {
+        text-align: left;
+    }
+}
+
+/* Contact
+---------------------------------------------------------*/
+
+#contact {
+    background-color: #16a085;
+    color: white;
+    font-size: 5em;
+    padding: 20px 0;
+    text-align: center;
+}
+#contact a {
+    color: white;
+}
+#contact a:hover {
+    color: #2c3e50;
+}
+@media (min-width: 768px) {
+    #contact {
+        padding: 50px 0;
+    }
+}
+
+/* Footer
+---------------------------------------------------------*/
+
+#footer {
+    background-color: #ecf0f1;
+    padding: 20px 0 8px 0;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    #footer {
+        text-align: left;
+    }
+    #footer .last-column {
+        text-align: right;
+    }
+}
+
 /* Admin
 ---------------------------------------------------------*/
 
