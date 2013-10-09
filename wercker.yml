@@ -39,7 +39,7 @@ deploy:
         name: Write SSH key
         filename: $HOME/.ssh/id_rsa
         overwrite: true
-        content: $FORTRABBIT_KEY_PRIVATE
+        content: $FORTRABBIT_PRIVATE
     - script:
         name: Set permissions for SSH key
         code: |-
