@@ -10,15 +10,15 @@
                 <p>Hi, I'm Dries. A <strong>web developer</strong> from Belgium.</p>
  
                 <p>
-                    I spend most of my days working as a freelancer and collaborating on <strong>open-source</strong> projects. I work mostly with PHP and <a href="http://laravel.com/">the Laravel framework</a>. I'm a very active member of the Laravel community.
+                    I spend most of my days working as a freelancer and collaborating on <strong>open-source</strong> projects. I work mostly with PHP and <a href="http://laravel.com/">the Laravel framework</a>.
+                </p>
+
+                <p>
+                    I'm a very active member of the Laravel community. I do a weekly newsletter called <a href="http://laravelweekly.com">&ldquo;Laravel Weekly&rdquo;</a> at <a href="http://laravel.io">Laravel.io</a> and write documentation manuals for <a href="http://cartalyst.com">Cartalyst</a>.
                 </p>
  
                 <p>
-                    I also do a weekly newsletter called <a href="http://laravelweekly.com">&ldquo;Laravel Weekly&rdquo;</a> at <a href="http://laravel.io">Laravel.io</a> and write documentation manuals for <a href="http://cartalyst.com">Cartalyst</a>.
-                </p>
- 
-                <p>
-                    I hang out a lot on <a href="http://laravel.io/irc">the #laravel IRC channel</a> so why don't you drop by and come say hi!
+                    I hang out a lot on <a href="http://laravel.io/irc">the #laravel IRC channel</a>. Drop by from time to time to say hi!
                 </p>
             </div>
         </div>
