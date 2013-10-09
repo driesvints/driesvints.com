@@ -7,8 +7,40 @@ build:
         name: install dependencies
         code: |-
             composer install --no-interaction --no-dev
-    # Run Laravel migrations
+deploy:
+  steps:
+    - add-to-known_hosts:
+        hostname: $FORTRABBIT_GIT_HOST
     - script:
-        name: run migrations
+        name: Setup git repository
         code: |-
-            php artisan migrate --env=live
+          # Remove existing git repository if exists
+          if [ -d ".git" ]; then rm -rf .git; fi
+
+          # Configure git user
+          git config --global user.name "wercker"
+          git config --global user.email pleasemailus@wercker.com
+
+          # Initialize new repository and add everything
+          git init
+          git add .
+          git commit -m 'Deploy commit'
+
+          # Add fortrabbit remote
+          git remote add fortrabbit "$FORTRABBIT_GIT_REMOTE"
+    - script:
+        name: Make .SSH directory
+        code: mkdir -p "$HOME/.ssh"
+    - create-file:
+        name: Write SSH key
+        filename: $HOME/.ssh/id_rsa
+        overwrite: true
+        content: $FORTRABBIT_KEY_PRIVATE
+    - script:
+        name: Set permissions for SSH key
+        code: |-
+          chmod 0400 $HOME/.ssh/id_rsa
+    - script:
+        name: Git push deploy
+        code: |-
+          git push fortrabbit master -f
