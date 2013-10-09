@@ -53,7 +53,7 @@ pre code {
 
 #header ul,
 #page-header ul {
-    font-weight: 100;
+    font-weight: 300;
 	margin-left: 40px; /* Make header name stand in center */
 	position: relative;
 	text-transform: uppercase;
@@ -74,7 +74,6 @@ pre code {
 #header ul a,
 #page-header ul a {
 	color: #ddd;
-	text-shadow: 0 0 4px rgba(0,0,0,0.75);
 }
 #header ul a:hover {
 	color: white;
@@ -88,7 +87,6 @@ pre code {
 #header h1,
 #header h2 {
     color: #eee;
-	text-shadow: 0 0 6px #000;
 }
 #header h1 {
     font-size: 2.4em;
