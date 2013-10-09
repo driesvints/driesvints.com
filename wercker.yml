@@ -7,6 +7,10 @@ build:
         name: install dependencies
         code: |-
             composer install --no-interaction --no-dev
+    # Execute integration tests with php unit
+    - script:
+        name: PHPUnit integration tests
+        code: phpunit --configuration phpunit.xml
 deploy:
   steps:
     - add-to-known_hosts:
