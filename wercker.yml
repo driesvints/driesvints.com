@@ -1,0 +1,14 @@
+# Execute the pipeline with the wercker/php box
+box: wercker/php
+build:
+  steps:
+    # Install dependencies with composer
+    - script:
+        name: install dependencies
+        code: |-
+            composer install --no-interaction --no-dev
+    # Run Laravel migrations
+    - script:
+        name: run migrations
+        code: |-
+            php artisan migrate --env=live
