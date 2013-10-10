@@ -298,7 +298,7 @@ body.home #content .post h3 {
 
 #about {
     background-color: #2f3238;
-    color: #ddd;
+    color: #ccc;
     padding: 20px 0;
 }
 #about .avatar {
@@ -317,10 +317,11 @@ body.home #content .post h3 {
     margin-bottom: 20px;
 }
 #about a {
-    color: #1abc9c;
+    color: #ccc;
+    border-bottom: 1px dotted #7f8c8d;
 }
 #about a:hover {
-    color: #16a085;
+    color: white;
 }
 @media (min-width: 768px) {
     #about {
@@ -340,14 +341,12 @@ body.home #content .post h3 {
 ---------------------------------------------------------*/
 
 #contact {
-    background-color: #16a085;
-    color: white;
     font-size: 3em;
     padding: 20px 0;
     text-align: center;
 }
 #contact a {
-    color: white;
+    color: #95a5a6;
 }
 #contact a:hover {
     color: #2f3238;
@@ -363,6 +362,8 @@ body.home #content .post h3 {
 
 #footer {
     background-color: #ecf0f1;
+    color: #95a5a6;
+    font-size: .8em;
     padding: 20px 0 8px 0;
     text-align: center;
 }

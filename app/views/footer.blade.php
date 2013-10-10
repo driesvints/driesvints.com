@@ -51,7 +51,10 @@
                 <p>Copyright &copy; {{ date('Y') }} Dries Vints</p>
             </div>
             <div class="col-sm-6 last-column">
-                <p><a href="#header">back to top</a></p>
+                <p>
+                    <a href="#">Colophon</a>
+                    / <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+                </p>
             </div>
         </div>
     </div>
