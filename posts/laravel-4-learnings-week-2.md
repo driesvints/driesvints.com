@@ -78,13 +78,13 @@ class UserController extends BaseController {
 
 If you namespace your models from the beginning it's going to save you troubles later on when you can't pick a name when it's already set somewhere else.
 
-### Model query scopes
+## Model query scopes
 
 As since a few days, Model query scopes have landed in the L4 beta!
 
 https://twitter.com/laravelphp/status/314568892376829952
 
-### Database aggregate functions
+## Database aggregate functions
 
 This is just plucked from the L4 docs but it's so extremely helpful. Get the value of a mathematic function immediately from the database.
 
