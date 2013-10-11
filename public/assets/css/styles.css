@@ -244,7 +244,7 @@ body.home #content .post h3 {
     padding: 0 15px;
 }
 #archive h3 {
-	font-weight: normal;
+    font-weight: normal;
     margin-bottom: 25px;
     text-align: center;
 }
@@ -291,16 +291,16 @@ body.home #content .post h3 {
     margin: 0 auto;
     word-wrap: break-word;
 }
-#content h1.title,
-#content h2.title {
+h1.title,
+h2.title {
     font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman" ,Times, serif;
     font-weight: bold;
     margin-bottom: 40px;
     text-align: center;
 }
 @media (min-width: 768px) {
-    #content h1.title,
-    #content h2.title {
+    h1.title,
+    h2.title {
         font-size: 2.4em;
     }
 }
@@ -360,25 +360,36 @@ body.home #content .post h3 {
     }
 }
 
-/* About
+/* Work & About
 ---------------------------------------------------------*/
+
+#work .item {
+    padding: 20px 0;
+}
+#work .off {
+    background-color: #ecf0f1;
+}
 
 #about {
     background-color: #2f3238;
     color: #ccc;
     padding: 20px 0;
 }
-#about .avatar {
+#about .avatar,
+#work .logo {
     text-align: center;
 }
+#work .logo img,
 #about .avatar img {
     max-width: 50%;
 }
-#about h2 {
+#work h3,
+#about h3 {
     font-size: 2.2em;
     margin-bottom: 25px;
     text-align: center;
 }
+#work p,
 #about p {
     line-height: 1.4em;
     margin-bottom: 20px;
@@ -391,15 +402,18 @@ body.home #content .post h3 {
     color: white;
 }
 @media (min-width: 768px) {
+    #work .item,
     #about {
         padding: 50px 0;
     }
 }
 @media (min-width: 992px) {
+    #work .logo img,
     #about .avatar img {
         max-width: 100%;
     }
-    #about h2 {
+    #work h3,
+    #about h3 {
         text-align: left;
     }
 }
