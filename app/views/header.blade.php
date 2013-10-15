@@ -8,10 +8,11 @@
 
 	<!-- Site info -->
 	<title>Dries Vints</title>
+	<link rel="apple-touch-icon-precomposed" sizes="144×144" href="{{ url('assets/images/touch-icon-144×144-precomposed.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="114×114" href="{{ url('assets/images/touch-icon-114×114-precomposed.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="72×72" href="{{ url('assets/images/touch-icon-72×72-precomposed.png') }}" />
+	<link rel="apple-touch-icon-precomposed" href="{{ url('assets/images/touch-icon-iphone-precomposed.png') }}" />
 	<link rel="shortcut icon" href="{{ url('assets/images/favicon.ico') }}">
-	<link rel="apple-touch-icon" sizes="114×114" href="{{ url('assets/images/touch-icon-114×114.png') }}" />
-	<link rel="apple-touch-icon" sizes="72×72" href="{{ url('assets/images/touch-icon-72×72.png') }}" />
-	<link rel="apple-touch-icon" href="{{ url('assets/images/touch-icon-iphone.png') }}" />
 
 	<!-- Stylsheets -->
 	{{ HTML::style('assets/libraries/bootstrap/css/bootstrap.min.css') }}
