@@ -60,43 +60,26 @@ blockquote p {
     background-color: #333;
 	color: white;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	min-height: 800px;
-	padding: 150px 0;
+	padding: 25px 0;
 	text-align: center;
 }
 
 #header ul,
 #page-header ul {
-    font-weight: 300;
-	margin-left: 40px; /* Make header name stand in center */
+	font-weight: 300;
 	position: relative;
 	text-transform: uppercase;
 	z-index: 10;
 }
-#header ul li {
-	margin-right: 9%;
+#header ul li a {
+	background-color: rgba(255,255,255,.20);
+	color: white;
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px 0;
 }
-#header ul li.second {
-	margin-right: 20%;
-}
-#header ul li.third {
-	margin-left: 20%;
-}
-#header ul li:last-child {
-	margin-right: 0;
-}
-#header ul a,
 #page-header ul a {
 	color: #ddd;
-}
-#header ul a:hover {
-	color: white;
-	text-decoration: none;
-}
-#header .about {
-	margin-top: -58px;
-	position: relative;
-	z-index: 1;
 }
 #header h1,
 #header h2 {
@@ -105,13 +88,12 @@ blockquote p {
 #header h1 {
     font-size: 2.4em;
     font-weight: 900;
-	margin-bottom: 50px;
 	text-transform: uppercase;
 }
 #header h2 {
     font-weight: 300;
 	line-height: 1.3em;
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 }
 #header .btn {
     background-color: #2ECC71;
@@ -138,6 +120,53 @@ blockquote p {
 #header .next:hover {
 	color: rgba(235,235,235,0.75);
 	text-decoration: none;
+}
+
+@media (min-width: 992px) {
+	#header {
+		min-height: 800px;
+		padding: 150px 0;
+	}
+	#header .about {
+		margin-top: -58px;
+		position: relative;
+		z-index: 1;
+	}
+	#header h1,
+	#header h2 {
+		margin-bottom: 50px;
+	}
+	#header ul {
+		position: relative;
+		margin-top: -270px;
+	}
+	#header ul li {
+		display: inline-block;
+		margin-right: 6%;
+		width: 100px;
+	}
+	#header ul li.second {
+		margin-right: 215px;
+	}
+	#header ul li.third {
+		margin-left: 215px;
+	}
+	#header ul li:last-child {
+		margin-right: 0;
+	}
+	#header ul li a {
+		background-color: transparent;
+		color: #ddd;
+	}
+	#header ul li a:hover {
+		color: white;
+		text-decoration: none;
+	}
+	#header .next {
+		display: inline-block;
+		position: relative;
+		margin-top: 200px;
+	}
 }
 
 #page-header {

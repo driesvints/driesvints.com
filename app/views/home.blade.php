@@ -1,24 +1,22 @@
 @include('header')
 
 <div id="header">
-    <div class="container">
-        <ul class="list-inline">
+    <div class="about">
+        <h1>Dries Vints</h1>
+
+        <h2>
+        	Web Developer with a<br>
+        	passion for Open-Source,<br> Community &amp; Laravel
+        </h2>
+
+        <ul class="list-unstyled">
         	<li><a href="{{ route('home') }}#recent-posts">Blog</a></li>
         	<li class="second"><a href="#work-title">Work</a></li>
         	<li class="third"><a href="#about">About</a></li>
         	<li><a href="#contact">Contact</a></li>
         </ul>
 
-        <div class="about">
-        	<h1>Dries Vints</h1>
-
-        	<h2>
-        		Web Developer with a<br>
-        		passion for Open-Source,<br> Community &amp; Laravel
-        	</h2>
-
-        	<p><a class="next" href="#recent-posts"><i class="icon-chevron-sign-down"></i></a></p>
-        </div>
+        <p><a class="next" href="#recent-posts"><i class="icon-chevron-sign-down"></i></a></p>
     </div>
 </div>
 
