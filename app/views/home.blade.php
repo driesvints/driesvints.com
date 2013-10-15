@@ -5,8 +5,9 @@
         <h1>Dries Vints</h1>
 
         <h2>
-        	Web Developer with a<br>
-        	passion for Open-Source,<br> Community &amp; Laravel
+        	Web Developer with<br>
+        	a passion for Open-Source,<br>
+        	Community &amp; Laravel
         </h2>
 
         <ul class="list-unstyled">
