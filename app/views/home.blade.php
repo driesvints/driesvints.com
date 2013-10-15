@@ -13,12 +13,9 @@
         	<h1>Dries Vints</h1>
 
         	<h2>
-        		Freelance Web Developer with<br>
-        		a passion for Open-Source,<br>
-        		Community &amp; Laravel
+        		Web Developer with a<br>
+        		passion for Open-Source,<br> Community &amp; Laravel
         	</h2>
-
-        	<p><a class="btn btn-success btn-large" href="mailto:dries.vints@gmail.com">Available For Hire</a></p>
 
         	<p><a class="next" href="#recent-posts"><i class="icon-chevron-sign-down"></i></a></p>
         </div>
@@ -48,8 +45,6 @@
                     <h3>Cartalyst</h3>
 
                     <p>My work for Cartalyst consists mainly about writing documentation manuals. So far I've written manuals for the <a href="http://docs.cartalyst.com/data-grid">Data Grid</a> and <a href="http://docs.cartalyst.com/api">API</a> packages as well as for the upcoming <a href="http://docs.cartalyst.com/platform2">Platform 2</a> application.</p>
-
-                    <p>I've recently joined the team to continue to work further on documentation as well as to help with Cartalyst services.</p>
                 </div>
             </div>
         </div>
@@ -77,7 +72,7 @@
                 <div class="col-md-8">
                     <h3>Prologue</h3>
 
-                    <p><a href="https://github.com/prologue">Prologue</a> is the vendor name under which I publish my open-source packages. Some of the packages I made are <a href="https://github.com/Prologue/Alerts">the Alerts package</a> which handles global site notifications in Laravel. Another one is <a href="https://github.com/Prologue/Phpconsole">the Phpconsole package</a> which provides out-of-the-box support in Laravel for <a href="http://phpconsole.com/">the Phpconsole library</a>.</p>
+                    <p><a href="https://github.com/prologue">Prologue</a> is the vendor name under which I publish my open-source packages. Some of the packages I made are <a href="https://github.com/Prologue/Alerts">the Alerts package</a> which handles global site notifications in Laravel. Another one is <a href="https://github.com/Prologue/Phpconsole">the Phpconsole package</a> which provides support in Laravel for <a href="http://phpconsole.com/">the Phpconsole library</a>.</p>
                 </div>
             </div>
         </div>
