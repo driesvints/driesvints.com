@@ -86,10 +86,10 @@
             <div class="col-md-8 description">
                 <h3>About Dries</h3>
 
-                <p>Hi, I'm Dries. A <strong>web developer</strong> from Belgium.</p>
+                <p>Hi, I'm Dries. A web developer from Belgium.</p>
  
                 <p>
-                    I spend most of my days working as a freelancer and collaborating on <strong>open-source</strong> projects. I work mostly with PHP and <a href="http://laravel.com/">the Laravel framework</a>.
+                    I spend most of my days working as a freelancer and collaborating on open-source projects. I work mostly with PHP and <a href="http://laravel.com/">the Laravel framework</a>.
                 </p>
 
                 <p>
