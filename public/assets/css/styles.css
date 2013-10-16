@@ -58,6 +58,34 @@ blockquote p {
     line-height: 1.4em;
 }
 
+/* Sticky Footer
+---------------------------------------------------------*/
+
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -92px;
+}
+#footer,
+.push {
+	height: 92px;
+}
+@media (min-width: 768px) {
+	.wrapper {
+		margin: 0 auto -60px;
+	}
+	#footer,
+	.push {
+		height: 60px;
+	}
+}
+
+
 /* Headers
 ---------------------------------------------------------*/
 

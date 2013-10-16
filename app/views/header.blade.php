@@ -43,3 +43,5 @@
 @if (Auth::check())
 	@include('toolbar')
 @endif
+
+<div class="wrapper">
