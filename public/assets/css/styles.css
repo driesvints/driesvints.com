@@ -312,6 +312,10 @@ body.home #content .post h3 {
     margin: 0 auto;
     word-wrap: break-word;
 }
+#content img {
+	max-width: 100%;
+	height: auto;
+}
 h1.title,
 h2.title {
     font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman" ,Times, serif;
