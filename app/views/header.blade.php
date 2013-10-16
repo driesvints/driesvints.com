@@ -8,10 +8,17 @@
 
 	<!-- Site info -->
 	<title>Dries Vints</title>
+
+	<!-- Favicons -->
+	<meta name="msapplication-TileColor" content="#2F3238">
+	<meta name="msapplication-TileImage" content="{{ url('assets/images/touch-icon-144×144-precomposed.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="152×152" href="{{ url('assets/images/touch-icon-152×152-precomposed.png') }}" />
 	<link rel="apple-touch-icon-precomposed" sizes="144×144" href="{{ url('assets/images/touch-icon-144×144-precomposed.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="120×120" href="{{ url('assets/images/touch-icon-120×120-precomposed.png') }}" />
 	<link rel="apple-touch-icon-precomposed" sizes="114×114" href="{{ url('assets/images/touch-icon-114×114-precomposed.png') }}" />
 	<link rel="apple-touch-icon-precomposed" sizes="72×72" href="{{ url('assets/images/touch-icon-72×72-precomposed.png') }}" />
 	<link rel="apple-touch-icon-precomposed" href="{{ url('assets/images/touch-icon-iphone-precomposed.png') }}" />
+	<link rel="icon" sizes="32x32" href="{{ url('assets/images/favicon-32.png') }}">
 	<link rel="shortcut icon" href="{{ url('assets/images/favicon.ico') }}">
 
 	<!-- Stylsheets -->
