@@ -213,18 +213,9 @@ body.home #content .post {
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
-@media (min-width: 768px) {
-    body.home #content .post {
-        color: #ddd;
-        margin-bottom: 75px;
-    }
-}
 body.home #content .post:hover {
-    color: #333;
+	color: #7f8c8d;
     text-decoration: none;
-}
-body.home #content .post:hover h3 {
-    color: #333;
 }
 body.home #content .post .post-date {
     font-size: 0.9em;
@@ -233,17 +224,15 @@ body.home #content .post .post-date {
 body.home #content .post h3 {
     font-weight: 900;
     margin-top: 5px;
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
 }
 @media (min-width: 768px) {
+    body.home #content .post {
+        margin-bottom: 75px;
+    }
     body.home #content h2.title {
         margin-top: 50px;
     }
     body.home #content .post h3 {
-        color: #ccc;
         font-size: 1.8em;
     }
 }
@@ -273,9 +262,6 @@ body.home #content .post h3 {
     .archive-btn {
         margin-bottom: 50px;
     }
-    .archive-btn .btn {
-        background-color: #eee;
-    }
 }
 
 /* Archive
@@ -296,16 +282,10 @@ body.home #content .post h3 {
     -o-transition: color 0.2s ease;
     transition: color 0.2s ease;
 }
-#archive .item:hover {
-    color: #333;
-}
 #archive .item .item-date {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 768px) {
-    #archive .item {
-        color: #ddd;
-    }
     #archive .item .item-date,
     #archive .item .item-title {
         float: left;
