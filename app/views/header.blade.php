@@ -32,6 +32,12 @@
     <!-- Scripts -->
     <script type="text/javascript" src="//use.typekit.net/rzl7dlz.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		{{ HTML::script('assets/libraries/html5shiv.min.js') }}
+		{{ HTML::script('assets/libraries/respond.min.js') }}
+	<![endif]-->
 </head>
 
 @if (is_home())
