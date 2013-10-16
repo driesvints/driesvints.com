@@ -9,6 +9,8 @@ class TagsController extends BaseController {
 	 */
 	public function show($tag)
 	{
+		$this->title = $tag;
+
 		$posts = get_posts()
 			->published()
 			->filter(function($post) use ($tag)
@@ -17,7 +19,7 @@ class TagsController extends BaseController {
 			})
 			->orderBy('date', 'desc');
 
-		return View::make('tag', compact('tag', 'posts'));
+		return $this->view('tag', compact('tag', 'posts'));
 	}
 
 }

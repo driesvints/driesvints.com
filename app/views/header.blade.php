@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Site info -->
-	<title>Dries Vints</title>
+	<title>{{ $pageTitle }}</title>
 
 	<!-- Favicons -->
 	<meta name="msapplication-TileColor" content="#2F3238">

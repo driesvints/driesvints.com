@@ -71,13 +71,14 @@ App::down(function()
 
 /*
 |--------------------------------------------------------------------------
-| Custom Helpers
+| Custom Files
 |--------------------------------------------------------------------------
 |
-| Include the custom helpers file.
+| Include custom files.
 |
 */
 
+require app_path().'/composers.php';
 require app_path().'/helpers.php';
 
 /*

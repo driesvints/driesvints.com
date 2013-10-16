@@ -64,6 +64,8 @@ class PagesController extends BaseController {
 	 */
 	public function show(ContentRepositoryInterface $item)
 	{
+        $this->title = $item->title;
+
 		return $this->view('page', compact('item'));
 	}
 

@@ -12,11 +12,13 @@ class PostsController extends BaseController {
      */
     public function archive()
     {
+        $this->title = 'Archive';
+
         $posts = get_posts()
                  ->published()
                  ->orderBy('date', 'desc');
 
-        return View::make('archive', compact('posts'));
+        return $this->view('archive', compact('posts'));
     }
 
 	/**
@@ -78,6 +80,8 @@ class PostsController extends BaseController {
 	 */
 	public function show(ContentRepositoryInterface $item)
 	{
+        $this->title = $item->title;
+
 		return $this->view('single', compact('item'));
 	}
 
