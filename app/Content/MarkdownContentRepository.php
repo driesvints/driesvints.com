@@ -76,7 +76,8 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
 	 */
 	public function tags()
 	{
-		return explode(', ', $this->getAttribute('tags'));
+		$tags = explode(', ', $this->getAttribute('tags'));
+		return ! empty($tags[0]) ? $tags : array();
 	}
 
 	/**

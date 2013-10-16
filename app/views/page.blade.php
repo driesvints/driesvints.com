@@ -5,8 +5,6 @@
 <div class="single-post">
     <p class="post-info">
         <small>
-            {{ $item->date('F d, Y') }}
-    
             @if (count($item->tags))
             &bull; Tags: {{ $item->listTags() }}
             @endif

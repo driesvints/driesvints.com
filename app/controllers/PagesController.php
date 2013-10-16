@@ -64,7 +64,7 @@ class PagesController extends BaseController {
 	 */
 	public function show(ContentRepositoryInterface $item)
 	{
-		return $this->view('single', compact('item'));
+		return $this->view('page', compact('item'));
 	}
 
 	/**
