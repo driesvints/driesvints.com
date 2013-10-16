@@ -302,7 +302,7 @@ body.home #content .post h3 {
 #archive .item .item-date {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-@media (min-width: 786px) {
+@media (min-width: 768px) {
     #archive .item {
         color: #ddd;
     }
