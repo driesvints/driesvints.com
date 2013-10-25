@@ -28,7 +28,7 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('MacBook-Air-of-Dries-Vints-2.local', '*.loc'),
+	'local' => array('quantal64', 'dries.loc'),
 	'live'  => array('*.driesvints.com', 'dries.eu1.frbit.net'),
 
 ));
