@@ -27,6 +27,7 @@ deploy:
 
           # Initialize new repository and add everything
           git init
+          git rm -rf vagrant-chef/
           git add .
           git commit -m 'Deploy commit'
 
