@@ -21,13 +21,15 @@ deploy:
           # Remove existing git repository if exists
           if [ -d ".git" ]; then rm -rf .git; fi
 
+          # Remove submodule folder.
+          rm -rf vagrant-chef/
+
           # Configure git user
           git config --global user.name "wercker"
           git config --global user.email pleasemailus@wercker.com
 
           # Initialize new repository and add everything
           git init
-          git rm -rf vagrant-chef/
           git add .
           git commit -m 'Deploy commit'
 
