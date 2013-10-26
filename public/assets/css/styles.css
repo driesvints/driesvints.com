@@ -209,6 +209,12 @@ body {
 	}
 }
 
+@media (min-height: 1000px) and (min-width: 992px) {
+    #header {
+        min-height: 1000px;
+    }
+}
+
 #page-header {
     float: left;
     padding-top: 10px;
