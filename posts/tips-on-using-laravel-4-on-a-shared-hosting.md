@@ -5,7 +5,7 @@ date: October 25 2013 13:00
 tags: tutorials, laravel, tips
 -------
 
-Sometimes you're stuck on shared hosting. Be client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.
+Sometimes you're stuck on shared hosting. Be client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more-->
 
 I'd like to begin by saying that while most solutions below might suit your needs, the ultimate solution is always just to move to a webhost which suits your needs to host a PHP framework like Laravel. [Fortrabbit](http://fortrabbit.com/) is one such solution but definitely not the only one around.
 
