@@ -510,6 +510,17 @@ h2.title {
     }
 }
 
+/* Error Page
+---------------------------------------------------------*/
+
+#error-page {
+    padding-top: 25px; 
+    text-align: center;
+}
+#error-page .btn {
+    margin-top: 25px;
+}
+
 /* Admin
 ---------------------------------------------------------*/
 
