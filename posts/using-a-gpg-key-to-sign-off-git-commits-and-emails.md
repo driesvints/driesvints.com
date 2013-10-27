@@ -2,7 +2,7 @@ title: Using a GPG Key to Sign-Off Git Commits and Emails
 slug: using-a-gpg-key-to-sign-off-git-commits-and-emails
 status: published
 date: June 30 2013 19:17
-tags: tutorial, git, security
+tags: tutorials, git, security
 -------
 Ensuring that Git commits and Emails are your own can become a little troublesome. [Email spoofing](http://en.wikipedia.org/wiki/Email_spoofing) is one of the easiest things to do these days and anyone can install Git with your username and email address [to commit under your name](http://stackoverflow.com/questions/3128993/is-there-some-way-to-fake-the-name-email-info-for-the-author-of-a-git-commit-t).<!--more--> 
 

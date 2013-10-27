@@ -2,7 +2,7 @@ title: Using Laravel 4's Model Events
 slug: using-laravel-4-model-events
 status: published
 date: April 6 2013 21:44
-tags: tutorial, laravel
+tags: tutorials, laravel
 -------
 Laravel 4 beta 4 is hot of the press and it added a lot of new functionality to the framework. One of them are the newly added [Model events](http://four.laravel.com/docs/eloquent#model-events). You probably already knew about events in Laravel. Model events are basically the same but for Eloquent model event listeners. They get triggered on specific Model actions like saving a Model's data to the database or attempting to delete a model from the database. In this post I'm going to give you a couple of use-cases for them so you get a better understanding why they would be useful in your projects.<!--more-->
 

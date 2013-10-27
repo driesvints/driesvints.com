@@ -2,7 +2,7 @@ title: Laravel 4 learnings: week 4
 slug: laravel-4-learnings-week-4
 status: published
 date: April 7 2013 22:05
-tags: tutorials, laravel
+tags: laravel
 -------
 I didn't had much time this week so no tips and tricks just the usual list of resources and things that happened this week.<!--more-->
 
