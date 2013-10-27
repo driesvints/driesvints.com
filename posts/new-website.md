@@ -3,7 +3,7 @@ slug: new-website
 status: published
 date: October 27 2013 13:00
 -------
-Finally managed to finish my new website! I've been working hard on this new website since a few months now. So what's new you might ask? Pretty much everything.
+Finally managed to finish my new website! I've been working hard on this new website since a few months now. So what's new you might ask? Pretty much everything.<!--more-->
 
 - Migrated from Wordpress to Laravel
 - Custom backend (which still needs some tweaking)
