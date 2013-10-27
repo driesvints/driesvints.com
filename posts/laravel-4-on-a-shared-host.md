@@ -1,11 +1,11 @@
-title: Tips on using Laravel 4 on a shared hosting
-slug: tips-on-using-laravel-4-on-a-shared-hosting
+title: Laravel 4 on a shared host
+slug: laravel-4-on-a-shared-host
 status: published
 date: October 25 2013 13:00
 tags: tutorials, laravel, tips
 -------
 
-Sometimes you're stuck on shared hosting. Be client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more-->
+Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more-->
 
 I'd like to begin by saying that while most solutions below might suit your needs, the ultimate solution is always just to move to a webhost which suits your needs to host a PHP framework like Laravel. [Fortrabbit](http://fortrabbit.com/) is one such solution but definitely not the only one around.
 
@@ -16,6 +16,12 @@ We'll use the following folder structure as a base for this tutorial, with the `
     config/
     logs/
     www/
+
+Thanks to the following sources and people:
+
+- [Laravel 4 - Easily Extended](http://laravel.io/topic/39/laravel-4-easily-extended) by [Rob Clancy](http://twitter.com/robboclancy)
+- [Laravel 4 in Shared Hosting](http://crynobone.com/posts/3/laravel-4-in-shared-hosting) by [Mior Muhammad Zaki](https://twitter.com/crynobone)
+- [Understanding the Laravel PUBLIC folder](http://forums.laravel.io/viewtopic.php?pid=10023#p10023) by [Shawn McCool](https://twitter.com/ShawnMcCool)
 
 ## No DocumentRoot Access
 
@@ -168,7 +174,7 @@ Your Laravel application should now work.
 
 ## Downgrading To PHP 5.3.2
 
-While Laravel 4 requires at least PHP 5.3.7 because of Bcrypt there is a way to downgrade to PHP 5.3.2 if you're stuck with that. [Rob Clancy](https://twitter.com/robboclancy) has written [a great tutorial](http://laravel.io/topic/39/laravel-4-easily-extended) about this on how to downgrade to the absolute minimum PHP requirement.
+While Laravel 4 requires at least PHP 5.3.7 because of Bcrypt, there is a way to downgrade to PHP 5.3.2 if you're stuck with that. [Rob Clancy](https://twitter.com/robboclancy) has written [a great tutorial](http://laravel.io/topic/39/laravel-4-easily-extended) about this on how to downgrade to the absolute minimum PHP requirement.
 
 ## No SSH Access
 
@@ -183,16 +189,10 @@ Luckily there are some deployment tools out there which can help.
 
 I'm obviously not going to list every single one out there but these should get you started.
 
-No SSH access also means no access to composer, artisan and other command line tools. Once again, FTP is probably your only friend. Should you choose not to use a deployment tool and rather just deploy over FTP I, recommend doing at least the following.
+No SSH access also means no access to composer, artisan and other command line tools. Once again, FTP is probably your only friend. Should you choose not to use a deployment tool and rather just deploy over FTP, I recommend doing at least the following.
 
-Do a composer install with the `--no-dev` argument. This makes sure your dependencies are optimized for production without the unnecessary development packages. Overwrite your vendor folder with the updated dependencies when you upload through FTP.
+Do a composer install with the `--no-dev` argument before uploading your files. This makes sure your dependencies are optimized for production without the unnecessary development packages. Overwrite your vendor folder with the updated dependencies when you upload through FTP.
 
 ## Conslusion
 
 I hope some of these tips helped you on getting Laravel 4 installed on your shared hosting. If you have more tips please share them in the comments and I'll add them to this article.
-
-Thanks to the following sources and people:
-
-- [Laravel 4 - Easily Extended](http://laravel.io/topic/39/laravel-4-easily-extended) by [Rob Clancy](http://twitter.com/robboclancy)
-- [Laravel 4 in Shared Hosting](http://crynobone.com/posts/3/laravel-4-in-shared-hosting) by [Mior Muhammad Zaki](https://twitter.com/crynobone)
-- [Understanding the Laravel PUBLIC folder](http://forums.laravel.io/viewtopic.php?pid=10023#p10023) by [Shawn McCool](https://twitter.com/ShawnMcCool)
