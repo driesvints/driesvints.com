@@ -8,6 +8,7 @@
 
 	<!-- Site info -->
 	<title>{{ $pageTitle }}</title>
+    <meta name="description" content="Web Developer with a passion for Open-Source, Community &amp; Laravel.">
 
 	<!-- Favicons -->
 	<meta name="msapplication-TileColor" content="#2F3238">
