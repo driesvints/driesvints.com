@@ -1,5 +1,5 @@
 title: Laravel 4 learnings: week 5
-slug: laravel-learnings-week-5
+slug: laravel-4-learnings-week-5
 status: published
 date: April 14 2013 17:28
 tags: laravel-weekly, laravel
