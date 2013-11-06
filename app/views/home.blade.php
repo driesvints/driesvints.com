@@ -5,16 +5,16 @@
         <h1>Dries Vints</h1>
 
         <h2>
-        	Web Developer with<br>
-        	a passion for Open-Source,<br>
-        	Community &amp; Laravel
+            Web Developer with<br>
+            a passion for Open-Source,<br>
+            Community &amp; Laravel
         </h2>
 
         <ul class="list-unstyled">
-        	<li><a href="{{ route('home') }}#recent-posts">Blog</a></li>
-        	<li class="second"><a href="#work-title">Work</a></li>
-        	<li class="third"><a href="#about">About</a></li>
-        	<li><a href="#contact">Contact</a></li>
+            <li><a href="{{ route('home') }}#recent-posts">Blog</a></li>
+            <li class="second"><a href="#work-title">Work</a></li>
+            <li class="third"><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <p><a class="next" href="#recent-posts"><i class="icon-chevron-sign-down"></i></a></p>

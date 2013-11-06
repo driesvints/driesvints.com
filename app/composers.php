@@ -9,14 +9,14 @@
 View::composer('header', function($view)
 {
     // The page title.
-	$pageTitle = 'Dries Vints';
+    $pageTitle = 'Dries Vints';
 
-	if ($view->offsetExists('title') && $view->title != '')
-	{
-		$pageTitle = $view->title . ' | ' . $pageTitle;
-	}
+    if ($view->offsetExists('title') && $view->title != '')
+    {
+        $pageTitle = $view->title . ' | ' . $pageTitle;
+    }
 
-	$view->pageTitle = $pageTitle;
+    $view->pageTitle = $pageTitle;
 
     // The meta description.
     $metaDescription = '';
