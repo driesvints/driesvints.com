@@ -27,7 +27,7 @@ Code blocks are highlighted by [the Highlight.js plugin](http://softwaremaniacs.
 
 Comments are powered by [Disqus](http://disqus.com/).
 
-Builds and deployment is being handled by [Wercker](http://wercker.com/).
+Builds and deployment are being handled by [Wercker](http://wercker.com/).
 
 The website is hosted on [Fortrabbit](http://fortrabbit.com/).
 
