@@ -66,12 +66,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
-                    <a href="https://github.com/prologue">{{ HTML::image('images/prologue.png') }}</a>
+                    {{ HTML::image('images/prologue.png') }}
                 </div>
                 <div class="col-md-8">
                     <h3>Prologue</h3>
 
-                    <p><a href="https://github.com/prologue">Prologue</a> is the vendor name under which I publish my open-source packages. Some of the packages I made are <a href="https://github.com/Prologue/Alerts">the Alerts package</a> which handles global site notifications in Laravel. Another one is <a href="https://github.com/Prologue/Phpconsole">the Phpconsole package</a> which provides support in Laravel for <a href="http://phpconsole.com/">the Phpconsole library</a>.</p>
+                    <p>Prologue is the vendor name under which I publish my open-source packages. Some of the packages I made are <a href="https://github.com/driesvints/Alerts">the Alerts package</a> which handles global site notifications in Laravel. Another one is <a href="https://github.com/driesvints/Phpconsole">the Phpconsole package</a> which provides support in Laravel for <a href="http://phpconsole.com/">the Phpconsole library</a>.</p>
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
                 <p>Hi, I'm Dries. A web developer from Belgium.</p>
  
                 <p>
-                    I spend most of my days working as a freelancer and collaborating on open-source projects. I work mostly with PHP and <a href="http://laravel.com/">the Laravel framework</a>.
+                    I spend most of my days working on web projects and collaborating on open-source projects. I work mostly with PHP and <a href="http://laravel.com/">the Laravel framework</a>.
                 </p>
 
                 <p>
