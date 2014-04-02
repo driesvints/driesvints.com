@@ -186,6 +186,8 @@ Luckily there are some deployment tools out there which can help.
 - [Beanstalk](http://beanstalkapp.com/)
 - [Deploy](http://deployhq.com/)
 - [Wercker](http://wercker.com/)
+- [Dploy](http://dploy.io/)
+- [Codeship](https://www.codeship.io/)
 
 I'm obviously not going to list every single one out there but these should get you started.
 
