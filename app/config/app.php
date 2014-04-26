@@ -114,7 +114,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		'Content\ContentServiceProvider',
+		'Dries\Content\ContentServiceProvider',
 	),
 
 	/*
@@ -180,7 +180,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
-		'ContentLoader'   => 'Content\Facades\ContentLoader',
+		'ContentLoader'   => 'Dries\Content\Facades\ContentLoader',
 
 	),
 

@@ -1,4 +1,4 @@
-<?php namespace Content\Facades;
+<?php namespace Dries\Content\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

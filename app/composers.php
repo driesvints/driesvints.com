@@ -21,7 +21,7 @@ View::composer('header', function($view)
     // The meta description.
     $metaDescription = '';
 
-    if ($view->offsetExists('item') && $view->item instanceof Content\BaseContentRepository)
+    if ($view->offsetExists('item') && $view->item instanceof Dries\Content\BaseContentRepository)
     {
         $metaDescription = strip_tags($view->item->excerpt);
     }

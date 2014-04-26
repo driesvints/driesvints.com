@@ -1,7 +1,7 @@
 <?php
 
 use Models\Post;
-use Content\ContentRepositoryInterface;
+use Dries\Content\ContentRepositoryInterface;
 
 class PostsController extends BaseController {
 
@@ -75,7 +75,7 @@ class PostsController extends BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  \Content\ContentRepositoryInterface  $item
+	 * @param  \Dries\Content\ContentRepositoryInterface  $item
 	 * @return \Illuminate\View\View
 	 */
 	public function show(ContentRepositoryInterface $item)

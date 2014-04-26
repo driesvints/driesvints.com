@@ -14,11 +14,10 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php",
-			"app/Content"
+			"app/tests/TestCase.php"
 		],
-        "psr-0": {
-            "Dries\\": "app/"
+        "psr-4": {
+            "Dries\\": "src/"
         }
 	},
 	"scripts": {

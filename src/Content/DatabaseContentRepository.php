@@ -1,4 +1,4 @@
-<?php namespace Content;
+<?php namespace Dries\Content;
 
 use Illuminate\Database\Eloquent\Model;
 use dflydev\markdown\MarkdownExtraParser;

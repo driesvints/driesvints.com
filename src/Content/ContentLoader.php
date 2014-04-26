@@ -1,4 +1,4 @@
-<?php namespace Content;
+<?php namespace Dries\Content;
 
 use Illuminate\Config\Repository;
 use Illuminate\Filesystem\Filesystem;
@@ -38,7 +38,7 @@ class ContentLoader {
 	 * Gets content from a list of sources.
 	 *
 	 * @param  mixed  $sources
-	 * @return \Content\Collection
+	 * @return \Dries\Content\Collection
 	 */
 	public function get($sources)
 	{

@@ -1,4 +1,4 @@
-<?php namespace Content;
+<?php namespace Dries\Content;
 
 use DateTime;
 use Prologue\Support\Collection as BaseCollection;
@@ -8,7 +8,7 @@ class Collection extends BaseCollection {
 	/**
 	 * Only return content which has already been published.
 	 *
-	 * @return \Content\Collection
+	 * @return \Dries\Content\Collection
 	 */
 	public function published()
 	{

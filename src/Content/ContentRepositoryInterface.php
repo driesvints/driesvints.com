@@ -1,4 +1,4 @@
-<?php namespace Content;
+<?php namespace Dries\Content;
 
 interface ContentRepositoryInterface {
 

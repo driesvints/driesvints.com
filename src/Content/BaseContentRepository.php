@@ -1,4 +1,4 @@
-<?php namespace Content;
+<?php namespace Dries\Content;
 
 use Carbon\Carbon;
 use Illuminate\Support\Str;

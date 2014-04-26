@@ -1,7 +1,7 @@
 <?php
 
 use Models\Page;
-use Content\ContentRepositoryInterface;
+use Dries\Content\ContentRepositoryInterface;
 
 class PagesController extends BaseController {
 
@@ -59,7 +59,7 @@ class PagesController extends BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  \Content\ContentRepositoryInterface  $item
+	 * @param  \Dries\Content\ContentRepositoryInterface  $item
 	 * @return \Illuminate\View\View
 	 */
 	public function show(ContentRepositoryInterface $item)
