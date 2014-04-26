@@ -5,3 +5,4 @@ composer.phar
 *.sublime-project
 *.sublime-workspace
 .vagrant
+.idea
