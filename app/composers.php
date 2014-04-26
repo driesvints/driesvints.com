@@ -19,7 +19,7 @@ View::composer('header', function($view)
     $view->pageTitle = $pageTitle;
 
     // The meta description.
-    $metaDescription = '';
+    $metaDescription = $view->offsetExists('metaDescription') ? $view->metaDescription : '';
 
     if ($view->offsetExists('item') && $view->item instanceof Dries\Content\BaseContentRepository)
     {
