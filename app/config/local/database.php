@@ -9,7 +9,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'driesvints',
 			'username'  => 'root',
-			'password'  => 'password',
+			'password'  => 'root',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
