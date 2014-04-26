@@ -26,7 +26,7 @@ a:hover {
 
 pre,
 code {
-	font-family: "source-code-pro", "Courier New", Courier, sans-serif;
+	font-family: "Source Code Pro", "Courier New", Courier, sans-serif;
 }
 pre {
     background-color: none;
@@ -338,8 +338,8 @@ body.home #content .post h3 {
 ---------------------------------------------------------*/
 
 #content {
-    font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman" ,Times, serif;
-    line-height: 1.6em;
+    font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+    line-height: 1.7em;
     padding-top: 20px;
     padding-bottom: 20px;
     max-width: 768px;
@@ -352,7 +352,7 @@ body.home #content .post h3 {
 }
 h1.title,
 h2.title {
-    font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman" ,Times, serif;
+    font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: bold;
     margin-bottom: 40px;
     text-align: center;

@@ -28,13 +28,9 @@
     {{ HTML::style('assets/libraries/bootstrap/css/bootstrap.min.css') }}
     {{ HTML::style('assets/libraries/font-awesome/css/font-awesome.min.css') }}
     {{ HTML::style('assets/libraries/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css') }}
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Noto+Serif:400,700,400italic,700italic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::style('assets/libraries/highlight.js/styles/solarized_dark.css') }}
     {{ HTML::style('assets/css/styles.css') }}
-
-    <!-- Scripts -->
-    <script type="text/javascript" src="//use.typekit.net/rzl7dlz.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
