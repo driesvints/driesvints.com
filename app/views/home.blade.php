@@ -34,16 +34,16 @@
 <h2 id="work-title" class="title">Work</h2>
 
 <div id="work">
-    <div class="item off">
+    <div class="item off beatswitch">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
-                    <a href="http://cartalyst.com">{{ HTML::image('images/cartalyst.png', null, array('width' => 200)) }}</a>
+                    <a href="http://beatswitch.com">{{ HTML::image('images/beatswitch.png', null, array('width' => 300)) }}</a>
                 </div>
                 <div class="col-md-8">
-                    <h3>Cartalyst</h3>
+                    <h3>BeatSwitch</h3>
 
-                    <p>My work for Cartalyst consists mainly about writing documentation manuals. So far I've written manuals for the <a href="http://docs.cartalyst.com/data-grid">Data Grid</a> and <a href="http://docs.cartalyst.com/api">API</a> packages as well as for the upcoming <a href="http://docs.cartalyst.com/platform2">Platform 2</a> application.</p>
+                    <p>My day job at <a href="http://beatswitch.com">BeatSwitch</a> consists of maintenance for the BeatSwitch platform as well as the development of new features and functionality.</p>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
-                    {{ HTML::image('images/prologue.png') }}
+                    <a href="http://github.com/driesvints">{{ HTML::image('images/prologue.png') }}</a>
                 </div>
                 <div class="col-md-8">
                     <h3>Prologue</h3>
@@ -94,7 +94,7 @@
                 </p>
 
                 <p>
-                    I'm a very active member of the Laravel community. I do a weekly newsletter called <a href="http://laravelweekly.com">&ldquo;Laravel Weekly&rdquo;</a> at <a href="http://laravel.io">Laravel.io</a> and write documentation manuals for <a href="http://cartalyst.com">Cartalyst</a>.
+                    I'm a very active member of the Laravel community. I do a weekly newsletter called <a href="http://laravelweekly.com">&ldquo;Laravel Weekly&rdquo;</a> at <a href="http://laravel.io">Laravel.io</a> and work at a company named <a href="http://beatswitch.com">BeatSwitch</a>.
                 </p>
  
                 <p>

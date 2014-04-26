@@ -428,6 +428,9 @@ h2.title {
 #work .off {
     background-color: #ecf0f1;
 }
+#work .beatswitch .logo {
+    padding-top: 65px;
+}
 
 #about {
     background-color: #2f3238;
