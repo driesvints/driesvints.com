@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/dries
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://driesvints.com
+  * I am dries (https://keybase.io/dries) on keybase.
+  * I have a public key with fingerprint 0D13 2A3B CDEB 70B9 6910  EF10 D4DD 8766 1D98 566C
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "0d132a3bcdeb70b96910ef10d4dd87661d98566c",
+            "host": "keybase.io",
+            "key_id": "d4dd87661d98566c",
+            "uid": "f09ca3f2585c619d38ec26a966258800",
+            "username": "dries"
+        },
+        "service": {
+            "hostname": "driesvints.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1399234066,
+    "expire_in": 157680000,
+    "prev": "f261907362f2e3fbea99a8fa8abe08c7fa3302522d9ef2cbd3b77f0d9449700c",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.14
+Comment: https://keybase.io/crypto
+
+yMHoAnicbVFtSBRpHF/Xl3SxFyQINOQYKCkXe2Zmd2aexctQQlJJ0Axbw2VentHB
+dmadmV1TTwqOUgsk6jg1whO1hCT0i0R+8mXJbE1KyA6SQiMl0dDkCjHLZ6SgD/dp
+eH5v/99//uHd0TZHFOzuS3sU3bwRFRleDdqK5Y6kekLQpFrCU09UoZ2PrKgVSA/o
+imoSHgJIJE3xtCBKSGCBABlIAiSTQHJJEscyDClBzs0wIuEkKjXDcuAYgTdQhqJh
+DD98ioTR/9EHdwgZQJGnZcrNuUWGhBLNIZFieMgwGOIAsIQG0lXej6wYXUEG0eAk
+MBRSRAzV78z9lQ7h5kaGqPmxNaBrpiZqFzBXaZoBj2U1awOWtgYJvh8pPkFRJbw2
+NoSQbiiaSnhIrBRNxYolaQgp2gUYxkmgiwFFRz7FUrhZBhcEwBqDQtYuFN4AsDRD
+yRSiZQHxEPKczHO8gAAnsjJP04ByU5QEkUyJgkQLLCsDCbpckAXA+ikGqlY1wkPj
+mnwFjjSUCpU3gzoiGkaHz8fYohy2uFi7dTibI2Hfz3Pm1Oz6ri4d+Fsdz6xKHFkr
+S58vWeDK0pJS/c7Rt2MPk4919y02R282uqcc/aN1Zzavth6PPxfn8/zWP9iU1R5I
+bpuJbfijIwJnMyeukN1FS4njBdeyzY+pn/69/9fkhleUm15dHzrypul5fmfd3qB9
+q6u1KtWun7r7D7/lPVrzLOe/wtrg4HRdQmbP+xurp//0d87lxi970xZbnpSup0Qm
+wj3V3ra1gXtPv8ZPnti4NL1ADT0eLurvXZnNy+MLv0yRK2Fv8euX2hgRnhKKDmXP
+VMOBFzG/20zX54TLd7q+5d4sONnX9aFkOeVg/sh87/qDW3vOtpRm2csb36WXR+b2
+H0a32xO3ARVhFzc=
+=JIGn
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dries
+
+==================================================================
