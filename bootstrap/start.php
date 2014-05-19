@@ -26,9 +26,9 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-    'ocean' => array('188.226.218.109'),
     'local' => array('homestead'),
     'live'  => array('dries.eu1.frbit.net'),
+    'ocean' => array('driesvints-com'),
 
 ));
 
