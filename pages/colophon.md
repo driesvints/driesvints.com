@@ -29,8 +29,8 @@ Code blocks are highlighted by [the Highlight.js plugin](http://softwaremaniacs.
 
 Comments are powered by [Disqus](http://disqus.com/).
 
-Builds and deployment are being handled by [Wercker](http://wercker.com/).
+Deployment is being handled by [Laravel Forge](https://forge.laravel.com).
 
-The website is hosted on [Fortrabbit](http://fortrabbit.com/).
+The website is hosted on [Digital Ocean](http://digitalocean.com/).
 
 You can find the full source code [here](https://github.com/driesvints/driesvints.com).
