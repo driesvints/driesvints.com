@@ -13,8 +13,6 @@
 
 $app = new Illuminate\Foundation\Application;
 
-$app->redirectIfTrailingSlash();
-
 /*
 |--------------------------------------------------------------------------
 | Detect The Application Environment
@@ -28,9 +26,9 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-    'live'  => array('*driesvints.com', 'dries.eu1.frbit.net'),
     'ocean' => array('188.226.218.109'),
     'local' => array('homestead'),
+    'live'  => array('dries.eu1.frbit.net'),
 
 ));
 

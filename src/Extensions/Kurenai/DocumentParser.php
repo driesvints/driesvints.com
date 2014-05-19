@@ -11,7 +11,7 @@ class DocumentParser extends KurenaiDocumentParser {
      * @param  array   $metadata
      * @return \Dries\Extensions\Kurenai\Document
      */
-    public function buildDocument($content, $metadata)
+    public function buildDocument($content, array $metadata)
     {
         $document = new Document();
         $document->setContent($content);

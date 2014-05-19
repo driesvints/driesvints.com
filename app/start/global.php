@@ -30,9 +30,7 @@ ClassLoader::addDirectories(array(
 |
 */
 
-$logFile = 'log-'.php_sapi_name().'.txt';
-
-Log::useDailyFiles(storage_path().'/logs/'.$logFile);
+Log::useFiles(storage_path().'/logs/laravel.log');
 
 /*
 |--------------------------------------------------------------------------
@@ -51,13 +49,15 @@ App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
 
-    switch ($code)
-    {
-        case 404:
-            return Response::view('404', array(), 404);
+    if (! App::isLocal()) {
+        switch ($code)
+        {
+            case 404:
+                return Response::view('404', array(), 404);
 
-        default:
-            return Response::view('error-default', array(), $code);
+            default:
+                return Response::view('error-default', array(), $code);
+        }
     }
 });
 
