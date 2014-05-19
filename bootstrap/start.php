@@ -28,9 +28,9 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-    'local' => array('192.168.22.11.xip.io', 'driesvints.loc', 'driesvints'),
     'live'  => array('*driesvints.com', 'dries.eu1.frbit.net'),
     'ocean' => array('188.226.218.109'),
+    'local' => array('homestead'),
 
 ));
 
