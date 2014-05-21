@@ -40,7 +40,7 @@ I've found it to be very helpful to namespace my models from the start. Because 
 ~~~ .php
 <?php namespace Models;
 
-class File extends Eloquent {
+class File extends \Eloquent {
 
     protected $table = 'files';
 
