@@ -172,9 +172,11 @@ $app = require_once __DIR__.'/bootstrap/start.php';
 
 Your Laravel application should now work.
 
-## Downgrading To PHP 5.3.2
+## <strike>Downgrading To PHP 5.3.2</strike>
 
-While Laravel 4 requires at least PHP 5.3.7 because of Bcrypt, there is a way to downgrade to PHP 5.3.2 if you're stuck with that. [Rob Clancy](https://twitter.com/robboclancy) has written [a great tutorial](http://laravel.io/topic/39/laravel-4-easily-extended) about this on how to downgrade to the absolute minimum PHP requirement.
+<strike>While Laravel 4 requires at least PHP 5.3.7 because of Bcrypt, there is a way to downgrade to PHP 5.3.2 if you're stuck with that. [Rob Clancy](https://twitter.com/robboclancy) has written [a great tutorial](http://laravel.io/topic/39/laravel-4-easily-extended) about this on how to downgrade to the absolute minimum PHP requirement.</strike>
+
+**Update:** Laravel 4.2 will require at least PHP 5.4 so you will always have to get webhost with at least these requirements.
 
 ## No SSH Access
 
@@ -191,7 +193,7 @@ Luckily there are some deployment tools out there which can help.
 
 I'm obviously not going to list every single one out there but these should get you started.
 
-No SSH access also means no access to composer, artisan and other command line tools. Once again, FTP is probably your only friend. Should you choose not to use a deployment tool and rather just deploy over FTP, I recommend doing at least the following.
+No SSH access also means no access to composer, artisan and other command line tools. Once again, FTP is probably your only friend. Should you choose not to use a deployment tool and rather just deploy over FTP, I recommend doing at least the following:
 
 Do a composer install with the `--no-dev` argument before uploading your files. This makes sure your dependencies are optimized for production without the unnecessary development packages. Overwrite your vendor folder with the updated dependencies when you upload through FTP.
 
