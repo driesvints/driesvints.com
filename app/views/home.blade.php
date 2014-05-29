@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
-                    <a href="http://beatswitch.com">{{ HTML::image('images/beatswitch.png', null, array('width' => 300)) }}</a>
+                    <a href="http://beatswitch.com">{{ HTML::image('assets/images/beatswitch.png', null, array('width' => 300)) }}</a>
                 </div>
                 <div class="col-md-8">
                     <h3>BeatSwitch</h3>
@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
-                    <a href="http://laravelweekly.com">{{ HTML::image('images/laravel-weekly.png') }}</a>
+                    <a href="http://laravelweekly.com">{{ HTML::image('assets/images/laravel-weekly.png') }}</a>
                 </div>
                 <div class="col-md-8">
                     <h3>Laravel Weekly</h3>
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
-                    <a href="http://github.com/driesvints">{{ HTML::image('images/prologue.png') }}</a>
+                    <a href="http://github.com/driesvints">{{ HTML::image('assets/images/prologue.png') }}</a>
                 </div>
                 <div class="col-md-8">
                     <h3>Prologue</h3>

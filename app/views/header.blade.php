@@ -30,7 +30,7 @@
     {{ HTML::style('assets/libraries/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css') }}
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Noto+Serif:400,700,400italic,700italic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::style('assets/libraries/highlight.js/styles/solarized_dark.css') }}
-    {{ HTML::style('assets/css/styles.css') }}
+    {{ HTML::style('assets/css/styles.min.css') }}
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

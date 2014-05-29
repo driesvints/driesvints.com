@@ -10,8 +10,6 @@ Small update this week. I also decided to change the name from my posts to just 
 
 [Shawn McCool](https://twitter.com/shawnmccool) has announced the dates for Laracon EU last thursday in his Laravel talk for a PHP Amsterdam user group meeting. Mark your calendars! August 30 - 31 will be 2 days of Laravel awesomeness. The conference will take place at the Bimhuis venue in Amsterdam.
 
-![Laracon EU Announcement](https://raw.github.com/driesvints/Articles/master/weekly-laravel-learnings/images/laracon-eu-announcement.jpg)
-
 ## Laravel Meetup 20/04
 
 Last night we had a Laravel meetup in Amsterdam, organised by [Jeroen Gerits](https://twitter.com/JeroenGerits). We had a great time talking about Laravel and everyday things, having a few drinks and some dinner and hanging out. It was nice meeting other Laravel developers in person. Thanks to everyone who came out!

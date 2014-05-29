@@ -22,7 +22,7 @@
 {{ HTML::script('assets/libraries/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js') }}
 {{ HTML::script('assets/libraries/jquery.backstretch.min.js') }}
 {{ HTML::script('assets/libraries/highlight.js/highlight.pack.js') }}
-{{ HTML::script('assets/js/script.js') }}
+{{ HTML::script('assets/js/script.min.js') }}
 <script>hljs.initHighlightingOnLoad();</script>
 
 </body>

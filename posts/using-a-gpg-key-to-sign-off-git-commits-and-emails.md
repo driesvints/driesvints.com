@@ -74,13 +74,13 @@ Your Git commit is now signed with your GPG key, making sure it identifies you a
 
 When you installed the GPGTools a plugin for OS X mail should have been installed as well. When you now go to your Mail settings, a new preference panel for [GPGMail](https://gpgtools.org/gpgmail/index.html) should have been added. Additionally, when you create a new email which you're sending from the email, some new options are available.
 
-![](/images/using-gpg-keys-to-sign-off-git-commits-and-emails-image-1.png)
+![](/assets/images/using-gpg-keys-to-sign-off-git-commits-and-emails-image-1.png)
 
 The new options allow you to encrypt and sign your email message. Encrypting the email will make sure it's securely transferred from you to the recipient. You can read more about encrypting emails [here](http://support.gpgtools.org/kb/how-to/your-first-encrypted-mail).
 
 Signing off emails will verify you as the actual sender for the email message.
 
-![](/images/using-gpg-keys-to-sign-off-git-commits-and-emails-image-2.png)
+![](/assets/images/using-gpg-keys-to-sign-off-git-commits-and-emails-image-2.png)
 
 [Image courtesy of GPGTools](https://gpgtools.org/gpgmail/index.html)
 
