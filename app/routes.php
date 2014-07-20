@@ -9,21 +9,23 @@
 Route::model('users', 'Models\\User');
 Route::model('posts', 'Models\\Post');
 Route::model('pages', 'Models\\Page');
-Route::bind('post_slug', function($value)
-{
-	$post = get_posts()->published()->filterBy('slug', $value)->first();
+Route::bind('post_slug', function ($value) {
+    $post = get_posts()->published()->filterBy('slug', $value)->first();
 
-	if ($post) return $post;
+    if ($post) {
+        return $post;
+    }
 
-	App::abort(404);
+    App::abort(404);
 });
-Route::bind('page_slug', function($value)
-{
-	$page = get_pages()->published()->filterBy('slug', $value)->first();
+Route::bind('page_slug', function ($value) {
+    $page = get_pages()->published()->filterBy('slug', $value)->first();
 
-	if ($page) return $page;
+    if ($page) {
+        return $page;
+    }
 
-	App::abort(404);
+    App::abort(404);
 });
 
 /*
@@ -32,28 +34,26 @@ Route::bind('page_slug', function($value)
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
-Route::get('blog', array('as' => 'archive', 'uses' => 'PostsController@archive'));
-Route::get('blog/{post_slug}', array('as' => 'posts.show', 'uses' => 'PostsController@show'));
+Route::get('blog', ['as' => 'archive', 'uses' => 'PostsController@archive']);
+Route::get('blog/{post_slug}', ['as' => 'posts.show', 'uses' => 'PostsController@show']);
 
-Route::get('tag', function()
-{
-	return Redirect::home();
+Route::get('tag', function () {
+    return Redirect::home();
 });
-Route::get('tag/{tag}', array('as' => 'tags.show', 'uses' => 'TagsController@show'));
+Route::get('tag/{tag}', ['as' => 'tags.show', 'uses' => 'TagsController@show']);
 
-Route::get('login', array('as' => 'login', 'uses' => 'AuthController@getLogin'));
+Route::get('login', ['as' => 'login', 'uses' => 'AuthController@getLogin']);
 Route::post('login', 'AuthController@postLogin');
-Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));
+Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
 
-Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
-{
-	Route::get('/', array('as' => 'dashboard', 'uses' => 'AdminController@dashboard'));
+Route::group(['before' => 'auth', 'prefix' => 'admin'], function () {
+    Route::get('/', ['as' => 'dashboard', 'uses' => 'AdminController@dashboard']);
 
-	Route::resource('users', 'UsersController', array('only' => array('edit', 'update')));
-	Route::resource('posts', 'PostsController', array('except' => array('show')));
-	Route::resource('pages', 'PagesController', array('except' => array('show')));
+    Route::resource('users', 'UsersController', ['only' => ['edit', 'update']]);
+    Route::resource('posts', 'PostsController', ['except' => ['show']]);
+    Route::resource('pages', 'PagesController', ['except' => ['show']]);
 });
 
-Route::get('{page_slug}', array('as' => 'pages.show', 'uses' => 'PagesController@show'));
+Route::get('{page_slug}', ['as' => 'pages.show', 'uses' => 'PagesController@show']);

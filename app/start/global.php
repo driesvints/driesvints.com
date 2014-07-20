@@ -11,13 +11,11 @@
 |
 */
 
-ClassLoader::addDirectories(array(
-
-	app_path().'/controllers',
-	app_path().'/models',
-	app_path().'/database/seeds',
-
-));
+ClassLoader::addDirectories([
+    app_path() . '/controllers',
+    app_path() . '/models',
+    app_path() . '/database/seeds',
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +28,7 @@ ClassLoader::addDirectories(array(
 |
 */
 
-Log::useFiles(storage_path().'/logs/laravel.log');
+Log::useFiles(storage_path() . '/logs/laravel.log');
 
 /*
 |--------------------------------------------------------------------------
@@ -45,13 +43,11 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |
 */
 
-App::error(function(Exception $exception, $code)
-{
-	Log::error($exception);
+App::error(function (Exception $exception, $code) {
+    Log::error($exception);
 
     if (! App::isLocal()) {
-        switch ($code)
-        {
+        switch ($code) {
             case 404:
                 return Response::view('404', array(), 404);
 
@@ -72,9 +68,8 @@ App::error(function(Exception $exception, $code)
 |
 */
 
-App::down(function()
-{
-	return Response::make("Be right back!", 503);
+App::down(function () {
+    return Response::make("Be right back!", 503);
 });
 
 /*
@@ -86,8 +81,8 @@ App::down(function()
 |
 */
 
-require app_path().'/composers.php';
-require app_path().'/helpers.php';
+require app_path() . '/composers.php';
+require app_path() . '/helpers.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -100,4 +95,4 @@ require app_path().'/helpers.php';
 |
 */
 
-require app_path().'/filters.php';
+require app_path() . '/filters.php';

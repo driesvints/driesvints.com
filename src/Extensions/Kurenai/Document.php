@@ -1,10 +1,11 @@
-<?php namespace Dries\Extensions\Kurenai;
+<?php
+namespace Dries\Extensions\Kurenai;
 
 use Michelf\MarkdownExtra;
 use Kurenai\Document as KurenaiDocument;
 
-class Document extends KurenaiDocument {
-
+class Document extends KurenaiDocument
+{
     /**
      * Get the document content in HTML format.
      *
@@ -14,5 +15,4 @@ class Document extends KurenaiDocument {
     {
         return MarkdownExtra::defaultTransform($this->content);
     }
-
 }

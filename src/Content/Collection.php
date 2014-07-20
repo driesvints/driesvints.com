@@ -1,43 +1,39 @@
-<?php namespace Dries\Content;
+<?php
+namespace Dries\Content;
 
 use DateTime;
 use Prologue\Support\Collection as BaseCollection;
 
-class Collection extends BaseCollection {
+class Collection extends BaseCollection
+{
+    /**
+     * Only return content which has already been published.
+     *
+     * @return \Dries\Content\Collection
+     */
+    public function published()
+    {
+        return $this->filter(function ($item) {
+            $date = new DateTime($item->date('Y-m-d H:i:s'));
 
-	/**
-	 * Only return content which has already been published.
-	 *
-	 * @return \Dries\Content\Collection
-	 */
-	public function published()
-	{
-		return $this->filter(function($item)
-		{
-			$date = new DateTime($item->date('Y-m-d H:i:s'));
+            return ($date->getTimestamp() <= time() && $item->status === 'published');
+        });
+    }
 
-			return (
-				$date->getTimestamp() <= time() && 
-				$item->status === 'published'
-			);
-		});
-	}
+    /**
+     * Returns a paginator instance for this collection.
+     *
+     * @param  int $perPage
+     * @return \Illuminate\Pagination\Paginator
+     */
+    public function paginate($perPage)
+    {
+        $paginator = app('paginator');
 
-	/**
-	 * Returns a paginator instance for this collection.
-	 *
-	 * @param  int  $perPage
-	 * @return \Illuminate\Pagination\Paginator
-	 */
-	public function paginate($perPage)
-	{
-		$paginator = app('paginator');
+        $start = ($paginator->getCurrentPage() - 1) * $perPage;
 
-		$start = ($paginator->getCurrentPage() - 1) * $perPage;
+        $sliced = $this->slice($start, $perPage)->all();
 
-		$sliced = $this->slice($start, $perPage)->all();
-
-		return $paginator->make($sliced, $this->count(), $perPage);
-	}
-
+        return $paginator->make($sliced, $this->count(), $perPage);
+    }
 }

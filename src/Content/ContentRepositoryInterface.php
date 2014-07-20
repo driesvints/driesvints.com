@@ -1,22 +1,22 @@
-<?php namespace Dries\Content;
+<?php
+namespace Dries\Content;
 
-interface ContentRepositoryInterface {
+interface ContentRepositoryInterface
+{
+    /**
+     * Returns a specific content item attribute.
+     *
+     * @param  string $key
+     * @return mixed
+     */
+    public function getAttribute($key);
 
-	/**
-	 * Returns a specific content item attribute.
-	 *
-	 * @param  string  $key
-	 * @return mixed
-	 */
-	public function getAttribute($key);
-
-	/**
-	 * Sets a new value to a specific content item attribute.
-	 *
-	 * @param  string  $key
-	 * @param  mixed   $value
-	 * @return mixed
-	 */
-	public function setAttribute($key, $value);
-
+    /**
+     * Sets a new value to a specific content item attribute.
+     *
+     * @param  string $key
+     * @param  mixed $value
+     * @return mixed
+     */
+    public function setAttribute($key, $value);
 }

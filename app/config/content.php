@@ -1,39 +1,35 @@
 <?php
 
-return array(
+return [
 
-	/*
-	|--------------------------------------------------------------------------
-	| Content Posts Sources
-	|--------------------------------------------------------------------------
-	|
-	| A list of all the content posts sources which can be either an Eloquent
-	| Model or a directory with static Markdown files.
-	|
-	*/
+    /*
+    |--------------------------------------------------------------------------
+    | Content Posts Sources
+    |--------------------------------------------------------------------------
+    |
+    | A list of all the content posts sources which can be either an Eloquent
+    | Model or a directory with static Markdown files.
+    |
+    */
 
-	'posts' => array(
+    'posts' => [
+        'Models\\Post',
+        base_path() . '/posts',
+    ],
 
-		'Models\\Post',
-		base_path(). '/posts',
+    /*
+    |--------------------------------------------------------------------------
+    | Content Pages Sources
+    |--------------------------------------------------------------------------
+    |
+    | A list of all the content pages sources which can be either an Eloquent
+    | Model or a directory with static Markdown files.
+    |
+    */
 
-	),
+    'pages' => [
+        'Models\\Page',
+        base_path() . '/pages',
+    ],
 
-	/*
-	|--------------------------------------------------------------------------
-	| Content Pages Sources
-	|--------------------------------------------------------------------------
-	|
-	| A list of all the content pages sources which can be either an Eloquent
-	| Model or a directory with static Markdown files.
-	|
-	*/
-
-	'pages' => array(
-
-		'Models\\Page',
-		base_path(). '/pages',
-
-	),
-
-);
+];

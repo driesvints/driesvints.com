@@ -6,13 +6,11 @@
 |--------------------------------------------------------------------------
 */
 
-View::composer('header', function($view)
-{
+View::composer('header', function ($view) {
     // The page title.
     $pageTitle = 'Dries Vints';
 
-    if ($view->offsetExists('title') && $view->title != '')
-    {
+    if ($view->offsetExists('title') && $view->title != '') {
         $pageTitle = $view->title . ' | ' . $pageTitle;
     }
 
@@ -21,8 +19,7 @@ View::composer('header', function($view)
     // The meta description.
     $metaDescription = $view->offsetExists('metaDescription') ? $view->metaDescription : '';
 
-    if ($view->offsetExists('item') && $view->item instanceof Dries\Content\BaseContentRepository)
-    {
+    if ($view->offsetExists('item') && $view->item instanceof Dries\Content\BaseContentRepository) {
         $metaDescription = strip_tags($view->item->excerpt);
     }
 

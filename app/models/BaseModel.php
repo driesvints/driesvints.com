@@ -1,57 +1,61 @@
-<?php namespace Models;
+<?php
+namespace Models;
 
 use Eloquent;
 use Validator;
 
-class BaseModel extends Eloquent {
+class BaseModel extends Eloquent
+{
+    /**
+     * The validation rules for this model.
+     *
+     * @var array
+     */
+    public static $rules = [];
 
-	/**
-	 * The validation rules for this model.
-	 *
-	 * @var array
-	 */
-	public static $rules = array();
+    /**
+     * The errors for this model after validation.
+     *
+     * @var \Illuminate\Support\MessageBag
+     */
+    public $errors;
 
-	/**
-	 * The errors for this model after validation.
-	 *
-	 * @var \Illuminate\Support\MessageBag
-	 */
-	public $errors;
+    /**
+     * Sets the validation rules on the model.
+     *
+     * @return void
+     */
+    protected function setUpValidationRules()
+    {
+    }
 
-	/**
-	 * Sets the validation rules on the model.
-	 *
-	 * @return void
-	 */
-	protected function setUpValidationRules(){}
+    /**
+     * Validates a model against its rules.
+     *
+     * @return bool
+     */
+    public function validate()
+    {
+        $this->setUpValidationRules();
 
-	/**
-	 * Validates a model against its rules.
-	 *
-	 * @return bool
-	 */
-	public function validate()
-	{
-		$this->setUpValidationRules();
+        $validator = Validator::make($this->attributes, static::$rules);
 
-		$validator = Validator::make($this->attributes, static::$rules);
+        if ($validator->passes()) {
+            return true;
+        }
 
-		if ($validator->passes()) return true;
+        $this->errors = $validator->messages();
 
-		$this->errors = $validator->messages();
+        return false;
+    }
 
-		return false;
-	}
-
-	/**
-	 * Returns the errors for this model after validation.
-	 *
-	 * @return \Illuminate\Support\MessageBag|null
-	 */
-	public function getErrors()
-	{
-		return $this->errors;
-	}
-
+    /**
+     * Returns the errors for this model after validation.
+     *
+     * @return \Illuminate\Support\MessageBag|null
+     */
+    public function getErrors()
+    {
+        return $this->errors;
+    }
 }
