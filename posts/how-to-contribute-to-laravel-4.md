@@ -6,7 +6,9 @@ tags: tutorials, laravel
 -------
 So you have a pull request (PR) you want to make to [the Laravel 4 Framework repository](https://github.com/laravel/framework) but don't really know how to start? I know I was quite lost at first on which steps I should take and learned in good time that sometimes you might want to think about a few points before submitting that PR. I’ll go over each step to submit a successful issue or pull request to the Laravel 4 repo and help you contribute to the framework.<!--more-->
 
-Before we begin I really recommend you check out [this video](https://tutsplus.com/lesson/contributing-to-the-framework/) by **[Jeffrey Way](https://twitter.com/jeffrey_way)** which goes over the basic steps of submitting a pull request to Laravel 4.
+~~Before we begin I really recommend you check out [this video](https://tutsplus.com/lesson/contributing-to-the-framework/) by **[Jeffrey Way](https://twitter.com/jeffrey_way)** which goes over the basic steps of submitting a pull request to Laravel 4.~~
+
+**Update:** Seems like Jeffrey's video is no longer available for free on Nettuts.
 
 ## Make sure it’s a framework bug
 
