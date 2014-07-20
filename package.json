@@ -10,5 +10,9 @@
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.5.0",
     "gulp-uglify": "^0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/driesvints/driesvints.com.git"
   }
 }
