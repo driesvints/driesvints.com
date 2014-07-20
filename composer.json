@@ -1,6 +1,6 @@
 {
     "require": {
-        "laravel/framework": "4.1.*",
+        "laravel/framework": "4.2.*",
         "daylerees/kurenai": "1.0.*",
         "prologue/support": "dev-master",
         "michelf/php-markdown": "1.3"
