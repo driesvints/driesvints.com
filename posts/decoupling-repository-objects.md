@@ -291,7 +291,7 @@ class EloquentUserRepository implements UserRepository
     public function delete($id)
     {
         if ($id instanceof User) {
-            $user->delete();
+            $id->delete();
         } else {
             User::destroy($id);
         }
