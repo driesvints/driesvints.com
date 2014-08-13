@@ -4,7 +4,7 @@ status: published
 date: July 29 2014 22:45
 tags: php, laravel, doctrine
 -------
-So the thing that got me to write this post was [this tweet from Jeffrey Way](https://twitter.com/jeffrey_way/status/494207192250466304) where he asked if you'd pass an object directly to a repository function or an id. Responses were mixed with more leaning towards the former rather than the latter.
+So the thing that got me to write this post was [this tweet from Jeffrey Way](https://twitter.com/jeffrey_way/status/494207192250466304) where he asked if you'd pass an object directly to a repository function or an id. Responses were mixed with more leaning towards the former rather than the latter.<!--more-->
 
 In my opinion you should always at least give the option to pass along the id and optionally the object if you really need it in that context. Let's take a look at a practical example.
 
