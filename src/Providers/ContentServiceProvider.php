@@ -1,6 +1,7 @@
 <?php
-namespace Dries\Content;
+namespace Dries\Providers;
 
+use Dries\Content\ContentLoader;
 use Illuminate\Support\ServiceProvider;
 
 class ContentServiceProvider extends ServiceProvider

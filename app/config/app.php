@@ -106,7 +106,7 @@ return [
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
-        'Dries\Content\ContentServiceProvider',
+        'Dries\Providers\ContentServiceProvider',
         'Dries\Providers\MarkdownServiceProvider',
     ],
 
