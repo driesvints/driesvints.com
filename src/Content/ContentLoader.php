@@ -4,7 +4,7 @@ namespace Dries\Content;
 use Illuminate\Config\Repository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Database\Eloquent\Model;
-use Dries\Extensions\Kurenai\DocumentParser;
+use Kurenai\DocumentParser;
 
 class ContentLoader
 {
@@ -23,15 +23,24 @@ class ContentLoader
     protected $filesystem;
 
     /**
+     * The parser used to parse markdown files
+     *
+     * @var \Kurenai\DocumentParser
+     */
+    protected $markdownParser;
+
+    /**
      * Initialize the Content Loader instance.
      *
      * @param \Illuminate\Config\Repository $config
      * @param \Illuminate\Filesystem\Filesystem $filesystem
+     * @param \Kurenai\DocumentParser $markdownParser
      */
-    public function __construct(Repository $config, Filesystem $filesystem)
+    public function __construct(Repository $config, Filesystem $filesystem, DocumentParser $markdownParser)
     {
         $this->config = $config;
         $this->filesystem = $filesystem;
+        $this->markdownParser = $markdownParser;
     }
 
     /**
@@ -144,9 +153,7 @@ class ContentLoader
     {
         // If the file is a Markdown file.
         if ($this->validateMarkdownFile($file)) {
-            $parser = new DocumentParser;
-
-            return new MarkdownContentRepository($file, $parser);
+            return new MarkdownContentRepository($file, $this->markdownParser);
         }
     }
 

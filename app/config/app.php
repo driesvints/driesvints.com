@@ -107,6 +107,7 @@ return [
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
         'Dries\Content\ContentServiceProvider',
+        'Dries\Providers\MarkdownServiceProvider',
     ],
 
     /*

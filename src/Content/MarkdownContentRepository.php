@@ -1,7 +1,7 @@
 <?php
 namespace Dries\Content;
 
-use Dries\Extensions\Kurenai\DocumentParser;
+use Kurenai\DocumentParser;
 
 class MarkdownContentRepository extends BaseContentRepository implements ContentRepositoryInterface
 {
@@ -15,14 +15,14 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     /**
      * The Kurenai Markdown parser.
      *
-     * @var \Dries\Extensions\Kurenai\DocumentParser
+     * @var \Kurenai\DocumentParser
      */
     protected $parser;
 
     /**
      * The Markdown Document.
      *
-     * @var \Dries\Extensions\Kurenai\Document
+     * @var \Kurenai\Document
      */
     protected $document;
 
@@ -37,12 +37,12 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
      * Initialize the repository.
      *
      * @param string $filepath
-     * @param \Dries\Extensions\Kurenai\DocumentParser $parser
+     * @param \Kurenai\DocumentParser $parser
      */
     public function __construct($filepath, DocumentParser $parser)
     {
-        $this->parser = $parser;
         $this->filepath = $filepath;
+        $this->parser = $parser;
         $this->document = $this->parse($filepath);
     }
 
@@ -50,7 +50,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
      * Parse a markdown document.
      *
      * @param  string $filepath
-     * @return \Dries\Extensions\Kurenai\Document
+     * @return \Kurenai\Document
      */
     protected function parse($filepath)
     {
@@ -117,7 +117,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     /**
      * Returns the Kurenai Parser.
      *
-     * @return \Dries\Extensions\Kurenai\Parser
+     * @return \Kurenai\DocumentParser
      */
     public function getParser()
     {
@@ -127,7 +127,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     /**
      * Returns the Kurenai Document.
      *
-     * @return \Dries\Extensions\Kurenai\Document
+     * @return \Kurenai\Document
      */
     public function getDocument()
     {
