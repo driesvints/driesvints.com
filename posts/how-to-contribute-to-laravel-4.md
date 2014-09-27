@@ -4,9 +4,11 @@ status: published
 date: April 14 2013 13:46
 tags: tutorials, laravel
 -------
+> Laravel has released their official contributing guide which makes the one below obsolete. Please refer to [the official one](http://laravel.com/docs/4.2/contributions) instead of this one.
+
 So you have a pull request (PR) you want to make to [the Laravel 4 Framework repository](https://github.com/laravel/framework) but don't really know how to start? I know I was quite lost at first on which steps I should take and learned in good time that sometimes you might want to think about a few points before submitting that PR. I’ll go over each step to submit a successful issue or pull request to the Laravel 4 repo and help you contribute to the framework.<!--more-->
 
-~~Before we begin I really recommend you check out [this video](https://tutsplus.com/lesson/contributing-to-the-framework/) by **[Jeffrey Way](https://twitter.com/jeffrey_way)** which goes over the basic steps of submitting a pull request to Laravel 4.~~
+<strike>Before we begin I really recommend you check out [this video](https://tutsplus.com/lesson/contributing-to-the-framework/) by **[Jeffrey Way](https://twitter.com/jeffrey_way)** which goes over the basic steps of submitting a pull request to Laravel 4.</strike>
 
 **Update:** Seems like Jeffrey's video is no longer available for free on Nettuts.
 
@@ -98,7 +100,7 @@ This is something I don’t think much people know that they can do before submi
 
 Now how do you set it up with your forked repo? It’s pretty easy actually. Go to [travis-ci.org/profile](https://travis-ci.org/profile), set Travis to “ON” for your forked repo and click on the wrench icon next to it. Travis will automatically set up a service hook in your Github repo’s settings. Whenever you push to Github or publish a branch, Travis will start a new build and send you an e-mail notification when it’s finished.
 
-Should your build fail you can do a couple of things. You could try to fix your code, commit again and push to your Pull Request branch again and start a new build but I prefer to do it a little different. I’ll just delete the Pull Request branch on Github, roll back some of my commits on my local development repo and commit again with the fixed code to keep the commits minimal and the Pull Request as small as possible. I suggest you do the same to prevent the Pull Request from growing so large with commits which are just attempts at fixing the unit tests.
+Should your build fail you can create new commits until you've fixed the problems and your tests pass. When you're finished with the pull request and all tests return green you can squash your commits with git interactive rebasing. There's [a great article](http://git-scm.com/book/en/Git-Tools-Rewriting-History) on it on the official Git website.
 
 Remember that we still didn't submit the Pull Request up until now. That's the next step!
 
