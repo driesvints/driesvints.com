@@ -4,10 +4,13 @@ namespace Dries\Markdown;
 use Kurenai\MarkdownParserInterface;
 use Michelf\MarkdownExtra;
 
+/**
+ * PHP Markdown parser to be used with the Kurenai library
+ */
 class PhpMarkdownParser implements MarkdownParserInterface
 {
     /**
-     * Renders the markdown to HTML using th MarkdownExtra parser
+     * Renders the markdown to HTML using the MarkdownExtra parser
      *
      * @param string $content
      * @return string
@@ -17,4 +20,3 @@ class PhpMarkdownParser implements MarkdownParserInterface
         return MarkdownExtra::defaultTransform($content);
     }
 }
- 
