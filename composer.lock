@@ -89,23 +89,23 @@
         },
         {
             "name": "daylerees/kurenai",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/daylerees/kurenai.git",
-                "reference": "b4b268653f8a1312317370001c42c1149bafcbcb"
+                "reference": "573a0c8b868abe2ad0adb5361446034c47250ec5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/daylerees/kurenai/zipball/b4b268653f8a1312317370001c42c1149bafcbcb",
-                "reference": "b4b268653f8a1312317370001c42c1149bafcbcb",
+                "url": "https://api.github.com/repos/daylerees/kurenai/zipball/573a0c8b868abe2ad0adb5361446034c47250ec5",
+                "reference": "573a0c8b868abe2ad0adb5361446034c47250ec5",
                 "shasum": ""
             },
             "require": {
                 "dflydev/markdown": "1.0.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7.*"
+                "phpunit/phpunit": "4.*"
             },
             "type": "library",
             "autoload": {
@@ -125,7 +125,7 @@
                 "markdown",
                 "metadata"
             ],
-            "time": "2013-11-22 15:49:31"
+            "time": "2014-09-27 18:48:52"
         },
         {
             "name": "dflydev/markdown",

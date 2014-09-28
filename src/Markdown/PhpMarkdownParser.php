@@ -16,15 +16,5 @@ class PhpMarkdownParser implements MarkdownParserInterface
     {
         return MarkdownExtra::defaultTransform($content);
     }
-
-    /**
-     * @param string $content
-     * @return string
-     * @deprecated This is just to support the bug with \Kurenai\Document
-     */
-    public function transformMarkdown($content)
-    {
-        return $this->render($content);
-    }
 }
  
