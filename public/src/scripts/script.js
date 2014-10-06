@@ -1,8 +1,10 @@
 $(function()
 {
-	$('.datetimepicker').datetimepicker();
+    // Enable timepicker for backend.
+    $('.datetimepicker').datetimepicker();
 
-	$("#header").backstretch("/assets/images/header.jpg");
+    // Stretch homepage image.
+    $("#header").backstretch("/assets/images/header.jpg");
 
     /**
      * Smooth scroll to anchor.

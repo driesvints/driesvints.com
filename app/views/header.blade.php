@@ -52,14 +52,8 @@
     </script>
 </head>
 
-@if (is_home())
-<body class="home">
-@else
-<body>
-@endif
+{{ is_home() ? '<body class="home">' : '<body>' }}
 
 @if (Auth::check())
     @include('toolbar')
 @endif
-
-<div class="wrapper">

@@ -1,6 +1,11 @@
 /* General
 ---------------------------------------------------------*/
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     color: #333;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -58,34 +63,6 @@ blockquote p {
     line-height: 1.4em;
 }
 
-/* Sticky Footer
----------------------------------------------------------*/
-
-html,
-body {
-    height: 100%;
-}
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -92px;
-}
-#footer,
-.push {
-    height: 92px;
-}
-@media (min-width: 768px) {
-    .wrapper {
-        margin: 0 auto -60px;
-    }
-    #footer,
-    .push {
-        height: 60px;
-    }
-}
-
-
 /* Headers
 ---------------------------------------------------------*/
 
@@ -95,6 +72,7 @@ body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 25px 0;
     text-align: center;
+    height: 100%;
 }
 
 #header ul,
