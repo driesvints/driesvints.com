@@ -34,7 +34,21 @@
 <h2 id="work-title" class="title">Work</h2>
 
 <div id="work">
-    <div class="item off beatswitch">
+    <div class="item off laravelio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 logo">
+                    <a href="http://laravel.io">{{ HTML::image('assets/images/laravel-io-logo.png') }}</a>
+                </div>
+                <div class="col-md-8">
+                    <h3>Laravel.IO</h3>
+
+                    <p>I maintain the Laravel community portal called <a href="http://laravel.io">Laravel.IO</a>, which is a platform where the Laravel community can find help through the forums, share code using the pastebin, listen to the regular podcast featuring prominent community members and much more. Go have a look and join us!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item beatswitch">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
@@ -44,34 +58,6 @@
                     <h3>BeatSwitch</h3>
 
                     <p>My day job at <a href="http://beatswitch.com">BeatSwitch</a> consists of maintenance for the BeatSwitch platform as well as the development of new features and functionality.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 logo">
-                    <a href="http://laravelweekly.com">{{ HTML::image('assets/images/laravel-weekly.png') }}</a>
-                </div>
-                <div class="col-md-8">
-                    <h3>Laravel Weekly</h3>
-
-                    <p><a href="http://laravelweekly.com">Laravel Weekly</a> is a weekly newsletter full of resources and news about the <a href="http://laravel.com/">Laravel PHP framework</a>. I started this as a weekly blog post series which eventually moved to the <a href="http://laravel.io/">Laravel IO community portal</a> and then became a weekly newsletter.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item off">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 logo">
-                    <a href="http://github.com/driesvints">{{ HTML::image('assets/images/prologue.png') }}</a>
-                </div>
-                <div class="col-md-8">
-                    <h3>Prologue</h3>
-
-                    <p>Prologue is the vendor name under which I publish my open-source packages. Some of the packages I made are <a href="https://github.com/driesvints/Alerts">the Alerts package</a> which handles global site notifications in Laravel. Another one is <a href="https://github.com/driesvints/Phpconsole">the Phpconsole package</a> which provides support in Laravel for <a href="http://phpconsole.com/">the Phpconsole library</a>.</p>
                 </div>
             </div>
         </div>
@@ -90,11 +76,14 @@
                 <p>Hi, I'm Dries. A web developer from Belgium.</p>
  
                 <p>
-                    I spend most of my days working on web projects and collaborating on open-source projects. I work mostly with PHP and <a href="http://laravel.com/">the Laravel framework</a>.
+                    I spend most of my days working on web projects and collaborating on open-source projects.
+                    I work mostly with PHP and <a href="http://laravel.com/">the Laravel framework</a>.
                 </p>
 
                 <p>
-                    I'm a very active member of the Laravel community. I do a weekly newsletter called <a href="http://laravelweekly.com">&ldquo;Laravel Weekly&rdquo;</a> at <a href="http://laravel.io">Laravel.io</a> and work at a company named <a href="http://beatswitch.com">BeatSwitch</a>.
+                    I'm a very active member of the Laravel community. I maintain the Laravel community platform,
+                    <a href="http://laravel.io">Laravel.io</a> and work at a company named
+                    <a href="http://beatswitch.com">BeatSwitch</a>.
                 </p>
  
                 <p>
@@ -108,17 +97,14 @@
 <div id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-xs-4">
                 <a href="https://twitter.com/driesvints"><i class="icon-twitter"></i>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-xs-4">
                 <a href="https://github.com/driesvints"><i class="icon-github"></i></a>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-xs-4">
                 <a href="mailto:dries.vints@gmail.com"><i class="icon-envelope"></i></a>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <a href="http://www.linkedin.com/in/driesvints"><i class="icon-linkedin"></i></a>
             </div>
         </div>
     </div>
