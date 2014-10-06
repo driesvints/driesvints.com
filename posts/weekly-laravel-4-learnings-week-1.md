@@ -14,7 +14,7 @@ I don't know if people realize this but Laravel 4 has a lot of helper methods th
 
 ## Named resourceful routes
 
-So [I asked a question on Github](https://github.com/laravel/framework/issues/550) about adding named resourceful routes so you could do someting like `route('&lt;route name&gt;@method')`. I didn't find anything about it in the L4 docs at that time. But Taylor pointed out you actually already can do that.
+So [I asked a question on Github](https://github.com/laravel/framework/issues/550) about adding named resourceful routes so you could do someting like `route('<route name>@method')`. I didn't find anything about it in the L4 docs at that time. But Taylor pointed out you actually already can do that.
 
 Every resourceful route has its own name set automatically as the route itself. It's actually not a named route, just a resourceful route. Basically if you want quickly link to a resourceful controller's method you can do the following:
 
