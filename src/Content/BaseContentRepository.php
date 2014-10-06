@@ -62,6 +62,18 @@ abstract class BaseContentRepository
     }
 
     /**
+     * Returns true when a content is older than a year
+     *
+     * @return bool
+     */
+    public function hasAged()
+    {
+        $date = new Carbon($this->getAttribute($this->dateKey));
+
+        return $date->lte(new Carbon('last year'));
+    }
+
+    /**
      * Dynamically retrieve attributes on the content item.
      *
      * @param  string $key
