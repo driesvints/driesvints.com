@@ -197,7 +197,7 @@ blockquote p {
 #page-header {
     float: left;
     padding-top: 10px;
-    padding-left: 10px; 
+    padding-left: 10px;
 }
 #page-header a {
     color: #eee;
@@ -401,17 +401,31 @@ h2.title {
 /* Work & About
 ---------------------------------------------------------*/
 
-#work .item {
-    padding: 20px 0;
+#work {
+    padding-top: 20px;
+
+    .item {
+        padding: 20px 0;
+    }
+    .off {
+        background-color: #ecf0f1;
+    }
+    .beatswitch .logo {
+        padding-top: 20px;
+    }
+    .laravelio .logo {
+        padding-top: 20px;
+    }
 }
-#work .off {
-    background-color: #ecf0f1;
-}
-#work .beatswitch .logo {
-    padding-top: 65px;
-}
-#work .laravelio .logo {
-    padding-top: 65px;
+@media (min-width: 768px) {
+    #work {
+        .beatswitch .logo {
+            padding-top: 65px;
+        }
+        .laravelio .logo {
+            padding-top: 65px;
+        }
+    }
 }
 
 #about {
@@ -469,12 +483,13 @@ h2.title {
     font-size: 3em;
     padding: 20px 0;
     text-align: center;
-}
-#contact a {
-    color: #95a5a6;
-}
-#contact a:hover {
-    color: #2f3238;
+
+    a {
+        color: #95a5a6;
+    }
+    a:hover {
+        color: #2f3238;
+    }
 }
 @media (min-width: 768px) {
     #contact {
@@ -495,9 +510,10 @@ h2.title {
 @media (min-width: 768px) {
     #footer {
         text-align: left;
-    }
-    #footer .last-column {
-        text-align: right;
+
+        .last-column {
+            text-align: right;
+        }
     }
 }
 
@@ -505,11 +521,12 @@ h2.title {
 ---------------------------------------------------------*/
 
 #error-page {
-    padding-top: 25px; 
+    padding-top: 25px;
     text-align: center;
-}
-#error-page .btn {
-    margin-top: 25px;
+
+    .btn {
+        margin-top: 25px;
+    }
 }
 
 /* Admin
