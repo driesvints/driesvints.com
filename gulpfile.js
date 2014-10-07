@@ -41,11 +41,17 @@ gulp.task('default', ['clean'], function () {
 
 gulp.task('watch', function() {
     // Watch .scss files.
-    gulp.watch('./public/src/styles/**/*.scss', ['styles']);
+    gulp.watch('./public/src/styles/**/*.scss', function() {
+        gulp.run('styles');
+    });
 
     // Watch .js files.
-    gulp.watch('./public/src/scripts/**/*.js', ['scripts']);
+    gulp.watch('./public/src/scripts/**/*.js', function() {
+        gulp.run('scripts');
+    });
 
     // Watch image files.
-    gulp.watch('./public/src/images/**/*', ['images']);
+    gulp.watch('./public/src/images/**/*', function() {
+        gulp.run('images');
+    });
 });
