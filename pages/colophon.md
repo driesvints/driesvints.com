@@ -21,8 +21,6 @@ The [smooth scroll plugin](http://css-tricks.com/snippets/jquery/smooth-scrollin
 
 Favicons were based on [the Favicon cheat sheet](https://github.com/audreyr/favicon-cheat-sheet) by [Audrey Roy](http://www.audreymroy.com/).
 
-[The sticky footer](http://ryanfait.com/sticky-footer/) uses the example provided by [Ryan Fait](http://ryanfait.com/).
-
 Markdown posts and pages are being filtered by [Dayle Rees](http://daylerees.com/)' [Kurenai plugin](https://github.com/daylerees/kurenai). The Markdown itself is being parsed by [Michel Fortin](http://michelf.ca/home/)'s [PHP Markdown plugin](https://github.com/michelf/php-markdown).
 
 Code blocks are highlighted by [the Highlight.js plugin](http://softwaremaniacs.org/soft/highlight/en/). The theme that's being used is [Solarized Dark](http://ethanschoonover.com/solarized).
