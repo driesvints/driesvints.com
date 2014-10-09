@@ -25,13 +25,3 @@ And now you can browse without using the port number: `http://dries.loc`. Neat!
 **Extra tip!** Provided by Dan Herd in the comments below. Just surf to `dries.loc.192.168.10.10.xip.io` to avoid editing your hosts file. Of course swap out the `dries.loc` part with your own domain alias.
 
 I sent in a PR to the docs so hopefully this will make things easier for people in the future.
-
-Ow and I solved the trailing slash problem by adding this to the `scripts/serve.sh` file:
-
-```bash
-if (!-d \$request_filename) {
-    rewrite ^/(.*)/$ /\$1 permanent;
-}
-```
-
-This should remove the trailing slashes from your urls for your Homestead applications. Please note that you **have** to use the port-removing technique described above in order to do this because this will not work with port numbers.
