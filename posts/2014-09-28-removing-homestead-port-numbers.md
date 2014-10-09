@@ -22,6 +22,8 @@ This is how the docs tell us to do it and enables us to browse to our app using 
 
 And now you can browse without using the port number: `http://dries.loc`. Neat!
 
+**Extra tip!** Provided by Dan Herd in the comments below. Just surf to `dries.loc.192.168.10.10.xip.io` to avoid editing your hosts file. Of course swap out the `dries.loc` part with your own domain alias.
+
 I sent in a PR to the docs so hopefully this will make things easier for people in the future.
 
 Ow and I solved the trailing slash problem by adding this to the `scripts/serve.sh` file:
