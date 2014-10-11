@@ -15,6 +15,8 @@ Fonts used on the website are [Lato](http://www.google.com/fonts/specimen/Lato),
 
 Most colors used throughout the website are based on [the Flat UI Colors page](http://flatuicolors.com/).
 
+The homepage image was taken by [Stefan Neubig](https://twitter.com/stefanneubig).
+
 The homepage image uses [the Backstretch plugin](http://srobbin.com/jquery-plugins/backstretch/) by [Scott Robin](http://srobbin.com/).
 
 The [smooth scroll plugin](http://css-tricks.com/snippets/jquery/smooth-scrolling/) on the homepage was found on [CSS-Tricks](http://css-tricks.com/).
