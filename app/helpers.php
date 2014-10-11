@@ -1,20 +1,11 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Helpers
-|--------------------------------------------------------------------------
-|
-| Application helper methods.
-|
-*/
-
 if (! function_exists('get_content')) {
     /**
      * Gets content from a content type.
      *
      * @param  string $type
-     * @return \Content\Collection
+     * @return \Dries\Content\Collection
      */
     function get_content($type)
     {
@@ -26,7 +17,7 @@ if (! function_exists('get_posts')) {
     /**
      * Retrieve all of the posts in the application.
      *
-     * @return \Content\Collection
+     * @return \Dries\Content\Collection
      */
     function get_posts()
     {
@@ -38,7 +29,7 @@ if (! function_exists('get_pages')) {
     /**
      * Retrieve all of the pages in the application.
      *
-     * @return \Content\Collection
+     * @return \Dries\Content\Collection
      */
     function get_pages()
     {
