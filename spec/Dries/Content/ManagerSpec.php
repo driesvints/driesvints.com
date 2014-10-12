@@ -13,8 +13,7 @@ class ManagerSpec extends ObjectBehavior
     function let(DocumentParser $documentParser)
     {
         $this->sources = [
-            'posts' => [realpath(__DIR__ . '/../../../content/posts')],
-            'pages' => [realpath(__DIR__ . '/../../../content/pages')],
+            'posts' => [__DIR__ . '/data'],
         ];
 
         $this->beConstructedWith($this->sources, new Filesystem, $documentParser);
