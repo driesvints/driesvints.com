@@ -52,4 +52,4 @@
     </script>
 </head>
 
-{{ is_home() ? '<body class="home">' : '<body>' }}
+{{ Route::currentRouteName() === 'home' ? '<body class="home">' : '<body>' }}

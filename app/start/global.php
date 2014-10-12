@@ -72,15 +72,14 @@ App::down(function () {
 
 /*
 |--------------------------------------------------------------------------
-| Custom Files
+| View Composers
 |--------------------------------------------------------------------------
 |
-| Include custom files.
+| Register view composer classes.
 |
 */
 
-require app_path() . '/composers.php';
-require app_path() . '/helpers.php';
+View::composer('header', 'Dries\View\HeaderComposer');
 
 /*
 |--------------------------------------------------------------------------
