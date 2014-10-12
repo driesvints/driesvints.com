@@ -11,7 +11,7 @@
 |
 */
 
-ClassLoader::addDirectories([
+Illuminate\Support\ClassLoader::addDirectories([
     app_path() . '/database/seeds',
 ]);
 
