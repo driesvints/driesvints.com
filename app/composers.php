@@ -4,8 +4,8 @@ View::composer('header', function ($view) {
     // The page title.
     $pageTitle = 'Dries Vints';
 
-    if ($view->offsetExists('title') && $view->title != '') {
-        $pageTitle = $view->title . ' | ' . $pageTitle;
+    if ($view->offsetExists('pageTitle') && $view->pageTitle != '') {
+        $pageTitle = $view->pageTitle . ' | ' . $pageTitle;
     }
 
     $view->pageTitle = $pageTitle;

@@ -37,7 +37,7 @@ class TagsController extends BaseController
      */
     public function show($tag)
     {
-        $this->title = $tag;
+        $this->pageTitle = $tag;
 
         $posts = $this->contentManager->tagged('posts', $tag);
 

@@ -11,7 +11,7 @@ class BaseController extends Controller
      *
      * @var string
      */
-    public $title;
+    protected $pageTitle;
 
     /**
      * Create a view and send along default variables.
@@ -21,9 +21,9 @@ class BaseController extends Controller
      * @param  array $mergeData
      * @return \Illuminate\View\View
      */
-    public function view($view, $data = array(), $mergeData = array())
+    protected function view($view, $data = [], $mergeData = [])
     {
-        return View::make($view, $data, $mergeData)->with('title', $this->title);
+        return View::make($view, $data, $mergeData)->with('pageTitle', $this->pageTitle);
     }
 
     /**

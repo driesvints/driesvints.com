@@ -33,7 +33,7 @@ class PagesController extends BaseController
             App::abort(404);
         }
 
-        $this->title = $page->title;
+        $this->pageTitle = $page->title;
 
         return $this->view('page', compact('page'));
     }

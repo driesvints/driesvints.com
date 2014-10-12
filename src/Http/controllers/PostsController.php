@@ -26,7 +26,7 @@ class PostsController extends BaseController
      */
     public function archive()
     {
-        $this->title = 'Archive';
+        $this->pageTitle = 'Archive';
 
         $posts = $this->contentManager->get('posts')->published()->orderBy('date', 'desc');
 
@@ -47,7 +47,7 @@ class PostsController extends BaseController
             App::abort(404);
         }
 
-        $this->title = $post->title;
+        $this->pageTitle = $post->title;
 
         return $this->view('post', compact('post'));
     }
