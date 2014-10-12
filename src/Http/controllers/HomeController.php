@@ -19,7 +19,7 @@ class HomeController extends BaseController
     }
 
     /**
-     * Display the homepage.
+     * Display the homepage
      *
      * @return \Illuminate\View\View
      */

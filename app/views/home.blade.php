@@ -11,7 +11,7 @@
         </h2>
 
         <ul class="list-unstyled">
-            <li><a href="{{ route('home') }}#content">Blog</a></li>
+            <li><a href="{{ route('blog') }}">Blog</a></li>
             <li class="second"><a href="#work">Work</a></li>
             <li class="third"><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -30,8 +30,8 @@
         @endforeach
     @endif
 
-    <p class="archive-btn">
-        <a class="btn btn-default" href="{{ route('archive') }}">View All <i class="icon-chevron-right"></i></a>
+    <p class="blog-btn">
+        <a class="btn btn-default" href="{{ route('blog') }}">View Blog</a>
     </p>
 </div><!-- .container -->
 

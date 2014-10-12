@@ -4,7 +4,7 @@ Route::group(['namespace' => 'Dries\\Http\\Controllers'], function()
 {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
-    Route::get('blog', ['as' => 'archive', 'uses' => 'PostsController@archive']);
+    Route::get('blog', ['as' => 'blog', 'uses' => 'PostsController@blog']);
     Route::get('blog/{slug}', ['as' => 'post', 'uses' => 'PostsController@show']);
 
     Route::get('tag', 'TagsController@index');

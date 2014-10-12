@@ -1,4 +1,4 @@
-<div id="archive">
+<div id="blog">
     <h1 class="title">{{ $title }}</h1>
 
     @if (count($posts))

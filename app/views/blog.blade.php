@@ -2,6 +2,6 @@
 
 @section('content')
 
-@include('posts', ['title' => 'Archive'])
+@include('posts', ['title' => 'Blog'])
 
 @stop

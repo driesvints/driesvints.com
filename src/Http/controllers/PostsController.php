@@ -20,21 +20,21 @@ class PostsController extends BaseController
     }
 
     /**
-     * Display all blog posts in an archive list.
+     * Display all blog posts
      *
      * @return \Illuminate\View\View
      */
-    public function archive()
+    public function blog()
     {
-        $this->pageTitle = 'Archive';
+        $this->pageTitle = 'Blog';
 
         $posts = $this->contentManager->get('posts')->published()->orderBy('date', 'desc');
 
-        return $this->view('archive', compact('posts'));
+        return $this->view('blog', compact('posts'));
     }
 
     /**
-     * Display the specified resource.
+     * Display a blog post
      *
      * @param string $slug
      * @return \Illuminate\View\View

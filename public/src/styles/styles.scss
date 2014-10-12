@@ -250,10 +250,10 @@ body.home #content .excerpt h3 {
     }
 }
 
-.archive-btn {
+.blog-btn {
     text-align: center;
 }
-.archive-btn .btn {
+.blog-btn .btn {
     background-color: #95a5a6;
     border: none;
     color: white;
@@ -265,49 +265,49 @@ body.home #content .excerpt h3 {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-.archive-btn .btn i {
+.blog-btn .btn i {
     font-size: .8em;
 }
-.archive-btn .btn:hover {
+.blog-btn .btn:hover {
     background-color: #bbb;
 }
 @media (min-width: 768px) {
-    .archive-btn {
+    .blog-btn {
         margin-bottom: 50px;
     }
 }
 
-/* Archive
+/* Blog
 ---------------------------------------------------------*/
 
-#archive {
+#blog {
     padding: 0 15px;
 }
-#archive h3 {
+#blog h3 {
     font-weight: normal;
     margin-bottom: 25px;
     text-align: center;
 }
-#archive .post {
+#blog .post {
     margin-bottom: 10px;
     -webkit-transition: color 0.2s ease;
     -moz-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
     transition: color 0.2s ease;
 }
-#archive .post .date {
+#blog .post .date {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 768px) {
-    #archive .post .date,
-    #archive .post .title {
+    #blog .post .date,
+    #blog .post .title {
         float: left;
     }
-    #archive .post .date {
+    #blog .post .date {
         text-align: right;
         width: 20%;
     }
-    #archive .post .title {
+    #blog .post .title {
         padding-left: 2%;
         width: 78%;
     }

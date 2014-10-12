@@ -20,7 +20,7 @@ class TagsController extends BaseController
     }
 
     /**
-     * Page isn't available so redirect to home.
+     * Page isn't available so redirect to home
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -30,7 +30,7 @@ class TagsController extends BaseController
     }
 
     /**
-     * Displays a listing of all the posts with a specific tag.
+     * Displays a listing of all the posts with a specific tag
      *
      * @param string $tag
      * @return \Illuminate\View\View

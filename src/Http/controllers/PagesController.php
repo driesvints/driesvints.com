@@ -20,7 +20,7 @@ class PagesController extends BaseController
     }
 
     /**
-     * Display the specified resource.
+     * Display a static page
      *
      * @param string $slug
      * @return \Illuminate\View\View
