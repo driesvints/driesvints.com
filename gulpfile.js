@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
 gulp.task('styles', function () {
     return gulp.src('./public/src/styles/styles.scss')
-        .pipe(sass({ style: 'compressed' }))
+        .pipe(sass({ style: 'compressed', container: './app/storage/tmp' }))
         .pipe(autoprefixer('last 15 versions'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./public/assets/css'));
