@@ -1,19 +1,40 @@
 <?php
 namespace Dries\Http\Controllers;
 
-use Dries\Content\Content;
+use App;
+use Dries\Content\Manager;
 
 class PagesController extends BaseController
 {
     /**
+     * @var \Dries\Content\Manager
+     */
+    protected $contentManager;
+
+    /**
+     * @param \Dries\Content\Manager $contentManager
+     */
+    public function __construct(Manager $contentManager)
+    {
+        $this->contentManager = $contentManager;
+    }
+
+    /**
      * Display the specified resource.
      *
-     * @param  \Dries\Content\Content $item
+     * @param string $slug
      * @return \Illuminate\View\View
      */
-    public function show(Content $item)
+    public function show($slug)
     {
-        $this->title = $item->title;
+        $page = $this->contentManager->get('pages')->published()->filterBy('slug', $slug)->first();
+
+        if (! $page) {
+            App::abort(404);
+        }
+
+        $this->title = $page->title;
+        $item = $page;
 
         return $this->view('page', compact('item'));
     }

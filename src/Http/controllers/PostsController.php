@@ -1,7 +1,7 @@
 <?php
 namespace Dries\Http\Controllers;
 
-use Dries\Content\Content;
+use App;
 use Dries\Content\Manager;
 
 class PostsController extends BaseController
@@ -36,12 +36,19 @@ class PostsController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \Dries\Content\Content $item
+     * @param string $slug
      * @return \Illuminate\View\View
      */
-    public function show(Content $item)
+    public function show($slug)
     {
-        $this->title = $item->title;
+        $post = $this->contentManager->get('posts')->published()->filterBy('slug', $slug)->first();
+
+        if (! $post) {
+            App::abort(404);
+        }
+
+        $this->title = $post->title;
+        $item = $post;
 
         return $this->view('single', compact('item'));
     }
