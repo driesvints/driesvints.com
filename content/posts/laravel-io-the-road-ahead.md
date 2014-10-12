@@ -2,6 +2,7 @@ title: Laravel IO: The Road Ahead
 slug: laravel-io-the-road-ahead
 status: published
 date: August 13 2014 18:00
+tags: laravel
 -------
 I'm happy to tell you all that as of today I'll be taking over the ongoing development of the [Laravel IO](http://laravel.io/) platform. Except for the Laravel IO's podcast, which will still remain in [Shawn McCool](https://twitter.com/ShawnMcCool)'s hands, I'll be managing all of the rest of Laravel IO's activities. The reason for the change is that it has been proven difficult for Shawn and the rest of the Laravel IO core team (which consists of [Nick Spelt](https://twitter.com/nickstrnl) and [Mitchell van Wijngaarden](https://twitter.com/mitchellvanw)) to continue the development with the limited time they've got on their hands. I'd like to take this opportunity to thank all three of them for all of the work they've done so far for Laravel IO and the Laravel community at large. The Laravel IO platform has undergone some big changes in the past year and it's all thanks to their hard working effort.
 
