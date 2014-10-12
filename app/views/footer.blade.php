@@ -14,12 +14,12 @@
     </div>
 </div>
 
-{{ HTML::script('assets/libraries/jquery-1.10.2.min.js') }}
-{{ HTML::script('assets/libraries/bootstrap/js/bootstrap.min.js') }}
-{{ HTML::script('assets/libraries/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js') }}
-{{ HTML::script('assets/libraries/jquery.backstretch.min.js') }}
-{{ HTML::script('assets/libraries/highlight.js/highlight.pack.js') }}
-{{ HTML::script('assets/js/script.min.js') }}
+<script src="{{ asset('assets/libraries/jquery-1.10.2.min.js') }}"></script>
+<script src="{{ asset('assets/libraries/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/libraries/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js') }}"></script>
+<script src="{{ asset('assets/libraries/jquery.backstretch.min.js') }}"></script>
+<script src="{{ asset('assets/libraries/highlight.js/highlight.pack.js') }}"></script>
+<script src="{{ asset('assets/js/script.min.js') }}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 </body>

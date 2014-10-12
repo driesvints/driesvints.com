@@ -42,7 +42,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
-                    <a href="http://laravel.io">{{ HTML::image('assets/images/laravel-io-logo.png') }}</a>
+                    <a href="http://laravel.io"><img src="{{ asset('assets/images/laravel-io-logo.png') }}" width="300" alt=""></a>
                 </div>
                 <div class="col-md-8">
                     <h3>Laravel.IO</h3>
@@ -56,7 +56,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 logo">
-                    <a href="http://beatswitch.com">{{ HTML::image('assets/images/beatswitch.png', null, array('width' => 300)) }}</a>
+                    <a href="http://beatswitch.com"><img src="{{ asset('assets/images/beatswitch.png') }}" width="300" alt=""></a>
                 </div>
                 <div class="col-md-8">
                     <h3>BeatSwitch</h3>
