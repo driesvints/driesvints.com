@@ -217,7 +217,7 @@ blockquote p {
 /* Homepage - Posts
 ---------------------------------------------------------*/
 
-body.home #content .post {
+body.home #content .excerpt {
     color: #333;
     display: block;
     margin-bottom: 40px;
@@ -226,26 +226,26 @@ body.home #content .post {
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
-body.home #content .post:hover {
+body.home #content .excerpt:hover {
     color: #7f8c8d;
     text-decoration: none;
 }
-body.home #content .post .post-date {
+body.home #content .excerpt .date {
     font-size: 0.9em;
     font-style: italic;
 }
-body.home #content .post h3 {
+body.home #content .excerpt h3 {
     font-weight: 900;
     margin-top: 5px;
 }
 @media (min-width: 768px) {
-    body.home #content .post {
+    body.home #content .excerpt {
         margin-bottom: 75px;
     }
     body.home #content h2.title {
         margin-top: 50px;
     }
-    body.home #content .post h3 {
+    body.home #content .excerpt h3 {
         font-size: 1.8em;
     }
 }
@@ -288,26 +288,26 @@ body.home #content .post h3 {
     margin-bottom: 25px;
     text-align: center;
 }
-#archive .item {
+#archive .post {
     margin-bottom: 10px;
     -webkit-transition: color 0.2s ease;
     -moz-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
     transition: color 0.2s ease;
 }
-#archive .item .item-date {
+#archive .post .date {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 768px) {
-    #archive .item .item-date,
-    #archive .item .item-title {
+    #archive .post .date,
+    #archive .post .title {
         float: left;
     }
-    #archive .item .item-date {
+    #archive .post .date {
         text-align: right;
         width: 20%;
     }
-    #archive .item .item-title {
+    #archive .post .title {
         padding-left: 2%;
         width: 78%;
     }
@@ -342,58 +342,58 @@ h2.title {
         font-size: 2.4em;
     }
 }
-#content .single-post p.post-info {
+#content .single p.info {
     font-style: italic;
     margin-bottom: 0;
 }
 @media (min-width: 768px) {
-    #content .single-post h1 {
+    #content .single h1 {
         font-size: 2.2em;
     }
 }
-#content .single-post h2 {
+#content .single h2 {
     margin-top: 50px;
 }
-#content .single-post h1,
-#content .single-post h2,
-#content .single-post h3,
-#content .single-post h4,
-#content .single-post h5,
-#content .single-post h6,
-#content .single-post p,
-#content .single-post ul,
-#content .single-post ol,
-#content .single-post blockquote,
+#content .single h1,
+#content .single h2,
+#content .single h3,
+#content .single h4,
+#content .single h5,
+#content .single h6,
+#content .single p,
+#content .single ul,
+#content .single ol,
+#content .single blockquote,
 #disqus_thread {
     padding: 0 15px;
     margin-bottom: 25px;
 }
-#content .single-post ul,
-#content .single-post ol {
+#content .single ul,
+#content .single ol {
     margin-left: 30px;
 }
-#content .single-post pre {
+#content .single pre {
     margin-bottom: 25px;
 }
-#content .single-post pre code {
+#content .single pre code {
     padding: 15px 15px;
 }
 
 @media (min-width: 768px) {
-    #content .single-post h1,
-    #content .single-post h2,
-    #content .single-post h3,
-    #content .single-post h4,
-    #content .single-post h5,
-    #content .single-post h6,
-    #content .single-post p,
-    #content .single-post ul,
-    #content .single-post ol,
-    #content .single-post blockquote,
+    #content .single h1,
+    #content .single h2,
+    #content .single h3,
+    #content .single h4,
+    #content .single h5,
+    #content .single h6,
+    #content .single p,
+    #content .single ul,
+    #content .single ol,
+    #content .single blockquote,
     #disqus_thread {
         padding: 0 20px;
     }
-    #content .single-post pre code {
+    #content .single pre code {
         padding: 15px 20px;
     }
 }
@@ -484,12 +484,8 @@ h2.title {
     padding: 20px 0;
     text-align: center;
 
-    a {
-        color: #95a5a6;
-    }
-    a:hover {
-        color: #2f3238;
-    }
+    a { color: #95a5a6 }
+    a:hover { color: #2f3238 }
 }
 @media (min-width: 768px) {
     #contact {
@@ -520,7 +516,7 @@ h2.title {
 /* Error Page
 ---------------------------------------------------------*/
 
-#error-page {
+#error {
     padding-top: 25px;
     text-align: center;
 

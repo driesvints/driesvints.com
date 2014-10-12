@@ -1,21 +1,21 @@
-@extends('layouts.public')
+@extends('layout')
 
 @section('content')
 
-<div class="single-post">
-    <p class="post-info">
+<div class="single">
+    <p class="info">
         <small>
-            {{ $item->date('F d, Y') }}
+            {{ $post->date('F d, Y') }}
 
-            @if (count($item->tags))
-                &bull; Tags: {{ $item->listTags() }}
+            @if (count($post->tags))
+                &bull; Tags: {{ $post->listTags() }}
             @endif
         </small>
     </p>
 
-    <h1>{{ $item->title }}</h1>
+    <h1>{{ $post->title }}</h1>
 
-    @if ($item->hasAged())
+    @if ($post->hasAged())
         <blockquote>
             <p>This post was published more than a year ago. Some of the tutorials or explanations in this post might be
              out of date or might not be applicable anymore today.</p>
@@ -24,9 +24,9 @@
         </blockquote>
     @endif
 
-    {{ $item->body }}
+    {{ $post->body }}
 
-    @include('disqus')
+    @include('disqus', ['item' => $post])
 </div>
 
 @stop

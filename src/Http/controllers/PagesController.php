@@ -34,8 +34,7 @@ class PagesController extends BaseController
         }
 
         $this->title = $page->title;
-        $item = $page;
 
-        return $this->view('page', compact('item'));
+        return $this->view('page', compact('page'));
     }
 }

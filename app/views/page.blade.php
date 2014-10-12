@@ -1,21 +1,21 @@
-@extends('layouts.public')
+@extends('layout')
 
 @section('content')
 
-<div class="single-post">
-    <p class="post-info">
+<div class="single">
+    <p class="info">
         <small>
-            @if (count($item->tags))
-                &bull; Tags: {{ $item->listTags() }}
+            @if (count($page->tags))
+                &bull; Tags: {{ $page->listTags() }}
             @endif
         </small>
     </p>
 
-    <h1>{{ $item->title }}</h1>
+    <h1>{{ $page->title }}</h1>
 
-    {{ $item->body }}
+    {{ $page->body }}
 
-    @include('disqus')
+    @include('disqus', ['item' => $page])
 </div>
 
 @stop

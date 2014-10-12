@@ -48,8 +48,7 @@ class PostsController extends BaseController
         }
 
         $this->title = $post->title;
-        $item = $post;
 
-        return $this->view('single', compact('item'));
+        return $this->view('post', compact('post'));
     }
 }

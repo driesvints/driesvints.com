@@ -1,9 +1,9 @@
 @include('header')
 
-<div id="error-page" class="container">
+<div id="error" class="container">
     <div class="error-block">
         <h1>Woops, something went wrong!</h1>
-        </p><a href="{{ url('/') }}">Return to homepage</a></p>
+        </p><a href="{{ route('home') }}">Return to homepage</a></p>
     </div>
 </div>
 
