@@ -6,7 +6,7 @@
             </div>
             <div class="col-sm-6 last-column">
                 <p>
-                    <a href="{{ url('colophon') }}">Colophon</a>
+                    <a href="{{ route('page', 'colophon') }}">Colophon</a>
                     / <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
                 </p>
             </div>

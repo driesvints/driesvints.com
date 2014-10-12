@@ -36,10 +36,10 @@ Route::group(['namespace' => 'Dries\\Http\\Controllers'], function()
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
     Route::get('blog', ['as' => 'archive', 'uses' => 'PostsController@archive']);
-    Route::get('blog/{post_slug}', ['as' => 'posts.show', 'uses' => 'PostsController@show']);
+    Route::get('blog/{post_slug}', ['as' => 'post', 'uses' => 'PostsController@show']);
 
     Route::get('tag', 'TagsController@index');
-    Route::get('tag/{tag}', ['as' => 'tags.show', 'uses' => 'TagsController@show']);
+    Route::get('tag/{tag}', ['as' => 'tag', 'uses' => 'TagsController@show']);
 
-    Route::get('{page_slug}', ['as' => 'pages.show', 'uses' => 'PagesController@show']);
+    Route::get('{page_slug}', ['as' => 'page', 'uses' => 'PagesController@show']);
 });

@@ -55,7 +55,7 @@ abstract class AbstractContent implements Content
     public function listTags()
     {
         $tags = array_map(function ($tag) {
-            return link_to_route('tags.show', $tag, $tag);
+            return link_to_route('tag', $tag, $tag);
         }, $this->tags);
 
         return implode(', ', $tags);

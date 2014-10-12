@@ -15,7 +15,7 @@
             <div class="item">
                 <div class="item-date">{{ $post->date('F j') }}</div>
                 <div class="item-title">
-                    <a href="{{ route('posts.show', $post->slug) }}">{{ $post->title }}</a>
+                    <a href="{{ route('post', $post->slug) }}">{{ $post->title }}</a>
                 </div>
                 <div class="clearfix"></div>
             </div>
