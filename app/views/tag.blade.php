@@ -2,6 +2,6 @@
 
 @section('content')
 
-@include('posts', ['title' => "&ldquo;$tag&rdquo;"])
+@include('posts', ['title' => "Tagged: &ldquo;$tag&rdquo;"])
 
 @stop
