@@ -47,10 +47,10 @@ App::error(function (Exception $exception, $code) {
     if (! App::isLocal()) {
         switch ($code) {
             case 404:
-                return Response::view('404', array(), 404);
+                return Response::view('404', [], 404);
 
             default:
-                return Response::view('error-default', array(), $code);
+                return Response::view('error', [], $code);
         }
     }
 });
