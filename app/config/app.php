@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => 'http://driesvints.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -106,6 +106,7 @@ return [
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
+
         'Dries\Providers\ContentServiceProvider',
         'Dries\Providers\MarkdownServiceProvider',
     ],
@@ -172,6 +173,7 @@ return [
         'URL' => 'Illuminate\Support\Facades\URL',
         'Validator' => 'Illuminate\Support\Facades\Validator',
         'View' => 'Illuminate\Support\Facades\View',
+
         'ContentManager' => 'Dries\Content\Facades\ContentManager',
     ],
 

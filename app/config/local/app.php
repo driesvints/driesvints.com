@@ -1,3 +1,6 @@
 <?php
 
-return ['debug' => true];
+return [
+    'debug' => true,
+    'url' => 'http://dries.loc',
+];
