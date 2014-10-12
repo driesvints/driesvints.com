@@ -1,6 +1,7 @@
 <?php
-namespace Dries\Content;
+namespace Dries\Content\Markdown;
 
+use Dries\Content\AbstractContent;
 use Kurenai\DocumentParser;
 
 class MarkdownFile extends AbstractContent

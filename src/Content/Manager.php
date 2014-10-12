@@ -1,6 +1,7 @@
 <?php
 namespace Dries\Content;
 
+use Dries\Content\Markdown\MarkdownFile;
 use Illuminate\Filesystem\Filesystem;
 use Kurenai\DocumentParser;
 

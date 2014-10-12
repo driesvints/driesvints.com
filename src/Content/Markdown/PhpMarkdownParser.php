@@ -1,5 +1,5 @@
 <?php
-namespace Dries\Markdown;
+namespace Dries\Content\Markdown;
 
 use Kurenai\MarkdownParserInterface;
 use Michelf\MarkdownExtra;
