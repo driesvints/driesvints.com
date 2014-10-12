@@ -2,6 +2,7 @@ title: Removing Homestead Port Numbers
 slug: removing-homestead-port-numbers
 status: published
 date: September 28 20:00
+tags: laravel
 -------
 I struggled a bit with removing trailing slashes for Homestead urls when [Chris Fidao](https://twitter.com/fideloper) gave me a tip to omit the port for Homestead domain aliases.<!--more-->
 
