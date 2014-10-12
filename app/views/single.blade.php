@@ -8,7 +8,7 @@
             {{ $item->date('F d, Y') }}
 
             @if (count($item->tags))
-            &bull; Tags: {{ $item->listTags() }}
+                &bull; Tags: {{ $item->listTags() }}
             @endif
         </small>
     </p>

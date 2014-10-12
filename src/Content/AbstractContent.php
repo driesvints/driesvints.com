@@ -4,17 +4,17 @@ namespace Dries\Content;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 
-abstract class BaseContentRepository
+abstract class AbstractContent implements Content
 {
     /**
-     * The date attribute key.
+     * The date attribute key
      *
      * @var string
      */
     protected $dateKey;
 
     /**
-     * Returns the content item date.
+     * Returns the content item date
      *
      * @param  string $format
      * @return string
@@ -27,7 +27,7 @@ abstract class BaseContentRepository
     }
 
     /**
-     * Returns an excerpt of the page body.
+     * Returns an excerpt of the page body
      *
      * @param  int $words
      * @return string
@@ -48,7 +48,7 @@ abstract class BaseContentRepository
     }
 
     /**
-     * Lists the tags in a comma separated list.
+     * Lists the tags in a comma separated list
      *
      * @return string
      */
@@ -74,7 +74,7 @@ abstract class BaseContentRepository
     }
 
     /**
-     * Dynamically retrieve attributes on the content item.
+     * Dynamically retrieve attributes on the content item
      *
      * @param  string $key
      * @return mixed
@@ -91,7 +91,7 @@ abstract class BaseContentRepository
     }
 
     /**
-     * Dynamically set attributes on the content item.
+     * Dynamically set attributes on the content item
      *
      * @param  string $key
      * @param  mixed $value

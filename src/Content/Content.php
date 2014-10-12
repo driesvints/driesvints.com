@@ -1,10 +1,10 @@
 <?php
 namespace Dries\Content;
 
-interface ContentRepositoryInterface
+interface Content
 {
     /**
-     * Returns a specific content item attribute.
+     * Returns a specific content item attribute
      *
      * @param  string $key
      * @return mixed
@@ -12,7 +12,7 @@ interface ContentRepositoryInterface
     public function getAttribute($key);
 
     /**
-     * Sets a new value to a specific content item attribute.
+     * Sets a new value to a specific content item attribute
      *
      * @param  string $key
      * @param  mixed $value

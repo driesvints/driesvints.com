@@ -3,7 +3,7 @@ namespace Dries\Content\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class ContentLoader extends Facade
+class ContentManager extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -12,6 +12,6 @@ class ContentLoader extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'content_loader';
+        return 'Dries\Content\Manager';
     }
 }

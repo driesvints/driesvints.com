@@ -13,8 +13,7 @@ return [
     */
 
     'posts' => [
-        'Models\\Post',
-        base_path() . '/posts',
+        base_path('content/posts'),
     ],
 
     /*
@@ -28,8 +27,7 @@ return [
     */
 
     'pages' => [
-        'Models\\Page',
-        base_path() . '/pages',
+        base_path('content/pages'),
     ],
 
 ];

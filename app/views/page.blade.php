@@ -6,7 +6,7 @@
     <p class="post-info">
         <small>
             @if (count($item->tags))
-            &bull; Tags: {{ $item->listTags() }}
+                &bull; Tags: {{ $item->listTags() }}
             @endif
         </small>
     </p>

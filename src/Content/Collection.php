@@ -7,7 +7,7 @@ use Prologue\Support\Collection as BaseCollection;
 class Collection extends BaseCollection
 {
     /**
-     * Only return content which has already been published.
+     * Only return content which has already been published
      *
      * @return \Dries\Content\Collection
      */
@@ -18,22 +18,5 @@ class Collection extends BaseCollection
 
             return ($date->getTimestamp() <= time() && $item->status === 'published');
         });
-    }
-
-    /**
-     * Returns a paginator instance for this collection.
-     *
-     * @param  int $perPage
-     * @return \Illuminate\Pagination\Paginator
-     */
-    public function paginate($perPage)
-    {
-        $paginator = app('paginator');
-
-        $start = ($paginator->getCurrentPage() - 1) * $perPage;
-
-        $sliced = $this->slice($start, $perPage)->all();
-
-        return $paginator->make($sliced, $this->count(), $perPage);
     }
 }

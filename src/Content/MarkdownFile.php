@@ -3,38 +3,38 @@ namespace Dries\Content;
 
 use Kurenai\DocumentParser;
 
-class MarkdownContentRepository extends BaseContentRepository implements ContentRepositoryInterface
+class MarkdownFile extends AbstractContent
 {
     /**
-     * The filepath for this Markdown file.
+     * The filepath for this Markdown file
      *
      * @var string
      */
     protected $filepath;
 
     /**
-     * The Kurenai Markdown parser.
+     * The Kurenai Markdown parser
      *
      * @var \Kurenai\DocumentParser
      */
     protected $parser;
 
     /**
-     * The Markdown Document.
+     * The Markdown Document
      *
      * @var \Kurenai\Document
      */
     protected $document;
 
     /**
-     * The date attribute key.
+     * The date attribute key
      *
      * @var string
      */
     protected $dateKey = 'date';
 
     /**
-     * Initialize the repository.
+     * Initialize the repository
      *
      * @param string $filepath
      * @param \Kurenai\DocumentParser $parser
@@ -47,7 +47,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     }
 
     /**
-     * Parse a markdown document.
+     * Parse a markdown document
      *
      * @param  string $filepath
      * @return \Kurenai\Document
@@ -60,7 +60,9 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     }
 
     /**
-     * Returns the content item body.
+     * Returns the content item body
+     *
+     * This function overrides the dynamic body property call.
      *
      * @return string
      */
@@ -70,7 +72,9 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     }
 
     /**
-     * Returns the content item's tags.
+     * Returns the content item's tags
+     *
+     * This function overrides the dynamic tags property call.
      *
      * @return array
      */
@@ -82,7 +86,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     }
 
     /**
-     * Determines if comments should be disabled or not.
+     * Determines if comments should be disabled or not
      *
      * @return bool
      */
@@ -92,7 +96,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     }
 
     /**
-     * Returns a specific content item attribute.
+     * Returns a specific content item attribute
      *
      * @param  string $key
      * @return mixed
@@ -103,7 +107,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     }
 
     /**
-     * Sets a new value to a specific content item attribute.
+     * Sets a new value to a specific content item attribute
      *
      * @param  string $key
      * @param  mixed $value
@@ -115,7 +119,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     }
 
     /**
-     * Returns the Kurenai Parser.
+     * Returns the Kurenai Parser
      *
      * @return \Kurenai\DocumentParser
      */
@@ -125,7 +129,7 @@ class MarkdownContentRepository extends BaseContentRepository implements Content
     }
 
     /**
-     * Returns the Kurenai Document.
+     * Returns the Kurenai Document
      *
      * @return \Kurenai\Document
      */

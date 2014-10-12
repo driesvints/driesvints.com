@@ -1,4 +1,4 @@
-@if ( ! $item->disable_comments)
+@if (! $item->disable_comments)
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'driesvints';

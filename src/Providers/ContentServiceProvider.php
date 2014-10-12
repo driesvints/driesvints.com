@@ -1,7 +1,7 @@
 <?php
 namespace Dries\Providers;
 
-use Dries\Content\ContentLoader;
+use Dries\Content\Manager;
 use Illuminate\Support\ServiceProvider;
 
 class ContentServiceProvider extends ServiceProvider
@@ -13,8 +13,8 @@ class ContentServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['content_loader'] = $this->app->share(function ($app) {
-            return new ContentLoader($app['config'], $app['files'], $app['markdown.parser']);
+        $this->app['Dries\Content\Manager'] = $this->app->share(function ($app) {
+            return new Manager($app['config']->get('content'), $app['files'], $app['markdown.parser']);
         });
     }
 
@@ -25,6 +25,6 @@ class ContentServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['content_loader'];
+        return ['Dries\Content\Manager'];
     }
 }

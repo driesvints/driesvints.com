@@ -53,7 +53,3 @@
 </head>
 
 {{ is_home() ? '<body class="home">' : '<body>' }}
-
-@if (Auth::check())
-    @include('toolbar')
-@endif
