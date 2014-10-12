@@ -1,22 +1,25 @@
 <?php
 namespace spec\Dries\Content;
 
+use Dries\Markdown\PhpMarkdownParser;
 use Illuminate\Filesystem\Filesystem;
+use Kurenai\Document;
 use Kurenai\DocumentParser;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 class ManagerSpec extends ObjectBehavior
 {
-    protected $sources;
-
-    function let(DocumentParser $documentParser)
+    function let()
     {
-        $this->sources = [
-            'posts' => [__DIR__ . '/data'],
-        ];
+        $sources = ['posts' => [__DIR__ . '/data']];
 
-        $this->beConstructedWith($this->sources, new Filesystem, $documentParser);
+        // Use the actual parser for more accurate tests.
+        $parser = new DocumentParser(function() {
+            return new Document(new PhpMarkdownParser);
+        });
+
+        $this->beConstructedWith($sources, new Filesystem, $parser);
     }
 
     function it_is_initializable()
