@@ -1,7 +1,6 @@
 <?php
 
-Route::group(['namespace' => 'Dries\\Http\\Controllers'], function()
-{
+Route::group(['namespace' => 'Dries\\Http\\Controllers'], function() {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
     Route::get('blog', ['as' => 'blog', 'uses' => 'PostsController@blog']);
