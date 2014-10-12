@@ -12,7 +12,6 @@
 */
 
 ClassLoader::addDirectories([
-    app_path() . '/controllers',
     app_path() . '/database/seeds',
 ]);
 

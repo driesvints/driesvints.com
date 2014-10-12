@@ -1,4 +1,8 @@
 <?php
+namespace Dries\Http\Controllers;
+
+use Illuminate\Routing\Controller;
+use View;
 
 class BaseController extends Controller
 {

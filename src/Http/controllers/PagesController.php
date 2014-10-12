@@ -1,4 +1,5 @@
 <?php
+namespace Dries\Http\Controllers;
 
 use Dries\Content\Content;
 

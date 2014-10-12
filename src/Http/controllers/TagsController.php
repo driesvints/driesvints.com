@@ -1,6 +1,8 @@
 <?php
+namespace Dries\Http\Controllers;
 
 use Dries\Content\Manager;
+use Redirect;
 
 class TagsController extends BaseController
 {
