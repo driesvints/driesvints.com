@@ -7,14 +7,21 @@ use View;
 class BaseController extends Controller
 {
     /**
-     * The page title.
+     * The page title
      *
      * @var string
      */
     protected $pageTitle;
 
     /**
-     * Create a view and send along default variables.
+     * The page meta description
+     *
+     * @var string
+     */
+    protected $metaDescription;
+
+    /**
+     * Create a view and send along default variables
      *
      * @param  string $view
      * @param  array $data
@@ -23,11 +30,13 @@ class BaseController extends Controller
      */
     protected function view($view, $data = [], $mergeData = [])
     {
-        return View::make($view, $data, $mergeData)->with('pageTitle', $this->pageTitle);
+        return View::make($view, $data, $mergeData)
+            ->with('pageTitle', $this->pageTitle)
+            ->with('metaDescription', $this->metaDescription);
     }
 
     /**
-     * Setup the layout used by the controller.
+     * Setup the layout used by the controller
      *
      * @return void
      */

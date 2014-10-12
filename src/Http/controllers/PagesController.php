@@ -34,6 +34,7 @@ class PagesController extends BaseController
         }
 
         $this->pageTitle = $page->title;
+        $this->metaDescription = $page->excerpt;
 
         return $this->view('page', compact('page'));
     }

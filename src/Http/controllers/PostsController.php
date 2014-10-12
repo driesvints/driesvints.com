@@ -48,6 +48,7 @@ class PostsController extends BaseController
         }
 
         $this->pageTitle = $post->title;
+        $this->metaDescription = $post->excerpt;
 
         return $this->view('post', compact('post'));
     }
