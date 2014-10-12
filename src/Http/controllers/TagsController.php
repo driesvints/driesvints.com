@@ -39,10 +39,7 @@ class TagsController extends BaseController
     {
         $this->title = $tag;
 
-        $posts = $this->contentManager->get('posts')->published()
-            ->filter(function ($post) use ($tag) {
-                return in_array($tag, $post->tags);
-            })->orderBy('date', 'desc');
+        $posts = $this->contentManager->tagged('posts', $tag);
 
         return $this->view('tag', compact('tag', 'posts'));
     }

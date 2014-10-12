@@ -60,6 +60,24 @@ class Manager
     }
 
     /**
+     * Filters content from a specific content type based on a tag
+     *
+     * @param string $type
+     * @param string $tag
+     * @param string $orderBy
+     * @param string $direction
+     * @return \Dries\Content\Collection
+     */
+    public function tagged($type, $tag, $orderBy = 'date', $direction = 'desc')
+    {
+        // Get the content for the specified content type.
+        $content = $this->get($type);
+
+        // Only return published and tagged content.
+        return $content->tagged($tag, $orderBy, $direction);
+    }
+
+    /**
      * Returns the content sources for a specific content type
      *
      * @param string $type

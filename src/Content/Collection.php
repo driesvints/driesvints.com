@@ -19,4 +19,20 @@ class Collection extends BaseCollection
             return ($date->getTimestamp() <= time() && $item->status === 'published');
         });
     }
+
+    /**
+     * Filters content from a specific content type based on a tag
+     *
+     * @param string $tag
+     * @param string $orderBy
+     * @param string $direction
+     * @return \Dries\Content\Collection
+     */
+    public function tagged($tag, $orderBy = 'date', $direction = 'desc')
+    {
+        // Only return published and tagged content.
+        return $this->published()->filter(function ($item) use ($tag) {
+            return in_array($tag, $item->tags);
+        })->orderBy($orderBy, $direction);
+    }
 }

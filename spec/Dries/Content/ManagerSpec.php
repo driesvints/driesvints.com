@@ -33,4 +33,9 @@ class ManagerSpec extends ObjectBehavior
         $content->shouldBeAnInstanceOf('Dries\Content\Collection');
         $content->first()->shouldBeAnInstanceOf('Dries\Content\Content');
     }
+
+    function it_can_filter_tagged_content()
+    {
+        $this->tagged('posts', 'foo')->shouldHaveCount(2);
+    }
 }
