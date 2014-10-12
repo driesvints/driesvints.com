@@ -9,7 +9,7 @@ before_script:
   - travis_retry composer install --prefer-source --no-interaction --dev
 
 script:
-  - vendor/bin/phpspec --verbose --format=dot
+  - vendor/bin/phpspec run --verbose --format=dot
 
 matrix:
   fast_finish: true
