@@ -1,24 +1,18 @@
 @include('header')
 
 <div id="header">
-    <div class="about">
-        <h1>Dries Vints</h1>
+    <h1>Dries Vints</h1>
 
-        <h2>
-            Web Developer with<br>
-            a passion for Open-Source,<br>
-            Community &amp; Laravel
-        </h2>
+    <h2>Web Developer</h2>
 
-        <ul class="list-unstyled">
-            <li><a href="{{ route('blog') }}">Blog</a></li>
-            <li class="second"><a href="#work">Work</a></li>
-            <li class="third"><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <ul class="list-unstyled">
+        <li><a href="{{ route('blog') }}">Blog</a></li>
+        <li class="second"><a href="#work">Work</a></li>
+        <li class="third"><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-        <p><a class="next" href="#content"><i class="icon-chevron-sign-down"></i></a></p>
-    </div>
+    <a class="next" href="#content"><i class="icon-chevron-sign-down"></i></a>
 </div>
 
 <div id="content" class="container">
@@ -86,7 +80,7 @@
 
                 <p>
                     I'm a very active member of the Laravel community. I maintain the Laravel community platform,
-                    <a href="http://laravel.io">Laravel.io</a> and work at a company named
+                    <a href="http://laravel.io">Laravel.IO</a> and work at a company named
                     <a href="http://beatswitch.com">BeatSwitch</a>.
                 </p>
  
