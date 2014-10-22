@@ -1,8 +1,5 @@
 $(function()
 {
-    // Enable timepicker for backend.
-    $('.datetimepicker').datetimepicker();
-
     // Stretch homepage image.
     $("#header").backstretch("/assets/images/header.jpg");
 
