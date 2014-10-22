@@ -25,7 +25,7 @@
     @endif
 
     <p class="blog-btn">
-        <a class="btn btn-default" href="{{ route('blog') }}">View Blog</a>
+        <a class="btn btn-default" href="{{ route('blog') }}">Read More</a>
     </p>
 </div><!-- .container -->
 
