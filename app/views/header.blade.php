@@ -32,12 +32,6 @@
     <link media="all" type="text/css" rel="stylesheet" href="{{ asset('assets/libraries/highlight.js/styles/solarized_dark.css') }}">
     <link media="all" type="text/css" rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="{{ asset('assets/libraries/html5shiv.min.js') }}"></script>
-        <script src="{{ asset('assets/libraries/respond.min.js') }}"></script>
-    <![endif]-->
-
     <!-- Google Analytics -->
     <script type="text/javascript">
         var _gaq = _gaq || [];
