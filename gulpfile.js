@@ -31,13 +31,13 @@ gulp.task('images', ['clean:images'], function() {
 
 // Cleanup tasks
 gulp.task('clean:styles', function(cb) {
-    del(['./public/assets/css/**'], cb);
+    del(['public/assets/css/*', '!public/assets/css/.gitignore'], cb);
 });
 gulp.task('clean:scripts', function(cb) {
-    del(['./public/assets/js/**'], cb);
+    del(['public/assets/js/*', '!public/assets/js/.gitignore'], cb);
 });
 gulp.task('clean:images', function(cb) {
-    del(['./public/assets/images/**'], cb);
+    del(['public/assets/images/*', '!public/assets/images/.gitignore'], cb);
 });
 
 // General tasks

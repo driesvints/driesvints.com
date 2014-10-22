@@ -1,0 +1,14 @@
+{
+    "name": "driesvints",
+    "version": "1.0.0",
+    "homepage": "https://github.com/driesvints/driesvints.com",
+    "authors": [
+        "dries.vints@gmail.com"
+    ],
+    "dependencies": {
+        "bootstrap-sass-official": "~3.2",
+        "jquery-backstretch": "~2.0",
+        "font-awesome": "~4.2",
+        "highlightjs": "~8.3"
+    }
+}
