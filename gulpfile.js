@@ -4,54 +4,49 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
-    rimraf = require('gulp-rimraf'),
     concat = require('gulp-concat'),
-    cache = require('gulp-cache');
+    cache = require('gulp-cache'),
+    del = require('del');
 
-gulp.task('styles', function () {
+// Compiler tasks
+gulp.task('styles', ['clean:styles'], function () {
     return gulp.src('./public/src/styles/styles.scss')
         .pipe(sass({ style: 'compressed', container: './app/storage/tmp' }))
         .pipe(autoprefixer('last 15 versions'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./public/assets/css'));
 });
-
-gulp.task('scripts', function() {
+gulp.task('scripts', ['clean:scripts'], function() {
     return gulp.src('./public/src/scripts/**/*.js')
         .pipe(concat('script.js'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
         .pipe(gulp.dest('./public/assets/js'));
 });
-
-gulp.task('images', function() {
+gulp.task('images', ['clean:images'], function() {
     return gulp.src('./public/src/images/**/*')
         .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
         .pipe(gulp.dest('./public/assets/images'));
 });
 
-gulp.task('clean', function() {
-    return gulp.src(['./public/assets/css', './public/assets/js', './public/assets/images'], { read: false })
-        .pipe(rimraf());
+// Cleanup tasks
+gulp.task('clean:styles', function(cb) {
+    del(['./public/assets/css/**'], cb);
+});
+gulp.task('clean:scripts', function(cb) {
+    del(['./public/assets/js/**'], cb);
+});
+gulp.task('clean:images', function(cb) {
+    del(['./public/assets/images/**'], cb);
 });
 
-gulp.task('default', ['clean'], function () {
+// General tasks
+gulp.task('default', function () {
     gulp.start('styles', 'scripts', 'images');
 });
 
 gulp.task('watch', function() {
-    // Watch .scss files.
-    gulp.watch('./public/src/styles/**/*.scss', function() {
-        gulp.run('styles');
-    });
-
-    // Watch .js files.
-    gulp.watch('./public/src/scripts/**/*.js', function() {
-        gulp.run('scripts');
-    });
-
-    // Watch image files.
-    gulp.watch('./public/src/images/**/*', function() {
-        gulp.run('images');
-    });
+    gulp.watch('./public/src/styles/**/*.scss', ['styles']);
+    gulp.watch('./public/src/scripts/**/*.js', ['scripts']);
+    gulp.watch('./public/src/images/**/*', ['images']);
 });
