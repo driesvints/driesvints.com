@@ -3,6 +3,13 @@
 
 @import "../../assets/libraries/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 
+/* Fonts
+---------------------------------------------------------*/
+
+$fontSansSerif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontSerif: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+$fontCode: "Source Code Pro", "Courier New", Courier, sans-serif;
+
 /* General
 ---------------------------------------------------------*/
 
@@ -13,12 +20,12 @@ body {
 
 body {
     color: #333;
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $fontSansSerif;
     font-size: 2em;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $fontSansSerif;
     font-weight: 900;
 }
 
@@ -36,10 +43,10 @@ a:hover {
 
 pre,
 code {
-    font-family: "Source Code Pro", "Courier New", Courier, sans-serif;
+    font-family: $fontCode;
 }
 pre {
-    background-color: none;
+    background-color: transparent;
     border: none;
     font-size: 0.6em;
     line-height: 1.8em;
@@ -68,40 +75,70 @@ blockquote p {
     line-height: 1.4em;
 }
 
-/* Headers
+.btn-outline {
+    background: transparent;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+/* Homepage
+---------------------------------------------------------*/
+
+.home-separator {
+    background: #eaeaea;
+    border: none;
+    height: 1px;
+
+    max-width: 500px;
+}
+
+/* Homepage - Header
 ---------------------------------------------------------*/
 
 #header {
     background-color: #333;
     color: white;
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $fontSansSerif;
     padding: 25px 0;
     position: relative;
     text-align: center;
     height: 100%;
     min-height: 520px;
+
+    h1, h2 {
+        color: #eee;
+    }
+
+    .navigation {
+        font-weight: 300;
+
+        a { color: white; }
+        a:hover { text-decoration: underline; }
+
+        .separator {
+            font-size: 0.75em;
+        }
+    }
+}
+@media (min-width: 768px) {
+    #header .navigation {
+        font-size: 0.8em;
+    }
 }
 
-#header ul,
 #page-header ul {
     font-weight: 300;
     position: relative;
     text-transform: uppercase;
     z-index: 10;
 }
-#header ul li a {
-    background-color: rgba(255,255,255,.20);
-    color: white;
-    display: block;
-    margin-bottom: 10px;
-    padding: 10px 0;
-}
 #page-header ul a {
     color: #ddd;
 }
-#header h1,
-#header h2 {
-    color: #eee;
+#page-header ul a:hover {
+    text-decoration: none;
 }
 #header h1 {
     font-size: 2.4em;
@@ -114,22 +151,8 @@ blockquote p {
     line-height: 1.3em;
     margin-bottom: 25px;
 }
-#header .btn {
-    background-color: #2ECC71;
-    border: 0;
-    font-size: 1em;
-    margin-bottom: 35px;
-    padding: 10px 30px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-#header .btn:hover {
-    background-color: #27AE60;
-}
 #header .next {
-    color: rgba(220,220,220,0.5);
+    color: rgba(220, 220, 220, 0.8);
     font-size: 3.5em;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
@@ -137,39 +160,13 @@ blockquote p {
     transition: color 0.3s ease;
 }
 #header .next:hover {
-    color: rgba(235,235,235,0.75);
+    color: #fff;
     text-decoration: none;
 }
 
 @media (min-width: 992px) {
     #header {
         padding: 50px 0;
-    }
-    #header ul {
-        position: relative;
-        margin-top: -130px;
-    }
-    #header ul li {
-        display: inline-block;
-        margin-right: 6%;
-        width: 100px;
-    }
-    #header ul li.second {
-        margin-right: 215px;
-    }
-    #header ul li.third {
-        margin-left: 215px;
-    }
-    #header ul li:last-child {
-        margin-right: 0;
-    }
-    #header ul li a {
-        background-color: transparent;
-        color: #ddd;
-    }
-    #header ul li a:hover {
-        color: white;
-        text-decoration: none;
     }
     #header .next {
         position: absolute;
@@ -244,26 +241,44 @@ body.home #content .excerpt h3 {
     text-align: center;
 }
 .blog-btn .btn {
-    background-color: #95a5a6;
-    border: none;
-    color: white;
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em;
-    padding: 10px 30px;
+    border: 3px solid #2980B9;
+    color: #2980B9;
+    font-family: $fontSansSerif;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-.blog-btn .btn i {
-    font-size: .8em;
-}
 .blog-btn .btn:hover {
-    background-color: #bbb;
+    background-color: #2980B9;
+    color: white;
 }
 @media (min-width: 768px) {
     .blog-btn {
         margin-bottom: 50px;
+    }
+}
+
+/* Homepage - About
+---------------------------------------------------------*/
+
+#about {
+    padding: 25px 0;
+    text-align: center;
+
+    img {
+        border: 3px solid #fff;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    h3 {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+}
+@media (min-width: 768px) {
+    #about {
+        padding: 50px 0;
     }
 }
 
@@ -286,7 +301,7 @@ body.home #content .excerpt h3 {
     transition: color 0.2s ease;
 }
 #blog .post .date {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $fontSansSerif;
 }
 @media (min-width: 768px) {
     #blog .post .date,
@@ -307,10 +322,8 @@ body.home #content .excerpt h3 {
 ---------------------------------------------------------*/
 
 #content {
-    font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
     line-height: 1.7em;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
     max-width: 768px;
     margin: 0 auto;
     word-wrap: break-word;
@@ -321,7 +334,7 @@ body.home #content .excerpt h3 {
 }
 h1.title,
 h2.title {
-    font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: $fontSerif;
     font-weight: bold;
     margin-bottom: 40px;
     text-align: center;
@@ -388,84 +401,6 @@ h2.title {
     }
 }
 
-/* Work & About
----------------------------------------------------------*/
-
-#work {
-    padding-top: 20px;
-
-    .item {
-        padding: 20px 0;
-    }
-    .off {
-        background-color: #ecf0f1;
-    }
-    .beatswitch .logo {
-        padding-top: 20px;
-    }
-    .laravelio .logo {
-        padding-top: 20px;
-    }
-}
-@media (min-width: 768px) {
-    #work {
-        .beatswitch .logo {
-            padding-top: 65px;
-        }
-        .laravelio .logo {
-            padding-top: 65px;
-        }
-    }
-}
-
-#about {
-    background-color: #ecf0f1;
-    color: #333;
-    padding: 20px 0;
-}
-#about .avatar,
-#work .logo {
-    text-align: center;
-}
-#work .logo img,
-#about .avatar img {
-    max-width: 50%;
-}
-#work h3,
-#about h3 {
-    font-size: 2.2em;
-    margin-bottom: 25px;
-    text-align: center;
-}
-#work p,
-#about p {
-    line-height: 1.4em;
-    margin-bottom: 20px;
-}
-#about a {
-    color: #ccc;
-    border-bottom: 1px dotted #7f8c8d;
-}
-#about a:hover {
-    color: white;
-}
-@media (min-width: 768px) {
-    #work .item,
-    #about {
-        padding: 50px 0;
-    }
-}
-@media (min-width: 992px) {
-    #work .logo img,
-    #about .avatar img {
-        max-width: 100%;
-    }
-    #work h3,
-    #about h3 {
-        text-align: left;
-    }
-}
-
 /* Contact
 ---------------------------------------------------------*/
 
@@ -475,9 +410,27 @@ h2.title {
     text-align: center;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, .5);
 
-    a { color: #fff }
+    .inner-box {
+        margin: 0 auto;
+        width: auto;
+        max-width: 500px;
+    }
+
+    a {
+        color: white;
+        text-shadow: none;
+        -webkit-transition: text-shadow 0.2s ease-out;
+        -moz-transition: text-shadow 0.2s ease-out;
+        -o-transition: text-shadow 0.2s ease-out;
+        transition: text-shadow 0.2s ease-out;
+    }
     a:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, .5); }
+        text-shadow: 0 0 15px #000;
+        -webkit-transition: text-shadow 0.2s ease;
+        -moz-transition: text-shadow 0.2s ease;
+        -o-transition: text-shadow 0.2s ease;
+        transition: text-shadow 0.2s ease;
+    }
 }
 @media (min-width: 768px) {
     #contact {

@@ -2,11 +2,12 @@ $(function()
 {
     // Stretch homepage image.
     $("#header").backstretch("/assets/images/header.jpg");
+    $("#contact").backstretch("/assets/images/header.jpg", { alignY: 'bottom' });
 
     /**
      * Smooth scroll to anchor.
      *
-     * @Source: http://css-tricks.com/snippets/jquery/smooth-scrolling/
+     * @source: http://css-tricks.com/snippets/jquery/smooth-scrolling/
      */
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
