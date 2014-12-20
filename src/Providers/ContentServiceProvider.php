@@ -2,10 +2,11 @@
 namespace Dries\Providers;
 
 use Dries\Content\Manager;
-use Dries\Content\Markdown\PhpMarkdownParser;
+use Dries\Content\Markdown\LeagueCommonMarkParser;
 use Illuminate\Support\ServiceProvider;
 use Kurenai\Document;
 use Kurenai\DocumentParser;
+use League\CommonMark\CommonMarkConverter;
 
 class ContentServiceProvider extends ServiceProvider
 {
@@ -18,7 +19,7 @@ class ContentServiceProvider extends ServiceProvider
     {
         $this->app['Dries\Content\Manager'] = $this->app->share(function ($app) {
             $markdownParser = new DocumentParser(function() {
-                return new Document(new PhpMarkdownParser);
+                return new Document(new LeagueCommonMarkParser(new CommonMarkConverter()));
             });
 
             return new Manager($app['config']->get('content'), $app['files'], $markdownParser);

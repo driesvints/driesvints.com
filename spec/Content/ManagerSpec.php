@@ -1,10 +1,11 @@
 <?php
 namespace spec\Dries\Content;
 
-use Dries\Content\Markdown\PhpMarkdownParser;
+use Dries\Content\Markdown\LeagueCommonMarkParser;
 use Illuminate\Filesystem\Filesystem;
 use Kurenai\Document;
 use Kurenai\DocumentParser;
+use League\CommonMark\CommonMarkConverter;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -16,7 +17,7 @@ class ManagerSpec extends ObjectBehavior
 
         // Use the actual parser for more accurate tests.
         $parser = new DocumentParser(function() {
-            return new Document(new PhpMarkdownParser);
+            return new Document(new LeagueCommonMarkParser(new CommonMarkConverter()));
         });
 
         $this->beConstructedWith($sources, new Filesystem, $parser);

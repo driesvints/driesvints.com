@@ -3,7 +3,7 @@
         "laravel/framework": "4.2.*",
         "daylerees/kurenai": "1.0.*",
         "prologue/support": "dev-master",
-        "michelf/php-markdown": "1.4.*"
+        "league/commonmark": "0.4.*"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1"

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "185554b22b860ea7a060fbe03288a8a7",
+    "hash": "cecd99d502f1f355ec6e7c0c8914f059",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -450,31 +450,38 @@
             "time": "2014-12-11 17:14:36"
         },
         {
-            "name": "michelf/php-markdown",
-            "version": "1.4.1",
+            "name": "league/commonmark",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/michelf/php-markdown.git",
-                "reference": "de9a19c7bf352d41cc99ed86c3c0ef17e87394b6"
+                "url": "https://github.com/thephpleague/commonmark.git",
+                "reference": "f841f3fc1cd4b38a08dc51032c7d8db9fd0fd3e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/de9a19c7bf352d41cc99ed86c3c0ef17e87394b6",
-                "reference": "de9a19c7bf352d41cc99ed86c3c0ef17e87394b6",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/f841f3fc1cd4b38a08dc51032c7d8db9fd0fd3e6",
+                "reference": "f841f3fc1cd4b38a08dc51032c7d8db9fd0fd3e6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "ext-mbstring": "*",
+                "php": ">=5.3.3",
+                "symfony/options-resolver": "~2.5.6"
+            },
+            "replace": {
+                "colinodell/commonmark-php": "*"
+            },
+            "require-dev": {
+                "erusev/parsedown": "~1.0",
+                "jgm/commonmark": "0.13",
+                "michelf/php-markdown": "~1.4",
+                "phpunit/phpunit": "~4.3"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-lib": "1.4.x-dev"
-                }
-            },
             "autoload": {
-                "psr-0": {
-                    "Michelf": ""
+                "psr-4": {
+                    "League\\CommonMark\\": "src/",
+                    "League\\CommonMark\\Tests\\": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -483,22 +490,20 @@
             ],
             "authors": [
                 {
-                    "name": "Michel Fortin",
-                    "email": "michel.fortin@michelf.ca",
-                    "homepage": "http://michelf.ca/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "John Gruber",
-                    "homepage": "http://daringfireball.net/"
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "http://www.colinodell.com",
+                    "role": "Lead Developer"
                 }
             ],
-            "description": "PHP Markdown",
-            "homepage": "http://michelf.ca/projects/php-markdown/",
+            "description": "Markdown parser for PHP based on the CommonMark spec",
+            "homepage": "https://github.com/thephpleague/commonmark",
             "keywords": [
-                "markdown"
+                "commonmark",
+                "markdown",
+                "parser"
             ],
-            "time": "2014-05-05 02:43:50"
+            "time": "2014-12-15 18:53:02"
         },
         {
             "name": "monolog/monolog",
@@ -1599,6 +1604,58 @@
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
             "time": "2014-12-03 14:18:17"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v2.5.8",
+            "target-dir": "Symfony/Component/OptionsResolver",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/OptionsResolver.git",
+                "reference": "55083336af2c3cf07aca947a5d2c83fd02db17a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/55083336af2c3cf07aca947a5d2c83fd02db17a0",
+                "reference": "55083336af2c3cf07aca947a5d2c83fd02db17a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2014-12-02 20:15:53"
         },
         {
             "name": "symfony/process",
