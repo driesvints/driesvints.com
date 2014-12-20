@@ -6,8 +6,10 @@ tags: laravel
 -------
 I struggled a bit with removing trailing slashes for Homestead urls when [Chris Fidao](https://twitter.com/fideloper) gave me a tip to omit the port for Homestead domain aliases.<!--more-->
 
-<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/DriesVints">@DriesVints</a> Homestead assigns each server an IP on a private network, you should be able to skip port forwarding altogether.</p>&mdash; Chris Fidao™ (@fideloper) <a href="https://twitter.com/fideloper/status/516240175345967104">September 28, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="twitter-quote">
+    <blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/DriesVints">@DriesVints</a> Homestead assigns each server an IP on a private network, you should be able to skip port forwarding altogether.</p>&mdash; Chris Fidao™ (@fideloper) <a href="https://twitter.com/fideloper/status/516240175345967104">September 28, 2014</a></blockquote>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
 So let's say we have a `dries.loc` alias which we link to in our hosts file:
 

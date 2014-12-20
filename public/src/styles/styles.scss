@@ -7,7 +7,6 @@
 ---------------------------------------------------------*/
 
 $fontSansSerif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$fontSerif: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 $fontCode: "Source Code Pro", "Courier New", Courier, sans-serif;
 
 /* General
@@ -84,7 +83,7 @@ blockquote p {
     background: #eaeaea;
     border: none;
     height: 1px;
-
+    width: 75%;
     max-width: 500px;
 }
 
@@ -196,7 +195,13 @@ blockquote p {
 /* Homepage - Posts
 ---------------------------------------------------------*/
 
-body.home #content .excerpt {
+#recent-posts {
+    padding: 25px 15px;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+#recent-posts .excerpt {
     color: #333;
     display: block;
     margin-bottom: 40px;
@@ -205,26 +210,29 @@ body.home #content .excerpt {
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
-body.home #content .excerpt:hover {
+#recent-posts .excerpt:hover {
     color: #7f8c8d;
     text-decoration: none;
 }
-body.home #content .excerpt .date {
+#recent-posts .excerpt .date {
     font-size: 0.9em;
     font-style: italic;
 }
-body.home #content .excerpt h3 {
+#recent-posts .excerpt h3 {
     font-weight: 900;
     margin-top: 5px;
 }
 @media (min-width: 768px) {
-    body.home #content .excerpt {
-        margin-bottom: 75px;
+    #recent-posts {
+        padding: 50px 15px;
     }
-    body.home #content h2.title {
+    #recent-posts .excerpt {
+        margin-bottom: 60px;
+    }
+    #recent-posts h2.title {
         margin-top: 50px;
     }
-    body.home #content .excerpt h3 {
+    #recent-posts .excerpt h3 {
         font-size: 1.8em;
     }
 }
@@ -244,11 +252,6 @@ body.home #content .excerpt h3 {
 .blog-btn .btn:hover {
     background-color: #2980B9;
     color: white;
-}
-@media (min-width: 768px) {
-    .blog-btn {
-        margin-bottom: 50px;
-    }
 }
 
 /* Homepage - About
@@ -271,7 +274,7 @@ body.home #content .excerpt h3 {
 }
 @media (min-width: 768px) {
     #about {
-        padding: 50px 0;
+        padding: 50px 15px;
     }
 }
 
@@ -328,7 +331,6 @@ body.home #content .excerpt h3 {
 }
 h1.title,
 h2.title {
-    font-family: $fontSerif;
     font-weight: bold;
     margin-bottom: 40px;
     text-align: center;
@@ -361,6 +363,7 @@ h2.title {
 #content .single ul,
 #content .single ol,
 #content .single blockquote,
+#content .single div.twitter-quote,
 #disqus_thread {
     padding: 0 15px;
     margin-bottom: 25px;
@@ -400,7 +403,7 @@ h2.title {
 
 #contact {
     font-size: 2em;
-    padding: 20px 0;
+    padding: 20px 15px;
     text-align: center;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, .5);
 
@@ -418,7 +421,7 @@ h2.title {
 @media (min-width: 768px) {
     #contact {
         font-size: 3em;
-        padding: 50px 0;
+        padding: 50px 15px;
     }
 }
 
@@ -429,7 +432,7 @@ h2.title {
     color: #95a5a6;
     font-size: .7em;
     line-height: 1.6em;
-    padding: 20px 0 8px 0;
+    padding: 20px 15px 8px;
     text-align: center;
 }
 

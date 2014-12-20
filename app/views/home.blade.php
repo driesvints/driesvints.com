@@ -10,12 +10,10 @@
         <a href="#about">About</a>
     </p>
 
-    <a class="next icon-highlight" href="#content"><i class="fa fa-chevron-circle-down"></i></a>
+    <a class="next icon-highlight" href="#recent-posts"><i class="fa fa-chevron-circle-down"></i></a>
 </div>
 
-<div id="content" class="container">
-    <h2 class="title">Blog</h2>
-
+<div id="recent-posts">
     @if (count($posts))
         @foreach ($posts as $post)
             @include('excerpt')

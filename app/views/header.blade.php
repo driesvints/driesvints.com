@@ -26,7 +26,7 @@
 
     <!-- Stylsheets -->
     <link media="all" type="text/css" rel="stylesheet" href="{{ asset('assets/libraries/font-awesome/css/font-awesome.css') }}">
-    <link media="all" type="text/css" rel="stylesheet" href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Noto+Serif:400,700,400italic,700italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
     <link media="all" type="text/css" rel="stylesheet" href="{{ asset('assets/libraries/highlightjs/styles/solarized_dark.css') }}">
     <link media="all" type="text/css" rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}">
 
