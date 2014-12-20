@@ -6,7 +6,7 @@
         "michelf/php-markdown": "1.4.*"
     },
     "require-dev": {
-        "phpspec/phpspec": "~2.1@dev"
+        "phpspec/phpspec": "~2.1"
     },
     "autoload": {
         "classmap": [
