@@ -26,8 +26,8 @@
     </div>
 </div>
 
-<script src="{{ asset('assets/libraries/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/libraries/bootstrap-sass-official/assets/js/bootstrap.js') }}"></script>
+<script src="{{ asset('assets/libraries/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/libraries/bootstrap-sass-official/assets/javascripts/bootstrap.js') }}"></script>
 <script src="{{ asset('src/libraries/jquery.backstretch.min.js') }}"></script>
 <script src="{{ asset('assets/libraries/highlightjs/highlight.pack.js') }}"></script>
 <script src="{{ asset('assets/js/script.min.js') }}"></script>
