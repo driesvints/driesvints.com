@@ -399,7 +399,7 @@ h2.title {
 ---------------------------------------------------------*/
 
 #contact {
-    font-size: 3em;
+    font-size: 2em;
     padding: 20px 0;
     text-align: center;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, .5);
@@ -412,22 +412,12 @@ h2.title {
 
     a {
         color: white;
-        text-shadow: none;
-        -webkit-transition: text-shadow 0.2s ease-out;
-        -moz-transition: text-shadow 0.2s ease-out;
-        -o-transition: text-shadow 0.2s ease-out;
-        transition: text-shadow 0.2s ease-out;
-    }
-    a:hover {
         text-shadow: 0 0 15px #000;
-        -webkit-transition: text-shadow 0.2s ease;
-        -moz-transition: text-shadow 0.2s ease;
-        -o-transition: text-shadow 0.2s ease;
-        transition: text-shadow 0.2s ease;
     }
 }
 @media (min-width: 768px) {
     #contact {
+        font-size: 3em;
         padding: 50px 0;
     }
 }
