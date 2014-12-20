@@ -8,7 +8,7 @@
             {{ $post->date('F d, Y') }}
 
             @if (count($post->tags))
-                &bull; Tags: {{ $post->listTags() }}
+                · Tags: {{ $post->listTags() }}
             @endif
         </small>
     </p>

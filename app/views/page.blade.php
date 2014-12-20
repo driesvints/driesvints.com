@@ -6,7 +6,7 @@
     <p class="info">
         <small>
             @if (count($page->tags))
-                &bull; Tags: {{ $page->listTags() }}
+                · Tags: {{ $page->listTags() }}
             @endif
         </small>
     </p>
