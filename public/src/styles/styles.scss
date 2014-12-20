@@ -47,25 +47,19 @@ code {
 }
 pre {
     background-color: transparent;
+    border-radius: 0;
     border: none;
     font-size: 0.6em;
     line-height: 1.8em;
     padding: 0;
 }
-@media (min-width: 768px) {
-    pre {
-        font-size: 0.85em;
-    }
-}
 pre code {
     padding: 10px 15px;
 }
-code {
-    border-radius: 0;
-}
-@media (min-width: 786px) {
-    code {
+@media (min-width: 768px) {
+    pre {
         border-radius: 4px;
+        font-size: 0.85em;
     }
 }
 
@@ -153,11 +147,14 @@ blockquote p {
 }
 #header .next {
     color: rgba(220, 220, 220, 0.8);
-    font-size: 3.5em;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
+    font-size: 3.5em;
+    position: absolute;
+    bottom: 20px;
+    margin-left: -20px;
 }
 #header .next:hover {
     color: #fff;
@@ -167,11 +164,6 @@ blockquote p {
 @media (min-width: 992px) {
     #header {
         padding: 50px 0;
-    }
-    #header .next {
-        position: absolute;
-        bottom: 20px;
-        margin-left: -20px;
     }
 }
 
@@ -263,8 +255,10 @@ body.home #content .excerpt h3 {
 ---------------------------------------------------------*/
 
 #about {
-    padding: 25px 0;
+    padding: 25px 15px;
     text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
 
     img {
         border: 4px solid #ccc;
@@ -322,7 +316,8 @@ body.home #content .excerpt h3 {
 
 #content {
     line-height: 1.7em;
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     max-width: 768px;
     margin: 0 auto;
     word-wrap: break-word;
