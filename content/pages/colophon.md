@@ -9,7 +9,7 @@ This website is build on top of [the Laravel PHP framework](http://laravel.com/)
 
 [Bootstrap 3](http://getbootstrap.com/) was used to build the front-end.
 
-Icons on the website are [Glyphicons](http://getbootstrap.com/components/#glyphicons) or [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/).
+Icons on the website are [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/).
 
 Fonts used on the website are [Lato](http://www.google.com/fonts/specimen/Lato), [Noto Serif](http://www.google.com/fonts/specimen/Noto+Serif) and [Source Code Pro](http://www.google.com/fonts/specimen/Source+Code+Pro).
 

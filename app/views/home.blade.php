@@ -12,7 +12,7 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <a class="next" href="#content"><i class="icon-chevron-sign-down"></i></a>
+    <a class="next" href="#content"><i class="fa fa-chevron-circle-down"></i></a>
 </div>
 
 <div id="content" class="container">
