@@ -39,6 +39,11 @@ a:hover {
     color: #2980b9;
     text-decoration: none;
 }
+a:-webkit-any-link,
+a:-moz-any-link,
+a:any-link {
+    text-decoration: none;
+}
 
 pre,
 code {
