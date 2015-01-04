@@ -81,6 +81,10 @@ blockquote p {
     border-radius: 0;
 }
 
+.center {
+    text-align: center;
+}
+
 /* Homepage
 ---------------------------------------------------------*/
 
@@ -368,6 +372,7 @@ h2.title {
 #content .single p,
 #content .single ul,
 #content .single ol,
+#content .single img,
 #content .single blockquote,
 #content .single div.twitter-quote,
 #disqus_thread {
@@ -395,6 +400,7 @@ h2.title {
     #content .single p,
     #content .single ul,
     #content .single ol,
+    #content .single img,
     #content .single blockquote,
     #disqus_thread {
         padding: 0 20px;
