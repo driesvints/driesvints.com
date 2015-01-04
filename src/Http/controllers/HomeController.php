@@ -9,14 +9,14 @@ class HomeController extends BaseController
     /**
      * @var \Dries\Content\Manager
      */
-    protected $contentManager;
+    protected $content;
 
     /**
-     * @param \Dries\Content\Manager $contentManager
+     * @param \Dries\Content\Manager $content
      */
-    public function __construct(Manager $contentManager)
+    public function __construct(Manager $content)
     {
-        $this->contentManager = $contentManager;
+        $this->content = $content;
     }
 
     /**
@@ -26,7 +26,7 @@ class HomeController extends BaseController
      */
     public function index()
     {
-        $posts = $this->contentManager->get('posts')->published()->orderBy('date', 'desc')->take(3);
+        $posts = $this->content->get('posts')->published()->orderBy('date', 'desc')->take(3);
 
         return View::make('home', compact('posts'));
     }

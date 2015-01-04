@@ -10,14 +10,14 @@ class PostsController extends BaseController
     /**
      * @var \Dries\Content\Manager
      */
-    protected $contentManager;
+    protected $content;
 
     /**
-     * @param \Dries\Content\Manager $contentManager
+     * @param \Dries\Content\Manager $content
      */
-    public function __construct(Manager $contentManager)
+    public function __construct(Manager $content)
     {
-        $this->contentManager = $contentManager;
+        $this->content = $content;
     }
 
     /**
@@ -27,7 +27,7 @@ class PostsController extends BaseController
      */
     public function blog()
     {
-        $posts = $this->contentManager->get('posts')->published()->orderBy('date', 'desc');
+        $posts = $this->content->get('posts')->published()->orderBy('date', 'desc');
 
         return View::make('blog', compact('posts'));
     }
@@ -40,7 +40,7 @@ class PostsController extends BaseController
      */
     public function show($slug)
     {
-        $post = $this->contentManager->get('posts')->published()->filterBy('slug', $slug)->first();
+        $post = $this->content->get('posts')->published()->filterBy('slug', $slug)->first();
 
         if (! $post) {
             App::abort(404);

@@ -10,14 +10,14 @@ class PagesController extends BaseController
     /**
      * @var \Dries\Content\Manager
      */
-    protected $contentManager;
+    protected $content;
 
     /**
-     * @param \Dries\Content\Manager $contentManager
+     * @param \Dries\Content\Manager $content
      */
-    public function __construct(Manager $contentManager)
+    public function __construct(Manager $content)
     {
-        $this->contentManager = $contentManager;
+        $this->content = $content;
     }
 
     /**
@@ -28,7 +28,7 @@ class PagesController extends BaseController
      */
     public function show($slug)
     {
-        $page = $this->contentManager->get('pages')->published()->filterBy('slug', $slug)->first();
+        $page = $this->content->get('pages')->published()->filterBy('slug', $slug)->first();
 
         if (! $page) {
             App::abort(404);

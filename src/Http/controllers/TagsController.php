@@ -10,14 +10,14 @@ class TagsController extends BaseController
     /**
      * @var \Dries\Content\Manager
      */
-    protected $contentManager;
+    protected $content;
 
     /**
-     * @param \Dries\Content\Manager $contentManager
+     * @param \Dries\Content\Manager $content
      */
-    public function __construct(Manager $contentManager)
+    public function __construct(Manager $content)
     {
-        $this->contentManager = $contentManager;
+        $this->content = $content;
     }
 
     /**
@@ -38,7 +38,7 @@ class TagsController extends BaseController
      */
     public function show($tag)
     {
-        $posts = $this->contentManager->tagged('posts', $tag);
+        $posts = $this->content->tagged('posts', $tag);
 
         return View::make('tag', compact('tag', 'posts'));
     }
