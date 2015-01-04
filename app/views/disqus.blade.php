@@ -1,7 +1,7 @@
 @if (! $item->disable_comments)
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        var disqus_shortname = 'driesvints';
+        var disqus_shortname = '{{ App::environment('production') ? 'driesvints' : 'driesvintstesting' }}';
         var disqus_identifier = '{{ $item->slug }}';
 
         (function() {
