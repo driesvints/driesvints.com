@@ -1,4 +1,4 @@
-title: About the FlyPHP Issue
+title: About the FlyPHP issue
 slug: about-the-flyphp-issue
 status: published
 date: March 4 2014 00:15
@@ -6,7 +6,7 @@ tags: laravel
 -------
 I rarely react to drama in the PHP community. Usually the fact just is that the reasons for said drama are just not worth caring about it. This one is.
 
-## The Issue
+## The issue
 
 A few days ago some people took notice about [FlyPHP](http://flyphp.org/), a new PHP framework which obviously was just a copy of [Laravel](http://laravel.com/). There are quite some reactions from a lot of people who see this as plain theft from [Taylor](https://twitter.com/taylorotwell)'s work on Laravel. But is it really?
 
@@ -26,7 +26,7 @@ all copies or substantial portions of the Software.
 
 The original copyright holder, which is Taylor, should have been kept in the MIT license file. To fix this, [Taylor send in a Pull Request on Github](https://github.com/flyphp/flyframework/pull/1), urging Allan to re-add him as copyright holder. Should this get merged in soon, then this entire thing can be put to rest. If it doesn't gets merged in soon, Taylor still has the option to start [a DMCA Takedown](https://help.github.com/articles/dmca-takedown-policy) on Github. Github will examine the case and will be forced to conclude that the MIT license has been violated and will therefor take down the repositories related to FlyPHP. But then again, that's Taylor's choice and only he can make the request.
 
-## The Community's Reaction
+## The community's reaction
 
 Now a little note on the community's reaction. I'm a bit shocked by seeying all of these [hatred reactions](https://github.com/flyphp/flyframework/pull/1#issuecomment-36435333). Also, all these call-to-actions to start a virtual lynch mob are totally uncalled for.
 
@@ -34,7 +34,7 @@ The next thing I'm going to say might sound a little harsh but it's the thruth. 
 
 To be honest, I think this has blown way out of proportions. This isn't a way to solve problems. In fact, it never is. Instead of jumping in and accusing people first calmly observe the situation, ask around for more opinions and then form your own opinion based on the given facts. *Then* go in and give your opinion in *a mature way*.
 
-## Make Sure You Choose The Right License
+## Make sure you choose the right license
 
 Remember folks. Choosing the correct license isn't just deciding to slap the MIT license on all of your projects. Choosing a bad license can have severe consequenses for your project. In this case, if Allan kept the copyright for Taylor on the MIT license he wouldn't have done anything wrong.
 
@@ -42,7 +42,7 @@ If you want to prevent the above from happening to your own projects you should 
 
 Remember, the entire purpose of open-sourcing your projects isn't just so people can send in pull requests to make your project better. It's also that people can copy your project and modify and/or extend it so it suits their needs and thus make better use of it.
 
-## My Personal Opinion
+## My personal opinion
 
 My personal opinion on the matter? If he doesn't accepts the PR soon, Taylor should start the DMCA takedown soon and have the repositories removed. Once again, his choice.
 

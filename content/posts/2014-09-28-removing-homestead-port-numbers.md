@@ -1,4 +1,4 @@
-title: Removing Homestead Port Numbers
+title: Removing Homestead port numbers
 slug: removing-homestead-port-numbers
 status: published
 date: September 28 2014 20:00
