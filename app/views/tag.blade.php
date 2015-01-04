@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout', ['pageTitle' => "Tagged: $tag"])
 
 @section('content')
 

@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site info -->
-    <title>{{ $pageTitle }}</title>
-    @if (! empty($metaDescription))
-    <meta name="description" content="{{ $metaDescription }}">
+    <title>{{ isset($pageTitle) ? $pageTitle . ' | ' : '' }}Dries Vints</title>
+
+    @if (isset($metaDescription))
+        <meta name="description" content="{{ Str::limit(strip_tags($metaDescription), 160) }}">
     @endif
 
     <!-- Favicons -->

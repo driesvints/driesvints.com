@@ -3,6 +3,7 @@ namespace Dries\Http\Controllers;
 
 use Dries\Content\Manager;
 use Redirect;
+use View;
 
 class TagsController extends BaseController
 {
@@ -37,10 +38,8 @@ class TagsController extends BaseController
      */
     public function show($tag)
     {
-        $this->pageTitle = "Tagged: $tag";
-
         $posts = $this->contentManager->tagged('posts', $tag);
 
-        return $this->view('tag', compact('tag', 'posts'));
+        return View::make('tag', compact('tag', 'posts'));
     }
 }

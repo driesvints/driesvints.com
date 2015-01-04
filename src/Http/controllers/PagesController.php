@@ -3,6 +3,7 @@ namespace Dries\Http\Controllers;
 
 use App;
 use Dries\Content\Manager;
+use View;
 
 class PagesController extends BaseController
 {
@@ -33,9 +34,6 @@ class PagesController extends BaseController
             App::abort(404);
         }
 
-        $this->pageTitle = $page->title;
-        $this->metaDescription = $page->excerpt;
-
-        return $this->view('page', compact('page'));
+        return View::make('page', compact('page'));
     }
 }

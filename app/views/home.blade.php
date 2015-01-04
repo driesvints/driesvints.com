@@ -1,4 +1,7 @@
-@include('header')
+@include('header', [
+    'metaDescription' => 'Web Developer with a passion for open-source, community & Laravel.
+    Currently works at BeatSwitch in the city of Antwerp, Belgium.'
+])
 
 <div id="header">
     <h1>Dries Vints</h1>

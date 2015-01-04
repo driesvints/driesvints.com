@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout', ['pageTitle' => $post->title, 'metaDescription' => $post->excerpt])
 
 @section('content')
 

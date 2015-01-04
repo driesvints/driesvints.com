@@ -3,6 +3,7 @@ namespace Dries\Http\Controllers;
 
 use App;
 use Dries\Content\Manager;
+use View;
 
 class PostsController extends BaseController
 {
@@ -26,11 +27,9 @@ class PostsController extends BaseController
      */
     public function blog()
     {
-        $this->pageTitle = 'Blog';
-
         $posts = $this->contentManager->get('posts')->published()->orderBy('date', 'desc');
 
-        return $this->view('blog', compact('posts'));
+        return View::make('blog', compact('posts'));
     }
 
     /**
@@ -47,9 +46,6 @@ class PostsController extends BaseController
             App::abort(404);
         }
 
-        $this->pageTitle = $post->title;
-        $this->metaDescription = $post->excerpt;
-
-        return $this->view('post', compact('post'));
+        return View::make('post', compact('post'));
     }
 }

@@ -2,6 +2,7 @@
 namespace Dries\Http\Controllers;
 
 use Dries\Content\Manager;
+use View;
 
 class HomeController extends BaseController
 {
@@ -27,9 +28,6 @@ class HomeController extends BaseController
     {
         $posts = $this->contentManager->get('posts')->published()->orderBy('date', 'desc')->take(3);
 
-        $this->metaDescription = 'Web Developer with a passion for open-source, community & Laravel.
-            Currently works at BeatSwitch in the city of Antwerp, Belgium.';
-
-        return $this->view('home', compact('posts'));
+        return View::make('home', compact('posts'));
     }
 }
