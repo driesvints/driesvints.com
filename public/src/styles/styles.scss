@@ -110,8 +110,18 @@ blockquote p {
     height: 100%;
     min-height: 520px;
 
-    h1, h2 {
+    h1 {
         color: #eee;
+        font-size: 2.4em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    h2 {
+        color: #eee;
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.3em;
+        margin-bottom: 25px;
     }
 
     .navigation {
@@ -119,15 +129,36 @@ blockquote p {
 
         a { color: white; }
         a:hover { text-decoration: underline; }
+    }
 
-        .separator {
-            font-size: 0.75em;
-        }
+    .next {
+        color: rgba(220, 220, 220, 0.8);
+        -webkit-transition: color 0.3s ease;
+        -moz-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+        transition: color 0.3s ease;
+        font-size: 3.5em;
+        position: absolute;
+        bottom: 20px;
+        margin-left: -20px;
+    }
+    .next:hover {
+        color: #fff;
+        text-decoration: none;
     }
 }
-@media (min-width: 768px) {
-    #header .navigation {
-        font-size: 0.8em;
+@media (min-width: 1025px) and (min-height: 800px) {
+    #header {
+        padding: 50px 0;
+
+        h1 { font-size: 3.2em }
+        h2 { font-size: 1.8em }
+        .navigation { font-size: 1em }
+    }
+}
+@media (min-height: 1000px) and (min-width: 992px) {
+    #header {
+        min-height: 1000px;
     }
 }
 
@@ -142,44 +173,6 @@ blockquote p {
 }
 #page-header ul a:hover {
     text-decoration: none;
-}
-#header h1 {
-    font-size: 2.4em;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-#header h2 {
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.3em;
-    margin-bottom: 25px;
-}
-#header .next {
-    color: rgba(220, 220, 220, 0.8);
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
-    font-size: 3.5em;
-    position: absolute;
-    bottom: 20px;
-    margin-left: -20px;
-}
-#header .next:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-@media (min-width: 992px) {
-    #header {
-        padding: 50px 0;
-    }
-}
-
-@media (min-height: 1000px) and (min-width: 992px) {
-    #header {
-        min-height: 1000px;
-    }
 }
 
 #page-header {
@@ -200,6 +193,30 @@ blockquote p {
 #page-header a i {
     font-size: 1.2em;
     margin-right: 10px;
+}
+
+/* Homepage - About
+---------------------------------------------------------*/
+
+#about {
+    padding: 25px 15px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+
+    img {
+        border: 4px solid #ccc;
+    }
+
+    h3 {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+}
+@media (min-width: 768px) {
+    #about {
+        padding: 50px 15px;
+    }
 }
 
 /* Homepage - Posts
@@ -262,30 +279,6 @@ blockquote p {
 .blog-btn .btn:hover {
     background-color: #2980B9;
     color: white;
-}
-
-/* Homepage - About
----------------------------------------------------------*/
-
-#about {
-    padding: 25px 15px;
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-
-    img {
-        border: 4px solid #ccc;
-    }
-
-    h3 {
-        font-size: 2.2em;
-        margin-bottom: 25px;
-    }
-}
-@media (min-width: 768px) {
-    #about {
-        padding: 50px 15px;
-    }
 }
 
 /* Blog
