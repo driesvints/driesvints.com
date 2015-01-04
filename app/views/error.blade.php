@@ -1,10 +1,11 @@
-@include('header')
+@extends('layout', ['pageTitle' => $title])
 
-<div id="error" class="container">
-    <div class="error-block">
-        <h1>Woops, something went wrong!</h1>
-        </p><a href="{{ route('home') }}">Return to homepage</a></p>
-    </div>
+@section('content')
+
+<div id="error-page">
+    <h1>{{ $title }}</h1>
+    <p>{{ $description }}</p>
+    <a class="btn btn-default btn-outline" href="{{ route('home') }}"><i class="fa fa-chevron-left"></i> Return to homepage</a>
 </div>
 
-@include('footer')
+@stop

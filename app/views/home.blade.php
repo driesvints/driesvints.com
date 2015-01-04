@@ -33,7 +33,7 @@
         @endforeach
     @endif
 
-    <p class="blog-btn">
+    <p class="read-more-btn">
         <a class="btn btn-default btn-lg btn-outline" href="{{ route('blog') }}">Read More</a>
     </p>
 </div>

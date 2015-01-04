@@ -44,15 +44,23 @@ Log::useFiles(storage_path() . '/logs/laravel.log');
 App::error(function (Exception $exception, $code) {
     Log::error($exception);
 
-    if (! App::isLocal()) {
-        switch ($code) {
-            case 404:
-                return Response::view('404', [], 404);
+    $data = [
+        'title' => 'Something went wrong',
+        'description' => 'Whoops! This shouldn\'t have happened. We\'ve set out our minions to deal with the problem.'
+    ];
 
-            default:
-                return Response::view('error', [], $code);
-        }
-    }
+    return Response::view('error', $data, $code);
+});
+
+App::missing(function(Exception $exception) {
+    Log::error($exception);
+
+    $data = [
+        'title' => 'Page not found',
+        'description' => 'Whoops! Looks like this page isn\'t here (anymore).'
+    ];
+
+    return Response::view('error', $data, 400);
 });
 
 /*
@@ -62,24 +70,13 @@ App::error(function (Exception $exception, $code) {
 |
 | The "down" Artisan command gives you the ability to put an application
 | into maintenance mode. Here, you will define what is displayed back
-| to the user if maintenace mode is in effect for this application.
+| to the user if maintenance mode is in effect for this application.
 |
 */
 
 App::down(function () {
     return Response::make("Be right back!", 503);
 });
-
-/*
-|--------------------------------------------------------------------------
-| View Composers
-|--------------------------------------------------------------------------
-|
-| Register view composer classes.
-|
-*/
-
-View::composer('header', 'Dries\View\HeaderComposer');
 
 /*
 |--------------------------------------------------------------------------
