@@ -13,7 +13,7 @@
         <a href="#about">About</a>
     </p>
 
-    <a class="next icon-highlight" href="#about"><i class="fa fa-chevron-circle-down"></i></a>
+    <a class="next icon-highlight" href="#about"><i class="fa fa-chevron-down"></i></a>
 </div>
 
 <div id="about">
