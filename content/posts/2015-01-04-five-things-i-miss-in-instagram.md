@@ -6,7 +6,7 @@ tags: review
 -------
 [Instagram](http://instagram.com/) is one of those social networking apps that really stuck to me. I usually try one out but quickly remove it again when it doesn't immediately appeal to me. It took me ages before my friends finally convinced me to use [Snapchat](https://www.snapchat.com/) and I'm still not overly fond of it even though I regularly use it these days.
 
-But not Instagram. I check it multiple times a day and regularly use it. I mostly use it privately with friends and family. Because I use it so much I'm noticing some of Instagram's shortcomings. Things where the service is lacking and where it can definitely be improved. Below is a list where with five of the things I miss most in Instagram.
+But not Instagram. I check it multiple times a day and regularly use it. I mostly use it privately with friends and family. Because I use it so much I'm noticing some of Instagram's shortcomings. Things where the service is lacking and where it can definitely be improved. Below is a list with five of the things I miss most in Instagram.
 
 ## Multiple Accounts
 
