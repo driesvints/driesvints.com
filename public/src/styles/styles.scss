@@ -244,6 +244,7 @@ blockquote p {
 #recent-posts .excerpt {
     color: #333;
     display: block;
+    line-height: 1.7em;
     margin-bottom: 40px;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
@@ -256,10 +257,12 @@ blockquote p {
 }
 #recent-posts .excerpt .date {
     font-size: 0.9em;
+    line-height: 1.1em;
     font-style: italic;
 }
 #recent-posts .excerpt h3 {
     font-weight: 900;
+    line-height: 1.4em;
     margin-top: 5px;
 }
 @media (min-width: 768px) {
