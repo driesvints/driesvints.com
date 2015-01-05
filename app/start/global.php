@@ -60,7 +60,7 @@ App::missing(function(Exception $exception) {
         'description' => 'Whoops! Looks like this page isn\'t here (anymore).'
     ];
 
-    return Response::view('error', $data, 400);
+    return Response::view('error', $data, 404);
 });
 
 /*
