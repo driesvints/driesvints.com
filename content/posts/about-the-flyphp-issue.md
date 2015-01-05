@@ -28,9 +28,9 @@ The original copyright holder, which is Taylor, should have been kept in the MIT
 
 ## The community's reaction
 
-Now a little note on the community's reaction. I'm a bit shocked by seeying all of these [hatred reactions](https://github.com/flyphp/flyframework/pull/1#issuecomment-36435333). Also, all these call-to-actions to start a virtual lynch mob are totally uncalled for.
+Now a little note on the community's reaction. I'm a bit shocked by seeing all of these [hatred reactions](https://github.com/flyphp/flyframework/pull/1#issuecomment-36435333). Also, all these call-to-actions to start a virtual lynch mob are totally uncalled for.
 
-The next thing I'm going to say might sound a little harsh but it's the thruth. You have no say in this matter. You can give your opinion, it's a free world, but deciding if FlyPHP should be removed is not up to you. It isn't even up to Taylor. He chose the MIT license when he released Laravel which allows people to redistribute it. Besides, he already stated that [he's perfectly fine with this as long as he gets re-added as the copyright holder](https://github.com/flyphp/flyframework/pull/1#issuecomment-36532724).
+The next thing I'm going to say might sound a little harsh but it's the truth. You have no say in this matter. You can give your opinion, it's a free world, but deciding if FlyPHP should be removed is not up to you. It isn't even up to Taylor. He chose the MIT license when he released Laravel which allows people to redistribute it. Besides, he already stated that [he's perfectly fine with this as long as he gets re-added as the copyright holder](https://github.com/flyphp/flyframework/pull/1#issuecomment-36532724).
 
 To be honest, I think this has blown way out of proportions. This isn't a way to solve problems. In fact, it never is. Instead of jumping in and accusing people first calmly observe the situation, ask around for more opinions and then form your own opinion based on the given facts. *Then* go in and give your opinion in *a mature way*.
 
