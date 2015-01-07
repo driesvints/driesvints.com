@@ -139,6 +139,7 @@ blockquote p {
 
     .navigation {
         font-weight: 300;
+        font-size: 0.8em;
 
         a { color: white; }
         a:hover { text-decoration: underline; }
@@ -150,7 +151,7 @@ blockquote p {
         -moz-transition: color 0.3s ease;
         -o-transition: color 0.3s ease;
         transition: color 0.3s ease;
-        font-size: 3.5em;
+        font-size: 2.2em;
         position: absolute;
         bottom: 20px;
         margin-left: -20px;
