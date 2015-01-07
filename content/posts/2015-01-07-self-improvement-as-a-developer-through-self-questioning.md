@@ -2,7 +2,7 @@ title: Self improvement as a developer through self-questioning
 slug: self-improvement-as-a-developer-through-self-questioning
 status: published
 date: January 7 2015
-tags: testing
+tags: clean-code
 -------
 I finally got around to watch [DDH](https://twitter.com/dhh)'s [talk at RailsConf last year about writing software](https://www.youtube.com/watch?v=9LfmrkyP81M). I love his reference at the end about the fact that every piece of code you write at first is just a draft. That's very much true. One thing that I've noticed a lot over the past five years as a developer is how a lot of people will stick to their first version of the piece of code they've just written. They often say "Ow hey, this now works so I must be done. Better send in that pull request." and they go on with their next assignment. Because the faster you work, the better of a programmer you are, right?
 
