@@ -1,5 +1,12 @@
-/bootstrap/compiled.php
+# Ignore dependency folders
 /vendor
-.DS_Store
 /node_modules
-.sass-cache
+
+# Ignore environment config file
+.env
+
+# Ignore compiled public folders
+/public/build
+/public/css
+/public/img
+/public/js

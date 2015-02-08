@@ -2,3 +2,5 @@ suites:
     default:
         namespace: Dries
         psr4_prefix: Dries
+        src_path: app
+formatter.name: dot

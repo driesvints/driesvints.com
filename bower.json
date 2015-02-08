@@ -6,8 +6,8 @@
         "dries.vints@gmail.com"
     ],
     "dependencies": {
-        "bootstrap-sass-official": "~3.2",
-        "font-awesome": "~4.2",
-        "highlightjs": "~8.3"
+        "bootstrap-sass-official": "^3.2",
+        "font-awesome": "^4.2",
+        "highlightjs": "^8.3"
     }
 }
