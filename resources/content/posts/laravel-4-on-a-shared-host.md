@@ -197,6 +197,6 @@ No SSH access also means no access to composer, artisan and other command line t
 
 Do a composer install with the `--no-dev` argument before uploading your files. This makes sure your dependencies are optimized for production without the unnecessary development packages. Overwrite your vendor folder with the updated dependencies when you upload through FTP.
 
-## Conslusion
+## Conclusion
 
 I hope some of these tips helped you on getting Laravel 4 installed on your shared hosting. If you have more tips please share them in the comments and I'll add them to this article.
