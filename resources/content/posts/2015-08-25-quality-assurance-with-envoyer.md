@@ -1,7 +1,7 @@
 title: Quality Assurance with Envoyer
 slug: quality-assurance-with-envoyer
 status: published
-date: August 21 2015
+date: August 25 2015
 tags: laravel
 -------
 This is one of the tutorials I did for my Laracon EU talk.
