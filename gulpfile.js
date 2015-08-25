@@ -12,7 +12,10 @@ var paths = {
 
 elixir(function(mix) {
     mix
-        .sass("app.scss", "public/css/", {includePaths: [
+        .sass([
+                paths.highlightjs + "styles/solarized_dark.css",
+                "app.scss"
+            ], "public/css/", {includePaths: [
             paths.bootstrap + 'stylesheets/',
             paths.fontawesome + 'scss/'
         ]})
@@ -26,7 +29,6 @@ elixir(function(mix) {
         .version(["public/css/app.css", "public/js/app.js"])
         .copy(paths.bootstrap + "fonts/bootstrap/**", "public/build/fonts")
         .copy(paths.fontawesome + "fonts/**", "public/build/fonts")
-        .copy(paths.highlightjs + "styles/solarized_dark.css", "public/css/solarized_dark.css")
         .imagemin()
         .phpUnit()
         .phpSpec();
