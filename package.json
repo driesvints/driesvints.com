@@ -1,7 +1,15 @@
 {
+  "private": true,
   "devDependencies": {
-    "gulp": "^3.8.8",
-    "laravel-elixir": "*",
-    "laravel-elixir-imagemin": "^0.2.1"
+    "gulp": "^3.8.8"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "highlightjs": "^8.7.0",
+    "jquery": "^2.2.2",
+    "jquery.backstretch": "^2.1.13",
+    "laravel-elixir": "^4.2.0",
+    "laravel-elixir-imagemin": "^0.2.3"
   }
 }

@@ -1,6 +1,3 @@
-# Ignore dependency folders
-/vendor
-/node_modules
-
-# Ignore environment config file
-.env
+/build_local/
+/node_modules/
+/vendor/
