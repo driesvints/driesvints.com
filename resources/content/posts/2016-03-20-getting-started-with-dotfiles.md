@@ -5,7 +5,7 @@ date: March 20 2016
 tags: osx
 -------
 
-Let's draw a situation. Your computer breaks down. And I don't mean the classic "Damnit, my computer broke down, better get it fixed". No, I mean the "Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back"-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.
+Let's draw a situation. Your computer breaks down. And I don't mean the classic "Dammit, my computer broke down, better get it fixed". No, I mean the "Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back"-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.
 
 Thankfully, these days we have something called 'The Cloud ☁️'. We're developers so we're probably smart enough to save all of our documents up on Dropbox, Google Drive, iCloud, Github or whatever floats up there. Right? ... Right?
 
@@ -17,7 +17,7 @@ Enter dotfiles.
 
 ## Why Dotfiles?
 
-Dotfiles basically contain the preferred setup features of your computer. They usually come with a setup procedure so you can easily install everything again when you need to start from a fresh system. They're also really useful for syncing preferences across multiple devices.
+Dotfiles basically contain the preferred setup of your computer. They usually come with a setup procedure so you can easily install everything again when you need to start from a fresh system. They're also really useful for syncing preferences across multiple devices.
 
 A couple of months ago I had to re-install my computer a couple of times. And damn, that was quite the undertaking. Figuring out which apps I had to re-install, setting up my IDE again properly, losing all of my shell settings and aliases. Total pain. And something no one wants to do ever again. So I decided that the next time I needed to re-install my computer I'd be prepared. I wouldn't go through this ordeal ever again.
 
@@ -57,7 +57,7 @@ My main OS of choice is OS X. Being the Apple fanboy that I am, I thoroughly enj
 
 When running OS X, [Homebrew](http://brew.sh/) is essential. It helps you install packages and tools in an easy way through the CLI. It should probably be the first thing you install when setting up a new Mac.
 
-Homebrew can also help install your apps. For that, you'll need [Homebrew Cask](https://caskroom.github.io/). You don't need to worry about manually downloading and installing packages and tools. Homebrew Cask can even install your preferred fonts. Apps from the app store still need to be installed manually, though.
+Homebrew can also help install your apps. For that, you'll need [Homebrew Cask](https://caskroom.github.io/). You won't need to worry about manually downloading and installing packages and tools anymore. Cask can even install your preferred fonts. Apps from the app store still need to be installed manually, though.
 
 To bring it all together in your dotfiles, you probably want to adopt a `Brewfile`. [Homebrew Bundler](https://github.com/Homebrew/homebrew-bundle) allows you to organize your system's dependencies in a single file so Homebrew knows what to install when installing from a fresh system. It's like [Composer](https://getcomposer.org/) but for your Mac. Feel free to take a look at [my own Brewfile](https://github.com/driesvints/dotfiles/blob/master/Brewfile) to see what tools and apps I've got installed. A simple `brew bundle` installs your dependencies.
 
