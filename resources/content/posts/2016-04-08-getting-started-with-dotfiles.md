@@ -1,7 +1,7 @@
 title: Getting Started with Dotfiles
 slug: getting-started-with-dotfiles
 status: published
-date: March 20 2016
+date: April 8 2016
 tags: osx
 -------
 
