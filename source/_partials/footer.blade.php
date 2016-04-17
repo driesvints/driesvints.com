@@ -1,4 +1,3 @@
-
 <div id="contact">
     <div class="inner-box">
         <div class="container-fluid">

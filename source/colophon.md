@@ -1,8 +1,7 @@
 ---
 extends: _layouts.page
-section: content
+section: body
 title: "Colophon"
-author: "Dries Vints"
 ---
 
 This website is build on top of [the Laravel PHP framework](http://laravel.com/).

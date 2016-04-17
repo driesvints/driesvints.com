@@ -8,11 +8,14 @@ elixir.config.publicPath = 'source';
 elixir(function(mix) {
     var env = argv.e || argv.env || 'local';
 
-    mix.sass('main.scss')
+    mix.sass([
+            './node_modules/highlightjs/styles/solarized_dark.css',
+            'main.scss'
+        ])
         .scripts([
             './node_modules/jquery/dist/jquery.js',
             './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-            './node_modules/highlightjs/highlight.pack.js',
+            './node_modules/highlightjs/highlight.pack.min.js',
             './node_modules/jquery.backstretch/jquery.backstretch.min.js',
             'main.js'
         ])

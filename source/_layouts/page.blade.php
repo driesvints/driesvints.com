@@ -1,7 +1,7 @@
 @extends('_layouts.master')
 
-@section('body')
+@section('content')
     <h1>{{ $title }}</h1>
 
-    @yield('content')
+    @yield('body')
 @endsection

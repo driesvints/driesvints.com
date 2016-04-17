@@ -7,7 +7,7 @@
 <div class="clearfix"></div>
 
 <div id="content">
-    @yield('body')
+    @yield('content')
 </div>
 
 @include('_partials/footer')

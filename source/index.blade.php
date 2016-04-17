@@ -20,13 +20,17 @@
     <img class="img-circle" src="http://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5.jpg?s=125" alt="">
     <h3>Dries Vints</h3>
     <p>
-        Maintainer of <a href="http://laravel.io">Laravel.IO</a>, the <a href="http://laravel.com">Laravel</a> Community Platform. Creator of <a href="https://github.com/BeatSwitch/lock">Lock</a>, a popular PHP acl package. Lead Developer at <a href="http://beatswitch.com">BeatSwitch</a>.
+        Maintainer of <a href="http://laravel.io">Laravel.io</a>, the <a href="http://laravel.com">Laravel</a> Community Platform. Creator of <a href="https://github.com/BeatSwitch/lock">Lock</a>, a popular PHP acl package. Lead Developer at <a href="http://beatswitch.com">BeatSwitch</a>.
     </p>
 </div>
 
 <hr class="home-separator" />
 
 <div id="recent-posts">
+    @foreach (array_slice($posts, 0, 3) as $post)
+        @include('_partials/excerpt')
+    @endforeach
+
     <p class="read-more-btn">
         <a class="btn btn-default btn-lg btn-outline" href="/blog">Read More</a>
     </p>
