@@ -1,7 +1,11 @@
 {
   "private": true,
   "devDependencies": {
-    "gulp": "^3.8.8"
+    "gulp": "^3.8.8",
+    "gulp-util": "^3.0.7",
+    "laravel-elixir": "^4.2.1",
+    "laravel-elixir-imagemin": "^0.2.3",
+    "yargs": "^4.6.0"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
