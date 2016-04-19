@@ -27,7 +27,7 @@
 <hr class="home-separator" />
 
 <div id="recent-posts">
-    @foreach (array_slice($posts, 0, 3) as $post)
+    @foreach ($posts->take(3) as $post)
         @include('_partials/excerpt')
     @endforeach
 

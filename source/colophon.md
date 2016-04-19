@@ -3,7 +3,6 @@ extends: _layouts.page
 section: body
 title: "Colophon"
 ---
-
 This website is build on top of [the Laravel PHP framework](http://laravel.com/).
 
 [Bootstrap 3](http://getbootstrap.com/) was used to build the front-end.

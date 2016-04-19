@@ -1,14 +1,10 @@
 <?php
 
+require_once __DIR__.'/vendor/autoload.php';
+
+use Dries\Blog;
+
 return [
     'production' => false,
-
-    'posts' => [
-        [
-            'title' => 'Removing Homestead port numbers',
-            'slug' => 'removing-homestead-port-numbers',
-            'date' => new DateTime('2014-09-28'),
-            'excerpt' => '',
-        ],
-    ],
+    'posts' => Blog::yolo()->posts(),
 ];

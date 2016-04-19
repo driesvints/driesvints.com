@@ -1,0 +1,12 @@
+{
+    "require": {
+        "illuminate/support": "^5.2",
+        "mnapoli/front-yaml": "^1.5",
+        "symfony/Finder": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dries\\": "src/"
+        }
+    }
+}

@@ -1,7 +1,7 @@
-<a class="excerpt" href="/blog/{{ $post['slug'] }}">
-    <p class="date">{{ $post['date']->format('F d, Y') }}</p>
+<a class="excerpt" href="/blog/{{ $post->slug() }}">
+    <p class="date">{{ $post->publishedAt()->format('F d, Y') }}</p>
 
-    <h3>{{ $post['title'] }}</h3>
+    <h3>{{ $post->title() }}</h3>
 
-    <p>{{ $post['excerpt'] }}</p>
+    <p>{{ $post->excerpt() }}</p>
 </a>
