@@ -17,9 +17,11 @@
                 {{ $title }}
 
                 @if (isset($edit))
-                    <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/{{ $edit }}.md">
-                        <i class="fa fa-pencil"></i>
-                    </a>
+                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/{{ $edit }}.md">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
                 @endif
             </h1>
         </div>

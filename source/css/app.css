@@ -8166,6 +8166,8 @@ blockquote p {
     text-decoration: none; }
   #page-header h1 {
     margin-top: 15px; }
+    #page-header h1 a {
+      font-size: .6em; }
   #page-header .inner {
     height: 100%;
     margin: 0 auto;
