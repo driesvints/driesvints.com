@@ -1,16 +1,14 @@
-@extends('_layouts.master')
+@php($post = Dries\Blog::yolo()->getPostByTitle($title))
+
+@extends('_layouts/master', [
+    'date' => $post->publishedAt(),
+    'edit' => $post->slug(),
+    'metaDescription' => $post->excerpt(),
+])
 
 @section('content')
-    @php($post = Dries\Blog::yolo()->getPostByTitle($title))
 
-    <p class="info">
-        <small>
-            {{ $post->publishedAt()->format('F d, Y') }}
-        </small>
-    </p>
-
-    <h1>{{ $title }}</h1>
-
+<div class="single">
     @yield('body')
 
     <div id="disqus_thread"></div>
@@ -24,4 +22,6 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
+</div>
+
 @endsection

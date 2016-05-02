@@ -1,10 +1,8 @@
-@extends('_layouts/master', ['pageTitle' => 'Blog'])
+@extends('_layouts/master', ['title' => 'Blog'])
 
 @section('content')
 
 <div id="blog">
-    <h1 class="title">Blog</h1>
-
     @foreach ($posts as $post)
         <div class="post">
             <div class="date">{{ $post->publishedAt()->format('F j, Y') }}</div>

@@ -1,7 +1,9 @@
-@extends('_layouts.master')
+@extends('_layouts/master')
 
 @section('content')
-    <h1>{{ $title }}</h1>
 
+<div class="single">
     @yield('body')
+</div>
+
 @endsection

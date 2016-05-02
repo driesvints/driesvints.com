@@ -8149,33 +8149,34 @@ blockquote p {
   #header {
     min-height: 1000px; } }
 
-#page-header ul {
-  font-weight: 300;
-  position: relative;
-  text-transform: uppercase;
-  z-index: 10; }
-
-#page-header ul a {
-  color: #ddd; }
-
-#page-header ul a:hover {
-  text-decoration: none; }
-
+/* Page Header
+---------------------------------------------------------*/
 #page-header {
-  float: left;
-  padding-top: 10px;
-  padding-left: 10px; }
-
-#page-header a {
-  color: #eee;
-  transition: color 0.3s ease; }
-
-#page-header a:hover {
-  color: #777; }
-
-#page-header a i {
-  font-size: 1.2em;
-  margin-right: 10px; }
+  color: white;
+  height: 100%;
+  margin-bottom: 20px;
+  max-height: 350px;
+  min-height: 200px;
+  text-shadow: 0 0 5px black; }
+  #page-header .navigation {
+    padding-top: 10px; }
+  #page-header a {
+    color: white; }
+  #page-header a:hover {
+    text-decoration: none; }
+  #page-header h1 {
+    margin-top: 15px; }
+  #page-header .inner {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 0 20px;
+    position: relative; }
+    #page-header .inner .meta {
+      position: absolute;
+      bottom: 20px;
+      max-width: 100%;
+      padding-right: 20px; }
 
 /* Homepage - About
 ---------------------------------------------------------*/
@@ -8267,8 +8268,6 @@ blockquote p {
 ---------------------------------------------------------*/
 #content {
   line-height: 1.7em;
-  padding-top: 20px;
-  padding-bottom: 20px;
   max-width: 768px;
   margin: 0 auto;
   word-wrap: break-word; }
@@ -8295,6 +8294,9 @@ h2.title {
 @media (min-width: 768px) {
   #content .single h1 {
     font-size: 2.2em; } }
+
+#content .single h1 {
+  margin-top: 0; }
 
 #content .single h2 {
   margin-top: 50px; }
@@ -8326,6 +8328,9 @@ h2.title {
   padding: 15px 15px; }
 
 @media (min-width: 768px) {
+  #content {
+    padding-top: 20px;
+    padding-bottom: 20px; }
   #content .single h1,
   #content .single h2,
   #content .single h3,

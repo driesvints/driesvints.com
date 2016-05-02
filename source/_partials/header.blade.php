@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site info -->
-    <title>{{ isset($pageTitle) ? $pageTitle . ' | ' : '' }}Dries Vints</title>
+    <title>{{ isset($title) ? $title . ' | ' : '' }}Dries Vints</title>
 
     @if (isset($metaDescription))
         <meta name="description" content="{{ $metaDescription }}">

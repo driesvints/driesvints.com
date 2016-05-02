@@ -1,10 +1,30 @@
 @include('_partials/header')
 
 <div id="page-header">
-    <a href="/"><i class="fa fa-home"></i></a>
-    <a href="/blog"><i class="fa fa-list"></i></a>
+    <div class="inner">
+        <div class="navigation">
+            <a href="/"><i class="fa fa-home"></i></a> ·
+            <a href="/blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+            @if (isset($date))
+                <div class="date">
+                    {{ $date->format('F d, Y') }}
+                </div>
+            @endif
+
+            <h1>
+                {{ $title }}
+
+                @if (isset($edit))
+                    <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/{{ $edit }}.md">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+                @endif
+            </h1>
+        </div>
+    </div>
 </div>
-<div class="clearfix"></div>
 
 <div id="content">
     @yield('content')
