@@ -99,10 +99,7 @@ blockquote p {
     text-align: center;
 }
 
-/* Homepage
----------------------------------------------------------*/
-
-.home-separator {
+.separator {
     background: #eaeaea;
     border: none;
     height: 1px;
@@ -409,34 +406,6 @@ h2.title {
     }
 }
 
-/* Contact
----------------------------------------------------------*/
-
-#contact {
-    font-size: 2em;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, .5);
-
-    .inner-box {
-        margin: 0 auto;
-        width: auto;
-        max-width: 500px;
-    }
-
-    a {
-        color: white;
-        text-shadow: 0 0 15px #000;
-    }
-}
-@media (min-width: 768px) {
-    #contact {
-        font-size: 3em;
-        margin-top: 25px;
-        padding: 50px 15px;
-    }
-}
-
 /* Footer
 ---------------------------------------------------------*/
 
@@ -444,8 +413,21 @@ h2.title {
     color: #95a5a6;
     font-size: .7em;
     line-height: 1.6em;
-    padding: 20px 15px 8px;
+    padding: 8px 15px;
     text-align: center;
+
+    hr {
+        width: 75%;
+    }
+}
+
+.social-media {
+    font-size: 2em;
+    word-spacing: 25px;
+
+    a {
+        color: #ccc;
+    }
 }
 
 /* Error Page

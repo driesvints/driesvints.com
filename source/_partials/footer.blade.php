@@ -1,23 +1,12 @@
-<div id="contact">
-    <div class="inner-box">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-4">
-                    <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<hr class="separator" />
 
 <div id="footer">
     <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
         <p>
             Copyright &copy; 2016 Dries Vints<br/>
 
