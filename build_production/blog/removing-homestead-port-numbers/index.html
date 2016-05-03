@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>Removing Homestead port numbers | Dries Vints</title>
+
+            <meta name="description" content="I struggled a bit with removing trailing slashes for Homestead urls when Chris Fidao gave me a tip to omit the port for Homestead domain aliases.">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    September 28, 2014
+                </div>
+            
+            <h1>
+                Removing Homestead port numbers
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/removing-homestead-port-numbers.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p>I struggled a bit with removing trailing slashes for Homestead urls when <a href="https://twitter.com/fideloper">Chris Fidao</a> gave me a tip to omit the port for Homestead domain aliases.<!--more--></p>
+<div class="twitter-quote">
+    <blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/DriesVints">@DriesVints</a> Homestead assigns each server an IP on a private network, you should be able to skip port forwarding altogether.</p>&mdash; Chris Fidao™ (@fideloper) <a href="https://twitter.com/fideloper/status/516240175345967104">September 28, 2014</a></blockquote>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<p>So let's say we have a <code>dries.loc</code> alias which we link to in our hosts file:</p>
+<pre><code>127.0.0.1 dries.loc</code></pre>
+<p>This is how the docs tell us to do it and enables us to browse to our app using <code>http://dries.loc:8000</code>. But there's a way to omit the port number. Instead of using your localhost you should link to your ip address set in your <code>Homestead.yml</code> file.</p>
+<pre><code>192.168.10.10 dries.loc</code></pre>
+<p>And now you can browse without using the port number: <code>http://dries.loc</code>. Neat!</p>
+<p><strong>Extra tip!</strong> Provided by Dan Herd in the comments below. Just surf to <code>dries.loc.192.168.10.10.xip.io</code> to avoid editing your hosts file. Of course swap out the <code>dries.loc</code> part with your own domain alias.</p>
+<p>I sent in a PR to the docs so hopefully this will make things easier for people in the future.</p>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'removing-homestead-port-numbers';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

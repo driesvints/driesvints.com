@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>Laravel 4 Quick Tip: Custom Error Pages | Dries Vints</title>
+
+            <meta name="description" content="Update: For the Laravel 5 way of handling custom error pages, please check this awesome post by Matt Stauffer.
+Here&#039;s a quick tip on how to create custom error pages in Laravel 4. Laravel has a default built-in event listener for errors attached to the application instance. You can pass it a callback which will provide you with two variables, the exception and the error code.">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    May 02, 2013
+                </div>
+            
+            <h1>
+                Laravel 4 Quick Tip: Custom Error Pages
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/laravel-4-quick-tip-custom-error-pages.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p><strong>Update:</strong> For the Laravel 5 way of handling custom error pages, please check <a href="http://mattstauffer.co/blog/laravel-5.0-custom-error-pages">this awesome post</a> by <a href="https://twitter.com/stauffermatt">Matt Stauffer</a>.</p>
+<p>Here's a quick tip on how to create custom error pages in Laravel 4. Laravel has a default built-in event listener for errors attached to the application instance. You can pass it a callback which will provide you with two variables, the exception and the error code.<!--more--></p>
+<p>~~~ .php
+App::error(function($exception, $code)
+{
+switch ($code)
+{
+case 403:
+return Response::view('errors.403', array(), 403);</p>
+<pre><code>    case 404:
+        return Response::view('errors.404', array(), 404);
+
+    case 500:
+        return Response::view('errors.500', array(), 500);
+
+    default:
+        return Response::view('errors.default', array(), $code);
+}</code></pre>
+<p>});</p>
+<pre><code>
+
+This provides a very easy way to create custom error pages for your application.
+
+Edit: Edited the view response for providing the correct HTTP status code. Thanks [Holger Weis](https://twitter.com/betawax)!</code></pre>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'laravel-4-quick-tip-custom-error-pages';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

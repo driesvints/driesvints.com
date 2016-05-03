@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>Using Laravel 4&#039;s Model Events | Dries Vints</title>
+
+            <meta name="description" content="Laravel 4 beta 4 is hot off the press and it added a lot of new functionality to the framework. One of them are the newly added Model events. You probably already knew about events in Laravel. Model events are basically the same but for Eloquent model event listeners. They get triggered on specific Model actions like saving a Model&#039;s data to the database or attempting to delete a model from the database. In this post I&#039;m going to give you a couple of use-cases for them so you get a better understanding why they would be useful in your projects.">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    April 06, 2013
+                </div>
+            
+            <h1>
+                Using Laravel 4&#039;s Model Events
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/using-laravel-4-model-events.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p>Laravel 4 beta 4 is hot off the press and it added a lot of new functionality to the framework. One of them are the newly added <a href="http://four.laravel.com/docs/eloquent#model-events">Model events</a>. You probably already knew about events in Laravel. Model events are basically the same but for Eloquent model event listeners. They get triggered on specific Model actions like saving a Model's data to the database or attempting to delete a model from the database. In this post I'm going to give you a couple of use-cases for them so you get a better understanding why they would be useful in your projects.<!--more--></p>
+<h2>Validate models before creating or updating them</h2>
+<p>This example is a bit stolen from the L4 docs but it's still a valid example. I'll try to explain a bit more extensive than the docs. Imagine you're creating a new model record or updating an existing one but you want to make sure some fields are validated before doing so. Now you could validate those fields on your controller but another way is to validate them directly inside your model and attaching a model event to it so it automatically will be validated every time you try to create or update a model.</p>
+<p>Let's create a model for a blog post.</p>
+<p>~~~ .php
+class Post extends Eloquent {</p>
+<pre><code>public function isValid()
+{
+    return Validator::make(
+        $this-&gt;toArray(),
+        array(
+            'title'  =&gt; 'required|max:100',
+            'body'   =&gt; 'required',
+            'source' =&gt; 'url'
+        )
+    )-&gt;passes();
+}</code></pre>
+<p>}</p>
+<pre><code>
+
+In the `Post` model we've added a function that will validate some model properties. We're making sure the post title and body is provided and that the title isn't longer than 100 characters. We're also checking if the source is a valid url. We're using Laravel 4's built-in Validator class to do the job. Notice the easy way to pass the model's properties to the validator by calling the `toArray` method on the model.
+
+Let's set the Model events now.
+
+    Post::creating(function($post)
+    {
+        if ( ! $post-&gt;isValid()) return false;
+    });
+
+    Post::updating(function($post)
+    {
+        if ( ! $post-&gt;isValid()) return false;
+    });
+
+Now every time a blog post gets created or is being updated, it will be validated first and the action will be cancelled if a value hasn't been set correctly. Inside the closure you can of course do some extra things like passing a message to an error log. You can set these event binders anywhere you like in your application as long as they're auto loaded. I would set them in my `app/start/global.php` file.
+
+## Prevent deletion of records when they're still linked
+
+Say you have an `Image` model which belongs to some `Gallery` models. Someone's trying to delete the image from the media library on your site but that could have some complications for some of the galleries on your site. You'd like for someone to de-link the image from your galleries first so you know it's not in use any more and you can safely delete it. Well, let's make that happen.
+
+We'll create our models first. We need a `Gallery` and `Image` model with a many-to-many relationship.
+
+    class Gallery extends Eloquent {
+
+        public function images()
+        {
+           return $this-&gt;belongsToMany('Image');
+        }
+
+    }
+
+    class Image extends Eloquent {
+
+        public function galleries()
+        {
+            return $this-&gt;belongsToMany('Gallery');
+        }
+
+    }
+
+Next we'll need to set the model event.
+
+    Image::deleting(function($image)
+    {
+        if (count($image-&gt;galleries)) return false;
+    });
+
+Now every time an image is about to be deleted, the model event will prevent it from being deleted when it is still linked to some galleries.
+
+## Know who created and last updated a record
+
+Here's a cool one. In most of your models you've probably added timestamps to your model to keep track of when a record got created and when it got last updated. But what about who did those actions? This is only for an app with an authentication system. I'm going to assume you have authentication all set up and a user is logged in through Laravel's authenticator. I'm also assuming you can only create or update posts when you're logged in.
+
+First, we'll need to set two new columns on the model we're going to edit. Let's use our Post model. In the posts migration, add these two columns:
+
+    $table-&gt;integer('created_by');
+    $table-&gt;integer('updated_by');
+
+These will be used to keep track of the user ID. The only other thing you need to do is setting up the model events.
+
+    Post::creating(function($post)
+    {
+        $post-&gt;created_by = Auth::user()-&gt;id;
+        $post-&gt;updated_by = Auth::user()-&gt;id;
+    });
+
+    Post::updating(function($post)
+    {
+        $post-&gt;updated_by = Auth::user()-&gt;id;
+    });
+
+Every time a post is created or updated a record will be kept of who created the post or last updated it. You can now add functionality to your model to display that data on your site.
+
+    class Post extends Eloquent {
+
+        public function createdBy()
+        {
+            return User::find($this-&gt;created_by)-&gt;name;
+        }
+
+        public function updatedBy()
+        {
+            return User::find($this-&gt;updated_by)-&gt;name;
+        }
+    }
+
+## Define model events multiple times
+
+Model events can be defined multiple times. They're executed in the order you defined them. This can be handy if you want to separate logic into different events.
+
+    Post::creating(function($post)
+    {
+        // Do something here.
+    });
+
+    Post::creating(function($post)
+    {
+        // Do something else here.
+    });
+
+## Using The boot Method In A Model
+
+Besides registering Model events in the global scope of your application you can also register them directly inside your model through the static `boot` method. Let's set this up for one of the examples in this tutorial.
+
+    class Post extends eloquent {
+
+        public static function boot()
+        {
+            parent::boot();
+
+            static::creating(function($post)
+            {
+                $post-&gt;created_by = Auth::user()-&gt;id;
+                $post-&gt;updated_by = Auth::user()-&gt;id;
+            });
+
+            static::updating(function($post)
+            {
+                $post-&gt;updated_by = Auth::user()-&gt;id;
+            });
+        }
+
+    }
+
+## Conclusion
+
+These are just a few examples of what you can do with Model events. I'm sure you can come up with more clever use cases. If you do, blog about them and share them with the community! :)
+
+Thanks for reading.</code></pre>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'using-laravel-4-model-events';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

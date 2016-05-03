@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>Quality Assurance with Envoyer | Dries Vints</title>
+
+            <meta name="description" content="This is one of the tutorials I did for my Laracon EU talk.
+Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
+For example, at BeatSwitch we always let a...">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    August 25, 2015
+                </div>
+            
+            <h1>
+                Quality Assurance with Envoyer
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/quality-assurance-with-envoyer.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p>This is one of the tutorials I did for my Laracon EU talk.</p>
+<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
+<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
+<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
+<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
+<p>You can do that with this hook:</p>
+<pre><code class="language-bash">cd /home/forge/default/current
+php artisan migrate:reset --force</code></pre>
+<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
+<pre><code>cd {{release}}
+php artisan migrate --force --seed</code></pre>
+<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
+<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'quality-assurance-with-envoyer';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

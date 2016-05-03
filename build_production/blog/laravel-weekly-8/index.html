@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>Laravel Weekly #8 | Dries Vints</title>
+
+            <meta name="description" content="I changed the name again! Will this be the last time? Probably not!
+I&#039;ll be tweeting these posts with #laravelweekly from now on. I also have a couple of ideas in mind for future editions for these posts. Stay tuned :)
+Again, if you&#039;d like to see your resources, packages, articles, you name it in these posts, just mention them to me on twitter or email me.">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    May 12, 2013
+                </div>
+            
+            <h1>
+                Laravel Weekly #8
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/laravel-weekly-8.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p>I changed the name again! Will this be the last time? Probably not!</p>
+<p>I'll be tweeting these posts with #laravelweekly from now on. I also have a couple of ideas in mind for future editions for these posts. Stay tuned :)</p>
+<p>Again, if you'd like to see your resources, packages, articles, you name it in these posts, just mention them to me on twitter or email me.<!--more--></p>
+<h2>What Happened To The StackExchange Proposal?</h2>
+<p>In short: <a href="http://discuss.area51.stackexchange.com/questions/10046/no-really-what-part-of-this-isnt-already-on-topic-for-stack-overflow">it got rejected</a>. The people at <a href="http://stackexchange.com/">Stack Exchange</a> didn't feel that a separate site for Laravel was needed at this time and pointed out that StackOverflow already provided a platform that we could use.</p>
+<p>Now this isn't a bad thing. Like they said, we can use StackOverflow for now which is still a great platform to ask questions. Just tag your posts with #laravel. It won't be a separate Laravel platform but it basically still is the same thing.</p>
+<p>Thanks to everyone who voted and helped out, we really appreciate it!</p>
+<h2>Laravel Social Groups</h2>
+<p>There are a number of social groups out there for Laravel. Here's a short list:</p>
+<ul>
+<li><a href="https://www.facebook.com/groups/LaravelCommunity/">Facebook</a></li>
+<li><a href="https://plus.google.com/communities/106838454910116161868">Google+</a></li>
+<li><a href="http://www.linkedin.com/groups/Laravel-PHP-Framework-4419933">LinkedIn</a></li>
+<li><a href="http://www.reddit.com/r/laravel/">Reddit</a></li>
+</ul>
+<h2>Laravel 4: Maintenance Mode</h2>
+<p><a href="https://twitter.com/laravelphp/status/330080201084121088">https://twitter.com/laravelphp/status/330080201084121088</a></p>
+<p>A recent addition in Laravel 4 beta 5 is the ability to set your application into maintenance mode through Artisan. This gives you a nice way to upgrade or tinker with your app while cutting off user interaction to it.</p>
+<h2>Laravel 4: Soft Delete</h2>
+<p><a href="https://twitter.com/laravelphp/status/330328333332127745">https://twitter.com/laravelphp/status/330328333332127745</a></p>
+<p>Soft deleting a record means that you're deleting a record without actually removing it from the database. This can be handy in quite some cases where you have relationships defined which you don't want to lose after deleting a record.</p>
+<p>You can learn more about soft deleting records at <a href="http://four.laravel.com/docs/eloquent#soft-deleting">the Laravel 4 docs</a>.</p>
+<h2>Laravel 4: Generate Controllers In Subdirs</h2>
+<p><a href="https://twitter.com/jeffrey_way/status/330347895742160897">https://twitter.com/jeffrey_way/status/330347895742160897</a></p>
+<p>When generating controllers through Artisan, you can now generate them inside subdirs by specifing a subdir or namespace before your controller name. When specifing a namespace, the namespace will be added automatically to the file.</p>
+<h2>Resources</h2>
+<ul>
+<li><a href="http://toddish.co.uk/blog/global-site-messages-in-laravel-4/">Global site messages in Laravel 4</a> by <a href="https://twitter.com/toddish">Todd Francis</a></li>
+<li><a href="https://tutsplus.com/course/custom-artisan-commands-and-you/">Custom Artisan Commands And You</a> by <a href="https://tutsplus.com">Tutsplus</a> (Partialy Paid)</li>
+<li><a href="http://driesvints.com/blog/laravel-4-quick-tip-custom-error-pages/">Laravel 4 Quick Tip: Custom Error Pages</a> by <a href="https://twitter.com/driesvints">Myself</a></li>
+<li><a href="http://blog.iron.io/2013/05/laravel-4-ironmq-push-queues-insane.html">Laravel 4 + IronMQ Push Queues = Insane Goodness</a> by <a href="http://www.iron.io/">IronMQ</a></li>
+</ul>
+<h2>Packages</h2>
+<ul>
+<li><a href="http://jasonlewis.me/code/basset/4.0">Basset 4.0 (pre-beta)</a> by <a href="https://twitter.com/jasonclewis">Jason Lewis</a></li>
+<li><a href="http://fideloper.com/laravel-4-trusted-proxies">Handling Proxies in Laravel 4</a> by <a href="https://twitter.com/fideloper">Chris Fidao</a></li>
+<li><a href="https://github.com/JeffreyWay/Laravel-Test-Helpers">Laravel Test Helpers (Beta)</a> by <a href="https://twitter.com/jeffrey_way">Jeffrey Way</a></li>
+<li><a href="https://github.com/davejamesmiller/laravel-breadcrumbs">Laravel Breadcrumbs</a> by <a href="https://twitter.com/DaveJamesMiller">Dave James Miller</a></li>
+<li><a href="https://github.com/conradkleinespel/database-log-laravel4">Async Database Logs for Laravel 4</a> by <a href="https://twitter.com/conradktweets">Conrad Kleinespel</a></li>
+</ul>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'laravel-weekly-8';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

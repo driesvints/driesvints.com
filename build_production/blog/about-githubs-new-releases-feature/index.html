@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>About Github&#039;s New Releases Feature | Dries Vints</title>
+
+            <meta name="description" content="A couple of weeks ago Github released a new feature called Releases which allows you to track a project&#039;s history and easily add a changelog and manage your project&#039;s binary assets. I&#039;m very excited about this because we finally got a place where we have a good overview of each released version of our projects.">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    July 28, 2013
+                </div>
+            
+            <h1>
+                About Github&#039;s New Releases Feature
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/about-githubs-new-releases-feature.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p>A couple of weeks ago <a href="https://github.com/blog/1547-release-your-software">Github released a new feature</a> called <em>Releases</em> which allows you to track a project's history and easily add a changelog and manage your project's binary assets. I'm very excited about this because we finally got a place where we have a good overview of each released version of our projects.<!--more--></p>
+<p>However, there's something that still bothers me. It's tightly coupled into Github which only allows us to enter the information into Github's Releases system. We can't transfer the data together with our Github repo if we decide to move the project from Github. We also can't versionize or collaborate on the changelogs through Pull Requests.</p>
+<p>Back in June, <a href="https://github.com/blog/1528-there-s-a-map-for-that">Github released another feature</a> which provides support for visualizing geographic data through <code>.geojson</code> files. This is a great way to provide a feature and still keep the data inside your repository so you can versionize and ship it with your project.</p>
+<p><strong>Remember that the following is just a concept and doesn't actually work.</strong></p>
+<p>The same idea could be applied to the Releases feature. Changelog information could be provided through, for example, a <code>changelog.json</code> file which resides in the project root. I've seen this being used in some projects like <a href="http://laravel.com/">Laravel</a> where a <code>changes.json</code> file is kept <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/changes.json">in the framework's source code</a>.</p>
+<p>Let's see how such a file could look like. I'm using the example from <a href="https://github.com/blog/1547-release-your-software">the Github blog post</a>.</p>
+<p>~~~ .JSON
+{
+&quot;0.17.2&quot;: [
+&quot;Use the git author as the TFS commiter during <code>git tfs rcheckin</code> (#336) and <code>git tfs rcheckin --quick</code> (#357)&quot;,
+&quot;Improve temporary workspace handling (#328, #372)&quot;,
+&quot;Use libgit2sharp more and git-core less (#361)&quot;,
+&quot;Bug fix for bare repositories (#352)&quot;,
+&quot;Bug fix for crash during <code>git tfs clone</code> (#349)&quot;,
+&quot;Bug fix for VS2008 (#362)&quot;,
+&quot;Update libgit2sharp&quot;,
+&quot;Improved release process (#333, #340)&quot;
+]
+}</p>
+<pre><code>
+
+Github automatically creates releases based on tags in your project. While it's not a problem that some things like binaries or indicating pre-leases aren't included, keeping the list of actual changes in the `changelog.json` file is a good way to keep track of changes throughout your project and ship it together with your project.
+
+This can then be automatically generated on the Releases page for the associated release. The changelog information could be displayed beneath the release decription and you can still set other data for the release just like you can do now.
+
+This same principle could also be used for documentation. A documentation folder inside your repository is an often used way of shipping docs with your source code. While a `README.md` file could technically provide all of the information about a repository, more complex projects require more extensive documentation.
+
+Currently, Github repository wikis have their own repository. While you could just add it in your repository as a submodule, perhaps it would be a good idea to also provide a way for Github to generate a documentation section on a Github repo based on markdown files from a `docs` or `documentation` folder which resides in your project's root.
+
+Just like wiki files, the documentation files could be Markdown files which represent different documentation pages. A `toc.json` file (table of contents) could be included to add navigation.
+
+All of these changes don't need to clutter up your repository. They're optionally and you can make use of them if you want to. I'm just aiming at including data like changelogs and documentation directly into the repository and Github using that data to display it nicely on its website as Releases, Wiki pages or anything else they can think of.</code></pre>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'about-githubs-new-releases-feature';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

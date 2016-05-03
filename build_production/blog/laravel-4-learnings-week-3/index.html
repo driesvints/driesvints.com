@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>Laravel 4 learnings: week 3 | Dries Vints</title>
+
+            <meta name="description" content="It&#039;s been a great week for Laravel 4 with beta 4 hot off the press and lots of new functionality added to the framework. I&#039;ll go over some of the new functionality as well as the weekly list of tips, tweets and resources that were posted.">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    March 31, 2013
+                </div>
+            
+            <h1>
+                Laravel 4 learnings: week 3
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/laravel-4-learnings-week-3.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p>It's been a great week for Laravel 4 with <a href="https://github.com/laravel/framework/tree/v4.0.0-BETA4">beta 4</a> hot off the press and lots of new functionality added to the framework. I'll go over some of the new functionality as well as the weekly list of tips, tweets and resources that were posted.<!--more--></p>
+<p><a href="https://twitter.com/laravelphp/status/317671374762156032">https://twitter.com/laravelphp/status/317671374762156032</a></p>
+<h2>Go vote for Laravel at the .net awards!</h2>
+<p>Laravel has been selected as for the .net awards 2013 under the category &quot;Open Source project of the year&quot;. <a href="http://www.thenetawards.com/">Go vote for Laravel</a>! It doesn't requires you to subscribe to anything or give any personal info.</p>
+<h2>Cartalyst will donate 1% of its proceeds to Laravel</h2>
+<p>A really nice gesture by Cartalyst. <a href="http://blog.cartalyst.com/post/46425201351/building-a-stronger-community">Cartalyst will donate 1% of its income to Laravel</a>. They want to thank Laravel and Taylor in that way for everything Laravel has provided for building their service. This will really help Laravel and Taylor to continue doing his awesome work for the Laravel framework and community.</p>
+<p><a href="https://twitter.com/Cartalyst/status/316940582356402176">https://twitter.com/Cartalyst/status/316940582356402176</a></p>
+<p>Of course you can donate as well. All bits help and if Laravel has helped you a lot on your projects go ahead and <a href="http://laravel.com/about#donations">give something back</a>! :)</p>
+<h2>Laravel Q&amp;A stackexchange site</h2>
+<p>We're trying to get a separate Q&amp;A site for Laravel on the Stack Exchange network. Go see how you can help <a href="http://area51.stackexchange.com/proposals/46607/laravel?referrer=AgG4EvnCx9m753uZWv1VMg2#.UVMgw5DgLGQ.twitter">here</a>.</p>
+<p><a href="https://twitter.com/niall_obrien/status/316952716591108096">https://twitter.com/niall_obrien/status/316952716591108096</a></p>
+<h2>Laravel Screencasts</h2>
+<p>Maksim Surguy built a website which contains a list of Laravel screencasts that came out so far. If you want to learn more about Laravel, you'll have several hours to view some awesome videos on this website. <a href="http://laracasts.com/">Go check it out!</a></p>
+<p><a href="https://twitter.com/msurguy/status/318130652220375040">https://twitter.com/msurguy/status/318130652220375040</a></p>
+<h2>Model Events</h2>
+<p>Just added in beta 4, Model events provide a nice way to hooking into frequent Model methods, f.e. saving a model to a database or deleting one. It gives you a way to prevent a model, for example, from being deleted when it's still in use by another model or from being created if some of the model properties have invalid or missing values. These are just 2 examples of many use cases for which model events can be used.</p>
+<p>You can find the full list of events in <a href="http://four.laravel.com/docs/eloquent#model-events">the docs</a>. I'm actually preparing a separate blog post about them so stay tuned next week for that :)</p>
+<h2>Artisan Routes Command</h2>
+<p>Jeffrey Way's nice &quot;routes&quot; command was added to the Laravel 4 core. A nice way to get an overview of all your app's routes and their actions.</p>
+<p><a href="https://twitter.com/laravelphp/status/316574137676070913">https://twitter.com/laravelphp/status/316574137676070913</a></p>
+<h2>Artisan dump-autoload Command</h2>
+<p>You probably already knew about <code>composer dump-autoload</code>. Laravel has added the same command to Artisan that's optimised for your App and workbenches. Especially useful if you're developing packages.</p>
+<p>Run with:</p>
+<p>~~~ .bash
+$ php artisan dump-autoload</p>
+<pre><code>
+## Touching Parent Timestamps
+
+A nice addition to Eloquent Models is the ability to touch parent timestamps. Say you have a relation `belongTo()` on a model. If you include a property `$touches` with an array with a value of the parent Model name, the updated_at column will be updated whenever the child Model gets updated. [Check out the docs](http://four.laravel.com/docs/eloquent#touching-parent-timestamps) for detailed info.
+
+## Wildcard Urls
+
+Not a beta 4 feature but something previous Laravel versions already supported. The syntax changed a bit for Laravel 4. If you're building a CMS, for example, this can be a handy feature.
+
+Say you have a post model which has a url property which is a unique index in the database. You want to show the post when that url parameter has been provided. You can set your route up as follows:
+
+~~~ .php
+Route::get('{param}', function($param)
+{
+    // Search for url on post model.
+    if  ($post = Post::where('url', $param)-&gt;first())
+    {
+        // Build model view.
+        return View::make('post', compact('post'));
+    }
+
+    // Throw a 404 if model wasn't found.
+    App::abort(404).
+});</code></pre>
+<p>Whenever you type anything behind the root url, the route closure will search for a post model by its url. If it's found, the post view will be build. Something you need to make sure of is that you place this wildcard route <strong>at the end of your routes file</strong>. Otherwise it will override any other routes you set after them. First register your &quot;fixed&quot; routes and route groups and place your wildcard route at the end.</p>
+<p>Btw, <a href="http://be2.php.net/manual/en/function.compact.php">the compact function</a> in the code above, if you don't know it, just creates an array with all the variables you provide with their names as array keys.</p>
+<p>You can of course search for multiple wildcard parameters.</p>
+<p>~~~ .php
+Route::get('{param}/{param2?}', function($param, $param2 = null)
+{
+// Filter on one or both parameters.
+});</p>
+<pre><code>
+Now you can search for the first parameter and optionally for a second one if it's present. The ? character at the end of the second parameter means it's optional. This is a nice way to deal with nested page models.
+
+## with Helper Method
+
+I know, I'm only documenting a single helper function here but it's such a neat and handy function that I _had_ to show it :)
+
+I think a lot of developers know it's sometimes a bit annoying to first instantiate a new class before you can call a certain function which isn't a static function. You probably have been doing this before:
+
+~~~ .php
+// Instantiate new object.
+$post = new Post;
+// Call non-static function on that model.
+$postTypes = $post-&gt;getPostTypes();</code></pre>
+<p>The with() helper function makes this a little easier.</p>
+<p>~~~ .php
+$postTypes = with(new Post)-&gt;getPostTypes();</p>
+<pre><code>
+
+Basically the with function just returns the object that's being passed along. It's a function to help you chain object methods from the start so you don't need to create a new variable for the object.
+
+## Resources
+
+- [Howto : AJAX multiple file upload in Laravel](http://maxoffsky.com/code-blog/howto-ajax-multiple-file-upload-in-laravel/) by [Maksim Surguy](https://twitter.com/msurguy)
+- [Incredible large PHP resources list](https://gist.github.com/ziadoz/1677679) by [Jamie York](https://twitter.com/jamieyork)
+- [Sending mail with Postmark](https://tutsplus.com/lesson/sending-mail-with-postmark/) by [Jeffrey Way](https://twitter.com/jeffrey_way)
+- [Install Laravel with symlink through terminal shell function/command mamp](http://davidheward.com/2013/03/install-laravel-with-symlink-through-terminal-shell-functioncommand-mamp/) by [David Heward](https://twitter.com/daveheward)
+- [I didn’t want to be the ideas person any more](http://insanemission.com/post/46285751294/i-didnt-want-to-be-the-ideas-person-any-more) by [Adam Smith](https://twitter.com/adamontherun)
+- [Creating a Custom Laravel 4 Auth Driver](http://toddish.co.uk/blog/creating-a-custom-laravel-4-auth-driver/) by [Todd Francis](https://twitter.com/Toddish)
+- [Vagrant development machine provisioned and configured for PHP and Larave](https://github.com/Aboalarm/devbox)l by [Stefan Neubig](https://twitter.com/stefanneubig)
+- [ETags and Concurrency Control in Laravel 4](http://fideloper.com/laravel4-etag-concurrency-control) by [Chris Fidao](https://twitter.com/fideloper)
+- [An interview with Taylor Otwell](http://webuildatnight.com/features/Laravel) by [We Build At Night](http://webuildatnight.com/)
+
+## Packages
+
+- [API package for Cartalyst](http://forums.laravel.io/viewtopic.php?pid=32702#p32702)
+- [Laravel 4 Auth package](http://docs.toddish.co.uk/verify-l4/) by [Todd Francis](https://twitter.com/Toddish)
+- [Keeping revisions of your laravel model data](http://www.chrisduell.com/blog/development/keeping-revisions-of-your-laravel-model-data/) by [Chris Duell](https://twitter.com/duellsy)
+
+## Thanks!
+
+Thanks again for reading. If you have something about Laravel 4 out next week, wether it's a blog post, package or something else, let me know and I'll include it in next week's post :)</code></pre>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'laravel-4-learnings-week-3';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

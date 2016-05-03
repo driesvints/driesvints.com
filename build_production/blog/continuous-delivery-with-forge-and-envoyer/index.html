@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>Continuous Delivery with Forge and Envoyer | Dries Vints</title>
+
+            <meta name="description" content="This is one of the tutorials I did for my Laracon EU talk.
+When you run your tests locally on, let&#039;s say Homestead, that&#039;s fine because you want to run your tests on an environment that closely resembles your production environment. If you use both Homestead and Forge to setup...">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    August 25, 2015
+                </div>
+            
+            <h1>
+                Continuous Delivery with Forge and Envoyer
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/continuous-delivery-with-forge-and-envoyer.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p>This is one of the tutorials I did for my Laracon EU talk.</p>
+<p>When you run your tests locally on, let's say Homestead, that's fine because you want to run your tests on an environment that closely resembles your production environment. If you use both Homestead and <a href="forge.laravel.com">Forge</a> to setup your server, you can do just that.</p>
+<p>You probably also hooked up Envoyer to automatically deploy your code whenever you push to master. But it's tricky because you could push code which is broken. You won't notice it because you probably forgot to run your tests before you pushed your code. You want to first run your tests and then push your code when those tests pass.</p>
+<p>That's why you need a Continuous Integration (CI) service. When you add a CI service between your server and main upstream repository (let's say, Github), then running those tests on that CI service isn't the same as running them on Homestead of a Forge provisioned server. It could differ in PHP version, or some extensions which you need aren't available. The thing also is that there are a lot of great CI services out there: Travis, CircleCI, Codeship, etc. But they're often pretty expensive.</p>
+<p>How I solved this is by provisioning one Forge instance (for example, a 512mb <a href="https://www.digitalocean.com/">DigitalOcean</a> instance) just to run my tests whenever I push code to the master branch. After that server has successfully run my tests I trigger an Envoyer url to deploy my code.</p>
+<p>That way you save a lot of money (just $5/month for a 512mb DigitalOcean instance) and you get a great and easy to configurate continuous delivery pipeline.</p>
+<p>Setting it up is easy. Add the following code to a <code>tests.sh</code> script in the root of your project:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+PHPUNIT_RESULT=`vendor/bin/phpunit`
+PHPSPEC_RESULT=`vendor/bin/phpspec run`
+
+if [[ ${PHPUNIT_RESULT} =~ FAILURES ]] || [[ ${PHPSPEC_RESULT} =~ failed ]]
+then
+    echo "Test have failed!";
+    echo ${PHPUNIT_RESULT};
+    echo ${PHPSPEC_RESULT};
+    # You can notify Slack here if you want for failed builds
+else
+    # Trigger deployment
+    # Replace the url below with your envoyer url
+    curl -s 'https://envoyer.io/deploy/this-is-a-dummy-url';
+    echo 'Deployment triggered!'
+fi</code></pre>
+<p>And set the following rules as your deployment script on your CI Forge server.</p>
+<pre><code class="language-bash">cd /home/forge/default
+git pull origin master
+composer install --dev
+./tests.sh</code></pre>
+<p>And that's it! Your Continuous Delivery pipeline is now set up.</p>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'continuous-delivery-with-forge-and-envoyer';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

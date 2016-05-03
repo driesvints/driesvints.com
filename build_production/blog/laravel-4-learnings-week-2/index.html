@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site info -->
+    <title>Laravel 4 learnings: week 2 | Dries Vints</title>
+
+            <meta name="description" content="It&#039;s been another great week for Laravel 4. Lots of new additions and I&#039;ve got a neat list of tips, tricks and resources for you.">
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/images/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/images/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/images/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/images/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link media="all" type="text/css" rel="stylesheet" href="/css/app.css">
+
+    </head>
+<body>
+
+<div id="page-header">
+    <div class="inner">
+        <div class="navigation">
+            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
+            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
+        </div>
+        <div class="meta">
+                            <div class="date">
+                    March 24, 2013
+                </div>
+            
+            <h1>
+                Laravel 4 learnings: week 2
+
+                                    <sup>
+                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/laravel-4-learnings-week-2.md"
+                            title="Edit this page">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </sup>
+                            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    
+<div class="single">
+    <p>It's been another great week for Laravel 4. Lots of new additions and I've got a neat list of tips, tricks and resources for you.<!--more--></p>
+<h2>Laravel 4 beta 4 will be released this thursday</h2>
+<p>The 4th Laravel 4 beta will be released this thursday with updated documentation. You'll be blown away by all the cool newly added functionality! :)</p>
+<p><a href="https://twitter.com/laravelphp/status/315541203628220416">https://twitter.com/laravelphp/status/315541203628220416</a></p>
+<h2>Laracon screencasts</h2>
+<p>For those of you who didn't see them yet, here are <a href="http://www.youtube.com/user/LaravelScreencasts">all the Laracon screencasts</a>. A big thanks to <a href="https://twitter.com/cborgia">Chris Borgia</a>!</p>
+<h2>Where to place your helper functions, view composers, etc</h2>
+<p>I asked the question earlier this week on the <a href="http://laravel.com/irc">Laravel IRC</a> channel and the majority of the people there seemed to agree that it should be in <code>app/start/global.php</code>. It makes sense. I was putting them in <code>app/filters.php</code> before but as the filename indicates that's more a location where you'd want to define your route filters, etc. If you open the <code>global.php</code> file you'll see that it will call the <code>filters.php</code> file at the end. It makes more sense putting your custom functions, validators etc here because it's a starting point for your application. Basically you're saying: &quot;These are all the extra functionality that my app needs before I go ahead.&quot;</p>
+<p>You could also make a separate <code>custom.php</code> file in app/start and include it in the <code>global.php</code> file just before the <code>filters.php</code> file inclusion. This is a nice way to separate your code from the default code in <code>global.php</code>.</p>
+<p>~~~ .php
+require <strong>DIR</strong>.'/custom.php';
+require <strong>DIR</strong>.'/../filters.php';</p>
+<pre><code>
+That way you have a nice separate file for all your custom functions.
+
+Note that there really isn't a convention for a location for these custom functionalities. From the Laravel 4 docs about View composers (as an example):
+&gt; Note that there is no convention on where composer classes may be stored. You are free to store them anywhere as long as they can be autoloaded using the directives in your composer.json file.
+So you're free to place them anywhere as you like as long as they're being autoloaded.
+
+## Namespacing your models
+
+I've found it to be very helpful to namespace my models from the start. Because sooner or later, you might run into a problem when you're trying to define a model that has the same name as an application alias. Take the `File` model for example. Laravel offers an alias by default to a facade of its Filesystem functionality to manipulate files. You can't use the name `File` as a model classname because it will interfere with the application alias. That's where namespaces come in.
+
+~~~ .php
+&lt;?php namespace Models;
+
+class File extends \Eloquent {
+
+    protected $table = 'files';
+
+}</code></pre>
+<p>Now that we have namespaced the model we don't have to worry about it interfering with the application alias anymore. Note that we specifically need to set the <code>$table</code> property on the model because otherwise Laravel will assume the database table is called <code>models_file</code>.</p>
+<p>You can now use this model in controllers, routes etc by specifying the full namespace:</p>
+<p>~~~ .php
+Models\File::find(1);</p>
+<pre><code>
+Or you can import the model and still use the File alias by referencing the global namespace:
+
+~~~ .php
+&lt;?php
+
+use Models\File;
+
+class UserController extends BaseController {
+
+    public function index()
+    {
+        // Use the File model.
+        $file = File::find(1);
+
+        // Use the File alias to get the file contents.
+        return \File::get($file-&gt;filepath);
+    }
+
+}</code></pre>
+<p>If you namespace your models from the beginning it's going to save you troubles later on when you can't pick a name when it's already set somewhere else.</p>
+<h2>Model query scopes</h2>
+<p>As since a few days, Model query scopes have landed in the L4 beta!</p>
+<p><a href="https://twitter.com/laravelphp/status/314568892376829952">https://twitter.com/laravelphp/status/314568892376829952</a></p>
+<h2>Database aggregate functions</h2>
+<p>This is just plucked from the L4 docs but it's so extremely helpful. Get the value of a mathematic function immediately from the database.</p>
+<p>Source: <a href="http://four.laravel.com/docs/queries#aggregates"><a href="http://four.laravel.com/docs/queries#aggregates">http://four.laravel.com/docs/queries#aggregates</a></a></p>
+<h2>Don't worry about flash data in forms!</h2>
+<p>Jeffery Way pointed this out on twitter. You actually don't have to set flash data on forms as Laravel handles this automatically. So. Damn. Handy! :)</p>
+<p><a href="https://twitter.com/jeffrey_way/status/315128216148922368">https://twitter.com/jeffrey_way/status/315128216148922368</a></p>
+<p><a href="https://twitter.com/jeffrey_way/status/315128395346362370">https://twitter.com/jeffrey_way/status/315128395346362370</a></p>
+<h2>Laravel Testing Decoded</h2>
+<p>There's <a href="https://leanpub.com/laravel-testing-decoded">a cool eBook</a> coming out soon about testing in Laravel. And who other than Jeffrey Way could be writing it?</p>
+<h2>Resources</h2>
+<p>Here's a list of resources which came out this week.</p>
+<ul>
+<li><a href="http://jasonlewis.me/article/error-afer-a-composer-update-of-the-laravel-4-beta">Error After A Composer Update Of The Laravel 4 Beta</a> by <a href="https://twitter.com/jasonclewis">Jason Lewis</a></li>
+<li><a href="http://besnappy.com/">Snappy</a>: Helpdesk service by <a href="http://www.userscape.com/">Userscape</a> which is actually build by Taylor amongst others. You can bet Laravel is powering it ;)</li>
+<li>A bunch of new videos are up at Nettuts: <a href="https://tutsplus.com/course/whats-new-in-laravel-4/"><a href="https://tutsplus.com/course/whats-new-in-laravel-4/">https://tutsplus.com/course/whats-new-in-laravel-4/</a></a></li>
+<li><a href="https://github.com/JeffreyWay/PHPUnit-Wrappers">PHPunit wrappers for Laravel 4</a> by <a href="http://twitter.com/jeffreyway">Jeffrey Way</a></li>
+<li><span style="line-height: 13px;"><a href="https://twitter.com/philsturgeon/status/315147146133397505">Eloquent relationship tip</a> by <a href="http://twitter.com/philsturgeon">Phil Sturgeon</a></span></li>
+<li><a href="http://net.tutsplus.com/tutorials/tools-and-tips/pro-workflow-in-laravel-and-sublime-text/">Pro workflow in Sublime Text 2 and Laravel</a> by Nettuts</li>
+<li><a href="https://github.com/msurguy/Laravel-wallpapers">Laravel wallpapers!</a> by <a href="https://twitter.com/msurguy">Maksim Surguy</a></li>
+<li><a href="http://niallobrien.me/2013/03/installing-and-updating-laravel-4/">Installing and updating Laravel 4</a> by <a href="https://twitter.com/niall_obrien">Niall O'Brien</a></li>
+<li><a href="http://niallobrien.me/2013/03/authentication-authorisation/">Authentication &amp; Authorisation</a> by <a href="https://twitter.com/niall_obrien">Niall O'Brien</a></li>
+</ul>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'driesvintstesting';
+        var disqus_identifier = 'laravel-4-learnings-week-2';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+</div>
+
+<hr class="separator" />
+
+<div id="footer">
+    <div class="container">
+        <p class="social-media">
+            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p>
+            Copyright &copy; 2016 Dries Vints<br/>
+
+            <a href="/colophon">Colophon</a> ·
+            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/all.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
