@@ -25,4 +25,6 @@ Comments are powered by [Disqus](http://disqus.com/).
 
 The website is hosted on [Github Pages](https://pages.github.com/).
 
+The header images are from [Unsplash](https://unsplash.com/).
+
 You can find the full source code [here](https://github.com/driesvints/driesvints.com).
