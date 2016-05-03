@@ -1,35 +1,34 @@
 var elixir = require('laravel-elixir');
-
+var argv = require('yargs').argv;
 require('laravel-elixir-imagemin');
 
-var paths = {
-    "assets": "./resources/assets/",
-    "jquery": "./vendor/bower_components/jquery/",
-    "bootstrap": "./vendor/bower_components/bootstrap-sass-official/assets/",
-    "highlightjs": "./vendor/bower_components/highlightjs/",
-    "fontawesome": "./vendor/bower_components/font-awesome/"
-}
+elixir.config.assetsPath = 'source/_assets';
+elixir.config.publicPath = 'source';
 
 elixir(function(mix) {
-    mix
-        .sass([
-                paths.highlightjs + "styles/solarized_dark.css",
-                "app.scss"
-            ], "public/css/", {includePaths: [
-            paths.bootstrap + 'stylesheets/',
-            paths.fontawesome + 'scss/'
-        ]})
+    var env = argv.e || argv.env || 'local';
+
+    mix.sass([
+            './node_modules/highlightjs/styles/solarized_dark.css',
+            'main.scss'
+        ])
         .scripts([
-            paths.jquery + "dist/jquery.js",
-            paths.bootstrap + "javascripts/bootstrap.js",
-            paths.highlightjs + "highlight.pack.js",
-            paths.assets + "js/libraries/jquery.backstretch.min.js",
-            paths.assets + "js/app.js"
-        ], "public/js/app.js", "./")
-        .version(["public/css/app.css", "public/js/app.js"])
-        .copy(paths.bootstrap + "fonts/bootstrap/**", "public/build/fonts")
-        .copy(paths.fontawesome + "fonts/**", "public/build/fonts")
+            './node_modules/jquery/dist/jquery.js',
+            './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+            './node_modules/highlightjs/highlight.pack.min.js',
+            './node_modules/jquery.backstretch/jquery.backstretch.min.js',
+            'main.js'
+        ])
         .imagemin()
-        .phpUnit()
-        .phpSpec();
+        .copy(
+            './node_modules/bootstrap-sass/assets/fonts/bootstrap/**',
+            'source/fonts'
+        )
+        .copy('./node_modules/font-awesome/fonts/**', elixir.config.publicPath + '/fonts')
+        .exec('jigsaw build --env=' + env, ['./source/*', './source/**/*', '!./source/_assets/**/*'])
+        .browserSync({
+            server: { baseDir: 'build_' + env },
+            proxy: null,
+            files: [ 'build_' + env + '/**/*' ]
+        });
 });

@@ -1,6 +1,5 @@
-# Ignore dependency folders
-/vendor
-/node_modules
-
-# Ignore environment config file
-.env
+/build_local/
+/node_modules/
+/vendor/
+/source/fonts/4.4.0/
+/_tmp/
