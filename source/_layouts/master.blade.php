@@ -18,7 +18,7 @@
 
                 @if (isset($edit))
                     <sup>
-                        <a href="https://github.com/driesvints/driesvints.com/edit/jigsaw/source/blog/{{ $edit }}.md"
+                        <a href="https://github.com/driesvints/driesvints.com/edit/master/source/{{ $edit }}.md"
                             title="Edit this page">
                             <i class="fa fa-pencil"></i>
                         </a>

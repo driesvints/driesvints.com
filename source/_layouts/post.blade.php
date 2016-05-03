@@ -2,7 +2,7 @@
 
 @extends('_layouts/master', [
     'date' => $post->publishedAt(),
-    'edit' => $post->slug(),
+    'edit' => 'blog/'.$post->slug(),
     'metaDescription' => $post->excerpt(),
 ])
 
