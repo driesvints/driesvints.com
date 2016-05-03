@@ -18,15 +18,15 @@
     </a>
 </div>
 
-<div id="about">
-    <img class="img-circle" src="http://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5.jpg?s=125" alt="">
-    <h3>Dries Vints</h3>
+<div id="about" itemscope itemtype="http://schema.org/Person">
+    <img class="img-circle" itemprop="image" src="http://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5.jpg?s=125" alt="">
+    <h3 itemprop="name">Dries Vints</h3>
     <p>
-        Maintainer of <a href="http://laravel.io">Laravel.io</a>,
+        Maintainer of <a href="http://laravel.io" itemprop="affiliation">Laravel.io</a>,
         the <a href="http://laravel.com">Laravel</a> Community Platform.
         Creator of <a href="https://github.com/BeatSwitch/lock">Lock</a>,
-        a popular PHP acl package. Lead Developer at
-        <a href="http://beatswitch.com">BeatSwitch</a>.
+        a popular PHP acl package. <span itemprop="jobTitle">Lead Developer</span> at
+        <a href="http://beatswitch.com" itemprop="worksFor">BeatSwitch</a>.
     </p>
 </div>
 
