@@ -30,12 +30,12 @@ https://twitter.com/laravelphp/status/321290995155206145
 
 Implementing HTTP basic authentication has never been easier now that it’s baked into the core of Laravel 4. When you put the filter on a route, your browser will prompt you with a login screen. The user logs in and Laravel handles the authentication automatically.
 
-~~~ .php
+```php
 Route::get('basicauth', array('before' => 'auth.basic', function()
 {
     return 'Logged in!';
 }));
-~~~
+```
 
 ## Improved Error Display With The “Whoops” Library
 
@@ -47,12 +47,12 @@ Replacing the old Symfony error screens, the Whoops library provides a much impr
 
 Support for renaming database table columns in L4 has been added. First parameter is the original column name and the second one is the new column name.
 
-~~~ .php
+```php
 Schema::table('addresses', function($table)
 {
     $table->renameColumn('location', 'city');
 });
-~~~
+```
 
 ## Resources
 

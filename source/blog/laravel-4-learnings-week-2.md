@@ -22,10 +22,10 @@ I asked the question earlier this week on the [Laravel IRC](http://laravel.com/i
 
 You could also make a separate `custom.php` file in app/start and include it in the `global.php` file just before the `filters.php` file inclusion. This is a nice way to separate your code from the default code in `global.php`.
 
-~~~ .php
+```php
 require __DIR__.'/custom.php';
 require __DIR__.'/../filters.php';
-~~~
+```
 
 That way you have a nice separate file for all your custom functions.
 
@@ -37,7 +37,7 @@ So you're free to place them anywhere as you like as long as they're being autol
 
 I've found it to be very helpful to namespace my models from the start. Because sooner or later, you might run into a problem when you're trying to define a model that has the same name as an application alias. Take the `File` model for example. Laravel offers an alias by default to a facade of its Filesystem functionality to manipulate files. You can't use the name `File` as a model classname because it will interfere with the application alias. That's where namespaces come in.
 
-~~~ .php
+```php
 <?php namespace Models;
 
 class File extends \Eloquent {
@@ -45,19 +45,19 @@ class File extends \Eloquent {
     protected $table = 'files';
 
 }
-~~~
+```
 
 Now that we have namespaced the model we don't have to worry about it interfering with the application alias anymore. Note that we specifically need to set the `$table` property on the model because otherwise Laravel will assume the database table is called `models_file`.
 
 You can now use this model in controllers, routes etc by specifying the full namespace:
 
-~~~ .php
+```php
 Models\File::find(1);
-~~~
+```
 
 Or you can import the model and still use the File alias by referencing the global namespace:
 
-~~~ .php
+```php
 <?php
 
 use Models\File;
@@ -74,7 +74,7 @@ class UserController extends BaseController {
     }
 
 }
-~~~
+```
 
 If you namespace your models from the beginning it's going to save you troubles later on when you can't pick a name when it's already set somewhere else.
 

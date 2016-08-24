@@ -18,20 +18,20 @@ So [I asked a question on Github](https://github.com/laravel/framework/issues/5
 
 Every resourceful route has its own name set automatically as the route itself. It's actually not a named route, just a resourceful route. Basically if you want quickly link to a resourceful controller's method you can do the following:
 
-~~~ .php
+```php
 // Generate a route to a resourceful controller through the route() helper function.
 route('users.edit', 1);
 
 // Will generate: http://example.com/users/1/edit
-~~~
+```
 
 This is very handy when you have deeply nested namespaced controllers. It saves you the effort from typing the entire namespace to the controller through the action() function.
 
 Nested resources or prefixed routes is also possible. Say you have a users controller which is used under the admin prefix. You can simple do the following:
 
-~~~ .php
+```php
 route('admin.users.edit', 1);
-~~~
+```
 
 Quite the timesaver.
 
@@ -49,9 +49,9 @@ This was a question I asked in the IRC channel a bit earlier this week. I don't 
 
 Very neat little function an intern at my company ([@jannemoonvx](https://twitter.com/jannemoonvx)) discovered. Ever wanted to get a key/value array for a returned model set? You can do so by using the lists() function. The first parameter defines which column should be used as the value and the second parameter defines which column should be used as the key in the array. Using the ID column is a logic choice as the second parameter. You can later use the array in, for example, a select list generated through the Form helper class in Laravel.
 
-~~~ .php
+```php
 $keyValueArray = User::lists('first_name', 'id');
-~~~
+```
 
 ## Conclusion
 

@@ -58,17 +58,17 @@ After that we'll upload our public folder's content into the `www` folder.
 
 Now that we've relocated the public folder we should adjust the path structure in the `bootstrap/paths.php` file.
 
-~~~ .php
+```php
 # Change this...
 'public' => __DIR__.'/../public',
 
 # ... into this.
 'public' => __DIR__.'/../../www',
-~~~
+```
 
 We should also change the paths in the `www/index.php` file to locate the new `laravel` folder.
 
-~~~ .php
+```php
 # These two lines should be changed...
 require __DIR__.'/../bootstrap/autoload.php';
 $app = require_once __DIR__.'/../bootstrap/start.php';
@@ -76,7 +76,7 @@ $app = require_once __DIR__.'/../bootstrap/start.php';
 # ... into these two lines.
 require __DIR__.'/../laravel/bootstrap/autoload.php';
 $app = require_once __DIR__.'/../laravel/bootstrap/start.php';
-~~~
+```
 
 We've now correctly relocated our public folder and our Laravel application should work like a charm. You could also have uploaded the Laravel core into the base `/` directory but moving it in a separate folder keeps your folder structure clean.
 
@@ -105,13 +105,13 @@ First, let's move the entire application into the `www` folder (the DocumentRoot
 
 Now inside your `www` folder, place the following `.htaccess` file.
 
-~~~ .apache
+```apache
 <IfModule mod_rewrite.c>
     RewriteEngine on
     RewriteCond %{REQUEST_URI} !^public
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
-~~~
+```
 
 This should redirect all the requests to your public folder. Requests to your public folder to, for example, asset files will still be accepted.
 
@@ -149,17 +149,17 @@ Now move the contents of the public folder into the document root as well and re
 
 We'll have to adjust the public folder path in the `bootstrap/paths.php` file.
 
-~~~ .php
+```php
 # Change this...
 'public' => __DIR__.'/../public',
 
 # ... into this.
 'public' => __DIR__.'/..',
-~~~
+```
 
 And lastly we should also change the paths in the `index.php` file.
 
-~~~ .php
+```php
 # These two lines should be changed...
 require __DIR__.'/../bootstrap/autoload.php';
 $app = require_once __DIR__.'/../bootstrap/start.php';
@@ -167,7 +167,7 @@ $app = require_once __DIR__.'/../bootstrap/start.php';
 # ... into these two lines.
 require __DIR__.'/bootstrap/autoload.php';
 $app = require_once __DIR__.'/bootstrap/start.php';
-~~~
+```
 
 Your Laravel application should now work.
 

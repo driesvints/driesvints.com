@@ -22,26 +22,26 @@ Follow the installation instructions to install GPGTools. After installing, you'
 
 After creating your key, you can list them by running the following command in your CLI.
 
-~~~ .bash
+```bash
 $ gpg --list-secret-keys | grep ^sec
 sec   4096R/8EE30EAB 2011-06-16 [expires: 2014-04-18]
 #           ^^^^^^^^
-~~~
+```
 
 ## Configuring Git With the GPG Key
 
 Now that we have our key set up we should configure Git to use it when we sign our commits. Run the following command in your CLI. Please note that you have to replace the `8EE30EAB` part with your own code which you listed with the command above (marked with the `^^^^^^^^`).
 
-~~~ .bash
+```bash
 $ git config --global user.signingkey 8EE30EAB
 #                                        ^ replace with your key id
-~~~
+```
 
 ## Signing Commits
 
 We've added our GPG key to our Git configuration. Let's try signing a commit. Go to a local Git repository, make some changes, stage them and then run the following command.
 
-~~~ .bash
+```bash
 $ git commit -S -m 'Test commit of foo'
 
 You need a passphrase to unlock the secret key for
@@ -51,13 +51,13 @@ user: "Mike Gerwitz (Free Software Developer) <mike@mikegerwitz.com>"
 [master (root-commit) cf43808] Test commit of foo
  1 file changed, 1 insertion(+)
  create mode 100644 foo
-~~~
+```
 
 The `-S` flag (uppercase!) indicates that we're signing the commit with our GPG key. If you don't have `gpg-agent` running, you'll be prompted to enter the passphrase you choose for generating the key.
 
 By default, Git won't show the GPG signature when running `git log`. To check if the commit was actually signed you can run the following command.
 
-~~~ .bash
+```bash
 $ git log --show-signature
 commit cf43808e85399467885c444d2a37e609b7d9e99d
 gpg: Signature made Fri 20 Apr 2012 11:59:01 PM EDT using RSA key ID 8EE30EAB
@@ -66,7 +66,7 @@ Author: Mike Gerwitz <mike@mikegerwitz.com>
 Date:   Fri Apr 20 23:59:01 2012 -0400
 
     Test commit of foo
-~~~
+```
 
 Your Git commit is now signed with your GPG key, making sure it identifies you as its actual creator.
 

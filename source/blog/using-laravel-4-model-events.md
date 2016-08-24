@@ -12,7 +12,7 @@ This example is a bit stolen from the L4 docs but it's still a valid example. I'
 
 Let's create a model for a blog post.
 
-~~~ .php
+```php
 class Post extends Eloquent {
 
     public function isValid()
@@ -28,7 +28,7 @@ class Post extends Eloquent {
     }
 
 }
-~~~
+```
 
 In the `Post` model we've added a function that will validate some model properties. We're making sure the post title and body is provided and that the title isn't longer than 100 characters. We're also checking if the source is a valid url. We're using Laravel 4's built-in Validator class to do the job. Notice the easy way to pass the model's properties to the validator by calling the `toArray` method on the model.
 

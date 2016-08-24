@@ -16,7 +16,7 @@ The same idea could be applied to the Releases feature. Changelog information co
 
 Let's see how such a file could look like. I'm using the example from [the Github blog post](https://github.com/blog/1547-release-your-software).
 
-~~~ .JSON
+```JSON
 {
     "0.17.2": [
         "Use the git author as the TFS commiter during `git tfs rcheckin` (#336) and `git tfs rcheckin --quick` (#357)",
@@ -29,7 +29,7 @@ Let's see how such a file could look like. I'm using the example from [the Githu
         "Improved release process (#333, #340)"
     ]
 }
-~~~
+```
 
 Github automatically creates releases based on tags in your project. While it's not a problem that some things like binaries or indicating pre-leases aren't included, keeping the list of actual changes in the `changelog.json` file is a good way to keep track of changes throughout your project and ship it together with your project.
 

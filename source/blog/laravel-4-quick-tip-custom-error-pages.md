@@ -8,7 +8,7 @@ publishedAt: "May 2 2013 10:06"
 
 Here's a quick tip on how to create custom error pages in Laravel 4. Laravel has a default built-in event listener for errors attached to the application instance. You can pass it a callback which will provide you with two variables, the exception and the error code.<!--more-->
 
-~~~ .php
+```php
 App::error(function($exception, $code)
 {
 	switch ($code)
@@ -26,7 +26,7 @@ App::error(function($exception, $code)
 			return Response::view('errors.default', array(), $code);
 	}
 });
-~~~
+```
 
 This provides a very easy way to create custom error pages for your application.
 

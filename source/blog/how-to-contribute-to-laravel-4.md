@@ -62,21 +62,21 @@ The next step should be forking the repository to your personal Github account. 
 
 When it’s done forking the repo, clone the repository to your local development machine.
 
-~~~ .bash
+```bash
 $ git clone <github url to your cloned repo> <local directory to clone to>
-~~~
+```
 
 Next, let’s create a separate branch to work on. If it’s a bug fix, prefix it to `bugfix/`. If it’s a proposed feature, prefix it to `feature/`.
 
-~~~ .bash
+```bash
 $ git checkout -b prefix/short-descriptive-title
-~~~
+```
 
 When your branch is set up, let’s run a composer update to install the required packages for the framework.
 
-~~~ .bash
+```bash
 $ composer update --dev
-~~~
+```
 
 Notice that I’m adding `--dev`. This is necessary to pull in packages that are required for development (like Mockery for unit testing).
 
@@ -122,24 +122,24 @@ You’re all done and your Pull Request was finally accepted and merged into the
 
 You can now go to your local repo and do the following. First, add the Laravel Github repo as a remote:
 
-~~~ .bash
+```bash
 $ git remote add upstream https://github.com/laravel/framework.git
-~~~
+```
 
 Next, checkout to the master branch, pull from the latest changes into your own master branch and update your forked repo on Github by pushing to the master branch.
 
-~~~ .bash
+```bash
 $ git checkout master
 $ git pull upstream master
 $ git push origin master
-~~~
+```
 
 We won’t be needing the branch anymore on which we created the feature or fixed the bug so let’s delete them on the forked repo and locally.
 
-~~~ .bash
+```bash
 $ git push origin :prefix/short-descriptive-title
 $ git branch -d prefix/short-descriptive-title
-~~~
+```
 
 Now we’re all set. Next time you need to create a new feature, pull the latest changes in from the Laravel repo master branch and only then create your feature branch. This makes sure you have the latest changes when you start building your pull request.
 

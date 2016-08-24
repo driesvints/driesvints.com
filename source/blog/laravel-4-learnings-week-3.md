@@ -50,9 +50,9 @@ You probably already knew about `composer dump-autoload`. Laravel has added the 
 
 Run with:
 
-~~~ .bash
+```bash
 $ php artisan dump-autoload
-~~~
+```
 
 ## Touching Parent Timestamps
 
@@ -64,7 +64,7 @@ Not a beta 4 feature but something previous Laravel versions already supported. 
 
 Say you have a post model which has a url property which is a unique index in the database. You want to show the post when that url parameter has been provided. You can set your route up as follows:
 
-~~~ .php
+```php
 Route::get('{param}', function($param)
 {
     // Search for url on post model.
@@ -77,7 +77,7 @@ Route::get('{param}', function($param)
     // Throw a 404 if model wasn't found.
     App::abort(404).
 });
-~~~
+```
 
 Whenever you type anything behind the root url, the route closure will search for a post model by its url. If it's found, the post view will be build. Something you need to make sure of is that you place this wildcard route **at the end of your routes file**. Otherwise it will override any other routes you set after them. First register your "fixed" routes and route groups and place your wildcard route at the end.
 
@@ -85,12 +85,12 @@ Btw, [the compact function](http://be2.php.net/manual/en/function.compact.php) i
 
 You can of course search for multiple wildcard parameters.
 
-~~~ .php
+```php
 Route::get('{param}/{param2?}', function($param, $param2 = null)
 {
     // Filter on one or both parameters.
 });
-~~~
+```
 
 Now you can search for the first parameter and optionally for a second one if it's present. The ? character at the end of the second parameter means it's optional. This is a nice way to deal with nested page models.
 
@@ -100,18 +100,18 @@ I know, I'm only documenting a single helper function here but it's such a neat 
 
 I think a lot of developers know it's sometimes a bit annoying to first instantiate a new class before you can call a certain function which isn't a static function. You probably have been doing this before:
 
-~~~ .php
+```php
 // Instantiate new object.
 $post = new Post;
 // Call non-static function on that model.
 $postTypes = $post->getPostTypes();
-~~~
+```
 
 The with() helper function makes this a little easier.
 
-~~~ .php
+```php
 $postTypes = with(new Post)->getPostTypes();
-~~~
+```
 
 Basically the with function just returns the object that's being passed along. It's a function to help you chain object methods from the start so you don't need to create a new variable for the object.
 
