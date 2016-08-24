@@ -79,22 +79,17 @@
 <h2>Where to place your helper functions, view composers, etc</h2>
 <p>I asked the question earlier this week on the <a href="http://laravel.com/irc">Laravel IRC</a> channel and the majority of the people there seemed to agree that it should be in <code>app/start/global.php</code>. It makes sense. I was putting them in <code>app/filters.php</code> before but as the filename indicates that's more a location where you'd want to define your route filters, etc. If you open the <code>global.php</code> file you'll see that it will call the <code>filters.php</code> file at the end. It makes more sense putting your custom functions, validators etc here because it's a starting point for your application. Basically you're saying: &quot;These are all the extra functionality that my app needs before I go ahead.&quot;</p>
 <p>You could also make a separate <code>custom.php</code> file in app/start and include it in the <code>global.php</code> file just before the <code>filters.php</code> file inclusion. This is a nice way to separate your code from the default code in <code>global.php</code>.</p>
-<p>~~~ .php
-require <strong>DIR</strong>.'/custom.php';
-require <strong>DIR</strong>.'/../filters.php';</p>
-<pre><code>
-That way you have a nice separate file for all your custom functions.
-
-Note that there really isn't a convention for a location for these custom functionalities. From the Laravel 4 docs about View composers (as an example):
-&gt; Note that there is no convention on where composer classes may be stored. You are free to store them anywhere as long as they can be autoloaded using the directives in your composer.json file.
-So you're free to place them anywhere as you like as long as they're being autoloaded.
-
-## Namespacing your models
-
-I've found it to be very helpful to namespace my models from the start. Because sooner or later, you might run into a problem when you're trying to define a model that has the same name as an application alias. Take the `File` model for example. Laravel offers an alias by default to a facade of its Filesystem functionality to manipulate files. You can't use the name `File` as a model classname because it will interfere with the application alias. That's where namespaces come in.
-
-~~~ .php
-&lt;?php namespace Models;
+<pre><code class="language-php">require __DIR__.'/custom.php';
+require __DIR__.'/../filters.php';</code></pre>
+<p>That way you have a nice separate file for all your custom functions.</p>
+<p>Note that there really isn't a convention for a location for these custom functionalities. From the Laravel 4 docs about View composers (as an example):</p>
+<blockquote>
+<p>Note that there is no convention on where composer classes may be stored. You are free to store them anywhere as long as they can be autoloaded using the directives in your composer.json file.
+So you're free to place them anywhere as you like as long as they're being autoloaded.</p>
+</blockquote>
+<h2>Namespacing your models</h2>
+<p>I've found it to be very helpful to namespace my models from the start. Because sooner or later, you might run into a problem when you're trying to define a model that has the same name as an application alias. Take the <code>File</code> model for example. Laravel offers an alias by default to a facade of its Filesystem functionality to manipulate files. You can't use the name <code>File</code> as a model classname because it will interfere with the application alias. That's where namespaces come in.</p>
+<pre><code class="language-php">&lt;?php namespace Models;
 
 class File extends \Eloquent {
 
@@ -103,13 +98,9 @@ class File extends \Eloquent {
 }</code></pre>
 <p>Now that we have namespaced the model we don't have to worry about it interfering with the application alias anymore. Note that we specifically need to set the <code>$table</code> property on the model because otherwise Laravel will assume the database table is called <code>models_file</code>.</p>
 <p>You can now use this model in controllers, routes etc by specifying the full namespace:</p>
-<p>~~~ .php
-Models\File::find(1);</p>
-<pre><code>
-Or you can import the model and still use the File alias by referencing the global namespace:
-
-~~~ .php
-&lt;?php
+<pre><code class="language-php">Models\File::find(1);</code></pre>
+<p>Or you can import the model and still use the File alias by referencing the global namespace:</p>
+<pre><code class="language-php">&lt;?php
 
 use Models\File;
 

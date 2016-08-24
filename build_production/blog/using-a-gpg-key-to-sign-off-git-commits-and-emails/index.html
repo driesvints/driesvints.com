@@ -79,35 +79,27 @@
 <p>To get started we first need to generate a GPG key. For OS X, there is a great tool which makes it dead-simple to install GPG keys on your machine. You can <a href="https://gpgtools.org/">download GPGTools here</a> (you can use <a href="http://gpg4win.org/">Gpg4win</a> if you're using Windows).</p>
 <p>Follow the installation instructions to install GPGTools. After installing, you'll be prompted to generate a new GPG key. Fill in your full name and preferred email address (preferable the same which you're using for Git). Make sure to have &quot;Upload key after generation&quot; selected. Follow the remaining steps. Don't forget to remember the passphrase you'll be choosing to create the key.</p>
 <p>After creating your key, you can list them by running the following command in your CLI.</p>
-<p>~~~ .bash
-$ gpg --list-secret-keys | grep ^sec
-sec   4096R/8EE30EAB 2011-06-16 [expires: 2014-04-18]</p>
-<h1>^^^^^^^^</h1>
-<pre><code>
-## Configuring Git With the GPG Key
-
-Now that we have our key set up we should configure Git to use it when we sign our commits. Run the following command in your CLI. Please note that you have to replace the `8EE30EAB` part with your own code which you listed with the command above (marked with the `^^^^^^^^`).
-
-~~~ .bash
-$ git config --global user.signingkey 8EE30EAB
+<pre><code class="language-bash">$ gpg --list-secret-keys | grep ^sec
+sec   4096R/8EE30EAB 2011-06-16 [expires: 2014-04-18]
+#           ^^^^^^^^</code></pre>
+<h2>Configuring Git With the GPG Key</h2>
+<p>Now that we have our key set up we should configure Git to use it when we sign our commits. Run the following command in your CLI. Please note that you have to replace the <code>8EE30EAB</code> part with your own code which you listed with the command above (marked with the <code>^^^^^^^^</code>).</p>
+<pre><code class="language-bash">$ git config --global user.signingkey 8EE30EAB
 #                                        ^ replace with your key id</code></pre>
 <h2>Signing Commits</h2>
 <p>We've added our GPG key to our Git configuration. Let's try signing a commit. Go to a local Git repository, make some changes, stage them and then run the following command.</p>
-<p>~~~ .bash
-$ git commit -S -m 'Test commit of foo'</p>
-<p>You need a passphrase to unlock the secret key for
-user: &quot;Mike Gerwitz (Free Software Developer) <a href="mailto:mike@mikegerwitz.com">mike@mikegerwitz.com</a>&quot;
-4096-bit RSA key, ID 8EE30EAB, created 2011-06-16</p>
-<p>[master (root-commit) cf43808] Test commit of foo
-1 file changed, 1 insertion(+)
-create mode 100644 foo</p>
-<pre><code>
-The `-S` flag (uppercase!) indicates that we're signing the commit with our GPG key. If you don't have `gpg-agent` running, you'll be prompted to enter the passphrase you choose for generating the key.
+<pre><code class="language-bash">$ git commit -S -m 'Test commit of foo'
 
-By default, Git won't show the GPG signature when running `git log`. To check if the commit was actually signed you can run the following command.
+You need a passphrase to unlock the secret key for
+user: "Mike Gerwitz (Free Software Developer) &lt;mike@mikegerwitz.com&gt;"
+4096-bit RSA key, ID 8EE30EAB, created 2011-06-16
 
-~~~ .bash
-$ git log --show-signature
+[master (root-commit) cf43808] Test commit of foo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 foo</code></pre>
+<p>The <code>-S</code> flag (uppercase!) indicates that we're signing the commit with our GPG key. If you don't have <code>gpg-agent</code> running, you'll be prompted to enter the passphrase you choose for generating the key.</p>
+<p>By default, Git won't show the GPG signature when running <code>git log</code>. To check if the commit was actually signed you can run the following command.</p>
+<pre><code class="language-bash">$ git log --show-signature
 commit cf43808e85399467885c444d2a37e609b7d9e99d
 gpg: Signature made Fri 20 Apr 2012 11:59:01 PM EDT using RSA key ID 8EE30EAB
 gpg: Good signature from "Mike Gerwitz (Free Software Developer) &lt;mike@mikegerwitz.com&gt;"

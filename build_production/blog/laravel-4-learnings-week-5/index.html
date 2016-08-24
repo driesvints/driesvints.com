@@ -83,24 +83,16 @@
 <h2>HTTP Basic Auth</h2>
 <p><a href="https://twitter.com/laravelphp/status/321290995155206145">https://twitter.com/laravelphp/status/321290995155206145</a></p>
 <p>Implementing HTTP basic authentication has never been easier now that it’s baked into the core of Laravel 4. When you put the filter on a route, your browser will prompt you with a login screen. The user logs in and Laravel handles the authentication automatically.</p>
-<p>~~~ .php
-Route::get('basicauth', array('before' =&gt; 'auth.basic', function()
+<pre><code class="language-php">Route::get('basicauth', array('before' =&gt; 'auth.basic', function()
 {
-return 'Logged in!';
-}));</p>
-<pre><code>
-## Improved Error Display With The “Whoops” Library
-
-https://twitter.com/laravelphp/status/322416887680098304
-
-Replacing the old Symfony error screens, the Whoops library provides a much improved error handling screen.
-
-## Support For Renaming Database Table Columns
-
-Support for renaming database table columns in L4 has been added. First parameter is the original column name and the second one is the new column name.
-
-~~~ .php
-Schema::table('addresses', function($table)
+    return 'Logged in!';
+}));</code></pre>
+<h2>Improved Error Display With The “Whoops” Library</h2>
+<p><a href="https://twitter.com/laravelphp/status/322416887680098304">https://twitter.com/laravelphp/status/322416887680098304</a></p>
+<p>Replacing the old Symfony error screens, the Whoops library provides a much improved error handling screen.</p>
+<h2>Support For Renaming Database Table Columns</h2>
+<p>Support for renaming database table columns in L4 has been added. First parameter is the original column name and the second one is the new column name.</p>
+<pre><code class="language-php">Schema::table('addresses', function($table)
 {
     $table-&gt;renameColumn('location', 'city');
 });</code></pre>

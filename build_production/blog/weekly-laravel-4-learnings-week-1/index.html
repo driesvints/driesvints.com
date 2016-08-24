@@ -77,17 +77,13 @@
 <h2>Named resourceful routes</h2>
 <p>So <a href="https://github.com/laravel/framework/issues/550">I asked a question on Github</a> about adding named resourceful routes so you could do someting like <code>route('&lt;route name&gt;@method')</code>. I didn't find anything about it in the L4 docs at that time. But Taylor pointed out you actually already can do that.</p>
 <p>Every resourceful route has its own name set automatically as the route itself. It's actually not a named route, just a resourceful route. Basically if you want quickly link to a resourceful controller's method you can do the following:</p>
-<p>~~~ .php
-// Generate a route to a resourceful controller through the route() helper function.
-route('users.edit', 1);</p>
-<p>// Will generate: <a href="http://example.com/users/1/edit">http://example.com/users/1/edit</a></p>
-<pre><code>
-This is very handy when you have deeply nested namespaced controllers. It saves you the effort from typing the entire namespace to the controller through the action() function.
+<pre><code class="language-php">// Generate a route to a resourceful controller through the route() helper function.
+route('users.edit', 1);
 
-Nested resources or prefixed routes is also possible. Say you have a users controller which is used under the admin prefix. You can simple do the following:
-
-~~~ .php
-route('admin.users.edit', 1);</code></pre>
+// Will generate: http://example.com/users/1/edit</code></pre>
+<p>This is very handy when you have deeply nested namespaced controllers. It saves you the effort from typing the entire namespace to the controller through the action() function.</p>
+<p>Nested resources or prefixed routes is also possible. Say you have a users controller which is used under the admin prefix. You can simple do the following:</p>
+<pre><code class="language-php">route('admin.users.edit', 1);</code></pre>
 <p>Quite the timesaver.</p>
 <h2>Generators</h2>
 <p>This is pretty neat! Jeffrey Way, the editor of Nettuts has developed a package for Laravel 4 that extends the Artisan CLI with custom generators. This tool allows you to generate various parts in Laravel 4 that you're bound to code yourself frequently. It saves you the effort from coding them manually every time. Jeffrey has posted a video about it that will explain it much better than I could possible do :)</p>
@@ -96,15 +92,10 @@ route('admin.users.edit', 1);</code></pre>
 <p>This was a question I asked in the IRC channel a bit earlier this week. I don't think this is in the docs but everyone seems to agree that controllers should have plural naming. E.g. <code>UsersController</code> instead of <code>UserController</code>. This goes for routes, views (<code>users.show.blade.php</code>, with users being the folder name), etc. The exception for this are Models which always should be singular. E.g. <code>User</code>.</p>
 <h2>Model::lists()</h2>
 <p>Very neat little function an intern at my company (<a href="https://twitter.com/jannemoonvx">@jannemoonvx</a>) discovered. Ever wanted to get a key/value array for a returned model set? You can do so by using the lists() function. The first parameter defines which column should be used as the value and the second parameter defines which column should be used as the key in the array. Using the ID column is a logic choice as the second parameter. You can later use the array in, for example, a select list generated through the Form helper class in Laravel.</p>
-<p>~~~ .php
-$keyValueArray = User::lists('first_name', 'id');</p>
-<pre><code>
-
-## Conclusion
-
-I hope that these tips were useful to anyone. I'll be sharing more next week. I'm picking up things every week since I started out with Laravel 4 and it's been amazing so far how much it has helped me learn PHP in general but also speed up my development workflow.
-
-Feel free to drop me a note on twitter: [@driesvints](http://twitter.com/driesvints)</code></pre>
+<pre><code class="language-php">$keyValueArray = User::lists('first_name', 'id');</code></pre>
+<h2>Conclusion</h2>
+<p>I hope that these tips were useful to anyone. I'll be sharing more next week. I'm picking up things every week since I started out with Laravel 4 and it's been amazing so far how much it has helped me learn PHP in general but also speed up my development workflow.</p>
+<p>Feel free to drop me a note on twitter: <a href="http://twitter.com/driesvints">@driesvints</a></p>
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">
