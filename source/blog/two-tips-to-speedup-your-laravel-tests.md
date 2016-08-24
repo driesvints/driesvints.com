@@ -4,7 +4,7 @@ section: body
 title: "Two tips to speedup your Laravel tests"
 publishedAt: "August 24 2016 15:00"
 ---
-I've seen two different tips for speeding up your tests in Laravel in the past week and thought I'd share them with out. For me, they made a significant impact on the speed of my tests.
+I've seen two different tips for speeding up your tests in Laravel in the past week and thought I'd share them with you. For me, they made a significant impact on the speed of my tests.
 
 ## Lower the default crypt cost factor
 
