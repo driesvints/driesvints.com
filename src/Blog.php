@@ -10,7 +10,7 @@ use Mni\FrontYAML\Parser;
 class Blog
 {
     /**
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \Symfony\Component\Finder\Finder
      */
     private $filesystem;
 
