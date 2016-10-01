@@ -46,15 +46,15 @@ In the end this proved to be the right choice. Tools like Mackup and a Brewfile 
 
 ## The Different Parts
 
-### OS X Preferences
+### macOS Preferences
 
-My main OS of choice is OS X. Being the Apple fanboy that I am, I thoroughly enjoy the way it syncs all of my data across my devices through iCloud. I wouldn't want to trade it in for any other OS at the moment. Although iCloud is great, it doesn't yet syncs your OS X preferences across your Macs. I have a Macbook at home and a Macbook from work so if I change a setting on one of my Macs, it doesn't automatically apply to the other one. Luckily we have a dotfile to help out with that.
+My main OS of choice is macOS. Being the Apple fanboy that I am, I thoroughly enjoy the way it syncs all of my data across my devices through iCloud. I wouldn't want to trade it in for any other OS at the moment. Although iCloud is great, it doesn't yet syncs your macOS preferences across your Macs. I have a Macbook at home and a Macbook from work so if I change a setting on one of my Macs, it doesn't automatically apply to the other one. Luckily we have a dotfile to help out with that.
 
-[Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) is one of the more popular ones out there. His [`.osx` dotfile](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) features a range of OS X preferences and is something probably everyone wants when working with OS X. Now syncing your preferences is easy. Just pull in the latest commit from your dotfiles, run `source .osx` and you're up to date.
+[Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) is one of the more popular ones out there. His [`.macos` dotfile](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) features a range of macOS preferences and is something probably everyone wants when working with macOS. Now syncing your preferences is easy. Just pull in the latest commit from your dotfiles, run `source .macos` and you're up to date.
 
 ### Homebrew
 
-When running OS X, [Homebrew](http://brew.sh/) is essential. It helps you install packages and tools in an easy way through the CLI. It should probably be the first thing you install when setting up a new Mac.
+When running macOS, [Homebrew](http://brew.sh/) is essential. It helps you install packages and tools in an easy way through the CLI. It should probably be the first thing you install when setting up a new Mac.
 
 Homebrew can also help install your apps. For that, you'll need [Homebrew Cask](https://caskroom.github.io/). You won't need to worry about manually downloading and installing packages and tools anymore. Cask can even install your preferred fonts. Apps from the app store still need to be installed manually, though.
 
@@ -62,7 +62,7 @@ To bring it all together in your dotfiles, you probably want to adopt a `Brewfil
 
 ### Mackup
 
-Now we've talked about our OS X preferences and restoring our apps & tools but what about our application preferences? How are we going to make sure we can restore those if we need to re-install our Mac?
+Now we've talked about our macOS preferences and restoring our apps & tools but what about our application preferences? How are we going to make sure we can restore those if we need to re-install our Mac?
 
 Meet [Mackup](https://github.com/lra/mackup). Mackup is a tool which backups your app preferences to a storage of your choice. By default it's Dropbox but you can easily use Google Drive, iCloud or any other synced folder you want. What it does is that it copies the settings from your `~/Library` folder and symlinks them from the storage folder. That way your settings stay consistent across devices. It's also very handy to restore your application's settings. Simply install your synced folder, Mackup first and then `mackup restore` to restore your settings.
 
@@ -86,15 +86,15 @@ And when using Mackup your Oh-My-Zsh preferences automatically get synced across
 
 ## The Install Procedure
 
-Now that I've shown you how I've set up my dotfiles let's take a look at how it all comes together when we try to re-install our Mac. I've written a step-by-step guide on how I can [install a fresh OS X setup](https://github.com/driesvints/dotfiles#a-fresh-os-x-setup) with my prefered settings and tools. Let me guide you through the steps.
+Now that I've shown you how I've set up my dotfiles let's take a look at how it all comes together when we try to re-install our Mac. I've written a step-by-step guide on how I can [install a fresh macOS setup](https://github.com/driesvints/dotfiles#a-fresh-os-x-setup) with my prefered settings and tools. Let me guide you through the steps.
 
-First of all we need to update to the latest version of OS X. We do this first so that we have the latest versions of all the tools available. After we've installed the latest version, install Xcode from the App store. We'll need this for the command line tools. After installing it, open it and accept the license agreement. This is necessary to use some of the command line tools. Now install the command line tools by running `xcode-select --install`. Ok, this was the part that probably took the most time. Let's proceed to the next part.
+First of all we need to update to the latest version of macOS. We do this first so that we have the latest versions of all the tools available. After we've installed the latest version, install Xcode from the App store. We'll need this for the command line tools. After installing it, open it and accept the license agreement. This is necessary to use some of the command line tools. Now install the command line tools by running `xcode-select --install`. Ok, this was the part that probably took the most time. Let's proceed to the next part.
 
 First, copy your SSH keys to your `~/.ssh` folder and make sure they have the correct permissions. I sure hope you always keep those keys safe somewhere because they're basically your ID for the web. Now clone the repo to your machine. I'm gonna assume you're going to clone it to `~/.dotfiles`.
 
 Before we run the setup, one more thing we need to do is append `/usr/local/bin/zsh` to our `/etc/shells` file. This will point to the Homebrew installed Zsh version. It doesn't matter for now that we haven't installed it yet but it's necessary before we can run the installer and set Zsh as our default shell.
 
-Now run the installer by running `./install.sh`. Homebrew will be installed and will start installing your apps and tools from your `Brewfile`. Zsh will be set as your default shell. Composer will be installed with your preferred global packages. Lastly, the `.osx` file will be read to set your preffered OS X settings. Note that this will close your shell because it resets some processes at the end of the file.
+Now run the installer by running `./install.sh`. Homebrew will be installed and will start installing your apps and tools from your `Brewfile`. Zsh will be set as your default shell. Composer will be installed with your preferred global packages. Lastly, the `.macos` file will be read to set your preffered macOS settings. Note that this will close your shell because it resets some processes at the end of the file.
 
 After the install script has been run we're going to restore your app preferences. First make sure Dropbox (or whatever synced storage you've chosen for Mackup) is set up and install your remaining apps from the App Store. Now run `mackup restore` to restore your app preferences.
 
@@ -108,7 +108,7 @@ Some pointers on maintaining your dotfiles:
 
 - When installing a new app, tool or font, try to install it with Homebrew (Cask) and add it to your `Brewfile`
 - When configuring a new app make sure to run `mackup backup` to save your preferences
-- When changing an OS X setting, try setting it through the `.osx` file
+- When changing an macOS setting, try setting it through the `.macos` file
 
 If you follow these pointers you'll definitely make sure that your Mac will be restored the way you left it the next time you need to re-install.
 

@@ -25,7 +25,7 @@ elixir(function(mix) {
             'source/fonts'
         )
         .copy('./node_modules/font-awesome/fonts/**', elixir.config.publicPath + '/fonts')
-        .exec('jigsaw build --env=' + env, ['./source/*', './source/**/*', '!./source/_assets/**/*'])
+        .exec('jigsaw build ' + env, ['./source/*', './source/**/*', '!./source/_assets/**/*'])
         .browserSync({
             server: { baseDir: 'build_' + env },
             proxy: null,
