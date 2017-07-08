@@ -74,36 +74,8 @@ blockquote p {
     line-height: 1.4em;
 }
 
-.btn {
-    border-radius: 0;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 3px solid #2980B9;
-    color: #2980B9;
-    font-family: $fontSansSerif;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-.btn-outline:hover {
-    background-color: #2980B9;
-    border: 3px solid #2980B9;
-    color: white;
-}
-
 .center {
     text-align: center;
-}
-
-.separator {
-    background: #eaeaea;
-    border: none;
-    height: 1px;
-    width: 75%;
-    max-width: 500px;
 }
 
 /* Homepage - Header
@@ -111,6 +83,10 @@ blockquote p {
 
 #header {
     background-color: #333;
+    background-image: url('/images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     font-family: $fontSansSerif;
     padding: 25px 0;
@@ -139,7 +115,6 @@ blockquote p {
 
         h1 { font-size: 3.2em }
         h2 { font-size: 1.8em }
-        .navigation { font-size: 1em }
     }
 }
 @media (min-height: 1000px) and (min-width: 992px) {
