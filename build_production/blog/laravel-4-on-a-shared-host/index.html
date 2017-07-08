@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site info -->
-    <title>Laravel 4 on a shared host | Dries Vints</title>
+    <title>Dries Vints</title>
 
-            <meta name="description" content="Sometimes you&#039;re stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we&#039;ll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.">
     
     <!-- Favicons -->
     <meta name="msapplication-TileColor" content="#2F3238">
@@ -42,34 +41,9 @@
     </head>
 <body>
 
-<div id="page-header">
-    <div class="inner">
-        <div class="navigation">
-            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
-            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
-        </div>
-        <div class="meta">
-                            <div class="date">
-                    October 25, 2013
-                </div>
-            
-            <h1>
-                Laravel 4 on a shared host
-
-                                    <sup>
-                        <a href="https://github.com/driesvints/driesvints.com/edit/master/source/blog/laravel-4-on-a-shared-host.md"
-                            title="Edit this page">
-                            <i class="fa fa-pencil"></i>
-                        </a>
-                    </sup>
-                            </h1>
-        </div>
-    </div>
-</div>
-
 <div id="content">
-    
-<div class="single">
+    <h1>Laravel 4 on a shared host</h1>
+
     <p>Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more--></p>
 <p>I'd like to begin by saying that while most solutions below might suit your needs, the ultimate solution is always just to move to a webhost which suits your needs to host a PHP framework like Laravel. <a href="http://fortrabbit.com/">Fortrabbit</a> is one such solution but definitely not the only one around.</p>
 <p>Remember that the absolute minimum requirements always include the need for the MCrypt PHP Extension.</p>
@@ -208,38 +182,7 @@ $app = require_once __DIR__.'/bootstrap/start.php';</code></pre>
 <p>Do a composer install with the <code>--no-dev</code> argument before uploading your files. This makes sure your dependencies are optimized for production without the unnecessary development packages. Overwrite your vendor folder with the updated dependencies when you upload through FTP.</p>
 <h2>Conclusion</h2>
 <p>I hope some of these tips helped you on getting Laravel 4 installed on your shared hosting. If you have more tips please share them in the comments and I'll add them to this article.</p>
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'driesvints';
-        var disqus_identifier = 'laravel-4-on-a-shared-host';
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-</div>
-
-</div>
-
-<hr class="separator" />
-
-<div id="footer">
-    <div class="container">
-        <p class="social-media">
-            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
-            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
-            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
-        </p>
-        <p>
-            Copyright &copy; 2016 Dries Vints<br/>
-
-            <a href="/colophon">Colophon</a> ·
-            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
-        </p>
-    </div>
+    <p>Copyright &copy; 2017 Dries Vints</p>
 </div>
 
 <script src="/js/all.js"></script>

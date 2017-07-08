@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site info -->
-    <title>Using Laravel 4&#039;s Model Events | Dries Vints</title>
+    <title>Dries Vints</title>
 
-            <meta name="description" content="Laravel 4 beta 4 is hot off the press and it added a lot of new functionality to the framework. One of them are the newly added Model events. You probably already knew about events in Laravel. Model events are basically the same but for Eloquent model event listeners. They get triggered on specific Model actions like saving a Model&#039;s data to the database or attempting to delete a model from the database. In this post I&#039;m going to give you a couple of use-cases for them so you get a better understanding why they would be useful in your projects.">
     
     <!-- Favicons -->
     <meta name="msapplication-TileColor" content="#2F3238">
@@ -42,34 +41,9 @@
     </head>
 <body>
 
-<div id="page-header">
-    <div class="inner">
-        <div class="navigation">
-            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
-            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
-        </div>
-        <div class="meta">
-                            <div class="date">
-                    April 06, 2013
-                </div>
-            
-            <h1>
-                Using Laravel 4&#039;s Model Events
-
-                                    <sup>
-                        <a href="https://github.com/driesvints/driesvints.com/edit/master/source/blog/using-laravel-4-model-events.md"
-                            title="Edit this page">
-                            <i class="fa fa-pencil"></i>
-                        </a>
-                    </sup>
-                            </h1>
-        </div>
-    </div>
-</div>
-
 <div id="content">
-    
-<div class="single">
+    <h1>Using Laravel 4&#039;s Model Events</h1>
+
     <p>Laravel 4 beta 4 is hot off the press and it added a lot of new functionality to the framework. One of them are the newly added <a href="http://four.laravel.com/docs/eloquent#model-events">Model events</a>. You probably already knew about events in Laravel. Model events are basically the same but for Eloquent model event listeners. They get triggered on specific Model actions like saving a Model's data to the database or attempting to delete a model from the database. In this post I'm going to give you a couple of use-cases for them so you get a better understanding why they would be useful in your projects.<!--more--></p>
 <h2>Validate models before creating or updating them</h2>
 <p>This example is a bit stolen from the L4 docs but it's still a valid example. I'll try to explain a bit more extensive than the docs. Imagine you're creating a new model record or updating an existing one but you want to make sure some fields are validated before doing so. Now you could validate those fields on your controller but another way is to validate them directly inside your model and attaching a model event to it so it automatically will be validated every time you try to create or update a model.</p>
@@ -191,38 +165,7 @@ Post::creating(function($post)
 <h2>Conclusion</h2>
 <p>These are just a few examples of what you can do with Model events. I'm sure you can come up with more clever use cases. If you do, blog about them and share them with the community! :)</p>
 <p>Thanks for reading.</p>
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'driesvints';
-        var disqus_identifier = 'using-laravel-4-model-events';
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-</div>
-
-</div>
-
-<hr class="separator" />
-
-<div id="footer">
-    <div class="container">
-        <p class="social-media">
-            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
-            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
-            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
-        </p>
-        <p>
-            Copyright &copy; 2016 Dries Vints<br/>
-
-            <a href="/colophon">Colophon</a> ·
-            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
-        </p>
-    </div>
+    <p>Copyright &copy; 2017 Dries Vints</p>
 </div>
 
 <script src="/js/all.js"></script>

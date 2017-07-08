@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site info -->
-    <title>Quality Assurance with Envoyer | Dries Vints</title>
+    <title>Dries Vints</title>
 
-            <meta name="description" content="This is one of the tutorials I did for my Laracon EU talk.
-Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
-For example, at BeatSwitch we always let a...">
     
     <!-- Favicons -->
     <meta name="msapplication-TileColor" content="#2F3238">
@@ -44,34 +41,9 @@ For example, at BeatSwitch we always let a...">
     </head>
 <body>
 
-<div id="page-header">
-    <div class="inner">
-        <div class="navigation">
-            <a href="/" title="Home"><i class="fa fa-home"></i></a> ·
-            <a href="/blog" title="Blog"><i class="fa fa-list"></i></a>
-        </div>
-        <div class="meta">
-                            <div class="date">
-                    August 25, 2015
-                </div>
-            
-            <h1>
-                Quality Assurance with Envoyer
-
-                                    <sup>
-                        <a href="https://github.com/driesvints/driesvints.com/edit/master/source/blog/quality-assurance-with-envoyer.md"
-                            title="Edit this page">
-                            <i class="fa fa-pencil"></i>
-                        </a>
-                    </sup>
-                            </h1>
-        </div>
-    </div>
-</div>
-
 <div id="content">
-    
-<div class="single">
+    <h1>Quality Assurance with Envoyer</h1>
+
     <p>This is one of the tutorials I did for my Laracon EU talk.</p>
 <p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
 <p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
@@ -85,38 +57,7 @@ php artisan migrate:reset --force</code></pre>
 php artisan migrate --force --seed</code></pre>
 <p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
 <p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'driesvints';
-        var disqus_identifier = 'quality-assurance-with-envoyer';
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-</div>
-
-</div>
-
-<hr class="separator" />
-
-<div id="footer">
-    <div class="container">
-        <p class="social-media">
-            <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
-            <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
-            <a href="mailto:dries.vints@gmail.com"><i class="fa fa-envelope"></i></a>
-        </p>
-        <p>
-            Copyright &copy; 2016 Dries Vints<br/>
-
-            <a href="/colophon">Colophon</a> ·
-            <a href="https://github.com/driesvints/driesvints.com">Source Code</a>
-        </p>
-    </div>
+    <p>Copyright &copy; 2017 Dries Vints</p>
 </div>
 
 <script src="/js/all.js"></script>
