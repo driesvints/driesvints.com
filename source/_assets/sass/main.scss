@@ -113,10 +113,10 @@ blockquote p {
     background-color: #333;
     color: white;
     font-family: $fontSansSerif;
-    margin-bottom: 25px;
     padding: 25px 0;
     position: relative;
     text-align: center;
+    text-shadow: 2px 2px 8px #000;
     height: 100%;
     min-height: 520px;
 
@@ -131,36 +131,11 @@ blockquote p {
         font-size: 1.2em;
         font-weight: 300;
         line-height: 1.3em;
-        margin-bottom: 25px;
-    }
-
-    .navigation {
-        font-weight: 300;
-        font-size: 0.8em;
-
-        a { color: white; }
-        a:hover { text-decoration: underline; }
-    }
-
-    .next {
-        color: rgba(220, 220, 220, 0.9);
-        -webkit-transition: color 0.3s ease;
-        -moz-transition: color 0.3s ease;
-        -o-transition: color 0.3s ease;
-        transition: color 0.3s ease;
-        font-size: 2.2em;
-        position: absolute;
-        bottom: 20px;
-        margin-left: -20px;
-    }
-    .next:hover {
-        color: #fff;
-        text-decoration: none;
     }
 }
 @media (min-width: 1025px) and (min-height: 800px) {
     #header {
-        padding: 50px 0;
+        padding: 90px 0;
 
         h1 { font-size: 3.2em }
         h2 { font-size: 1.8em }
@@ -173,14 +148,17 @@ blockquote p {
     }
 }
 
-/* Homepage - About
----------------------------------------------------------*/
-
 #about {
     padding: 25px 15px;
     text-align: center;
     max-width: 500px;
     margin: 0 auto;
+
+    a {
+        color: white;
+        border-bottom: 1px dotted white;
+        text-decoration: none;
+    }
 
     img {
         border: 4px solid #ccc;
@@ -194,6 +172,23 @@ blockquote p {
 @media (min-width: 768px) {
     #about {
         padding: 50px 15px;
+    }
+}
+
+.social-media {
+    font-size: 2em;
+    word-spacing: 25px;
+
+    a {
+        color: white;
+    }
+    a:hover {
+        color: #ccc;
+    }
+
+    .fa-paper-plane {
+        font-size: 0.8em;
+        margin-left: -4px;
     }
 }
 
@@ -285,30 +280,6 @@ h2.title {
     }
     #content .single pre code {
         padding: 15px 20px;
-    }
-}
-
-/* Footer
----------------------------------------------------------*/
-
-#footer {
-    color: #95a5a6;
-    font-size: .7em;
-    line-height: 1.6em;
-    padding: 8px 15px;
-    text-align: center;
-
-    hr {
-        width: 75%;
-    }
-}
-
-.social-media {
-    font-size: 2em;
-    word-spacing: 25px;
-
-    a {
-        color: #ccc;
     }
 }
 

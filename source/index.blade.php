@@ -1,33 +1,16 @@
-@include('_partials/header', [
-    'metaDescription' => 'Web Developer with a passion for open-source,
-    community & Laravel. Currently works at BeatSwitch in the city of Antwerp,
-    Belgium.'
-])
+@include('_partials/header', ['metaDescription' => strip_tags($page->bio)])
 
 <div id="header">
     <h1>Dries Vints</h1>
     <h2>Web Developer</h2>
-
-    <p class="navigation">
-        <a href="#about">About</a> ·
-        <a href="https://medium.com/@driesvints">Blog</a>
+    <p id="about">{!! $page->bio !!}</p>
+    <p class="social-media">
+        <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/driesvints"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/@driesvints"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/driesvints/"><i class="fa fa-linkedin"></i></a>
+        <a href="mailto:dries.vints@gmail.com"><i class="fa fa-paper-plane"></i></a>
     </p>
-
-    <a class="next icon-highlight" href="#about">
-        <i class="fa fa-chevron-down"></i>
-    </a>
-</div>
-
-<div id="about">
-    <img class="img-circle" itemprop="image" src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5.jpg?s=125" alt="">
-    <h3>Dries Vints</h3>
-    <p>
-        I work at <a href="http://beatswitch.com">BeatSwitch</a>,
-        maintain <a href="http://laravel.io">Laravel.io</a>
-        and organise meetups for <a href="http://phpantwerp.be">PHP Antwerp</a>.
-        Building <a href="http://qapilot.com">Pilot</a>.
-    </p>
-    <p>Live and let live.</p>
 </div>
 
 @include('_partials/footer')
