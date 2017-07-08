@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "About the FlyPHP issue"
 publishedAt: "March 4 2014 00:15"
 ---

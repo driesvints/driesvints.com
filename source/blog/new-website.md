@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "New Website"
 publishedAt: "October 27 2013 13:00"
 ---

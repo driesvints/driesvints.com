@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Continuous Delivery with Forge and Envoyer"
 publishedAt: "August 25 2015"
 ---

@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Getting Started with Dotfiles"
 publishedAt: "April 8 2016"
 ---

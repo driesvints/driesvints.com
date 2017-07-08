@@ -11,8 +11,6 @@
     "font-awesome": "^4.6.1",
     "highlightjs": "^8.7.0",
     "jquery": "^2.2.2",
-    "jquery.backstretch": "^2.1.13",
-    "laravel-elixir": "^4.2.0",
-    "laravel-elixir-imagemin": "^0.2.3"
+    "jquery.backstretch": "^2.1.15"
   }
 }

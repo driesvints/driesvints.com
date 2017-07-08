@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Laravel.IO - The Road Ahead"
 publishedAt: "August 13 2014 18:00"
 ---

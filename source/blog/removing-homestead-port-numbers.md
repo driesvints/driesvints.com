@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Removing Homestead port numbers"
 publishedAt: "September 28 2014 20:00"
 ---

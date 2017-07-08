@@ -1,10 +1,8 @@
 <?php
 
-require_once __DIR__.'/vendor/autoload.php';
-
-use Dries\Blog;
-
 return [
     'production' => false,
-    'posts' => Blog::yolo()->posts(),
+    'excerpt' => function ($page, $characters = 100) {
+        return substr(strip_tags($page->getContent()), 0, $characters);
+    },
 ];

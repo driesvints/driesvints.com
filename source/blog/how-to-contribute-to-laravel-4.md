@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "How to contribute to Laravel 4"
 publishedAt: "April 14 2013 13:46"
 ---

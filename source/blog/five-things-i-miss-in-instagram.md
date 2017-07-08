@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Five things I miss in Instagram"
 publishedAt: "January 4 2015"
 ---

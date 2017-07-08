@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Using Laravel 4's Model Events"
 publishedAt: "April 6 2013 21:44"
 ---

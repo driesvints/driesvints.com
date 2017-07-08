@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Laravel 4 Quick Tip: Custom Error Pages"
 publishedAt: "May 2 2013 10:06"
 ---

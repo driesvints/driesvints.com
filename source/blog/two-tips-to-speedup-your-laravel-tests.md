@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Two tips to speedup your Laravel tests"
 publishedAt: "August 24 2016 15:00"
 ---

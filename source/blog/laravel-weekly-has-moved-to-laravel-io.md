@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Laravel Weekly has moved to Laravel.io"
 publishedAt: "June 1 2013 10:35"
 ---

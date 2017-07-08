@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Using a GPG Key to Sign-Off Git Commits and Emails"
 publishedAt: "June 30 2013 19:17"
 ---

@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Laravel 4 on a shared host"
 publishedAt: "October 25 2013 13:00"
 ---

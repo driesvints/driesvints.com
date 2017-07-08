@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Self improvement as a developer through self-questioning"
 publishedAt: "January 7 2015"
 ---

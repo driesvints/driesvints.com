@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "Laravel 4 learnings: week 5"
 publishedAt: "April 14 2013 17:28"
 ---

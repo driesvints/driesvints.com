@@ -5830,15 +5830,15 @@ button.close {
     display: none !important; } }
 
 /*!
- *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -5955,7 +5955,6 @@ button.close {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
   filter: none; }
 
 .fa-stack {
@@ -7635,6 +7634,7 @@ button.close {
   content: ""; }
 
 .fa-battery-4:before,
+.fa-battery:before,
 .fa-battery-full:before {
   content: ""; }
 
@@ -7981,6 +7981,143 @@ button.close {
 .fa-font-awesome:before {
   content: ""; }
 
+.fa-handshake-o:before {
+  content: ""; }
+
+.fa-envelope-open:before {
+  content: ""; }
+
+.fa-envelope-open-o:before {
+  content: ""; }
+
+.fa-linode:before {
+  content: ""; }
+
+.fa-address-book:before {
+  content: ""; }
+
+.fa-address-book-o:before {
+  content: ""; }
+
+.fa-vcard:before,
+.fa-address-card:before {
+  content: ""; }
+
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: ""; }
+
+.fa-user-circle:before {
+  content: ""; }
+
+.fa-user-circle-o:before {
+  content: ""; }
+
+.fa-user-o:before {
+  content: ""; }
+
+.fa-id-badge:before {
+  content: ""; }
+
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: ""; }
+
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: ""; }
+
+.fa-quora:before {
+  content: ""; }
+
+.fa-free-code-camp:before {
+  content: ""; }
+
+.fa-telegram:before {
+  content: ""; }
+
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: ""; }
+
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: ""; }
+
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: ""; }
+
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: ""; }
+
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: ""; }
+
+.fa-shower:before {
+  content: ""; }
+
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: ""; }
+
+.fa-podcast:before {
+  content: ""; }
+
+.fa-window-maximize:before {
+  content: ""; }
+
+.fa-window-minimize:before {
+  content: ""; }
+
+.fa-window-restore:before {
+  content: ""; }
+
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: ""; }
+
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: ""; }
+
+.fa-bandcamp:before {
+  content: ""; }
+
+.fa-grav:before {
+  content: ""; }
+
+.fa-etsy:before {
+  content: ""; }
+
+.fa-imdb:before {
+  content: ""; }
+
+.fa-ravelry:before {
+  content: ""; }
+
+.fa-eercast:before {
+  content: ""; }
+
+.fa-microchip:before {
+  content: ""; }
+
+.fa-snowflake-o:before {
+  content: ""; }
+
+.fa-superpowers:before {
+  content: ""; }
+
+.fa-wpexplorer:before {
+  content: ""; }
+
+.fa-meetup:before {
+  content: ""; }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -8134,37 +8271,6 @@ blockquote p {
   #header {
     min-height: 1000px; } }
 
-/* Page Header
----------------------------------------------------------*/
-#page-header {
-  color: white;
-  height: 100%;
-  margin-bottom: 20px;
-  max-height: 350px;
-  min-height: 200px;
-  text-shadow: 0 0 5px black; }
-  #page-header .navigation {
-    padding-top: 10px; }
-  #page-header a {
-    color: white; }
-  #page-header a:hover {
-    text-decoration: none; }
-  #page-header h1 {
-    margin-top: 15px; }
-    #page-header h1 a {
-      font-size: .6em; }
-  #page-header .inner {
-    height: 100%;
-    margin: 0 auto;
-    max-width: 768px;
-    padding: 0 20px;
-    position: relative; }
-    #page-header .inner .meta {
-      position: absolute;
-      bottom: 20px;
-      max-width: 100%;
-      padding-right: 20px; }
-
 /* Homepage - About
 ---------------------------------------------------------*/
 #about {
@@ -8181,75 +8287,6 @@ blockquote p {
 @media (min-width: 768px) {
   #about {
     padding: 50px 15px; } }
-
-/* Homepage - Posts
----------------------------------------------------------*/
-#recent-posts {
-  padding: 25px 15px;
-  max-width: 768px;
-  margin: 0 auto; }
-
-#recent-posts .excerpt {
-  color: #333;
-  display: block;
-  line-height: 1.7em;
-  margin-bottom: 40px;
-  transition: color 0.3s ease; }
-
-#recent-posts .excerpt:hover {
-  color: #7f8c8d;
-  text-decoration: none; }
-
-#recent-posts .excerpt .date {
-  font-size: 0.9em;
-  line-height: 1.1em;
-  font-style: italic; }
-
-#recent-posts .excerpt h3 {
-  font-weight: 900;
-  line-height: 1.4em;
-  margin-top: 5px; }
-
-@media (min-width: 768px) {
-  #recent-posts {
-    padding: 50px 15px; }
-  #recent-posts .excerpt {
-    margin-bottom: 60px; }
-  #recent-posts h2.title {
-    margin-top: 50px; }
-  #recent-posts .excerpt h3 {
-    font-size: 1.8em; } }
-
-.read-more-btn {
-  text-align: center; }
-
-/* Blog
----------------------------------------------------------*/
-#blog {
-  padding: 0 15px; }
-
-#blog h3 {
-  font-weight: normal;
-  margin-bottom: 25px;
-  text-align: center; }
-
-#blog .post {
-  margin-bottom: 10px;
-  transition: color 0.2s ease; }
-
-#blog .post .date {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-@media (min-width: 768px) {
-  #blog .post .date,
-  #blog .post .title {
-    float: left; }
-  #blog .post .date {
-    text-align: right;
-    width: 25%; }
-  #blog .post .title {
-    padding-left: 2%;
-    width: 73%; } }
 
 /* Content
 ---------------------------------------------------------*/

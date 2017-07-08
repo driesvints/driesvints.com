@@ -1,6 +1,6 @@
 ---
-extends: _layouts.post
-section: body
+extends: _layouts.master
+section: content
 title: "About Github's New Releases Feature"
 publishedAt: "28 July 2013 9AM"
 ---
