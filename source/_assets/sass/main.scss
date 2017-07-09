@@ -87,35 +87,12 @@ blockquote p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    font-family: $fontSansSerif;
-    padding: 25px 0;
     position: relative;
-    text-align: center;
-    text-shadow: 2px 2px 8px #000;
     height: 100%;
     min-height: 520px;
-
-    h1 {
-        color: #eee;
-        font-size: 2.4em;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
-    h2 {
-        color: #eee;
-        font-size: 1.2em;
-        font-weight: 300;
-        line-height: 1.3em;
-    }
-}
-@media (min-width: 1025px) and (min-height: 800px) {
-    #header {
-        padding: 90px 0;
-
-        h1 { font-size: 3.2em }
-        h2 { font-size: 1.8em }
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media (min-height: 1000px) and (min-width: 992px) {
     #header {
@@ -123,47 +100,50 @@ blockquote p {
     }
 }
 
-#about {
-    padding: 25px 15px;
-    text-align: center;
+.about {
+    color: white;
+    font-family: $fontSansSerif;
     max-width: 500px;
-    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 8px #000;
 
-    a {
-        color: white;
-        border-bottom: 1px dotted white;
-        text-decoration: none;
+    h1 {
+        font-size: 2.4em;
+        font-weight: 900;
+        text-transform: uppercase;
     }
-
-    img {
-        border: 4px solid #ccc;
-    }
-
-    h3 {
-        font-size: 2.2em;
+    h2 {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.3em;
         margin-bottom: 25px;
     }
-}
-@media (min-width: 768px) {
-    #about {
-        padding: 50px 15px;
-    }
-}
 
-.social-media {
-    font-size: 2em;
-    word-spacing: 25px;
+    p {
+        margin-bottom: 25px;
+    }
 
     a {
         color: white;
+        text-decoration: none;
     }
     a:hover {
         color: #ccc;
     }
 
-    .fa-paper-plane {
-        font-size: 0.8em;
-        margin-left: -4px;
+    .bio a {
+        border-bottom: 1px dotted white;
+    }
+
+    .social-media {
+        font-size: 2em;
+        word-spacing: 25px;
+
+        .fa-paper-plane {
+            font-size: 0.8em;
+            margin-left: -4px;
+        }
     }
 }
 
