@@ -145,6 +145,15 @@ blockquote p {
         }
     }
 }
+@media (min-height: 1000px) and (min-width: 992px) {
+    .about {
+        font-size: 1.5em;
+        max-width: 800px;
+
+        h1 { font-size: 3em }
+        h2 { font-size: 1.8em }
+    }
+}
 
 /* Content
 ---------------------------------------------------------*/
