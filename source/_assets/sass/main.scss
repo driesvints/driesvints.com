@@ -128,6 +128,10 @@ blockquote p {
         color: #ccc;
     }
 
+    .fa {
+        display: inline;
+    }
+
     .bio a {
         border-bottom: 1px dotted white;
     }
@@ -138,7 +142,6 @@ blockquote p {
 
         .fa-paper-plane {
             font-size: 0.8em;
-            margin-left: -4px;
         }
     }
 }
