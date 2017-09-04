@@ -3,7 +3,7 @@
 <div id="header">
     <div class="about">
         <h1>Dries Vints</h1>
-        <h2>Web Developer</h2>
+        <h2>Software Engineer</h2>
         <p class="bio">{!! $page->bio !!}</p>
         <p class="social-media">
             <a href="https://twitter.com/driesvints"><i class="fa fa-twitter"></i></a>
