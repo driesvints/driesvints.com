@@ -13,6 +13,10 @@
         <meta name="description" content="{{ $metaDescription }}">
     @endif
 
+    @if (isset($page) && $page->publishedAt)
+        <meta property="article:published_time" content="{{ (new DateTime($page->publishedAt))->format('Y-m-d\TH:i') }}" />
+    @endif
+
     <!-- Favicons -->
     <meta name="msapplication-TileColor" content="#2F3238">
     <meta name="msapplication-TileImage" content="/images/touch-icon-144×144-precomposed.png'">
