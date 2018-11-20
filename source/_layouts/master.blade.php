@@ -13,8 +13,8 @@
         <meta name="description" content="{{ $metaDescription }}">
     @endisset
 
-    @if ($page->publishedAt)
-        <meta property="article:published_time" content="{{ (new DateTime($page->publishedAt))->format('Y-m-d\TH:i') }}" />
+    @if ($page->date)
+        <meta property="article:published_time" content="{{ date('Y-m-d', $page->date) }}" />
     @endif
 
     <!-- Favicons -->

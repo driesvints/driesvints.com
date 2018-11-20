@@ -3,5 +3,11 @@
 return [
     'baseUrl' => '',
     'production' => false,
-    'collections' => [],
+    'collections' => [
+        'posts' => [
+            'path' => 'blog/{filename}',
+            'author' => 'Dries Vints',
+            'sort' => '-date',
+        ],
+    ],
 ];

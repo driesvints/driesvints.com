@@ -1,9 +1,11 @@
 ---
 extends: _layouts.post
 section: content
-title: "Two tips to speedup your Laravel tests"
-publishedAt: "August 24 2016 15:00"
+title: Two tips to speedup your Laravel tests
+date: 2016-08-24
 ---
+> This optimization has since [made it into the core](https://github.com/laravel/laravel/blob/6806aaa3568382e9c8c7281a64b82a52b824e46f/phpunit.xml#L27) of the framework. 
+
 I've seen two different tips for speeding up your tests in Laravel in the past week and thought I'd share them with you. For me, they made a significant impact on the speed of my tests.
 
 ## Lower the default crypt cost factor

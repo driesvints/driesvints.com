@@ -1,8 +1,8 @@
 ---
 extends: _layouts.post
 section: content
-title: "Continuous Delivery with Forge and Envoyer"
-publishedAt: "August 25 2015"
+title: Continuous Delivery with Forge and Envoyer
+date: 2015-08-25
 ---
 This is one of the tutorials I did for my Laracon EU talk.
 

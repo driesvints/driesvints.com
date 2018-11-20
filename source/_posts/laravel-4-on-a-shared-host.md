@@ -1,8 +1,8 @@
 ---
 extends: _layouts.post
 section: content
-title: "Laravel 4 on a shared host"
-publishedAt: "October 25 2013 13:00"
+title: Laravel 4 on a shared host
+date: 2013-10-25
 ---
 Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more-->
 

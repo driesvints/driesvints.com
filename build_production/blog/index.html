@@ -7,10 +7,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Site info -->
-    <title>Removing Homestead port numbers | Dries Vints</title>
+    <title>Blog | Dries Vints</title>
 
     
-            <meta property="article:published_time" content="2014-09-28T20:00" />
     
     <!-- Favicons -->
     <meta name="msapplication-TileColor" content="#2F3238">
@@ -44,22 +43,32 @@
     </head>
 <body>
         <div id="content">
-        <h1>Removing Homestead port numbers</h1>
+        <h1>Blog</h1>
 
-        <p>I struggled a bit with removing trailing slashes for Homestead urls when <a href="https://twitter.com/fideloper">Chris Fidao</a> gave me a tip to omit the port for Homestead domain aliases.<!--more--></p>
-<div class="twitter-quote">
-    <blockquote class="twitter-tweet" lang="en">
-<p><a href="https://twitter.com/DriesVints">@DriesVints</a> Homestead assigns each server an IP on a private network, you should be able to skip port forwarding altogether.</p>— Chris Fidao™ (@fideloper) <a href="https://twitter.com/fideloper/status/516240175345967104">September 28, 2014</a>
-</blockquote>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-<p>So let's say we have a <code>dries.loc</code> alias which we link to in our hosts file:</p>
-<pre><code>127.0.0.1 dries.loc</code></pre>
-<p>This is how the docs tell us to do it and enables us to browse to our app using <code>http://dries.loc:8000</code>. But there's a way to omit the port number. Instead of using your localhost you should link to your ip address set in your <code>Homestead.yml</code> file.</p>
-<pre><code>192.168.10.10 dries.loc</code></pre>
-<p>And now you can browse without using the port number: <code>http://dries.loc</code>. Neat!</p>
-<p><strong>Extra tip!</strong> Provided by Dan Herd in the comments below. Just surf to <code>dries.loc.192.168.10.10.xip.io</code> to avoid editing your hosts file. Of course swap out the <code>dries.loc</code> part with your own domain alias.</p>
-<p>I sent in a PR to the docs so hopefully this will make things easier for people in the future.</p>    </div>
-    <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
+        <h3>2016</h3>
+
+        <ul>
+                                            <li><a href="/blog/two-tips-to-speedup-your-laravel-tests">Two tips to speedup your Laravel tests</a></li>
+                                            <li><a href="/blog/getting-started-with-dotfiles">Getting Started with Dotfiles</a></li>
+                                                        </ul>
+
+        <h3>2015</h3>
+        <ul>
+                            <li><a href="/blog/continuous-delivery-with-forge-and-envoyer">Continuous Delivery with Forge and Envoyer</a></li>
+                                            <li><a href="/blog/quality-assurance-with-envoyer">Quality Assurance with Envoyer</a></li>
+                                                        </ul>
+
+        <h3>2014</h3>
+        <ul>
+                            <li><a href="/blog/laravel-io-the-road-ahead">Laravel.IO - The Road Ahead</a></li>
+                                                        </ul>
+
+        <h3>2013</h3>
+        <ul>
+                            <li><a href="/blog/laravel-4-on-a-shared-host">Laravel 4 on a shared host</a></li>
+                    </ul>
+
+        <p class="text-center small">Copyright &copy; Dries Vints</p>
+    </div>
 </body>
 </html>

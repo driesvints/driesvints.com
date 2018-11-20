@@ -10,7 +10,7 @@
     <title>Laravel 4 on a shared host | Dries Vints</title>
 
     
-            <meta property="article:published_time" content="2013-10-25T13:00" />
+            <meta property="article:published_time" content="2013-10-25" />
     
     <!-- Favicons -->
     <meta name="msapplication-TileColor" content="#2F3238">
@@ -183,7 +183,9 @@ $app = require_once __DIR__.'/bootstrap/start.php';</code></pre>
 <p>No SSH access also means no access to composer, artisan and other command line tools. Once again, FTP is probably your only friend. Should you choose not to use a deployment tool and rather just deploy over FTP, I recommend doing at least the following:</p>
 <p>Do a composer install with the <code>--no-dev</code> argument before uploading your files. This makes sure your dependencies are optimized for production without the unnecessary development packages. Overwrite your vendor folder with the updated dependencies when you upload through FTP.</p>
 <h2>Conclusion</h2>
-<p>I hope some of these tips helped you on getting Laravel 4 installed on your shared hosting. If you have more tips please share them in the comments and I'll add them to this article.</p>    </div>
+<p>I hope some of these tips helped you on getting Laravel 4 installed on your shared hosting. If you have more tips please share them in the comments and I'll add them to this article.</p>
+        <p class="text-center small">Copyright &copy; Dries Vints</p>
+    </div>
     <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
 </body>
 </html>
