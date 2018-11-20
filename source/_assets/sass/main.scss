@@ -1,0 +1,256 @@
+/* Imports
+---------------------------------------------------------*/
+
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "~highlightjs/styles/solarized-dark.css";
+
+/* Fonts
+---------------------------------------------------------*/
+
+$fontSansSerif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontCode: "Source Code Pro", "Courier New", Courier, sans-serif;
+
+/* General
+---------------------------------------------------------*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font-family: $fontSansSerif;
+  font-size: 2em;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $fontSansSerif;
+  font-weight: 900;
+}
+
+a {
+  color: #3498db;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #2980b9;
+  text-decoration: none;
+}
+a:-webkit-any-link,
+a:-moz-any-link,
+a:any-link {
+  text-decoration: none;
+}
+
+pre,
+code {
+  font-family: $fontCode;
+}
+pre {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  font-size: 0.6em;
+  line-height: 1.8em;
+  padding: 0;
+}
+pre code {
+  padding: 10px 15px;
+}
+@media (min-width: 768px) {
+  pre {
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+}
+
+blockquote p {
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.4em;
+}
+
+/* Homepage - Header
+---------------------------------------------------------*/
+
+#header {
+  background: #333 url('/assets/images/header.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-height: 1000px) and (min-width: 992px) {
+  #header {
+    min-height: 1000px;
+  }
+}
+
+.about {
+  color: white;
+  font-family: $fontSansSerif;
+  max-width: 500px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 8px #000;
+
+  h1 {
+    font-size: 2.4em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.3em;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #ccc;
+  }
+
+  .fa {
+    display: inline;
+  }
+
+  .bio a {
+    border-bottom: 1px dotted white;
+  }
+
+  .social-media {
+    font-size: 2em;
+    word-spacing: 25px;
+
+    .email {
+      font-size: 0.8em;
+    }
+  }
+}
+@media (min-height: 1000px) and (min-width: 992px) {
+  .about {
+    font-size: 1.5em;
+    max-width: 800px;
+
+    h1 { font-size: 3em }
+    h2 { font-size: 1.8em }
+  }
+}
+
+/* Content
+---------------------------------------------------------*/
+
+#content {
+  line-height: 1.7em;
+  max-width: 768px;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+#content img {
+  max-width: 100%;
+  height: auto;
+}
+h1.title,
+h2.title {
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  h1.title,
+  h2.title {
+    font-size: 2.4em;
+  }
+}
+#content .single p.info {
+  font-style: italic;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  #content .single h1 {
+    font-size: 2.2em;
+  }
+}
+#content .single h1 {
+  margin-top: 0;
+}
+#content .single h2 {
+  margin-top: 50px;
+}
+#content .single h1,
+#content .single h2,
+#content .single h3,
+#content .single h4,
+#content .single h5,
+#content .single h6,
+#content .single p,
+#content .single ul,
+#content .single ol,
+#content .single img,
+#content .single blockquote,
+#content .single div.twitter-quote,
+#disqus_thread {
+  padding: 0 15px;
+  margin-bottom: 25px;
+}
+#content .single ul,
+#content .single ol {
+  margin-left: 30px;
+}
+#content .single pre {
+  margin-bottom: 25px;
+}
+#content .single pre code {
+  padding: 15px 15px;
+}
+
+@media (min-width: 768px) {
+  #content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #content .single h1,
+  #content .single h2,
+  #content .single h3,
+  #content .single h4,
+  #content .single h5,
+  #content .single h6,
+  #content .single p,
+  #content .single ul,
+  #content .single ol,
+  #content .single img,
+  #content .single blockquote,
+  #disqus_thread {
+    padding: 0 20px;
+  }
+  #content .single pre code {
+    padding: 15px 20px;
+  }
+}
+
+/* Error Page
+---------------------------------------------------------*/
+
+#error-page {
+  padding: 25px 0;
+  text-align: center;
+
+  .btn {
+    margin-top: 15px;
+  }
+}
