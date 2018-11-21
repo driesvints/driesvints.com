@@ -55,7 +55,7 @@
 <h2>Configuration</h2>
 <h3>Queues</h3>
 <p>The next step is to set up our queue configuration. Go to the newly created <code>horizon.php</code> config file and go the the <code>environments</code> setting. Here you can define your queues. You can play around a little bit with this later but for now let’s keep the base configuration with just one queue.</p>
-<h3>Authorization Rules</h3>
+<h3>Authorization</h3>
 <p>Next we'll set up any authorization rules to make sure no one can access the Horizon dashboard unwanted. You can do this with the gate method in the <code>App\Provider\HorizonServiceProvider</code> class.</p>
 <pre><code class="language-php">protected function gate()
 {

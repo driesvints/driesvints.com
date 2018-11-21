@@ -20,7 +20,7 @@ The first step to get started is very simple. Simple do a `composer require lara
 
 The next step is to set up our queue configuration. Go to the newly created `horizon.php` config file and go the the `environments` setting. Here you can define your queues. You can play around a little bit with this later but for now let’s keep the base configuration with just one queue.
 
-### Authorization Rules
+### Authorization
 
 Next we'll set up any authorization rules to make sure no one can access the Horizon dashboard unwanted. You can do this with the gate method in the `App\Provider\HorizonServiceProvider` class.
 
