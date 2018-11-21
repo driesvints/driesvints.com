@@ -7,16 +7,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Site info -->
-    <title>{{ isset($title) ? "$title | " : '' }}Dries Vints</title>
+    <title>One Club Player | Dries Vints</title>
 
-    @isset($metaDescription)
-        <meta name="description" content="{{ $metaDescription }}">
-    @endisset
-
-    @if ($page->date)
-        <meta property="article:published_time" content="{{ date('Y-m-d', $page->date) }}" />
-    @endif
-
+    
+            <meta property="article:published_time" content="2017-05-29" />
+    
     <!-- Favicons -->
     <meta name="msapplication-TileColor" content="#2F3238">
     <meta name="msapplication-TileImage" content="/assets/images/favicons/touch-icon-144×144-precomposed.png'">
@@ -32,10 +27,9 @@
     <!-- Stylsheets -->
     <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=142ddf01d535aa1f938e">
 
-    @if ($page->production)
-        <!-- Google Analytics -->
+            <!-- Google Analytics -->
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-18478762-2']);
@@ -47,11 +41,9 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
         </script>
-    @endif
-</head>
+    </head>
 <body>
-    @if ($page->fbvideo)
-        <div id="fb-root"></div>
+            <div id="fb-root"></div>
         <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -59,8 +51,27 @@
             js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-    @endif
+    
+        <div id="content">
+        <h1>One Club Player</h1>
 
-    @yield('body')
+        <p><img src="/assets/images/posts/one-club-player.jpeg" alt="Source: The Indian Express" /></p>
+<p>It saddens me to see a legendary player like Francesco Totti calling it quits. Men of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Andrés Iniesta, Carles Puyol are a bunch who know what it’s like to dedicated their lives to their club.</p>
+<p>Not even the likes of Lampard and Terry come close to them. These are exceptional players who wouldn’t even dream of playing for other teams. True love for their club.</p>
+<p>It’s sad to see that this is becoming a rare feat. I’ve seen more and more cases over the years where players choose for the money and join rival clubs, forsaking their previous fans and club. Here in Belgium it’s becoming an increasing thing.</p>
+<p>It gives me much comfort when I see players like Diego Costa, even though I’m not a fan, say that there’s only one club he wants a transfer to and that it’ll be Atlético. That’s club love. That’s love for the fans. For the game.</p>
+<p>There’s a trait in FIFA which is titled “One Club Player”. It’s extremely rare to find a player in the game with said trait but Totti is one of them. I wonder how long the trait will last and stay in the game.</p>
+<p>I’ll miss Totti, not only as a player but as a charismatic person. Someone with the heart in the right place. A true hero of the people. A legend.</p>
+<p>Arrivederci, Francesco</p>
+<div class="fb-video" data-href="https://www.facebook.com/officialasroma/videos/1399428543451289/" data-show-text="false">
+    <blockquote cite="https://www.facebook.com/officialasroma/videos/1399428543451289/" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/officialasroma/videos/1399428543451289/">Stadium of Tears</a>
+        <p>When Francesco Totti cries, we all cry.</p>
+        Posted by <a href="https://www.facebook.com/officialasroma/">AS Roma</a> on Monday, May 29, 2017
+    </blockquote>
+</div>
+        <p class="text-center small">Copyright &copy; Dries Vints</p>
+    </div>
+    <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
 </body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Site info -->
+    <title>Laravel Horizon with Forge and Envoyer | Dries Vints</title>
+
+    
+            <meta property="article:published_time" content="2018-02-08" />
+    
+    <!-- Favicons -->
+    <meta name="msapplication-TileColor" content="#2F3238">
+    <meta name="msapplication-TileImage" content="/assets/images/favicons/touch-icon-144×144-precomposed.png'">
+    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/assets/images/favicons/touch-icon-152×152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/assets/images/favicons/touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/assets/images/favicons/touch-icon-120×120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/assets/images/favicons/touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/assets/images/touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/favicons/touch-icon-iphone-precomposed.png" />
+    <link rel="icon" sizes="32x32" href="/assets/images/favicons/favicon-32.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Stylsheets -->
+    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=142ddf01d535aa1f938e">
+
+            <!-- Google Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-18478762-2']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+<body>
+    
+        <div id="content">
+        <h1>Laravel Horizon with Forge and Envoyer</h1>
+
+        <p>I recently installed Horizon for <a href="https://laravel.io/">Laravel.io</a> and while it wasn’t that hard to install, I still had to figure some things out. Since this was the first time setting everything up I thought I’d write up the steps to take to get started with Horizon and set everything up with Forge and Envoyer.</p>
+<p>Before you begin I suggest you read <a href="https://medium.com/@taylorotwell/introducing-laravel-horizon-4585f66e3e">the introduction post</a> and <a href="https://medium.com/@taylorotwell/deploying-horizon-to-laravel-forge-fc9e01b74d84">this setup guide</a> both written by Taylor Otwell. They’ll give you an excellent introduction and while the setup guide already gives most of the steps used to set things up, this guide tries to guide you step by step and adds some extra’s for setting everything up with Envoyer.</p>
+<p>Remember that this isn’t a guide that dives deep into Horizon, just enough to get it up and running. If you want more info about Horizon’s internals I suggest <a href="https://divinglaravel.com/horizon">this excellent post</a> by Mohamed Said.</p>
+<h2>Step 1: Installation</h2>
+<p>The first step to get started is very simple. Simple do a <code>composer require laravel/horizon</code> on your Laravel project and Horizon will be installed. If you’re using Laravel 5.5 or above, the auto-discovery will hook up your service provider with the framework.</p>
+<h2>Step 2: Configuration</h2>
+<p>The next step is to set up our queue configuration. Run <code>php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"</code> so the configuration file and the assets get published. The package will publish the assets you’ll need to view the dashboard.</p>
+<p>After that go to the <code>horizon.php</code> config file and go the the <code>environments</code> setting. Here you can define your queues. You can play around a little bit with this later but for now let’s keep the base configuration with just one queue.</p>
+<h2>Step 3: Scheduler</h2>
+<p>If we want to get some cool metrics on our dashboard we’ll need to define a scheduler command. Make sure the scheduler is set up to take snapshots every five minutes. You can add this in the <code>App\Console\Kernel</code> class.</p>
+<pre><code class="language-php">/**
+ * Define the application's command schedule.
+ *
+ * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+ * @return void
+ */
+protected function schedule(Schedule $schedule)
+{
+    $schedule-&gt;command('horizon:snapshot')-&gt;everyFiveMinutes();
+}</code></pre>
+<h2>Step 4: Authentication</h2>
+<p>Last step before we commit our code is to set up any authentication rules to make sure no one can access the Horizon dashboard unwanted. You can do this with the <code>Horizon:auth</code> callback. I’ve added the following method in the <code>AppServiceProvider</code>. It gets called in the <code>boot</code> method of the service provider.</p>
+<pre><code class="language-php">public function bootHorizon()
+{
+    if ($horizonEmail = config('lio.horizon_email')) {
+        Horizon::routeMailNotificationsTo($horizonEmail);
+    }
+
+    Horizon::auth(function ($request) use ($horizonEmail) {
+        return auth()-&gt;check() &amp;&amp;
+            auth()-&gt;user()-&gt;emailAddress() === $horizonEmail;
+    });
+}</code></pre>
+<p>I’ve configured the email address that will be checked through an environment variable so it’s easy to configure. It gets used to check if the correct user is authenticated to visit the dashboard. But you can really define anything you want here.</p>
+<p>Above the auth check I’ve defined a callback which will send any notifications from Envoyer to the email address I’ve set up.</p>
+<p>After you’ve done this, commit the code changes and push to Github or whatever VCS host you use.</p>
+<h2>Step 5: Envoyer</h2>
+<p>On Envoyer we need to define a new hook. The <code>horizon:purge</code> command will purge any orphan processes. The <code>horizon:terminate</code> command will finish any left over jobs and terminate the Horizon process. The daemon which we’ll set up later will make sure that the command is always restarted after we terminate it.</p>
+<p>Set up the deployment hook <strong>after</strong> the “Activate New Release” action. This will make sure the command is run after we activate the new app release.</p>
+<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png" alt="Add the hook **after** the “Activate New Release” action." /></p>
+<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png" alt="" /></p>
+<p>If you’re managing your environment variables with Envoyer make sure you set your <code>QUEUE_CONNECTION</code> env variable to <code>redis</code>.</p>
+<p>You can now deploy the code we added before. Make sure the deploy finished before proceeding to the next step.</p>
+<h2>Step 6: Forge</h2>
+<h3>Scheduler</h3>
+<p>First, if you haven’t done so already, make sure the scheduler is set up correctly so the scheduled command is run to populate the metrics. Go to your server and the “Scheduler” menu item. Make sure you add a job which runs every minute and triggers the <code>schedule:run</code> command. Setup your command as follows:</p>
+<pre><code class="language-bash">php /home/forge/&lt;site&gt;/current/artisan schedule:run</code></pre>
+<h3>Daemon</h3>
+<p>After setting up the scheduler we only need to add the daemon to make sure the Horizon command is started and re-started every time we deploy and terminate it. Go to your server and the “Daemons” menu item. Add a deamon with the <code>php artisan horizon</code> command to run in the <code>/home/forge/&lt;site&gt;/current</code> directory. After you’ve added this command, the daemon will enable the horizon command and you should be able to visit horizon at <code>https://site.com/horizon</code> and see the status below.</p>
+<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png" alt="" /></p>
+<p>Don’t forget that you need to be authenticated with the rules you defined in the <code>Horizon::auth</code> hook.</p>
+<h2>Conclusion</h2>
+<p>This should be all that you need to get started with Horizon. Don’t forget that you don’t need to define queues through Forge as Horizon completely takes this over. You only need to change your <code>horizon.php</code> config file and Horizon will apply the changes on the next deploy.</p>
+        <p class="text-center small">Copyright &copy; Dries Vints</p>
+    </div>
+    <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
+</body>
+</html>
