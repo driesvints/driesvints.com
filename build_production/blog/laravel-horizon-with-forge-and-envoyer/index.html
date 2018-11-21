@@ -50,12 +50,32 @@
         <p>I recently installed Horizon for <a href="https://laravel.io/">Laravel.io</a> and while it wasn’t that hard to install, I still had to figure some things out. Since this was the first time setting everything up I thought I’d write up the steps to take to get started with Horizon and set everything up with Forge and Envoyer.</p>
 <p>Before you begin I suggest you read <a href="https://medium.com/@taylorotwell/introducing-laravel-horizon-4585f66e3e">the introduction post</a> and <a href="https://medium.com/@taylorotwell/deploying-horizon-to-laravel-forge-fc9e01b74d84">this setup guide</a> both written by Taylor Otwell. They’ll give you an excellent introduction and while the setup guide already gives most of the steps used to set things up, this guide tries to guide you step by step and adds some extra’s for setting everything up with Envoyer.</p>
 <p>Remember that this isn’t a guide that dives deep into Horizon, just enough to get it up and running. If you want more info about Horizon’s internals I suggest <a href="https://divinglaravel.com/horizon">this excellent post</a> by Mohamed Said.</p>
-<h2>Step 1: Installation</h2>
-<p>The first step to get started is very simple. Simple do a <code>composer require laravel/horizon</code> on your Laravel project and Horizon will be installed. If you’re using Laravel 5.5 or above, the auto-discovery will hook up your service provider with the framework.</p>
-<h2>Step 2: Configuration</h2>
-<p>The next step is to set up our queue configuration. Run <code>php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"</code> so the configuration file and the assets get published. The package will publish the assets you’ll need to view the dashboard.</p>
-<p>After that go to the <code>horizon.php</code> config file and go the the <code>environments</code> setting. Here you can define your queues. You can play around a little bit with this later but for now let’s keep the base configuration with just one queue.</p>
-<h2>Step 3: Scheduler</h2>
+<h2>Installation</h2>
+<p>The first step to get started is very simple. Simple do a <code>composer require laravel/horizon</code> on your Laravel project and run <code>php artisan horizon:install</code> to install Horizon. This will publish and register the <code>App\Providers\HorizonServiceProvider</code> where we can configure Horizon and publish any assets we'll need to view the dashboard.</p>
+<h2>Configuration</h2>
+<h3>Queues</h3>
+<p>The next step is to set up our queue configuration. Go to the newly created <code>horizon.php</code> config file and go the the <code>environments</code> setting. Here you can define your queues. You can play around a little bit with this later but for now let’s keep the base configuration with just one queue.</p>
+<h3>Authorization Rules</h3>
+<p>Next we'll set up any authorization rules to make sure no one can access the Horizon dashboard unwanted. You can do this with the gate method in the <code>App\Provider\HorizonServiceProvider</code> class.</p>
+<pre><code class="language-php">protected function gate()
+{
+    Gate::define('viewHorizon', function ($user) {
+        return in_array($user-&gt;email, [
+            config('lio.horizon.email'),
+        ]);
+    });
+}</code></pre>
+<p>I’ve configured the email address that will be checked through an environment variable so it’s easy to configure. It gets used to check if the correct user is authenticated to visit the dashboard. But you can really define anything you want here.</p>
+<h3>Notifications</h3>
+<p>In the boot method of the service provider I’ve added two notification methods which will send any notifications from Horizon to the email address and Slack webhook that I’ve set up. Don't forget that you'll need to configure a mail provider for the mail notifications. You're totally free to skip this for now and set it up later if you want. Any notification method is optional.</p>
+<pre><code class="language-php">public function boot()
+{
+    parent::boot();
+
+    Horizon::routeMailNotificationsTo(config('lio.horizon.email'));
+    Horizon::routeSlackNotificationsTo(config('lio.horizon.webhook'));
+}</code></pre>
+<h3>Scheduler</h3>
 <p>If we want to get some cool metrics on our dashboard we’ll need to define a scheduler command. Make sure the scheduler is set up to take snapshots every five minutes. You can add this in the <code>App\Console\Kernel</code> class.</p>
 <pre><code class="language-php">/**
  * Define the application's command schedule.
@@ -67,30 +87,15 @@ protected function schedule(Schedule $schedule)
 {
     $schedule-&gt;command('horizon:snapshot')-&gt;everyFiveMinutes();
 }</code></pre>
-<h2>Step 4: Authentication</h2>
-<p>Last step before we commit our code is to set up any authentication rules to make sure no one can access the Horizon dashboard unwanted. You can do this with the <code>Horizon:auth</code> callback. I’ve added the following method in the <code>AppServiceProvider</code>. It gets called in the <code>boot</code> method of the service provider.</p>
-<pre><code class="language-php">public function bootHorizon()
-{
-    if ($horizonEmail = config('lio.horizon_email')) {
-        Horizon::routeMailNotificationsTo($horizonEmail);
-    }
-
-    Horizon::auth(function ($request) use ($horizonEmail) {
-        return auth()-&gt;check() &amp;&amp;
-            auth()-&gt;user()-&gt;emailAddress() === $horizonEmail;
-    });
-}</code></pre>
-<p>I’ve configured the email address that will be checked through an environment variable so it’s easy to configure. It gets used to check if the correct user is authenticated to visit the dashboard. But you can really define anything you want here.</p>
-<p>Above the auth check I’ve defined a callback which will send any notifications from Envoyer to the email address I’ve set up.</p>
 <p>After you’ve done this, commit the code changes and push to Github or whatever VCS host you use.</p>
-<h2>Step 5: Envoyer</h2>
+<h2>Envoyer</h2>
 <p>On Envoyer we need to define a new hook. The <code>horizon:purge</code> command will purge any orphan processes. The <code>horizon:terminate</code> command will finish any left over jobs and terminate the Horizon process. The daemon which we’ll set up later will make sure that the command is always restarted after we terminate it.</p>
 <p>Set up the deployment hook <strong>after</strong> the “Activate New Release” action. This will make sure the command is run after we activate the new app release.</p>
 <p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png" alt="Add the hook **after** the “Activate New Release” action." /></p>
 <p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png" alt="" /></p>
 <p>If you’re managing your environment variables with Envoyer make sure you set your <code>QUEUE_CONNECTION</code> env variable to <code>redis</code>.</p>
 <p>You can now deploy the code we added before. Make sure the deploy finished before proceeding to the next step.</p>
-<h2>Step 6: Forge</h2>
+<h2>Forge</h2>
 <h3>Scheduler</h3>
 <p>First, if you haven’t done so already, make sure the scheduler is set up correctly so the scheduled command is run to populate the metrics. Go to your server and the “Scheduler” menu item. Make sure you add a job which runs every minute and triggers the <code>schedule:run</code> command. Setup your command as follows:</p>
 <pre><code class="language-bash">php /home/forge/&lt;site&gt;/current/artisan schedule:run</code></pre>

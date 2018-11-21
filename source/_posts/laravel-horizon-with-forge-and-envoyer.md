@@ -10,17 +10,48 @@ Before you begin I suggest you read [the introduction post](https://medium.com/@
 
 Remember that this isn’t a guide that dives deep into Horizon, just enough to get it up and running. If you want more info about Horizon’s internals I suggest [this excellent post](https://divinglaravel.com/horizon) by Mohamed Said.
 
-## Step 1: Installation
+## Installation
 
-The first step to get started is very simple. Simple do a `composer require laravel/horizon` on your Laravel project and Horizon will be installed. If you’re using Laravel 5.5 or above, the auto-discovery will hook up your service provider with the framework.
+The first step to get started is very simple. Simple do a `composer require laravel/horizon` on your Laravel project and run `php artisan horizon:install` to install Horizon. This will publish and register the `App\Providers\HorizonServiceProvider` where we can configure Horizon and publish any assets we'll need to view the dashboard.
 
-## Step 2: Configuration
+## Configuration
 
-The next step is to set up our queue configuration. Run `php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"` so the configuration file and the assets get published. The package will publish the assets you’ll need to view the dashboard.
+### Queues
 
-After that go to the `horizon.php` config file and go the the `environments` setting. Here you can define your queues. You can play around a little bit with this later but for now let’s keep the base configuration with just one queue.
+The next step is to set up our queue configuration. Go to the newly created `horizon.php` config file and go the the `environments` setting. Here you can define your queues. You can play around a little bit with this later but for now let’s keep the base configuration with just one queue.
 
-## Step 3: Scheduler
+### Authorization Rules
+
+Next we'll set up any authorization rules to make sure no one can access the Horizon dashboard unwanted. You can do this with the gate method in the `App\Provider\HorizonServiceProvider` class.
+
+```php
+protected function gate()
+{
+    Gate::define('viewHorizon', function ($user) {
+        return in_array($user->email, [
+            config('lio.horizon.email'),
+        ]);
+    });
+}
+```
+
+I’ve configured the email address that will be checked through an environment variable so it’s easy to configure. It gets used to check if the correct user is authenticated to visit the dashboard. But you can really define anything you want here.
+
+### Notifications
+
+In the boot method of the service provider I’ve added two notification methods which will send any notifications from Horizon to the email address and Slack webhook that I’ve set up. Don't forget that you'll need to configure a mail provider for the mail notifications. You're totally free to skip this for now and set it up later if you want. Any notification method is optional.
+
+```php
+public function boot()
+{
+    parent::boot();
+
+    Horizon::routeMailNotificationsTo(config('lio.horizon.email'));
+    Horizon::routeSlackNotificationsTo(config('lio.horizon.webhook'));
+}
+```
+
+### Scheduler
 
 If we want to get some cool metrics on our dashboard we’ll need to define a scheduler command. Make sure the scheduler is set up to take snapshots every five minutes. You can add this in the `App\Console\Kernel` class.
 
@@ -37,31 +68,9 @@ protected function schedule(Schedule $schedule)
 }
 ```
 
-## Step 4: Authentication
-
-Last step before we commit our code is to set up any authentication rules to make sure no one can access the Horizon dashboard unwanted. You can do this with the `Horizon:auth` callback. I’ve added the following method in the `AppServiceProvider`. It gets called in the `boot` method of the service provider.
-
-```php
-public function bootHorizon()
-{
-    if ($horizonEmail = config('lio.horizon_email')) {
-        Horizon::routeMailNotificationsTo($horizonEmail);
-    }
-
-    Horizon::auth(function ($request) use ($horizonEmail) {
-        return auth()->check() &&
-            auth()->user()->emailAddress() === $horizonEmail;
-    });
-}
-```
-
-I’ve configured the email address that will be checked through an environment variable so it’s easy to configure. It gets used to check if the correct user is authenticated to visit the dashboard. But you can really define anything you want here.
-
-Above the auth check I’ve defined a callback which will send any notifications from Envoyer to the email address I’ve set up.
-
 After you’ve done this, commit the code changes and push to Github or whatever VCS host you use.
 
-## Step 5: Envoyer
+## Envoyer
 
 On Envoyer we need to define a new hook. The `horizon:purge` command will purge any orphan processes. The `horizon:terminate` command will finish any left over jobs and terminate the Horizon process. The daemon which we’ll set up later will make sure that the command is always restarted after we terminate it.
 
@@ -75,7 +84,7 @@ If you’re managing your environment variables with Envoyer make sure you set y
 
 You can now deploy the code we added before. Make sure the deploy finished before proceeding to the next step.
 
-## Step 6: Forge
+## Forge
 
 ### Scheduler
 
