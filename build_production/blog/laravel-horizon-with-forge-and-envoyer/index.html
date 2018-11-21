@@ -102,7 +102,7 @@ protected function schedule(Schedule $schedule)
 <h3>Daemon</h3>
 <p>After setting up the scheduler we only need to add the daemon to make sure the Horizon command is started and re-started every time we deploy and terminate it. Go to your server and the “Daemons” menu item. Add a deamon with the <code>php artisan horizon</code> command to run in the <code>/home/forge/&lt;site&gt;/current</code> directory. After you’ve added this command, the daemon will enable the horizon command and you should be able to visit horizon at <code>https://site.com/horizon</code> and see the status below.</p>
 <p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png" alt="" /></p>
-<p>Don’t forget that you need to be authenticated with the rules you defined in the <code>Horizon::auth</code> hook.</p>
+<p>Don't forget that you need to be authenticated with the rules you defined in the gate method in your <code>App\Provider\HorizonServiceProvider</code> class.</p>
 <h2>Conclusion</h2>
 <p>This should be all that you need to get started with Horizon. Don’t forget that you don’t need to define queues through Forge as Horizon completely takes this over. You only need to change your <code>horizon.php</code> config file and Horizon will apply the changes on the next deploy.</p>
         <p class="text-center small">Copyright &copy; Dries Vints</p>

@@ -100,7 +100,7 @@ After setting up the scheduler we only need to add the daemon to make sure the H
 
 ![](/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png)
 
-Don’t forget that you need to be authenticated with the rules you defined in the `Horizon::auth` hook.
+Don't forget that you need to be authenticated with the rules you defined in the gate method in your `App\Provider\HorizonServiceProvider` class.
 
 ## Conclusion
 
