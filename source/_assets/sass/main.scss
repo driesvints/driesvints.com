@@ -131,11 +131,15 @@ blockquote p {
 
   .bio a {
     border-bottom: 1px dotted white;
+    white-space: nowrap;
   }
 
   .social-media {
     font-size: 2em;
-    word-spacing: 25px;
+
+    a {
+      margin: 0 12px;
+    }
 
     .email {
       font-size: 0.8em;
