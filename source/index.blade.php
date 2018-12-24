@@ -10,7 +10,6 @@
             <p class="bio">
                 I work for <a href="https://laravel.com">Laravel</a>,
                 maintain <a href="https://laravel.io">Laravel.io</a>
-                and organise <a href="https://fullstackbelgium.be">Full Stack Belgium</a>
                 and <a href="https://fullstackeurope.com">Full Stack Europe</a>.
             </p>
             <p class="social-media">
