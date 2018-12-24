@@ -1,5 +1,5 @@
 @extends('_layouts.master', [
-    'metaDescription' => 'I work for Laravel, maintain Laravel.io and organise Full Stack Antwerp and Full Stack Europe.',
+    'metaDescription' => 'I work for Laravel, maintain Laravel.io and organise Full Stack Belgium and Full Stack Europe.',
 ])
 
 @section('body')
@@ -10,7 +10,7 @@
             <p class="bio">
                 I work for <a href="https://laravel.com">Laravel</a>,
                 maintain <a href="https://laravel.io">Laravel.io</a>
-                and organise <a href="https://fullstackantwerp.be">Full Stack Antwerp</a>
+                and organise <a href="https://fullstackbelgium.be">Full Stack Belgium</a>
                 and <a href="https://fullstackeurope.com">Full Stack Europe</a>.
             </p>
             <p class="social-media">
