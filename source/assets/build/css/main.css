@@ -6234,10 +6234,7 @@ h6 {
 }
 
 h1 {
-  display: inline-block;
-  border-bottom-width: 1px;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 h2,

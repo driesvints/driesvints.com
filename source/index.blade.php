@@ -1,5 +1,5 @@
 @extends('_layouts.master', [
-    'metaDescription' => 'I work for Laravel, maintain Laravel.io and organise Full Stack Antwerp and Full Stack Europe.',
+    'metaDescription' => 'I work for Laravel, maintain Laravel.io and organise Full Stack Belgium and Full Stack Europe.',
 ])
 
 @section('body')
@@ -25,21 +25,51 @@
         <a class="" href="mailto:dries.vints@gmail.com"><i class="enlarge fas fa-paper-plane"></i></a>
     </p>
 
-    <div class="text-center">
-        <h2>Projects</h2>
-    </div>
+    <h2 class="text-center mb-8">Projects</h2>
 
-    <p class="text-2xl mb-1"><a href="https://fullstackeurope.com">Full Stack Europe</a></p>
-    <p>A conference for every kind of developer.</p>
-
-    <p class="text-2xl mb-1"><a href="https://fullstackbelgium.be">Full Stack Belgium</a></p>
-    <p>Meetups in Belgium for web developers.</p>
-
-    <p class="text-2xl mb-1"><a href="https://laravel.io">Laravel.io</a></p>
-    <p>The Laravel community platform.</p>
-
-    <p class="text-2xl mb-1"><a href="https://github.com/driesvints/dotfiles">Dotfiles</a></p>
-    <p class="mb-12">My preferred way to set up my Mac.</p>
+    <a class="hover:no-underline" href="https://fullstackeurope.com">
+        <div class="md:flex md:flex-row-reverse text-center enlarge md:text-left shadow bg-white rounded p-6 md:p-4 mb-8 md:mb-6">
+            <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
+                <img style="max-width: 80%" src="/assets/images/fseu.png">
+            </div>
+            <div class="md:w-2/3">
+                <p class="text-2xl mb-0">Full Stack Europe</p>
+                <p class="mb-0 text-grey-darker">A conference for every kind of developer.</p>
+            </div>
+        </div>
+    </a>
+    <a class="hover:no-underline" href="https://fullstackbelgium.be">
+        <div class="md:flex md:flex-row-reverse text-center enlarge md:text-left shadow bg-white rounded p-6 md:p-4 mb-8 md:mb-6">
+            <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
+                <img style="max-width: 70px" src="/assets/images/fsbe.png">
+            </div>
+            <div class="md:w-2/3">
+                <p class="text-2xl mb-0">Full Stack Belgium</p>
+                <p class="mb-0 text-grey-darker">Meetups in Belgium for web developers.</p>
+            </div>
+        </div>
+    </a>
+    <a class="hover:no-underline" href="https://laravel.io">
+        <div class="md:flex md:flex-row-reverse text-center enlarge md:text-left shadow bg-white rounded p-6 md:p-4 mb-8 md:mb-6">
+            <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
+                <img style="max-width: 80%" src="/assets/images/laravelio.png">
+            </div>
+            <div class="md:w-2/3">
+                <p class="text-2xl mb-0">Laravel.io</p>
+                <p class="mb-0 text-grey-darker">The Laravel community platform.</p>
+            </div>
+        </div>
+    </a>
+    <a class="hover:no-underline" href="https://github.com/driesvints/dotfiles">
+        <div class="md:flex md:flex-row-reverse text-center enlarge md:text-left shadow bg-white rounded p-6 md:p-4 mb-8 md:mb-6">
+            <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
+            </div>
+            <div class="md:w-2/3">
+                <p class="text-2xl mb-0">Dotfiles</p>
+                <p class="mb-0 text-grey-darker">My preferred way to set up my Mac.</p>
+            </div>
+        </div>
+    </a>
 
     <div class="text-center">
         <h2>Latest Posts</h2>
