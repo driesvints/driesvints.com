@@ -4,7 +4,9 @@ section: content
 title: "Star Wars: The Last Jedi Review"
 date: 2017-12-15
 ---
-![](/assets/images/posts/star-wars-the-last-jedi-review.jpg)
+<p class="text-center">
+    <img src="/assets/images/posts/star-wars-the-last-jedi-review.jpg">
+</p>
 
 **Spoilers! Don’t say I didn’t warn you!**
 

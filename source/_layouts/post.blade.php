@@ -3,12 +3,16 @@
 ])
 
 @section('body')
-    <div id="content">
-        <h1>{{ $page->title }}</h1>
+    @include('_partials.navigation')
 
-        @yield('content')
-
-        @include('_partials.footer')
+    <div class="text-center mb-4">
+        <h1 class="mb-4">{{ $page->title }}</h1>
+        <p class="italic text-sm">
+            Published on {{ date('F j, Y', $page->date) }}
+        </p>
     </div>
-    <script src="{{ mix('js/highlighting.js', 'assets/build') }}"></script>
+
+    <div class="post">
+        @yield('content')
+    </div>
 @endsection

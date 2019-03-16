@@ -36,12 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -59,6 +79,7 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "/";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
@@ -66,6 +87,10 @@
 /******/ ({
 
 /***/ "./node_modules/highlightjs/highlight.pack.js":
+/*!****************************************************!*\
+  !*** ./node_modules/highlightjs/highlight.pack.js ***!
+  \****************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*! highlight.js v9.12.0 | BSD3 License | git.io/hljslicense */
@@ -79,18 +104,7 @@
   // CommonJS.
   if(true) {
     factory(exports);
-  } else if(globalObject) {
-    // Export hljs globally even when using AMD for cases when this script
-    // is loaded with others that may still expect a global hljs.
-    globalObject.hljs = factory({});
-
-    // Finally register the global hljs with AMD.
-    if(typeof define === 'function' && define.amd) {
-      define([], function() {
-        return globalObject.hljs;
-      });
-    }
-  }
+  } else {}
 
 }(function(hljs) {
   // Convenience variables for build-in objects
@@ -16718,19 +16732,26 @@ hljs.registerLanguage('zephir', function(hljs) {
 /***/ }),
 
 /***/ "./source/_assets/js/main.js":
+/*!***********************************!*\
+  !*** ./source/_assets/js/main.js ***!
+  \***********************************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highlightjs__ = __webpack_require__("./node_modules/highlightjs/highlight.pack.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highlightjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_highlightjs__);
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var highlightjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! highlightjs */ "./node_modules/highlightjs/highlight.pack.js");
+/* harmony import */ var highlightjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(highlightjs__WEBPACK_IMPORTED_MODULE_0__);
 
-
-__WEBPACK_IMPORTED_MODULE_0_highlightjs___default.a.initHighlightingOnLoad();
+highlightjs__WEBPACK_IMPORTED_MODULE_0___default.a.initHighlightingOnLoad();
 
 /***/ }),
 
 /***/ "./source/_assets/sass/main.scss":
+/*!***************************************!*\
+  !*** ./source/_assets/sass/main.scss ***!
+  \***************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -16738,10 +16759,14 @@ __WEBPACK_IMPORTED_MODULE_0_highlightjs___default.a.initHighlightingOnLoad();
 /***/ }),
 
 /***/ 0:
+/*!*************************************************************************!*\
+  !*** multi ./source/_assets/js/main.js ./source/_assets/sass/main.scss ***!
+  \*************************************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__("./source/_assets/js/main.js");
-module.exports = __webpack_require__("./source/_assets/sass/main.scss");
+__webpack_require__(/*! /Users/driesvints/Sites/driesvints.com/source/_assets/js/main.js */"./source/_assets/js/main.js");
+module.exports = __webpack_require__(/*! /Users/driesvints/Sites/driesvints.com/source/_assets/sass/main.scss */"./source/_assets/sass/main.scss");
 
 
 /***/ })

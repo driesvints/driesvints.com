@@ -1,3 +1,5 @@
-# driesvints.com
+# [driesvints.com](https://driesvints.com)
 
-Repo for my personal website. Built with [Jigsaw](https://jigsaw.tighten.co). Hosted on [Github Pages](https://pages.github.com).
+- Built with [Jigsaw](https://jigsaw.tighten.co)
+- Styled with [Tailwind CSS](https://tailwindcss.com)
+- Hosted on [Github Pages](https://pages.github.com)
