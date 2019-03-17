@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -12,41 +12,47 @@
     
             <meta property="article:published_time" content="2017-06-25" />
     
-    <!-- Favicons -->
-    <meta name="msapplication-TileColor" content="#2F3238">
-    <meta name="msapplication-TileImage" content="/assets/images/favicons/touch-icon-144×144-precomposed.png'">
-    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/assets/images/favicons/touch-icon-152×152-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/assets/images/favicons/touch-icon-144×144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/assets/images/favicons/touch-icon-120×120-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/assets/images/favicons/touch-icon-114×114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/assets/images/touch-icon-72×72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="/assets/images/favicons/touch-icon-iphone-precomposed.png" />
-    <link rel="icon" sizes="32x32" href="/assets/images/favicons/favicon-32.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-
     <!-- Stylsheets -->
-    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=e25f4b0207780c1a1ba3">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=da0adb7d3b8cf6146889">
 
-            <!-- Google Analytics -->
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-18478762-2']);
-            _gaq.push(['_trackPageview']);
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18478762-2']);
+        _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
-    </head>
-<body>
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body class="bg-grey-lightest font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
     
-        <div id="content">
-        <h1>Dennis Ritchie</h1>
+    <div class="text-xl max-w-lg m-auto px-4 py-8 md:py-12">
+            <div class="text-center italic text-sm mb-8">
+        <a href="/">
+            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=100" width="50" class="rounded-full enlarge">
+        </a>
+        <p class="font-bold mb-0">Dries Vints</p>
+        <p class="md:text-xs">
+            <a href="/">Home</a> |
+            <a href="/blog">Blog</a> |
+            <a href="https://twitter.com/driesvints">Twitter</a>
+        </p>
+    </div>
 
+    <div class="text-center mb-12">
+        <h1 class="mb-4">Dennis Ritchie</h1>
+        <p class="italic text-sm">
+            Published on June 25, 2017
+        </p>
+    </div>
+
+    <div class="post max-w-md m-auto">
         <p><img src="/assets/images/posts/dennis-ritchie.jpeg" alt="Dennis Ritchie and Ken Thompson" /></p>
 <p><em>This is a re-publish of an article I wrote back in October 2011 after Steve and Dennis’ deaths. Small disclosure: it was written in a time when I was just starting out with programming and I did not knew <strong>Rasmus</strong>, <strong>Andi</strong> or <strong>Zeev</strong> yet.</em></p>
 <p>It’s safe to say that with <a href="http://mashable.com/2011/10/05/breaking-steve-jobs-has-died">the death of Steve Jobs</a> the world has lost an icon, a visionary and a beloved human being. I don’t think I’ve ever saw such a wave of response on the death of a famous person. It’s all normal though. I mean, he lived an amazing life, inspiring lots of people and developing products which changed the world we live in today. For some, Steve was more than just the CEO of Apple.</p>
@@ -60,8 +66,16 @@
 <p><a href="http://mashable.com/2011/10/13/dennis-ritchie-dies">Dennis' death</a> was hardly mentioned in the press. I can’t blame them, he was hardly known. Still, we shouldn’t just ignore it.</p>
 <p>I’ll remember both of them as two persons who brought us ways that made life possible as we live it today. And that’s something I won’t forget soon.</p>
 <p>If you’d like to read something more thorough and professional I’d suggest you <a href="http://www.digitaltrends.com/computing/was-dennis-ritchie-more-important-than-steve-jobs">read this article</a> by <strong>Geoff Duncan</strong>. I’m still a beginning blogger after all.</p>
-        <p class="text-center small">Copyright &copy; Dries Vints</p>
+                    <p class="text-center text-sm mt-12">
+                                    <a href="/blog/one-club-player">&laquo; One Club Player</a>
+                
+                                    |
+                
+                                    <a href="/blog/the-new-laravel-io">The New Laravel.io &raquo;</a>
+                            </p>
+            </div>
     </div>
-    <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
+
+    <script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>
 </body>
 </html>

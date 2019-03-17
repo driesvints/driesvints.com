@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -12,41 +12,47 @@
     
             <meta property="article:published_time" content="2016-08-24" />
     
-    <!-- Favicons -->
-    <meta name="msapplication-TileColor" content="#2F3238">
-    <meta name="msapplication-TileImage" content="/assets/images/favicons/touch-icon-144×144-precomposed.png'">
-    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/assets/images/favicons/touch-icon-152×152-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/assets/images/favicons/touch-icon-144×144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/assets/images/favicons/touch-icon-120×120-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/assets/images/favicons/touch-icon-114×114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/assets/images/touch-icon-72×72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="/assets/images/favicons/touch-icon-iphone-precomposed.png" />
-    <link rel="icon" sizes="32x32" href="/assets/images/favicons/favicon-32.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-
     <!-- Stylsheets -->
-    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=e25f4b0207780c1a1ba3">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=da0adb7d3b8cf6146889">
 
-            <!-- Google Analytics -->
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-18478762-2']);
-            _gaq.push(['_trackPageview']);
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18478762-2']);
+        _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
-    </head>
-<body>
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body class="bg-grey-lightest font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
     
-        <div id="content">
-        <h1>Two tips to speedup your Laravel tests</h1>
+    <div class="text-xl max-w-lg m-auto px-4 py-8 md:py-12">
+            <div class="text-center italic text-sm mb-8">
+        <a href="/">
+            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=100" width="50" class="rounded-full enlarge">
+        </a>
+        <p class="font-bold mb-0">Dries Vints</p>
+        <p class="md:text-xs">
+            <a href="/">Home</a> |
+            <a href="/blog">Blog</a> |
+            <a href="https://twitter.com/driesvints">Twitter</a>
+        </p>
+    </div>
 
+    <div class="text-center mb-12">
+        <h1 class="mb-4">Two tips to speedup your Laravel tests</h1>
+        <p class="italic text-sm">
+            Published on August 24, 2016
+        </p>
+    </div>
+
+    <div class="post max-w-md m-auto">
         <blockquote>
 <p>This optimization has since <a href="https://github.com/laravel/laravel/blob/6806aaa3568382e9c8c7281a64b82a52b824e46f/phpunit.xml#L27">made it into the core</a> of the framework. </p>
 </blockquote>
@@ -77,8 +83,16 @@
 <p>Use a precomputed hash of the word &quot;secret&quot; instead of using <code>bcrypt</code> directly. Since <code>bcrypt</code> is intentionally slow, it can really slow down test suites in large applications that use factories to generate models in many tests.</p>
 </blockquote>
 <p>This additionally cut off some time to run the new Laravel.io test suite. So all in all these two tips made my test suite run twice as fast.</p>
-        <p class="text-center small">Copyright &copy; Dries Vints</p>
+                    <p class="text-center text-sm mt-12">
+                                    <a href="/blog/getting-started-with-dotfiles">&laquo; Getting Started with Dotfiles</a>
+                
+                                    |
+                
+                                    <a href="/blog/1984">1984 &raquo;</a>
+                            </p>
+            </div>
     </div>
-    <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
+
+    <script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>
 </body>
 </html>

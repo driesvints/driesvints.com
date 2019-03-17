@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -12,41 +12,47 @@
     
             <meta property="article:published_time" content="2015-08-25" />
     
-    <!-- Favicons -->
-    <meta name="msapplication-TileColor" content="#2F3238">
-    <meta name="msapplication-TileImage" content="/assets/images/favicons/touch-icon-144×144-precomposed.png'">
-    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/assets/images/favicons/touch-icon-152×152-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/assets/images/favicons/touch-icon-144×144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/assets/images/favicons/touch-icon-120×120-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/assets/images/favicons/touch-icon-114×114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/assets/images/touch-icon-72×72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="/assets/images/favicons/touch-icon-iphone-precomposed.png" />
-    <link rel="icon" sizes="32x32" href="/assets/images/favicons/favicon-32.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-
     <!-- Stylsheets -->
-    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=e25f4b0207780c1a1ba3">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=da0adb7d3b8cf6146889">
 
-            <!-- Google Analytics -->
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-18478762-2']);
-            _gaq.push(['_trackPageview']);
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18478762-2']);
+        _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
-    </head>
-<body>
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body class="bg-grey-lightest font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
     
-        <div id="content">
-        <h1>Quality Assurance with Envoyer</h1>
+    <div class="text-xl max-w-lg m-auto px-4 py-8 md:py-12">
+            <div class="text-center italic text-sm mb-8">
+        <a href="/">
+            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=100" width="50" class="rounded-full enlarge">
+        </a>
+        <p class="font-bold mb-0">Dries Vints</p>
+        <p class="md:text-xs">
+            <a href="/">Home</a> |
+            <a href="/blog">Blog</a> |
+            <a href="https://twitter.com/driesvints">Twitter</a>
+        </p>
+    </div>
 
+    <div class="text-center mb-12">
+        <h1 class="mb-4">Quality Assurance with Envoyer</h1>
+        <p class="italic text-sm">
+            Published on August 25, 2015
+        </p>
+    </div>
+
+    <div class="post max-w-md m-auto">
         <p>This is one of the tutorials I did for my Laracon EU talk.</p>
 <p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
 <p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
@@ -60,8 +66,16 @@ php artisan migrate:reset --force</code></pre>
 php artisan migrate --force --seed</code></pre>
 <p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
 <p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>
-        <p class="text-center small">Copyright &copy; Dries Vints</p>
+                    <p class="text-center text-sm mt-12">
+                                    <a href="/blog/laravel-io-the-road-ahead">&laquo; Laravel.IO - The Road Ahead</a>
+                
+                                    |
+                
+                                    <a href="/blog/continuous-delivery-with-forge-and-envoyer">Continuous Delivery with Forge and Envoyer &raquo;</a>
+                            </p>
+            </div>
     </div>
-    <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
+
+    <script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>
 </body>
 </html>

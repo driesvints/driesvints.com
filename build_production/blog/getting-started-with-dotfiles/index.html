@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -12,41 +12,47 @@
     
             <meta property="article:published_time" content="2016-04-08" />
     
-    <!-- Favicons -->
-    <meta name="msapplication-TileColor" content="#2F3238">
-    <meta name="msapplication-TileImage" content="/assets/images/favicons/touch-icon-144×144-precomposed.png'">
-    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/assets/images/favicons/touch-icon-152×152-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/assets/images/favicons/touch-icon-144×144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/assets/images/favicons/touch-icon-120×120-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/assets/images/favicons/touch-icon-114×114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/assets/images/touch-icon-72×72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="/assets/images/favicons/touch-icon-iphone-precomposed.png" />
-    <link rel="icon" sizes="32x32" href="/assets/images/favicons/favicon-32.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-
     <!-- Stylsheets -->
-    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=e25f4b0207780c1a1ba3">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=da0adb7d3b8cf6146889">
 
-            <!-- Google Analytics -->
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-18478762-2']);
-            _gaq.push(['_trackPageview']);
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18478762-2']);
+        _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
-    </head>
-<body>
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body class="bg-grey-lightest font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
     
-        <div id="content">
-        <h1>Getting Started with Dotfiles</h1>
+    <div class="text-xl max-w-lg m-auto px-4 py-8 md:py-12">
+            <div class="text-center italic text-sm mb-8">
+        <a href="/">
+            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=100" width="50" class="rounded-full enlarge">
+        </a>
+        <p class="font-bold mb-0">Dries Vints</p>
+        <p class="md:text-xs">
+            <a href="/">Home</a> |
+            <a href="/blog">Blog</a> |
+            <a href="https://twitter.com/driesvints">Twitter</a>
+        </p>
+    </div>
 
+    <div class="text-center mb-12">
+        <h1 class="mb-4">Getting Started with Dotfiles</h1>
+        <p class="italic text-sm">
+            Published on April 8, 2016
+        </p>
+    </div>
+
+    <div class="post max-w-md m-auto">
         <p>Let's draw a situation. Your computer breaks down. And I don't mean the classic &quot;Dammit, my computer broke down, better get it fixed&quot;. No, I mean the &quot;Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back&quot;-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.</p>
 <p>Thankfully, these days we have something called 'The Cloud ☁️'. We're developers so we're probably smart enough to save all of our documents up on Dropbox, Google Drive, iCloud, Github or whatever floats up there. Right? ... Right?</p>
 <p><em>crickets</em></p>
@@ -107,8 +113,16 @@
 <h2>Conclusion</h2>
 <p>That's it for this blog post. I hope I've shown you enough in order to make you start with your own dotfiles. Take note that this is a highly opinionated post because I've mostly explained my preferred setup. Like I said before, dotfiles are a very personal thing. Look around at <a href="https://dotfiles.github.io/">other repositories</a> and start building your dotfiles the way you like. If you need some help on getting started, I've dedicated a section of the readme in my dotfiles on helping you to <a href="https://github.com/driesvints/dotfiles#your-own-dotfiles">get started on your own dotfiles</a>.</p>
 <p>Go build your own dotfiles and the next time when your computer crashes, it won't be that bad! 😄</p>
-        <p class="text-center small">Copyright &copy; Dries Vints</p>
+                    <p class="text-center text-sm mt-12">
+                                    <a href="/blog/continuous-delivery-with-forge-and-envoyer">&laquo; Continuous Delivery with Forge and Envoyer</a>
+                
+                                    |
+                
+                                    <a href="/blog/two-tips-to-speedup-your-laravel-tests">Two tips to speedup your Laravel tests &raquo;</a>
+                            </p>
+            </div>
     </div>
-    <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
+
+    <script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>
 </body>
 </html>

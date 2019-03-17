@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -12,41 +12,47 @@
     
             <meta property="article:published_time" content="2014-08-13" />
     
-    <!-- Favicons -->
-    <meta name="msapplication-TileColor" content="#2F3238">
-    <meta name="msapplication-TileImage" content="/assets/images/favicons/touch-icon-144×144-precomposed.png'">
-    <link rel="apple-touch-icon-precomposed" sizes="152×152" href="/assets/images/favicons/touch-icon-152×152-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/assets/images/favicons/touch-icon-144×144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120×120" href="/assets/images/favicons/touch-icon-120×120-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/assets/images/favicons/touch-icon-114×114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/assets/images/touch-icon-72×72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="/assets/images/favicons/touch-icon-iphone-precomposed.png" />
-    <link rel="icon" sizes="32x32" href="/assets/images/favicons/favicon-32.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-
     <!-- Stylsheets -->
-    <link media="all" type="text/css" rel="stylesheet" href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Source+Code+Pro:400,700'>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=e25f4b0207780c1a1ba3">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=da0adb7d3b8cf6146889">
 
-            <!-- Google Analytics -->
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-18478762-2']);
-            _gaq.push(['_trackPageview']);
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18478762-2']);
+        _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
-    </head>
-<body>
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body class="bg-grey-lightest font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
     
-        <div id="content">
-        <h1>Laravel.IO - The Road Ahead</h1>
+    <div class="text-xl max-w-lg m-auto px-4 py-8 md:py-12">
+            <div class="text-center italic text-sm mb-8">
+        <a href="/">
+            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=100" width="50" class="rounded-full enlarge">
+        </a>
+        <p class="font-bold mb-0">Dries Vints</p>
+        <p class="md:text-xs">
+            <a href="/">Home</a> |
+            <a href="/blog">Blog</a> |
+            <a href="https://twitter.com/driesvints">Twitter</a>
+        </p>
+    </div>
 
+    <div class="text-center mb-12">
+        <h1 class="mb-4">Laravel.IO - The Road Ahead</h1>
+        <p class="italic text-sm">
+            Published on August 13, 2014
+        </p>
+    </div>
+
+    <div class="post max-w-md m-auto">
         <p>I'm happy to tell you all that as of today I'll be taking over the ongoing development of the <a href="http://laravel.io/">Laravel.IO</a> platform. Except for the Laravel.IO's podcast, which will still remain in <a href="https://twitter.com/ShawnMcCool">Shawn McCool</a>'s hands, I'll be managing all of the rest of Laravel IO's activities. The reason for the change is that it has been proven difficult for Shawn and the rest of the Laravel.IO core team (which consists of <a href="https://twitter.com/nickstrnl">Nick Spelt</a> and <a href="https://twitter.com/mitchellvanw">Mitchell van Wijngaarden</a>) to continue the development with the limited time they've got on their hands. I'd like to take this opportunity to thank all three of them for all of the work they've done so far for Laravel.IO and the Laravel community at large. The Laravel.IO platform has undergone some big changes in the past year and it's all thanks to their hard working effort.</p>
 <p>Now that the transfer is official it's time to take a look at the future for Laravel.IO. The way I see it is that Laravel.IO is currently a place where all of the Laravel community comes together. Whether it is to discuss or ask a question in the forums, listen to the podcast or share their code using the pastebin, Laravel.IO is a place where you can rely on great Laravel content. I feel strongly about continuing down this path and expanding Laravel.IO into a platform where you'd always go if you want to find something Laravel related. I have a vision for Laravel.IO where it's the homepage for Laravel developers, from which they start their search for packages, resources, educational material, help or other great content about Laravel. In the next couple of months I'm going to dedicate all of my work I put in open-source in my free time to making that vision a reality.</p>
 <p>Something else people might have been wondering about is what the hell happened to Laravel Weekly. Truth be told, at some point I lost interest in the current format because a lot of work existed in manually putting the newsletter together which is an extremely repetitive process. In the past few months I've been looking at overhauling the newsletter to create a separate platform where the content would be automated and newsletters would be put together by aggregating from different sources. A few weeks ago I started working on the platform but needless to say because of the current events with Laravel.IO I've stopped working on that platform for now. But this isn't the end for Laravel Weekly. I plan on making Laravel Weekly an integral part of the Laravel.IO platform in a later stage. But for now, Laravel Weekly is on hold.</p>
@@ -54,8 +60,16 @@
 <p>Again, thanks to Shawn McCool for believing in me. I know maintaining an open-source project of this scale is time consuming and takes a lot of effort but I promise to the community that I'll put my heart and soul into this. It'll take quite some dedication but I hope to make the vision I have for Laravel.IO a reality soon.</p>
 <p>Come talk to me at Laracon EU if you want to know more about the future for Laravel.IO or find me on IRC in #laravel or #laravel-offtopic when I'm around :-)</p>
 <p>Thanks for reading and code happy!</p>
-        <p class="text-center small">Copyright &copy; Dries Vints</p>
+                    <p class="text-center text-sm mt-12">
+                                    <a href="/blog/laravel-4-on-a-shared-host">&laquo; Laravel 4 on a shared host</a>
+                
+                                    |
+                
+                                    <a href="/blog/quality-assurance-with-envoyer">Quality Assurance with Envoyer &raquo;</a>
+                            </p>
+            </div>
     </div>
-    <script src="/assets/build/js/highlighting.js?id=c34e12c2668266d9c631"></script>
+
+    <script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>
 </body>
 </html>
