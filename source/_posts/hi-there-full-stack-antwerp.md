@@ -5,7 +5,7 @@ title: Hi there, Full Stack Antwerp
 date: 2018-04-25
 ---
 <p class="text-center">
-    <img src="/assets/images/posts/hi-there-full-stack-antwerp.png">
+    <img class="shadow-none max-w-sm" src="/assets/images/posts/hi-there-full-stack-antwerp.png">
 </p>
 
 The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over **800 members** on [our meetup.com page](https://www.meetup.com/phpantwerp/). We’ve seen our meetups grow to **over 40 regular attendees** for each meetup. We’ve **organized 28 meetups** and **hosted more than 50 speakers**. It’s amazing to see to how the user group has evolved.

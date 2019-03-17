@@ -18,22 +18,18 @@
     @endif
 
     <!-- Stylsheets -->
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 
     @include('_partials.google-analytics')
 </head>
-<body class="bg-grey-lighter font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
+<body class="bg-grey-lightest font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
     @include('_partials.fbvideo')
 
-    <div class="bg-grey-lightest">
-        <div class="text-xl max-w-md m-auto px-4 py-8 md:py-12">
-            @yield('body')
-        </div>
+    <div class="text-xl max-w-lg m-auto px-4 py-8 md:py-12">
+        @yield('body')
     </div>
-
-    @include('_partials.footer')
 
     <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
 </body>

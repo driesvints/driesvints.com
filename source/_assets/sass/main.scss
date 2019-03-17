@@ -41,6 +41,8 @@
 
 @import "utilities/animations";
 
+@import "~highlightjs/styles/googlecode.css";
+
 a {
     @apply text-theme-blue font-semibold;
     text-decoration: none;
@@ -65,7 +67,20 @@ h2 {
 p {
     @apply mb-4;
 }
+p code {
+    @apply font-mono bg-grey-lighter font-semibold text-base p-1;
+}
 
 .post img {
     @apply shadow-lg my-4;
+}
+.post img.shadow-none {
+    @apply shadow-none;
+}
+
+pre {
+    @apply border bg-white rounded px-2 py-1 mb-4;
+}
+pre code {
+    @apply font-mono text-sm;
 }

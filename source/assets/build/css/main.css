@@ -1,3 +1,92 @@
+/*
+
+Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  background: white;
+  color: black;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #800;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-title,
+.hljs-name {
+  color: #008;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #660;
+}
+
+.hljs-string,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-regexp {
+  color: #080;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-meta,
+.hljs-number,
+.hljs-link {
+  color: #066;
+}
+
+.hljs-title,
+.hljs-doctag,
+.hljs-type,
+.hljs-attr,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-params {
+  color: #606;
+}
+
+.hljs-attribute,
+.hljs-subst {
+  color: #000;
+}
+
+.hljs-formula {
+  background-color: #eee;
+  font-style: italic;
+}
+
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #9b703f;
+}
+
+.hljs-addition {
+  background-color: #baeeba;
+}
+
+.hljs-deletion {
+  background-color: #ffc8bd;
+}
+
+.hljs-doctag,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -2665,6 +2754,10 @@ table {
   border-width: 1px;
 }
 
+.border-theme-20 {
+  border-width: 20px;
+}
+
 .border-t-0 {
   border-top-width: 0;
 }
@@ -2743,6 +2836,22 @@ table {
 
 .border-l {
   border-left-width: 1px;
+}
+
+.border-t-theme-20 {
+  border-top-width: 20px;
+}
+
+.border-r-theme-20 {
+  border-right-width: 20px;
+}
+
+.border-b-theme-20 {
+  border-bottom-width: 20px;
+}
+
+.border-l-theme-20 {
+  border-left-width: 20px;
 }
 
 .cursor-auto {
@@ -2972,7 +3081,7 @@ table {
 }
 
 .font-mono {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Ubuntu Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
 .font-hairline {
@@ -6254,10 +6363,38 @@ p {
   margin-bottom: 1rem;
 }
 
+p code {
+  font-family: Ubuntu Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  background-color: #f1f5f8;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: .25rem;
+}
+
 .post img {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.post img.shadow-none {
+  box-shadow: none;
+}
+
+pre {
+  border-width: 1px;
+  background-color: #fff;
+  border-radius: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-bottom: 1rem;
+}
+
+pre code {
+  font-family: Ubuntu Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-size: .875rem;
 }
 
 @media (min-width: 576px) {
@@ -8360,6 +8497,10 @@ p {
     border-width: 1px;
   }
 
+  .sm\:border-theme-20 {
+    border-width: 20px;
+  }
+
   .sm\:border-t-0 {
     border-top-width: 0;
   }
@@ -8438,6 +8579,22 @@ p {
 
   .sm\:border-l {
     border-left-width: 1px;
+  }
+
+  .sm\:border-t-theme-20 {
+    border-top-width: 20px;
+  }
+
+  .sm\:border-r-theme-20 {
+    border-right-width: 20px;
+  }
+
+  .sm\:border-b-theme-20 {
+    border-bottom-width: 20px;
+  }
+
+  .sm\:border-l-theme-20 {
+    border-left-width: 20px;
   }
 
   .sm\:cursor-auto {
@@ -8667,7 +8824,7 @@ p {
   }
 
   .sm\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Ubuntu Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .sm\:font-hairline {
@@ -13970,6 +14127,10 @@ p {
     border-width: 1px;
   }
 
+  .md\:border-theme-20 {
+    border-width: 20px;
+  }
+
   .md\:border-t-0 {
     border-top-width: 0;
   }
@@ -14048,6 +14209,22 @@ p {
 
   .md\:border-l {
     border-left-width: 1px;
+  }
+
+  .md\:border-t-theme-20 {
+    border-top-width: 20px;
+  }
+
+  .md\:border-r-theme-20 {
+    border-right-width: 20px;
+  }
+
+  .md\:border-b-theme-20 {
+    border-bottom-width: 20px;
+  }
+
+  .md\:border-l-theme-20 {
+    border-left-width: 20px;
   }
 
   .md\:cursor-auto {
@@ -14277,7 +14454,7 @@ p {
   }
 
   .md\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Ubuntu Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .md\:font-hairline {
@@ -19580,6 +19757,10 @@ p {
     border-width: 1px;
   }
 
+  .lg\:border-theme-20 {
+    border-width: 20px;
+  }
+
   .lg\:border-t-0 {
     border-top-width: 0;
   }
@@ -19658,6 +19839,22 @@ p {
 
   .lg\:border-l {
     border-left-width: 1px;
+  }
+
+  .lg\:border-t-theme-20 {
+    border-top-width: 20px;
+  }
+
+  .lg\:border-r-theme-20 {
+    border-right-width: 20px;
+  }
+
+  .lg\:border-b-theme-20 {
+    border-bottom-width: 20px;
+  }
+
+  .lg\:border-l-theme-20 {
+    border-left-width: 20px;
   }
 
   .lg\:cursor-auto {
@@ -19887,7 +20084,7 @@ p {
   }
 
   .lg\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Ubuntu Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .lg\:font-hairline {
@@ -25190,6 +25387,10 @@ p {
     border-width: 1px;
   }
 
+  .xl\:border-theme-20 {
+    border-width: 20px;
+  }
+
   .xl\:border-t-0 {
     border-top-width: 0;
   }
@@ -25268,6 +25469,22 @@ p {
 
   .xl\:border-l {
     border-left-width: 1px;
+  }
+
+  .xl\:border-t-theme-20 {
+    border-top-width: 20px;
+  }
+
+  .xl\:border-r-theme-20 {
+    border-right-width: 20px;
+  }
+
+  .xl\:border-b-theme-20 {
+    border-bottom-width: 20px;
+  }
+
+  .xl\:border-l-theme-20 {
+    border-left-width: 20px;
   }
 
   .xl\:cursor-auto {
@@ -25497,7 +25714,7 @@ p {
   }
 
   .xl\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Ubuntu Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .xl\:font-hairline {

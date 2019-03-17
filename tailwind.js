@@ -223,6 +223,7 @@ module.exports = {
       'serif',
     ],
     'mono': [
+      'Ubuntu Mono',
       'Menlo',
       'Monaco',
       'Consolas',
@@ -402,6 +403,7 @@ module.exports = {
     '2': '2px',
     '4': '4px',
     '8': '8px',
+    'theme-20': '20px',
   },
 
 
