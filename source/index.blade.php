@@ -23,7 +23,8 @@
             <a class="mr-4" href="https://github.com/driesvints"><i class="enlarge fab fa-github"></i></a>
             <a class="mr-4" href="https://medium.com/@driesvints"><i class="enlarge fab fa-medium-m"></i></a>
             <a class="mr-4" href="https://www.linkedin.com/in/driesvints"><i class="enlarge fab fa-linkedin-in"></i></a>
-            <a class="" href="mailto:dries.vints@gmail.com"><i class="enlarge fas fa-paper-plane"></i></a>
+            <a class="mr-4" href="/blog/feed.atom"><i class="enlarge fas fa-rss"></i></a>
+            <a href="mailto:dries.vints@gmail.com"><i class="enlarge fas fa-paper-plane"></i></a>
         </p>
 
         <h2 class="text-center mb-8">Projects</h2>

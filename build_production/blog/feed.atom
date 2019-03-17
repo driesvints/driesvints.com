@@ -1,0 +1,672 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Dries Vints</title>
+    <link href="https://driesvints.com/" />
+    <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
+    <updated>2019-03-17T19:40:38+00:00</updated>
+    <id>https://driesvints.com/blog/feed.atom</id>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+                <entry>
+    <id>https://driesvints.com/blog/announcing-full-stack-europe</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/announcing-full-stack-europe" />
+    <title>Announcing Full Stack Europe</title>
+    <published>2018-08-09T00:00:00+00:00</published>
+    <updated>2018-08-09T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">I’m very happy to announce that Freek and I are organizing a brand new conference called Full Stack Europe. The conference will take place in the city of Antwerp somewhere in spring or early summer of 2019. With the conference, we want to welcome every......</summary>
+    <content type="html"><![CDATA[
+        <p>I’m very happy to announce that <a href="https://twitter.com/freekmurze">Freek</a> and I are organizing a brand new conference called <strong>Full Stack Europe</strong>. The conference will take place in <strong>the city of Antwerp</strong> somewhere in <strong>spring or early summer of 2019</strong>. With the conference, we want to welcome <strong>every type of developer</strong>, whether you identify yourself as full stack or are interested in front end, back end, devops, design or anything in between. We’ve already put up a website where you can <a href="http://fullstackeurope.com/">subscribe to stay informed about any news</a>. We’ve also set up <a href="https://twitter.com/fullstackeu">a Twitter account which you can follow</a>. Below I’d like to tell you a little bit more about how and why we’re organizing a conference.</p>
+<p>It’s been a little over three months since we launched the <a href="https://medium.com/@driesvints/hi-there-full-stack-antwerp-d10dcb96d93">rebranding of our user group to Full Stack Antwerp</a>. We were very happy to see it being so well received. Like we said in the announcement post: we felt that we couldn’t identify ourselves with just PHP anymore but instead wanted to offer a place for programmers from all kinds of backgrounds, being it from front-end, devops, back-end or even further. We saw our attendee numbers rise and started to get the feeling that we really made a change where lots of people could get behind.</p>
+<p>So this made us think that we could even take it a few steps further. While the user group is moving along steadily, we’re looking to see if we can offer a different kind of experience but on a larger scale. This is why we decided to start a new conference in line with the meetup group.</p>
+<p>The name is a continuation with our two other projects: <a href="http://fullstackantwerp.be/">Full Stack Antwerp</a> (the user group) and <a href="https://fullstackbelgium.be/">Full Stack Belgium</a> (the Belgian Slack community). We chose Europe because we wanted to indicate that we’re aiming to target the international developer community and not just the Belgian community. We don’t even want to stop besides Europe, everyone from outside Europe is welcome as well of course. But since the conference will be organised in Europe, it made more sense.</p>
+<p>Full Stack Europe will be a conference aimed at offering talks for developers who want to learn across different types of skills. If you’re a back end developer and want to learn more devops, if you’re a front end developer who wants to improve his design skills, if you’re an infrastructure engineer but want to improve your coding skills, the opportunities are endless. We want to promote and encourage developers to step out of their comfort zones and improve not only their existing skills but learn new ones as well at the same time. Needless to say, the conference will offer a wide variety of different topics and speakers.</p>
+<p>At the moment we’re still working on sorting the details and specifics but we wanted to let you know about the conference already and for those who are interested <a href="https://fullstackeurope.com/">we prepared a signup form for our newsletter</a>. If you sign up here you’ll be the <strong>first in line for announcements</strong> and the first one for now and in the future <strong>to be able to buy tickets</strong> once they’re available. Sign up and you’ll also <strong>be the first to know when we announce speakers</strong>.</p>
+<p>We’re very excited about all of this and hope you are too. But at the same time we realise this is quite the undertaking and nothing like organising a user group. In the next coming months Freek and I will be working hard to make sure this will be an experience to remember for our attendees. We’re eager to share more details soon so <a href="https://fullstackeurope.com/">make sure to subscribe to the newsletter</a> and <a href="https://twitter.com/fullstackeu">follow us on Twitter</a> to be the first to know about anything new.</p>
+<p>Thanks for reading!</p>
+<p><a href="https://twitter.com/freekmurze/">Freek</a> &amp; <a href="https://twitter.com/driesvints/">Dries</a></p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/hi-there-full-stack-antwerp</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/hi-there-full-stack-antwerp" />
+    <title>Hi there, Full Stack Antwerp</title>
+    <published>2018-04-25T00:00:00+00:00</published>
+    <updated>2018-04-25T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">
+    
+
+The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over 800 members on our meetup.com page. We’ve seen our meetups grow to over 40 regular attendees for each meetup. We’ve......</summary>
+    <content type="html"><![CDATA[
+        <p class="text-center">
+    <img class="shadow-none max-w-sm" src="/assets/images/posts/hi-there-full-stack-antwerp.png">
+</p>
+<p>The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over <strong>800 members</strong> on <a href="https://www.meetup.com/phpantwerp/">our meetup.com page</a>. We’ve seen our meetups grow to <strong>over 40 regular attendees</strong> for each meetup. We’ve <strong>organized 28 meetups</strong> and <strong>hosted more than 50 speakers</strong>. It’s amazing to see to how the user group has evolved.</p>
+<p>As a PHP user group we have a strong connection to the broader PHP community here in Belgium and beyond. We’re very happy to be part of 6 dedicated user groups in Belgium who are putting their time and effort into hosting their meetups and we’re glad to call each and one of them our friends.</p>
+<p>But if we look at our last couple of meetups over the past year we feel like we can no longer identify our user group to just PHP. We’ve been been hosting meetups with a variety of different topics including JavaScript, DevOps, soft skills and all sorts of other topics concerning web development and programming in general.</p>
+<p>That’s why we decided to rebrand ourselves as <strong>Full Stack Antwerp</strong>. We do this because we want to be more inclusive to other types of developers besides PHP developers and and to be open and welcoming to everyone who’s interested in learning and networking about programming and web development.</p>
+<p>You don’t need to be a full stack developer to attend our meetups. We are welcoming everyone who’s interested in programming, wether it’s front-end, back-end, devops or more.</p>
+<p>So what changes? Well, besides our new name and logo not much really. We’ll continue to host meetups like we do now, offering the same type of talks as we did over the past year and so on. We’ll still keep a strong connection to our friends in the PHP community and still be giving PHP talks amongst others. We’re just opening up the possibility to offer a more diverse range of talks.</p>
+<p>Besides our re-branding we also have something else to announce. We’re starting a new Slack community called <strong>Full Stack Belgium</strong> for the entire developer community in Belgium. Here, we aim to offer a single place where Belgian developers can join and share knowledge, network and help each other out. We want to offer a safe place and bring developers in Belgium closer together. Give it a try and join us at <a href="https://fullstackbelgium.be/">fullstackbelgium.be</a>!</p>
+<p>We’re excited for the future to see where our new path leads us. Hopefully we’ll see you at one our upcoming meetups. Our next meetup is planned for the end of May and we hope to see you there!</p>
+<p>Rias, Freek &amp; Dries</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/how-circleci-improved-our-build-time</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/how-circleci-improved-our-build-time" />
+    <title>How CircleCI Improved Our Build Time</title>
+    <published>2018-04-14T00:00:00+00:00</published>
+    <updated>2018-04-14T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">I’ve been meaning to look into how I could decrease the build time for the source code of Laravel.io for some time now. At Beatswitch, the startup which I work for, we’ve switched to CircleCI 2.0 about a year ago and have been very happy with the......</summary>
+    <content type="html"><![CDATA[
+        <p>I’ve been meaning to look into how I could decrease the build time for the source code of <a href="https://laravel.io/">Laravel.io</a> for some time now. At <a href="https://beatswitch.com/">Beatswitch</a>, the startup which I work for, we’ve switched to CircleCI 2.0 about a year ago and have been very happy with the results.</p>
+<p>CircleCI 2.0’s builds run with Docker which makes spinning up new instances super fast. If you use pre-built images which are customized to your needs, you don’t even need to do any provisioning during the build which saves you quite a bit time. Pulling various images and orchestrating them in a CircleCI 2.0 config allows for very rapid build times. If you add their new workflows to their mix you could easily enable parallelization and speed things up even more.</p>
+<p>I’ve been pretty happy with <a href="https://travis-ci.org/">Travis CI</a> so far for Laravel.io. We had a build time of ~3 minutes which isn’t that long even though our test suite isn’t that extensive. <a href="https://travis-ci.org/laravelio/portal/builds/366453938">Here’s an example build.</a></p>
+<p>All in all ~3 minutes is a pretty long time to set things up considering the tests themselves run for about 10 seconds. I thought this could be improved and so it did once we tried setting up CircleCI 2.0. Thanks to <a href="https://github.com/laravelio/portal/pull/364">this pull request</a> by <a href="https://github.com/serima">Ryo Shibayama</a> we managed to put together <a href="https://github.com/laravelio/portal/blob/2d0ea15eee53ec7767d7b64a77f8f3c26a136c07/.circleci/config.yml">a simple CircleCI 2.0 config</a>. As you can see from <a href="https://circleci.com/gh/laravelio/portal/14">this example build</a> the built time has significantly improved. Because we have most of our build dependencies up front and we can simply download and spin up the container, we save a lot of time. Installing and building our assets is also greatly improved. Sure, some of it comes from the fact that we now cache our Yarn dependencies but overall we cut down ~2 minutes of build time.</p>
+<p>All in all we went from ~3 minutes to ~1 minute which is a lot if you want to keep your feedback loop as short as possible. <a href="https://circleci.com/gh/laravelio/portal/9">We can even reach ~37 seconds</a> when we use a host which already has the Docker instance cached. That way we only need to spin it up, so the first step only takes ~1 second. Unfortunately, there’s no way to control which host you’re going to use or at least I haven’t found a way to do so yet.</p>
+<p>In conclusion, we can really say that CircleCI 2.0 has greatly helped us in improving our build time. I can really recommend looking into their service and giving them a try. If you have an open-source project, they offer four free containers for your project.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/laravel-horizon-with-forge-and-envoyer</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/laravel-horizon-with-forge-and-envoyer" />
+    <title>Laravel Horizon with Forge and Envoyer</title>
+    <published>2018-02-08T00:00:00+00:00</published>
+    <updated>2018-02-08T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">I recently installed Horizon for Laravel.io and while it wasn’t that hard to install, I still had to figure some things out. Since this was the first time setting everything up I thought I’d write up the steps to take to get started with Horizon and......</summary>
+    <content type="html"><![CDATA[
+        <p>I recently installed Horizon for <a href="https://laravel.io/">Laravel.io</a> and while it wasn’t that hard to install, I still had to figure some things out. Since this was the first time setting everything up I thought I’d write up the steps to take to get started with Horizon and set everything up with Forge and Envoyer.</p>
+<p>Before you begin I suggest you read <a href="https://medium.com/@taylorotwell/introducing-laravel-horizon-4585f66e3e">the introduction post</a> and <a href="https://medium.com/@taylorotwell/deploying-horizon-to-laravel-forge-fc9e01b74d84">this setup guide</a> both written by Taylor Otwell. They’ll give you an excellent introduction and while the setup guide already gives most of the steps used to set things up, this guide tries to guide you step by step and adds some extra’s for setting everything up with Envoyer.</p>
+<p>Remember that this isn’t a guide that dives deep into Horizon, just enough to get it up and running. If you want more info about Horizon’s internals I suggest <a href="https://divinglaravel.com/horizon">this excellent post</a> by Mohamed Said.</p>
+<h2>Installation</h2>
+<p>The first step to get started is very simple. Simple do a <code>composer require laravel/horizon</code> on your Laravel project and run <code>php artisan horizon:install</code> to install Horizon. This will publish and register the <code>App\Providers\HorizonServiceProvider</code> where we can configure Horizon and publish any assets we'll need to view the dashboard.</p>
+<h2>Configuration</h2>
+<h3>Queues</h3>
+<p>The next step is to set up our queue configuration. Go to the newly created <code>horizon.php</code> config file and go the the <code>environments</code> setting. Here you can define your queues. You can play around a little bit with this later but for now let’s keep the base configuration with just one queue.</p>
+<h3>Authorization</h3>
+<p>Next we'll set up any authorization rules to make sure no one can access the Horizon dashboard unwanted. You can do this with the gate method in the <code>App\Provider\HorizonServiceProvider</code> class.</p>
+<pre><code class="language-php">protected function gate()
+{
+    Gate::define('viewHorizon', function ($user) {
+        return in_array($user-&gt;email, [
+            config('lio.horizon.email'),
+        ]);
+    });
+}</code></pre>
+<p>I’ve configured the email address that will be checked through an environment variable so it’s easy to configure. It gets used to check if the correct user is authenticated to visit the dashboard. But you can really define anything you want here.</p>
+<h3>Notifications</h3>
+<p>In the boot method of the service provider I’ve added two notification methods which will send any notifications from Horizon to the email address and Slack webhook that I’ve set up. Don't forget that you'll need to configure a mail provider for the mail notifications. You're totally free to skip this for now and set it up later if you want. Any notification method is optional.</p>
+<pre><code class="language-php">public function boot()
+{
+    parent::boot();
+
+    Horizon::routeMailNotificationsTo(config('lio.horizon.email'));
+    Horizon::routeSlackNotificationsTo(config('lio.horizon.webhook'));
+}</code></pre>
+<h3>Scheduler</h3>
+<p>If we want to get some cool metrics on our dashboard we’ll need to define a scheduler command. Make sure the scheduler is set up to take snapshots every five minutes. You can add this in the <code>App\Console\Kernel</code> class.</p>
+<pre><code class="language-php">/**
+ * Define the application's command schedule.
+ *
+ * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+ * @return void
+ */
+protected function schedule(Schedule $schedule)
+{
+    $schedule-&gt;command('horizon:snapshot')-&gt;everyFiveMinutes();
+}</code></pre>
+<p>After you’ve done this, commit the code changes and push to Github or whatever VCS host you use.</p>
+<h2>Envoyer</h2>
+<p>On Envoyer we need to define a new hook. The <code>horizon:purge</code> command will purge any orphan processes. The <code>horizon:terminate</code> command will finish any left over jobs and terminate the Horizon process. The daemon which we’ll set up later will make sure that the command is always restarted after we terminate it.</p>
+<p>Set up the deployment hook <strong>after</strong> the “Activate New Release” action. This will make sure the command is run after we activate the new app release.</p>
+<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png" alt="Add the hook **after** the “Activate New Release” action." /></p>
+<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png" alt="" /></p>
+<p>If you’re managing your environment variables with Envoyer make sure you set your <code>QUEUE_CONNECTION</code> env variable to <code>redis</code>.</p>
+<p>You can now deploy the code we added before. Make sure the deploy finished before proceeding to the next step.</p>
+<h2>Forge</h2>
+<h3>Scheduler</h3>
+<p>First, if you haven’t done so already, make sure the scheduler is set up correctly so the scheduled command is run to populate the metrics. Go to your server and the “Scheduler” menu item. Make sure you add a job which runs every minute and triggers the <code>schedule:run</code> command. Setup your command as follows:</p>
+<pre><code class="language-bash">php /home/forge/&lt;site&gt;/current/artisan schedule:run</code></pre>
+<h3>Daemon</h3>
+<p>After setting up the scheduler we only need to add the daemon to make sure the Horizon command is started and re-started every time we deploy and terminate it. Go to your server and the “Daemons” menu item. Add a deamon with the <code>php artisan horizon</code> command to run in the <code>/home/forge/&lt;site&gt;/current</code> directory. After you’ve added this command, the daemon will enable the horizon command and you should be able to visit horizon at <code>https://site.com/horizon</code> and see the status below.</p>
+<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png" alt="" /></p>
+<p>Don't forget that you need to be authenticated with the rules you defined in the gate method in your <code>App\Provider\HorizonServiceProvider</code> class.</p>
+<h2>Conclusion</h2>
+<p>This should be all that you need to get started with Horizon. Don’t forget that you don’t need to define queues through Forge as Horizon completely takes this over. You only need to change your <code>horizon.php</code> config file and Horizon will apply the changes on the next deploy.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/star-wars-the-last-jedi-review</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/star-wars-the-last-jedi-review" />
+    <title>Star Wars: The Last Jedi Review</title>
+    <published>2017-12-15T00:00:00+00:00</published>
+    <updated>2017-12-15T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">
+    
+
+Spoilers! Don’t say I didn’t warn you!
+A couple of years ago after the announcement that Disney would be taking over Lucasfilm and the Star Wars franchise, in contrary to many other fans, I got quite excited about the revival of the saga. I......</summary>
+    <content type="html"><![CDATA[
+        <p class="text-center">
+    <img src="/assets/images/posts/star-wars-the-last-jedi-review.jpg">
+</p>
+<p><strong>Spoilers! Don’t say I didn’t warn you!</strong></p>
+<p>A couple of years ago after the announcement that Disney would be taking over Lucasfilm and the Star Wars franchise, in contrary to many other fans, I got quite excited about the revival of the saga. I was very much looking forward to more movies and to find out about so many untold stories. Although I was a bit sad that they discontinued the Expanded Universe, I could live with the idea that they now had a carte blanche to create a whole new universe.</p>
+<p>When The Force Awakens came out I was happy to see that they kept true to the original movies. Besides some minor plot details I wasn’t happy about (another Death Star, really?) I felt that it was a great start to a new trilogy and a new story. It left me craving to know more about the characters. Who’s Rey? Who’s Snoke? What’s the story between Luke and Kylo Ren? What’ll happen with Rey and Kylo Ren? Needless to say I was looking very forward to the next movie.</p>
+<p>I also want to add that I thoroughly enjoyed Rogue One. It was really well done story-wise. It featured great actors and had a sort of more “serious” vibe just like the original trilogy. Come to think of it, I enjoyed Rogue One even more than TFA. It had a more darker vibe around the whole movie. Seeing almost the entire cast die at the end was a very plausible and good ending to the movie that left me behind being a little bit sentimental about their loss. It was also a great way to the tell the story about how A New Hope started. There’s one particularly scene I didn’t like but that’s for another blog post perhaps.</p>
+<p>Let’s talk about The Last Jedi. In this review I’ll try to explain what I liked about the movie but also, and mostly, what I disliked. There’s so much things to cover so let’s get started.</p>
+<p><strong>Final warning: Spoilers!</strong></p>
+<h2>General</h2>
+<p>Overal, story-wise, I think this movie went with the least favorable path. I’ll go into the specifics later but I think that the way the trilogy is going right now is probably the most boring plot choice they could have picked. It’s so predictable and they even took decisions that made the whole story even more boring. I can’t even imagine what they’re going to do to make episode IX interesting and I don’t know if that’s a good or a bad thing. I feel like, in contrary to the end of TFA, that there aren’t any questions left that are still worth answering.</p>
+<p>Secondly, the movie is riddled with ridiculous and utterly illogical plot twists and happenings. I can’t even believe how many times I said to myself: “no way that this is happening.” There’s just so many choices that are made by the characters that are just either too dumb or too far-fetched. Besides that there are some things (like Rose’s love for Finn) that are just too forced. But more on that later.</p>
+<p>There’s good stuff though! I still like the acting of most of the characters. Daisy Ridley is still amazing as Rey and Mark Hamill still hasn’t lost his touch when he portrays Luke. When Mark steps into a Star Wars movie he simply becomes Luke instead of doing any acting. Oscar Isaac does a great job at portraying Poe but the story doesn’t do his character any credit. I have to say that John Boyega does a great job at playing Finn but I dislike the over-the-top acting at some points. I guess this is where you really see how these new movies differ from the old ones. Kelly Marie Tran is a perfect Rose but I really dislike the way her story line plays out. I actually though Adam Driver was a better Kylo Ren than in TFA, a real good improvement.</p>
+<p>I also liked almost all of the humor and the jokes. They made me chuckle and plain out laugh aloud at some points. This is also a key difference from the original trilogy but bothers me less than other things in the movie.</p>
+<p>One last thing that kind of bothers me is that again, they’re just copying from the original trilogy. TFA was basically A New Hope and TLJ basically is The Empire Strikes Back. Just too many similarities to make it really “original”. Escaping the Resistance base, a dark Force cave, visiting a remote city, the space “hunt”, walker assault… you get what I mean.</p>
+<h2>First Act</h2>
+<p>Let’s start with the first part of the movie. The movie starts off with the Resistance making their escape from their base as Imperial forces are closing in. Please make note that the Resistance’s fleet, which consists of just a handful of cruisers, is basically the entire Resistance (as they note further down the movie). So whatever’s left of the Resistance can be seen throughout the rest of the movie.</p>
+<p>So while they’re still evacuating the planet a Dreadnought appears and they send in Poe to buy some time and take out the ship’s guns so the bombers can later swoop in. Seriously? One fighter? Against an entire Dreadnought? I kind of thought the whole <a href="https://www.youtube.com/watch?v=VgB2Wtvkpso">“Poe kills 10 Tie fighters in 16 seconds”</a> thing was already a little exaggerated but hey, they managed to outdo even that. Ok, Luke basically takes out the Death Star by himself but he wasn’t alone. So as the Captain already notes his X-Wing is too small to confront with the ship’s turrets. But why, on earth, don’t they send in the fighters sooner? They basically wait until all guns are destroyed before they reach the conclusion that they’ll need their fighters to kill him. Major facepalm.</p>
+<p>Anyway, Poe kills of the guns and while the last transport is evacuated the Dreadnought destroys the Resistance base. Why the Dreadnought doesn’t immediately targets the main Resistance Cruiser (which contains basically the entire Resistance) is beyond me but hey, I’ll take it. After the evacuation is complete, Leia who doesn’t want to risk any more lives orders Poe to return to the fleet so they can make their escape. Instead Poe decides to take measures in his own hands and take on the Dreadnought to destroy the last gun so the bombers can make their run. This lead me to the following conclusion.</p>
+<p>Poe is a frigging idiot.</p>
+<p>There is zero logic in destroying the Dreadnought. It does not, at all, give them any advantage. Look at the Resistance fleet. It’s basically handful of ships. What difference does one Dreadnought make? Snoke’s ship, which we see later, alone is like 5 times as big. And they have like dozens and dozens of Battlecruisers. What happens is that they loose their entire bomber group, dozens of fighters and a lot of pilots. And it’s entirely on Poe. Later he basically shrugs off the loss. The slap in the face by Leia was more than deserved.</p>
+<p>Further we see Rey on Luke’s island and the scene picks off right where TFA ends. I think the island scenes and conversations between Rey and Luke were a few of the things in the movie which were played out very well. The conversations make sense. Luke not wanting to train her at first makes sense. Everything just fits well.</p>
+<p>There’s still one thing that was kind of… weird. At one point we see Luke walking towards an animal that’s sitting upright, milks it and gulps the milk while looking at Rey with a particularly look. Rey is looking at him in awe like “wth is he doing?” This, for me, was a “please, don’t do something like this ever again in a Star Wars movie”-moment. The whole thing was just plain bizar.</p>
+<p>Later on we see an old familiar face, Yoda! I’m really glad that they went with the original prop and not the digitalized version. Even though the conversation was kind of brief and didn’t really give me the feeling that Yoda had to really “convince” Luke to stop acting like a baby and start getting back at it again, I can live with this particularly scene. It was a real fan-pleaser and felt kind of forced but the scene, even though not very well played out, kind of made sense and definitely had its place in the movie.</p>
+<p>The Porgs were funny, the island natives definitely were doing their best to be annoyed as hell at everything Rey did and overall I really liked most of the Island scenes. Even though again they were copying from Episode V. Another dark Force cave?</p>
+<h2>Second Act</h2>
+<p>So this is where it get plainly illogical. After the Resistance fleet escapes the Resistance base the First Order fleet catches up with them. It turns out the First Order was tracking them and they get their asses kicked. Because it’s pointless to jump to hyperspace they decide to run. Like… just speed up, increase the shields at their backs and speed up as fast as they can. And the First Order fleet pursues them.</p>
+<p>For. The. Entire. Frigging. Movie.</p>
+<p>Seriously? Like… are you kidding me? This is probably the one thing that bothered me the most about the entire movie. The entire First Order fleet cannot gain in on a handful of cruisers? They could have easily let a few Battlecruisers jump to hyperspace fort and back, cornered them and the whole thing would have lasted only a couple of minutes.</p>
+<p>Then there’s the scene where the Resistance leadership on the bridge is killed. Why the hell was the entire leadership in one single spot? And don’t get me started about the way they’re killed. Just when they decide to lower their front shields and increase them at their backs a couple of Tie fighters (including Kylo Ren) are flying around at their front. Of course the bridge gets blown away as soon as they lower their shield. I mean, come on! That’s like space combat 101. No shields, you die.</p>
+<p>And I hate the way they killed off Ackbar. He gets a brief notice that he died along with the rest but that’s it. No mention besides that. Way to let go such an iconic character. It also didn’t escape my notice that he died after walking into… a trap. Well, sort of.</p>
+<p>Then there’s the second thing I thought was totally unbelievable. Leia survives the blast and uses the Force to pull herself back into the cruiser. Say what? Ok so we don’t know the backstory here. Obviously she’s also gifted with the Force, we know that from previous movies. But how did she get so good at wielding it? Perhaps she got training by Luke? She’s naturally gifted? Still, that’s some serious Force usage right there, for someone who’s not a Jedi, to survive such an explosion and get herself back into the cruiser. The whole scene felt a little over-the-top. And it definitely wasn’t the last “hey look at what cool stuff we can do with the Force”-moment of the movie.</p>
+<p>A bit later we can see Poe plotting with Rose and Finn on how to get onboard of Snoke’s ship. Rose and Finn leave while Poe stays behind to pilot the cruiser as soon as they signal him. In the meantime it dawns upon him that the new Resistance Leader, Holdo, is fueling up the transports. He suspects that she’s going to use the transports to attempt an escape. As Poe thinks they’ll be easy pickings if they do that he stages a coup along with some other pilots to make sure they can stick to the plan he has with Finn and Rose. Why on earth, Holdo doesn’t simply explains the actual plan she has to him is beyond me. Poe would totally have understood that it would be a solid plan. In fact, as soon as he realizes what her plan was all along later in the movie he immediately understands that it’s a good plan. True, perhaps Holdo just doesn’t trusts him enough but still. Since his coup almost caused him to be the end of the entire Resistance if Leia didn’t stop him, I once again come to the conclusion:</p>
+<p>Poe is a frigging idiot.</p>
+<p>That’s (almost) two times not that he’s cost lives instead of saving them.</p>
+<p>Then there’s the whole “timing” thing. So the First Order keeps following the Resistance fleet (again, major sigh) and Finn and Rose need to rush to get to Canto Bight to find a hacker, get back in time, break into Snoke’s ship and turn of the tracker in a matter of a few hours? Besides the fact that they need to travel all the way to Canto Bight and back in an escape pod (do escape pods even have light speed capability?) how the heck did they do that so fast? Sure, they got back in a different ship which might have light speed capability but still. At one point they note on the Resistance cruiser that they only have 6 hours left. 6 Hours seems like seriously few for all the traveling back, boarding and disabling the tracker.</p>
+<p>After that we get to see the scene where most viewers were probably waiting for. Rey is lead to Snoke by Kylo Ren and Snoke starts interrogating her. And then, when the moment comes that Kylo needs to kill Rey he instead manages to kill Snoke. Why??? Why did he have to die so easily and so early? He barely got any screen time. We still haven’t found out who he is. In fact, none of that doesn’t even matter now. Who cares who he was? He’s gone! He just went out too simple. I would have thought that Rey and Kylo might run off together after trying to take him on and with that set up Episode IX. This was an unbelievable boring and too easy way for him to go out if you ask me.</p>
+<p>After that we see Rey and Kylo battle the guards together which is actually a really cool scene. Probably one of my favorite ones from the movie.</p>
+<p>Then the moment comes where Kylo and Rey try to convince each other to join their side. Instead of any of them choosing the other side which would have been total badass (especially is Rey turned dark), no, they pick the most boring option and stay on their own side, Kylo effectively becoming the new leader of the First Order. This probably couldn’t have turned out more boring. So predictable.</p>
+<p>And then, the most boring thing yet happens. We find out who Rey is. It turns out she’s nobody! For heavens sake, they could have really gone either way with this but this was something I hadn’t even considered. I was so anxious to find out who she was and now we’re lead to believe she’s no one? To be honest, I believe we haven’t heard the last of this and Episode IX might shed some new light on it but if this is final then I really have no questions left for Episode IX.</p>
+<h2>Third Act</h2>
+<p>Then comes the assault on Crait. There’s just a couple of things I’d like to get over. I thought most of this part was done pretty well even though it looked so similar to the opening happenings of Episode V.</p>
+<p>When they bring out the big gun to blast open the door, why don’t they fire it twice? If they fire it twice then it’s game over for the Resistance. No way that they could have survived a second blast that would have hit inside the base. I guess it’s a one-shot kind of thing?</p>
+<p>At some point Finn tries to fly into the gun in an attempt to destroy it and thus saving his buddies. But at the last moment Rose knocks him away and saves him. How did Rose get there sooner then he did? She was behind him and she had to loop a little bit in order to knock him away. I guess the power of the beam slowed Finn a little down? But that’s the only explanation I can think of.</p>
+<p>After Rose saves him, Finn races towards her to see if he’s ok. Rose explains to him that she doesn’t wants to lose anymore people she loves and kisses him. They don’t even know each other for more than 24 hours (judging from all the timing they constantly reminded us) and now they’re in love? Sorry, but this felt really forced and totally unrealistic. Also, where are all the snow troopers who were running around? A few minutes before we could clearly see quite a few of them running around the walkers and the cannon but they’re all gone when Finn and Rose are lying there.</p>
+<p>Then we get to the part where Luke and Kylo Ren face off. Luke uses all of his life power into projecting him onto Crait to buy time for the Resistance to escape. Eventually it means the end of him. To be honest, I was really disappointed that this was the way he died. They could have let him die after fighting like Obi-Wan did and it would have been a good death but this seemed like a pretty lousy way to go for such an iconic character as Luke. Obviously they really didn’t want him in the next movie (or as a Force character, who knows).</p>
+<p>In the meantime, somehow Finn managed to drag Rose all the way back to the base which is like ridiculous far. If you see how long the speeders are traveling towards the walkers at top speed then this is some seriously fast moving from Finn while dragging Rose along. Also none of the walkers seem to have noticed that he was doing so.</p>
+<p>Eventually the Resistance makes their way out of the base and are saved by Rey, Chewie and the Millennium Falcon. Then on the ship, Poe and Rey greet as if it’s the very first time they’ve met. This is totally unbelievable as they’ve clearly met on previous occasions. <a href="https://www.youtube.com/watch?v=ZAECfrA6L5U">In TFA there are at least two occasions where’s they’re basically standing next to each other at the end of the movie.</a> It seems impossible that they never met or spoke to each other.</p>
+<h2>Conclusion</h2>
+<p>This basically concludes the movie. As you’ve probably guessed this wasn’t my favorite Star Wars movie. In fact, in my opinion, this was the least Star Wars movie until now. Yes, I’m one of those that liked the prequels (non of that Jar Jar stuff though, no worries).</p>
+<p>I get that the new movies contain lots of humor and aren’t that “serious” as the original trilogy. In fact, it’s part of the identity of this new trilogy and I think it’s fine, really. What I don’t like is boring story-lines, illogical character decisions, unbelievable plot twists and just plain out ridiculous events.</p>
+<p>The movie definitely wasn’t all that bad. It has some great actors, good humor and some fun and exciting scenes. It’s the story line and specific occurrences that bother me the most. As I said, I have almost nothing to look forward to for Episode IX. I wonder how they’re going to wrap this trilogy up but I cannot image that there’s going to be any serious plot twists anymore. This movie could have offered some serious plot twists and totally turned things upside down. But instead they chose the most boring way to continue.</p>
+<p>This review really was a big brain dump after I saw the movie two days ago and could not talk to anyone yet because I was one of the first to see it. I hope you liked it and sorry if it came across a little negative. I’m still a big Star Wars fan and one bad movie isn’t going to change that.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/the-new-laravel-io</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/the-new-laravel-io" />
+    <title>The New Laravel.io</title>
+    <published>2017-07-03T00:00:00+00:00</published>
+    <updated>2017-07-03T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">
+It’s been almost three years since I wrote this blog post. And truth be told, it has been one heck of a ride. The last three years have been a mixture of sporadic working on the platform and thinking of cool new features while battling spam and the......</summary>
+    <content type="html"><![CDATA[
+        <p><img src="/assets/images/posts/the-new-laravel-io.png" alt="The redesigned homepage" /></p>
+<p>It’s been almost three years since I wrote <a href="https://driesvints.com/blog/laravel-io-the-road-ahead/">this blog post</a>. And truth be told, it has been one heck of a ride. The last three years have been a mixture of sporadic working on the platform and thinking of cool new features while battling spam and the urge to throw in the towel. And I came very close to doing just that.</p>
+<p>I started off by improving <a href="https://github.com/laravelio/portal/tree/51705ac06e86b8b2eaf566e1d6bf01636bcd00f3">the original source code</a>. While the source definitely wasn’t bad, it proved to be quite the undertaking to improve code which wasn’t my own. If this was to be a contracted job I probably would have made the best out of it and improved it gradually and as best as I could. But this was a project I had full control over and I had time. If I were to maintain this myself it would be best if I knew the source code by heart. So after a few months, I decided to throw out all of the existing code and rewrite from scratch.</p>
+<p>At the same time in my first year at Laravel.io I had another challenge I was facing: spam. Lots and lots of spam. It seemed like every other day another flood of spam accounts and bots overwhelmed the forum and pastebin, causing all kinds of problems. A flood of advertisement, downtime for both the platform and pastebin (which was one app back then) and endless evenings of cleaning the forum, database tables and banning accounts. I started implementing anti spam measures and believe me when I say that I’ve literally tried every trick in the book. From <a href="https://en.wikipedia.org/wiki/Honeypot_%28computing%29">Honeypot</a> to <a href="https://www.google.com/recaptcha/intro/">Recaptcha</a> and <a href="https://akismet.com/">Akismet</a>, you name it. Nothing worked, the spam continued. Some measures proved to hold the spam back a bit but it kept coming. I really should write a blog post one day about it or write a package for easier anti-spam measures but to be honest, even after all this time, I rather just forget about it. I’m still removing spam on Laravel.io on almost a daily basis.</p>
+<p>This lasted for over a year, I think, and brought me to my darkest hour. I was ready to throw in the towel. Open Source is great and all and you can get a lot of great things out of it but believe me when I say that it can also bring you a terrific amount of mental and physical stress at times. These were my toughest moments.</p>
+<p>But I persisted and continued working on the new platform sporadically. At first I wanted the new portal to be much more than what it was at the time. Thinking of all sorts of features I could build and release at once. But alas, time proved to be my enemy. Month after month crept along and more and more I started to realise that this would take quite an amount of time before I could realise what I was planning. After a while I couldn’t help but admit that I had to settle for a revamp of the current functionality and that it would be much less than I was planning on. I decided to focus on <a href="https://paste.laravel.io/">the pastebin</a> first and move it to a separate app. After that I continued to work on the new portal.</p>
+<p>If anything can be said about the new portal, it’s that at least I took enough time to thoroughly think about the internals. I wanted to build not just something I felt comfortable with working with myself but also something the community could learn from. From day one till now and beyond this it is and will still be my number one priority for Laravel.io: to offer open source software to the Laravel and greater PHP community to learn from and work on together. And as long as I’m around, the portal’s source code will stay open source and available for everyone under the MIT license.</p>
+<p>As for the rest, let me say that I’m not a designer. I’m not happy with the result of the way the new portal looks. It’s basic Bootstrap 3 with a theme over it and while it looks ok, it by no means comes to the standards I want to set for myself and Laravel.io in general. But a great design requires funds and that’s something that Laravel.io is lacking at the moment. I do plan to invest in a new logo soon. I want to take Laravel.io to the next level but that will require more than I can offer myself at the moment.</p>
+<p>It’s because of that reason that I’ve decided that I will start with ads on the portal and pastebin in a few days. I know this is probably not what you want to hear but at the time I don’t see a better way to start gaining funds which I can use to re-invest into Laravel.io. I’ve taught about this long and hard and it was a difficult choice but in the end I think this is the best choice for the project to move forward. I’ll also be looking into sponsoring opportunities and perhaps set up a Patreon account so I can gather some extra funds that way. If I can gather enough funds I can invest into a better UI and it would allow me to invest more time into the project so I can get back to PRs &amp; feedback faster and push out new features more rapidly. In the end I’m convinced this will benefit the project more than the pace I’m working at now.</p>
+<p>Speaking about new features, I’ve already written out <a href="https://github.com/laravelio/portal/issues">a few smaller improvement and feature issues</a>. Nothing major but some of them like the forum notifications have been requested since long. Since this project is open source, everyone is free to pitch in and discuss how they feel about how these features should be implemented and even work on together to make them happen. I’m more than welcome to contributions from the community. Some of you already have started to help out and I really appreciate that, thanks! I still have lots of ideas on how to improve the portal but some things will require more time and work.</p>
+<p>It took a long time and quite some effort but I’m really glad how everything turned out. I’m very excited for Laravel.io’s future and I hope you are too. I invite you to take a look at <a href="https://github.com/laravelio/portal">Laravel.io’s new source code</a> and if you have questions, just <a href="https://github.com/laravelio/portal/issues/new">open a Github issue</a> and I’ll be happy to answer any.</p>
+<p>Thank you for reading this and for your continued patience. And especially thank you to everyone who supported me over the past few years 🙏</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/dennis-ritchie</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/dennis-ritchie" />
+    <title>Dennis Ritchie</title>
+    <published>2017-06-25T00:00:00+00:00</published>
+    <updated>2017-06-25T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">
+This is a re-publish of an article I wrote back in October 2011 after Steve and Dennis’ deaths. Small disclosure: it was written in a time when I was just starting out with programming and I did not knew Rasmus, Andi or Zeev yet.
+It’s safe to say......</summary>
+    <content type="html"><![CDATA[
+        <p><img src="/assets/images/posts/dennis-ritchie.jpeg" alt="Dennis Ritchie and Ken Thompson" /></p>
+<p><em>This is a re-publish of an article I wrote back in October 2011 after Steve and Dennis’ deaths. Small disclosure: it was written in a time when I was just starting out with programming and I did not knew <strong>Rasmus</strong>, <strong>Andi</strong> or <strong>Zeev</strong> yet.</em></p>
+<p>It’s safe to say that with <a href="http://mashable.com/2011/10/05/breaking-steve-jobs-has-died">the death of Steve Jobs</a> the world has lost an icon, a visionary and a beloved human being. I don’t think I’ve ever saw such a wave of response on the death of a famous person. It’s all normal though. I mean, he lived an amazing life, inspiring lots of people and developing products which changed the world we live in today. For some, Steve was more than just the CEO of Apple.</p>
+<p>Still, it strikes me that while one visionary dies, others are hardly mentioned. People who did evenly great things but behind the scenes. People like <strong>Dennis Ritchie</strong>. Doesn’t ring a bell? No worries, I did not knew him either.</p>
+<p>I’m a programmer. I mostly code in PHP at work. If you’d ask me who invented PHP I would not know the answer. That’s the way things go. We use products but we don’t know anything about the people behind them. The inventors. The creators.</p>
+<p>Dennis Ritchie was a creator. He created <strong>the programming language C</strong> for the <strong>Unix System</strong>. A language from which many other derivatives have been made. It’s not just a milestone in programming. I think it was <strong>thé</strong> milestone in programming. I think the impact of it will surprise you.</p>
+<p>Look around you. I bet there are at least 5 devices in the room you’re in which use some sort of derivative from C. The TV in your living room. The device you’re reading this on. The microwave in the kitchen. The digital watch on your wrist.</p>
+<p>You would not believe how many devices use some sort of programming language today. There’s hardly any business in the modern world that doesn’t uses a device with some sort of programming language. It made our world easier to live in. It made our world like it is today.</p>
+<p>And it’s all thanks to Dennis Ritchie.</p>
+<p>While I personally think that inventing C was a little more historic then building the first iMac, it are two different things. I can understand that Steve got the most attention from the crowd but I would like to let everyone know about someone who did equally or perhaps even greater things.</p>
+<p><a href="http://mashable.com/2011/10/13/dennis-ritchie-dies">Dennis' death</a> was hardly mentioned in the press. I can’t blame them, he was hardly known. Still, we shouldn’t just ignore it.</p>
+<p>I’ll remember both of them as two persons who brought us ways that made life possible as we live it today. And that’s something I won’t forget soon.</p>
+<p>If you’d like to read something more thorough and professional I’d suggest you <a href="http://www.digitaltrends.com/computing/was-dennis-ritchie-more-important-than-steve-jobs">read this article</a> by <strong>Geoff Duncan</strong>. I’m still a beginning blogger after all.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/one-club-player</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/one-club-player" />
+    <title>One Club Player</title>
+    <published>2017-05-29T00:00:00+00:00</published>
+    <updated>2017-05-29T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">
+It saddens me to see a legendary player like Francesco Totti calling it quits. Men of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Andrés Iniesta, Carles Puyol are a bunch who know......</summary>
+    <content type="html"><![CDATA[
+        <p><img src="/assets/images/posts/one-club-player.jpeg" alt="Source: The Indian Express" /></p>
+<p>It saddens me to see a legendary player like Francesco Totti calling it quits. Men of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Andrés Iniesta, Carles Puyol are a bunch who know what it’s like to dedicated their lives to their club.</p>
+<p>Not even the likes of Lampard and Terry come close to them. These are exceptional players who wouldn’t even dream of playing for other teams. True love for their club.</p>
+<p>It’s sad to see that this is becoming a rare feat. I’ve seen more and more cases over the years where players choose for the money and join rival clubs, forsaking their previous fans and club. Here in Belgium it’s becoming an increasing thing.</p>
+<p>It gives me much comfort when I see players like Diego Costa, even though I’m not a fan, say that there’s only one club he wants a transfer to and that it’ll be Atlético. That’s club love. That’s love for the fans. For the game.</p>
+<p>There’s a trait in FIFA which is titled “One Club Player”. It’s extremely rare to find a player in the game with said trait but Totti is one of them. I wonder how long the trait will last and stay in the game.</p>
+<p>I’ll miss Totti, not only as a player but as a charismatic person. Someone with the heart in the right place. A true hero of the people. A legend.</p>
+<p>Arrivederci, Francesco</p>
+<div class="fb-video" data-href="https://www.facebook.com/officialasroma/videos/1399428543451289/" data-show-text="false">
+    <blockquote cite="https://www.facebook.com/officialasroma/videos/1399428543451289/" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/officialasroma/videos/1399428543451289/">Stadium of Tears</a>
+        <p>When Francesco Totti cries, we all cry.</p>
+        Posted by <a href="https://www.facebook.com/officialasroma/">AS Roma</a> on Monday, May 29, 2017
+    </blockquote>
+</div>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/1984</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/1984" />
+    <title>1984</title>
+    <published>2017-05-28T00:00:00+00:00</published>
+    <updated>2017-05-28T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">Having just finished this masterpiece by Orwell, I couldn’t help but having the uncontrollable urge to write about it. After finishing part III in a single stretch, some things have fundamentally changed the way I view certain aspects in life. It is by......</summary>
+    <content type="html"><![CDATA[
+        <p>Having just finished this masterpiece by Orwell, I couldn’t help but having the uncontrollable urge to write about it. After finishing part III in a single stretch, some things have fundamentally changed the way I view certain aspects in life. It is by no means that there could be any doubt about the warning Orwell was trying to give us.</p>
+<p>At the end of the book I was contemplating how I myself would have handled the situation in which Winston was in. Having run over the different scenarios in my head, I could come to no other conclusion that I would probably have caved in much sooner than him.</p>
+<p>Humans are a fragile race. We go by our daily lives and wear masks to shield us from other individuals, hoping that they don’t discover the real thoughts that run through our heads. Thought crime or the freedom to think, either way you interpret it, humans are free in their own minds. Or so we are told to believe.</p>
+<p>After reading 1984 I’m left to wonder for how long until this also is taken away from us. The last place where we can go to and truly be ourselves, free from judgement and punishment. It’s by the end of the book that I’m no longer sure if that safe haven will forever remain.</p>
+<p>I was talking to someone the other day about online privacy and the implications of today’s exposure of a person to the unknowns. My opinion about it until now was that as long as a person’s privacy is respected within the laws and rights of the domain within they reside, there is no problem.</p>
+<p>But what if the embodiment of that domain suddenly shifts towards a more radical and dictative one. What happens to the granted access of data from before? I fear that tomorrow’s society might not be as open and forgiving as now. Big Brother is already watching us but in the future he might not only be watching but enforcing and punishing as well. And I’m not entirely sure anymore I want that kind of society &amp; BB to know about me what today’s society &amp; BB already know about me.</p>
+<p>As with everything these days, we need to stay vigilant and watchful not to forsake the freedoms we’ve fought so hard to achieve. I’m not going to lie. I’m not to optimistic about our future. But if we give up already, then there’s truly no reason at all to continue with anything.</p>
+<p>My hope is still that tomorrow’s society is a more inclusive one and one that understands each other’s choices and beliefs. And not one where the betrayal of our loved ones is the last resort to escape. Live and let live.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/two-tips-to-speedup-your-laravel-tests</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/two-tips-to-speedup-your-laravel-tests" />
+    <title>Two tips to speedup your Laravel tests</title>
+    <published>2016-08-24T00:00:00+00:00</published>
+    <updated>2016-08-24T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">
+This optimization has since made it into the core of the framework. 
+
+I&#039;ve seen two different tips for speeding up your tests in Laravel in the past week and thought I&#039;d share them with you. For me, they made a significant impact on the speed of my......</summary>
+    <content type="html"><![CDATA[
+        <blockquote>
+<p>This optimization has since <a href="https://github.com/laravel/laravel/blob/6806aaa3568382e9c8c7281a64b82a52b824e46f/phpunit.xml#L27">made it into the core</a> of the framework. </p>
+</blockquote>
+<p>I've seen two different tips for speeding up your tests in Laravel in the past week and thought I'd share them with you. For me, they made a significant impact on the speed of my tests.</p>
+<h2>Lower the default crypt cost factor</h2>
+<p>This is a huge time saver. <a href="https://twitter.com/codebyjeff">Jeff Madsen</a> recently showed us a tip in one of his <a href="http://codebyjeff.com/newsletter">Laravel Quick Tips newsletter</a> which speeds up your tests by lowering the default crypt cost factor.</p>
+<blockquote>
+<p>Ordinarily when you need to do a lot of testing with an object that can take a non-trivial amount of time to create, you just mock it. For example - creating a user is not just a matter of writing to databse, but it also has a relatively expensive password hashing process to go through. If your test count is still low this may not seem like a big deal, but when it grows and is run via Jenkins or Travis or similar, it can really slow things down. A mock lets you skip that, and save time.</p>
+<p>However, there will be times where you may be forced to go through the actual User create process, such as in integration tests. In that case, this tip can be handy.</p>
+<p>In your TestCase.php file, add this line about hashing rounds:</p>
+<pre><code>public function createApplication()
+{
+    $app = require __DIR__.'/../bootstrap/app.php';
+
+    $app-&gt;make(Illuminate\Contracts\Console\Kernel::class)-&gt;bootstrap();
+
+    // add this line
+    Hash::setRounds(5);
+
+    return $app;
+}</code></pre>
+<p>This cuts the number of rounds from the default of 10 down to 5, shaving about half or even more of the time spent hashing. A big saving when you are running dozens of tests all day long!</p>
+</blockquote>
+<p>For me, this cut the time to run the new Laravel.io's test suite almost by half. Sweet!</p>
+<h2>Use a precomputed hash in your factories</h2>
+<p>Another tip is one which was recently added by <a href="https://twitter.com/adamwathan">Adam Wathan</a> in the Laravel skeleton: <a href="https://github.com/laravel/laravel/pull/3894">https://github.com/laravel/laravel/pull/3894</a></p>
+<blockquote>
+<p>Use a precomputed hash of the word &quot;secret&quot; instead of using <code>bcrypt</code> directly. Since <code>bcrypt</code> is intentionally slow, it can really slow down test suites in large applications that use factories to generate models in many tests.</p>
+</blockquote>
+<p>This additionally cut off some time to run the new Laravel.io test suite. So all in all these two tips made my test suite run twice as fast.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/getting-started-with-dotfiles</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/getting-started-with-dotfiles" />
+    <title>Getting Started with Dotfiles</title>
+    <published>2016-04-08T00:00:00+00:00</published>
+    <updated>2016-04-08T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">Let&#039;s draw a situation. Your computer breaks down. And I don&#039;t mean the classic &amp;quot;Dammit, my computer broke down, better get it fixed&amp;quot;. No, I mean the &amp;quot;Oh shit, my HD is totally fried, I lost everything and there&#039;s no way on earth I&#039;ll ever......</summary>
+    <content type="html"><![CDATA[
+        <p>Let's draw a situation. Your computer breaks down. And I don't mean the classic &quot;Dammit, my computer broke down, better get it fixed&quot;. No, I mean the &quot;Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back&quot;-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.</p>
+<p>Thankfully, these days we have something called 'The Cloud ☁️'. We're developers so we're probably smart enough to save all of our documents up on Dropbox, Google Drive, iCloud, Github or whatever floats up there. Right? ... Right?</p>
+<p><em>crickets</em></p>
+<p>Anyway, I can't help you with your documents. That's not why I'm writing this. Save your documents in the cloud! What I <em>can</em> help you with is your development environment. See, we all have specific ways of setting up our computer. It's all different somehow. The apps we use, our IDE settings, what shell we prefer, what programming languages we work with, the tools we prefer. How on earth are we going to get <em>that</em> specific setup back the way we had it before our computer broke down?</p>
+<p>Enter dotfiles.</p>
+<h2>Why Dotfiles?</h2>
+<p>Dotfiles basically contain the preferred setup of your computer. They usually come with a setup procedure so you can easily install everything again when you need to start from a fresh system. They're also really useful for syncing preferences across multiple devices.</p>
+<p>A couple of months ago I had to re-install my computer a couple of times. And damn, that was quite the undertaking. Figuring out which apps I had to re-install, setting up my IDE again properly, losing all of my shell settings and aliases. Total pain. And something no one wants to do ever again. So I decided that the next time I needed to re-install my computer I'd be prepared. I wouldn't go through this ordeal ever again.</p>
+<h2>Building My Own Dotfiles</h2>
+<p>I've known about dotfiles for quite a while now. I've seen various repositories from various people, but every single one of them seemed to be totally different. The reason for this is that dotfiles are very personal. There is no silver bullet or a <em>one way to rule them all</em> setup. When building your own dotfiles, you're going to see that you'll want to structure things to your own liking. And that is perfectly fine. <a href="https://dotfiles.github.io/">Take inspirations from other repositories</a> and then use the parts which work for you.</p>
+<p>Building <a href="https://github.com/driesvints/dotfiles">my own dotfiles</a> was just like that. I dove deep down into several repositories and found incredible ways to tweak my setup or organize things. Let me show you how I tackled structure for my own dotfiles.</p>
+<h3>Topical Organization</h3>
+<p>I started out with the repository everyone probably starts from when they're looking for a good example of dotfiles. <a href="https://github.com/holman/dotfiles">Zach Holman's dotfiles are superb.</a> I suggest you <a href="https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/">read his own excellent blog post</a> on the subject.</p>
+<p>What Zach uses is called Topical Organization, which means he organizes the different parts of his dotfiles in directories, each entitled to a specific subject. His git settings are in a <code>git/</code> directory, his Ruby scripts are in <code>ruby/</code>, etc.</p>
+<p>This seemed like a great way to organize things and eventually I ended up with <a href="https://github.com/driesvints/dotfiles/tree/7cb1ea6eff77921d16a3376a2172f96425e93181">this</a>. Everything neatly tucked away in its own directory with their own aliases, path settings, etc. separated.</p>
+<p>I now had a good structured and working setup for my dotfiles.</p>
+<h3>A Simpler Structure</h3>
+<p>But then I started thinking in terms of <em>why</em> I wanted to separate things so much. Each directory only contained a handful of files and each of those files only a few rules. Why would I want to separate everything if everything could be done much simpler by just organizing it top-level?</p>
+<p>And thus my quest began to greatly simplify things. When I was finished I ended up with <a href="https://github.com/driesvints/dotfiles/tree/f6321eed4852578c5c23894dcb22814851efd8d1">this</a>. As you can see it is much cleaner than the previous version. Everything is organized in just a handful of files that aren't very large. This means that they are much more maintainable and easier to understand.</p>
+<p>In the end this proved to be the right choice. Tools like Mackup and a Brewfile helped greatly in reducing the amount of files I needed. Let's take a look at the final result.</p>
+<h2>The Different Parts</h2>
+<h3>macOS Preferences</h3>
+<p>My main OS of choice is macOS. Being the Apple fanboy that I am, I thoroughly enjoy the way it syncs all of my data across my devices through iCloud. I wouldn't want to trade it in for any other OS at the moment. Although iCloud is great, it doesn't yet syncs your macOS preferences across your Macs. I have a Macbook at home and a Macbook from work so if I change a setting on one of my Macs, it doesn't automatically apply to the other one. Luckily we have a dotfile to help out with that.</p>
+<p><a href="https://github.com/mathiasbynens/dotfiles">Mathias Bynens's dotfiles</a> is one of the more popular ones out there. His <a href="https://github.com/mathiasbynens/dotfiles/blob/master/.macos"><code>.macos</code> dotfile</a> features a range of macOS preferences and is something probably everyone wants when working with macOS. Now syncing your preferences is easy. Just pull in the latest commit from your dotfiles, run <code>source .macos</code> and you're up to date.</p>
+<h3>Homebrew</h3>
+<p>When running macOS, <a href="http://brew.sh/">Homebrew</a> is essential. It helps you install packages and tools in an easy way through the CLI. It should probably be the first thing you install when setting up a new Mac.</p>
+<p>Homebrew can also help install your apps. For that, you'll need <a href="https://caskroom.github.io/">Homebrew Cask</a>. You won't need to worry about manually downloading and installing packages and tools anymore. Cask can even install your preferred fonts. Apps from the app store still need to be installed manually, though.</p>
+<p>To bring it all together in your dotfiles, you probably want to adopt a <code>Brewfile</code>. <a href="https://github.com/Homebrew/homebrew-bundle">Homebrew Bundler</a> allows you to organize your system's dependencies in a single file so Homebrew knows what to install when installing from a fresh system. It's like <a href="https://getcomposer.org/">Composer</a> but for your Mac. Feel free to take a look at <a href="https://github.com/driesvints/dotfiles/blob/master/Brewfile">my own Brewfile</a> to see what tools and apps I've got installed. A simple <code>brew bundle</code> installs your dependencies.</p>
+<h3>Mackup</h3>
+<p>Now we've talked about our macOS preferences and restoring our apps &amp; tools but what about our application preferences? How are we going to make sure we can restore those if we need to re-install our Mac?</p>
+<p>Meet <a href="https://github.com/lra/mackup">Mackup</a>. Mackup is a tool which backups your app preferences to a storage of your choice. By default it's Dropbox but you can easily use Google Drive, iCloud or any other synced folder you want. What it does is that it copies the settings from your <code>~/Library</code> folder and symlinks them from the storage folder. That way your settings stay consistent across devices. It's also very handy to restore your application's settings. Simply install your synced folder, Mackup first and then <code>mackup restore</code> to restore your settings.</p>
+<p>Thanks to Maxime Fabre for giving <a href="https://speakerdeck.com/anahkiasen/a-storm-homebrewin">a great presentation on Homebrew and Mackup</a> at the PHP Leuven UG!</p>
+<h3>Z Shell</h3>
+<p>When developing you probably spend a lot of your time on the CLI. So a good setup of your shell is important. While Bash is a great shell <a href="http://www.theverge.com/2016/3/30/11331014/microsoft-windows-linux-ubuntu-bash">(and recently even got added to Windows 10)</a>, I prefer <a href="http://www.zsh.org/">Z Shell (Zsh)</a>.</p>
+<p>Zsh is a powerful shell which features some great improvements over Bash like autocompletion, shared command history, themeable prompts and many other things. It's like Bash but on steroids. I've considered alternatives like <a href="https://fishshell.com/">Fish Shell</a> but in the end Zsh proved to be the one that I like the most.</p>
+<h3>Oh My, Wth Should I Use?</h3>
+<p>Like the way you have frameworks for programming languages you also have frameworks for your shell. While a shell like Zsh is great, it's still difficult to configure it the way you like. A framework like <a href="http://ohmyz.sh/">Oh-My-Zsh</a> can greatly help with this.</p>
+<p>You have a few other Zsh frameworks like <a href="https://github.com/sorin-ionescu/prezto">Presto</a> but in the end I decided to choose Oh-My-Zsh. Oh-My-Zsh is wildly adopted, has a strong community and a great range of features. A downside is that it's a bit slow (you'll notice when opening up a new shell window) but the features greatly compensate this.</p>
+<p>You can easily <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview">install plugins</a> for your shell like the git plugin which offers shortcuts and autocompletion for your git commands. Or easily <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes">install themes</a> to configure the look and feel of your shell. I've installed <a href="https://github.com/taylorotwell/shell/">the Taybalt theme</a> from <a href="https://twitter.com/taylorotwell">Taylor Otwell</a> together with the <a href="https://github.com/altercation/solarized">Solarized Dark</a> color scheme in <a href="https://www.iterm2.com/">iTerm2</a>.</p>
+<p>And when using Mackup your Oh-My-Zsh preferences automatically get synced across your devices. Neat!</p>
+<h2>The Install Procedure</h2>
+<p>Now that I've shown you how I've set up my dotfiles let's take a look at how it all comes together when we try to re-install our Mac. I've written a step-by-step guide on how I can <a href="https://github.com/driesvints/dotfiles#a-fresh-os-x-setup">install a fresh macOS setup</a> with my prefered settings and tools. Let me guide you through the steps.</p>
+<p>First of all we need to update to the latest version of macOS. We do this first so that we have the latest versions of all the tools available. After we've installed the latest version, install Xcode from the App store. We'll need this for the command line tools. After installing it, open it and accept the license agreement. This is necessary to use some of the command line tools. Now install the command line tools by running <code>xcode-select --install</code>. Ok, this was the part that probably took the most time. Let's proceed to the next part.</p>
+<p>First, copy your SSH keys to your <code>~/.ssh</code> folder and make sure they have the correct permissions. I sure hope you always keep those keys safe somewhere because they're basically your ID for the web. Now clone the repo to your machine. I'm gonna assume you're going to clone it to <code>~/.dotfiles</code>.</p>
+<p>Before we run the setup, one more thing we need to do is append <code>/usr/local/bin/zsh</code> to our <code>/etc/shells</code> file. This will point to the Homebrew installed Zsh version. It doesn't matter for now that we haven't installed it yet but it's necessary before we can run the installer and set Zsh as our default shell.</p>
+<p>Now run the installer by running <code>./install.sh</code>. Homebrew will be installed and will start installing your apps and tools from your <code>Brewfile</code>. Zsh will be set as your default shell. Composer will be installed with your preferred global packages. Lastly, the <code>.macos</code> file will be read to set your preffered macOS settings. Note that this will close your shell because it resets some processes at the end of the file.</p>
+<p>After the install script has been run we're going to restore your app preferences. First make sure Dropbox (or whatever synced storage you've chosen for Mackup) is set up and install your remaining apps from the App Store. Now run <code>mackup restore</code> to restore your app preferences.</p>
+<p>All you have to do to finish up is restart your Mac and you'll have the same setup the way you left it.</p>
+<h2>Maintaining Your Dotfiles</h2>
+<p>Of course you'll still need to make sure that if you change anything to your system, your dotfiles need to be updated as well. This requires a bit of a different mindset.</p>
+<p>Some pointers on maintaining your dotfiles:</p>
+<ul>
+<li>When installing a new app, tool or font, try to install it with Homebrew (Cask) and add it to your <code>Brewfile</code></li>
+<li>When configuring a new app make sure to run <code>mackup backup</code> to save your preferences</li>
+<li>When changing an macOS setting, try setting it through the <code>.macos</code> file</li>
+</ul>
+<p>If you follow these pointers you'll definitely make sure that your Mac will be restored the way you left it the next time you need to re-install.</p>
+<h2>Conclusion</h2>
+<p>That's it for this blog post. I hope I've shown you enough in order to make you start with your own dotfiles. Take note that this is a highly opinionated post because I've mostly explained my preferred setup. Like I said before, dotfiles are a very personal thing. Look around at <a href="https://dotfiles.github.io/">other repositories</a> and start building your dotfiles the way you like. If you need some help on getting started, I've dedicated a section of the readme in my dotfiles on helping you to <a href="https://github.com/driesvints/dotfiles#your-own-dotfiles">get started on your own dotfiles</a>.</p>
+<p>Go build your own dotfiles and the next time when your computer crashes, it won't be that bad! 😄</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/continuous-delivery-with-forge-and-envoyer</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/continuous-delivery-with-forge-and-envoyer" />
+    <title>Continuous Delivery with Forge and Envoyer</title>
+    <published>2015-08-25T00:00:00+00:00</published>
+    <updated>2015-08-25T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">This is one of the tutorials I did for my Laracon EU talk.
+When you run your tests locally on, let&#039;s say Homestead, that&#039;s fine because you want to run your tests on an environment that closely resembles your production environment. If you use both......</summary>
+    <content type="html"><![CDATA[
+        <p>This is one of the tutorials I did for my Laracon EU talk.</p>
+<p>When you run your tests locally on, let's say Homestead, that's fine because you want to run your tests on an environment that closely resembles your production environment. If you use both Homestead and <a href="forge.laravel.com">Forge</a> to setup your server, you can do just that.</p>
+<p>You probably also hooked up Envoyer to automatically deploy your code whenever you push to master. But it's tricky because you could push code which is broken. You won't notice it because you probably forgot to run your tests before you pushed your code. You want to first run your tests and then push your code when those tests pass.</p>
+<p>That's why you need a Continuous Integration (CI) service. When you add a CI service between your server and main upstream repository (let's say, Github), then running those tests on that CI service isn't the same as running them on Homestead of a Forge provisioned server. It could differ in PHP version, or some extensions which you need aren't available. The thing also is that there are a lot of great CI services out there: Travis, CircleCI, Codeship, etc. But they're often pretty expensive.</p>
+<p>How I solved this is by provisioning one Forge instance (for example, a 512mb <a href="https://www.digitalocean.com/">DigitalOcean</a> instance) just to run my tests whenever I push code to the master branch. After that server has successfully run my tests I trigger an Envoyer url to deploy my code.</p>
+<p>That way you save a lot of money (just $5/month for a 512mb DigitalOcean instance) and you get a great and easy to configurate continuous delivery pipeline.</p>
+<p>Setting it up is easy. Add the following code to a <code>tests.sh</code> script in the root of your project:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+PHPUNIT_RESULT=`vendor/bin/phpunit`
+PHPSPEC_RESULT=`vendor/bin/phpspec run`
+
+if [[ ${PHPUNIT_RESULT} =~ FAILURES ]] || [[ ${PHPSPEC_RESULT} =~ failed ]]
+then
+    echo "Test have failed!";
+    echo ${PHPUNIT_RESULT};
+    echo ${PHPSPEC_RESULT};
+    # You can notify Slack here if you want for failed builds
+else
+    # Trigger deployment
+    # Replace the url below with your envoyer url
+    curl -s 'https://envoyer.io/deploy/this-is-a-dummy-url';
+    echo 'Deployment triggered!'
+fi</code></pre>
+<p>And set the following rules as your deployment script on your CI Forge server.</p>
+<pre><code class="language-bash">cd /home/forge/default
+git pull origin master
+composer install --dev
+./tests.sh</code></pre>
+<p>And that's it! Your Continuous Delivery pipeline is now set up.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/quality-assurance-with-envoyer</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/quality-assurance-with-envoyer" />
+    <title>Quality Assurance with Envoyer</title>
+    <published>2015-08-25T00:00:00+00:00</published>
+    <updated>2015-08-25T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">This is one of the tutorials I did for my Laracon EU talk.
+Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
+For example, at......</summary>
+    <content type="html"><![CDATA[
+        <p>This is one of the tutorials I did for my Laracon EU talk.</p>
+<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
+<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
+<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
+<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
+<p>You can do that with this hook:</p>
+<pre><code class="language-bash">cd /home/forge/default/current
+php artisan migrate:reset --force</code></pre>
+<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
+<pre><code>cd {{release}}
+php artisan migrate --force --seed</code></pre>
+<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
+<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/laravel-io-the-road-ahead</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/laravel-io-the-road-ahead" />
+    <title>Laravel.IO - The Road Ahead</title>
+    <published>2014-08-13T00:00:00+00:00</published>
+    <updated>2014-08-13T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">I&#039;m happy to tell you all that as of today I&#039;ll be taking over the ongoing development of the Laravel.IO platform. Except for the Laravel.IO&#039;s podcast, which will still remain in Shawn McCool&#039;s hands, I&#039;ll be managing all of the rest of Laravel IO&#039;s......</summary>
+    <content type="html"><![CDATA[
+        <p>I'm happy to tell you all that as of today I'll be taking over the ongoing development of the <a href="http://laravel.io/">Laravel.IO</a> platform. Except for the Laravel.IO's podcast, which will still remain in <a href="https://twitter.com/ShawnMcCool">Shawn McCool</a>'s hands, I'll be managing all of the rest of Laravel IO's activities. The reason for the change is that it has been proven difficult for Shawn and the rest of the Laravel.IO core team (which consists of <a href="https://twitter.com/nickstrnl">Nick Spelt</a> and <a href="https://twitter.com/mitchellvanw">Mitchell van Wijngaarden</a>) to continue the development with the limited time they've got on their hands. I'd like to take this opportunity to thank all three of them for all of the work they've done so far for Laravel.IO and the Laravel community at large. The Laravel.IO platform has undergone some big changes in the past year and it's all thanks to their hard working effort.</p>
+<p>Now that the transfer is official it's time to take a look at the future for Laravel.IO. The way I see it is that Laravel.IO is currently a place where all of the Laravel community comes together. Whether it is to discuss or ask a question in the forums, listen to the podcast or share their code using the pastebin, Laravel.IO is a place where you can rely on great Laravel content. I feel strongly about continuing down this path and expanding Laravel.IO into a platform where you'd always go if you want to find something Laravel related. I have a vision for Laravel.IO where it's the homepage for Laravel developers, from which they start their search for packages, resources, educational material, help or other great content about Laravel. In the next couple of months I'm going to dedicate all of my work I put in open-source in my free time to making that vision a reality.</p>
+<p>Something else people might have been wondering about is what the hell happened to Laravel Weekly. Truth be told, at some point I lost interest in the current format because a lot of work existed in manually putting the newsletter together which is an extremely repetitive process. In the past few months I've been looking at overhauling the newsletter to create a separate platform where the content would be automated and newsletters would be put together by aggregating from different sources. A few weeks ago I started working on the platform but needless to say because of the current events with Laravel.IO I've stopped working on that platform for now. But this isn't the end for Laravel Weekly. I plan on making Laravel Weekly an integral part of the Laravel.IO platform in a later stage. But for now, Laravel Weekly is on hold.</p>
+<p>The road ahead and the future for Laravel.IO is bright. I'm planning on getting the development of Laravel.IO started actively again. I want Laravel.IO to be an example of a platform which empowers all of Laravel's best practices ranging from Eloquent to Homestead and Forge. I want Laravel.IO to be an open-source project people can go to, contribute to and learn from. The source code for Laravel.IO is and will always remain open-source under the MIT license. Currently I see the platform being at 2.0. I've pushed a <a href="https://github.com/LaravelIO/laravel.io/tree/release/3.0">release/3.0 branch</a> to the Laravel.IO Github repository where I'll be working on the next version. Feel free to check it out. I'll try to post a new blog post after Laracon EU is over to provide more details with the new roadmap for Laravel.IO.</p>
+<p>Again, thanks to Shawn McCool for believing in me. I know maintaining an open-source project of this scale is time consuming and takes a lot of effort but I promise to the community that I'll put my heart and soul into this. It'll take quite some dedication but I hope to make the vision I have for Laravel.IO a reality soon.</p>
+<p>Come talk to me at Laracon EU if you want to know more about the future for Laravel.IO or find me on IRC in #laravel or #laravel-offtopic when I'm around :-)</p>
+<p>Thanks for reading and code happy!</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/laravel-4-on-a-shared-host</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/laravel-4-on-a-shared-host" />
+    <title>Laravel 4 on a shared host</title>
+    <published>2013-10-25T00:00:00+00:00</published>
+    <updated>2013-10-25T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">Sometimes you&#039;re stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we&#039;ll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal......</summary>
+    <content type="html"><![CDATA[
+        <p>Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more--></p>
+<p>I'd like to begin by saying that while most solutions below might suit your needs, the ultimate solution is always just to move to a webhost which suits your needs to host a PHP framework like Laravel. <a href="http://fortrabbit.com/">Fortrabbit</a> is one such solution but definitely not the only one around.</p>
+<p>Remember that the absolute minimum requirements always include the need for the MCrypt PHP Extension.</p>
+<p>We'll use the following folder structure as a base for this tutorial, with the <code>www</code> folder as our DocumentRoot. Your own folder structure on your own shared hosting may differ from the one below.</p>
+<pre><code>config/
+logs/
+www/</code></pre>
+<p>Thanks to the following sources and people:</p>
+<ul>
+<li><a href="http://laravel.io/topic/39/laravel-4-easily-extended">Laravel 4 - Easily Extended</a> by <a href="http://twitter.com/robboclancy">Rob Clancy</a></li>
+<li><a href="http://crynobone.com/posts/3/laravel-4-in-shared-hosting">Laravel 4 in Shared Hosting</a> by <a href="https://twitter.com/crynobone">Mior Muhammad Zaki</a></li>
+<li><a href="http://forums.laravel.io/viewtopic.php?pid=10023#p10023">Understanding the Laravel PUBLIC folder</a> by <a href="https://twitter.com/ShawnMcCool">Shawn McCool</a></li>
+</ul>
+<h2>No DocumentRoot Access</h2>
+<p>The DocumentRoot is the folder to where your domain points to on your hosting. Laravel requires you to map your domain to the public folder so your application core stays out of access from the outside. But what if you couldn't map your domain to Laravel's public folder? Most shared hosting don't offer this option. There are a couple of ways to solve this, one better than the other.</p>
+<h3>1. Rename the public folder</h3>
+<p>One thing you could do, if your hosting allowed it is to upload the application to the webroot or a specific folder on your hosting and rename your public folder to the folder's name to which your shared hosting's DocumentRoot points to. Let's apply this to the folder structure for this tutorial.</p>
+<p>First we'll create a folder called <code>laravel</code> on our shared hosting and we'll upload our application structure to this folder.</p>
+<pre><code>config/
+laravel/
+    app/
+    bootstrap/
+    vendor/
+    ...
+logs/
+www/</code></pre>
+<p>After that we'll upload our public folder's content into the <code>www</code> folder.</p>
+<pre><code>config/
+laravel/
+    app/
+    bootstrap/
+    vendor/
+    ...
+logs/
+www/
+    packages/
+    .htaccess
+    index.php
+    ...</code></pre>
+<p>Now that we've relocated the public folder we should adjust the path structure in the <code>bootstrap/paths.php</code> file.</p>
+<pre><code class="language-php"># Change this...
+'public' =&gt; __DIR__.'/../public',
+
+# ... into this.
+'public' =&gt; __DIR__.'/../../www',</code></pre>
+<p>We should also change the paths in the <code>www/index.php</code> file to locate the new <code>laravel</code> folder.</p>
+<pre><code class="language-php"># These two lines should be changed...
+require __DIR__.'/../bootstrap/autoload.php';
+$app = require_once __DIR__.'/../bootstrap/start.php';
+
+# ... into these two lines.
+require __DIR__.'/../laravel/bootstrap/autoload.php';
+$app = require_once __DIR__.'/../laravel/bootstrap/start.php';</code></pre>
+<p>We've now correctly relocated our public folder and our Laravel application should work like a charm. You could also have uploaded the Laravel core into the base <code>/</code> directory but moving it in a separate folder keeps your folder structure clean.</p>
+<p>Another way could have been to symlink your public folder to the <code>www</code> folder but there's a small chance that you have access to this ability on a shared hosting.</p>
+<h3>2. Using .htaccess with mod_rewrite</h3>
+<p>Before we begin I'd like to mention that the following is highly discouraged. By moving everything into your DocumentRoot you expose your application to the outside which leaves you vulnerable to malicious attacks against your website. At this point you should seriously consider to switching to a different webhost which is more suited to host PHP frameworks like Laravel.</p>
+<p>That being said, I know first hand that sometimes you're stuck on a webhost because of client reasons, etc. In contrast to the previous method, we're going to upload the entire framework into the DocumentRoot folder. Again we're using the folder structure for this tutorial. We're going to use .htaccess to our benefit to redirect all th requests to the public folder.</p>
+<p>First, let's move the entire application into the <code>www</code> folder (the DocumentRoot).</p>
+<pre><code>config/
+logs/
+www/
+    app/
+    bootstrap/
+    public/
+        packages/
+        .htaccess
+        index.php
+        ...
+    vendor/
+    ...</code></pre>
+<p>Now inside your <code>www</code> folder, place the following <code>.htaccess</code> file.</p>
+<pre><code class="language-apache">&lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} !^public
+    RewriteRule ^(.*)$ public/$1 [L]
+&lt;/IfModule&gt;</code></pre>
+<p>This should redirect all the requests to your public folder. Requests to your public folder to, for example, asset files will still be accepted.</p>
+<h3>3. Move everything into the DocumentRoot</h3>
+<p>Just like the previous method we're moving the entire application into the DocumentRoot folder. But this time we're going to move the public folder's contents into the DocumentRoot as well.</p>
+<p>First, let's move the entire application into the <code>www</code> folder (the DocumentRoot).</p>
+<pre><code>config/
+logs/
+www/
+    app/
+    bootstrap/
+    public/
+        packages/
+        .htaccess
+        index.php
+        ...
+    vendor/
+    ...</code></pre>
+<p>Now move the contents of the public folder into the document root as well and remove the public folder.</p>
+<pre><code>config/
+logs/
+www/
+    app/
+    bootstrap/
+    packages/
+    vendor/
+    .htaccess
+    index.php
+    ...</code></pre>
+<p>We'll have to adjust the public folder path in the <code>bootstrap/paths.php</code> file.</p>
+<pre><code class="language-php"># Change this...
+'public' =&gt; __DIR__.'/../public',
+
+# ... into this.
+'public' =&gt; __DIR__.'/..',</code></pre>
+<p>And lastly we should also change the paths in the <code>index.php</code> file.</p>
+<pre><code class="language-php"># These two lines should be changed...
+require __DIR__.'/../bootstrap/autoload.php';
+$app = require_once __DIR__.'/../bootstrap/start.php';
+
+# ... into these two lines.
+require __DIR__.'/bootstrap/autoload.php';
+$app = require_once __DIR__.'/bootstrap/start.php';</code></pre>
+<p>Your Laravel application should now work.</p>
+<h2><strike>Downgrading To PHP 5.3.2</strike></h2>
+<p><strike>While Laravel 4 requires at least PHP 5.3.7 because of Bcrypt, there is a way to downgrade to PHP 5.3.2 if you're stuck with that. <a href="https://twitter.com/robboclancy">Rob Clancy</a> has written <a href="http://laravel.io/topic/39/laravel-4-easily-extended">a great tutorial</a> about this on how to downgrade to the absolute minimum PHP requirement.</strike></p>
+<p><strong>Update:</strong> Laravel 4.2 will require at least PHP 5.4 so you will always have to get webhost with at least these requirements.</p>
+<h2>No SSH Access</h2>
+<p>Most shared hosting don't offer version control support so your deployment options are limited to FTP mostly. This is obviously a bit of a hassle because deployment over FTP is highly discouraged. Which files were edited that should be uploaded? What if I accidentally overwrite some crucial data?</p>
+<p>Luckily there are some deployment tools out there which can help.</p>
+<ul>
+<li><a href="http://ftploy.com/">FTPloy</a></li>
+<li><a href="http://beanstalkapp.com/">Beanstalk</a></li>
+<li><a href="http://deployhq.com/">Deploy</a></li>
+<li><a href="http://wercker.com/">Wercker</a></li>
+<li><a href="http://dploy.io/">Dploy</a></li>
+<li><a href="https://www.codeship.io/">Codeship</a></li>
+</ul>
+<p>I'm obviously not going to list every single one out there but these should get you started.</p>
+<p>No SSH access also means no access to composer, artisan and other command line tools. Once again, FTP is probably your only friend. Should you choose not to use a deployment tool and rather just deploy over FTP, I recommend doing at least the following:</p>
+<p>Do a composer install with the <code>--no-dev</code> argument before uploading your files. This makes sure your dependencies are optimized for production without the unnecessary development packages. Overwrite your vendor folder with the updated dependencies when you upload through FTP.</p>
+<h2>Conclusion</h2>
+<p>I hope some of these tips helped you on getting Laravel 4 installed on your shared hosting. If you have more tips please share them in the comments and I'll add them to this article.</p>        ]]></content>
+</entry>
+    </feed>
