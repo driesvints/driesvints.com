@@ -76,17 +76,17 @@ Zsh is a powerful shell which features some great improvements over Bash like au
 
 ### Oh My, Wth Should I Use?
 
-Like the way you have frameworks for programming languages you also have frameworks for your shell. While a shell like Zsh is great, it's still difficult to configure it the way you like. A framework like [Oh-My-Zsh](http://ohmyz.sh/) can greatly help with this.
+Like the way you have package managers for programming languages (think Composer, NPM, ...) you also have plugin managers for your shell. While a shell like Zsh is great, it's still difficult to configure it the way you like. A plugin manager like [zplug](https://github.com/zplug/zplug) can greatly help with this by extending its base functionality.
 
-You have a few other Zsh frameworks like [Presto](https://github.com/sorin-ionescu/prezto) but in the end I decided to choose Oh-My-Zsh. Oh-My-Zsh is wildly adopted, has a strong community and a great range of features. A downside is that it's a bit slow (you'll notice when opening up a new shell window) but the features greatly compensate this.
+You have a other solutions with Zsh frameworks like [Presto](https://github.com/sorin-ionescu/prezto) and I used [Oh-My-Zsh](https://ohmyz.sh) for a long time but in the end I switched to zplug because of it's easy-to-use and simple setup.
 
-You can easily [install plugins](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview) for your shell like the git plugin which offers shortcuts and autocompletion for your git commands. Or easily [install themes](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes) to configure the look and feel of your shell. I've installed [the Taybalt theme](https://github.com/taylorotwell/shell/) from [Taylor Otwell](https://twitter.com/taylorotwell) together with the [Solarized Dark](https://github.com/altercation/solarized) color scheme in [iTerm2](https://www.iterm2.com/).
+You can easily [install plugins](https://github.com/zplug/zplug#usage) for your shell like the git plugin which offers shortcuts and autocomplete for your git commands. Or easily [install themes](https://github.com/zplug/zplug#example) to configure the look and feel of your shell. I've installed [the Minimal theme](https://github.com/subnixr/minimal) together with the [Solarized Light](https://github.com/altercation/solarized) color scheme in [Hyper](https://hyper.is).
 
-And when using Mackup your Oh-My-Zsh preferences automatically get synced across your devices. Neat!
+And when using Mackup your zplug preferences automatically get synced across your devices. Neat!
 
 ## The Install Procedure
 
-Now that I've shown you how I've set up my dotfiles let's take a look at how it all comes together when we try to re-install our Mac. I've written a step-by-step guide on how I can [install a fresh macOS setup](https://github.com/driesvints/dotfiles#a-fresh-os-x-setup) with my prefered settings and tools. Let me guide you through the steps.
+Now that I've shown you how I've set up my dotfiles let's take a look at how it all comes together when we try to re-install our Mac. I've written a step-by-step guide on how I can [install a fresh macOS setup](https://github.com/driesvints/dotfiles#a-fresh-os-x-setup) with my preferred settings and tools. Let me guide you through the steps.
 
 First of all we need to update to the latest version of macOS. We do this first so that we have the latest versions of all the tools available. After we've installed the latest version, install Xcode from the App store. We'll need this for the command line tools. After installing it, open it and accept the license agreement. This is necessary to use some of the command line tools. Now install the command line tools by running `xcode-select --install`. Ok, this was the part that probably took the most time. Let's proceed to the next part.
 
@@ -94,7 +94,7 @@ First, copy your SSH keys to your `~/.ssh` folder and make sure they have the co
 
 Before we run the setup, one more thing we need to do is append `/usr/local/bin/zsh` to our `/etc/shells` file. This will point to the Homebrew installed Zsh version. It doesn't matter for now that we haven't installed it yet but it's necessary before we can run the installer and set Zsh as our default shell.
 
-Now run the installer by running `./install.sh`. Homebrew will be installed and will start installing your apps and tools from your `Brewfile`. Zsh will be set as your default shell. Composer will be installed with your preferred global packages. Lastly, the `.macos` file will be read to set your preffered macOS settings. Note that this will close your shell because it resets some processes at the end of the file.
+Now run the installer by running `./install.sh`. Homebrew will be installed and will start installing your apps and tools from your `Brewfile`. Zsh will be set as your default shell. Composer will be installed with your preferred global packages. Lastly, the `.macos` file will be read to set your preferred macOS settings. Note that this will close your shell because it resets some processes at the end of the file.
 
 After the install script has been run we're going to restore your app preferences. First make sure Dropbox (or whatever synced storage you've chosen for Mackup) is set up and install your remaining apps from the App Store. Now run `mackup restore` to restore your app preferences.
 
