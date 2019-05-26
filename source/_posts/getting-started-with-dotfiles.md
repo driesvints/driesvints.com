@@ -76,13 +76,11 @@ Zsh is a powerful shell which features some great improvements over Bash like au
 
 ### Oh My, Wth Should I Use?
 
-Like the way you have package managers for programming languages (think Composer, NPM, ...) you also have plugin managers for your shell. While a shell like Zsh is great, it's still difficult to configure it the way you like. A plugin manager like [zplug](https://github.com/zplug/zplug) can greatly help with this by extending its base functionality.
+Like the way you have package managers for programming languages (think Composer, NPM, ...) you also have plugin managers for your shell. While a shell like Zsh is great, it's still difficult to configure it the way you like. A plugin manager like [Antibody](https://getantibody.github.io/) can greatly help with this by extending its base functionality.
 
-You have a other solutions with Zsh frameworks like [Presto](https://github.com/sorin-ionescu/prezto) and I used [Oh-My-Zsh](https://ohmyz.sh) for a long time but in the end I switched to zplug because of it's easy-to-use and simple setup.
+You have a other solutions with Zsh frameworks like [Presto](https://github.com/sorin-ionescu/prezto) and I used [Oh-My-Zsh](https://ohmyz.sh) for a long time but in the end I switched to Antibody because of it's easy-to-use and simple setup.
 
-You can easily [install plugins](https://github.com/zplug/zplug#usage) for your shell like the git plugin which offers shortcuts and autocomplete for your git commands. Or easily [install themes](https://github.com/zplug/zplug#example) to configure the look and feel of your shell. I've installed [the Minimal theme](https://github.com/subnixr/minimal) together with the [Solarized Light](https://github.com/altercation/solarized) color scheme in [Hyper](https://hyper.is).
-
-And when using Mackup your zplug preferences automatically get synced across your devices. Neat!
+You can easily [install plugins](https://getantibody.github.io/usage/) for your shell like the git plugin which offers shortcuts and autocomplete for your git commands or easily install themes to configure the look and feel of your shell. I've installed [the Minimal theme](https://github.com/subnixr/minimal) together with the [Solarized Light](https://github.com/altercation/solarized) color scheme in [Hyper](https://hyper.is).
 
 ## The Install Procedure
 
