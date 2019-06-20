@@ -1,0 +1,8 @@
+#content {
+    a {
+        @apply text-primary font-semibold;
+    }
+    a:hover {
+        @apply underline;
+    }
+}

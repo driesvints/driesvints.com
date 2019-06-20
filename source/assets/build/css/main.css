@@ -621,9 +621,20 @@ video {
   }
 }
 
+#content a {
+  color: #8065ee;
+  font-weight: 600;
+}
+
+#content a:hover {
+  text-decoration: underline;
+}
+
 #bio a {
   border-bottom-width: 1px;
   border-style: dotted;
+  color: #fff;
+  font-weight: 700;
 }
 
 #bio a:hover {

@@ -8,7 +8,7 @@
             <div class="max-w-6xl mx-auto text-white py-6 pb-24">
                 @include('_partials.social')
 
-                <div id="bio" class="sm:max-w-lg mx-auto text-shadow-lg font-semibold px-4 mt-16 md:mr-10 lg:mr-16">
+                <div id="bio" class="sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-10 lg:mr-16">
                     <h1 class="text-5xl text-center sm:text-left font-bold mb-4">
                         Hi, I'm Dries
                     </h1>
@@ -25,10 +25,27 @@
                     </p>
                 </div>
             </div>
-            <svg class="absolute z-0 left-0 bottom-0 block w-full h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg class="absolute z-0 left-0 bottom-0 block w-full h-8 sm:h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="#edf2f7" points="0,100 100,0 100,100"/>
             </svg>
         </div>
+    </div>
+
+    <div id="content" class="max-w-xl mx-auto px-6 py-10 sm:py-20">
+        <h2 class="text-4xl text-center sm:text-left font-bold sm:mb-10">Latest Posts</h2>
+
+        <p class="text-base text-center font-bold sm:float-right mt-4 sm:-mt-20 mb-8">
+            <a href="/blog">View All &raquo;</a>
+        </p>
+
+        @foreach($posts->take(5) as $post)
+            <span class="block italic text-sm uppercase text-gray-600">
+                {{ date('F j, Y', $post->date) }}
+            </span>
+            <p class="text-xl mb-8">
+                <a href="{{ $post->getPath() }}">{{ $post->title }}</a>
+            </p>
+        @endforeach
     </div>
 
 
@@ -91,20 +108,5 @@
                 <p class="mb-0 text-grey-darker">My preferred way to set up my Mac.</p>
             </div>
         </div>
-
-        <div class="text-center">
-            <h2>Latest Posts</h2>
-        </div>
-
-        @foreach($posts->take(5) as $post)
-            <span class="block italic text-sm">
-                {{ date('F j, Y', $post->date) }}
-            </span>
-            <p class="text-2xl">
-                <a href="{{ $post->getPath() }}">{{ $post->title }}</a>
-            </p>
-        @endforeach
-
-        <p class="text-center mt-8"><a href="/blog">View All &raquo;</a></p>
     </div>
 @endsection
