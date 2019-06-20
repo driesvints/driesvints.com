@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-gray-200">
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -26,8 +26,10 @@
 @include('_partials.google-analytics')
 @include('_partials.fbvideo')
 
-<div class="bg-gray-200 font-sans text-lg text-gray-800 leading-normal antialiased border-t-8 border-primary">
+<div class="font-sans text-lg text-gray-800 leading-normal antialiased border-t-8 border-primary">
     @yield('body')
 </div>
+
+@include('_layouts.footer')
 
 <script src="{{ mix('js/main.js', 'assets/build') }}"></script>

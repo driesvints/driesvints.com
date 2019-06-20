@@ -3,28 +3,12 @@
 ])
 
 @section('body')
-    <div id="header" class="relative bg-black bg-cover bg-no-repeat" style="min-height: 650px; background-image: url('/assets/images/header.jpg'); background-position: 20% 10%">
+    <div class="relative bg-black bg-cover bg-no-repeat" style="min-height: 650px; background-image: url('/assets/images/header.jpg'); background-position: 20% 10%">
         <div class="bg-black-opacity-75 md:bg-transparent" style="min-height: 650px;">
-            <div class="max-w-6xl mx-auto py-6 pb-24">
-                <ul class="text-center sm:text-right text-white text-2xl">
-                    <li class="inline-block">
-                        <a class="mr-10" href="https://twitter.com/driesvints">
-                            <i class="enlarge fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="inline-block">
-                        <a class="mr-10" href="https://github.com/driesvints">
-                            <i class="enlarge fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li class="inline-block">
-                        <a class="sm:mr-10" href="https://www.linkedin.com/in/driesvints">
-                            <i class="enlarge fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                </ul>
+            <div class="max-w-6xl mx-auto text-white py-6 pb-24">
+                @include('_partials.social')
 
-                <div id="bio" class="sm:max-w-lg mx-auto text-white text-shadow-lg font-semibold px-4 mt-16 md:mr-10 lg:mr-16">
+                <div id="bio" class="sm:max-w-lg mx-auto text-shadow-lg font-semibold px-4 mt-16 md:mr-10 lg:mr-16">
                     <h1 class="text-5xl text-center sm:text-left font-bold mb-4">
                         Hi, I'm Dries
                     </h1>
