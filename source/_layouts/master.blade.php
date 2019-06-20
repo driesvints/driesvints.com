@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-200">
+<html lang="en" class="bg-gray-100">
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -26,7 +26,7 @@
 @include('_partials.google-analytics')
 @include('_partials.fbvideo')
 
-<div class="font-sans text-lg text-gray-800 leading-normal antialiased border-t-8 border-primary">
+<div class="font-sans text-lg text-gray-800 leading-normal antialiased border-t-6 border-primary">
     @yield('body')
 </div>
 

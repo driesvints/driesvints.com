@@ -17,7 +17,8 @@
                         I'm a software engineer from Antwerp, Belgium and one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework.
                     </p>
 
-                    <p class="mb-4">My passions are open source, building communities, managing software teams and creating quality and maintainable products.
+                    <p class="mb-4">
+                        My passions are open source, building communities, managing software teams and creating quality and maintainable products.
                     </p>
 
                     <p>
@@ -26,86 +27,72 @@
                 </div>
             </div>
             <svg class="absolute z-0 left-0 bottom-0 block w-full h-8 sm:h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon fill="#edf2f7" points="0,100 100,0 100,100"/>
+                <polygon fill="#f7fafc" points="0,100 100,0 100,100"/>
             </svg>
         </div>
     </div>
 
-    <div id="content" class="max-w-xl mx-auto px-6 py-10 sm:py-20">
-        <h2 class="text-4xl text-center sm:text-left font-bold sm:mb-10">Latest Posts</h2>
+    <div id="content">
+        <div class="max-w-2xl mx-auto px-6 py-10 sm:py-20">
+            <h2 class="text-4xl text-center sm:text-left font-bold mb-4 sm:mb-12">Latest Posts</h2>
 
-        <p class="text-base text-center font-bold sm:float-right mt-4 sm:-mt-20 mb-8">
-            <a href="/blog">View All &raquo;</a>
-        </p>
-
-        @foreach($posts->take(5) as $post)
-            <span class="block italic text-sm uppercase text-gray-600">
-                {{ date('F j, Y', $post->date) }}
-            </span>
-            <p class="text-xl mb-8">
-                <a href="{{ $post->getPath() }}">{{ $post->title }}</a>
+            <p class="text-base text-center font-bold sm:float-right sm:-mt-20 mb-8">
+                <a href="/blog">View all &raquo;</a>
             </p>
-        @endforeach
-    </div>
 
-
-
-
-
-
-
-
-    <div class="max-w-md m-auto">
-
-        <h2 class="text-center mb-8">Projects</h2>
-
-        <div class="md:flex md:flex-row-reverse text-center md:text-left mb-8 md:mb-6">
-            <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
-                <a href="https://fullstackeurope.com">
-                    <img class="enlarge" style="max-width: 80%" src="/assets/images/fseu.png">
-                </a>
-            </div>
-            <div class="md:w-2/3">
-                <p class="text-2xl mb-0">
-                    <a href="https://fullstackeurope.com">Full Stack Europe</a>
+            @foreach($posts->take(5) as $post)
+                <span class="block text-xs uppercase text-gray-600">
+                    {{ date('F j, Y', $post->date) }}
+                </span>
+                <p class="text-xl mb-8">
+                    <a href="{{ $post->getPath() }}">{{ $post->title }}</a>
                 </p>
-                <p class="mb-0 text-grey-darker">A conference for every kind of developer.</p>
-            </div>
+            @endforeach
         </div>
-        <div class="md:flex md:flex-row-reverse text-center md:text-left mb-8 md:mb-6">
-            <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
-                <a href="https://fullstackbelgium.be">
-                    <img class="enlarge" style="max-width: 70px" src="/assets/images/fsbe.png">
-                </a>
-            </div>
-            <div class="md:w-2/3">
-                <p class="text-2xl mb-0">
-                    <a href="https://fullstackbelgium.be">Full Stack Belgium</a>
+
+        <div id="projects" class="bg-gray-200">
+            <div class="max-w-6xl mx-auto px-6 py-10 sm:py-20">
+                <h2 class="text-4xl text-center font-bold mb-10">Projects</h2>
+
+                <div class="md:flex mb-16">
+                    <div class="project sm:flex-1 px-4 lg:px-8 mb-16 md:mb-0">
+                        <a href="https://fullstackeurope.com" target="_blank">
+                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
+                                <div class="h-24 pt-5 mb-6">
+                                    <img src="/assets/images/fseu.png" class="inline-block max-h-full" alt="">
+                                </div>
+                                <p class="mb-6">A conference for every kind of developer</p>
+                                <p class="text-sm text-gray-600">fullstackeurope.com <i class="fas fa-external-link-alt"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project md:flex-1 px-4 lg:px-8 mb-16 md:mb-0">
+                        <a href="https://fullstackbelgium.be" target="_blank">
+                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
+                                <div class="h-24 mb-6">
+                                    <img src="/assets/images/fsbe.png" class="inline-block max-h-full" alt="">
+                                </div>
+                                <p class="mb-6">Meetups in Belgium for web developers</p>
+                                <p class="text-sm text-gray-600">fullstackbelgium.be <i class="fas fa-external-link-alt"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project md:flex-1 px-4 lg:px-8">
+                        <a href="https://laravel.io" target="_blank">
+                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
+                                <div class="h-24 pt-8 mb-6">
+                                    <img src="/assets/images/laravelio.png" class="inline-block max-h-full" style="max-width: 80%" alt="">
+                                </div>
+                                <p class="mb-6">The Laravel community platform</p>
+                                <p class="text-sm text-gray-600">laravel.io <i class="fas fa-external-link-alt"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="text-base text-gray-700 text-center">
+                    + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.
                 </p>
-                <p class="mb-0 text-grey-darker">Meetups in Belgium for web developers.</p>
-            </div>
-        </div>
-        <div class="md:flex md:flex-row-reverse text-center md:text-left mb-8 md:mb-6">
-            <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
-                <a href="https://laravel.io">
-                    <img class="enlarge" style="max-width: 80%" src="/assets/images/laravelio.png">
-                </a>
-            </div>
-            <div class="md:w-2/3">
-                <p class="text-2xl mb-0">
-                    <a href="https://laravel.io">Laravel.io</a>
-                </p>
-                <p class="mb-0 text-grey-darker">The Laravel community platform.</p>
-            </div>
-        </div>
-        <div class="md:flex md:flex-row-reverse text-center md:text-left mb-8 md:mb-6">
-            <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
-            </div>
-            <div class="md:w-2/3">
-                <p class="text-2xl mb-0">
-                    <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>
-                </p>
-                <p class="mb-0 text-grey-darker">My preferred way to set up my Mac.</p>
             </div>
         </div>
     </div>

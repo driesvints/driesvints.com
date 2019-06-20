@@ -3,6 +3,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   theme: {
     extend: {
+      borderWidth: {
+        '6': '6px',
+      },
       colors: {
         primary: '#8065ee'
       },

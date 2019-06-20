@@ -10,8 +10,13 @@
         </a>
     </li>
     <li class="inline-block">
-        <a class="sm:mr-10" href="https://www.linkedin.com/in/driesvints">
+        <a class="mr-10" href="https://www.linkedin.com/in/driesvints">
             <i class="enlarge fab fa-linkedin-in"></i>
+        </a>
+    </li>
+    <li class="inline-block">
+        <a class="sm:mr-10" href="/blog">
+            <i class="enlarge fas fa-rss"></i>
         </a>
     </li>
 </ul>

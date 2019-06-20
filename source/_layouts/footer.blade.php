@@ -2,7 +2,7 @@
     <div class="max-w-6xl mx-auto text-sm text-gray-500 sm:flex px-6 py-8">
         <div class="sm:flex-1 text-center sm:text-left mb-8 sm:mb-0">
             <a href="/">
-                <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=180" width="90" class="rounded-full enlarge inline-block mb-4 sm:mb-0 sm:mr-4">
+                <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=180" width="90" class="rounded-full enlarge inline-block mb-4 sm:mb-0 sm:mr-4" alt="">
             </a>
             <br class="sm:hidden">
             &copy; Dries Vints
