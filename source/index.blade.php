@@ -10,7 +10,7 @@
                     @include('_partials.social')
                 </div>
 
-                <div id="bio" class="sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-10 lg:mr-16">
+                <div id="bio" class="sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-12 md:mr-10 lg:mr-16">
                     <h1 class="text-5xl text-center sm:text-left font-bold mb-4">
                         Hi, I'm Dries
                     </h1>
@@ -20,11 +20,15 @@
                     </p>
 
                     <p class="mb-4">
-                        My passions are open source, building communities, managing software teams, and creating quality and maintainable products.
+                        My passions are <a href="https://github.com/driesvints">open source</a>, building communities, managing software teams, and creating quality and maintainable products.
+                    </p>
+
+                    <p class="mb-4">
+                        I also organize meetups for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. And I'm the co-organizer of <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer.
                     </p>
 
                     <p>
-                        I also organize meetups for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. And I'm the co-organizer of <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer.
+                        Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>
                     </p>
                 </div>
             </div>
