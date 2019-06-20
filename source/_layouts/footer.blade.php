@@ -7,7 +7,7 @@
             <br class="sm:hidden">
             &copy; Dries Vints
         </div>
-        <div class="sm:flex-1 sm:pt-6">
+        <div class="sm:flex-1 sm:pt-6 text-center sm:text-right">
             @include('_partials.social')
         </div>
     </div>

@@ -3,8 +3,6 @@
 ])
 
 @section('body')
-    @include('_partials.navigation')
-
     <div class="text-center mb-12">
         <h1 class="mb-4">{{ $page->title }}</h1>
         <p class="italic text-sm">

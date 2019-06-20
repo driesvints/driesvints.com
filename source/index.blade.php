@@ -6,7 +6,9 @@
     <div class="relative bg-black bg-cover bg-no-repeat" style="min-height: 650px; background-image: url('/assets/images/header.jpg'); background-position: 20% 10%">
         <div class="bg-black-opacity-75 md:bg-transparent" style="min-height: 650px;">
             <div class="max-w-6xl mx-auto text-white py-6 pb-24">
-                @include('_partials.social')
+                <div class="text-center sm:text-right">
+                    @include('_partials.social')
+                </div>
 
                 <div id="bio" class="sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-10 lg:mr-16">
                     <h1 class="text-5xl text-center sm:text-left font-bold mb-4">
@@ -18,7 +20,7 @@
                     </p>
 
                     <p class="mb-4">
-                        My passions are open source, building communities, managing software teams and creating quality and maintainable products.
+                        My passions are open source, building communities, managing software teams, and creating quality and maintainable products.
                     </p>
 
                     <p>
@@ -44,7 +46,7 @@
                 <span class="block text-xs uppercase text-gray-600">
                     {{ date('F j, Y', $post->date) }}
                 </span>
-                <p class="text-xl mb-8">
+                <p class="text-2xl mb-8">
                     <a href="{{ $post->getPath() }}">{{ $post->title }}</a>
                 </p>
             @endforeach
