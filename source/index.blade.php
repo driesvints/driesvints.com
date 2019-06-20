@@ -1,31 +1,60 @@
 @extends('_layouts.master', [
-    'metaDescription' => 'I work for Laravel, maintain Laravel.io and organise Full Stack Belgium and Full Stack Europe.',
+    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel and organise Full Stack Belgium and Full Stack Europe.',
 ])
 
 @section('body')
+    <div id="header" class="relative bg-black bg-cover bg-no-repeat" style="min-height: 650px; background-image: url('/assets/images/header.jpg'); background-position: 20% 10%">
+        <div class="bg-black-opacity-75 md:bg-transparent" style="min-height: 650px;">
+            <div class="max-w-6xl mx-auto py-6 pb-24">
+                <ul class="text-center sm:text-right text-white text-2xl">
+                    <li class="inline-block">
+                        <a class="mr-10" href="https://twitter.com/driesvints">
+                            <i class="enlarge fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="inline-block">
+                        <a class="mr-10" href="https://github.com/driesvints">
+                            <i class="enlarge fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="inline-block">
+                        <a class="sm:mr-10" href="https://www.linkedin.com/in/driesvints">
+                            <i class="enlarge fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="bio" class="sm:max-w-lg mx-auto text-white text-shadow-lg font-semibold px-4 mt-16 md:mr-10 lg:mr-16">
+                    <h1 class="text-5xl text-center sm:text-left font-bold mb-4">
+                        Hi, I'm Dries
+                    </h1>
+
+                    <p class="mb-4">
+                        I'm a software engineer from Antwerp, Belgium and one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework.
+                    </p>
+
+                    <p class="mb-4">My passions are open source, building communities, managing software teams and creating quality and maintainable products.
+                    </p>
+
+                    <p>
+                        I also organize meetups for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. And I'm the co-organizer of <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer.
+                    </p>
+                </div>
+            </div>
+            <svg class="absolute z-0 left-0 bottom-0 block w-full h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon fill="#edf2f7" points="0,100 100,0 100,100"/>
+            </svg>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
     <div class="max-w-md m-auto">
-        <div class="text-center mb-4">
-            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=240" width="120" class="rounded-full inline-block">
-        </div>
-
-        <div class="text-center">
-            <h1>Dries Vints</h1>
-        </div>
-
-        <p>Hey, I'm <a href="https://twitter.com/driesvints">@driesvints</a>, a software engineer from Antwerp, Belgium. I currently work for <a href="https://laravel.com">Laravel</a>, the PHP Framework for Web Artisans.</p>
-
-        <p>I also co-organize <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer coming to Antwerp in October 2019.</p>
-
-        <p class="mb-8">And in Belgium I co-organize <a href="https://fullstackbelgium.be">Full Stack Belgium</a> meetups for web developers in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a>, <a href="https://meetup.com/fullstackghent">Ghent</a> and <a href="https://meetup.com/fullstackbrussels">Brussels</a>.</p>
-
-        <p class="text-3xl text-center mb-12">
-            <a class="mr-4" href="https://twitter.com/driesvints"><i class="enlarge fab fa-twitter"></i></a>
-            <a class="mr-4" href="https://github.com/driesvints"><i class="enlarge fab fa-github"></i></a>
-            <a class="mr-4" href="https://medium.com/@driesvints"><i class="enlarge fab fa-medium-m"></i></a>
-            <a class="mr-4" href="https://www.linkedin.com/in/driesvints"><i class="enlarge fab fa-linkedin-in"></i></a>
-            <a class="mr-4" href="/blog/feed.atom"><i class="enlarge fas fa-rss"></i></a>
-            <a href="mailto:dries.vints@gmail.com"><i class="enlarge fas fa-paper-plane"></i></a>
-        </p>
 
         <h2 class="text-center mb-8">Projects</h2>
 

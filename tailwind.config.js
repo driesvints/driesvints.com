@@ -1,0 +1,30 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#8065ee'
+      },
+      fontFamily: {
+        sans: [
+          'Muli',
+          ...defaultTheme.fontFamily.sans,
+        ]
+      },
+    },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      'black-opacity-75': 'rgba(0, 0, 0, 0.6)',
+    }),
+    textShadow: {
+      'default': '0 2px 5px rgba(0, 0, 0, 0.5)',
+      'lg': '0 2px 10px rgba(0, 0, 0, 0.5)',
+      'none': 'none',
+    },
+  },
+  variants: {
+    textShadow: ['responsive'],
+  },
+  plugins: [],
+}

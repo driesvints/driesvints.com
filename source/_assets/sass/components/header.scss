@@ -1,0 +1,8 @@
+#bio {
+    a {
+        @apply border-b border-dotted;
+    }
+    a:hover {
+        @apply text-gray-400;
+    }
+}

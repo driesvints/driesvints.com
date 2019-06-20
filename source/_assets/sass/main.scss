@@ -1,86 +1,10 @@
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- */
-@tailwind preflight;
+@tailwind base;
 
-/**
- * This injects any component classes registered by plugins.
- */
 @tailwind components;
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
+@import "components/header";
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- */
 @tailwind utilities;
 
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */
-
 @import "utilities/animations";
-
-@import "~highlightjs/styles/googlecode.css";
-
-a {
-    @apply text-theme-blue font-semibold;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    @apply text-grey-darkest leading-tight italic;
-}
-h1 {
-    @apply mb-6;
-}
-h2, h3, h4, h5, h6 {
-    @apply my-4;
-}
-h2 {
-    @apply mt-8;
-}
-
-p {
-    @apply mb-4;
-}
-p code {
-    @apply font-mono bg-grey-lighter font-semibold text-base p-1;
-}
-
-.post img {
-    @apply shadow-lg my-4;
-}
-.post img.shadow-none {
-    @apply shadow-none;
-}
-
-pre {
-    @apply border bg-white rounded px-2 py-1 mb-4;
-}
-pre code {
-    @apply font-mono text-sm;
-}
+@import "utilities/text-shadow";
