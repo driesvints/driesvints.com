@@ -3,40 +3,27 @@
 ])
 
 @section('body')
-    <div class="relative bg-black bg-cover bg-no-repeat" style="min-height: 650px; background-image: url('/assets/images/header.jpg'); background-position: 20% 10%">
-        <div class="bg-black-opacity-75 md:bg-transparent" style="min-height: 650px;">
-            <div class="max-w-6xl mx-auto text-white py-6 pb-24">
-                <div class="text-center sm:text-right">
-                    @include('_partials.social')
-                </div>
+    @component('_components.header')
+        <h1 class="text-5xl text-center sm:text-left font-bold mb-4">
+            Hi, I'm Dries
+        </h1>
 
-                <div id="bio" class="sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-12 md:mr-10 lg:mr-16">
-                    <h1 class="text-5xl text-center sm:text-left font-bold mb-4">
-                        Hi, I'm Dries
-                    </h1>
+        <p class="mb-4">
+            I'm a software engineer from Antwerp, Belgium and one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework.
+        </p>
 
-                    <p class="mb-4">
-                        I'm a software engineer from Antwerp, Belgium and one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework.
-                    </p>
+        <p class="mb-4">
+            My passions are <a href="https://github.com/driesvints">open source</a>, building communities, managing software teams, and creating quality and maintainable products.
+        </p>
 
-                    <p class="mb-4">
-                        My passions are <a href="https://github.com/driesvints">open source</a>, building communities, managing software teams, and creating quality and maintainable products.
-                    </p>
+        <p class="mb-4">
+            I also organize meetups for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. And I'm the co-organizer of <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer.
+        </p>
 
-                    <p class="mb-4">
-                        I also organize meetups for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. And I'm the co-organizer of <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer.
-                    </p>
-
-                    <p>
-                        Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>
-                    </p>
-                </div>
-            </div>
-            <svg class="absolute z-0 left-0 bottom-0 block w-full h-8 sm:h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon fill="#f7fafc" points="0,100 100,0 100,100"/>
-            </svg>
-        </div>
-    </div>
+        <p>
+            Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>
+        </p>
+    @endcomponent
 
     <div id="content">
         <div class="max-w-2xl mx-auto px-6 py-10 sm:py-20">

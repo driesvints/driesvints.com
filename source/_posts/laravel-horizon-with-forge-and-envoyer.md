@@ -76,9 +76,14 @@ On Envoyer we need to define a new hook. The `horizon:purge` command will purge 
 
 Set up the deployment hook **after** the “Activate New Release” action. This will make sure the command is run after we activate the new app release.
 
-![Add the hook **after** the “Activate New Release” action.](/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png)
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png" alt="">
+    <span>Add the hook after the "Activate New Release"</span>
+</p>
 
-![](/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png)
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png" alt="">
+</p>
 
 If you’re managing your environment variables with Envoyer make sure you set your `QUEUE_CONNECTION` env variable to `redis`.
 
@@ -98,7 +103,9 @@ php /home/forge/<site>/current/artisan schedule:run
 
 After setting up the scheduler we only need to add the daemon to make sure the Horizon command is started and re-started every time we deploy and terminate it. Go to your server and the “Daemons” menu item. Add a deamon with the `php artisan horizon` command to run in the `/home/forge/<site>/current` directory. After you’ve added this command, the daemon will enable the horizon command and you should be able to visit horizon at `https://site.com/horizon` and see the status below.
 
-![](/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png)
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png" alt="">
+</p>
 
 Don't forget that you need to be authenticated with the rules you defined in the gate method in your `App\Provider\HorizonServiceProvider` class.
 

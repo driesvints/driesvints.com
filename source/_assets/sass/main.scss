@@ -4,9 +4,12 @@
 
 @import "components/content";
 @import "components/header";
+@import "components/posts";
 @import "components/projects";
 
 @tailwind utilities;
+
+@import "~highlightjs/styles/googlecode.css";
 
 @import "utilities/animations";
 @import "utilities/text-shadow";

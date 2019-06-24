@@ -5,7 +5,10 @@ title: One Club Player
 date: 2017-05-29
 fbvideo: true
 ---
-![Source: The Indian Express](/assets/images/posts/one-club-player.jpeg)
+<p class="image">
+    <img src="/assets/images/posts/one-club-player.jpeg" alt="">
+    <span>Source: The Indian Express</small>
+</p>
 
 It saddens me to see a legendary player like Francesco Totti calling it quits. Men of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Andrés Iniesta, Carles Puyol are a bunch who know what it’s like to dedicated their lives to their club.
 

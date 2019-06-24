@@ -4,7 +4,10 @@ section: content
 title: Dennis Ritchie
 date: 2017-06-25
 ---
-![Dennis Ritchie and Ken Thompson](/assets/images/posts/dennis-ritchie.jpeg)
+<p class="image">
+    <img src="/assets/images/posts/dennis-ritchie.jpeg" alt="Dennis Ritchie and Ken Thompson">
+    <span>Dennis Ritchie and Ken Thompson</span>
+</p>
 
 *This is a re-publish of an article I wrote back in October 2011 after Steve and Dennis’ deaths. Small disclosure: it was written in a time when I was just starting out with programming and I did not knew **Rasmus**, **Andi** or **Zeev** yet.*
 

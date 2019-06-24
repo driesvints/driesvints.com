@@ -27,7 +27,7 @@
 @include('_partials.google-analytics')
 @include('_partials.fbvideo')
 
-<div class="font-sans text-lg text-gray-800 leading-normal antialiased border-t-6 border-primary">
+<div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
     @yield('body')
 </div>
 

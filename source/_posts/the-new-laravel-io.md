@@ -4,7 +4,10 @@ section: content
 title: The New Laravel.io
 date: 2017-07-03
 ---
-![The redesigned homepage](/assets/images/posts/the-new-laravel-io.png)
+<p class="image">
+    <img src="/assets/images/posts/the-new-laravel-io.png" alt="The redesigned homepage">
+    <span>The redesigned homepage</span>
+</p>
 
 It’s been almost three years since I wrote [this blog post](https://driesvints.com/blog/laravel-io-the-road-ahead/). And truth be told, it has been one heck of a ride. The last three years have been a mixture of sporadic working on the platform and thinking of cool new features while battling spam and the urge to throw in the towel. And I came very close to doing just that.
 

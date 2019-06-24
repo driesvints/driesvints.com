@@ -1,10 +1,5 @@
 <ul class="text-2xl">
     <li class="inline-block mr-6 sm:mr-10">
-        <a href="/">
-            <i class="enlarge fas fa-globe-europe"></i>
-        </a>
-    </li>
-    <li class="inline-block mr-6 sm:mr-10">
         <a href="/blog">
             <i class="enlarge fas fa-rss"></i>
         </a>
