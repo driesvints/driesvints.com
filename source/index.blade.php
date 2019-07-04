@@ -1,28 +1,22 @@
 @extends('_layouts.master', [
-    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel and organise Full Stack Belgium and Full Stack Europe.',
+    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel, organise meetups for Full Stack Belgium and organise the Full Stack Europe conference.',
 ])
 
 @section('body')
     @component('_components.header')
-        <h1 class="text-5xl text-center sm:text-left font-bold mb-4">
-            Hi, I'm Dries
-        </h1>
+        <div class="text-center sm:text-left">
+            <h1 class="text-5xl font-bold mb-6">
+                Hi, I'm Dries
+            </h1>
 
-        <p class="mb-4">
-            I'm a software engineer from Antwerp, Belgium and one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework.
-        </p>
+            <p class="text-2xl sm:text-3xl leading-snug mb-8">
+                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium">meetup</a> & <a href="https://fullstackeurope.com">conference</a> organiser, open-source <a href="https://laravel.io">maintainer</a>, speaker, and <a href="/blog">blogger</a>.
+            </p>
 
-        <p class="mb-4">
-            My passions are <a href="https://github.com/driesvints">open source</a>, building communities, managing software teams, and creating quality and maintainable products.
-        </p>
-
-        <p class="mb-4">
-            I also organize meetups for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. And I'm the co-organizer of <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer.
-        </p>
-
-        <p>
-            Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>
-        </p>
+            <a href="/#about">
+                More about me &rightarrow;
+            </a>
+        </div>
     @endcomponent
 
     <div id="content">
@@ -88,5 +82,25 @@
                 </p>
             </div>
         </div>
+    </div>
+
+    <div id="about" class="max-w-2xl mx-auto px-6 py-10 sm:py-20">
+        <h2 class="text-4xl text-center font-bold mb-10">About Me</h2>
+
+        <p class="mb-4">
+            I'm a software engineer from Antwerp, Belgium. I work as one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework.
+        </p>
+
+        <p class="mb-4">
+            My passions are <a href="https://github.com/driesvints">open source</a>, building communities, managing software teams, and creating quality and maintainable products.
+        </p>
+
+        <p class="mb-4">
+            I organize meetups for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. I'm also the co-organizer of <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer.
+        </p>
+
+        <p>
+            Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>
+        </p>
     </div>
 @endsection

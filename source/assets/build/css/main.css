@@ -710,11 +710,13 @@ video {
   }
 }
 
+#about a,
 #content a {
   color: #8065ee;
   font-weight: 600;
 }
 
+#about a:hover,
 #content a:hover {
   text-decoration: underline;
 }
