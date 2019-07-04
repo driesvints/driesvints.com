@@ -3,7 +3,7 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2019-06-18T20:23:05+00:00</updated>
+    <updated>2019-07-04T22:54:08+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[
         <p>A lot of people might wonder what it is to maintain a big open-source project like Laravel and all of its open-source libraries. In this video I'll take you through my daily routine of handling issues and also give you a few tips when posting issues. After the video you'll have a better understanding on what's involved in the process and how time consuming it can be.</p>
 <p>There's quite a long intro at the beginning so if you immediately want to start watching at the point when I start handling issues tune in here: <a href="https://youtu.be/a8xAxLzIFs8?t=767">https://youtu.be/a8xAxLzIFs8?t=767</a> (at 12:47)</p>
-<div class="mt-6">
+<div class="video mt-6">
     <iframe width="560" height="315" class="max-w-full" src="https://www.youtube.com/embed/a8xAxLzIFs8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>        ]]></content>
 </entry>
@@ -60,8 +60,8 @@
 
 The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over 800 members on our meetup.com page. We’ve seen our meetups grow to over 40 regular attendees for each meetup. We’ve......</summary>
     <content type="html"><![CDATA[
-        <p class="text-center">
-    <img class="shadow-none max-w-sm" src="/assets/images/posts/hi-there-full-stack-antwerp.png">
+        <p class="image">
+    <img class="sm:max-w-sm shadow-none" src="/assets/images/posts/hi-there-full-stack-antwerp.png">
 </p>
 <p>The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over <strong>800 members</strong> on <a href="https://www.meetup.com/phpantwerp/">our meetup.com page</a>. We’ve seen our meetups grow to <strong>over 40 regular attendees</strong> for each meetup. We’ve <strong>organized 28 meetups</strong> and <strong>hosted more than 50 speakers</strong>. It’s amazing to see to how the user group has evolved.</p>
 <p>As a PHP user group we have a strong connection to the broader PHP community here in Belgium and beyond. We’re very happy to be part of 6 dedicated user groups in Belgium who are putting their time and effort into hosting their meetups and we’re glad to call each and one of them our friends.</p>
@@ -146,8 +146,13 @@ protected function schedule(Schedule $schedule)
 <h2>Envoyer</h2>
 <p>On Envoyer we need to define a new hook. The <code>horizon:purge</code> command will purge any orphan processes. The <code>horizon:terminate</code> command will finish any left over jobs and terminate the Horizon process. The daemon which we’ll set up later will make sure that the command is always restarted after we terminate it.</p>
 <p>Set up the deployment hook <strong>after</strong> the “Activate New Release” action. This will make sure the command is run after we activate the new app release.</p>
-<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png" alt="Add the hook **after** the “Activate New Release” action." /></p>
-<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png" alt="" /></p>
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png" alt="">
+    <span>Add the hook after the "Activate New Release"</span>
+</p>
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png" alt="">
+</p>
 <p>If you’re managing your environment variables with Envoyer make sure you set your <code>QUEUE_CONNECTION</code> env variable to <code>redis</code>.</p>
 <p>You can now deploy the code we added before. Make sure the deploy finished before proceeding to the next step.</p>
 <h2>Forge</h2>
@@ -156,7 +161,9 @@ protected function schedule(Schedule $schedule)
 <pre><code class="language-bash">php /home/forge/&lt;site&gt;/current/artisan schedule:run</code></pre>
 <h3>Daemon</h3>
 <p>After setting up the scheduler we only need to add the daemon to make sure the Horizon command is started and re-started every time we deploy and terminate it. Go to your server and the “Daemons” menu item. Add a deamon with the <code>php artisan horizon</code> command to run in the <code>/home/forge/&lt;site&gt;/current</code> directory. After you’ve added this command, the daemon will enable the horizon command and you should be able to visit horizon at <code>https://site.com/horizon</code> and see the status below.</p>
-<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png" alt="" /></p>
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png" alt="">
+</p>
 <p>Don't forget that you need to be authenticated with the rules you defined in the gate method in your <code>App\Provider\HorizonServiceProvider</code> class.</p>
 <h2>Conclusion</h2>
 <p>This should be all that you need to get started with Horizon. Don’t forget that you don’t need to define queues through Forge as Horizon completely takes this over. You only need to change your <code>horizon.php</code> config file and Horizon will apply the changes on the next deploy.</p>        ]]></content>
@@ -240,9 +247,15 @@ A couple of years ago after the announcement that Disney would be taking over Lu
         <name>Dries Vints</name>
     </author>
     <summary type="html">
-It’s been almost three years since I wrote this blog post. And truth be told, it has been one heck of a ride. The last three years have been a mixture of sporadic working on the platform and thinking of cool new features while battling spam and the......</summary>
+    
+    The redesigned homepage
+
+It’s been almost three years since I wrote this blog post. And truth be told, it has been one heck of a ride. The last three years have been a mixture of sporadic working on the platform and thinking of cool new......</summary>
     <content type="html"><![CDATA[
-        <p><img src="/assets/images/posts/the-new-laravel-io.png" alt="The redesigned homepage" /></p>
+        <p class="image">
+    <img src="/assets/images/posts/the-new-laravel-io.png" alt="The redesigned homepage">
+    <span>The redesigned homepage</span>
+</p>
 <p>It’s been almost three years since I wrote <a href="https://driesvints.com/blog/laravel-io-the-road-ahead/">this blog post</a>. And truth be told, it has been one heck of a ride. The last three years have been a mixture of sporadic working on the platform and thinking of cool new features while battling spam and the urge to throw in the towel. And I came very close to doing just that.</p>
 <p>I started off by improving <a href="https://github.com/laravelio/portal/tree/51705ac06e86b8b2eaf566e1d6bf01636bcd00f3">the original source code</a>. While the source definitely wasn’t bad, it proved to be quite the undertaking to improve code which wasn’t my own. If this was to be a contracted job I probably would have made the best out of it and improved it gradually and as best as I could. But this was a project I had full control over and I had time. If I were to maintain this myself it would be best if I knew the source code by heart. So after a few months, I decided to throw out all of the existing code and rewrite from scratch.</p>
 <p>At the same time in my first year at Laravel.io I had another challenge I was facing: spam. Lots and lots of spam. It seemed like every other day another flood of spam accounts and bots overwhelmed the forum and pastebin, causing all kinds of problems. A flood of advertisement, downtime for both the platform and pastebin (which was one app back then) and endless evenings of cleaning the forum, database tables and banning accounts. I started implementing anti spam measures and believe me when I say that I’ve literally tried every trick in the book. From <a href="https://en.wikipedia.org/wiki/Honeypot_%28computing%29">Honeypot</a> to <a href="https://www.google.com/recaptcha/intro/">Recaptcha</a> and <a href="https://akismet.com/">Akismet</a>, you name it. Nothing worked, the spam continued. Some measures proved to hold the spam back a bit but it kept coming. I really should write a blog post one day about it or write a package for easier anti-spam measures but to be honest, even after all this time, I rather just forget about it. I’m still removing spam on Laravel.io on almost a daily basis.</p>
@@ -265,10 +278,15 @@ It’s been almost three years since I wrote this blog post. And truth be told, 
         <name>Dries Vints</name>
     </author>
     <summary type="html">
-This is a re-publish of an article I wrote back in October 2011 after Steve and Dennis’ deaths. Small disclosure: it was written in a time when I was just starting out with programming and I did not knew Rasmus, Andi or Zeev yet.
-It’s safe to say......</summary>
+    
+    Dennis Ritchie and Ken Thompson
+
+This is a re-publish of an article I wrote back in October 2011 after Steve and Dennis’ deaths. Small disclosure: it was written in a time when I was just starting out with programming and I did not knew......</summary>
     <content type="html"><![CDATA[
-        <p><img src="/assets/images/posts/dennis-ritchie.jpeg" alt="Dennis Ritchie and Ken Thompson" /></p>
+        <p class="image">
+    <img src="/assets/images/posts/dennis-ritchie.jpeg" alt="Dennis Ritchie and Ken Thompson">
+    <span>Dennis Ritchie and Ken Thompson</span>
+</p>
 <p><em>This is a re-publish of an article I wrote back in October 2011 after Steve and Dennis’ deaths. Small disclosure: it was written in a time when I was just starting out with programming and I did not knew <strong>Rasmus</strong>, <strong>Andi</strong> or <strong>Zeev</strong> yet.</em></p>
 <p>It’s safe to say that with <a href="http://mashable.com/2011/10/05/breaking-steve-jobs-has-died">the death of Steve Jobs</a> the world has lost an icon, a visionary and a beloved human being. I don’t think I’ve ever saw such a wave of response on the death of a famous person. It’s all normal though. I mean, he lived an amazing life, inspiring lots of people and developing products which changed the world we live in today. For some, Steve was more than just the CEO of Apple.</p>
 <p>Still, it strikes me that while one visionary dies, others are hardly mentioned. People who did evenly great things but behind the scenes. People like <strong>Dennis Ritchie</strong>. Doesn’t ring a bell? No worries, I did not knew him either.</p>
@@ -292,17 +310,23 @@ It’s safe to say......</summary>
         <name>Dries Vints</name>
     </author>
     <summary type="html">
-It saddens me to see a legendary player like Francesco Totti calling it quits. Men of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Andrés Iniesta, Carles Puyol are a bunch who know......</summary>
+    
+    Source: The Indian Express
+
+It saddens me to see a legendary player like Francesco Totti calling it quits. Players of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Paul......</summary>
     <content type="html"><![CDATA[
-        <p><img src="/assets/images/posts/one-club-player.jpeg" alt="Source: The Indian Express" /></p>
-<p>It saddens me to see a legendary player like Francesco Totti calling it quits. Men of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Andrés Iniesta, Carles Puyol are a bunch who know what it’s like to dedicated their lives to their club.</p>
+        <p class="image">
+    <img src="/assets/images/posts/one-club-player.jpeg" alt="">
+    <span>Source: The Indian Express
+</span></p>
+<p>It saddens me to see a legendary player like Francesco Totti calling it quits. Players of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Paul Scholes, Carles Puyol are a bunch who know what it’s like to dedicated their lives to their club.</p>
 <p>Not even the likes of Lampard and Terry come close to them. These are exceptional players who wouldn’t even dream of playing for other teams. True love for their club.</p>
 <p>It’s sad to see that this is becoming a rare feat. I’ve seen more and more cases over the years where players choose for the money and join rival clubs, forsaking their previous fans and club. Here in Belgium it’s becoming an increasing thing.</p>
 <p>It gives me much comfort when I see players like Diego Costa, even though I’m not a fan, say that there’s only one club he wants a transfer to and that it’ll be Atlético. That’s club love. That’s love for the fans. For the game.</p>
 <p>There’s a trait in FIFA which is titled “One Club Player”. It’s extremely rare to find a player in the game with said trait but Totti is one of them. I wonder how long the trait will last and stay in the game.</p>
 <p>I’ll miss Totti, not only as a player but as a charismatic person. Someone with the heart in the right place. A true hero of the people. A legend.</p>
 <p>Arrivederci, Francesco</p>
-<div class="fb-video" data-href="https://www.facebook.com/officialasroma/videos/1399428543451289/" data-show-text="false">
+<div class="video fb-video" data-href="https://www.facebook.com/officialasroma/videos/1399428543451289/" data-show-text="false">
     <blockquote cite="https://www.facebook.com/officialasroma/videos/1399428543451289/" class="fb-xfbml-parse-ignore">
         <a href="https://www.facebook.com/officialasroma/videos/1399428543451289/">Stadium of Tears</a>
         <p>When Francesco Totti cries, we all cry.</p>
@@ -339,14 +363,10 @@ It saddens me to see a legendary player like Francesco Totti calling it quits. M
     <author>
         <name>Dries Vints</name>
     </author>
-    <summary type="html">
-This optimization has since made it into the core of the framework. 
-
+    <summary type="html">Update: this optimization has since made it into the core of the framework.
 I&#039;ve seen two different tips for speeding up your tests in Laravel in the past week and thought I&#039;d share them with you. For me, they made a significant impact on the speed of my......</summary>
     <content type="html"><![CDATA[
-        <blockquote>
-<p>This optimization has since <a href="https://github.com/laravel/laravel/blob/6806aaa3568382e9c8c7281a64b82a52b824e46f/phpunit.xml#L27">made it into the core</a> of the framework. </p>
-</blockquote>
+        <p><strong>Update: this optimization has since <a href="https://github.com/laravel/laravel/blob/6806aaa3568382e9c8c7281a64b82a52b824e46f/phpunit.xml#L27">made it into the core</a> of the framework.</strong></p>
 <p>I've seen two different tips for speeding up your tests in Laravel in the past week and thought I'd share them with you. For me, they made a significant impact on the speed of my tests.</p>
 <h2>Lower the default crypt cost factor</h2>
 <p>This is a huge time saver. <a href="https://twitter.com/codebyjeff">Jeff Madsen</a> recently showed us a tip in one of his <a href="http://codebyjeff.com/newsletter">Laravel Quick Tips newsletter</a> which speeds up your tests by lowering the default crypt cost factor.</p>
@@ -354,6 +374,7 @@ I&#039;ve seen two different tips for speeding up your tests in Laravel in the p
 <p>Ordinarily when you need to do a lot of testing with an object that can take a non-trivial amount of time to create, you just mock it. For example - creating a user is not just a matter of writing to databse, but it also has a relatively expensive password hashing process to go through. If your test count is still low this may not seem like a big deal, but when it grows and is run via Jenkins or Travis or similar, it can really slow things down. A mock lets you skip that, and save time.</p>
 <p>However, there will be times where you may be forced to go through the actual User create process, such as in integration tests. In that case, this tip can be handy.</p>
 <p>In your TestCase.php file, add this line about hashing rounds:</p>
+</blockquote>
 <pre><code>public function createApplication()
 {
     $app = require __DIR__.'/../bootstrap/app.php';
@@ -365,6 +386,7 @@ I&#039;ve seen two different tips for speeding up your tests in Laravel in the p
 
     return $app;
 }</code></pre>
+<blockquote>
 <p>This cuts the number of rounds from the default of 10 down to 5, shaving about half or even more of the time spent hashing. A big saving when you are running dozens of tests all day long!</p>
 </blockquote>
 <p>For me, this cut the time to run the new Laravel.io's test suite almost by half. Sweet!</p>

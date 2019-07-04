@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
-<head>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<html lang="en" class="bg-gray-100">
 
-    <!-- Site info -->
-    <title>Laravel Horizon with Forge and Envoyer | Dries Vints</title>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    
-            <meta property="article:published_time" content="2018-02-08" />
-    
-    <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title=" Atom Feed">
+<!-- Site info -->
+<title>Laravel Horizon with Forge and Envoyer | Dries Vints</title>
 
-    <!-- Stylsheets -->
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=da0adb7d3b8cf6146889">
+    <meta name="description" content="I recently installed Horizon for Laravel.io and while it wasn’t that hard to install, I still had to figure some things out. Since this was the first time...">
 
-    <!-- Google Analytics -->
+    <meta property="article:published_time" content="2018-02-08" />
+
+<link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title=" Atom Feed">
+
+<!-- Stylsheets -->
+<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
+<link rel="stylesheet" href="/assets/build/css/main.css?id=8dc3836f266606b951d1">
+
+<script src="https://kit.fontawesome.com/980abfb339.js"></script>
+
+<!-- Google Analytics -->
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-18478762-2']);
@@ -31,31 +32,62 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
-</head>
-<body class="bg-grey-lightest font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
-    
-    <div class="text-xl max-w-lg m-auto px-4 py-8 md:py-12">
-            <div class="text-center italic text-sm mb-8">
-        <a href="/">
-            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=100" width="50" class="rounded-full enlarge">
+
+<div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
+        <div id="header" class="relative text-lg bg-black bg-cover bg-no-repeat" style="background-image: url('/assets/images/header-black.jpg'); background-position: top right">
+    <div class="" style="min-height: 125px;">
+        <div class="max-w-6xl mx-auto text-white py-6 pb-2 sm:pb-12">
+            <div class="sm:flex text-center px-10">
+                <div class="sm:flex-1 text-2xl font-bold sm:text-left mb-4">
+                    <a href="/" class="hover:underline">Dries Vints</a>
+                </div>
+                <div class="sm:flex-2 sm:text-right">
+                    <ul class="text-2xl">
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="/blog">
+            <i class="enlarge fas fa-rss"></i>
         </a>
-        <p class="font-bold mb-0">Dries Vints</p>
-        <p class="md:text-xs">
-            <a href="/">Home</a> |
-            <a href="/blog">Blog</a> |
-            <a href="https://twitter.com/driesvints">Twitter</a>
-        </p>
-    </div>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://twitter.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://github.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-github"></i>
+        </a>
+    </li>
+    <li class="inline-block sm:mr-10">
+        <a href="https://www.linkedin.com/in/driesvints" target="_blank">
+            <i class="enlarge fab fa-linkedin-in"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </div>
 
-    <div class="text-center mb-12">
-        <h1 class="mb-4">Laravel Horizon with Forge and Envoyer</h1>
-        <p class="italic text-sm">
-            Published on February 8, 2018
-        </p>
+            <div class="content sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-10 lg:mr-16">
+                
+            </div>
+        </div>
+        <svg class="absolute z-0 left-0 bottom-0 block w-full h-8 sm:h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#f7fafc" points="0,100 100,0 100,100"/>
+        </svg>
     </div>
+</div>
 
-    <div class="post max-w-md m-auto">
-        <p>I recently installed Horizon for <a href="https://laravel.io/">Laravel.io</a> and while it wasn’t that hard to install, I still had to figure some things out. Since this was the first time setting everything up I thought I’d write up the steps to take to get started with Horizon and set everything up with Forge and Envoyer.</p>
+    <div id="content">
+        <div class="py-10 sm:py-20">
+            <div id="post">
+                <div class="mb-12">
+                    <h1 class="font-bold text-4xl mb-6">Laravel Horizon with Forge and Envoyer</h1>
+                    <p class="block text-xs uppercase text-gray-600">
+                        Published on February 8, 2018
+                    </p>
+                </div>
+
+                <p>I recently installed Horizon for <a href="https://laravel.io/">Laravel.io</a> and while it wasn’t that hard to install, I still had to figure some things out. Since this was the first time setting everything up I thought I’d write up the steps to take to get started with Horizon and set everything up with Forge and Envoyer.</p>
 <p>Before you begin I suggest you read <a href="https://medium.com/@taylorotwell/introducing-laravel-horizon-4585f66e3e">the introduction post</a> and <a href="https://medium.com/@taylorotwell/deploying-horizon-to-laravel-forge-fc9e01b74d84">this setup guide</a> both written by Taylor Otwell. They’ll give you an excellent introduction and while the setup guide already gives most of the steps used to set things up, this guide tries to guide you step by step and adds some extra’s for setting everything up with Envoyer.</p>
 <p>Remember that this isn’t a guide that dives deep into Horizon, just enough to get it up and running. If you want more info about Horizon’s internals I suggest <a href="https://divinglaravel.com/horizon">this excellent post</a> by Mohamed Said.</p>
 <h2>Installation</h2>
@@ -99,8 +131,13 @@ protected function schedule(Schedule $schedule)
 <h2>Envoyer</h2>
 <p>On Envoyer we need to define a new hook. The <code>horizon:purge</code> command will purge any orphan processes. The <code>horizon:terminate</code> command will finish any left over jobs and terminate the Horizon process. The daemon which we’ll set up later will make sure that the command is always restarted after we terminate it.</p>
 <p>Set up the deployment hook <strong>after</strong> the “Activate New Release” action. This will make sure the command is run after we activate the new app release.</p>
-<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png" alt="Add the hook **after** the “Activate New Release” action." /></p>
-<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png" alt="" /></p>
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-1.png" alt="">
+    <span>Add the hook after the "Activate New Release"</span>
+</p>
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-2.png" alt="">
+</p>
 <p>If you’re managing your environment variables with Envoyer make sure you set your <code>QUEUE_CONNECTION</code> env variable to <code>redis</code>.</p>
 <p>You can now deploy the code we added before. Make sure the deploy finished before proceeding to the next step.</p>
 <h2>Forge</h2>
@@ -109,20 +146,63 @@ protected function schedule(Schedule $schedule)
 <pre><code class="language-bash">php /home/forge/&lt;site&gt;/current/artisan schedule:run</code></pre>
 <h3>Daemon</h3>
 <p>After setting up the scheduler we only need to add the daemon to make sure the Horizon command is started and re-started every time we deploy and terminate it. Go to your server and the “Daemons” menu item. Add a deamon with the <code>php artisan horizon</code> command to run in the <code>/home/forge/&lt;site&gt;/current</code> directory. After you’ve added this command, the daemon will enable the horizon command and you should be able to visit horizon at <code>https://site.com/horizon</code> and see the status below.</p>
-<p><img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png" alt="" /></p>
+<p class="image">
+    <img src="/assets/images/posts/laravel-horizon-with-forge-and-envoyer-3.png" alt="">
+</p>
 <p>Don't forget that you need to be authenticated with the rules you defined in the gate method in your <code>App\Provider\HorizonServiceProvider</code> class.</p>
 <h2>Conclusion</h2>
-<p>This should be all that you need to get started with Horizon. Don’t forget that you don’t need to define queues through Forge as Horizon completely takes this over. You only need to change your <code>horizon.php</code> config file and Horizon will apply the changes on the next deploy.</p>
-                    <p class="text-center text-sm mt-12">
-                                    <a href="/blog/star-wars-the-last-jedi-review">&laquo; Star Wars: The Last Jedi Review</a>
-                
-                                    |
-                
-                                    <a href="/blog/how-circleci-improved-our-build-time">How CircleCI Improved Our Build Time &raquo;</a>
-                            </p>
-            </div>
-    </div>
+<p>This should be all that you need to get started with Horizon. Don’t forget that you don’t need to define queues through Forge as Horizon completely takes this over. You only need to change your <code>horizon.php</code> config file and Horizon will apply the changes on the next deploy.</p>            </div>
+        </div>
 
-    <script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>
-</body>
-</html>
+                    <div class="bg-gray-200 text-xl sm:text-2xl border-t border-gray-300 px-6">
+                <div class="max-w-4xl mx-auto flex">
+                    <div class="flex-1 border-r border-gray-300 pr-6 py-10 sm:py-20">
+                                                    <p class="uppercase text-sm mb-2">&leftarrow; Previous post</p>
+                            <a href="/blog/star-wars-the-last-jedi-review">Star Wars: The Last Jedi Review</a>
+                                            </div>
+                    <div class="flex-1 text-right px-4 py-10 pl-6 sm:py-20">
+                                                    <p class="uppercase text-sm mb-2">Next post &rightarrow; </p>
+                            <a href="/blog/how-circleci-improved-our-build-time">How CircleCI Improved Our Build Time</a>
+                                            </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+<div class="border-t border-gray-300">
+    <div class="max-w-6xl mx-auto text-sm text-gray-500 sm:flex px-6 py-8">
+        <div class="sm:flex-1 text-center sm:text-left mb-8 sm:mb-0">
+            <a href="/">
+                <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=180" width="90" class="rounded-full enlarge inline-block mb-4 sm:mb-0 sm:mr-4" alt="">
+            </a>
+            <br class="sm:hidden">
+            &copy; Dries Vints
+        </div>
+        <div class="sm:flex-1 sm:pt-6 text-center sm:text-right">
+            <ul class="text-2xl">
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="/blog">
+            <i class="enlarge fas fa-rss"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://twitter.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://github.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-github"></i>
+        </a>
+    </li>
+    <li class="inline-block sm:mr-10">
+        <a href="https://www.linkedin.com/in/driesvints" target="_blank">
+            <i class="enlarge fab fa-linkedin-in"></i>
+        </a>
+    </li>
+</ul>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>

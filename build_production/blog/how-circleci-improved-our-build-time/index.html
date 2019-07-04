@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
-<head>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<html lang="en" class="bg-gray-100">
 
-    <!-- Site info -->
-    <title>How CircleCI Improved Our Build Time | Dries Vints</title>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    
-            <meta property="article:published_time" content="2018-04-14" />
-    
-    <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title=" Atom Feed">
+<!-- Site info -->
+<title>How CircleCI Improved Our Build Time | Dries Vints</title>
 
-    <!-- Stylsheets -->
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=da0adb7d3b8cf6146889">
+    <meta name="description" content="I’ve been meaning to look into how I could decrease the build time for the source code of Laravel.io for some time now. At Beatswitch, the startup which I...">
 
-    <!-- Google Analytics -->
+    <meta property="article:published_time" content="2018-04-14" />
+
+<link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title=" Atom Feed">
+
+<!-- Stylsheets -->
+<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
+<link rel="stylesheet" href="/assets/build/css/main.css?id=8dc3836f266606b951d1">
+
+<script src="https://kit.fontawesome.com/980abfb339.js"></script>
+
+<!-- Google Analytics -->
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-18478762-2']);
@@ -31,46 +32,118 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
-</head>
-<body class="bg-grey-lightest font-sans text-lg text-grey-darker leading-normal antialiased border-t-8 border-theme-blue h-full">
-    
-    <div class="text-xl max-w-lg m-auto px-4 py-8 md:py-12">
-            <div class="text-center italic text-sm mb-8">
-        <a href="/">
-            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=100" width="50" class="rounded-full enlarge">
+
+<div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
+        <div id="header" class="relative text-lg bg-black bg-cover bg-no-repeat" style="background-image: url('/assets/images/header-black.jpg'); background-position: top right">
+    <div class="" style="min-height: 125px;">
+        <div class="max-w-6xl mx-auto text-white py-6 pb-2 sm:pb-12">
+            <div class="sm:flex text-center px-10">
+                <div class="sm:flex-1 text-2xl font-bold sm:text-left mb-4">
+                    <a href="/" class="hover:underline">Dries Vints</a>
+                </div>
+                <div class="sm:flex-2 sm:text-right">
+                    <ul class="text-2xl">
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="/blog">
+            <i class="enlarge fas fa-rss"></i>
         </a>
-        <p class="font-bold mb-0">Dries Vints</p>
-        <p class="md:text-xs">
-            <a href="/">Home</a> |
-            <a href="/blog">Blog</a> |
-            <a href="https://twitter.com/driesvints">Twitter</a>
-        </p>
-    </div>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://twitter.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://github.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-github"></i>
+        </a>
+    </li>
+    <li class="inline-block sm:mr-10">
+        <a href="https://www.linkedin.com/in/driesvints" target="_blank">
+            <i class="enlarge fab fa-linkedin-in"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </div>
 
-    <div class="text-center mb-12">
-        <h1 class="mb-4">How CircleCI Improved Our Build Time</h1>
-        <p class="italic text-sm">
-            Published on April 14, 2018
-        </p>
+            <div class="content sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-10 lg:mr-16">
+                
+            </div>
+        </div>
+        <svg class="absolute z-0 left-0 bottom-0 block w-full h-8 sm:h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#f7fafc" points="0,100 100,0 100,100"/>
+        </svg>
     </div>
+</div>
 
-    <div class="post max-w-md m-auto">
-        <p>I’ve been meaning to look into how I could decrease the build time for the source code of <a href="https://laravel.io/">Laravel.io</a> for some time now. At <a href="https://beatswitch.com/">Beatswitch</a>, the startup which I work for, we’ve switched to CircleCI 2.0 about a year ago and have been very happy with the results.</p>
+    <div id="content">
+        <div class="py-10 sm:py-20">
+            <div id="post">
+                <div class="mb-12">
+                    <h1 class="font-bold text-4xl mb-6">How CircleCI Improved Our Build Time</h1>
+                    <p class="block text-xs uppercase text-gray-600">
+                        Published on April 14, 2018
+                    </p>
+                </div>
+
+                <p>I’ve been meaning to look into how I could decrease the build time for the source code of <a href="https://laravel.io/">Laravel.io</a> for some time now. At <a href="https://beatswitch.com/">Beatswitch</a>, the startup which I work for, we’ve switched to CircleCI 2.0 about a year ago and have been very happy with the results.</p>
 <p>CircleCI 2.0’s builds run with Docker which makes spinning up new instances super fast. If you use pre-built images which are customized to your needs, you don’t even need to do any provisioning during the build which saves you quite a bit time. Pulling various images and orchestrating them in a CircleCI 2.0 config allows for very rapid build times. If you add their new workflows to their mix you could easily enable parallelization and speed things up even more.</p>
 <p>I’ve been pretty happy with <a href="https://travis-ci.org/">Travis CI</a> so far for Laravel.io. We had a build time of ~3 minutes which isn’t that long even though our test suite isn’t that extensive. <a href="https://travis-ci.org/laravelio/portal/builds/366453938">Here’s an example build.</a></p>
 <p>All in all ~3 minutes is a pretty long time to set things up considering the tests themselves run for about 10 seconds. I thought this could be improved and so it did once we tried setting up CircleCI 2.0. Thanks to <a href="https://github.com/laravelio/portal/pull/364">this pull request</a> by <a href="https://github.com/serima">Ryo Shibayama</a> we managed to put together <a href="https://github.com/laravelio/portal/blob/2d0ea15eee53ec7767d7b64a77f8f3c26a136c07/.circleci/config.yml">a simple CircleCI 2.0 config</a>. As you can see from <a href="https://circleci.com/gh/laravelio/portal/14">this example build</a> the built time has significantly improved. Because we have most of our build dependencies up front and we can simply download and spin up the container, we save a lot of time. Installing and building our assets is also greatly improved. Sure, some of it comes from the fact that we now cache our Yarn dependencies but overall we cut down ~2 minutes of build time.</p>
 <p>All in all we went from ~3 minutes to ~1 minute which is a lot if you want to keep your feedback loop as short as possible. <a href="https://circleci.com/gh/laravelio/portal/9">We can even reach ~37 seconds</a> when we use a host which already has the Docker instance cached. That way we only need to spin it up, so the first step only takes ~1 second. Unfortunately, there’s no way to control which host you’re going to use or at least I haven’t found a way to do so yet.</p>
-<p>In conclusion, we can really say that CircleCI 2.0 has greatly helped us in improving our build time. I can really recommend looking into their service and giving them a try. If you have an open-source project, they offer four free containers for your project.</p>
-                    <p class="text-center text-sm mt-12">
-                                    <a href="/blog/laravel-horizon-with-forge-and-envoyer">&laquo; Laravel Horizon with Forge and Envoyer</a>
-                
-                                    |
-                
-                                    <a href="/blog/hi-there-full-stack-antwerp">Hi there, Full Stack Antwerp &raquo;</a>
-                            </p>
-            </div>
-    </div>
+<p>In conclusion, we can really say that CircleCI 2.0 has greatly helped us in improving our build time. I can really recommend looking into their service and giving them a try. If you have an open-source project, they offer four free containers for your project.</p>            </div>
+        </div>
 
-    <script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>
-</body>
-</html>
+                    <div class="bg-gray-200 text-xl sm:text-2xl border-t border-gray-300 px-6">
+                <div class="max-w-4xl mx-auto flex">
+                    <div class="flex-1 border-r border-gray-300 pr-6 py-10 sm:py-20">
+                                                    <p class="uppercase text-sm mb-2">&leftarrow; Previous post</p>
+                            <a href="/blog/laravel-horizon-with-forge-and-envoyer">Laravel Horizon with Forge and Envoyer</a>
+                                            </div>
+                    <div class="flex-1 text-right px-4 py-10 pl-6 sm:py-20">
+                                                    <p class="uppercase text-sm mb-2">Next post &rightarrow; </p>
+                            <a href="/blog/hi-there-full-stack-antwerp">Hi there, Full Stack Antwerp</a>
+                                            </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+<div class="border-t border-gray-300">
+    <div class="max-w-6xl mx-auto text-sm text-gray-500 sm:flex px-6 py-8">
+        <div class="sm:flex-1 text-center sm:text-left mb-8 sm:mb-0">
+            <a href="/">
+                <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=180" width="90" class="rounded-full enlarge inline-block mb-4 sm:mb-0 sm:mr-4" alt="">
+            </a>
+            <br class="sm:hidden">
+            &copy; Dries Vints
+        </div>
+        <div class="sm:flex-1 sm:pt-6 text-center sm:text-right">
+            <ul class="text-2xl">
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="/blog">
+            <i class="enlarge fas fa-rss"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://twitter.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://github.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-github"></i>
+        </a>
+    </li>
+    <li class="inline-block sm:mr-10">
+        <a href="https://www.linkedin.com/in/driesvints" target="_blank">
+            <i class="enlarge fab fa-linkedin-in"></i>
+        </a>
+    </li>
+</ul>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/build/js/main.js?id=0e7dc19ff43e9f3f44e0"></script>
