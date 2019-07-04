@@ -10,7 +10,7 @@ fbvideo: true
     <span>Source: The Indian Express</small>
 </p>
 
-It saddens me to see a legendary player like Francesco Totti calling it quits. Men of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Andrés Iniesta, Carles Puyol are a bunch who know what it’s like to dedicated their lives to their club.
+It saddens me to see a legendary player like Francesco Totti calling it quits. Players of his caliber are becoming exceedingly rare. Dedicating 25 years of his life to Roma and the fans. Players like him, Paul Scholes, Carles Puyol are a bunch who know what it’s like to dedicated their lives to their club.
 
 Not even the likes of Lampard and Terry come close to them. These are exceptional players who wouldn’t even dream of playing for other teams. True love for their club.
 
@@ -24,7 +24,7 @@ I’ll miss Totti, not only as a player but as a charismatic person. Someone wit
 
 Arrivederci, Francesco
 
-<div class="fb-video" data-href="https://www.facebook.com/officialasroma/videos/1399428543451289/" data-show-text="false">
+<div class="video fb-video" data-href="https://www.facebook.com/officialasroma/videos/1399428543451289/" data-show-text="false">
     <blockquote cite="https://www.facebook.com/officialasroma/videos/1399428543451289/" class="fb-xfbml-parse-ignore">
         <a href="https://www.facebook.com/officialasroma/videos/1399428543451289/">Stadium of Tears</a>
         <p>When Francesco Totti cries, we all cry.</p>

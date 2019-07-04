@@ -1,4 +1,7 @@
-@extends('_layouts.master', ['title' => 'Blog'])
+@extends('_layouts.master', [
+    'title' => 'Blog',
+    'metaDescription' => 'Here on my blog I try to write about various things which keep me busy. There\'s lots of posts on various tech related topics but I also sometimes blog about sports, books, movies and other things.',
+])
 
 @section('body')
     @component('_components.header')

@@ -1,5 +1,6 @@
 @extends('_layouts.master', [
     'title' => $page->title,
+    'metaDescription' => $page->metaDescription ?? $page->getExcerpt(160),
 ])
 
 @section('body')
@@ -7,15 +8,15 @@
     @endcomponent
 
     <div id="content">
-        <div class="px-6 py-10 sm:py-20">
-            <div class="max-w-2xl mx-auto mb-12">
-                <h1 class="font-bold text-4xl mb-6">{{ $page->title }}</h1>
-                <p class="block text-xs uppercase text-gray-600">
-                    Published on {{ date('F j, Y', $page->date) }}
-                </p>
-            </div>
-
+        <div class="py-10 sm:py-20">
             <div id="post">
+                <div class="mb-12">
+                    <h1 class="font-bold text-4xl mb-6">{{ $page->title }}</h1>
+                    <p class="block text-xs uppercase text-gray-600">
+                        Published on {{ date('F j, Y', $page->date) }}
+                    </p>
+                </div>
+
                 @yield('content')
             </div>
         </div>

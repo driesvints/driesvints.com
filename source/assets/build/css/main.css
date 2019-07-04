@@ -1,6 +1,16 @@
 /*
 
-Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
+Dracula Theme v1.2.0
+
+https://github.com/zenorocha/dracula-theme
+
+Copyright 2015, All rights reserved
+
+Code licensed under the MIT license
+http://zenorocha.mit-license.org
+
+@author Éverton Ribeiro <nuxlli@gmail.com>
+@author Zeno Rocha <hi@zenorocha.com>
 
 */
 
@@ -8,78 +18,55 @@ Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: white;
-  color: black;
-}
-
-.hljs-comment,
-.hljs-quote {
-  color: #800;
+  background: #282a36;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
+.hljs-literal,
 .hljs-section,
-.hljs-title,
-.hljs-name {
-  color: #008;
+.hljs-link {
+  color: #8be9fd;
 }
 
-.hljs-variable,
-.hljs-template-variable {
-  color: #660;
+.hljs-function .hljs-keyword {
+  color: #ff79c6;
+}
+
+.hljs,
+.hljs-subst {
+  color: #f8f8f2;
 }
 
 .hljs-string,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-regexp {
-  color: #080;
-}
-
-.hljs-literal,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
 .hljs-symbol,
 .hljs-bullet,
-.hljs-meta,
-.hljs-number,
-.hljs-link {
-  color: #066;
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #f1fa8c;
 }
 
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #6272a4;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
 .hljs-title,
+.hljs-section,
 .hljs-doctag,
 .hljs-type,
-.hljs-attr,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-params {
-  color: #606;
-}
-
-.hljs-attribute,
-.hljs-subst {
-  color: #000;
-}
-
-.hljs-formula {
-  background-color: #eee;
-  font-style: italic;
-}
-
-.hljs-selector-id,
-.hljs-selector-class {
-  color: #9B703F
-}
-
-.hljs-addition {
-  background-color: #baeeba;
-}
-
-.hljs-deletion {
-  background-color: #ffc8bd;
-}
-
-.hljs-doctag,
+.hljs-name,
 .hljs-strong {
   font-weight: bold;
 }
@@ -732,6 +719,7 @@ video {
   color: #cbd5e0;
 }
 
+#post h1,
 #post h2,
 #post h3,
 #post h4,
@@ -757,42 +745,63 @@ video {
   font-size: 1.125rem;
 }
 
+#post h1,
 #post h2,
 #post h3,
 #post h4,
 #post ul,
 #post p,
-#post pre,
-#post div {
+#post div.video {
+  max-width: 42rem;
+  overflow-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#post pre {
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 #post blockquote {
+  max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.25rem;
+  background-color: #edf2f7;
+  font-size: 1rem;
   font-weight: 600;
   font-style: italic;
+  border-radius: 0.25rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   margin-top: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
-#post blockquote p {
-  max-width: 56rem;
-  background-color: #fff;
-  padding: 1rem;
+#post blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 #post blockquote p code {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 640px) {
-  #post blockquote p {
-    padding: 2rem;
+  #post blockquote {
+    font-size: 1.25rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  #post blockquote p code {
+    font-size: 1.25rem;
   }
 }
 
@@ -821,20 +830,21 @@ video {
 
 #post pre {
   max-width: 48rem;
-  border-width: 1px;
-  background-color: #fff;
   border-radius: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-left: 0;
+  padding-right: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  background-color: #282A36;
 }
 
 #post pre code {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 #post p.image {
@@ -856,6 +866,13 @@ video {
 
 #post img.shadow-none {
   box-shadow: none;
+}
+
+@media (min-width: 640px) {
+  #post pre code {
+    font-size: 1rem;
+    padding: 2.5rem;
+  }
 }
 
 #projects .project a {

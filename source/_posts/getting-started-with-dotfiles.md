@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: Getting Started with Dotfiles
 date: 2016-04-08
+metaDescription: In this blog post I'll explain what dotfiles are, how you can use them and how to start with your own.
 ---
 Let's draw a situation. Your computer breaks down. And I don't mean the classic "Dammit, my computer broke down, better get it fixed". No, I mean the "Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back"-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.
 

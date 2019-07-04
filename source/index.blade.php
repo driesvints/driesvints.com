@@ -24,7 +24,7 @@
             <h2 class="text-4xl text-center sm:text-left font-bold mb-4 sm:mb-12">Latest Posts</h2>
 
             <p class="text-base text-center font-bold sm:float-right sm:-mt-20 mb-8">
-                <a href="/blog">View all &raquo;</a>
+                <a href="/blog">View all &rightarrow;</a>
             </p>
 
             @foreach($posts->take(5) as $post)
@@ -100,7 +100,7 @@
         </p>
 
         <p>
-            Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>
+            Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>.
         </p>
     </div>
 @endsection

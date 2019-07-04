@@ -1,4 +1,5 @@
 #post {
+    h1,
     h2,
     h3,
     h4,
@@ -23,29 +24,36 @@
         @apply text-lg;
     }
 
+    h1,
     h2,
     h3,
     h4,
     ul,
     p,
-    pre,
-    div {
-        @apply max-w-2xl mx-auto mb-6;
+    div.video {
+        @apply max-w-2xl break-words mx-auto px-6 mb-6;
+    }
+
+    pre {
+        @apply max-w-2xl mx-auto px-6 mb-6;
     }
 
     blockquote {
-        @apply mx-auto text-xl font-semibold italic mt-8 mb-10;
+        @apply max-w-3xl mx-auto bg-gray-200 text-base font-semibold italic rounded py-6 mt-8 mb-6;
     }
-    blockquote p {
-        @apply max-w-4xl bg-white p-4;
+    blockquote p:last-child {
+        @apply mb-0;
     }
     blockquote p code {
-        @apply text-xl;
+        @apply text-base;
     }
 
     @screen sm {
-        blockquote p {
-            @apply p-8;
+        blockquote {
+            @apply text-xl py-10;
+        }
+        blockquote p code {
+            @apply text-xl;
         }
     }
 
@@ -66,10 +74,11 @@
     }
 
     pre {
-        @apply max-w-3xl border bg-white rounded px-2 py-1 my-8;
+        @apply max-w-3xl rounded px-0 my-8;
+        background-color: #282A36;
     }
     pre code {
-        @apply font-mono text-sm;
+        @apply font-mono text-xs px-6 py-8;
     }
 
     p.image {
@@ -80,5 +89,11 @@
     }
     img.shadow-none {
         @apply shadow-none;
+    }
+}
+
+@screen sm {
+    #post pre code {
+        @apply text-base p-10;
     }
 }
