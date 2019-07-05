@@ -59,14 +59,14 @@
 
     > ul,
     > ol {
-        @apply pl-6;
+        @apply pl-12;
     }
     ul li {
         list-style-type: disc;
     }
     ul ul,
     ol ol {
-        @apply ml-6 my-1;
+        @apply my-1;
     }
 
     p code {

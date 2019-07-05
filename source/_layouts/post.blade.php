@@ -39,5 +39,7 @@
                 </div>
             </div>
         @endif
+
+        @include('_partials.about')
     </div>
 @endsection
