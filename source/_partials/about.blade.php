@@ -20,6 +20,6 @@
     </p>
 
     <p>
-        Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>.
+        Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a>. You can contact me by <a href="mailto:dries.vints@gmail.com">email</a>.
     </p>
 </div>

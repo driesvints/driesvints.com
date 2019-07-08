@@ -14,7 +14,7 @@
             <i class="enlarge fab fa-github"></i>
         </a>
     </li>
-    <li class="inline-block sm:mr-10">
+    <li class="inline-block">
         <a href="https://www.linkedin.com/in/driesvints" target="_blank">
             <i class="enlarge fab fa-linkedin-in"></i>
         </a>

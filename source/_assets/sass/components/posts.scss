@@ -39,7 +39,19 @@
     }
 
     blockquote {
-        @apply max-w-3xl mx-auto bg-gray-200 text-base font-semibold italic rounded py-6 mt-8 mb-6;
+        @apply max-w-3xl relative mx-auto bg-gray-200 text-base font-semibold italic rounded py-6 mt-8 mb-6;
+    }
+    blockquote::before {
+        content: '“';
+        @apply absolute text-3xl;
+        top: 0;
+        left: 5px;
+    }
+    blockquote::after {
+        content: '”';
+        @apply absolute text-3xl;
+        bottom: -5px;
+        right: 15px;
     }
     blockquote p:last-child {
         @apply mb-0;
@@ -48,9 +60,19 @@
         @apply text-base;
     }
 
-    @screen sm {
+    @screen md {
         blockquote {
             @apply text-xl py-10;
+        }
+        blockquote::before {
+            @apply text-6xl;
+            top: -5px;
+            left: 15px;
+        }
+        blockquote::after {
+            @apply text-6xl;
+            bottom: -25px;
+            right: 30px;
         }
         blockquote p code {
             @apply text-xl;
