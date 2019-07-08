@@ -10,7 +10,7 @@
             </h1>
 
             <p class="text-2xl sm:text-3xl leading-snug mb-8">
-                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium">meetup</a> & <a href="https://fullstackeurope.com">conference</a> organiser, open-source <a href="https://github.com/driesvints">maintainer</a>, speaker, and <a href="/blog">blogger</a>.
+                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">meetup</a> & <a href="https://fullstackeurope.com">conference</a> organiser, open-source <a href="https://github.com/driesvints">maintainer</a>, speaker, and <a href="/blog">blogger</a>.
             </p>
 
             <a href="/#about">
