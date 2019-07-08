@@ -31,15 +31,11 @@
     ul,
     p,
     div.video {
-        @apply max-w-2xl break-words mx-auto px-6 mb-6;
-    }
-
-    pre {
-        @apply max-w-2xl mx-auto px-6 mb-6;
+        @apply max-w-3xl break-words mx-auto px-6 mb-6;
     }
 
     blockquote {
-        @apply max-w-3xl relative mx-auto bg-gray-200 text-base font-semibold italic rounded py-6 mt-8 mb-6;
+        @apply max-w-4xl relative mx-auto bg-gray-200 text-base font-semibold italic rounded py-6 mt-8 mb-6;
     }
     blockquote::before {
         content: '“';
@@ -96,7 +92,7 @@
     }
 
     pre {
-        @apply max-w-3xl rounded px-0 my-8;
+        @apply max-w-4xl mx-auto rounded px-0 my-8;
         background-color: #282A36;
     }
     pre code {
@@ -116,6 +112,12 @@
 
 @screen sm {
     #post pre code {
-        @apply text-base p-10;
+        @apply text-base;
+    }
+}
+
+@screen md {
+    #post pre code {
+        @apply p-12;
     }
 }

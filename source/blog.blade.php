@@ -22,7 +22,7 @@
         </p>
     @endcomponent
 
-    <div id="content" class="max-w-2xl mx-auto px-6 py-10 sm:py-20">
+    <div id="content" class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
         <h3 class="mb-4 font-bold">{{ $year = date('Y', $posts->first()->date) }}</h3>
             @foreach ($posts as $post)
                 @if (date('Y', $post->date) !== $year)

@@ -20,7 +20,7 @@
     @endcomponent
 
     <div id="content">
-        <div class="max-w-2xl mx-auto px-6 py-10 sm:py-20">
+        <div class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
             <h2 class="text-4xl text-center sm:text-left font-bold mb-4 sm:mb-12">Latest Posts</h2>
 
             <p class="text-base text-center font-bold sm:float-right sm:-mt-20 mb-8">

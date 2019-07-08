@@ -1,4 +1,4 @@
-<div id="about" class="max-w-2xl mx-auto px-6 py-10 sm:py-20">
+<div id="about" class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
     <div class="text-center mb-6">
         <a href="https://twitter.com/driesvints">
             <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=180" width="90" class="rounded-full enlarge inline-block mb-4 sm:mb-0 sm:mr-4" alt="">
