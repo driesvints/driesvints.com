@@ -7,7 +7,8 @@ module.exports = {
         '6': '6px',
       },
       colors: {
-        primary: '#8065ee'
+        primary: '#8065ee',
+        europe: '#5845d0',
       },
       fontFamily: {
         sans: [
