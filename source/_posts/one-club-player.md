@@ -24,10 +24,12 @@ I’ll miss Totti, not only as a player but as a charismatic person. Someone wit
 
 Arrivederci, Francesco
 
-<div class="video fb-video" data-href="https://www.facebook.com/officialasroma/videos/1399428543451289/" data-show-text="false">
-    <blockquote cite="https://www.facebook.com/officialasroma/videos/1399428543451289/" class="fb-xfbml-parse-ignore">
-        <a href="https://www.facebook.com/officialasroma/videos/1399428543451289/">Stadium of Tears</a>
-        <p>When Francesco Totti cries, we all cry.</p>
-        Posted by <a href="https://www.facebook.com/officialasroma/">AS Roma</a> on Monday, May 29, 2017
-    </blockquote>
+<div class="max-w-3xl mx-auto">
+    <div class="video fb-video" data-href="https://www.facebook.com/officialasroma/videos/1399428543451289/" data-show-text="false">
+        <blockquote cite="https://www.facebook.com/officialasroma/videos/1399428543451289/" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/officialasroma/videos/1399428543451289/">Stadium of Tears</a>
+            <p>When Francesco Totti cries, we all cry.</p>
+            Posted by <a href="https://www.facebook.com/officialasroma/">AS Roma</a> on Monday, May 29, 2017
+        </blockquote>
+    </div>
 </div>
