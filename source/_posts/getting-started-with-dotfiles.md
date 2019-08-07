@@ -77,11 +77,13 @@ Zsh is a powerful shell which features some great improvements over Bash like au
 
 ### Oh My, Wth Should I Use?
 
-Like the way you have package managers for programming languages (think Composer, NPM, ...) you also have plugin managers for your shell. While a shell like Zsh is great, it's still difficult to configure it the way you like. A plugin manager like [Antibody](https://getantibody.github.io/) can greatly help with this by extending its base functionality.
+Like the way you have frameworks for programming languages you also have frameworks for your shell. While a shell like Zsh is great, it's still difficult to configure it the way you like. A framework like [Oh-My-Zsh](http://ohmyz.sh/) can greatly help with this.
 
-You have a other solutions with Zsh frameworks like [Presto](https://github.com/sorin-ionescu/prezto) and I used [Oh-My-Zsh](https://ohmyz.sh) for a long time but in the end I switched to Antibody because of it's easy-to-use and simple setup.
+You have a few other Zsh frameworks like [Presto](https://github.com/sorin-ionescu/prezto) but in the end I decided to choose Oh-My-Zsh. Oh-My-Zsh is wildly adopted, has a strong community and a great range of features.
 
-You can easily [install plugins](https://getantibody.github.io/usage/) for your shell like the git plugin which offers shortcuts and autocomplete for your git commands or easily install themes to configure the look and feel of your shell. I've installed [the Minimal theme](https://github.com/subnixr/minimal) together with the [Solarized Light](https://github.com/altercation/solarized) color scheme in [Hyper](https://hyper.is).
+You can [install plugins](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview) for your shell like the git plugin which offers shortcuts and autocompletion for your git commands. Or easily [install themes](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes) to configure the look and feel of your shell. I've installed [the Minimal theme](https://github.com/subnixr/minimal) together with the [Solarized Light](https://github.com/altercation/solarized) color scheme.
+
+And when using Mackup your Oh-My-Zsh preferences automatically get synced across your devices. Neat!
 
 ## The Install Procedure
 
