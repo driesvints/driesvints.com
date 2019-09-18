@@ -6,7 +6,7 @@ date: 2015-08-25
 ---
 This is one of the tutorials I did for my Laracon EU talk.
 
-When you run your tests locally on, let's say Homestead, that's fine because you want to run your tests on an environment that closely resembles your production environment. If you use both Homestead and [Forge](forge.laravel.com) to setup your server, you can do just that.
+When you run your tests locally on, let's say Homestead, that's fine because you want to run your tests on an environment that closely resembles your production environment. If you use both Homestead and [Forge](https://forge.laravel.com) to setup your server, you can do just that.
 
 You probably also hooked up Envoyer to automatically deploy your code whenever you push to master. But it's tricky because you could push code which is broken. You won't notice it because you probably forgot to run your tests before you pushed your code. You want to first run your tests and then push your code when those tests pass.
 

@@ -1,8 +1,5 @@
 {
     "require": {
         "tightenco/jigsaw": "^1.2"
-    },
-    "scripts": {
-        "deploy": "git subtree push --prefix build_production origin gh-pages"
     }
 }
