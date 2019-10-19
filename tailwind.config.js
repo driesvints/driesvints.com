@@ -19,7 +19,7 @@ module.exports = {
     },
     backgroundColor: theme => ({
       ...theme('colors'),
-      'black-opacity-75': 'rgba(0, 0, 0, 0.6)',
+      'black-opacity-40': 'rgba(0, 0, 0, 0.4)',
     }),
     textShadow: {
       'default': '0 2px 5px rgba(0, 0, 0, 0.5)',

@@ -1,5 +1,5 @@
-<div id="header" class="relative text-lg bg-black bg-cover bg-no-repeat" style="background-image: url('/assets/images/{{ isset($small) ? 'header-black' : 'header' }}.jpg'); background-position: {{ isset($small) ? 'top right' : '20% 5%' }}">
-    <div class="header-image {{ isset($small) ? 'header-image-small' :  'bg-black-opacity-75 lg:bg-transparent' }}">
+<div id="header" class="relative text-lg bg-black bg-cover bg-no-repeat" style="background-image: url('/assets/images/{{ isset($small) ? 'header-black' : 'header' }}.jpg'); background-position: {{ isset($small) ? 'top right' : '0 25%' }}">
+    <div class="header-image {{ isset($small) ? 'header-image-small' :  'bg-black-opacity-40 lg:bg-transparent' }}">
         <div class="max-w-6xl mx-auto text-white py-6 {{ isset($small) ? 'pb-2 sm:pb-12' : 'pb-24' }}">
             <div class="sm:flex text-center px-6">
                 <div class="sm:flex-1 text-2xl font-bold sm:text-left mb-4">

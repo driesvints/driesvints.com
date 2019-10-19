@@ -13,9 +13,15 @@
                 Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">meetup</a> & <a href="https://fullstackeurope.com">conference</a> organiser, <a href="https://github.com/driesvints">open-source</a> maintainer, speaker, and <a href="/blog">blogger</a>.
             </p>
 
-            <a href="/#about">
-                More about me &rightarrow;
-            </a>
+            <p class="mb-8">
+                <a href="/#about">
+                    More about me &rightarrow;
+                </a>
+            </p>
+
+            <p class="text-xs">
+                Photo by <a href="https://ninjaparade.ca">ninjaparade</a>
+            </p>
         </div>
     @endcomponent
 
