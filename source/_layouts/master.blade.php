@@ -30,8 +30,8 @@
 <div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
     <div class="bg-europe text-white font-semibold hover:underline py-3" target="_blank">
         <div class="wrapper text-center">
-            <a class="focus:underline focus:bg-transparent" href="https://fullstackeurope.com/" target="_blank" rel="noopener">
-                Join me at Full Stack Europe 2019 in Antwerp, Belgium →
+            <a class="focus:underline focus:bg-transparent" href="https://eventy.io/" target="_blank" rel="noopener">
+                I'm currently building Eventy, a new app for organising events →
             </a>
         </div>
     </div>

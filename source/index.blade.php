@@ -78,6 +78,7 @@
                 </div>
 
                 <p class="text-base text-gray-700 text-center">
+                    + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
                     + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                     + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.
                 </p>
