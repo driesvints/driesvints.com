@@ -57,7 +57,7 @@ My main OS of choice is macOS. Being the Apple fanboy that I am, I thoroughly en
 
 When running macOS, [Homebrew](http://brew.sh/) is essential. It helps you install packages and tools in an easy way through the CLI. It should probably be the first thing you install when setting up a new Mac.
 
-Homebrew can also help install your apps. For that, you'll need [Homebrew Cask](https://caskroom.github.io/). You won't need to worry about manually downloading and installing packages and tools anymore. Cask can even install your preferred fonts. Apps from the app store still need to be installed manually, though.
+Homebrew can also help install your apps. You won't need to worry about manually downloading and installing packages and tools anymore. Homebrew can even install your preferred fonts. Apps from the app store still need to be installed manually or with a neat CLI tool called [mas](https://github.com/mas-cli/mas).
 
 To bring it all together in your dotfiles, you probably want to adopt a `Brewfile`. [Homebrew Bundler](https://github.com/Homebrew/homebrew-bundle) allows you to organize your system's dependencies in a single file so Homebrew knows what to install when installing from a fresh system. It's like [Composer](https://getcomposer.org/) but for your Mac. Feel free to take a look at [my own Brewfile](https://github.com/driesvints/dotfiles/blob/master/Brewfile) to see what tools and apps I've got installed. A simple `brew bundle` installs your dependencies.
 
@@ -71,7 +71,7 @@ Thanks to Maxime Fabre for giving [a great presentation on Homebrew and Mackup](
 
 ### Z Shell
 
-When developing you probably spend a lot of your time on the CLI. So a good setup of your shell is important. While Bash is a great shell [(and recently even got added to Windows 10)](http://www.theverge.com/2016/3/30/11331014/microsoft-windows-linux-ubuntu-bash), I prefer [Z Shell (Zsh)](http://www.zsh.org/).
+When developing you probably spend a lot of your time on the CLI. So a good setup of your shell is important. While Bash is a great shell [(and recently even got added to Windows 10)](http://www.theverge.com/2016/3/30/11331014/microsoft-windows-linux-ubuntu-bash), I prefer [Z Shell (Zsh)](http://www.zsh.org/). It even became the default shell in macOS for the new Catalina release.
 
 Zsh is a powerful shell which features some great improvements over Bash like autocompletion, shared command history, themeable prompts and many other things. It's like Bash but on steroids. I've considered alternatives like [Fish Shell](https://fishshell.com/) but in the end Zsh proved to be the one that I like the most.
 
@@ -107,7 +107,7 @@ Of course you'll still need to make sure that if you change anything to your sys
 
 Some pointers on maintaining your dotfiles:
 
-- When installing a new app, tool or font, try to install it with Homebrew (Cask) and add it to your `Brewfile`
+- When installing a new app, tool or font, try to install it with Homebrew and add it to your `Brewfile`
 - When configuring a new app make sure to run `mackup backup` to save your preferences
 - When changing an macOS setting, try setting it through the `.macos` file
 
