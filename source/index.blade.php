@@ -94,8 +94,12 @@
                         Do you like what I do or did you ever found something that I made useful? Consider supporting me!
                     </p>
 
-                    <a class="btn enlarge" href="https://github.com/sponsors/driesvints">
-                        Support me
+                    <a class="btn text-base mb-4" href="https://github.com/sponsors/driesvints" target="_blank">
+                        <i class="fab fa-github mr-1"></i> Support me regularly
+                    </a><br>
+
+                    <a class="btn text-base" href="https://paypal.me/driesvints" target="_blank">
+                        <i class="fab fa-paypal mr-1"></i> Donate just once
                     </a>
                 </div>
             </div>
