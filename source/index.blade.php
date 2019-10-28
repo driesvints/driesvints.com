@@ -83,11 +83,21 @@
                     </div>
                 </div>
 
-                <p class="text-base text-gray-700 text-center">
-                    + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
-                    + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
-                    + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.
-                </p>
+                <div class="mx-auto max-w-md text-center">
+                    <p class="text-base text-gray-700 mb-8">
+                        + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
+                        + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
+                        + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.
+                    </p>
+
+                    <p class="text-base mb-8">
+                        Do you like what I do or did you ever found something that I made useful? Consider supporting me!
+                    </p>
+
+                    <a class="btn enlarge" href="https://github.com/sponsors/driesvints">
+                        Support me
+                    </a>
+                </div>
             </div>
         </div>
     </div>

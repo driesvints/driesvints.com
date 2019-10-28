@@ -1,0 +1,6 @@
+#content a.btn {
+    @apply mx-auto inline-block bg-primary px-6 py-3 text-white font-bold rounded-lg;
+}
+#content a.btn:hover {
+    @apply bg-secondary no-underline;
+}

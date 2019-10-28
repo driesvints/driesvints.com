@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   theme: {
@@ -8,7 +8,7 @@ module.exports = {
       },
       colors: {
         primary: '#8065ee',
-        europe: '#5845d0',
+        secondary: '#5845d0',
       },
       fontFamily: {
         sans: [
@@ -31,4 +31,4 @@ module.exports = {
     textShadow: ['responsive'],
   },
   plugins: [],
-}
+};
