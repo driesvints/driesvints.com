@@ -4,11 +4,11 @@ section: content
 title: Announcing Eventy
 date: 2019-10-19
 ---
-Last Tuesday, I finally announced my next passion project, [Eventy](https://eventy.io). I must say that the timing was a little off. I've been planning on doing the announcement for several weeks now, but every time something kept creeping in between. So when I saw the announcement by Meetup.com's new pricing plans and all of the outrages by that, I knew that there wouldn't be a better moment than that.
+Last Tuesday, I finally announced my next passion project, [Eventy](https://eventy.io). I must say that the timing was a little off. I've been planning on doing the announcement for several weeks now, but every time something kept creeping in between. So when I saw the announcement by Meetup.com's new pricing plans and all of the outrage by that, I knew that there wouldn't be a better moment than that.
 
 Eventy is an app that I've been thinking of building for quite a while now. But over the past years, the idea has been becoming more and more concrete. The thing that I sorely miss, being a user group leader, conference organizer, speaker, and attendee, is a unified platform. A place where I can maintain and keep track of all these different parts of an event experience. All while having a really nice end-user experience.
 
-The landscape for event software is too scattered at the moment. You have so many different kinds of apps that might excel in what they do, but they don't work together. So you'll have to maintain multiple accounts and switch apps all the time. 
+The landscape for event software is too scattered at the moment. You have so many different kind of apps that might excel in what they do, but they don't work together. So you'll have to maintain multiple accounts and switch apps all the time. 
 
 My main goal with Eventy is to do the exact opposite. Instead of connecting individual apps together, I want to provide one platform for everyone. A place where attendees can find new user groups. Where conference organizers can host their CFPs. Where speakers can maintain their talks. Where user group leaders can schedule their events. And so on.
 
