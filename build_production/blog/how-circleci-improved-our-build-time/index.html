@@ -16,7 +16,7 @@
 
 <!-- Stylsheets -->
 <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
-<link rel="stylesheet" href="/assets/build/css/main.css?id=db5e20099b352c2bca5f">
+<link rel="stylesheet" href="/assets/build/css/main.css?id=b68badbb9dff44bd0ecc">
 
 <script src="https://kit.fontawesome.com/980abfb339.js"></script>
 
@@ -110,7 +110,29 @@
 <p>I’ve been pretty happy with <a href="https://travis-ci.org/">Travis CI</a> so far for Laravel.io. We had a build time of ~3 minutes which isn’t that long even though our test suite isn’t that extensive. <a href="https://travis-ci.org/laravelio/portal/builds/366453938">Here’s an example build.</a></p>
 <p>All in all ~3 minutes is a pretty long time to set things up considering the tests themselves run for about 10 seconds. I thought this could be improved and so it did once we tried setting up CircleCI 2.0. Thanks to <a href="https://github.com/laravelio/portal/pull/364">this pull request</a> by <a href="https://github.com/serima">Ryo Shibayama</a> we managed to put together <a href="https://github.com/laravelio/portal/blob/2d0ea15eee53ec7767d7b64a77f8f3c26a136c07/.circleci/config.yml">a simple CircleCI 2.0 config</a>. As you can see from <a href="https://circleci.com/gh/laravelio/portal/14">this example build</a> the built time has significantly improved. Because we have most of our build dependencies up front and we can simply download and spin up the container, we save a lot of time. Installing and building our assets is also greatly improved. Sure, some of it comes from the fact that we now cache our Yarn dependencies but overall we cut down ~2 minutes of build time.</p>
 <p>All in all we went from ~3 minutes to ~1 minute which is a lot if you want to keep your feedback loop as short as possible. <a href="https://circleci.com/gh/laravelio/portal/9">We can even reach ~37 seconds</a> when we use a host which already has the Docker instance cached. That way we only need to spin it up, so the first step only takes ~1 second. Unfortunately, there’s no way to control which host you’re going to use or at least I haven’t found a way to do so yet.</p>
-<p>In conclusion, we can really say that CircleCI 2.0 has greatly helped us in improving our build time. I can really recommend looking into their service and giving them a try. If you have an open-source project, they offer four free containers for your project.</p>            </div>
+<p>In conclusion, we can really say that CircleCI 2.0 has greatly helped us in improving our build time. I can really recommend looking into their service and giving them a try. If you have an open-source project, they offer four free containers for your project.</p>
+                <div class="share mx-auto max-w-xs mt-16 text-2xl text-center">
+                    <p class="text-sm italic">
+                        Like what you read? Feel free to share!
+                    </p>
+                    <p>
+                        <a target="_blank"
+                           href="http://twitter.com/share?text=%22How+CircleCI+Improved+Our+Build+Time%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time">
+                            <i class="enlarge fab fa-twitter"></i>
+                        </a>
+
+                        <a class="ml-2" target="_blank"
+                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time&quote=%22How+CircleCI+Improved+Our+Build+Time%22+by+Dries+Vints+-+">
+                            <i class="enlarge fab fa-facebook-f"></i>
+                        </a>
+
+                        <a class="ml-2" target="_blank"
+                           href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time&title=%22How+CircleCI+Improved+Our+Build+Time%22+by+Dries+Vints+-+">
+                            <i class="enlarge fab fa-linkedin-in"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
         </div>
 
                     <div class="bg-gray-200 text-xl sm:text-2xl border-t border-gray-300 px-6">

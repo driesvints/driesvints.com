@@ -108,6 +108,10 @@
     img.shadow-none {
         @apply shadow-none;
     }
+
+    .share a:hover {
+        text-decoration: none;
+    }
 }
 
 @screen sm {
