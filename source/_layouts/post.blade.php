@@ -19,7 +19,7 @@
 
                 @yield('content')
 
-                <div class="share mx-auto max-w-xs mt-16 text-2xl text-center">
+                <div class="share mx-auto max-w-xs mt-10 sm:mt-16 text-2xl text-center">
                     <p class="text-sm italic">
                         Like what you read? Feel free to share!
                     </p>
