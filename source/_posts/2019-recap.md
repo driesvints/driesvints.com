@@ -24,6 +24,11 @@ That's how [Laravel EventSauce](https://github.com/EventSaucePHP/LaravelEventSau
 
 ## Public Speaking
 
+<p class="image">
+    <img src="/assets/images/posts/2019-recap/laracon-us.jpeg" alt="">
+    <span>Laracon US</span>
+</p>
+
 Going further on the subject of Event Sourcing, I decided to make it my main talk subject for 2019. I was lucky to get to speak at several Laravel conferences and talk about this passion. 
 
 I gave a talk at [Laravel Live UK](https://laravellive.uk/2019), [Laracon US](https://www.youtube.com/watch?v=2yos8WUG5z4) and [Laracon EU](https://www.youtube.com/watch?v=dL6186yr9nI). Especially Laracon US will be in my memories as it was the first time I went and I met a lot of the Laravel US crowd. I'm looking forward to [next year's edition](https://laracon.us/).
@@ -36,6 +41,11 @@ The project got a great highlight as well with [my screencast for Laracasts](htt
 
 ## Full Stack Belgium
 
+<p class="image">
+    <img src="/assets/images/posts/2019-recap/fsbe.jpeg" alt="">
+    <span>Full Stack Antwerp in December 2019</span>
+</p>
+
 Besides my work for Laravel, my open source work and public speaking commitment I also organize the [Full Stack Belgium](https://fullstackbelgium.be/) events in Ghent and Antwerp every single month together with my buddy [Rias](https://twitter.com/riasvdv).
 
 2019 was our best year yet. We organized a total of 24 events spread over 12 months. We also visited 21 different companies in three different cities. And we hosted a total of 39 different speakers which brought a wide range of talks. 
@@ -43,6 +53,11 @@ Besides my work for Laravel, my open source work and public speaking commitment 
 We're not planning on stopping anytime soon. So for 2020, we're again aiming at hosting 24 events in the cities of Ghent and Antwerp. And we'll be celebrating our 5th anniversary in the Summer!
 
 ## Full Stack Europe
+
+<p class="image">
+    <img src="/assets/images/posts/2019-recap/fseu.jpeg" alt="">
+    <span>Full Stack Europe 2019</span>
+</p>
 
 Ever since I started with the user group in 2015 I've always dreamed of organizing my very own conference. In October 2019 that dream became a reality when we hosted the first edition of [Full Stack Europe](https://fullstackeurope.com/2019).
 
