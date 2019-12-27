@@ -3,12 +3,79 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2019-11-25T18:37:59+00:00</updated>
+    <updated>2019-12-27T16:31:31+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
     </author>
                 <entry>
+    <id>https://driesvints.com/blog/2019-recap</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/2019-recap" />
+    <title>2019 Recap</title>
+    <published>2019-12-27T00:00:00+00:00</published>
+    <updated>2019-12-27T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+Looking back at 2019, I have to say that 2019 was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.
+
+2019 marked the first full year that I worked for Laravel and I enjoyed every single......</summary>
+    <content type="html"><![CDATA[
+        
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+<p>Looking back at 2019, I have to say that 2019 was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.</p>
+<h2>Laravel</h2>
+<p>2019 marked the first full year that I worked for <a href="https://laravel.com/">Laravel</a> and I enjoyed every single bit of it. It is my first fully remote job and it was quite the adjustment but now I wouldn't want to trade it anytime soon. </p>
+<p>I had lots of fun maintaining the open-source first-party libraries. I've been focussing a lot on getting the issue count down. When I started in October 2018 the count stood at approximate ~1500 issues. At the time of writing, we're at 298 issues, including 69 bugs. I'm hoping to continue the trend and get closer to zero in 2020.</p>
+<p>I also worked hard on <a href="https://blog.laravel.com/cashier-v10">a new major Cashier v10 release</a> with support for SCA in the EU. It proved quite the challenge but now you can easily upgrade to comply with SCA. I'm also working on a smaller v11 release at the moment which will provide support with Stripe's Tax Rates API.</p>
+<h2>Laravel EventSauce</h2>
+<p>Ever since I saw Mitchell van Wijngaarden gave a talk about it at the very first PHP Antwerp event, I became very interested in Event Sourcing. I decided to focus a lot of free time into the subject, studying it and learning how to best apply it into apps.</p>
+<p>So when <a href="https://twitter.com/frankdejonge">Frank De Jonge</a> started <a href="https://eventsauce.io/">EventSauce</a>, which is a pragmatic way to implement Event Sourcing in PHP apps, I wanted to dig in to see what the best way would be to start using it in a Laravel application.</p>
+<p>That's how <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a> started. At the moment, it's still a work in progress but I'm hoping to release a v1.0 somewhere in Q2 2020. It'll provide out-of-the-box support for most EventSauce features so you can easily start with Event Sourcing in your Laravel application.</p>
+<h2>Public Speaking</h2>
+<p>Going further on the subject of Event Sourcing, I decided to make it my main talk subject for 2019. I was lucky to get to speak at several Laravel conferences and talk about this passion. </p>
+<p>I gave a talk at <a href="https://laravellive.uk/2019">Laravel Live UK</a>, <a href="https://www.youtube.com/watch?v=2yos8WUG5z4">Laracon US</a> and <a href="https://www.youtube.com/watch?v=dL6186yr9nI">Laracon EU</a>. Especially Laracon US will be in my memories as it was the first time I went and I met a lot of the Laravel US crowd. I'm looking forward to <a href="https://laracon.us/">next year's edition</a>.</p>
+<h2>Dotfiles</h2>
+<p>This year I also continued to improve <a href="https://github.com/driesvints/dotfiles">my Dotfiles project</a>. While it is mostly feature-complete by now, I'm very happy with the amount of traction it has gotten so far and I hope it'll continue to grow in the next couple of years.</p>
+<p>The project got a great highlight as well with <a href="https://laracasts.com/series/guest-spotlight/episodes/1">my screencast for Laracasts</a> which was the first professional screencast I've done so far. Thanks to <a href="https://twitter.com/jeffrey_way">Jeffrey</a> for featuring me in the Guest Spotlight series!</p>
+<h2>Full Stack Belgium</h2>
+<p>Besides my work for Laravel, my open source work and public speaking commitment I also organize the <a href="https://fullstackbelgium.be/">Full Stack Belgium</a> events in Ghent and Antwerp every single month together with my buddy <a href="https://twitter.com/riasvdv">Rias</a>.</p>
+<p>2019 was our best year yet. We organized a total of 24 events spread over 12 months. We also visited 21 different companies in three different cities. And we hosted a total of 39 different speakers which brought a wide range of talks. </p>
+<p>We're not planning on stopping anytime soon. So for 2020, we're again aiming at hosting 24 events in the cities of Ghent and Antwerp. And we'll be celebrating our 5th anniversary in the Summer!</p>
+<h2>Full Stack Europe</h2>
+<p>Ever since I started with the user group in 2015 I've always dreamed of organizing my very own conference. In October 2019 that dream became a reality when we hosted the first edition of <a href="https://fullstackeurope.com/2019">Full Stack Europe</a>.</p>
+<p>Together with my buddy <a href="https://twitter.com/freekmurze">Freek</a>, we set out to organize a conference in our pragmatic way. Freek wrote <a href="https://freek.dev/1209-how-php-conferences-can-be-improved">an in-depth post about the concept</a>. The first edition was a big success with over 250 attendees. This all also wouldn't be possible without the help from <a href="https://twitter.com/mathiasverraes">Mathias Verraes</a> and <a href="https://twitter.com/annekeschoonjns">Anneke Schoonjans</a> who have been vital in the success of the conference.</p>
+<p>We're already busy with organizing <a href="https://fullstackeurope.com/2020">the second edition</a> and can't wait to start announcing our line-up in April. <a href="https://ti.to/on3/fullstack20">Blind birds are available</a> until then and will be the lowest-priced tier.</p>
+<h2>Laravel.io</h2>
+<p>2019 also brought a lot of change for <a href="https://laravel.io/">Laravel.io</a>, the Laravel community portal that I'm maintaining. I've had the pleasure of meeting <a href="https://twitter.com/_joedixon">Joe Dixon</a> at Laravel Live UK and he offered to get on board to maintain the platform. This was a welcome offering and Joe immediately set out to implement <a href="https://medium.com/refactoring-ui/redesigning-laravel-io-c47ac495dff0">the design revamp that Steve Schoger and Adam Wathan did</a> a while back.</p>
+<p>Joe has been a great help in maintaining the platform and pushing out new features and bug fixes. We have other bigger plans for Laravel.io so keep an eye on that in 2020.</p>
+<h2>Laravel Lunch Break</h2>
+<p>If 2019 wasn't busy enough I also started a new podcast called <a href="https://www.laravellunchbreak.com/">Laravel Lunch Break</a> together with my buddy <a href="https://twitter.com/marcelpociot">Marcel</a>. We already released a couple of episodes. </p>
+<p>In the podcast, we always reflect on the previous week(s) on what we've been up to and what's going on in the Laravel/PHP/Dev community. We also occasionally invite a guest. In 2020 we'll continue to release episodes and invite people to talk about their passions and what keeps them busy.</p>
+<h2>Eventy</h2>
+<p>And lastly, at the end of 2019 in Q4, <a href="https://driesvints.com/blog/announcing-eventy/">I announced Eventy</a>, a new platform to organize events. <a href="https://eventy.io/">Eventy</a> will be focussing on connecting the dots between event organizers, venue owners, speakers, attendees, and sponsors. </p>
+<p>Eventy is still under construction but I'm very positive in releasing an MVP at the beginning of 2020. Eventy is my most ambitious project yet and will be my main passion project for 2020.</p>
+<h2>2020</h2>
+<p>What will 2020 hold for me? In general, I want to focus on the following things:</p>
+<ul>
+<li><strong>Building Eventy</strong>, releasing the first version and adding more and more features throughout the year.</li>
+<li><strong>Contributing to the Laravel ecosystem.</strong> I'm hoping to do my part in 2020 as well in improving the Laravel ecosystem and its first-party libraries. First of all by fixing bugs but also by adding some long-requested features.</li>
+<li><strong>Writing more blog posts.</strong> I feel like I've been neglecting this a lot in recent years and want to catch up a bit.</li>
+<li><strong>Organizing the best Full Stack Europe yet.</strong> Learning from the first edition, having a stellar speaker line-up and providing a great experience for our attendees.</li>
+<li><strong>Organising another 24 events for Full Stack Belgium.</strong> Building upon the success from the previous years and continuing to grow the user groups and providing great and educational evenings for our attendees. </li>
+<li><strong>Take Laravel.io to the next level.</strong> Adding more features and building the best platform possible for the Laravel community.</li>
+</ul>
+<p>We'll see at the end of 2020 how far I got but I'm hopeful that it'll be a success.</p>
+<p>At the end of this post, I want to thank a couple of people in particular for making 2019 a great year: Taylor Otwell, Freek Van der Herten, Rias Van der Veken, Mathias Verraes &amp; Anneke Schoonjans for all the reasons already mentioned above. They've all been vital for my success of this year and I want to recognize that by thanking them here.</p>
+<p>Thanks for a wonderful 2019 and enjoy the end of the year!</p>        ]]></content>
+</entry>
+            <entry>
     <id>https://driesvints.com/blog/announcing-eventy</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/announcing-eventy" />
     <title>Announcing Eventy</title>
@@ -436,9 +503,17 @@ I&#039;ve seen two different tips for speeding up your tests in Laravel in the p
     <author>
         <name>Dries Vints</name>
     </author>
-    <summary type="html">Let&#039;s draw a situation. Your computer breaks down. And I don&#039;t mean the classic &amp;quot;Dammit, my computer broke down, better get it fixed&amp;quot;. No, I mean the &amp;quot;Oh shit, my HD is totally fried, I lost everything and there&#039;s no way on earth I&#039;ll ever......</summary>
+    <summary type="html">
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+Let&#039;s draw a situation. Your computer breaks down. And I don&#039;t mean the classic &amp;quot;Dammit, my computer broke down, better get it fixed&amp;quot;. No, I mean the &amp;quot;Oh shit, my HD is totally fried, I lost everything and there&#039;s no way on earth I&#039;ll ever......</summary>
     <content type="html"><![CDATA[
-        <p>Let's draw a situation. Your computer breaks down. And I don't mean the classic &quot;Dammit, my computer broke down, better get it fixed&quot;. No, I mean the &quot;Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back&quot;-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.</p>
+        
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+<p>Let's draw a situation. Your computer breaks down. And I don't mean the classic &quot;Dammit, my computer broke down, better get it fixed&quot;. No, I mean the &quot;Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back&quot;-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.</p>
 <p>Thankfully, these days we have something called 'The Cloud ☁️'. We're developers so we're probably smart enough to save all of our documents up on Dropbox, Google Drive, iCloud, Github or whatever floats up there. Right? ... Right?</p>
 <p><em>crickets</em></p>
 <p>Anyway, I can't help you with your documents. That's not why I'm writing this. Save your documents in the cloud! What I <em>can</em> help you with is your development environment. See, we all have specific ways of setting up our computer. It's all different somehow. The apps we use, our IDE settings, what shell we prefer, what programming languages we work with, the tools we prefer. How on earth are we going to get <em>that</em> specific setup back the way we had it before our computer broke down?</p>
@@ -597,9 +672,25 @@ php artisan migrate --force --seed</code></pre>
     <author>
         <name>Dries Vints</name>
     </author>
-    <summary type="html">Sometimes you&#039;re stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we&#039;ll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal......</summary>
+    <summary type="html">
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+Sometimes you&#039;re stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we&#039;ll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal......</summary>
     <content type="html"><![CDATA[
-        <p>Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more--></p>
+        
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+<p>Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more--></p>
 <p>I'd like to begin by saying that while most solutions below might suit your needs, the ultimate solution is always just to move to a webhost which suits your needs to host a PHP framework like Laravel. <a href="http://fortrabbit.com/">Fortrabbit</a> is one such solution but definitely not the only one around.</p>
 <p>Remember that the absolute minimum requirements always include the need for the MCrypt PHP Extension.</p>
 <p>We'll use the following folder structure as a base for this tutorial, with the <code>www</code> folder as our DocumentRoot. Your own folder structure on your own shared hosting may differ from the one below.</p>
