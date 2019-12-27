@@ -4,7 +4,7 @@ section: content
 title: 2019 Recap
 date: 2019-12-27
 ---
-Looking back at 2019, I have to say that 2019 was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.
+Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.
 
 ## Laravel
 

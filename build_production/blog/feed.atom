@@ -18,11 +18,11 @@
         <name>Dries Vints</name>
     </author>
     <summary type="html">
-Looking back at 2019, I have to say that 2019 was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.
+Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.
 
 2019 marked the first full year that I worked for Laravel and I enjoyed every single......</summary>
     <content type="html"><![CDATA[
-<p>Looking back at 2019, I have to say that 2019 was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.</p>
+<p>Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.</p>
 <h2>Laravel</h2>
 <p>2019 marked the first full year that I worked for <a href="https://laravel.com/">Laravel</a> and I enjoyed every single bit of it. It is my first fully remote job and it was quite the adjustment but now I wouldn't want to trade it anytime soon. </p>
 <p>I had lots of fun maintaining the open-source first-party libraries. I've been focussing a lot on getting the issue count down. When I started in October 2018 the count stood at approximate ~1500 issues. At the time of writing, we're at 298 issues, including 69 bugs. I'm hoping to continue the trend and get closer to zero in 2020.</p>
