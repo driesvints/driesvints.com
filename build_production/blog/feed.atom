@@ -3,7 +3,7 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2019-12-27T16:45:13+00:00</updated>
+    <updated>2020-01-13T14:24:46+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
@@ -18,10 +18,17 @@
         <name>Dries Vints</name>
     </author>
     <summary type="html">
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
 Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.
 
-2019 marked the first full year that I worked for Laravel and I enjoyed every single......</summary>
+2019 marked the first full year that I worked for Laravel and I enjoyed every single bit......</summary>
     <content type="html"><![CDATA[
+        
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
 <p>Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.</p>
 <h2>Laravel</h2>
 <p>2019 marked the first full year that I worked for <a href="https://laravel.com/">Laravel</a> and I enjoyed every single bit of it. It is my first fully remote job and it was quite the adjustment but now I wouldn't want to trade it anytime soon. </p>
@@ -509,8 +516,15 @@ I&#039;ve seen two different tips for speeding up your tests in Laravel in the p
         <name>Dries Vints</name>
     </author>
     <summary type="html">
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
 Let&#039;s draw a situation. Your computer breaks down. And I don&#039;t mean the classic &amp;quot;Dammit, my computer broke down, better get it fixed&amp;quot;. No, I mean the &amp;quot;Oh shit, my HD is totally fried, I lost everything and there&#039;s no way on earth I&#039;ll ever......</summary>
     <content type="html"><![CDATA[
+        
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
 <p>Let's draw a situation. Your computer breaks down. And I don't mean the classic &quot;Dammit, my computer broke down, better get it fixed&quot;. No, I mean the &quot;Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back&quot;-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.</p>
 <p>Thankfully, these days we have something called 'The Cloud ☁️'. We're developers so we're probably smart enough to save all of our documents up on Dropbox, Google Drive, iCloud, Github or whatever floats up there. Right? ... Right?</p>
 <p><em>crickets</em></p>
@@ -671,8 +685,23 @@ php artisan migrate --force --seed</code></pre>
         <name>Dries Vints</name>
     </author>
     <summary type="html">
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
 Sometimes you&#039;re stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we&#039;ll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal......</summary>
     <content type="html"><![CDATA[
+        
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
+
+Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
 <p>Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more--></p>
 <p>I'd like to begin by saying that while most solutions below might suit your needs, the ultimate solution is always just to move to a webhost which suits your needs to host a PHP framework like Laravel. <a href="http://fortrabbit.com/">Fortrabbit</a> is one such solution but definitely not the only one around.</p>
 <p>Remember that the absolute minimum requirements always include the need for the MCrypt PHP Extension.</p>
