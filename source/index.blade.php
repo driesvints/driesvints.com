@@ -1,5 +1,5 @@
 @extends('_layouts.master', [
-    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel, organise meetups for Full Stack Belgium and organise the Full Stack Europe conference.',
+    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel, organise events for Full Stack Belgium and organise the Full Stack Europe conference.',
 ])
 
 @section('body')
@@ -10,7 +10,7 @@
             </h1>
 
             <p class="text-2xl sm:text-3xl leading-snug mb-8">
-                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">meetup</a> & <a href="https://fullstackeurope.com">conference</a> organiser, <a href="https://github.com/driesvints">open-source</a> maintainer, <a href="https://www.youtube.com/watch?v=2yos8WUG5z4">speaker</a>, and <a href="/blog">blogger</a>.
+                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">event</a> & <a href="https://fullstackeurope.com">conference</a> organiser, <a href="https://github.com/driesvints">open-source</a> maintainer, <a href="https://www.youtube.com/watch?v=2yos8WUG5z4">speaker</a>, and <a href="/blog">blogger</a>.
             </p>
 
             <p class="mb-8">
@@ -65,7 +65,7 @@
                                 <div class="h-24 mb-6">
                                     <img src="/assets/images/fsbe.png" class="inline-block max-h-full" alt="">
                                 </div>
-                                <p class="mb-6">Meetups in Belgium for web developers</p>
+                                <p class="mb-6">Events in Belgium for web developers</p>
                                 <p class="text-sm text-gray-600">fullstackbelgium.be <i class="fas fa-external-link-alt"></i></p>
                             </div>
                         </a>
