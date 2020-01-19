@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div class="content sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-10 lg:mr-16">
+            <div class="content sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-0 xl:mr-24">
                 {{ $slot }}
             </div>
         </div>
