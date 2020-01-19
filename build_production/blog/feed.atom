@@ -3,12 +3,47 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-01-13T14:24:46+00:00</updated>
+    <updated>2020-01-19T13:54:08+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
     </author>
                 <entry>
+    <id>https://driesvints.com/blog/being-productive</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/being-productive" />
+    <title>Being Productive</title>
+    <published>2020-01-19T00:00:00+00:00</published>
+    <updated>2020-01-19T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">In my previous post about my Recap for 2019 I talked about some of the things I wanted to do more this year. One of those things was writing more blog posts. January is almost over so I figured it&#039;s a good time to write the first one of 2020.
+The idea......</summary>
+    <content type="html"><![CDATA[
+        <p>In my previous post about my <a href="https://driesvints.com/blog/2019-recap/">Recap for 2019</a> I talked about some of the things I wanted to do more this year. One of those things was writing more blog posts. January is almost over so I figured it's a good time to write the first one of 2020.</p>
+<p>The idea for this blog post came to me a little earlier today when I was going to my todo list. It occurred to me that I'm depending a lot on my todo list app of choice: Things. I thought it might be interesting for others to see how I work and what keeps me focussed.</p>
+<p>Ever since I started using Things I've been pouring down every single small todo I ever need to tackle into the app. I can schedule upcoming todos, repeating ones, organize todos into projects and put anything else I need to take care of someday into a separate list. Below is a screenshot of my todos for today.</p>
+<p class="image">
+    <img src="/assets/images/posts/being-productive/things.jpg" alt="">
+    <span>My todo list for today in Things</span>
+</p>
+<p>Not everything on the above list will probably get done today. How I usually work is to prioritize things from top to bottom and then start working my way through the list. I try to get done as much as possible and if anything is left at the end of the day I reschedule those todos to a different date. </p>
+<p>Everything I don't need to get done today but needs to be picked up next will go into my inbox. Here I keep all my todos which aren't prioritized, planned or urgent. Todos that don't have a particularly due date go into &quot;someday&quot; or into a project so I can tackle them at a later time. I also keep some repeating todos for household chores like cleaning or doing the laundry so I never forget about them.</p>
+<p>Every single time I need to do anything, even if it is the smallest bit, I put it into Things. At a later time, I plan them according to how urgent those todos are. Using this system proved to be very productive for me. It helps me not forget about anything and helps me get things done.</p>
+<h2>Alternative Todos</h2>
+<p>Not all my todos are in Things. I often treat other apps and notification systems as todo lists as well. My email client Spark, for example, is such an alternative todo list. I'm very focussed on keeping my inbox to inbox zero. Every email is a todo for me. If there's something I can't tackle right away I'll use the snooze functionality to return to it at a later time.</p>
+<p>The same goes for my Github notifications. This ties into my work for Laravel. When working on issues every single notification is a todo for me which I tackle one-by-one. After reaching zero notifications I get a great feeling of knowing that I tackled everything that there is to do for that day so I focus on other things for Laravel. In between that other work I regularly check into the notifications to keep it to zero.</p>
+<h2>Hidden Todos</h2>
+<p>Sometimes though, todos aren't immediately obvious. They aren't in your todo app and you notice them by coincidence. What's helpful is to prevent those tasks from becoming todos in the first place. Take a basket of laundry for example. After noticing it, instead of letting it stand, I try to take care of it right away. That way I prevent my todo list from growing or forgetting about it.</p>
+<p>Here are some other examples of hidden todos: a stack of unprocessed receipts, some unfinished magazines, unread books in your book closet, your Netflix to-watch list. I treat all of those as todos as well. The reason why these kinds of todos aren't inside Things is that they're secondary and usually leisure-based. So I go through them at my own pace in my free time so I can focus on what's important with Things.</p>
+<h2>The Bad Parts</h2>
+<p>Some things keep me from being productive though. I have a long history of not sleeping very well which causes me to miss a large part of my morning. The first couple of hours every day I'm highly unproductive. I've been trying to work on this for quite some time now but it hasn't been easy. Hopefully, this is something that I can become better in the future.</p>
+<p>I also am someone who gets distracted easily. Being it a notification that comes in, a media device nearby or simply not focussing hard enough at the task at hand. To give you an example: instead of writing this blog post in one go I did it within three times, first by doing a break of checking into some emails and secondly getting some coffee. It'd be better if I did those things after finishing the post so I could have kept the momentum going. This is also something I want to work on and get better in.</p>
+<h2>Conclusion</h2>
+<p>All of the above is part of my way of being productive. It helps me going through things step-by-step. I noticed that I'm being productive the most when I'm in a sort of state where I'm crushing todos at a fast pace. Seeing your to-do list shrink is highly rewarding because you know that at the end of the ride you'll have time for anything else you wish to do.</p>
+<p>What are the things you do to keep yourself productive? <a href="https://twitter.com/driesvints">Let me know on Twitter!</a></p>        ]]></content>
+</entry>
+            <entry>
     <id>https://driesvints.com/blog/2019-recap</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/2019-recap" />
     <title>2019 Recap</title>
@@ -17,19 +52,11 @@
     <author>
         <name>Dries Vints</name>
     </author>
-    <summary type="html">
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.
+    <summary type="html">Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.
 
 2019 marked the first full year that I worked for Laravel and I enjoyed every single bit......</summary>
     <content type="html"><![CDATA[
-        
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-<p>Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.</p>
+        <p>Looking back at 2019, I have to say that it was probably my best year yet. In this post, I want to reflect a bit on what has happened and what the next year holds.</p>
 <h2>Laravel</h2>
 <p>2019 marked the first full year that I worked for <a href="https://laravel.com/">Laravel</a> and I enjoyed every single bit of it. It is my first fully remote job and it was quite the adjustment but now I wouldn't want to trade it anytime soon. </p>
 <p>I had lots of fun maintaining the open-source first-party libraries. I've been focussing a lot on getting the issue count down. When I started in October 2018 the count stood at approximate ~1500 issues. At the time of writing, we're at 298 issues, including 69 bugs. I'm hoping to continue the trend and get closer to zero in 2020.</p>
@@ -80,7 +107,7 @@ Notice: Trying to access array offset on value of type null in /Users/driesvints
 <li><strong>Contributing to the Laravel ecosystem.</strong> I'm hoping to do my part in 2020 as well in improving the Laravel ecosystem and its first-party libraries. First of all by fixing bugs but also by adding some long-requested features.</li>
 <li><strong>Writing more blog posts.</strong> I feel like I've been neglecting this a lot in recent years and want to catch up a bit.</li>
 <li><strong>Organizing the best Full Stack Europe yet.</strong> Learning from the first edition, having a stellar speaker line-up and providing a great experience for our attendees.</li>
-<li><strong>Organising another 24 events for Full Stack Belgium.</strong> Building upon the success from the previous years and continuing to grow the user groups and providing great and educational evenings for our attendees. </li>
+<li><strong>Organising another 24 events for Full Stack Belgium.</strong> Building upon the success from the previous years, continuing to grow the user groups and providing great and educational evenings for our attendees. </li>
 <li><strong>Take Laravel.io to the next level.</strong> Adding more features and building the best platform possible for the Laravel community.</li>
 </ul>
 <p>We'll see at the end of 2020 how far I got but I'm hopeful that it'll be a success.</p>
@@ -145,7 +172,7 @@ Notice: Trying to access array offset on value of type null in /Users/driesvints
     <content type="html"><![CDATA[
         <p>I’m very happy to announce that <a href="https://twitter.com/freekmurze">Freek</a> and I are organizing a brand new conference called <strong>Full Stack Europe</strong>. The conference will take place in <strong>the city of Antwerp</strong> somewhere in <strong>spring or early summer of 2019</strong>. With the conference, we want to welcome <strong>every type of developer</strong>, whether you identify yourself as full stack or are interested in front end, back end, devops, design or anything in between. We’ve already put up a website where you can <a href="http://fullstackeurope.com/">subscribe to stay informed about any news</a>. We’ve also set up <a href="https://twitter.com/fullstackeu">a Twitter account which you can follow</a>. Below I’d like to tell you a little bit more about how and why we’re organizing a conference.</p>
 <p>It’s been a little over three months since we launched the <a href="https://medium.com/@driesvints/hi-there-full-stack-antwerp-d10dcb96d93">rebranding of our user group to Full Stack Antwerp</a>. We were very happy to see it being so well received. Like we said in the announcement post: we felt that we couldn’t identify ourselves with just PHP anymore but instead wanted to offer a place for programmers from all kinds of backgrounds, being it from front-end, devops, back-end or even further. We saw our attendee numbers rise and started to get the feeling that we really made a change where lots of people could get behind.</p>
-<p>So this made us think that we could even take it a few steps further. While the user group is moving along steadily, we’re looking to see if we can offer a different kind of experience but on a larger scale. This is why we decided to start a new conference in line with the meetup group.</p>
+<p>So this made us think that we could even take it a few steps further. While the user group is moving along steadily, we’re looking to see if we can offer a different kind of experience but on a larger scale. This is why we decided to start a new conference in line with the user group.</p>
 <p>The name is a continuation with our two other projects: <a href="http://fullstackantwerp.be/">Full Stack Antwerp</a> (the user group) and <a href="https://fullstackbelgium.be/">Full Stack Belgium</a> (the Belgian Slack community). We chose Europe because we wanted to indicate that we’re aiming to target the international developer community and not just the Belgian community. We don’t even want to stop besides Europe, everyone from outside Europe is welcome as well of course. But since the conference will be organised in Europe, it made more sense.</p>
 <p>Full Stack Europe will be a conference aimed at offering talks for developers who want to learn across different types of skills. If you’re a back end developer and want to learn more devops, if you’re a front end developer who wants to improve his design skills, if you’re an infrastructure engineer but want to improve your coding skills, the opportunities are endless. We want to promote and encourage developers to step out of their comfort zones and improve not only their existing skills but learn new ones as well at the same time. Needless to say, the conference will offer a wide variety of different topics and speakers.</p>
 <p>At the moment we’re still working on sorting the details and specifics but we wanted to let you know about the conference already and for those who are interested <a href="https://fullstackeurope.com/">we prepared a signup form for our newsletter</a>. If you sign up here you’ll be the <strong>first in line for announcements</strong> and the first one for now and in the future <strong>to be able to buy tickets</strong> once they’re available. Sign up and you’ll also <strong>be the first to know when we announce speakers</strong>.</p>
@@ -165,19 +192,19 @@ Notice: Trying to access array offset on value of type null in /Users/driesvints
     <summary type="html">
     
 
-The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over 800 members on our meetup.com page. We’ve seen our meetups grow to over 40 regular attendees for each meetup. We’ve......</summary>
+The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over 800 members on our meetup.com page. We’ve seen our events grow to over 40 regular attendees for each user group. We’ve......</summary>
     <content type="html"><![CDATA[
         <p class="image">
     <img class="sm:max-w-sm shadow-none" src="/assets/images/posts/hi-there-full-stack-antwerp.png">
 </p>
-<p>The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over <strong>800 members</strong> on <a href="https://www.meetup.com/phpantwerp/">our meetup.com page</a>. We’ve seen our meetups grow to <strong>over 40 regular attendees</strong> for each meetup. We’ve <strong>organized 28 meetups</strong> and <strong>hosted more than 50 speakers</strong>. It’s amazing to see to how the user group has evolved.</p>
-<p>As a PHP user group we have a strong connection to the broader PHP community here in Belgium and beyond. We’re very happy to be part of 6 dedicated user groups in Belgium who are putting their time and effort into hosting their meetups and we’re glad to call each and one of them our friends.</p>
-<p>But if we look at our last couple of meetups over the past year we feel like we can no longer identify our user group to just PHP. We’ve been been hosting meetups with a variety of different topics including JavaScript, DevOps, soft skills and all sorts of other topics concerning web development and programming in general.</p>
-<p>That’s why we decided to rebrand ourselves as <strong>Full Stack Antwerp</strong>. We do this because we want to be more inclusive to other types of developers besides PHP developers and and to be open and welcoming to everyone who’s interested in learning and networking about programming and web development.</p>
-<p>You don’t need to be a full stack developer to attend our meetups. We are welcoming everyone who’s interested in programming, wether it’s front-end, back-end, devops or more.</p>
-<p>So what changes? Well, besides our new name and logo not much really. We’ll continue to host meetups like we do now, offering the same type of talks as we did over the past year and so on. We’ll still keep a strong connection to our friends in the PHP community and still be giving PHP talks amongst others. We’re just opening up the possibility to offer a more diverse range of talks.</p>
+<p>The last couple of years have been a pretty crazy ride for us at PHP Antwerp. We went from a handful of attendees to over <strong>800 members</strong> on <a href="https://www.meetup.com/phpantwerp/">our meetup.com page</a>. We’ve seen our events grow to <strong>over 40 regular attendees</strong> for each user group. We’ve <strong>organized 28 evetjts</strong> and <strong>hosted more than 50 speakers</strong>. It’s amazing to see to how the user group has evolved.</p>
+<p>As a PHP user group we have a strong connection to the broader PHP community here in Belgium and beyond. We’re very happy to be part of 6 dedicated user groups in Belgium who are putting their time and effort into hosting their events and we’re glad to call each and one of them our friends.</p>
+<p>But if we look at our last couple of events over the past year we feel like we can no longer identify our user group to just PHP. We’ve been been hosting events with a variety of different topics including JavaScript, DevOps, soft skills and all sorts of other topics concerning web development and programming in general.</p>
+<p>That’s why we decided to re-brand ourselves as <strong>Full Stack Antwerp</strong>. We do this because we want to be more inclusive to other types of developers besides PHP developers and and to be open and welcoming to everyone who’s interested in learning and networking about programming and web development.</p>
+<p>You don’t need to be a full stack developer to attend our events. We are welcoming everyone who’s interested in programming, whether it’s front-end, back-end, devops or more.</p>
+<p>So what changes? Well, besides our new name and logo not much really. We’ll continue to host events like we do now, offering the same type of talks as we did over the past year and so on. We’ll still keep a strong connection to our friends in the PHP community and still be giving PHP talks amongst others. We’re just opening up the possibility to offer a more diverse range of talks.</p>
 <p>Besides our re-branding we also have something else to announce. We’re starting a new Slack community called <strong>Full Stack Belgium</strong> for the entire developer community in Belgium. Here, we aim to offer a single place where Belgian developers can join and share knowledge, network and help each other out. We want to offer a safe place and bring developers in Belgium closer together. Give it a try and join us at <a href="https://fullstackbelgium.be/">fullstackbelgium.be</a>!</p>
-<p>We’re excited for the future to see where our new path leads us. Hopefully we’ll see you at one our upcoming meetups. Our next meetup is planned for the end of May and we hope to see you there!</p>
+<p>We’re excited for the future to see where our new path leads us. Hopefully we’ll see you at one our upcoming events. Our next event is planned for the end of May and we hope to see you there!</p>
 <p>Rias, Freek &amp; Dries</p>        ]]></content>
 </entry>
             <entry>
@@ -515,17 +542,9 @@ I&#039;ve seen two different tips for speeding up your tests in Laravel in the p
     <author>
         <name>Dries Vints</name>
     </author>
-    <summary type="html">
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-Let&#039;s draw a situation. Your computer breaks down. And I don&#039;t mean the classic &amp;quot;Dammit, my computer broke down, better get it fixed&amp;quot;. No, I mean the &amp;quot;Oh shit, my HD is totally fried, I lost everything and there&#039;s no way on earth I&#039;ll ever......</summary>
+    <summary type="html">Let&#039;s draw a situation. Your computer breaks down. And I don&#039;t mean the classic &amp;quot;Dammit, my computer broke down, better get it fixed&amp;quot;. No, I mean the &amp;quot;Oh shit, my HD is totally fried, I lost everything and there&#039;s no way on earth I&#039;ll ever......</summary>
     <content type="html"><![CDATA[
-        
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-<p>Let's draw a situation. Your computer breaks down. And I don't mean the classic &quot;Dammit, my computer broke down, better get it fixed&quot;. No, I mean the &quot;Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back&quot;-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.</p>
+        <p>Let's draw a situation. Your computer breaks down. And I don't mean the classic &quot;Dammit, my computer broke down, better get it fixed&quot;. No, I mean the &quot;Oh shit, my HD is totally fried, I lost everything and there's no way on earth I'll ever get it back&quot;-hell. Some day, you may experience this situation. If you're lucky you won't. But hey, luck runs out eventually.</p>
 <p>Thankfully, these days we have something called 'The Cloud ☁️'. We're developers so we're probably smart enough to save all of our documents up on Dropbox, Google Drive, iCloud, Github or whatever floats up there. Right? ... Right?</p>
 <p><em>crickets</em></p>
 <p>Anyway, I can't help you with your documents. That's not why I'm writing this. Save your documents in the cloud! What I <em>can</em> help you with is your development environment. See, we all have specific ways of setting up our computer. It's all different somehow. The apps we use, our IDE settings, what shell we prefer, what programming languages we work with, the tools we prefer. How on earth are we going to get <em>that</em> specific setup back the way we had it before our computer broke down?</p>
@@ -587,6 +606,33 @@ Notice: Trying to access array offset on value of type null in /Users/driesvints
 <p>Go build your own dotfiles and the next time when your computer crashes, it won't be that bad! 😄</p>        ]]></content>
 </entry>
             <entry>
+    <id>https://driesvints.com/blog/quality-assurance-with-envoyer</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/quality-assurance-with-envoyer" />
+    <title>Quality Assurance with Envoyer</title>
+    <published>2015-08-25T00:00:00+00:00</published>
+    <updated>2015-08-25T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">This is one of the tutorials I did for my Laracon EU talk.
+Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
+For example, at......</summary>
+    <content type="html"><![CDATA[
+        <p>This is one of the tutorials I did for my Laracon EU talk.</p>
+<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
+<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
+<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
+<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
+<p>You can do that with this hook:</p>
+<pre><code class="language-bash">cd /home/forge/default/current
+php artisan migrate:reset --force</code></pre>
+<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
+<pre><code>cd {{release}}
+php artisan migrate --force --seed</code></pre>
+<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
+<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>        ]]></content>
+</entry>
+            <entry>
     <id>https://driesvints.com/blog/continuous-delivery-with-forge-and-envoyer</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/continuous-delivery-with-forge-and-envoyer" />
     <title>Continuous Delivery with Forge and Envoyer</title>
@@ -630,33 +676,6 @@ composer install --dev
 <p>And that's it! Your Continuous Delivery pipeline is now set up.</p>        ]]></content>
 </entry>
             <entry>
-    <id>https://driesvints.com/blog/quality-assurance-with-envoyer</id>
-    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/quality-assurance-with-envoyer" />
-    <title>Quality Assurance with Envoyer</title>
-    <published>2015-08-25T00:00:00+00:00</published>
-    <updated>2015-08-25T00:00:00+00:00</updated>
-    <author>
-        <name>Dries Vints</name>
-    </author>
-    <summary type="html">This is one of the tutorials I did for my Laracon EU talk.
-Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
-For example, at......</summary>
-    <content type="html"><![CDATA[
-        <p>This is one of the tutorials I did for my Laracon EU talk.</p>
-<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
-<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
-<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
-<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
-<p>You can do that with this hook:</p>
-<pre><code class="language-bash">cd /home/forge/default/current
-php artisan migrate:reset --force</code></pre>
-<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
-<pre><code>cd {{release}}
-php artisan migrate --force --seed</code></pre>
-<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
-<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>        ]]></content>
-</entry>
-            <entry>
     <id>https://driesvints.com/blog/laravel-io-the-road-ahead</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/laravel-io-the-road-ahead" />
     <title>Laravel.IO - The Road Ahead</title>
@@ -684,25 +703,9 @@ php artisan migrate --force --seed</code></pre>
     <author>
         <name>Dries Vints</name>
     </author>
-    <summary type="html">
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-Sometimes you&#039;re stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we&#039;ll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal......</summary>
+    <summary type="html">Sometimes you&#039;re stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we&#039;ll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal......</summary>
     <content type="html"><![CDATA[
-        
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-
-Notice: Trying to access array offset on value of type null in /Users/driesvints/Sites/driesvints.com/vendor/erusev/parsedown-extra/ParsedownExtra.php on line 241
-<p>Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more--></p>
+        <p>Sometimes you're stuck on shared hosting. Be it client reasons or company policies. Even though Laravel is structured in a very specific way we'll go over some steps to see how we can get Laravel working on a shared hosting environment with minimal requirements.<!--more--></p>
 <p>I'd like to begin by saying that while most solutions below might suit your needs, the ultimate solution is always just to move to a webhost which suits your needs to host a PHP framework like Laravel. <a href="http://fortrabbit.com/">Fortrabbit</a> is one such solution but definitely not the only one around.</p>
 <p>Remember that the absolute minimum requirements always include the need for the MCrypt PHP Extension.</p>
 <p>We'll use the following folder structure as a base for this tutorial, with the <code>www</code> folder as our DocumentRoot. Your own folder structure on your own shared hosting may differ from the one below.</p>
