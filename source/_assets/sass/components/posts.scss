@@ -81,6 +81,7 @@
     }
     ul li {
         list-style-type: disc;
+        @apply mb-1;
     }
     ul ul,
     ol ol {
