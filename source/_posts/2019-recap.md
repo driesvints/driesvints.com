@@ -91,7 +91,7 @@ What will 2020 hold for me? In general, I want to focus on the following things:
 - **Contributing to the Laravel ecosystem.** I'm hoping to do my part in 2020 as well in improving the Laravel ecosystem and its first-party libraries. First of all by fixing bugs but also by adding some long-requested features.
 - **Writing more blog posts.** I feel like I've been neglecting this a lot in recent years and want to catch up a bit.
 - **Organizing the best Full Stack Europe yet.** Learning from the first edition, having a stellar speaker line-up and providing a great experience for our attendees.
-- **Organising another 24 events for Full Stack Belgium.** Building upon the success from the previous years and continuing to grow the user groups and providing great and educational evenings for our attendees. 
+- **Organising another 24 events for Full Stack Belgium.** Building upon the success from the previous years, continuing to grow the user groups and providing great and educational evenings for our attendees. 
 - **Take Laravel.io to the next level.** Adding more features and building the best platform possible for the Laravel community.
 
 We'll see at the end of 2020 how far I got but I'm hopeful that it'll be a success.
