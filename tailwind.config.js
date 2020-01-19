@@ -16,6 +16,9 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ]
       },
+      maxWidth: {
+        '7xl': '104rem',
+      },
     },
     backgroundColor: theme => ({
       ...theme('colors'),
