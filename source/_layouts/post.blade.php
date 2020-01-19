@@ -24,7 +24,7 @@
                         Like what you read? Feel free to share!
                         Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
                     </p>
-                    <p>
+                    <p class="share-links">
                         <a target="_blank"
                            href="http://twitter.com/share?text={{ urlencode('"'.$page->title.'" by @driesvints - ') }}&url={{ urlencode($page->getUrl()) }}">
                             <i class="enlarge fab fa-twitter"></i>
