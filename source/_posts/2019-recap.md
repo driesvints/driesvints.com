@@ -14,6 +14,16 @@ I had lots of fun maintaining the open-source first-party libraries. I've been f
 
 I also worked hard on [a new major Cashier v10 release](https://blog.laravel.com/cashier-v10) with support for SCA in the EU. It proved quite the challenge but now you can easily upgrade to comply with SCA. I'm also working on a smaller v11 release at the moment which will provide support with Stripe's Tax Rates API.
 
+Here's some other posts of friends:
+
+- [Freek Murze](https://freek.dev/1522-a-recap-of-2019)
+- [Mohammed Said](https://twitter.com/themsaid/status/1202893323595321344)
+- [Adam Wathan](https://adamwathan.me/journal/2019/12/06/2019-year-in-review/)
+- [Sebastian De Deyne](https://sebastiandedeyne.com/newsletter/happy-holidays-looking-back-at-2019/)
+- [Nuno Maduro](https://nunomaduro.com/a-recap-of-2019/)
+- [Marcel Pociot](https://pociot.dev/23-2019-my-year-in-review)
+- [Bobby Bouwmann](https://bobbybouwmann.nl/blog/year-in-review-2019)
+
 ## Laravel EventSauce
 
 Ever since I saw Mitchell van Wijngaarden gave a talk about it at the very first PHP Antwerp event, I became very interested in Event Sourcing. I decided to focus a lot of free time into the subject, studying it and learning how to best apply it into apps.
