@@ -37,7 +37,7 @@ Here are some other examples of hidden todos: a stack of unprocessed receipts, s
 
 Some things keep me from being productive though. I have a long history of not sleeping very well which causes me to miss a large part of my morning. The first couple of hours every day I'm highly unproductive. I've been trying to work on this for quite some time now but it hasn't been easy. Hopefully, this is something that I can become better in the future.
 
-I also am someone who gets distracted easily. Being it a notification that comes in, a media device nearby or simply not focussing hard enough at the task at hand. To give you an example: instead of writing this blog post in one go I did it within three times, first by doing a break of checking into some emails and secondly getting some coffee. It'd be better if I did those things after finishing the post so I could have kept the momentum going. This is also something I want to work on and get better in.
+I also am someone who gets distracted easily. Either from a notification that comes in, a media device nearby or simply not focusing hard enough at the task at hand. To give you an example: instead of writing this blog post in one go I did it within three times, first by doing a break of checking into some emails and secondly getting some coffee. It'd be better if I did those things after finishing the post so I could have kept the momentum going. This is also something I want to work on and get better in.
 
 ## Conclusion
 
