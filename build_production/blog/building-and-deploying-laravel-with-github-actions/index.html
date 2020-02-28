@@ -6,10 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Site info -->
-<title>Dries Vints</title>
+<title>Building and Deploying Laravel with Github Actions | Dries Vints</title>
 
-    <meta name="description" content="I&#039;m a software engineer from Antwerp, Belgium, work for Laravel, organise events for Full Stack Belgium and organise the Full Stack Europe conference.">
+    <meta name="description" content="I recently set up Github Actions for Laravel.io so I thought I&#039;d share what it takes to set up a Continuous Delivery pipeline with Github Actions. First,...">
 
+    <meta property="article:published_time" content="2020-02-28" />
 
 <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title=" Atom Feed">
 
@@ -42,10 +43,10 @@
     </div>
 
         <div id="header" class="bg-black relative text-lg">
-    <div class="max-w-7xl m-auto bg-cover bg-no-repeat" style="background-image: url('/assets/images/header.jpg'); background-position: 0 25%">
-        <div class="header-image bg-black-opacity-40 lg:bg-transparent">
-            <div class="text-white py-6 pb-24">
-                <div class=" sm:flex text-center px-6 sm:px-12">
+    <div class=" bg-cover bg-no-repeat" style="background-image: url('/assets/images/header-black.jpg'); background-position: top right">
+        <div class="header-image header-image-small">
+            <div class="text-white py-6 pb-2 sm:pb-12">
+                <div class="max-w-7xl m-auto sm:flex text-center px-6 sm:px-12">
                     <div class="sm:flex-1 text-2xl font-bold sm:text-left mb-4">
                         <a href="/" class="hover:underline">Dries Vints</a>
                     </div>
@@ -86,25 +87,7 @@
                 </div>
 
                 <div class="content sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-0 xl:mr-24">
-                    <div class="text-center sm:text-left">
-            <h1 class="text-5xl font-bold mb-6">
-                Hi, I'm Dries
-            </h1>
-
-            <p class="text-2xl sm:text-3xl leading-snug mb-8">
-                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">event</a> & <a href="https://fullstackeurope.com">conference</a> organiser, <a href="https://github.com/driesvints">open-source</a> maintainer, <a href="https://www.youtube.com/watch?v=2yos8WUG5z4">speaker</a>, and <a href="/blog">blogger</a>.
-            </p>
-
-            <p class="mb-8">
-                <a href="/#about">
-                    More about me &rightarrow;
-                </a>
-            </p>
-
-            <p class="text-xs">
-                Photo by <a href="https://ninjaparade.ca">ninjaparade</a>
-            </p>
-        </div>
+                    
                 </div>
             </div>
         </div>
@@ -115,97 +98,105 @@
 </div>
 
     <div id="content">
-        <div class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
-            <h2 class="text-4xl text-center sm:text-left font-bold mb-4 sm:mb-12">Latest Posts</h2>
-
-            <p class="text-base text-center font-bold sm:float-right sm:-mt-20 mb-8">
-                <a href="/blog">View all &rightarrow;</a>
-            </p>
-
-                            <span class="block text-xs uppercase text-gray-600">
-                    February 28, 2020
-                </span>
-                <p class="text-2xl mb-8">
-                    <a href="/blog/building-and-deploying-laravel-with-github-actions">Building and Deploying Laravel with Github Actions</a>
-                </p>
-                            <span class="block text-xs uppercase text-gray-600">
-                    January 19, 2020
-                </span>
-                <p class="text-2xl mb-8">
-                    <a href="/blog/being-productive">Being Productive</a>
-                </p>
-                            <span class="block text-xs uppercase text-gray-600">
-                    December 27, 2019
-                </span>
-                <p class="text-2xl mb-8">
-                    <a href="/blog/2019-recap">2019 Recap</a>
-                </p>
-                            <span class="block text-xs uppercase text-gray-600">
-                    October 19, 2019
-                </span>
-                <p class="text-2xl mb-8">
-                    <a href="/blog/announcing-eventy">Announcing Eventy</a>
-                </p>
-                            <span class="block text-xs uppercase text-gray-600">
-                    June 18, 2019
-                </span>
-                <p class="text-2xl mb-8">
-                    <a href="/blog/maintaining-laravel">Maintaining Laravel</a>
-                </p>
-                    </div>
-
-        <div id="projects" class="bg-gray-200">
-            <div class="max-w-6xl mx-auto px-6 py-10 sm:py-20">
-                <h2 class="text-4xl text-center font-bold mb-10">Projects</h2>
-
-                <div class="md:flex mb-16">
-                    <div class="project sm:flex-1 px-4 lg:px-8 mb-16 md:mb-0">
-                        <a href="https://fullstackeurope.com" target="_blank">
-                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
-                                <div class="h-24 pt-5 mb-6">
-                                    <img src="/assets/images/fseu.png" class="inline-block max-h-full" alt="">
-                                </div>
-                                <p class="mb-6">A conference for every kind of developer</p>
-                                <p class="text-sm text-gray-600">fullstackeurope.com <i class="fas fa-external-link-alt"></i></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project md:flex-1 px-4 lg:px-8 mb-16 md:mb-0">
-                        <a href="https://fullstackbelgium.be" target="_blank">
-                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
-                                <div class="h-24 mb-6">
-                                    <img src="/assets/images/fsbe.png" class="inline-block max-h-full" alt="">
-                                </div>
-                                <p class="mb-6">Events in Belgium for web developers</p>
-                                <p class="text-sm text-gray-600">fullstackbelgium.be <i class="fas fa-external-link-alt"></i></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project md:flex-1 px-4 lg:px-8">
-                        <a href="https://laravel.io" target="_blank">
-                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
-                                <div class="h-24 pt-8 mb-6">
-                                    <img src="/assets/images/laravelio.png" class="inline-block max-h-full" style="max-width: 80%" alt="">
-                                </div>
-                                <p class="mb-6">The Laravel community platform</p>
-                                <p class="text-sm text-gray-600">laravel.io <i class="fas fa-external-link-alt"></i></p>
-                            </div>
-                        </a>
-                    </div>
+        <div class="py-10 sm:py-20">
+            <div id="post">
+                <div class="mb-12">
+                    <h1 class="font-bold text-4xl mb-6">Building and Deploying Laravel with Github Actions</h1>
+                    <p class="block text-xs uppercase text-gray-600">
+                        Published on February 28, 2020
+                    </p>
                 </div>
 
-                <div class="mx-auto max-w-md text-center">
-                    <p class="text-base text-gray-700 mb-8">
-                        + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
-                        + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
-                        + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.
+                <p>I recently set up <a href="https://github.com/features/actions">Github Actions</a> for <a href="https://laravel.io">Laravel.io</a> so I thought I'd share what it takes to set up a Continuous Delivery pipeline with Github Actions. First, before we continue, I suggest you read <a href="https://freek.dev/1546-using-github-actions-to-run-the-tests-of-laravel-projects-and-packages">this excellent blog post</a> by my buddy Freek Van der Herten where he already explains Github Actions in great detail. A lot of my setup will already be explained there so we'll focus on the most important and different bits and pieces here.</p>
+<p>Let's look at the Github Actions workflow yaml file:</p>
+<pre><code class="language-yaml">name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Tests
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache/files
+          key: dependencies-composer-${{ hashFiles('composer.json') }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.3
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
+          coverage: none
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-interaction --no-suggest
+
+      - name: Install NPM dependencies
+        run: npm install
+
+      - name: Compile assets
+        run: npm run production
+
+      - name: Execute tests
+        run: vendor/bin/phpunit --verbose
+
+      - name: Deploy
+        if: success() &amp;&amp; github.ref == 'refs/heads/master'
+        run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}</code></pre>
+<p>The main difference with a package setup is that we don't do matrix builds. We only test with the specific setup from our production environment. Laravel.io still runs on PHP 7.3 so we only need to run that one.</p>
+<p>As you can also see, it's all pretty straight forward. We setup our build environment, install our dependencies, compile our assets (you can skip these two steps if you commit your assets), run tests and deploy the app.</p>
+<h2>Deploying the app</h2>
+<pre><code class="language-yaml">- name: Deploy
+  if: success() &amp;&amp; github.ref == 'refs/heads/master'
+  run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}</code></pre>
+<p>This step will only run if the build is successful and when the build has run on master. We'll use an <code>ENVOYER_HOOK</code> secret env variable to trigger the Envoyer deployment url, pass in the specific commit we want to deploy and Envoyer will take care of deploying our app.</p>
+<h2>Conclusion</h2>
+<p>That's it! Pretty simple, right? Hope this helps you with your own app.</p>
+                <div class="share mx-auto max-w-xs mt-10 sm:mt-16 text-2xl text-center">
+                    <p class="text-sm italic">
+                        Like what you read? Feel free to share!
+                        Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
+                    </p>
+                    <p class="share-links">
+                        <a target="_blank"
+                           href="http://twitter.com/share?text=%22Building+and+Deploying+Laravel+with+Github+Actions%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fbuilding-and-deploying-laravel-with-github-actions">
+                            <i class="enlarge fab fa-twitter"></i>
+                        </a>
+
+                        <a class="ml-2" target="_blank"
+                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fbuilding-and-deploying-laravel-with-github-actions&quote=%22Building+and+Deploying+Laravel+with+Github+Actions%22+by+Dries+Vints+-+">
+                            <i class="enlarge fab fa-facebook-f"></i>
+                        </a>
+
+                        <a class="ml-2" target="_blank"
+                           href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fbuilding-and-deploying-laravel-with-github-actions&title=%22Building+and+Deploying+Laravel+with+Github+Actions%22+by+Dries+Vints+-+">
+                            <i class="enlarge fab fa-linkedin-in"></i>
+                        </a>
                     </p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="about" class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
+                    <div class="bg-gray-200 text-xl sm:text-2xl border-t border-gray-300 px-6">
+                <div class="max-w-4xl mx-auto flex">
+                    <div class="flex-1 border-r border-gray-300 pr-6 py-10 sm:py-20">
+                                                    <p class="uppercase text-sm mb-2">&leftarrow; Previous post</p>
+                            <a href="/blog/being-productive">Being Productive</a>
+                                            </div>
+                    <div class="flex-1 text-right px-4 py-10 pl-6 sm:py-20">
+                                            </div>
+                </div>
+            </div>
+        
+        <div id="about" class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
     <div class="text-center mb-6">
         <a href="https://twitter.com/driesvints">
             <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=180" width="90" class="rounded-full enlarge inline-block mb-4 sm:mb-0 sm:mr-4" alt="">
@@ -234,6 +225,7 @@
         Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a> where I also share some <a href="https://twitter.com/i/moments/1155908429698994181">Dev Tips</a> from time to time. You can contact me by <a href="mailto:dries.vints@gmail.com">email</a>.
     </p>
 </div>
+    </div>
 </div>
 
 <div class="border-t border-gray-300">
