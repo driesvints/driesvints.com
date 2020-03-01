@@ -149,7 +149,7 @@ jobs:
         run: vendor/bin/phpunit --verbose
 
       - name: Deploy
-        if: success() &amp;&amp; github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master'
         run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}</code></pre>
 <p>The main difference with a package setup is that we don't do matrix builds. We only test with the specific setup from our production environment. Laravel.io still runs on PHP 7.3 so we only need to run that one.</p>
 <p>As you can also see, it's all pretty straight forward. We setup our build environment, install our dependencies, compile our assets (you can skip these two steps if you commit your assets), run tests and deploy the app.</p>
