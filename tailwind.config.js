@@ -17,7 +17,7 @@ module.exports = {
         ]
       },
       maxWidth: {
-        '7xl': '104rem',
+        '8xl': '88rem',
       },
     },
     backgroundColor: theme => ({

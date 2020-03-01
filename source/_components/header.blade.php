@@ -1,8 +1,8 @@
 <div id="header" class="bg-black relative text-lg">
-    <div class="{{ isset($small) ? '' : 'max-w-7xl m-auto' }} bg-cover bg-no-repeat" style="background-image: url('/assets/images/{{ isset($small) ? 'header-black' : 'header' }}.jpg'); background-position: {{ isset($small) ? 'top right' : '0 25%' }}">
+    <div class="{{ isset($small) ? '' : 'max-w-8xl m-auto' }} bg-cover bg-no-repeat" style="background-image: url('/assets/images/{{ isset($small) ? 'header-black' : 'header' }}.jpg'); background-position: {{ isset($small) ? 'top right' : '0 25%' }}">
         <div class="header-image {{ isset($small) ? 'header-image-small' :  'bg-black-opacity-40 lg:bg-transparent' }}">
             <div class="text-white py-6 {{ isset($small) ? 'pb-2 sm:pb-12' : 'pb-24' }}">
-                <div class="{{ isset($small) ? 'max-w-7xl m-auto' : '' }} sm:flex text-center px-6 sm:px-12">
+                <div class="{{ isset($small) ? 'max-w-8xl m-auto' : '' }} sm:flex text-center px-6 sm:px-12">
                     <div class="sm:flex-1 text-2xl font-bold sm:text-left mb-4">
                         <a href="/" class="hover:underline">Dries Vints</a>
                     </div>
