@@ -21,18 +21,6 @@ When you run your tests locally on, let&#039;s say Homestead, that&#039;s fine b
 
 <script src="https://kit.fontawesome.com/980abfb339.js"></script>
 
-<!-- Google Analytics -->
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-18478762-2']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
 
 <div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
     <div class="bg-secondary text-white font-semibold hover:underline py-3 px-6" target="_blank">
@@ -251,3 +239,17 @@ composer install --dev
 </div>
 
 <script src="/assets/build/js/main.js?id=773e54da70cb3088aa18"></script>
+
+<script>
+        (function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+                (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+                m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+        })(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'GFHEOMNZ');
+        fathom('trackPageview');
+    </script>

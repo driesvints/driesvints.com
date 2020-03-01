@@ -24,7 +24,6 @@
 
 <script src="https://kit.fontawesome.com/980abfb339.js"></script>
 
-@include('_partials.google-analytics')
 @include('_partials.fbvideo')
 
 <div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
@@ -42,3 +41,5 @@
 @include('_layouts.footer')
 
 <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+
+@include('_partials.fathom')
