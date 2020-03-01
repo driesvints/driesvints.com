@@ -61,7 +61,7 @@ As you can also see, it's all pretty straight forward. We setup our build enviro
 
 ```yaml
 - name: Deploy
-  if: success() && github.ref == 'refs/heads/master'
+  if: github.ref == 'refs/heads/master'
   run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}
 ```
 

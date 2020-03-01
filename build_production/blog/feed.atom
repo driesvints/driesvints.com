@@ -3,7 +3,7 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-03-01T18:46:23+00:00</updated>
+    <updated>2020-03-01T18:50:54+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
@@ -67,7 +67,7 @@ jobs:
 <p>As you can also see, it's all pretty straight forward. We setup our build environment, install our dependencies, compile our assets (you can skip these two steps if you commit your assets), run tests and deploy the app.</p>
 <h2>Deploying the app</h2>
 <pre><code class="language-yaml">- name: Deploy
-  if: success() &amp;&amp; github.ref == 'refs/heads/master'
+  if: github.ref == 'refs/heads/master'
   run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}</code></pre>
 <p>This step will only run if the build is successful and when the build has run on master. We'll use an <code>ENVOYER_HOOK</code> secret env variable to trigger the Envoyer deployment url, pass in the specific commit we want to deploy. </p>
 <p>As soon as the Envoyer url is triggered, it'll start deploying the specific commit. We'll need to define four steps after running the &quot;Install Composer Dependencies&quot; hook.</p>
