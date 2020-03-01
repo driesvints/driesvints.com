@@ -65,7 +65,44 @@ As you can also see, it's all pretty straight forward. We setup our build enviro
   run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}
 ```
 
-This step will only run if the build is successful and when the build has run on master. We'll use an `ENVOYER_HOOK` secret env variable to trigger the Envoyer deployment url, pass in the specific commit we want to deploy and Envoyer will take care of deploying our app.
+This step will only run if the build is successful and when the build has run on master. We'll use an `ENVOYER_HOOK` secret env variable to trigger the Envoyer deployment url, pass in the specific commit we want to deploy. 
+
+As soon as the Envoyer url is triggered, it'll start deploying the specific commit. We'll need to define four steps after running the "Install Composer Dependencies" hook.
+
+First we need to re-cache our routes and config:
+
+```bash
+cd {{release}}
+
+php artisan route:cache
+php artisan config:cache
+```
+
+Then we'll install the front-end assets:
+
+```bash
+cd {{release}}
+
+npm install
+```
+
+And compile them:
+
+```bash
+cd {{release}}
+
+npm run production
+```
+
+And eventually we'll run the migrations at the end:
+
+```bash
+cd {{release}}
+
+php artisan migrate --force
+```
+
+After these steps Envoyer will activate the new release.
 
 ## Conclusion
 

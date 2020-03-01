@@ -3,7 +3,7 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-03-01T11:29:12+00:00</updated>
+    <updated>2020-03-01T18:46:23+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
@@ -69,7 +69,26 @@ jobs:
 <pre><code class="language-yaml">- name: Deploy
   if: success() &amp;&amp; github.ref == 'refs/heads/master'
   run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}</code></pre>
-<p>This step will only run if the build is successful and when the build has run on master. We'll use an <code>ENVOYER_HOOK</code> secret env variable to trigger the Envoyer deployment url, pass in the specific commit we want to deploy and Envoyer will take care of deploying our app.</p>
+<p>This step will only run if the build is successful and when the build has run on master. We'll use an <code>ENVOYER_HOOK</code> secret env variable to trigger the Envoyer deployment url, pass in the specific commit we want to deploy. </p>
+<p>As soon as the Envoyer url is triggered, it'll start deploying the specific commit. We'll need to define four steps after running the &quot;Install Composer Dependencies&quot; hook.</p>
+<p>First we need to re-cache our routes and config:</p>
+<pre><code class="language-bash">cd {{release}}
+
+php artisan route:cache
+php artisan config:cache</code></pre>
+<p>Then we'll install the front-end assets:</p>
+<pre><code class="language-bash">cd {{release}}
+
+npm install</code></pre>
+<p>And compile them:</p>
+<pre><code class="language-bash">cd {{release}}
+
+npm run production</code></pre>
+<p>And eventually we'll run the migrations at the end:</p>
+<pre><code class="language-bash">cd {{release}}
+
+php artisan migrate --force</code></pre>
+<p>After these steps Envoyer will activate the new release.</p>
 <h2>Conclusion</h2>
 <p>That's it! Pretty simple, right? Hope this helps you with your own app.</p>        ]]></content>
 </entry>
