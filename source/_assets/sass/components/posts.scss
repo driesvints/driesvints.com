@@ -88,8 +88,9 @@
         @apply my-1;
     }
 
-    p code {
-        @apply font-mono font-semibold text-base p-1;
+    p code,
+    ul code {
+        @apply bg-gray-200 text-base py-1 px-2;
     }
 
     pre {
