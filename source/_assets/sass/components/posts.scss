@@ -110,6 +110,9 @@
         @apply shadow-none;
     }
 
+    .share-links a {
+        @apply text-gray-500;
+    }
     .share-links a:hover {
         text-decoration: none;
     }

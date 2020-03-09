@@ -4,7 +4,7 @@
 
 @section('body')
     @component('_components.header')
-        <div class="text-center sm:text-left">
+        <div class="text-center">
             <h1 class="text-5xl font-bold mb-6">
                 Hi, I'm Dries
             </h1>

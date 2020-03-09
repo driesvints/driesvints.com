@@ -25,17 +25,17 @@
                         Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
                     </p>
                     <p class="share-links">
-                        <a target="_blank"
+                        <a class="text-gray-500" target="_blank"
                            href="http://twitter.com/share?text={{ urlencode('"'.$page->title.'" by @driesvints - ') }}&url={{ urlencode($page->getUrl()) }}">
                             <i class="enlarge fab fa-twitter"></i>
                         </a>
 
-                        <a class="ml-2" target="_blank"
+                        <a class="ml-4 text-gray-500" target="_blank"
                            href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode($page->getUrl()) }}&quote={{ urlencode('"'.$page->title.'" by Dries Vints - ') }}">
                             <i class="enlarge fab fa-facebook-f"></i>
                         </a>
 
-                        <a class="ml-2" target="_blank"
+                        <a class="ml-4 text-gray-500" target="_blank"
                            href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode($page->getUrl()) }}&title={{ urlencode('"'.$page->title.'" by Dries Vints - ') }}">
                             <i class="enlarge fab fa-linkedin-in"></i>
                         </a>
