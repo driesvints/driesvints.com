@@ -6,10 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Site info -->
-<title>{{ isset($title) ? "$title | " : '' }}Dries Vints</title>
+@php($title = isset($title) ? "$title | Dries Vints" : 'Dries Vints')
+<title>{{ $title }}</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:url" content="https://driesvints.com">
+<meta property="og:locale" content="en_US" />
+<meta property="twitter:site" content="@driesvints">
+<meta property="twitter:creator" content="@driesvints">
+<meta property="twitter:url" content="https://driesvints.com">
+<meta property="twitter:title" content="{{ $title }}">
 
 @isset($metaDescription)
     <meta name="description" content="{{ $metaDescription }}">
+    <meta property="og:description" content="{{ $metaDescription }}">
+    <meta property="twitter:description" content="{{ $metaDescription }}">
 @endisset
 
 @if ($page->date)
