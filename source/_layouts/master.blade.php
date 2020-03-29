@@ -11,14 +11,14 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ $title }}">
-<meta property="og:image" content="{{ $this->baseUrl . 'assets/images/driesvints.jpg' }}">
-<meta property="og:url" content="{{ $this->baseUrl }}">
+<meta property="og:image" content="{{ $page->baseUrl . 'assets/images/driesvints.jpg' }}">
+<meta property="og:url" content="{{ $page->baseUrl }}">
 <meta property="og:locale" content="en_US" />
 <meta property="twitter:site" content="@driesvints">
 <meta property="twitter:creator" content="@driesvints">
-<meta property="twitter:url" content="{{ $this->baseUrl }}">
+<meta property="twitter:url" content="{{ $page->baseUrl }}">
 <meta property="twitter:title" content="{{ $title }}">
-<meta property="twitter:image" content="{{ $this->baseUrl . 'assets/images/driesvints.jpg' }}">
+<meta property="twitter:image" content="{{ $page->baseUrl . 'assets/images/driesvints.jpg' }}">
 
 @isset($metaDescription)
     <meta name="description" content="{{ $metaDescription }}">
