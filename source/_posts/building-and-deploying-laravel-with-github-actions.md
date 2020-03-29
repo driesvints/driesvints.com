@@ -55,7 +55,15 @@ jobs:
 
 The main difference with a package setup is that we don't do matrix builds. We only test with the specific setup from our production environment. Laravel.io still runs on PHP 7.3 so we only need to run that one.
 
-As you can also see, it's all pretty straight forward. We setup our build environment, install our dependencies, compile our assets (you can skip these two steps if you commit your assets), run tests and deploy the app.
+As you can see, it's all pretty straight forward. We setup our build environment, install our dependencies, compile our assets (you can skip these two steps if you commit your assets), run tests and deploy the app.
+
+You might notice that there's no step to set the application key. That's because I like to define this in my `phpunit.xml` file:
+
+```xml
+<server name="APP_KEY" value="base64:MaKZMMHCCw3VTGx76ahSnog22cNwdhh27d8sXhLSMmY="/>
+```
+
+This way there's always a test key available when running the test suite.
 
 ## Deploying the app
 

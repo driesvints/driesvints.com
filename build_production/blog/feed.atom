@@ -3,7 +3,7 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-03-15T19:27:37+00:00</updated>
+    <updated>2020-03-29T14:32:33+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
@@ -64,7 +64,10 @@ jobs:
         if: github.ref == 'refs/heads/master'
         run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}</code></pre>
 <p>The main difference with a package setup is that we don't do matrix builds. We only test with the specific setup from our production environment. Laravel.io still runs on PHP 7.3 so we only need to run that one.</p>
-<p>As you can also see, it's all pretty straight forward. We setup our build environment, install our dependencies, compile our assets (you can skip these two steps if you commit your assets), run tests and deploy the app.</p>
+<p>As you can see, it's all pretty straight forward. We setup our build environment, install our dependencies, compile our assets (you can skip these two steps if you commit your assets), run tests and deploy the app.</p>
+<p>You might notice that there's no step to set the application key. That's because I like to define this in my <code>phpunit.xml</code> file:</p>
+<pre><code class="language-xml">&lt;server name="APP_KEY" value="base64:MaKZMMHCCw3VTGx76ahSnog22cNwdhh27d8sXhLSMmY="/&gt;</code></pre>
+<p>This way there's always a test key available when running the test suite.</p>
 <h2>Deploying the app</h2>
 <pre><code class="language-yaml">- name: Deploy
   if: github.ref == 'refs/heads/master'
