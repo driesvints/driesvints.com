@@ -3,7 +3,7 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-04-01T08:42:07+00:00</updated>
+    <updated>2020-04-01T13:50:38+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
@@ -17,10 +17,11 @@
     <author>
         <name>Dries Vints</name>
     </author>
-    <summary type="html">By far my most favorite addition to Laravel 7 are the new Blade components. There&#039;s all kinds of cool things you can do with them so I thought I&#039;d share some of them with you.
-I&#039;ve built a new package called Blade Heroicons to easily make use of the......</summary>
+    <summary type="html">Update: since posting this, v2 has been released and the package has been renamed to &amp;quot;Blade Icons&amp;quot; with support for Zondicons.
+By far my most favorite addition to Laravel 7 are the new Blade components. There&#039;s all kinds of cool things you can......</summary>
     <content type="html"><![CDATA[
-        <p>By far my most favorite addition to Laravel 7 are <a href="https://laravel.com/docs/7.x/blade#components">the new Blade components</a>. There's all kinds of cool things you can do with them so I thought I'd share some of them with you.</p>
+        <p><strong>Update: since posting this, v2 has been released and the package has been renamed to &quot;Blade Icons&quot; with support for Zondicons.</strong></p>
+<p>By far my most favorite addition to Laravel 7 are <a href="https://laravel.com/docs/7.x/blade#components">the new Blade components</a>. There's all kinds of cool things you can do with them so I thought I'd share some of them with you.</p>
 <p>I've built a new package called <a href="https://github.com/driesvints/blade-heroicons">Blade Heroicons</a> to easily make use of the <a href="https://github.com/refactoringui/heroicons">Heroicons</a> originally made <a href="https://twitter.com/steveschoger">Steve Schoger</a> and <a href="https://twitter.com/adamwathan">Adam Wathan</a>. The packages provides a simple component based flow to include them in your Blade views.</p>
 <pre><code class="language-html">&lt;x:icon-o-adjustments/&gt;</code></pre>
 <p>You can also pass classes to your icon components:</p>

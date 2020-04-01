@@ -4,6 +4,8 @@ section: content
 title: Blade Heroicons
 date: 2020-04-01
 ---
+**Update: since posting this, v2 has been released and the package has been renamed to "Blade Icons" with support for Zondicons.**
+
 By far my most favorite addition to Laravel 7 are [the new Blade components](https://laravel.com/docs/7.x/blade#components). There's all kinds of cool things you can do with them so I thought I'd share some of them with you.
 
 I've built a new package called [Blade Heroicons](https://github.com/driesvints/blade-heroicons) to easily make use of the [Heroicons](https://github.com/refactoringui/heroicons) originally made [Steve Schoger](https://twitter.com/steveschoger) and [Adam Wathan](https://twitter.com/adamwathan). The packages provides a simple component based flow to include them in your Blade views.
