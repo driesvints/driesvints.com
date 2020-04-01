@@ -3,12 +3,49 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-03-29T14:51:57+00:00</updated>
+    <updated>2020-04-01T08:42:07+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
     </author>
                 <entry>
+    <id>https://driesvints.com/blog/blade-heroicons</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/blade-heroicons" />
+    <title>Blade Heroicons</title>
+    <published>2020-04-01T00:00:00+00:00</published>
+    <updated>2020-04-01T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">By far my most favorite addition to Laravel 7 are the new Blade components. There&#039;s all kinds of cool things you can do with them so I thought I&#039;d share some of them with you.
+I&#039;ve built a new package called Blade Heroicons to easily make use of the......</summary>
+    <content type="html"><![CDATA[
+        <p>By far my most favorite addition to Laravel 7 are <a href="https://laravel.com/docs/7.x/blade#components">the new Blade components</a>. There's all kinds of cool things you can do with them so I thought I'd share some of them with you.</p>
+<p>I've built a new package called <a href="https://github.com/driesvints/blade-heroicons">Blade Heroicons</a> to easily make use of the <a href="https://github.com/refactoringui/heroicons">Heroicons</a> originally made <a href="https://twitter.com/steveschoger">Steve Schoger</a> and <a href="https://twitter.com/adamwathan">Adam Wathan</a>. The packages provides a simple component based flow to include them in your Blade views.</p>
+<pre><code class="language-html">&lt;x:icon-o-adjustments/&gt;</code></pre>
+<p>You can also pass classes to your icon components:</p>
+<pre><code class="language-html">&lt;x:icon-o-adjustments class="w-6 h-6 text-gray-500"/&gt;</code></pre>
+<p>And if you want you can publish the raw SVG icons and use them like:</p>
+<pre><code class="language-html">&lt;img src="{{ asset('vendor/heroicons/icon-o-adjustments.svg') }}" width="10" height="10"/&gt;</code></pre>
+<h2>Compiling the components</h2>
+<p>To make this happen I created a Blade component for each icon. Here's the one for <a href="https://github.com/driesvints/blade-heroicons/blob/master/resources/views/components/icon-o-adjustments.blade.php"><code>icon-o-adjustments.blade.php</code></a>:</p>
+<pre><code class="language-html">&lt;svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="{{ $class ?? null }}"&gt;
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/&gt;
+&lt;/svg&gt;</code></pre>
+<p>In order to compile the components easily I wrote <a href="https://github.com/driesvints/blade-heroicons/blob/master/bin/compile.sh">a bash script</a> that helped me automate the process. This saves me the work of doing everything by hand.</p>
+<h2>Registering the components</h2>
+<p>To register the components I first load the Blade components from the package's service provider. I then iterate over a constant containing all the icon names and alias them with Laravel using the package's <code>::</code> notation. I also wrote <a href="https://github.com/driesvints/blade-heroicons/blob/master/bin/list.sh">a bash script</a> to easily generate the icon names for the list.</p>
+<pre><code class="language-php">$this-&gt;loadViewsFrom(__DIR__ . '/../resources/views', 'heroicons');
+
+collect(self::ICONS)-&gt;each(function (string $icon) {
+    Blade::component("heroicons::components.icon-o-$icon", "icon-o-$icon");
+    Blade::component("heroicons::components.icon-s-$icon", "icon-s-$icon");
+});</code></pre>
+<h2>Conclusion</h2>
+<p>All in all it's a pretty small package but hopefully this will help you make use of Heroicons in your project more easily.</p>
+<p>I'll be blogging more about Blade components soon so <a href="https://twitter.com/driesvints">follow me on Twitter</a> to keep up to date. If you found the package useful, let me know!</p>        ]]></content>
+</entry>
+            <entry>
     <id>https://driesvints.com/blog/building-and-deploying-laravel-with-github-actions</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/building-and-deploying-laravel-with-github-actions" />
     <title>Building and Deploying Laravel with Github Actions</title>
@@ -703,33 +740,6 @@ I&#039;ve seen two different tips for speeding up your tests in Laravel in the p
 <p>Go build your own dotfiles and the next time when your computer crashes, it won't be that bad! 😄</p>        ]]></content>
 </entry>
             <entry>
-    <id>https://driesvints.com/blog/quality-assurance-with-envoyer</id>
-    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/quality-assurance-with-envoyer" />
-    <title>Quality Assurance with Envoyer</title>
-    <published>2015-08-25T00:00:00+00:00</published>
-    <updated>2015-08-25T00:00:00+00:00</updated>
-    <author>
-        <name>Dries Vints</name>
-    </author>
-    <summary type="html">This is one of the tutorials I did for my Laracon EU talk.
-Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
-For example, at......</summary>
-    <content type="html"><![CDATA[
-        <p>This is one of the tutorials I did for my Laracon EU talk.</p>
-<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
-<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
-<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
-<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
-<p>You can do that with this hook:</p>
-<pre><code class="language-bash">cd /home/forge/default/current
-php artisan migrate:reset --force</code></pre>
-<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
-<pre><code>cd {{release}}
-php artisan migrate --force --seed</code></pre>
-<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
-<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>        ]]></content>
-</entry>
-            <entry>
     <id>https://driesvints.com/blog/continuous-delivery-with-forge-and-envoyer</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/continuous-delivery-with-forge-and-envoyer" />
     <title>Continuous Delivery with Forge and Envoyer</title>
@@ -771,6 +781,33 @@ git pull origin master
 composer install --dev
 ./tests.sh</code></pre>
 <p>And that's it! Your Continuous Delivery pipeline is now set up.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/quality-assurance-with-envoyer</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/quality-assurance-with-envoyer" />
+    <title>Quality Assurance with Envoyer</title>
+    <published>2015-08-25T00:00:00+00:00</published>
+    <updated>2015-08-25T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">This is one of the tutorials I did for my Laracon EU talk.
+Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
+For example, at......</summary>
+    <content type="html"><![CDATA[
+        <p>This is one of the tutorials I did for my Laracon EU talk.</p>
+<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
+<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
+<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
+<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
+<p>You can do that with this hook:</p>
+<pre><code class="language-bash">cd /home/forge/default/current
+php artisan migrate:reset --force</code></pre>
+<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
+<pre><code>cd {{release}}
+php artisan migrate --force --seed</code></pre>
+<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
+<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>        ]]></content>
 </entry>
             <entry>
     <id>https://driesvints.com/blog/laravel-io-the-road-ahead</id>
