@@ -83,12 +83,15 @@
                     </div>
                 </div>
 
-                <div class="mx-auto max-w-md text-center">
+                <div class="text-center">
                     <p class="text-base text-gray-700 mb-8">
                         + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
-                        + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.
+                        + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.<br>
+                        + <a href="https://github.com/driesvints/blade-icons">Blade Icons</a>, easily use Heroicons or Zondicons in your Laravel Blade views.
                     </p>
+
+                    @include('_partials.sponsoring')
                 </div>
             </div>
         </div>
