@@ -18,19 +18,19 @@ To get started, add the **testing** version of your Stripe secret to your `phpun
 
 Now, whenever you interact with Cashier while testing, it will send actual API requests to your Stripe testing environment. For convenience, you should pre-fill your Stripe testing account with subscriptions / plans that you may then use during testing.
 
-Hitting the Stripe API will cause your tests to run slowly but usually you wouldn't be running these tests very often, maybe just right before you do a deploy. Therefor it's best to separate these tests into a separate directory in your test suite.
+Hitting the Stripe API will cause your tests to run slowly but usually you wouldn't be running these tests very often, maybe just right before you do a deploy. Therefore it's best to separate these tests into a separate directory in your test suite.
 
-In order to test different kind of scenarios in your test suite you can make use of a vast range of [Stripe testing tokens](https://stripe.com/docs/testing).
+In order to test different kinds of scenarios in your test suite you can make use of a vast range of [Stripe testing tokens](https://stripe.com/docs/testing).
 
 If you want to look at an example of doing these kind of tests, have a look at [Cashier's own test suite](https://github.com/laravel/cashier/tree/10.0/tests/Integration).
 
 ### stripe-mock
 
-Stripe is currently developing a library called ["stripe-mock"](https://github.com/stripe/stripe-mock) which will allow to mock these expensive HTTP calls when testing. Unfortunately the library currently is stateless and Cashier relies on persisted state in Stripe a lot. When this library eventually implements persistence, we'll update Cashier's own test suite and update these docs so you can make use of it.
+Stripe is currently developing a library called ["stripe-mock"](https://github.com/stripe/stripe-mock) which will allow to mock these expensive HTTP calls when testing. Unfortunately, the library currently is stateless and Cashier relies on persisted state in Stripe a lot. When this library eventually implements persistence, we'll update Cashier's own test suite and update these docs so you can make use of it.
 
 ## Hiding Behind An Interface
 
-A second option is to hide Cashier calls behind an interface. In fact, in one app I took this approach and it worked very well. The apps's tests ran very fast. Let's see how we'd tackle this.
+A second option is to hide Cashier calls behind an interface. In fact, in one app I took this approach and it worked very well. The apps' tests ran very fast. Let's see how we'd tackle this.
 
 We'll start off by defining an interface for our subscriptions:
 
@@ -107,7 +107,7 @@ $this->app->singleton(SubscriptionRepository::class, function ($app) {
 
 And now your Stripe calls will be replaced during your tests and they'll run much faster.
 
-There are a couple of downsides to this approach. First of all, you're trading part of the confidence you get when actually hitting the Stripe API. The other downside is that you'll have to partially re-implement Cashier's behavior. And depending on how much functionality you use from Cashier that could potentially be a lot. Of course you'd only replace the parts which make Stripe calls. 
+There are a couple of downsides to this approach. First of all, you're trading part of the confidence you get when actually hitting the Stripe API. The other downside is that you'll have to partially re-implement Cashier's behavior. And depending on how much functionality you use from Cashier that could potentially be a lot. Of course, you'd only replace the parts which make Stripe calls. 
 
 ## Mocking
 
@@ -190,4 +190,4 @@ And thus no Stripe API calls are made. Of course this only mocks the calls but d
 
 ## Conclusion
 
-We've seen three different techniques when it comes to testing Cashier and while each one holds a benefit and a downside I'd still recommend to make actual Stripe HTTP calls if you want to be entirely sure your billing integration works as expected. If stripe-mock ever gets persistency we can solve the speed issue that way. But definitely don't be afraid to use the other two techniques. Use what works best for your situation.
+We've seen three different techniques when it comes to testing Cashier and while each one holds a benefit and a downside I'd still recommend making actual Stripe HTTP calls if you want to be entirely sure your billing integration works as expected. If stripe-mock ever gets persistency we can solve the speed issue that way. But definitely don't be afraid to use the other two techniques. Use what works best for your situation.
