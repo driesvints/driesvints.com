@@ -3,12 +3,168 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-04-01T16:41:48+00:00</updated>
+    <updated>2020-04-04T14:05:32+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
     </author>
                 <entry>
+    <id>https://driesvints.com/blog/testing-cashier</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/testing-cashier" />
+    <title>Testing Cashier</title>
+    <published>2020-04-04T00:00:00+00:00</published>
+    <updated>2020-04-04T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">One of the most asked questions I get about Cashier is how you start testing your billing integration of your app. So let&#039;s check out a couple of ways how you&#039;d tackle that.
+
+The best way to test Cashier and your billing integration is to actually hit......</summary>
+    <content type="html"><![CDATA[
+        <p>One of the most asked questions I get about Cashier is how you start testing your billing integration of your app. So let's check out a couple of ways how you'd tackle that.</p>
+<h2>Stripe API</h2>
+<p>The best way to test Cashier and your billing integration is to actually hit the Stripe API. Doing so will give you the confidence that your billing integration is actually working as expected. In fact, <a href="https://laravel.com/docs/7.x/billing#testing">we added a section to the docs yesterday</a> that details just that.</p>
+<p>To get started, add the <strong>testing</strong> version of your Stripe secret to your <code>phpunit.xml</code> file:</p>
+<pre><code class="language-xml">&lt;env name="STRIPE_SECRET" value="sk_test_&lt;your-key&gt;"/&gt;</code></pre>
+<p>Now, whenever you interact with Cashier while testing, it will send actual API requests to your Stripe testing environment. For convenience, you should pre-fill your Stripe testing account with subscriptions / plans that you may then use during testing.</p>
+<p>Hitting the Stripe API will cause your tests to run slowly but usually you wouldn't be running these tests very often, maybe just right before you do a deploy. Therefor it's best to separate these tests into a separate directory in your test suite.</p>
+<p>In order to test different kind of scenarios in your test suite you can make use of a vast range of <a href="https://stripe.com/docs/testing">Stripe testing tokens</a>.</p>
+<p>If you want to look at an example of doing these kind of tests, have a look at <a href="https://github.com/laravel/cashier/tree/10.0/tests/Integration">Cashier's own test suite</a>.</p>
+<h3>stripe-mock</h3>
+<p>Stripe is currently developing a library called <a href="https://github.com/stripe/stripe-mock">&quot;stripe-mock&quot;</a> which will allow to mock these expensive HTTP calls when testing. Unfortunately the library currently is stateless and Cashier relies on persisted state in Stripe a lot. When this library eventually implements persistence, we'll update Cashier's own test suite and update these docs so you can make use of it.</p>
+<h2>Hiding Behind An Interface</h2>
+<p>A second option is to hide Cashier calls behind an interface. In fact, in one app I took this approach and it worked very well. The apps's tests ran very fast. Let's see how we'd tackle this.</p>
+<p>We'll start off by defining an interface for our subscriptions:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Billing\Subscriptions;
+
+use App\User;
+use Laravel\Cashier\Subscription;
+
+interface SubscriptionRepository
+{
+    public function subscribe(User $customer, string $plan, string $paymentMethod): Subscription;
+}</code></pre>
+<p>Then implement the actual Stripe calls which we'll use in our app:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Billing\Subscriptions;
+
+use App\User;
+use Laravel\Cashier\Subscription;
+
+final class StripeSubscriptionRepository implements SubscriptionRepository
+{
+    public function subscribe(User $customer, string $plan, string $paymentMethod): Subscription
+    {
+        return $customer-&gt;newSubscription('main', $plan)-&gt;create($paymentMethod);
+    }
+}</code></pre>
+<p>And the <code>TestSubscriptionRepository</code> which contains our testing implementation:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Billing\Subscriptions;
+
+use App\User;
+use Illuminate\Support\Str;
+use Laravel\Cashier\Subscription;
+
+final class TestingSubscriptionRepository implements SubscriptionRepository
+{
+    public function subscribe(User $customer, string $plan, string $paymentMethod): Subscription
+    {
+        return $customer-&gt;subscriptions()-&gt;create([
+            'name' =&gt; 'main',
+            'stripe_id' =&gt; Str::random(),
+            'stripe_status' =&gt; 'active',
+            'stripe_plan' =&gt; $plan,
+            'quantity' =&gt; 1,
+        ]);
+    }
+}</code></pre>
+<p>After this you can register the implementations in the <code>register</code> method of your <code>AppServiceProvider</code>:</p>
+<pre><code class="language-php">$this-&gt;app-&gt;singleton(SubscriptionRepository::class, function ($app) {
+    if ($app-&gt;environment('testing')) {
+        return new TestingSubscriptionRepository;
+    }
+
+    return new StripeSubscriptionRepository;
+});</code></pre>
+<p>And now your Stripe calls will be replaced during your tests and they'll run much faster.</p>
+<p>There are a couple of downsides to this approach. First of all, you're trading part of the confidence you get when actually hitting the Stripe API. The other downside is that you'll have to partially re-implement Cashier's behavior. And depending on how much functionality you use from Cashier that could potentially be a lot. Of course you'd only replace the parts which make Stripe calls. </p>
+<h3>Mocking</h3>
+<p>The third one is an obvious one when unit testing. You could use a library like <a href="https://github.com/mockery/mockery">Mockery</a> to mock those expensive API calls. Let's see how that works.</p>
+<p>Imagine we have the following job:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Jobs;
+
+use App\User;
+
+final class SubscribeCustomer
+{
+    private User $customer;
+
+    private string $plan;
+
+    private string $paymentMethod;
+
+    public function __construct(User $customer, string $plan, string $paymentMethod)
+    {
+        $this-&gt;customer = $customer;
+        $this-&gt;plan = $plan;
+        $this-&gt;paymentMethod = $paymentMethod;
+    }
+
+    public function handle(): void
+    {
+        $this-&gt;customer-&gt;newSubscription('main', $this-&gt;plan)
+            -&gt;create($this-&gt;paymentMethod);
+    }
+}
+</code></pre>
+<p>We could write the following test where we mock the actual Cashier calls:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace Tests\Unit\Jobs;
+
+use App\User;
+use App\Jobs\SubscribeCustomer;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Laravel\Cashier\SubscriptionBuilder;
+use Mockery;
+use PHPUnit\Framework\TestCase;
+
+class SubscribeCustomerTest extends TestCase
+{
+    public function tearDown(): void
+    {
+        parent::tearDown();
+
+        Mockery::close();
+    }
+
+    /** @test */
+    public function it_can_process_a_new_subscription()
+    {
+        $subscriptionBuilder = Mockery::mock(SubscriptionBuilder::class);
+        $subscriptionBuilder-&gt;shouldReceive('create')
+            -&gt;with('foo-method');
+
+        $customer = Mockery::mock(User::class);
+        $customer-&gt;expects('newSubscription')
+            -&gt;with('main', 'plan-1')
+            -&gt;andReturn($subscriptionBuilder);
+
+        (new SubscribeCustomer($customer, 'plan-1', 'foo-method'))-&gt;handle();
+    }
+}</code></pre>
+<p>And thus no Stripe API calls are made. Of course this only mocks the calls but doesn't re-implements the behavior like our interface example. The above technique is ideal for unit tests but not so much for feature tests.</p>
+<h3>Conclusion</h3>
+<p>We've seen three different techniques when it comes to testing Cashier and while each one holds a benefit and a downside I'd still recommend to make actual Stripe HTTP calls if you want to be entirely sure your billing integration works as expected. If stripe-mock ever gets persistency we can solve the speed issue that way. But definitely don't be afraid to use the other two techniques. Use what works best for your situation.</p>        ]]></content>
+</entry>
+            <entry>
     <id>https://driesvints.com/blog/blade-heroicons</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/blade-heroicons" />
     <title>Blade Heroicons</title>

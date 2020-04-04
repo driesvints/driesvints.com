@@ -6,27 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Site info -->
-<title>Blade Heroicons | Dries Vints</title>
+<title>Testing Cashier | Dries Vints</title>
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Blade Heroicons | Dries Vints">
+<meta property="og:title" content="Testing Cashier | Dries Vints">
 <meta property="og:image" content="https://driesvints.com/assets/images/driesvints.jpg">
 <meta property="og:url" content="https://driesvints.com/">
 <meta property="og:locale" content="en_US" />
 <meta property="twitter:site" content="@driesvints">
 <meta property="twitter:creator" content="@driesvints">
 <meta property="twitter:url" content="https://driesvints.com/">
-<meta property="twitter:title" content="Blade Heroicons | Dries Vints">
+<meta property="twitter:title" content="Testing Cashier | Dries Vints">
 <meta property="twitter:image" content="https://driesvints.com/assets/images/driesvints.jpg">
 
-    <meta name="description" content="Update: since posting this, v2 has been released and the package has been renamed to &amp;quot;Blade Icons&amp;quot; with support for Zondicons.
-By far my most...">
-    <meta property="og:description" content="Update: since posting this, v2 has been released and the package has been renamed to &amp;quot;Blade Icons&amp;quot; with support for Zondicons.
-By far my most...">
-    <meta property="twitter:description" content="Update: since posting this, v2 has been released and the package has been renamed to &amp;quot;Blade Icons&amp;quot; with support for Zondicons.
-By far my most...">
+    <meta name="description" content="One of the most asked questions I get about Cashier is how you start testing your billing integration of your app. So let&#039;s check out a couple of ways how...">
+    <meta property="og:description" content="One of the most asked questions I get about Cashier is how you start testing your billing integration of your app. So let&#039;s check out a couple of ways how...">
+    <meta property="twitter:description" content="One of the most asked questions I get about Cashier is how you start testing your billing integration of your app. So let&#039;s check out a couple of ways how...">
 
-    <meta property="article:published_time" content="2020-04-01" />
+    <meta property="article:published_time" content="2020-04-04" />
 
 <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title=" Atom Feed">
 
@@ -105,37 +102,154 @@ By far my most...">
         <div class="py-10 sm:py-20">
             <div id="post">
                 <div class="mb-12">
-                    <h1 class="font-bold text-4xl mb-6">Blade Heroicons</h1>
+                    <h1 class="font-bold text-4xl mb-6">Testing Cashier</h1>
                     <p class="block text-xs uppercase text-gray-600">
-                        Published on April 1, 2020
+                        Published on April 4, 2020
                     </p>
                 </div>
 
-                <p><strong>Update: since posting this, v2 has been released and the package has been renamed to &quot;Blade Icons&quot; with support for Zondicons.</strong></p>
-<p>By far my most favorite addition to Laravel 7 are <a href="https://laravel.com/docs/7.x/blade#components">the new Blade components</a>. There's all kinds of cool things you can do with them so I thought I'd share some of them with you.</p>
-<p>I've built a new package called <a href="https://github.com/driesvints/blade-heroicons">Blade Heroicons</a> to easily make use of the <a href="https://github.com/refactoringui/heroicons">Heroicons</a> originally made <a href="https://twitter.com/steveschoger">Steve Schoger</a> and <a href="https://twitter.com/adamwathan">Adam Wathan</a>. The packages provides a simple component based flow to include them in your Blade views.</p>
-<pre><code class="language-html">&lt;x:icon-o-adjustments/&gt;</code></pre>
-<p>You can also pass classes to your icon components:</p>
-<pre><code class="language-html">&lt;x:icon-o-adjustments class="w-6 h-6 text-gray-500"/&gt;</code></pre>
-<p>And if you want you can publish the raw SVG icons and use them like:</p>
-<pre><code class="language-html">&lt;img src="{{ asset('vendor/heroicons/icon-o-adjustments.svg') }}" width="10" height="10"/&gt;</code></pre>
-<h2>Compiling the components</h2>
-<p>To make this happen I created a Blade component for each icon. Here's the one for <a href="https://github.com/driesvints/blade-heroicons/blob/master/resources/views/components/icon-o-adjustments.blade.php"><code>icon-o-adjustments.blade.php</code></a>:</p>
-<pre><code class="language-html">&lt;svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="{{ $class ?? null }}"&gt;
-  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/&gt;
-&lt;/svg&gt;</code></pre>
-<p>In order to compile the components easily I wrote <a href="https://github.com/driesvints/blade-heroicons/blob/master/bin/compile.sh">a bash script</a> that helped me automate the process. This saves me the work of doing everything by hand.</p>
-<h2>Registering the components</h2>
-<p>To register the components I first load the Blade components from the package's service provider. I then iterate over a constant containing all the icon names and alias them with Laravel using the package's <code>::</code> notation. I also wrote <a href="https://github.com/driesvints/blade-heroicons/blob/master/bin/list.sh">a bash script</a> to easily generate the icon names for the list.</p>
-<pre><code class="language-php">$this-&gt;loadViewsFrom(__DIR__ . '/../resources/views', 'heroicons');
+                <p>One of the most asked questions I get about Cashier is how you start testing your billing integration of your app. So let's check out a couple of ways how you'd tackle that.</p>
+<h2>Stripe API</h2>
+<p>The best way to test Cashier and your billing integration is to actually hit the Stripe API. Doing so will give you the confidence that your billing integration is actually working as expected. In fact, <a href="https://laravel.com/docs/7.x/billing#testing">we added a section to the docs yesterday</a> that details just that.</p>
+<p>To get started, add the <strong>testing</strong> version of your Stripe secret to your <code>phpunit.xml</code> file:</p>
+<pre><code class="language-xml">&lt;env name="STRIPE_SECRET" value="sk_test_&lt;your-key&gt;"/&gt;</code></pre>
+<p>Now, whenever you interact with Cashier while testing, it will send actual API requests to your Stripe testing environment. For convenience, you should pre-fill your Stripe testing account with subscriptions / plans that you may then use during testing.</p>
+<p>Hitting the Stripe API will cause your tests to run slowly but usually you wouldn't be running these tests very often, maybe just right before you do a deploy. Therefor it's best to separate these tests into a separate directory in your test suite.</p>
+<p>In order to test different kind of scenarios in your test suite you can make use of a vast range of <a href="https://stripe.com/docs/testing">Stripe testing tokens</a>.</p>
+<p>If you want to look at an example of doing these kind of tests, have a look at <a href="https://github.com/laravel/cashier/tree/10.0/tests/Integration">Cashier's own test suite</a>.</p>
+<h3>stripe-mock</h3>
+<p>Stripe is currently developing a library called <a href="https://github.com/stripe/stripe-mock">&quot;stripe-mock&quot;</a> which will allow to mock these expensive HTTP calls when testing. Unfortunately the library currently is stateless and Cashier relies on persisted state in Stripe a lot. When this library eventually implements persistence, we'll update Cashier's own test suite and update these docs so you can make use of it.</p>
+<h2>Hiding Behind An Interface</h2>
+<p>A second option is to hide Cashier calls behind an interface. In fact, in one app I took this approach and it worked very well. The apps's tests ran very fast. Let's see how we'd tackle this.</p>
+<p>We'll start off by defining an interface for our subscriptions:</p>
+<pre><code class="language-php">&lt;?php
 
-collect(self::ICONS)-&gt;each(function (string $icon) {
-    Blade::component("heroicons::components.icon-o-$icon", "icon-o-$icon");
-    Blade::component("heroicons::components.icon-s-$icon", "icon-s-$icon");
+namespace App\Billing\Subscriptions;
+
+use App\User;
+use Laravel\Cashier\Subscription;
+
+interface SubscriptionRepository
+{
+    public function subscribe(User $customer, string $plan, string $paymentMethod): Subscription;
+}</code></pre>
+<p>Then implement the actual Stripe calls which we'll use in our app:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Billing\Subscriptions;
+
+use App\User;
+use Laravel\Cashier\Subscription;
+
+final class StripeSubscriptionRepository implements SubscriptionRepository
+{
+    public function subscribe(User $customer, string $plan, string $paymentMethod): Subscription
+    {
+        return $customer-&gt;newSubscription('main', $plan)-&gt;create($paymentMethod);
+    }
+}</code></pre>
+<p>And the <code>TestSubscriptionRepository</code> which contains our testing implementation:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Billing\Subscriptions;
+
+use App\User;
+use Illuminate\Support\Str;
+use Laravel\Cashier\Subscription;
+
+final class TestingSubscriptionRepository implements SubscriptionRepository
+{
+    public function subscribe(User $customer, string $plan, string $paymentMethod): Subscription
+    {
+        return $customer-&gt;subscriptions()-&gt;create([
+            'name' =&gt; 'main',
+            'stripe_id' =&gt; Str::random(),
+            'stripe_status' =&gt; 'active',
+            'stripe_plan' =&gt; $plan,
+            'quantity' =&gt; 1,
+        ]);
+    }
+}</code></pre>
+<p>After this you can register the implementations in the <code>register</code> method of your <code>AppServiceProvider</code>:</p>
+<pre><code class="language-php">$this-&gt;app-&gt;singleton(SubscriptionRepository::class, function ($app) {
+    if ($app-&gt;environment('testing')) {
+        return new TestingSubscriptionRepository;
+    }
+
+    return new StripeSubscriptionRepository;
 });</code></pre>
-<h2>Conclusion</h2>
-<p>All in all it's a pretty small package but hopefully this will help you make use of Heroicons in your project more easily.</p>
-<p>I'll be blogging more about Blade components soon so <a href="https://twitter.com/driesvints">follow me on Twitter</a> to keep up to date. If you found the package useful, let me know!</p>
+<p>And now your Stripe calls will be replaced during your tests and they'll run much faster.</p>
+<p>There are a couple of downsides to this approach. First of all, you're trading part of the confidence you get when actually hitting the Stripe API. The other downside is that you'll have to partially re-implement Cashier's behavior. And depending on how much functionality you use from Cashier that could potentially be a lot. Of course you'd only replace the parts which make Stripe calls. </p>
+<h3>Mocking</h3>
+<p>The third one is an obvious one when unit testing. You could use a library like <a href="https://github.com/mockery/mockery">Mockery</a> to mock those expensive API calls. Let's see how that works.</p>
+<p>Imagine we have the following job:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Jobs;
+
+use App\User;
+
+final class SubscribeCustomer
+{
+    private User $customer;
+
+    private string $plan;
+
+    private string $paymentMethod;
+
+    public function __construct(User $customer, string $plan, string $paymentMethod)
+    {
+        $this-&gt;customer = $customer;
+        $this-&gt;plan = $plan;
+        $this-&gt;paymentMethod = $paymentMethod;
+    }
+
+    public function handle(): void
+    {
+        $this-&gt;customer-&gt;newSubscription('main', $this-&gt;plan)
+            -&gt;create($this-&gt;paymentMethod);
+    }
+}
+</code></pre>
+<p>We could write the following test where we mock the actual Cashier calls:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace Tests\Unit\Jobs;
+
+use App\User;
+use App\Jobs\SubscribeCustomer;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Laravel\Cashier\SubscriptionBuilder;
+use Mockery;
+use PHPUnit\Framework\TestCase;
+
+class SubscribeCustomerTest extends TestCase
+{
+    public function tearDown(): void
+    {
+        parent::tearDown();
+
+        Mockery::close();
+    }
+
+    /** @test */
+    public function it_can_process_a_new_subscription()
+    {
+        $subscriptionBuilder = Mockery::mock(SubscriptionBuilder::class);
+        $subscriptionBuilder-&gt;shouldReceive('create')
+            -&gt;with('foo-method');
+
+        $customer = Mockery::mock(User::class);
+        $customer-&gt;expects('newSubscription')
+            -&gt;with('main', 'plan-1')
+            -&gt;andReturn($subscriptionBuilder);
+
+        (new SubscribeCustomer($customer, 'plan-1', 'foo-method'))-&gt;handle();
+    }
+}</code></pre>
+<p>And thus no Stripe API calls are made. Of course this only mocks the calls but doesn't re-implements the behavior like our interface example. The above technique is ideal for unit tests but not so much for feature tests.</p>
+<h3>Conclusion</h3>
+<p>We've seen three different techniques when it comes to testing Cashier and while each one holds a benefit and a downside I'd still recommend to make actual Stripe HTTP calls if you want to be entirely sure your billing integration works as expected. If stripe-mock ever gets persistency we can solve the speed issue that way. But definitely don't be afraid to use the other two techniques. Use what works best for your situation.</p>
                 <div class="share mx-auto max-w-md mt-10 sm:mt-16 text-2xl text-center">
                     <p class="text-sm italic">
                         Like what you read? Feel free to share!
@@ -143,17 +257,17 @@ collect(self::ICONS)-&gt;each(function (string $icon) {
                     </p>
                     <p class="share-links">
                         <a class="text-gray-500" target="_blank"
-                           href="http://twitter.com/share?text=%22Blade+Heroicons%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fblade-heroicons">
+                           href="http://twitter.com/share?text=%22Testing+Cashier%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier">
                             <i class="enlarge fab fa-twitter"></i>
                         </a>
 
                         <a class="ml-4 text-gray-500" target="_blank"
-                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fblade-heroicons&quote=%22Blade+Heroicons%22+by+Dries+Vints+-+">
+                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier&quote=%22Testing+Cashier%22+by+Dries+Vints+-+">
                             <i class="enlarge fab fa-facebook-f"></i>
                         </a>
 
                         <a class="ml-4 text-gray-500" target="_blank"
-                           href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fblade-heroicons&title=%22Blade+Heroicons%22+by+Dries+Vints+-+">
+                           href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier&title=%22Testing+Cashier%22+by+Dries+Vints+-+">
                             <i class="enlarge fab fa-linkedin-in"></i>
                         </a>
                     </p>
@@ -181,11 +295,9 @@ collect(self::ICONS)-&gt;each(function (string $icon) {
                 <div class="max-w-4xl mx-auto flex">
                     <div class="flex-1 border-r border-gray-300 pr-6 py-10 sm:py-20">
                                                     <p class="uppercase text-sm mb-2">&leftarrow; Previous post</p>
-                            <a href="/blog/building-and-deploying-laravel-with-github-actions">Building and Deploying Laravel with Github Actions</a>
+                            <a href="/blog/blade-heroicons">Blade Heroicons</a>
                                             </div>
                     <div class="flex-1 text-right px-4 py-10 pl-6 sm:py-20">
-                                                    <p class="uppercase text-sm mb-2">Next post &rightarrow; </p>
-                            <a href="/blog/testing-cashier">Testing Cashier</a>
                                             </div>
                 </div>
             </div>
