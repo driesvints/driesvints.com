@@ -109,7 +109,7 @@ And now your Stripe calls will be replaced during your tests and they'll run muc
 
 There are a couple of downsides to this approach. First of all, you're trading part of the confidence you get when actually hitting the Stripe API. The other downside is that you'll have to partially re-implement Cashier's behavior. And depending on how much functionality you use from Cashier that could potentially be a lot. Of course you'd only replace the parts which make Stripe calls. 
 
-### Mocking
+## Mocking
 
 The third one is an obvious one when unit testing. You could use a library like [Mockery](https://github.com/mockery/mockery) to mock those expensive API calls. Let's see how that works.
 
@@ -188,6 +188,6 @@ class SubscribeCustomerTest extends TestCase
 
 And thus no Stripe API calls are made. Of course this only mocks the calls but doesn't re-implements the behavior like our interface example. The above technique is ideal for unit tests but not so much for feature tests.
 
-### Conclusion
+## Conclusion
 
 We've seen three different techniques when it comes to testing Cashier and while each one holds a benefit and a downside I'd still recommend to make actual Stripe HTTP calls if you want to be entirely sure your billing integration works as expected. If stripe-mock ever gets persistency we can solve the speed issue that way. But definitely don't be afraid to use the other two techniques. Use what works best for your situation.
