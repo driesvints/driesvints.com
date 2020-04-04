@@ -49,13 +49,13 @@
         @if ($page->getPrevious() ||  $page->getNext())
             <div class="bg-gray-200 text-xl sm:text-2xl border-t border-gray-300 px-6">
                 <div class="max-w-4xl mx-auto flex">
-                    <div class="flex-1 border-r border-gray-300 pr-6 py-10 sm:py-20">
+                    <div class="flex-1 text-center sm:text-left border-r border-gray-300 pr-6 py-10 sm:py-20">
                         @if ($page->getNext())
                             <p class="uppercase text-sm mb-2">&leftarrow; Previous post</p>
                             <a href="{{ $page->getNext()->getPath() }}">{{ $page->getNext()->title }}</a>
                         @endif
                     </div>
-                    <div class="flex-1 text-right px-4 py-10 pl-6 sm:py-20">
+                    <div class="flex-1 text-center sm:text-right px-4 py-10 pl-6 sm:py-20">
                         @if ($page->getPrevious())
                             <p class="uppercase text-sm mb-2">Next post &rightarrow; </p>
                             <a href="{{ $page->getPrevious()->getPath() }}">{{ $page->getPrevious()->title }}</a>
