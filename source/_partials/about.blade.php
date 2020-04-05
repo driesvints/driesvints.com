@@ -20,7 +20,7 @@
     </p>
 
     <p class="mb-4">
-        I organize events for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. I'm also the co-organizer of <a href="https://fullstackeurope.com">Full Stack Europe</a>, a conference for every kind of developer.
+        Together with my buddy <a href="https://twitter.com/riasvdv">Rias</a> I organize events for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. And together with my buddy <a href="https://twitter.com/freekmurze">Freek</a> I organise <a href="https://fullstackeurope.com">Full Stack Europe</a>, the conference for the whole team.
     </p>
 
     <p>
