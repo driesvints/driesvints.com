@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: The Beauty of Single Action Controllers
-date: 2020-04-04
+date: 2020-04-05
 ---
 Yesterday Jeffrey Way [posted a tweet](https://twitter.com/jeffrey_way/status/1246078499632353284) where he asked if people prefer to name their controllers singular or plural. [I replied](https://twitter.com/driesvints/status/1246079812663418882) that I did neither and used Single Action Controllers. What ensued was a stream of replies from people agreeing, disagreeing or even [doing the weirdest things](https://twitter.com/adamwathan/status/1246083603236257793).
 
