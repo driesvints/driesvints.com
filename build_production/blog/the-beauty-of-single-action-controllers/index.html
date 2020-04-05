@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100">
+
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Site info -->
+<title>The Beauty of Single Action Controllers | Dries Vints</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Beauty of Single Action Controllers | Dries Vints">
+<meta property="og:image" content="https://driesvints.com/assets/images/driesvints.jpg">
+<meta property="og:url" content="https://driesvints.com/">
+<meta property="og:locale" content="en_US" />
+<meta property="twitter:site" content="@driesvints">
+<meta property="twitter:creator" content="@driesvints">
+<meta property="twitter:url" content="https://driesvints.com/">
+<meta property="twitter:title" content="The Beauty of Single Action Controllers | Dries Vints">
+<meta property="twitter:image" content="https://driesvints.com/assets/images/driesvints.jpg">
+
+    <meta name="description" content="Yesterday Jeffrey Way posted a tweet where he asked if people prefer to name their controllers singular or plural. I replied that I did neither and used Single...">
+    <meta property="og:description" content="Yesterday Jeffrey Way posted a tweet where he asked if people prefer to name their controllers singular or plural. I replied that I did neither and used Single...">
+    <meta property="twitter:description" content="Yesterday Jeffrey Way posted a tweet where he asked if people prefer to name their controllers singular or plural. I replied that I did neither and used Single...">
+
+    <meta property="article:published_time" content="2020-04-04" />
+
+<link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title=" Atom Feed">
+
+<!-- Stylsheets -->
+<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
+<link rel="stylesheet" href="/assets/build/css/main.css?id=4f8879b43f327f151f44">
+
+<script src="https://kit.fontawesome.com/980abfb339.js"></script>
+
+
+<div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
+    <div class="bg-secondary text-white font-semibold hover:underline py-3 px-6" target="_blank">
+        <div class="wrapper text-center">
+            <a class="focus:underline focus:bg-transparent" href="https://fullstackeurope.com/2020" target="_blank" rel="noopener">
+                Join me at Full Stack Europe →
+            </a>
+        </div>
+    </div>
+
+        <div id="header" class="bg-black relative text-lg">
+    <div class=" bg-cover bg-no-repeat" style="background-image: url('/assets/images/header-black.jpg'); background-position: top right">
+        <div class="header-image header-image-small">
+            <div class="text-white py-6 pb-2 sm:pb-12">
+                <div class="max-w-8xl m-auto sm:flex text-center px-6 sm:px-12">
+                    <div class="sm:flex-1 text-2xl font-bold sm:text-left mb-4">
+                        <a href="/" class="hover:underline">Dries Vints</a>
+                    </div>
+                    <div class="sm:flex-2 sm:text-right">
+                        <ul class="text-2xl">
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="/blog">
+            <i class="enlarge fas fa-rss"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://twitter.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://github.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-github"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://www.youtube.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-youtube"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://instagram.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-instagram"></i>
+        </a>
+    </li>
+    <li class="inline-block">
+        <a href="https://www.linkedin.com/in/driesvints" target="_blank">
+            <i class="enlarge fab fa-linkedin-in"></i>
+        </a>
+    </li>
+</ul>
+                    </div>
+                </div>
+
+                <div class="content sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-0 xl:mr-24">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <svg class="absolute z-0 left-0 bottom-0 block w-full h-8 sm:h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon fill="#f7fafc" points="0,100 100,0 100,100"/>
+    </svg>
+</div>
+
+    <div id="content">
+        <div class="py-10 sm:py-20">
+            <div id="post">
+                <div class="mb-12">
+                    <h1 class="font-bold text-4xl mb-6">The Beauty of Single Action Controllers</h1>
+                    <p class="block text-xs uppercase text-gray-600">
+                        Published on April 4, 2020
+                    </p>
+                </div>
+
+                <p>Yesterday Jeffrey Way <a href="https://twitter.com/jeffrey_way/status/1246078499632353284">posted a tweet</a> where he asked if people prefer to name their controllers singular or plural. <a href="https://twitter.com/driesvints/status/1246079812663418882">I replied</a> that I did neither and used Single Action Controllers. What ensued was a stream of replies from people agreeing, disagreeing or even <a href="https://twitter.com/adamwathan/status/1246083603236257793">doing the weirdest things</a>.</p>
+<p>Because of the overwhelming reactions I wanted to do a writeup on why I love Single Action Controllers and why I think they're a thing of beauty.</p>
+<p>First of all, I want to start by saying that there isn't a single truth to this. As always, I want to point out that everything boils down to your personal preference. I can only teach, suggest and point out a few things but it's up to you to agree, disagree, adapt, learn, and/or adjust. Or not. Take from this post what you want and do whatever you feel comfortable with.</p>
+<h2>CRUD vs Domain Modelling</h2>
+<p>Let's start by looking at why we tend to write resourceful CRUD controllers. I believe a lot of people go down this path and stick with it because it's the standard way of doing things in Laravel and most of the examples in the documentation show this exact usage. Or perhaps it's what you mostly see in blog posts or other apps.</p>
+<p>But if you stop and think for a second, is it the best way to write them? Or software in general? In recent years I've invested a lot of time in things like Domain Driven Design and thinking about software in terms of how it applies to the domain you're working in and the processes that it translates to. When you start thinking in terminology and phrasing that mimics the ubiquitous language of your domain you'll notice that your code will become much clearer and to the point.</p>
+<blockquote>
+<p>In the end, I believe the essence of writing software is to implement your domain processes in the most readable and maintainable way possible.</p>
+</blockquote>
+<p>Resourceful controllers lack quite a bit in those terms. First of all, they're not readably because you tend to model them according to your data and not your domain. You lose a context this way. You're telling <em>how</em> data is being processed but there's no explanation of what's going on and which process you're handling.</p>
+<p>Secondly, you're not optimizing for maintainability. Since you're modeling according to your data structures, you are also coupling yourself to it. Indeed, your domain model is constantly evolving but so is your data structure. And if your data structure handles multiple processes or multiple parts of your domain it's going to be hard for you to make adjustments.</p>
+<h2>A Practical Example</h2>
+<p>Since the theory is boring and you're here for code, let's look at a practical example. </p>
+<p>Say you're building an app that allows your users to organize events. You want to offer a way to create, update and delete those events. This is a very CRUD way to think about your process. Let's see how this translates in terms of a resourceful controller.</p>
+<p>First let's look at the routes:</p>
+<pre><code class="language-php">Route::get('events', [EventController::class, 'index']);
+Route::get('events/create', [EventController::class, 'create']);
+Route::post('events', [EventController::class, 'store']);
+Route::get('event/{event}', [EventController::class, 'show']);
+Route::get('events/{event}/edit', [EventController::class, 'edit']);
+Route::put('events/{event}', [EventController::class, 'update']);
+Route::destroy('events/{event}', [EventController::class, 'destroy']);</code></pre>
+<p>And now the controller itself:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Event;
+
+final class EventController
+{
+    public function index()
+    {
+        // ...
+    }
+
+    public function create()
+    {
+        // ...
+    }
+
+    public function store()
+    {
+        // ...
+    }
+
+    public function show(Event $event)
+    {
+        // ...
+    }
+
+    public function edit(Event $event)
+    {
+        // ...
+    }
+
+    public function update(Event $event)
+    {
+        // ...
+    }
+
+    public function destroy(Event $event)
+    {
+        // ...
+    }
+}</code></pre>
+<p>Our <code>EventController</code> holds all of the CRUD actions to display a list of events, show a specific event, create a new event, update an existing event and delete an event.</p>
+<p>Let's take a look at the <code>index</code> method in detail:</p>
+<pre><code class="language-php">public function index()
+{
+    $events = Event::paginate(10);
+
+    return view('events.index', compact('events'));
+}</code></pre>
+<p>In our method, we retrieve events and feed them to a view that'll display them in a paginated list. So far so good. But now you want to implement a way for them to view past events and upcoming events through separate pages. Let's see how we'd implement that in our <code>index</code> method:</p>
+<pre><code class="language-php">public function index(Request $request)
+{
+    if ($request-&gt;boolean('past')) {
+        $events = Event::past()-&gt;paginate(10);
+    } elseif ($request-&gt;boolean('upcoming')) {
+        $events = Event::upcoming()-&gt;paginate(10);
+    } else {
+        $events = Event::paginate(10);
+    }
+
+    return view('events.index', compact('events'));
+}</code></pre>
+<p>Urgh, that looks messy. Even though we already make use of Eloquent scopes to hide the query logic involved, there's still an ugly chain of if statements here. Let's see how we can solve that using Single Action Controllers instead. </p>
+<blockquote>
+<p>Single Action Controllers are controllers that do one thing and one thing only.</p>
+</blockquote>
+<p>First of all, instead of making use of query parameters to differentiate the list of events, we'll make use of dedicated routes.</p>
+<pre><code class="language-php">Route::get('events', ShowAllEventsController::class);
+Route::get('events/past', ShowPastEventsController::class);
+Route::get('events/upcoming', ShowUpcomingEventsController::class);</code></pre>
+<p>This is a bit more verbose than our previous single route but if you look at it it's much more expressive. You can immediately identify which controller holds which logic for a specific scenario. If you compare the URI's you'll see a slight improvement in readability:</p>
+<pre><code># Before
+/events
+/events?past=true
+/events?upcoming=true
+
+# After
+/events
+/events/past
+/events/upcoming</code></pre>
+<p>Now let's look at one of our new controllers. Let's pick the <code>ShowUpcomingEventsController</code> controller:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Event;
+
+final class ShowUpcomingEventsController
+{
+    public function __invoke()
+    {
+        $events = Event::upcoming()-&gt;paginate(10);
+
+        return view('events.index', compact('events'));
+    }
+}</code></pre>
+<p>Our ugly <code>if</code> statement is gone and has made way for the same readable three liner we had from our first CRUD controller example. But instead of having all of the other CRUD operations we now have a dedicated controller for a dedicated action.</p>
+<p>Simple, readable and maintainable.</p>
+<p>You might ask yourself if this is worth it all and if the previous <code>if</code> statement wasn't all that bad after all. But the thing I'm trying to show you here is that you're <strong> optimizing for future change</strong> and improving maintainability. Next time you'll need to do specific changes to any of these three pages, you'll know exactly where to do them and without having to update a difficult if statement.</p>
+<p>Of course, the above example is very simple so let's look at a more complicated one. Let's try to refactor our <code>create</code> and <code>store</code> methods:</p>
+<pre><code class="language-php">public function create()
+{
+    return view('events.create');
+}
+
+public function store(Request $request)
+{
+    $data = $request-&gt;validate([
+        'name' =&gt; 'required',
+        'start' =&gt; 'required',
+        'end' =&gt; 'required|after:start',
+    ])
+
+    $event = Event::create($data);
+
+    return redirect()-&gt;route('event.show', $event);
+}</code></pre>
+<p>What we could do here is move these two methods to a dedicated controller which better explains what these methods do in terms of the actual process. These methods would be served better in a controller called <code>ScheduleNewEventController</code>. Let's update our routes to this new controller:</p>
+<pre><code class="language-php">Route::get('events/schedule', [ScheduleNewEventController::class, 'showForm']);
+Route::post('events/schedule', [ScheduleNewEventController::class, 'schedule']);</code></pre>
+<p>I'm not going to show you the actual controller because it holds the same two methods as above except that they're renamed to <code>showForm</code> and <code>schedule</code> to better represent what they do. Even though it's not a single action controller it's the same methodology of splitting up parts into dedicated controllers for dedicated actions in your app.</p>
+<p>Now that you've seen examples of single action controllers you might be thinking that this is going to lead to lots and lots of files. But as a matter of fact, this isn't a problem at all. Files are inexpensive. It's better to have more and smaller maintainable files than larger and harder to parse ones. You can open a single action controller and quickly scan the code to know what it does.</p>
+<p>What I also often do is group them into different directories that hold different parts of the domain. This makes it easier if you look at the controllers from a file structure point of view. </p>
+<p>Splitting up controllers also makes it much easier to look for a specific one. Imagine that you'd have to look for the controller that schedules new events. Now you can just search in your editor of choice by filename instead of a generic <code>EventController</code>.</p>
+<h2>Alternative Situations</h2>
+<p>I've also been given the question if I do this for all my controllers. Not <em>always</em>. I tend to be strict and concise when naming my controllers but I'll also adapt to different situations as you always should. </p>
+<p>Of course, there are times where you still want to make use of resourceful controllers. For example when you're building RESTful APIs. Here, it makes sense to use these as you're often directly interacting with the data itself and not so much with the domain or any process. Apps like a CMS or Laravel Nova are perfect examples of this.</p>
+<p>But when the need arises you should ask yourself if a solution more closer to your domain and process would be better. In the situations where you want to execute actions against your domain, something like GraphQL or an RPC like API could perhaps be better suited.</p>
+<h2>Conclusion</h2>
+<p>I hope this was a bit insightful and you now have a better understanding of why I like single action controllers this much. I believe the combination of small classes, using ubiquitous language and explicit naming will lead to more maintainable code, even for your controllers, not just your domain objects. But like I said at the beginning of this post, take the parts that help and see what works for you and what doesn't.</p>
+                <div class="share mx-auto max-w-md mt-10 sm:mt-16 text-2xl text-center">
+                    <p class="text-sm italic">
+                        Like what you read? Feel free to share!
+                        Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
+                    </p>
+                    <p class="share-links">
+                        <a class="text-gray-500" target="_blank"
+                           href="http://twitter.com/share?text=%22The+Beauty+of+Single+Action+Controllers%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers">
+                            <i class="enlarge fab fa-twitter"></i>
+                        </a>
+
+                        <a class="ml-4 text-gray-500" target="_blank"
+                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers&quote=%22The+Beauty+of+Single+Action+Controllers%22+by+Dries+Vints+-+">
+                            <i class="enlarge fab fa-facebook-f"></i>
+                        </a>
+
+                        <a class="ml-4 text-gray-500" target="_blank"
+                           href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers&title=%22The+Beauty+of+Single+Action+Controllers%22+by+Dries+Vints+-+">
+                            <i class="enlarge fab fa-linkedin-in"></i>
+                        </a>
+                    </p>
+
+                    <div class="mx-auto max-w-md text-center">
+    <p class="text-sm italic mb-8">
+        Do you like what I do or did you ever found something that I made useful? Consider supporting me!
+    </p>
+
+    <p class="mb-4">
+        <a class="btn text-sm mb-4" href="https://github.com/sponsors/driesvints" target="_blank">
+            <i class="fab fa-github mr-1"></i> Support me regularly
+        </a>
+
+        <a class="btn text-sm" href="https://paypal.me/driesvints" target="_blank">
+            <i class="fab fa-paypal mr-1"></i> Donate just once
+        </a>
+    </p>
+</div>
+                </div>
+            </div>
+        </div>
+
+                    <div class="bg-gray-200 text-xl sm:text-2xl border-t border-gray-300 px-6">
+                <div class="max-w-4xl mx-auto flex">
+                    <div class="flex-1 text-center sm:text-left border-r border-gray-300 pr-6 py-10 sm:py-20">
+                                                    <p class="uppercase text-sm mb-2">&leftarrow; Previous post</p>
+                            <a href="/blog/blade-heroicons">Blade Heroicons</a>
+                                            </div>
+                    <div class="flex-1 text-center sm:text-right px-4 py-10 pl-6 sm:py-20">
+                                                    <p class="uppercase text-sm mb-2">Next post &rightarrow; </p>
+                            <a href="/blog/testing-cashier">Testing Cashier</a>
+                                            </div>
+                </div>
+            </div>
+        
+        <div id="about" class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
+    <div class="text-center mb-6">
+        <a href="https://twitter.com/driesvints">
+            <img src="https://www.gravatar.com/avatar/e8321183acdf47a9ce838afd13a964b5?s=180" width="90" class="rounded-full enlarge inline-block mb-4 sm:mb-0 sm:mr-4" alt="">
+        </a>
+    </div>
+
+    <h2 class="text-4xl text-center font-bold mb-8">About Me</h2>
+
+    <p class="mb-4">
+        I'm a software engineer from Antwerp, Belgium. I work as one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework.
+    </p>
+
+    <p class="mb-4">
+        My passions are <a href="https://github.com/driesvints">open-source</a>, building communities, managing software teams, and creating quality and maintainable products.
+    </p>
+
+    <p class="mb-4">
+        I'm currently building <a href="https://eventy.io">Eventy</a>, an app for user group leaders, conference organisers, speakers, attendees, sponsors and venue owners.
+    </p>
+
+    <p class="mb-4">
+        Together with my buddy <a href="https://twitter.com/riasvdv">Rias</a> I organize events for <a href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a href="https://meetup.com/fullstackghent">Ghent</a>. And together with my buddy <a href="https://twitter.com/freekmurze">Freek</a> I organise <a href="https://fullstackeurope.com">Full Stack Europe</a>, the conference for the whole team.
+    </p>
+
+    <p>
+        Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank">@driesvints</a> where I also share some <a href="https://twitter.com/i/moments/1155908429698994181">Dev Tips</a> from time to time. You can contact me by <a href="mailto:dries@vints.io">email</a>.
+    </p>
+</div>
+    </div>
+</div>
+
+<div class="border-t border-gray-300">
+    <div class="max-w-6xl mx-auto text-sm text-gray-500 sm:flex px-6 py-8">
+        <div class="sm:flex-1 text-center sm:text-left mb-6 sm:mb-0 sm:mt-3">
+            &copy; Dries Vints
+        </div>
+        <div class="sm:flex-1 text-center sm:text-right">
+            <ul class="text-2xl">
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="/blog">
+            <i class="enlarge fas fa-rss"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://twitter.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://github.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-github"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://www.youtube.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-youtube"></i>
+        </a>
+    </li>
+    <li class="inline-block mr-6 sm:mr-10">
+        <a href="https://instagram.com/driesvints" target="_blank">
+            <i class="enlarge fab fa-instagram"></i>
+        </a>
+    </li>
+    <li class="inline-block">
+        <a href="https://www.linkedin.com/in/driesvints" target="_blank">
+            <i class="enlarge fab fa-linkedin-in"></i>
+        </a>
+    </li>
+</ul>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/build/js/main.js?id=c627d3cd8b2c97c1bcef"></script>
+
+<script>
+        (function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+                (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+                m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+        })(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'GFHEOMNZ');
+        fathom('trackPageview');
+    </script>

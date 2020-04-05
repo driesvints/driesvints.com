@@ -3,7 +3,7 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-04-05T11:17:29+00:00</updated>
+    <updated>2020-04-05T14:32:26+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
@@ -163,6 +163,173 @@ class SubscribeCustomerTest extends TestCase
 <p>And thus no Stripe API calls are made. Of course this only mocks the calls but doesn't re-implements the behavior like our interface example. The above technique is ideal for unit tests but not so much for feature tests.</p>
 <h2>Conclusion</h2>
 <p>We've seen three different techniques when it comes to testing Cashier and while each one holds a benefit and a downside I'd still recommend making actual Stripe HTTP calls if you want to be entirely sure your billing integration works as expected. If stripe-mock ever gets persistency we can solve the speed issue that way. But definitely don't be afraid to use the other two techniques. Use what works best for your situation.</p>        ]]></content>
+</entry>
+            <entry>
+    <id>https://driesvints.com/blog/the-beauty-of-single-action-controllers</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/the-beauty-of-single-action-controllers" />
+    <title>The Beauty of Single Action Controllers</title>
+    <published>2020-04-04T00:00:00+00:00</published>
+    <updated>2020-04-04T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">Yesterday Jeffrey Way posted a tweet where he asked if people prefer to name their controllers singular or plural. I replied that I did neither and used Single Action Controllers. What ensued was a stream of replies from people agreeing, disagreeing or......</summary>
+    <content type="html"><![CDATA[
+        <p>Yesterday Jeffrey Way <a href="https://twitter.com/jeffrey_way/status/1246078499632353284">posted a tweet</a> where he asked if people prefer to name their controllers singular or plural. <a href="https://twitter.com/driesvints/status/1246079812663418882">I replied</a> that I did neither and used Single Action Controllers. What ensued was a stream of replies from people agreeing, disagreeing or even <a href="https://twitter.com/adamwathan/status/1246083603236257793">doing the weirdest things</a>.</p>
+<p>Because of the overwhelming reactions I wanted to do a writeup on why I love Single Action Controllers and why I think they're a thing of beauty.</p>
+<p>First of all, I want to start by saying that there isn't a single truth to this. As always, I want to point out that everything boils down to your personal preference. I can only teach, suggest and point out a few things but it's up to you to agree, disagree, adapt, learn, and/or adjust. Or not. Take from this post what you want and do whatever you feel comfortable with.</p>
+<h2>CRUD vs Domain Modelling</h2>
+<p>Let's start by looking at why we tend to write resourceful CRUD controllers. I believe a lot of people go down this path and stick with it because it's the standard way of doing things in Laravel and most of the examples in the documentation show this exact usage. Or perhaps it's what you mostly see in blog posts or other apps.</p>
+<p>But if you stop and think for a second, is it the best way to write them? Or software in general? In recent years I've invested a lot of time in things like Domain Driven Design and thinking about software in terms of how it applies to the domain you're working in and the processes that it translates to. When you start thinking in terminology and phrasing that mimics the ubiquitous language of your domain you'll notice that your code will become much clearer and to the point.</p>
+<blockquote>
+<p>In the end, I believe the essence of writing software is to implement your domain processes in the most readable and maintainable way possible.</p>
+</blockquote>
+<p>Resourceful controllers lack quite a bit in those terms. First of all, they're not readably because you tend to model them according to your data and not your domain. You lose a context this way. You're telling <em>how</em> data is being processed but there's no explanation of what's going on and which process you're handling.</p>
+<p>Secondly, you're not optimizing for maintainability. Since you're modeling according to your data structures, you are also coupling yourself to it. Indeed, your domain model is constantly evolving but so is your data structure. And if your data structure handles multiple processes or multiple parts of your domain it's going to be hard for you to make adjustments.</p>
+<h2>A Practical Example</h2>
+<p>Since the theory is boring and you're here for code, let's look at a practical example. </p>
+<p>Say you're building an app that allows your users to organize events. You want to offer a way to create, update and delete those events. This is a very CRUD way to think about your process. Let's see how this translates in terms of a resourceful controller.</p>
+<p>First let's look at the routes:</p>
+<pre><code class="language-php">Route::get('events', [EventController::class, 'index']);
+Route::get('events/create', [EventController::class, 'create']);
+Route::post('events', [EventController::class, 'store']);
+Route::get('event/{event}', [EventController::class, 'show']);
+Route::get('events/{event}/edit', [EventController::class, 'edit']);
+Route::put('events/{event}', [EventController::class, 'update']);
+Route::destroy('events/{event}', [EventController::class, 'destroy']);</code></pre>
+<p>And now the controller itself:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Event;
+
+final class EventController
+{
+    public function index()
+    {
+        // ...
+    }
+
+    public function create()
+    {
+        // ...
+    }
+
+    public function store()
+    {
+        // ...
+    }
+
+    public function show(Event $event)
+    {
+        // ...
+    }
+
+    public function edit(Event $event)
+    {
+        // ...
+    }
+
+    public function update(Event $event)
+    {
+        // ...
+    }
+
+    public function destroy(Event $event)
+    {
+        // ...
+    }
+}</code></pre>
+<p>Our <code>EventController</code> holds all of the CRUD actions to display a list of events, show a specific event, create a new event, update an existing event and delete an event.</p>
+<p>Let's take a look at the <code>index</code> method in detail:</p>
+<pre><code class="language-php">public function index()
+{
+    $events = Event::paginate(10);
+
+    return view('events.index', compact('events'));
+}</code></pre>
+<p>In our method, we retrieve events and feed them to a view that'll display them in a paginated list. So far so good. But now you want to implement a way for them to view past events and upcoming events through separate pages. Let's see how we'd implement that in our <code>index</code> method:</p>
+<pre><code class="language-php">public function index(Request $request)
+{
+    if ($request-&gt;boolean('past')) {
+        $events = Event::past()-&gt;paginate(10);
+    } elseif ($request-&gt;boolean('upcoming')) {
+        $events = Event::upcoming()-&gt;paginate(10);
+    } else {
+        $events = Event::paginate(10);
+    }
+
+    return view('events.index', compact('events'));
+}</code></pre>
+<p>Urgh, that looks messy. Even though we already make use of Eloquent scopes to hide the query logic involved, there's still an ugly chain of if statements here. Let's see how we can solve that using Single Action Controllers instead. </p>
+<blockquote>
+<p>Single Action Controllers are controllers that do one thing and one thing only.</p>
+</blockquote>
+<p>First of all, instead of making use of query parameters to differentiate the list of events, we'll make use of dedicated routes.</p>
+<pre><code class="language-php">Route::get('events', ShowAllEventsController::class);
+Route::get('events/past', ShowPastEventsController::class);
+Route::get('events/upcoming', ShowUpcomingEventsController::class);</code></pre>
+<p>This is a bit more verbose than our previous single route but if you look at it it's much more expressive. You can immediately identify which controller holds which logic for a specific scenario. If you compare the URI's you'll see a slight improvement in readability:</p>
+<pre><code># Before
+/events
+/events?past=true
+/events?upcoming=true
+
+# After
+/events
+/events/past
+/events/upcoming</code></pre>
+<p>Now let's look at one of our new controllers. Let's pick the <code>ShowUpcomingEventsController</code> controller:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Event;
+
+final class ShowUpcomingEventsController
+{
+    public function __invoke()
+    {
+        $events = Event::upcoming()-&gt;paginate(10);
+
+        return view('events.index', compact('events'));
+    }
+}</code></pre>
+<p>Our ugly <code>if</code> statement is gone and has made way for the same readable three liner we had from our first CRUD controller example. But instead of having all of the other CRUD operations we now have a dedicated controller for a dedicated action.</p>
+<p>Simple, readable and maintainable.</p>
+<p>You might ask yourself if this is worth it all and if the previous <code>if</code> statement wasn't all that bad after all. But the thing I'm trying to show you here is that you're <strong> optimizing for future change</strong> and improving maintainability. Next time you'll need to do specific changes to any of these three pages, you'll know exactly where to do them and without having to update a difficult if statement.</p>
+<p>Of course, the above example is very simple so let's look at a more complicated one. Let's try to refactor our <code>create</code> and <code>store</code> methods:</p>
+<pre><code class="language-php">public function create()
+{
+    return view('events.create');
+}
+
+public function store(Request $request)
+{
+    $data = $request-&gt;validate([
+        'name' =&gt; 'required',
+        'start' =&gt; 'required',
+        'end' =&gt; 'required|after:start',
+    ])
+
+    $event = Event::create($data);
+
+    return redirect()-&gt;route('event.show', $event);
+}</code></pre>
+<p>What we could do here is move these two methods to a dedicated controller which better explains what these methods do in terms of the actual process. These methods would be served better in a controller called <code>ScheduleNewEventController</code>. Let's update our routes to this new controller:</p>
+<pre><code class="language-php">Route::get('events/schedule', [ScheduleNewEventController::class, 'showForm']);
+Route::post('events/schedule', [ScheduleNewEventController::class, 'schedule']);</code></pre>
+<p>I'm not going to show you the actual controller because it holds the same two methods as above except that they're renamed to <code>showForm</code> and <code>schedule</code> to better represent what they do. Even though it's not a single action controller it's the same methodology of splitting up parts into dedicated controllers for dedicated actions in your app.</p>
+<p>Now that you've seen examples of single action controllers you might be thinking that this is going to lead to lots and lots of files. But as a matter of fact, this isn't a problem at all. Files are inexpensive. It's better to have more and smaller maintainable files than larger and harder to parse ones. You can open a single action controller and quickly scan the code to know what it does.</p>
+<p>What I also often do is group them into different directories that hold different parts of the domain. This makes it easier if you look at the controllers from a file structure point of view. </p>
+<p>Splitting up controllers also makes it much easier to look for a specific one. Imagine that you'd have to look for the controller that schedules new events. Now you can just search in your editor of choice by filename instead of a generic <code>EventController</code>.</p>
+<h2>Alternative Situations</h2>
+<p>I've also been given the question if I do this for all my controllers. Not <em>always</em>. I tend to be strict and concise when naming my controllers but I'll also adapt to different situations as you always should. </p>
+<p>Of course, there are times where you still want to make use of resourceful controllers. For example when you're building RESTful APIs. Here, it makes sense to use these as you're often directly interacting with the data itself and not so much with the domain or any process. Apps like a CMS or Laravel Nova are perfect examples of this.</p>
+<p>But when the need arises you should ask yourself if a solution more closer to your domain and process would be better. In the situations where you want to execute actions against your domain, something like GraphQL or an RPC like API could perhaps be better suited.</p>
+<h2>Conclusion</h2>
+<p>I hope this was a bit insightful and you now have a better understanding of why I like single action controllers this much. I believe the combination of small classes, using ubiquitous language and explicit naming will lead to more maintainable code, even for your controllers, not just your domain objects. But like I said at the beginning of this post, take the parts that help and see what works for you and what doesn't.</p>        ]]></content>
 </entry>
             <entry>
     <id>https://driesvints.com/blog/blade-heroicons</id>
