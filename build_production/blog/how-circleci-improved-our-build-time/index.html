@@ -113,31 +113,32 @@
 <p>I’ve been pretty happy with <a href="https://travis-ci.org/">Travis CI</a> so far for Laravel.io. We had a build time of ~3 minutes which isn’t that long even though our test suite isn’t that extensive. <a href="https://travis-ci.org/laravelio/portal/builds/366453938">Here’s an example build.</a></p>
 <p>All in all ~3 minutes is a pretty long time to set things up considering the tests themselves run for about 10 seconds. I thought this could be improved and so it did once we tried setting up CircleCI 2.0. Thanks to <a href="https://github.com/laravelio/portal/pull/364">this pull request</a> by <a href="https://github.com/serima">Ryo Shibayama</a> we managed to put together <a href="https://github.com/laravelio/portal/blob/2d0ea15eee53ec7767d7b64a77f8f3c26a136c07/.circleci/config.yml">a simple CircleCI 2.0 config</a>. As you can see from <a href="https://circleci.com/gh/laravelio/portal/14">this example build</a> the built time has significantly improved. Because we have most of our build dependencies up front and we can simply download and spin up the container, we save a lot of time. Installing and building our assets is also greatly improved. Sure, some of it comes from the fact that we now cache our Yarn dependencies but overall we cut down ~2 minutes of build time.</p>
 <p>All in all we went from ~3 minutes to ~1 minute which is a lot if you want to keep your feedback loop as short as possible. <a href="https://circleci.com/gh/laravelio/portal/9">We can even reach ~37 seconds</a> when we use a host which already has the Docker instance cached. That way we only need to spin it up, so the first step only takes ~1 second. Unfortunately, there’s no way to control which host you’re going to use or at least I haven’t found a way to do so yet.</p>
-<p>In conclusion, we can really say that CircleCI 2.0 has greatly helped us in improving our build time. I can really recommend looking into their service and giving them a try. If you have an open-source project, they offer four free containers for your project.</p>
-                <div class="share mx-auto max-w-md mt-10 sm:mt-16 text-2xl text-center">
-                    <p class="text-sm italic">
-                        Like what you read? Feel free to share!
-                        Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
-                    </p>
-                    <p class="share-links">
-                        <a class="text-gray-500" target="_blank"
-                           href="http://twitter.com/share?text=%22How+CircleCI+Improved+Our+Build+Time%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time">
-                            <i class="enlarge fab fa-twitter"></i>
-                        </a>
+<p>In conclusion, we can really say that CircleCI 2.0 has greatly helped us in improving our build time. I can really recommend looking into their service and giving them a try. If you have an open-source project, they offer four free containers for your project.</p>            </div>
 
-                        <a class="ml-4 text-gray-500" target="_blank"
-                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time&quote=%22How+CircleCI+Improved+Our+Build+Time%22+by+Dries+Vints+-+">
-                            <i class="enlarge fab fa-facebook-f"></i>
-                        </a>
+            <div class="share mx-auto max-w-md mt-10 sm:mt-16 text-2xl text-center">
+                <p class="text-sm italic mb-4">
+                    Like what you read? Feel free to share!
+                    Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
+                </p>
+                <p class="share-links mb-6">
+                    <a class="text-gray-500" target="_blank"
+                       href="http://twitter.com/share?text=%22How+CircleCI+Improved+Our+Build+Time%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time">
+                        <i class="enlarge fab fa-twitter"></i>
+                    </a>
 
-                        <a class="ml-4 text-gray-500" target="_blank"
-                           href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time&title=%22How+CircleCI+Improved+Our+Build+Time%22+by+Dries+Vints+-+">
-                            <i class="enlarge fab fa-linkedin-in"></i>
-                        </a>
-                    </p>
+                    <a class="ml-4 text-gray-500" target="_blank"
+                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time&quote=%22How+CircleCI+Improved+Our+Build+Time%22+by+Dries+Vints+-+">
+                        <i class="enlarge fab fa-facebook-f"></i>
+                    </a>
 
-                    <div class="mx-auto max-w-md text-center">
-    <p class="text-sm italic mb-8">
+                    <a class="ml-4 text-gray-500" target="_blank"
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fhow-circleci-improved-our-build-time&title=%22How+CircleCI+Improved+Our+Build+Time%22+by+Dries+Vints+-+">
+                        <i class="enlarge fab fa-linkedin-in"></i>
+                    </a>
+                </p>
+
+                <div class="sponsors mx-auto max-w-md text-center">
+    <p class="text-sm italic mb-5">
         Do you like what I do or did you ever found something that I made useful? Consider supporting me!
     </p>
 
@@ -157,7 +158,6 @@
         </a>
     </p>
 </div>
-                </div>
             </div>
         </div>
 

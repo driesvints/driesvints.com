@@ -262,31 +262,32 @@ Route::post('events/schedule', [ScheduleNewEventController::class, 'schedule']);
 <p>Of course, there are times where you still want to make use of resourceful controllers. For example when you're building RESTful APIs. Here, it makes sense to use these as you're often directly interacting with the data itself and not so much with the domain or any process. Apps like a CMS or Laravel Nova are perfect examples of this.</p>
 <p>But when the need arises you should ask yourself if a solution more closer to your domain and process would be better. In the situations where you want to execute actions against your domain, something like GraphQL or an RPC like API could perhaps be better suited.</p>
 <h2>Conclusion</h2>
-<p>I hope this was a bit insightful and you now have a better understanding of why I like single action controllers this much. I believe the combination of small classes, using ubiquitous language and explicit naming will lead to more maintainable code, even for your controllers, not just your domain objects. But like I said at the beginning of this post, take the parts that help and see what works for you and what doesn't.</p>
-                <div class="share mx-auto max-w-md mt-10 sm:mt-16 text-2xl text-center">
-                    <p class="text-sm italic">
-                        Like what you read? Feel free to share!
-                        Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
-                    </p>
-                    <p class="share-links">
-                        <a class="text-gray-500" target="_blank"
-                           href="http://twitter.com/share?text=%22The+Beauty+of+Single+Action+Controllers%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers">
-                            <i class="enlarge fab fa-twitter"></i>
-                        </a>
+<p>I hope this was a bit insightful and you now have a better understanding of why I like single action controllers this much. I believe the combination of small classes, using ubiquitous language and explicit naming will lead to more maintainable code, even for your controllers, not just your domain objects. But like I said at the beginning of this post, take the parts that help and see what works for you and what doesn't.</p>            </div>
 
-                        <a class="ml-4 text-gray-500" target="_blank"
-                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers&quote=%22The+Beauty+of+Single+Action+Controllers%22+by+Dries+Vints+-+">
-                            <i class="enlarge fab fa-facebook-f"></i>
-                        </a>
+            <div class="share mx-auto max-w-md mt-10 sm:mt-16 text-2xl text-center">
+                <p class="text-sm italic mb-4">
+                    Like what you read? Feel free to share!
+                    Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
+                </p>
+                <p class="share-links mb-6">
+                    <a class="text-gray-500" target="_blank"
+                       href="http://twitter.com/share?text=%22The+Beauty+of+Single+Action+Controllers%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers">
+                        <i class="enlarge fab fa-twitter"></i>
+                    </a>
 
-                        <a class="ml-4 text-gray-500" target="_blank"
-                           href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers&title=%22The+Beauty+of+Single+Action+Controllers%22+by+Dries+Vints+-+">
-                            <i class="enlarge fab fa-linkedin-in"></i>
-                        </a>
-                    </p>
+                    <a class="ml-4 text-gray-500" target="_blank"
+                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers&quote=%22The+Beauty+of+Single+Action+Controllers%22+by+Dries+Vints+-+">
+                        <i class="enlarge fab fa-facebook-f"></i>
+                    </a>
 
-                    <div class="mx-auto max-w-md text-center">
-    <p class="text-sm italic mb-8">
+                    <a class="ml-4 text-gray-500" target="_blank"
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fthe-beauty-of-single-action-controllers&title=%22The+Beauty+of+Single+Action+Controllers%22+by+Dries+Vints+-+">
+                        <i class="enlarge fab fa-linkedin-in"></i>
+                    </a>
+                </p>
+
+                <div class="sponsors mx-auto max-w-md text-center">
+    <p class="text-sm italic mb-5">
         Do you like what I do or did you ever found something that I made useful? Consider supporting me!
     </p>
 
@@ -306,7 +307,6 @@ Route::post('events/schedule', [ScheduleNewEventController::class, 'schedule']);
         </a>
     </p>
 </div>
-                </div>
             </div>
         </div>
 

@@ -249,31 +249,32 @@ class SubscribeCustomerTest extends TestCase
 }</code></pre>
 <p>And thus no Stripe API calls are made. Of course this only mocks the calls but doesn't re-implements the behavior like our interface example. The above technique is ideal for unit tests but not so much for feature tests.</p>
 <h2>Conclusion</h2>
-<p>We've seen three different techniques when it comes to testing Cashier and while each one holds a benefit and a downside I'd still recommend making actual Stripe HTTP calls if you want to be entirely sure your billing integration works as expected. If stripe-mock ever gets persistency we can solve the speed issue that way. But definitely don't be afraid to use the other two techniques. Use what works best for your situation.</p>
-                <div class="share mx-auto max-w-md mt-10 sm:mt-16 text-2xl text-center">
-                    <p class="text-sm italic">
-                        Like what you read? Feel free to share!
-                        Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
-                    </p>
-                    <p class="share-links">
-                        <a class="text-gray-500" target="_blank"
-                           href="http://twitter.com/share?text=%22Testing+Cashier%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier">
-                            <i class="enlarge fab fa-twitter"></i>
-                        </a>
+<p>We've seen three different techniques when it comes to testing Cashier and while each one holds a benefit and a downside I'd still recommend making actual Stripe HTTP calls if you want to be entirely sure your billing integration works as expected. If stripe-mock ever gets persistency we can solve the speed issue that way. But definitely don't be afraid to use the other two techniques. Use what works best for your situation.</p>            </div>
 
-                        <a class="ml-4 text-gray-500" target="_blank"
-                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier&quote=%22Testing+Cashier%22+by+Dries+Vints+-+">
-                            <i class="enlarge fab fa-facebook-f"></i>
-                        </a>
+            <div class="share mx-auto max-w-md mt-10 sm:mt-16 text-2xl text-center">
+                <p class="text-sm italic mb-4">
+                    Like what you read? Feel free to share!
+                    Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
+                </p>
+                <p class="share-links mb-6">
+                    <a class="text-gray-500" target="_blank"
+                       href="http://twitter.com/share?text=%22Testing+Cashier%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier">
+                        <i class="enlarge fab fa-twitter"></i>
+                    </a>
 
-                        <a class="ml-4 text-gray-500" target="_blank"
-                           href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier&title=%22Testing+Cashier%22+by+Dries+Vints+-+">
-                            <i class="enlarge fab fa-linkedin-in"></i>
-                        </a>
-                    </p>
+                    <a class="ml-4 text-gray-500" target="_blank"
+                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier&quote=%22Testing+Cashier%22+by+Dries+Vints+-+">
+                        <i class="enlarge fab fa-facebook-f"></i>
+                    </a>
 
-                    <div class="mx-auto max-w-md text-center">
-    <p class="text-sm italic mb-8">
+                    <a class="ml-4 text-gray-500" target="_blank"
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Ftesting-cashier&title=%22Testing+Cashier%22+by+Dries+Vints+-+">
+                        <i class="enlarge fab fa-linkedin-in"></i>
+                    </a>
+                </p>
+
+                <div class="sponsors mx-auto max-w-md text-center">
+    <p class="text-sm italic mb-5">
         Do you like what I do or did you ever found something that I made useful? Consider supporting me!
     </p>
 
@@ -293,7 +294,6 @@ class SubscribeCustomerTest extends TestCase
         </a>
     </p>
 </div>
-                </div>
             </div>
         </div>
 

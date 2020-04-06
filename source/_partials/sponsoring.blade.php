@@ -1,5 +1,5 @@
-<div class="mx-auto max-w-md text-center">
-    <p class="text-sm italic mb-8">
+<div class="sponsors mx-auto max-w-md text-center">
+    <p class="text-sm italic mb-5">
         Do you like what I do or did you ever found something that I made useful? Consider supporting me!
     </p>
 
