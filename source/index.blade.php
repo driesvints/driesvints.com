@@ -47,8 +47,8 @@
             <div class="max-w-6xl mx-auto px-6 py-10 sm:py-20">
                 <h2 class="text-4xl text-center font-bold mb-10">Projects</h2>
 
-                <div class="md:flex mb-16">
-                    <div class="project sm:flex-1 px-4 lg:px-8 mb-16 md:mb-0">
+                <div class="md:flex mb-12 md:mb-16">
+                    <div class="project sm:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
                         <a href="https://fullstackeurope.com" target="_blank">
                             <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
                                 <div class="h-24 pt-5 mb-6">
@@ -59,7 +59,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="project md:flex-1 px-4 lg:px-8 mb-16 md:mb-0">
+                    <div class="project md:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
                         <a href="https://fullstackbelgium.be" target="_blank">
                             <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
                                 <div class="h-24 mb-6">
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="text-center">
-                    <p class="text-base text-gray-700 mb-8">
+                    <p class="text-sm sm:text-base text-gray-700 mb-12">
                         + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                         + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.<br>
