@@ -11,13 +11,13 @@ By far my most favorite addition to Laravel 7 are [the new Blade components](htt
 I've built a new package called [Blade Heroicons](https://github.com/driesvints/blade-heroicons) to easily make use of the [Heroicons](https://github.com/refactoringui/heroicons) originally made [Steve Schoger](https://twitter.com/steveschoger) and [Adam Wathan](https://twitter.com/adamwathan). The packages provides a simple component based flow to include them in your Blade views.
 
 ```html
-<x:icon-o-adjustments/>
+<x-icon-o-adjustments/>
 ```
 
 You can also pass classes to your icon components:
 
 ```html
-<x:icon-o-adjustments class="w-6 h-6 text-gray-500"/>
+<x-icon-o-adjustments class="w-6 h-6 text-gray-500"/>
 ```
 
 And if you want you can publish the raw SVG icons and use them like:
