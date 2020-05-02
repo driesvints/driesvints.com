@@ -22,7 +22,7 @@ module.exports = {
                     }
                 });
             });
-        }
+        },
     },
 
     watch: function (paths) {
@@ -32,7 +32,8 @@ module.exports = {
     },
 
     browserSync: function (proxy) {
-        return new BrowserSyncPlugin({
+        return new BrowserSyncPlugin(
+            {
                 notify: false,
                 port: port,
                 proxy: proxy,
@@ -40,9 +41,10 @@ module.exports = {
             },
             {
                 reload: false,
-                callback: function() {
+                callback: function () {
                     browserSyncInstance = BrowserSync.get('bs-webpack-plugin');
                 },
-            })
+            }
+        );
     },
 };

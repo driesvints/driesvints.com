@@ -3,3 +3,4 @@
 /vendor/
 /_tmp/
 /cache/
+.php_cs.cache
