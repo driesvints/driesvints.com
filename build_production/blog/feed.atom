@@ -3,12 +3,85 @@
     <title>Dries Vints</title>
     <link href="https://driesvints.com/" />
     <link type="application/atom+xml" rel="self" href="https://driesvints.com/blog/feed.atom" />
-    <updated>2020-05-02T10:08:08+00:00</updated>
+    <updated>2020-05-03T11:55:23+00:00</updated>
     <id>https://driesvints.com/blog/feed.atom</id>
     <author>
         <name>Dries Vints</name>
     </author>
                 <entry>
+    <id>https://driesvints.com/blog/code-style-formatting-with-github-actions</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/code-style-formatting-with-github-actions" />
+    <title>Code Style formatting with Github Actions</title>
+    <published>2020-05-03T00:00:00+00:00</published>
+    <updated>2020-05-03T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">Yesterday I dived into Prettier and PHP CS Fixer for my projects. So I decided to write a quick blog post on the subject. I managed to get a great quick start by reading these two excellent blog posts by Freek Van der Herten and Stefan Zweifer on the......</summary>
+    <content type="html"><![CDATA[
+        <p>Yesterday I dived into <a href="https://prettier.io">Prettier</a> and <a href="https://github.com/FriendsOfPhp/PHP-CS-Fixer">PHP CS Fixer</a> for my projects. So I decided to write a quick blog post on the subject. I managed to get a great quick start by reading these two excellent blog posts by <a href="https://twitter.com/freekmurze">Freek Van der Herten</a> and <a href="https://twitter.com/_stefanzweifel">Stefan Zweifer</a> on the subject:</p>
+<ul>
+<li><a href="https://freek.dev/1252-tools-to-automatically-format-php-javascript-and-css-files">Tools to automatically format PHP, JavaScript and CSS files</a></li>
+<li><a href="https://stefanzweifel.io/posts/run-prettier-or-php-cs-fixer-with-github-actions/">Run prettier or php-cs-fixer with GitHub Actions</a></li>
+</ul>
+<p>In the end, I decided to combine the two in a single workflow but in two jobs:</p>
+<pre><code class="language-yaml">name: Code Style
+
+on: [push]
+
+jobs:
+  php-cs-fixer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run PHP CS Fixer
+        uses: docker://oskarstark/php-cs-fixer-ga
+        with:
+          args: --config=.php_cs.dist --allow-risky=yes
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+        with:
+          commit_message: Fix styling
+          branch: ${{ steps.extract_branch.outputs.branch }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install NPM dependencies
+        run: npm ci
+
+      - name: Run Prettier
+        run: npm run format
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+        with:
+          commit_message: Apply Prettier changes
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}</code></pre>
+<p>The benefit of this is that your Github Actions will be neatly grouped in Pull Requests and the Github Actions overview:</p>
+<p class="image">
+    <img src="/assets/images/posts/code-style-formatting-with-github-actions.png" alt="Github Actions" style="zoom:50%">
+</p>
+<p>Also, we only run them on push so any code that gets merged with incorrect styling will be automatically fixed. Here's the full Pull Request for Laravel.io where we added the workflow and set up Prettier and PHP CS Fixer: <a href="https://github.com/laravelio/laravel.io/pull/520">https://github.com/laravelio/laravel.io/pull/520</a></p>        ]]></content>
+</entry>
+            <entry>
     <id>https://driesvints.com/blog/the-beauty-of-single-action-controllers</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/the-beauty-of-single-action-controllers" />
     <title>The Beauty of Single Action Controllers</title>
@@ -1064,6 +1137,33 @@ I&#039;ve seen two different tips for speeding up your tests in Laravel in the p
 <p>Go build your own dotfiles and the next time when your computer crashes, it won't be that bad! 😄</p>        ]]></content>
 </entry>
             <entry>
+    <id>https://driesvints.com/blog/quality-assurance-with-envoyer</id>
+    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/quality-assurance-with-envoyer" />
+    <title>Quality Assurance with Envoyer</title>
+    <published>2015-08-25T00:00:00+00:00</published>
+    <updated>2015-08-25T00:00:00+00:00</updated>
+    <author>
+        <name>Dries Vints</name>
+    </author>
+    <summary type="html">This is one of the tutorials I did for my Laracon EU talk.
+Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
+For example, at......</summary>
+    <content type="html"><![CDATA[
+        <p>This is one of the tutorials I did for my Laracon EU talk.</p>
+<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
+<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
+<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
+<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
+<p>You can do that with this hook:</p>
+<pre><code class="language-bash">cd /home/forge/default/current
+php artisan migrate:reset --force</code></pre>
+<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
+<pre><code>cd {{release}}
+php artisan migrate --force --seed</code></pre>
+<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
+<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>        ]]></content>
+</entry>
+            <entry>
     <id>https://driesvints.com/blog/continuous-delivery-with-forge-and-envoyer</id>
     <link type="text/html" rel="alternate" href="https://driesvints.com/blog/continuous-delivery-with-forge-and-envoyer" />
     <title>Continuous Delivery with Forge and Envoyer</title>
@@ -1105,33 +1205,6 @@ git pull origin master
 composer install --dev
 ./tests.sh</code></pre>
 <p>And that's it! Your Continuous Delivery pipeline is now set up.</p>        ]]></content>
-</entry>
-            <entry>
-    <id>https://driesvints.com/blog/quality-assurance-with-envoyer</id>
-    <link type="text/html" rel="alternate" href="https://driesvints.com/blog/quality-assurance-with-envoyer" />
-    <title>Quality Assurance with Envoyer</title>
-    <published>2015-08-25T00:00:00+00:00</published>
-    <updated>2015-08-25T00:00:00+00:00</updated>
-    <author>
-        <name>Dries Vints</name>
-    </author>
-    <summary type="html">This is one of the tutorials I did for my Laracon EU talk.
-Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense for your production server but it could help a lot when developing features.
-For example, at......</summary>
-    <content type="html"><![CDATA[
-        <p>This is one of the tutorials I did for my Laracon EU talk.</p>
-<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
-<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
-<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
-<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
-<p>You can do that with this hook:</p>
-<pre><code class="language-bash">cd /home/forge/default/current
-php artisan migrate:reset --force</code></pre>
-<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
-<pre><code>cd {{release}}
-php artisan migrate --force --seed</code></pre>
-<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
-<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>        ]]></content>
 </entry>
             <entry>
     <id>https://driesvints.com/blog/laravel-io-the-road-ahead</id>

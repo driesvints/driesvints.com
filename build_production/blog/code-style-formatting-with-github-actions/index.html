@@ -6,27 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Site info -->
-<title>Quality Assurance with Envoyer | Dries Vints</title>
+<title>Code Style formatting with Github Actions | Dries Vints</title>
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Quality Assurance with Envoyer | Dries Vints">
+<meta property="og:title" content="Code Style formatting with Github Actions | Dries Vints">
 <meta property="og:image" content="https://driesvints.com/assets/images/driesvints.jpg">
 <meta property="og:url" content="https://driesvints.com/">
 <meta property="og:locale" content="en_US" />
 <meta property="twitter:site" content="@driesvints">
 <meta property="twitter:creator" content="@driesvints">
 <meta property="twitter:url" content="https://driesvints.com/">
-<meta property="twitter:title" content="Quality Assurance with Envoyer | Dries Vints">
+<meta property="twitter:title" content="Code Style formatting with Github Actions | Dries Vints">
 <meta property="twitter:image" content="https://driesvints.com/assets/images/driesvints.jpg">
 
-    <meta name="description" content="This is one of the tutorials I did for my Laracon EU talk.
-Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense...">
-    <meta property="og:description" content="This is one of the tutorials I did for my Laracon EU talk.
-Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense...">
-    <meta property="twitter:description" content="This is one of the tutorials I did for my Laracon EU talk.
-Most of you probably know about Envoyer&#039;s ability to deploy branches. This doesn&#039;t makes much sense...">
+    <meta name="description" content="Yesterday I dived into Prettier and PHP CS Fixer for my projects. So I decided to write a quick blog post on the subject. I managed to get a great quick start...">
+    <meta property="og:description" content="Yesterday I dived into Prettier and PHP CS Fixer for my projects. So I decided to write a quick blog post on the subject. I managed to get a great quick start...">
+    <meta property="twitter:description" content="Yesterday I dived into Prettier and PHP CS Fixer for my projects. So I decided to write a quick blog post on the subject. I managed to get a great quick start...">
 
-    <meta property="article:published_time" content="2015-08-25" />
+    <meta property="article:published_time" content="2020-05-03" />
 
 <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title=" Atom Feed">
 
@@ -100,25 +97,73 @@ Most of you probably know about Envoyer&#039;s ability to deploy branches. This 
         <div class="py-10 sm:py-20">
             <div id="post">
                 <div class="mb-12">
-                    <h1 class="font-bold text-4xl mb-6">Quality Assurance with Envoyer</h1>
+                    <h1 class="font-bold text-4xl mb-6">Code Style formatting with Github Actions</h1>
                     <p class="block text-xs uppercase text-gray-600">
-                        Published on August 25, 2015
+                        Published on May 3, 2020
                     </p>
                 </div>
 
-                <p>This is one of the tutorials I did for my Laracon EU talk.</p>
-<p>Most of you probably know about <a href="https://envoyer.io">Envoyer</a>'s ability to deploy branches. This doesn't makes much sense for your production server but it could help a lot when developing features.</p>
-<p>For example, at <a href="https://beatswitch.com">BeatSwitch</a> we always let a QA engineer manually test out features to make sure everything's ok before we merge and deploy it. Of course, your automated tests should do the bulk of this but a user's eye often sees things that tests don't. That's why a manually check is still important.</p>
-<p>How this process could go is that you have a separate QA server which is provisioned by <a href="https://forge.laravel.com">Forge</a> and setup Envoyer to deploy code to that server. Envoyer's ability to switch branches will help us greatly.</p>
-<p>You set up the server and Envoyer like you'd normally do. Perhaps on some other <code>env</code> variables than your production instance. After that it's very important that you add one deployment hook before a new release is cloned. You'll need to reset your database because it could be that one feature branch holds different migrations than your other feature branch which is currently live on the server. So running those migrations all the way back will allow you to run all of the new migrations.</p>
-<p>You can do that with this hook:</p>
-<pre><code class="language-bash">cd /home/forge/default/current
-php artisan migrate:reset --force</code></pre>
-<p>After that you'll only need to add another hook to run your migrations for the new branch.</p>
-<pre><code>cd {{release}}
-php artisan migrate --force --seed</code></pre>
-<p>Notice that we seed the database with dummy data. This is handy for the QA to have some data for him to get started.</p>
-<p>With this setup you can freely swith branches with envoyer and let your team test out a new feature on the QA server.</p>            </div>
+                <p>Yesterday I dived into <a href="https://prettier.io">Prettier</a> and <a href="https://github.com/FriendsOfPhp/PHP-CS-Fixer">PHP CS Fixer</a> for my projects. So I decided to write a quick blog post on the subject. I managed to get a great quick start by reading these two excellent blog posts by <a href="https://twitter.com/freekmurze">Freek Van der Herten</a> and <a href="https://twitter.com/_stefanzweifel">Stefan Zweifer</a> on the subject:</p>
+<ul>
+<li><a href="https://freek.dev/1252-tools-to-automatically-format-php-javascript-and-css-files">Tools to automatically format PHP, JavaScript and CSS files</a></li>
+<li><a href="https://stefanzweifel.io/posts/run-prettier-or-php-cs-fixer-with-github-actions/">Run prettier or php-cs-fixer with GitHub Actions</a></li>
+</ul>
+<p>In the end, I decided to combine the two in a single workflow but in two jobs:</p>
+<pre><code class="language-yaml">name: Code Style
+
+on: [push]
+
+jobs:
+  php-cs-fixer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run PHP CS Fixer
+        uses: docker://oskarstark/php-cs-fixer-ga
+        with:
+          args: --config=.php_cs.dist --allow-risky=yes
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+        with:
+          commit_message: Fix styling
+          branch: ${{ steps.extract_branch.outputs.branch }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install NPM dependencies
+        run: npm ci
+
+      - name: Run Prettier
+        run: npm run format
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+        with:
+          commit_message: Apply Prettier changes
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}</code></pre>
+<p>The benefit of this is that your Github Actions will be neatly grouped in Pull Requests and the Github Actions overview:</p>
+<p class="image">
+    <img src="/assets/images/posts/code-style-formatting-with-github-actions.png" alt="Github Actions" style="zoom:50%">
+</p>
+<p>Also, we only run them on push so any code that gets merged with incorrect styling will be automatically fixed. Here's the full Pull Request for Laravel.io where we added the workflow and set up Prettier and PHP CS Fixer: <a href="https://github.com/laravelio/laravel.io/pull/520">https://github.com/laravelio/laravel.io/pull/520</a></p>            </div>
 
             <div class="share mx-auto max-w-md mt-10 sm:mt-16 px-6 text-2xl text-center">
                 <p class="text-sm italic mb-4">
@@ -127,17 +172,17 @@ php artisan migrate --force --seed</code></pre>
                 </p>
                 <p class="share-links mb-6">
                     <a class="text-gray-500" target="_blank"
-                       href="http://twitter.com/share?text=%22Quality+Assurance+with+Envoyer%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fquality-assurance-with-envoyer">
+                       href="http://twitter.com/share?text=%22Code+Style+formatting+with+Github+Actions%22+by+%40driesvints++-+&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fcode-style-formatting-with-github-actions">
                         <i class="enlarge fab fa-twitter"></i>
                     </a>
 
                     <a class="ml-4 text-gray-500" target="_blank"
-                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fquality-assurance-with-envoyer&quote=%22Quality+Assurance+with+Envoyer%22+by+Dries+Vints+-+">
+                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdriesvints.com%2Fblog%2Fcode-style-formatting-with-github-actions&quote=%22Code+Style+formatting+with+Github+Actions%22+by+Dries+Vints+-+">
                         <i class="enlarge fab fa-facebook-f"></i>
                     </a>
 
                     <a class="ml-4 text-gray-500" target="_blank"
-                       href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fquality-assurance-with-envoyer&title=%22Quality+Assurance+with+Envoyer%22+by+Dries+Vints+-+">
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdriesvints.com%2Fblog%2Fcode-style-formatting-with-github-actions&title=%22Code+Style+formatting+with+Github+Actions%22+by+Dries+Vints+-+">
                         <i class="enlarge fab fa-linkedin-in"></i>
                     </a>
                 </p>
@@ -155,11 +200,9 @@ php artisan migrate --force --seed</code></pre>
                 <div class="max-w-4xl mx-auto flex">
                     <div class="flex-1 text-center sm:text-left border-r border-gray-300 pr-6 py-10 sm:py-20">
                                                     <p class="uppercase text-sm mb-2">&leftarrow; Previous post</p>
-                            <a href="/blog/continuous-delivery-with-forge-and-envoyer">Continuous Delivery with Forge and Envoyer</a>
+                            <a href="/blog/the-beauty-of-single-action-controllers">The Beauty of Single Action Controllers</a>
                                             </div>
                     <div class="flex-1 text-center sm:text-right px-4 py-10 pl-6 sm:py-20">
-                                                    <p class="uppercase text-sm mb-2">Next post &rightarrow; </p>
-                            <a href="/blog/getting-started-with-dotfiles">Getting Started with Dotfiles</a>
                                             </div>
                 </div>
             </div>
