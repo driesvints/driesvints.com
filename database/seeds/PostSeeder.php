@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Post;
+use App\Models\Post;
 use Illuminate\Database\Seeder;
 
 class PostSeeder extends Seeder
