@@ -30,7 +30,7 @@
     <meta property="article:published_time" content="{{ $post->published_at->format('Y-m-d') }}" />
 @endif
 
-<link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ config('app.name') }} Atom Feed">
+@include('feed::links')
 
 <!-- Stylsheets -->
 <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">

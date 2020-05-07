@@ -7,4 +7,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/blog', BlogController::class)->name('blog');
+Route::feeds();
 Route::get('/blog/{post:slug}', PostController::class)->name('post');

@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
-final class Post extends Model
+final class Post extends Model implements Feedable
 {
     /**
      * The attributes that should be mutated to dates.
@@ -29,7 +32,7 @@ final class Post extends Model
 
     public function excerpt(int $length = 255): string
     {
-        $content = $this->excerpt ?? $this->content;
+        $content = $this->excerpt ?? $this->content();
         $cleaned = strip_tags(
             preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $content),
             '<code>'
@@ -48,5 +51,21 @@ final class Post extends Model
     public function content(): string
     {
         return app(Markdown::class)->toHtml($this->content);
+    }
+
+    public function toFeedItem(): FeedItem
+    {
+        return FeedItem::create()
+            ->id(route('post', $this))
+            ->title($this->title)
+            ->summary($this->excerpt())
+            ->updated($this->updated_at)
+            ->link(route('post', $this))
+            ->author('Dries Vints');
+    }
+
+    public static function getFeedItems(): Collection
+    {
+        return Post::all();
     }
 }

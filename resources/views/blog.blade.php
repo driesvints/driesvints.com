@@ -18,7 +18,7 @@
         </p>
 
         <p>
-            <a href="/blog/feed.atom">RSS Feed <i class="enlarge fas fa-rss ml-1"></i></a>
+            <a href="{{ route('feeds.main') }}">RSS Feed <i class="enlarge fas fa-rss ml-1"></i></a>
         </p>
     @endcomponent
 

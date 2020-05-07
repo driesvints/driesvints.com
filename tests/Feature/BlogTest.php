@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature;
 
 use App\Post;
@@ -54,5 +56,15 @@ class BlogTest extends TestCase
             ->assertSee($next->title)
             ->assertSee('Next post')
             ->assertDontSee('Previous post');
+    }
+
+    /** @test */
+    public function visitors_can_read_the_rss_feed()
+    {
+        $post = factory(Post::class)->create();
+
+        $this->get('/blog/feed.atom')
+            ->assertSee('The blog feed of Dries Vints')
+            ->assertSee($post->title);
     }
 }
