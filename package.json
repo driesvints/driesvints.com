@@ -1,31 +1,26 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run local",
-        "format": "prettier --write 'source/_assets/**/*.{css,sass,js,vue}'",
-        "local": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --env=local --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --env=production --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "format": "prettier --write 'resources/**/*.{css,js,vue}'",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "staging": "cross-env NODE_ENV=staging node_modules/webpack/bin/webpack.js --progress --hide-modules --env=staging --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run local -- --watch"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll"
     },
     "devDependencies": {
-        "browser-sync": "^2.26.7",
-        "browser-sync-webpack-plugin": "^2.0.1",
-        "cross-env": "^5.2.1",
-        "extra-watch-webpack-plugin": "^1.0.3",
-        "hasbin": "^1.2.3",
-        "laravel-mix": "^5.0.4",
-        "node-cmd": "^3.0.0",
-        "prettier": "^2.0.5",
-        "resolve-url-loader": "^2.3.1",
-        "sass": "^1.26.3",
-        "sass-loader": "^7.3.1",
-        "vue-template-compiler": "^2.6.11",
-        "yargs": "^4.6.0"
-    },
-    "dependencies": {
+        "axios": "^0.19",
+        "cross-env": "^7.0",
         "highlight.js": "^9.18.1",
-        "tailwindcss": "^1.2.0"
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.13",
+        "prettier": "^2.0.5",
+        "resolve-url-loader": "^3.1.0",
+        "sass": "^1.15.2",
+        "sass-loader": "^8.0.0",
+        "tailwindcss": "^1.2.0",
+        "vue-template-compiler": "^2.6.11"
     }
 }
