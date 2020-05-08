@@ -13,13 +13,13 @@ use Spatie\Feed\FeedItem;
 
 final class Post extends Model implements Feedable
 {
-    /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
     protected $dates = [
         'published_at',
+    ];
+
+    protected $attributes = [
+        'content' => '',
+        'excerpt' => '',
     ];
 
     public function previous(): ?Post
