@@ -14,3 +14,9 @@ $factory->define(Post::class, function (Faker $faker) {
         'published_at' => $faker->dateTimeBetween('-3 years', 'now'),
     ];
 });
+
+$factory->state(Post::class, 'unpublished', function (Faker $faker) {
+    return [
+        'published_at' => null,
+    ];
+});

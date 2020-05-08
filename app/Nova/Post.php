@@ -45,8 +45,7 @@ class Post extends Resource
     {
         return [
             ID::make()->sortable(),
-            DateTime::make('Published At')
-                ->rules('required'),
+            DateTime::make('Published At'),
             Text::make('Title')
                 ->rules('required'),
             Text::make('Slug')

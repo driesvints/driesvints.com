@@ -31,6 +31,15 @@ class BlogTest extends TestCase
     }
 
     /** @test */
+    public function visitors_cannot_view_unpublished_posts()
+    {
+        $post = factory(Post::class)->state('unpublished')->create();
+
+        $this->get("/blog/{$post->slug}")
+            ->assertNotFound();
+    }
+
+    /** @test */
     public function visitors_can_see_a_previous_link()
     {
         $posts = factory(Post::class)->times(2)->create()->sortByDesc('published_at');
@@ -66,5 +75,17 @@ class BlogTest extends TestCase
         $this->get('/blog/feed.atom')
             ->assertSee('The blog feed of Dries Vints')
             ->assertSee($post->title);
+    }
+
+    /** @test */
+    public function visitors_cannot_see_unpublished_posts_in_the_feed()
+    {
+        $post = factory(Post::class)->create();
+        $unpublished = factory(Post::class)->state('unpublished')->create();
+
+        $this->get('/blog/feed.atom')
+            ->assertSee('The blog feed of Dries Vints')
+            ->assertSee($post->title)
+            ->assertDontSee($unpublished->title);
     }
 }

@@ -10,6 +10,8 @@ final class PostController
 {
     public function __invoke(Post $post)
     {
+        abort_if($post->isUnpublished(), 404);
+
         $previous = $post->previous();
         $next = $post->next();
 

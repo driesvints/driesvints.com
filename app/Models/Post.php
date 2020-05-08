@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Markdown;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Feed\Feedable;
@@ -54,6 +55,16 @@ final class Post extends Model implements Feedable
         return app(Markdown::class)->toHtml($this->content);
     }
 
+    public function isUnpublished(): bool
+    {
+        return $this->published_at === null || $this->published_at->isFuture();
+    }
+
+    public function scopePublished(Builder $query): Builder
+    {
+        return $query->where('published_at', '<=', now());
+    }
+
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
@@ -67,6 +78,6 @@ final class Post extends Model implements Feedable
 
     public static function getFeedItems(): Collection
     {
-        return Post::all();
+        return Post::published()->get();
     }
 }
