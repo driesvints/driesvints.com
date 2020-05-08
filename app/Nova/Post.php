@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Nova;
 
 use Illuminate\Http\Request;
@@ -10,7 +12,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Post extends Resource
+final class Post extends Resource
 {
     /**
      * The model the resource corresponds to.
@@ -45,7 +47,8 @@ class Post extends Resource
     {
         return [
             ID::make()->sortable(),
-            DateTime::make('Published At'),
+            DateTime::make('Published At')
+                ->nullable(),
             Text::make('Title')
                 ->rules('required'),
             Text::make('Slug')
