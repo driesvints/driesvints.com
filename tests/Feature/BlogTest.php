@@ -98,4 +98,14 @@ class BlogTest extends TestCase
             ->assertSee($post->title)
             ->assertDontSee($unpublished->title);
     }
+
+    /** @test */
+    public function it_falls_back_on_content_for_excerpt()
+    {
+        $post = new Post();
+        $post->excerpt = '';
+        $post->content = "Hello World!";
+
+        $this->assertSame("Hello World!\n", $post->excerpt());
+    }
 }

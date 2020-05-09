@@ -50,7 +50,7 @@ final class Post extends Model implements Feedable
 
     public function excerpt(int $length = 255): string
     {
-        $content = $this->excerpt ?? $this->content();
+        $content = $this->excerpt ?: $this->content();
         $cleaned = strip_tags(
             preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $content),
             '<code>'
