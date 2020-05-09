@@ -54,6 +54,7 @@ final class Post extends Resource
                 ->creationRules('unique:posts,slug')
                 ->updateRules('unique:posts,slug,{{resourceId}}'),
             Text::make('Excerpt')
+                ->help('Maximum 160 characters.')
                 ->rules('max:160')
                 ->hideFromIndex(),
             Markdown::make('Content')
