@@ -22,6 +22,11 @@ final class Post extends Model implements Feedable
         'excerpt' => '',
     ];
 
+    protected $casts = [
+        'content' => 'string',
+        'excerpt' => 'string',
+    ];
+
     public function previous(): ?Post
     {
         return self::query()->where('published_at', '<', $this->published_at)->orderByDesc('published_at')->first();

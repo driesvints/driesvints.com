@@ -1,6 +1,6 @@
 @extends('layouts.base', [
     'title' => $post->title,
-    'metaDescription' => $post->metaDescription ?? $post->excerpt(160),
+    'metaDescription' => $post->excerpt(160),
 ])
 
 @section('body')

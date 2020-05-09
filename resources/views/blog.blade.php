@@ -1,6 +1,6 @@
 @extends('layouts.base', [
     'title' => 'Blog',
-    'metaDescription' => 'Here on my blog I try to write about various things which keep me busy. There\'s lots of posts on various tech related topics but I also sometimes blog about sports, books, movies and other things.',
+    'metaDescription' => 'Here on my blog I try to write about various things which keep me busy.',
 ])
 
 @section('body')

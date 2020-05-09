@@ -55,7 +55,7 @@ final class Post extends Resource
                 ->creationRules('unique:posts,slug')
                 ->updateRules('unique:posts,slug,{{resourceId}}'),
             Textarea::make('Excerpt')
-                ->rules('required'),
+                ->rules('required|max:160'),
             Markdown::make('Content')
                 ->rules('required'),
             Text::make('', function () {
