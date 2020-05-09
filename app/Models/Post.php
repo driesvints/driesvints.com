@@ -38,6 +38,16 @@ final class Post extends Model implements Feedable
         return self::query()->where('published_at', '>', $this->published_at)->orderBy('published_at')->first();
     }
 
+    public function setContentAttribute($value): void
+    {
+        $this->attributes['content'] = (string) $value;
+    }
+
+    public function setExcerptAttribute($value): void
+    {
+        $this->attributes['excerpt'] = (string) $value;
+    }
+
     public function excerpt(int $length = 255): string
     {
         $content = $this->excerpt ?? $this->content();
