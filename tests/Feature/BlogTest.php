@@ -21,6 +21,16 @@ class BlogTest extends TestCase
     }
 
     /** @test */
+    public function visitors_cannot_see_a_unpublished_posts_in_the_overview()
+    {
+        $posts = factory(Post::class)->times(2)->create();
+        $unpublished = factory(Post::class)->state('unpublished')->times(2)->create();
+
+        $posts->each(fn (Post $post) => $this->get('/blog')->assertSee($post->title));
+        $unpublished->each(fn (Post $post) => $this->get('/blog')->assertDontSee($post->title));
+    }
+
+    /** @test */
     public function visitors_can_view_a_single_post()
     {
         $post = factory(Post::class)->create();

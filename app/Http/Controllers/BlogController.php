@@ -10,7 +10,7 @@ final class BlogController
 {
     public function __invoke()
     {
-        $posts = Post::orderByDesc('published_at')->get();
+        $posts = Post::published()->orderByDesc('published_at')->get();
 
         return view('blog', compact('posts'));
     }
