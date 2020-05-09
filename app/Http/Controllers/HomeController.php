@@ -10,7 +10,7 @@ final class HomeController
 {
     public function __invoke()
     {
-        $posts = Post::orderByDesc('published_at')->limit(5)->get();
+        $posts = Post::published()->orderByDesc('published_at')->limit(5)->get();
 
         return view('home', compact('posts'));
     }
