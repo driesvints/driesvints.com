@@ -17,7 +17,6 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->singleton(Markdown::class, function () {
             return new Markdown(new GithubFlavoredMarkdownConverter([
-                'html_input' => 'strip',
                 'allow_unsafe_links' => false,
             ]));
         });
