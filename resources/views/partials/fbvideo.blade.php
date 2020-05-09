@@ -1,4 +1,4 @@
-@if (isset($post) && $post->fbvideo)
+@if (isset($post) && $post->hasFacebookVideo())
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];

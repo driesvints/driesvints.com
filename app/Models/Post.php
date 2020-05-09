@@ -8,6 +8,7 @@ use App\Markdown;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
 
@@ -58,6 +59,11 @@ final class Post extends Model implements Feedable
     public function content(): string
     {
         return app(Markdown::class)->toHtml($this->content);
+    }
+
+    public function hasFacebookVideo(): bool
+    {
+        return Str::contains($this->content, 'fb-video');
     }
 
     public function isUnpublished(): bool
