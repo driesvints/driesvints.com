@@ -9,7 +9,7 @@
 
     <li class="inline-block mr-6 sm:mr-10">
         <a href="{{ route('blog') }}" aria-label="RSS Feed">
-            <i class="enlarge fas fa-rss"></i>
+            <i class="enlarge fas fa-glasses"></i>
         </a>
     </li>
     <li class="inline-block mr-6 sm:mr-10">
