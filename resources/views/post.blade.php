@@ -31,20 +31,20 @@
             <div class="share mx-auto max-w-md mt-10 sm:mt-16 px-6 text-2xl text-center">
                 <p class="text-sm italic mb-4">
                     Like what you read? Feel free to share!
-                    Make sure to <a href="https://twitter.com/driesvints" target="_blank">follow me on Twitter</a> to know when my next post is out.
+                    Make sure to <a href="https://twitter.com/driesvints" target="_blank" rel="noopener">follow me on Twitter</a> to know when my next post is out.
                 </p>
                 <p class="share-links mb-6">
-                    <a class="text-gray-500" target="_blank"
+                    <a class="text-gray-500" target="_blank" rel="noopener"
                        href="http://twitter.com/share?text={{ urlencode('"'.$post->title.'" by @driesvints - ') }}&url={{ urlencode(route('post', $post)) }}">
                         <i class="enlarge fab fa-twitter"></i>
                     </a>
 
-                    <a class="ml-4 text-gray-500" target="_blank"
+                    <a class="ml-4 text-gray-500" target="_blank" rel="noopener"
                        href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('post', $post)) }}&quote={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
                         <i class="enlarge fab fa-facebook-f"></i>
                     </a>
 
-                    <a class="ml-4 text-gray-500" target="_blank"
+                    <a class="ml-4 text-gray-500" target="_blank" rel="noopener"
                        href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(route('post', $post)) }}&title={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
                         <i class="enlarge fab fa-linkedin-in"></i>
                     </a>
