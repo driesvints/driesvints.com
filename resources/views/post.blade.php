@@ -18,7 +18,10 @@
                         Published on {{ $post->published_at->format('F j, Y') }}
 
                         @auth
-                            <a href="{{ url("/nova/resources/posts/{$post->id}/edit") }}" class="ml-1">
+                            <a
+                                class="ml-1" aria-label="Edit"
+                                href="{{ url("/nova/resources/posts/{$post->id}/edit") }}"
+                            >
                                 <i class="fas fa-edit"></i>
                             </a>
                         @endauth
@@ -34,17 +37,17 @@
                     Make sure to <a href="https://twitter.com/driesvints" target="_blank" rel="noopener">follow me on Twitter</a> to know when my next post is out.
                 </p>
                 <p class="share-links mb-6">
-                    <a class="text-gray-500" target="_blank" rel="noopener"
+                    <a class="text-gray-500" target="_blank" rel="noopener" aria-label="Share on Twitter"
                        href="http://twitter.com/share?text={{ urlencode('"'.$post->title.'" by @driesvints - ') }}&url={{ urlencode(route('post', $post)) }}">
                         <i class="enlarge fab fa-twitter"></i>
                     </a>
 
-                    <a class="ml-4 text-gray-500" target="_blank" rel="noopener"
+                    <a class="ml-4 text-gray-500" target="_blank" rel="noopener" aria-label="Share on Facebook"
                        href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('post', $post)) }}&quote={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
                         <i class="enlarge fab fa-facebook-f"></i>
                     </a>
 
-                    <a class="ml-4 text-gray-500" target="_blank" rel="noopener"
+                    <a class="ml-4 text-gray-500" target="_blank" rel="noopener" aria-label="Share on LinkedIn"
                        href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(route('post', $post)) }}&title={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
                         <i class="enlarge fab fa-linkedin-in"></i>
                     </a>
