@@ -25,7 +25,8 @@
         "laravel/nova": "^3.5",
         "laravel/tinker": "^2.0",
         "league/commonmark": "^1.4",
-        "spatie/laravel-feed": "^2.6"
+        "spatie/laravel-feed": "^2.6",
+        "spatie/laravel-responsecache": "^6.6"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

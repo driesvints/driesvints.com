@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
+use Spatie\ResponseCache\Facades\ResponseCache;
 
 final class Post extends Model implements Feedable
 {
@@ -27,6 +28,21 @@ final class Post extends Model implements Feedable
         'content' => 'string',
         'excerpt' => 'string',
     ];
+
+    public static function booted()
+    {
+        self::created(function () {
+            ResponseCache::clear();
+        });
+
+        self::updated(function () {
+            ResponseCache::clear();
+        });
+
+        self::deleted(function () {
+            ResponseCache::clear();
+        });
+    }
 
     public function previous(): ?Post
     {
