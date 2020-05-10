@@ -32,11 +32,7 @@
 
 @include('feed::links')
 
-<!-- Stylsheets -->
-<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono" rel="stylesheet">
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
-<script src="https://kit.fontawesome.com/980abfb339.js"></script>
 
 @include('partials.fbvideo')
 
