@@ -1,4 +1,12 @@
 <ul class="text-2xl">
+    @auth
+        <li class="inline-block mr-6 sm:mr-10">
+            <a href="{{ url('/nova/resources/posts') }}">
+                <i class="enlarge fas fa-user-shield"></i>
+            </a>
+        </li>
+    @endauth
+
     <li class="inline-block mr-6 sm:mr-10">
         <a href="{{ route('blog') }}">
             <i class="enlarge fas fa-rss"></i>

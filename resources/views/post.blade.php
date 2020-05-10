@@ -11,9 +11,17 @@
         <div class="py-10 sm:py-20">
             <div id="post">
                 <div class="mb-12">
-                    <h1 class="font-bold text-4xl mb-6">{{ $post->title }}</h1>
+                    <h1 class="font-bold text-4xl mb-6">
+                        {{ $post->title }}
+                    </h1>
                     <p class="block text-xs uppercase text-gray-600">
                         Published on {{ $post->published_at->format('F j, Y') }}
+
+                        @auth
+                            <a href="{{ url("/nova/resources/posts/{$post->id}/edit") }}" class="ml-1">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                        @endauth
                     </p>
                 </div>
 
