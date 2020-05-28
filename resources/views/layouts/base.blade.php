@@ -49,7 +49,8 @@
 </div>
 
 @include('layouts.footer')
+@include('layouts.scripts')
 
-<script src="{{ mix('js/app.js') }}"></script>
+@yield('scripts')
 
 @include('partials.fathom')
