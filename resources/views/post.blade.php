@@ -3,6 +3,10 @@
     'metaDescription' => $post->excerpt(160),
 ])
 
+@section('scripts')
+    <script src="{{ mix('js/post.js') }}"></script>
+@endsection
+
 @section('body')
     @component('layouts.header', ['small' => true, 'photo' => 'header-black.jpg'])
     @endcomponent
