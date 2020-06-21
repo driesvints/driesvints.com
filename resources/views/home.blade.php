@@ -88,7 +88,7 @@
                         + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                         + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.<br>
-                        + <a href="https://github.com/driesvints/blade-icons">Blade Icons</a>, easily use Heroicons or Zondicons in your Laravel Blade views.
+                        + <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a>, easily use SVG icons in your Laravel Blade views.
                     </p>
 
                     @include('partials.sponsoring')
