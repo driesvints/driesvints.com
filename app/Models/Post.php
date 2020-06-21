@@ -46,11 +46,19 @@ final class Post extends Model implements Feedable
 
     public function previous(): ?Post
     {
+        if ($this->published_at === null) {
+            return null;
+        }
+
         return self::query()->where('published_at', '<', $this->published_at)->orderByDesc('published_at')->first();
     }
 
     public function next(): ?Post
     {
+        if ($this->published_at === null) {
+            return null;
+        }
+
         return self::query()->where('published_at', '>', $this->published_at)->orderBy('published_at')->first();
     }
 

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Feature;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -47,6 +48,43 @@ class BlogTest extends TestCase
 
         $this->get("/blog/{$post->slug}")
             ->assertNotFound();
+    }
+
+    /** @test */
+    public function visitors_cannot_view_scheduled_posts()
+    {
+        $post = factory(Post::class)->create(['published_at' => now()->addDay()]);
+
+        $this->get("/blog/{$post->slug}")
+            ->assertNotFound();
+    }
+
+    /** @test */
+    public function admins_can_view_unpublished_posts()
+    {
+        $user = factory(User::class)->create();
+
+        $this->be($user);
+
+        $post = factory(Post::class)->state('unpublished')->create();
+
+        $this->get("/blog/{$post->slug}")
+            ->assertOk()
+            ->assertSeeText('Draft: this post is not yet published.');
+    }
+
+    /** @test */
+    public function admins_can_view_scheduled_posts()
+    {
+        $user = factory(User::class)->create();
+
+        $this->be($user);
+
+        $post = factory(Post::class)->create(['published_at' => now()->addDay()]);
+
+        $this->get("/blog/{$post->slug}")
+            ->assertOk()
+            ->assertSeeText('Draft: this post is not yet published.');
     }
 
     /** @test */

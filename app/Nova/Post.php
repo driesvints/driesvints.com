@@ -60,7 +60,7 @@ final class Post extends Resource
             Markdown::make('Content')
                 ->rules('required'),
             Text::make('', function () {
-                if (! $this->exists || $this->resource->isUnpublished()) {
+                if (! $this->exists) {
                     return '';
                 }
 

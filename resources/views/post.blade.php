@@ -15,11 +15,22 @@
         <div class="py-10 sm:py-20">
             <div id="post">
                 <div class="mb-12">
+                    @if ($post->isUnpublished())
+                        <p class="bg-yellow-100 text-center text-sm py-4 rounded">
+                            <strong>Draft:</strong> this post is not yet published.
+                        </p>
+                    @endif
+
                     <h1 class="font-bold text-4xl mb-6">
                         {{ $post->title }}
                     </h1>
+
                     <p class="block text-xs uppercase text-gray-600">
-                        Published on {{ $post->published_at->format('F j, Y') }}
+                        @if ($post->published_at)
+                            Published on {{ $post->published_at->format('F j, Y') }}
+                        @else
+                            Not yet scheduled
+                        @endif
 
                         @auth
                             <a
