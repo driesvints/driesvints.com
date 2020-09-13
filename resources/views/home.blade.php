@@ -60,13 +60,13 @@
                         </a>
                     </div>
                     <div class="project md:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
-                        <a href="https://fullstackbelgium.be" target="_blank" rel="noopener">
+                        <a href="https://blade-ui-kit.com" target="_blank" rel="noopener">
                             <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
-                                <div class="h-24 mb-6">
-                                    <img src="{{ asset('/images/fsbe.png') }}" class="inline-block max-h-full" alt="">
+                                <div class="h-24 pt-6 mb-6">
+                                    <img src="{{ asset('/images/blade-ui-kit.svg') }}" class="inline-block max-h-full" alt="">
                                 </div>
-                                <p class="mb-6">Events in Belgium for web developers</p>
-                                <p class="text-sm text-gray-600">fullstackbelgium.be <i class="fas fa-external-link-alt"></i></p>
+                                <p class="mb-6">Renderless components for your Laravel Blade views.</p>
+                                <p class="text-sm text-gray-600">blade-ui-kit.com <i class="fas fa-external-link-alt"></i></p>
                             </div>
                         </a>
                     </div>
@@ -74,7 +74,7 @@
                         <a href="https://laravel.io" target="_blank" rel="noopener">
                             <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
                                 <div class="h-24 pt-8 mb-6">
-                                    <img src="{{ asset('/images/laravelio.png') }}" class="inline-block max-h-full" style="max-width: 80%" alt="">
+                                    <img src="{{ asset('/images/laravelio.png') }}" class="inline-block max-h-full"  alt="">
                                 </div>
                                 <p class="mb-6">The Laravel community platform</p>
                                 <p class="text-sm text-gray-600">laravel.io <i class="fas fa-external-link-alt"></i></p>
@@ -88,6 +88,7 @@
                         + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                         + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.<br>
+                        + <a href="https://fullstackbelgium.be">Full Stack Belgium</a>, Events in Belgium for web developers.<br>
                         + <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a>, easily use SVG icons in your Laravel Blade views.
                     </p>
 
