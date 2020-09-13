@@ -8,7 +8,7 @@
     <h2 class="text-4xl text-center font-bold mb-8">About Me</h2>
 
     <p class="mb-4">
-        I'm a software engineer from Antwerp, Belgium. I work as one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework.
+        I'm a software engineer from Antwerp, Belgium. I work as one of the core team members of <a href="https://laravel.com">Laravel</a>, the popular PHP framework. I'm also the creator of <a href="https://blade-ui-kit.com">Blade UI Kit</a>, a set of renderless components to utilise in your Laravel Blade views.
     </p>
 
     <p class="mb-4">
@@ -24,6 +24,6 @@
     </p>
 
     <p>
-        Follow me on Twitter at <a href="https://twitter.com/driesvints" target="_blank" rel="noopener">@driesvints</a> where I also share some <a href="https://twitter.com/i/moments/1155908429698994181">Dev Tips</a> from time to time.
+        Follow me on Twitter: <a href="https://twitter.com/driesvints" target="_blank" rel="noopener">@driesvints</a>.
     </p>
 </div>
