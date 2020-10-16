@@ -17,6 +17,7 @@
     ],
     "require": {
         "php": "^7.4",
+        "facade/ignition": "^2.4",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.5",
@@ -28,7 +29,6 @@
         "spatie/laravel-responsecache": "^6.6"
     },
     "require-dev": {
-        "facade/ignition": "^2.0",
         "friendsofphp/php-cs-fixer": "^2.16",
         "fzaninotto/faker": "^1.9.1",
         "mockery/mockery": "^1.3.1",
