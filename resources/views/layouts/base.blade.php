@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 @include('partials.fbvideo')
+@include('partials.fathom')
 
 <div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
         <div class="bg-secondary text-white font-semibold hover:underline py-3 px-6">
@@ -52,5 +53,3 @@
 @include('layouts.scripts')
 
 @yield('scripts')
-
-@include('partials.fathom')
