@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/driesvints/driesvints.com/workflows/Tests/badge.svg)](https://github.com/driesvints/driesvints.com/actions?query=workflow%3ATests)
 [![Code Style](https://github.com/driesvints/driesvints.com/workflows/Code%20Style/badge.svg)](https://github.com/driesvints/driesvints.com/actions?query=workflow%3A%22Code+Style%22)
-[![Laravel Version](https://shield.with.social/cc/github/driesvints/driesvints.com/main.svg?style=flat-square)](https://packagist.org/packages/laravel/framework)
+[![Laravel Version](https://shield.with.social/cc/github/driesvints/driesvints.com/main.svg)](https://packagist.org/packages/laravel/framework)
 
 The source code for my personal website.
 
