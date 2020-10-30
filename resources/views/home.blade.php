@@ -65,7 +65,7 @@
                                 <div class="h-24 pt-6 mb-6">
                                     <img src="{{ asset('/images/blade-ui-kit.svg') }}" class="inline-block max-h-full" alt="">
                                 </div>
-                                <p class="mb-6">Renderless components for your Laravel Blade views.</p>
+                                <p class="mb-6">Renderless components for your Laravel Blade views</p>
                                 <p class="text-sm text-gray-600">blade-ui-kit.com <i class="fas fa-external-link-alt"></i></p>
                             </div>
                         </a>
