@@ -142,7 +142,7 @@ class BlogTest extends TestCase
     {
         $post = new Post();
         $post->excerpt = '';
-        $post->content = "Hello World!";
+        $post->content = 'Hello World!';
 
         $this->assertSame("Hello World!\n", $post->excerpt());
     }

@@ -77,7 +77,7 @@ final class Post extends Model implements Feedable
         $content = $this->excerpt ?: $this->content();
         $cleaned = strip_tags(
             preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $content),
-            '<code>'
+            '<code>',
         );
         $truncated = substr($cleaned, 0, $length);
 
@@ -86,7 +86,7 @@ final class Post extends Model implements Feedable
         }
 
         return strlen($cleaned) > $length
-            ? preg_replace('/\s+?(\S+)?$/', '', $truncated) . '...'
+            ? preg_replace('/\s+?(\S+)?$/', '', $truncated).'...'
             : $cleaned;
     }
 
