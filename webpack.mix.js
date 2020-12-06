@@ -8,6 +8,6 @@ mix.js('resources/js/post.js', 'public/js');
 mix.sass('resources/sass/app.scss', 'public/css');
 mix.options({
     processCssUrls: false,
-    postCss: [ tailwindcss('./tailwind.config.js') ],
-})
+    postCss: [tailwindcss('./tailwind.config.js')],
+});
 mix.version();

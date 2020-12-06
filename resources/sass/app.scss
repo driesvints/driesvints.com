@@ -4,19 +4,19 @@
 
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono');
 
-@import "~@fortawesome/fontawesome-free/scss/brands";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
-@import "components/buttons";
-@import "components/content";
-@import "components/header";
-@import "components/posts";
-@import "components/projects";
+@import 'components/buttons';
+@import 'components/content';
+@import 'components/header';
+@import 'components/posts';
+@import 'components/projects';
 
 @tailwind utilities;
 
-@import "~highlight.js/styles/dracula.css";
+@import '~highlight.js/styles/dracula.css';
 
-@import "utilities/animations";
-@import "utilities/text-shadow";
+@import 'utilities/animations';
+@import 'utilities/text-shadow';
