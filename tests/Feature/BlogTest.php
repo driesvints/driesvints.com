@@ -16,7 +16,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_can_see_a_list_of_posts()
     {
-        $posts = Post::factory()->times(5)->create();
+        $posts = Post::factory()->count(5)->create();
 
         $posts->each(fn (Post $post) => $this->get('/blog')->assertSee($post->title));
     }
@@ -24,9 +24,9 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_cannot_see_a_unpublished_posts_in_the_overview()
     {
-        $posts = Post::factory()->times(2)->create();
-        $unpublished = Post::factory()->unpublished()->times(2)->create();
-// dd($unpublished);
+        $posts = Post::factory()->count(2)->create();
+        $unpublished = Post::factory()->count(2)->unpublished()->create();
+
         $posts->each(fn (Post $post) => $this->get('/blog')->assertSee($post->title));
         $unpublished->each(fn (Post $post) => $this->get('/blog')->assertDontSee($post->title));
     }
@@ -90,7 +90,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_can_see_a_previous_link()
     {
-        $posts = Post::factory()->times(2)->create()->sortByDesc('published_at');
+        $posts = Post::factory()->count(2)->create()->sortByDesc('published_at');
         $post = $posts->first();
         $previous = $posts->last();
 
@@ -104,7 +104,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_can_see_a_next_link()
     {
-        $posts = Post::factory()->times(2)->create()->sortByDesc('published_at');
+        $posts = Post::factory()->count(2)->create()->sortByDesc('published_at');
         $post = $posts->last();
         $next = $posts->first();
 
