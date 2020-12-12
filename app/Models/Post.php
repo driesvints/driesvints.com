@@ -44,7 +44,7 @@ final class Post extends Model implements Feedable
         });
     }
 
-    public function previous(): ?Post
+    public function previous(): ?self
     {
         if ($this->published_at === null) {
             return null;
@@ -53,7 +53,7 @@ final class Post extends Model implements Feedable
         return self::query()->where('published_at', '<', $this->published_at)->orderByDesc('published_at')->first();
     }
 
-    public function next(): ?Post
+    public function next(): ?self
     {
         if ($this->published_at === null) {
             return null;
@@ -123,6 +123,6 @@ final class Post extends Model implements Feedable
 
     public static function getFeedItems(): Collection
     {
-        return Post::published()->get();
+        return self::published()->get();
     }
 }
