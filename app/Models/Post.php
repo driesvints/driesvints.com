@@ -7,6 +7,7 @@ namespace App\Models;
 use App\Markdown;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Spatie\Feed\Feedable;
@@ -15,6 +16,8 @@ use Spatie\ResponseCache\Facades\ResponseCache;
 
 final class Post extends Model implements Feedable
 {
+    use HasFactory;
+
     protected $dates = [
         'published_at',
     ];
@@ -44,7 +47,7 @@ final class Post extends Model implements Feedable
         });
     }
 
-    public function previous(): ?Post
+    public function previous(): ?self
     {
         if ($this->published_at === null) {
             return null;
@@ -53,7 +56,7 @@ final class Post extends Model implements Feedable
         return self::query()->where('published_at', '<', $this->published_at)->orderByDesc('published_at')->first();
     }
 
-    public function next(): ?Post
+    public function next(): ?self
     {
         if ($this->published_at === null) {
             return null;
@@ -123,6 +126,6 @@ final class Post extends Model implements Feedable
 
     public static function getFeedItems(): Collection
     {
-        return Post::published()->get();
+        return self::published()->get();
     }
 }
