@@ -26,7 +26,7 @@ class BlogTest extends TestCase
     {
         $posts = Post::factory()->times(2)->create();
         $unpublished = Post::factory()->unpublished()->times(2)->create();
-
+// dd($unpublished);
         $posts->each(fn (Post $post) => $this->get('/blog')->assertSee($post->title));
         $unpublished->each(fn (Post $post) => $this->get('/blog')->assertDontSee($post->title));
     }

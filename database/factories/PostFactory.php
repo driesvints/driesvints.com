@@ -19,7 +19,7 @@ class PostFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'slug' => $this->faker->unique()->slug,
@@ -30,7 +30,7 @@ class PostFactory extends Factory
         ];
     }
 
-    public function unpublished()
+    public function unpublished(): self
     {
         return $this->state(function () {
             return [

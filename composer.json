@@ -29,7 +29,6 @@
         "spatie/laravel-responsecache": "^6.6"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.3.3",
@@ -69,6 +68,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan nova:publish --ansi"
         ]
     },
     "repositories": [
