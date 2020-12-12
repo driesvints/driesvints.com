@@ -1,22 +1,43 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Post;
-use Faker\Generator as Faker;
 
-$factory->define(Post::class, function (Faker $faker) {
-    return [
-        'slug' => $faker->unique()->slug,
-        'title' => $faker->words(5, true),
-        'excerpt' => $faker->text(160),
-        'content' => $faker->text(500),
-        'published_at' => $faker->dateTimeBetween('-3 years', 'now'),
-    ];
-});
+class PostFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Post::class;
 
-$factory->state(Post::class, 'unpublished', function (Faker $faker) {
-    return [
-        'published_at' => null,
-    ];
-});
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'slug' => $this->faker->unique()->slug,
+            'title' => $this->faker->words(5, true),
+            'excerpt' => $this->faker->text(160),
+            'content' => $this->faker->text(500),
+            'published_at' => $this->faker->dateTimeBetween('-3 years', 'now'),
+        ];
+    }
+
+    public function unpublished()
+    {
+        return $this->state(function () {
+            return [
+                'published_at' => null,
+            ];
+        });
+    }
+}

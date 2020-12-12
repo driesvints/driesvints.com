@@ -16,7 +16,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_can_see_a_list_of_posts()
     {
-        $posts = factory(Post::class)->times(5)->create();
+        $posts = Post::factory()->times(5)->create();
 
         $posts->each(fn (Post $post) => $this->get('/blog')->assertSee($post->title));
     }
@@ -24,8 +24,8 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_cannot_see_a_unpublished_posts_in_the_overview()
     {
-        $posts = factory(Post::class)->times(2)->create();
-        $unpublished = factory(Post::class)->state('unpublished')->times(2)->create();
+        $posts = Post::factory()->times(2)->create();
+        $unpublished = Post::factory()->unpublished()->times(2)->create();
 
         $posts->each(fn (Post $post) => $this->get('/blog')->assertSee($post->title));
         $unpublished->each(fn (Post $post) => $this->get('/blog')->assertDontSee($post->title));
@@ -34,7 +34,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_can_view_a_single_post()
     {
-        $post = factory(Post::class)->create();
+        $post = Post::factory()->create();
 
         $this->get("/blog/{$post->slug}")
             ->assertSee($post->title)
@@ -44,7 +44,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_cannot_view_unpublished_posts()
     {
-        $post = factory(Post::class)->state('unpublished')->create();
+        $post = Post::factory()->unpublished()->create();
 
         $this->get("/blog/{$post->slug}")
             ->assertNotFound();
@@ -53,7 +53,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_cannot_view_scheduled_posts()
     {
-        $post = factory(Post::class)->create(['published_at' => now()->addDay()]);
+        $post = Post::factory()->create(['published_at' => now()->addDay()]);
 
         $this->get("/blog/{$post->slug}")
             ->assertNotFound();
@@ -62,11 +62,11 @@ class BlogTest extends TestCase
     /** @test */
     public function admins_can_view_unpublished_posts()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->create();
 
         $this->be($user);
 
-        $post = factory(Post::class)->state('unpublished')->create();
+        $post = Post::factory()->unpublished()->create();
 
         $this->get("/blog/{$post->slug}")
             ->assertOk()
@@ -76,11 +76,11 @@ class BlogTest extends TestCase
     /** @test */
     public function admins_can_view_scheduled_posts()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->create();
 
         $this->be($user);
 
-        $post = factory(Post::class)->create(['published_at' => now()->addDay()]);
+        $post = Post::factory()->create(['published_at' => now()->addDay()]);
 
         $this->get("/blog/{$post->slug}")
             ->assertOk()
@@ -90,7 +90,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_can_see_a_previous_link()
     {
-        $posts = factory(Post::class)->times(2)->create()->sortByDesc('published_at');
+        $posts = Post::factory()->times(2)->create()->sortByDesc('published_at');
         $post = $posts->first();
         $previous = $posts->last();
 
@@ -104,7 +104,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_can_see_a_next_link()
     {
-        $posts = factory(Post::class)->times(2)->create()->sortByDesc('published_at');
+        $posts = Post::factory()->times(2)->create()->sortByDesc('published_at');
         $post = $posts->last();
         $next = $posts->first();
 
@@ -118,7 +118,7 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_can_read_the_rss_feed()
     {
-        $post = factory(Post::class)->create();
+        $post = Post::factory()->create();
 
         $this->get('/blog/feed.atom')
             ->assertSee('The blog feed of Dries Vints')
@@ -128,8 +128,8 @@ class BlogTest extends TestCase
     /** @test */
     public function visitors_cannot_see_unpublished_posts_in_the_feed()
     {
-        $post = factory(Post::class)->create();
-        $unpublished = factory(Post::class)->state('unpublished')->create();
+        $post = Post::factory()->create();
+        $unpublished = Post::factory()->unpublished()->create();
 
         $this->get('/blog/feed.atom')
             ->assertSee('The blog feed of Dries Vints')

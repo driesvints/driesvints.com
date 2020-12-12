@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Markdown;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -15,6 +16,8 @@ use Spatie\ResponseCache\Facades\ResponseCache;
 
 final class Post extends Model implements Feedable
 {
+    use HasFactory;
+
     protected $dates = [
         'published_at',
     ];

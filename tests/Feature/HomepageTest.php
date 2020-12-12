@@ -23,8 +23,8 @@ class HomepageTest extends TestCase
     /** @test */
     public function visitors_can_see_posts_on_the_homepage()
     {
-        $posts = factory(Post::class)->times(2)->create();
-        $unpublished = factory(Post::class)->state('unpublished')->times(2)->create();
+        $posts = Post::factory()->times(2)->create();
+        $unpublished = Post::factory()->unpublished()->times(2)->create();
 
         $posts->each(fn (Post $post) => $this->get('/')->assertSee($post->title));
         $unpublished->each(fn (Post $post) => $this->get('/')->assertDontSee($post->title));
