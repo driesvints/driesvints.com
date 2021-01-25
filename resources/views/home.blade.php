@@ -85,7 +85,6 @@
 
                 <div class="text-center">
                     <p class="text-sm sm:text-base text-gray-700 mb-12">
-                        + <a href="https://eventy.io">Eventy</a>, a new way to organise events.<br>
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                         + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.<br>
                         + <a href="https://fullstackbelgium.be">Full Stack Belgium</a>, events in Belgium for web developers.<br>
