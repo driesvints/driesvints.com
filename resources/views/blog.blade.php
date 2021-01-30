@@ -24,17 +24,21 @@
 
     <div id="content" class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
         <h3 class="mb-4 font-bold">{{ $year = $posts->first()->published_at->format('Y') }}</h3>
-            @foreach ($posts as $post)
-                @if ($post->published_at->format('Y') !== $year)
-                    @php($year = $post->published_at->format('Y'))
-        <h3 class="mt-8 mb-4 font-bold">{{ $year }}</h3>
-                @endif
-        <span class="block text-xs uppercase text-gray-600">
-            {{ $post->published_at->format('F j, Y') }}
-        </span>
-        <p class="text-2xl mb-8">
-            <a href="{{ route('post', $post) }}">{{ $post->title }}</a>
-        </p>
-            @endforeach
+
+        @foreach ($posts as $post)
+            @if ($post->published_at->format('Y') !== $year)
+                @php($year = $post->published_at->format('Y'))
+
+                <h3 class="mt-8 mb-4 font-bold">{{ $year }}</h3>
+            @endif
+
+            <span class="block text-xs uppercase text-gray-600">
+                {{ $post->published_at->format('F j, Y') }}
+            </span>
+
+            <p class="text-2xl mb-8">
+                <a href="{{ route('post', $post) }}">{{ $post->title }}</a>
+            </p>
+        @endforeach
     </div>
 @endsection
