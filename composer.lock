@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "79ebace64b3aee56bf567666dae15cb5",
+    "content-hash": "cebbb3d496547a570408109591939012",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2494,16 +2494,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.43.0",
+            "version": "2.44.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d32c57d8389113742f4a88725a170236470012e2"
+                "reference": "e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d32c57d8389113742f4a88725a170236470012e2",
-                "reference": "d32c57d8389113742f4a88725a170236470012e2",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd",
+                "reference": "e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd",
                 "shasum": ""
             },
             "require": {
@@ -2519,7 +2519,7 @@
                 "phpmd/phpmd": "^2.9",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^0.12.54",
-                "phpunit/phpunit": "^7.5 || ^8.0",
+                "phpunit/phpunit": "^7.5.20 || ^8.5.14",
                 "squizlabs/php_codesniffer": "^3.4"
             },
             "bin": [
@@ -2583,7 +2583,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-17T20:55:32+00:00"
+            "time": "2021-01-26T20:46:41+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3748,16 +3748,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.2.3",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "cde3b1e7997657da9f4cede6a9f8345a09bc9618"
+                "reference": "e9f79b607f3c50103bc1ea00e527b4066595d352"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/cde3b1e7997657da9f4cede6a9f8345a09bc9618",
-                "reference": "cde3b1e7997657da9f4cede6a9f8345a09bc9618",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/e9f79b607f3c50103bc1ea00e527b4066595d352",
+                "reference": "e9f79b607f3c50103bc1ea00e527b4066595d352",
                 "shasum": ""
             },
             "require": {
@@ -3796,7 +3796,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.2.3"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.3.0"
             },
             "funding": [
                 {
@@ -3804,7 +3804,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-27T16:02:11+00:00"
+            "time": "2021-01-28T13:24:55+00:00"
         },
         {
             "name": "spatie/laravel-responsecache",
@@ -3888,23 +3888,24 @@
         },
         {
             "name": "spatie/once",
-            "version": "2.2.1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/once.git",
-                "reference": "e6c13ae474a7d4b30975ef6a502a593874ac12d2"
+                "reference": "edf25d4f87e3a91666298ebe78ee2e89f9761bf7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/once/zipball/e6c13ae474a7d4b30975ef6a502a593874ac12d2",
-                "reference": "e6c13ae474a7d4b30975ef6a502a593874ac12d2",
+                "url": "https://api.github.com/repos/spatie/once/zipball/edf25d4f87e3a91666298ebe78ee2e89f9761bf7",
+                "reference": "edf25d4f87e3a91666298ebe78ee2e89f9761bf7",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2|^8.0"
+                "php": "^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.0"
+                "phpunit/phpunit": "^9.3",
+                "symfony/var-dumper": "^5.1"
             },
             "type": "library",
             "autoload": {
@@ -3938,7 +3939,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/once/issues",
-                "source": "https://github.com/spatie/once/tree/2.2.1"
+                "source": "https://github.com/spatie/once/tree/3.0.0"
             },
             "funding": [
                 {
@@ -3946,7 +3947,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-10-29T18:22:10+00:00"
+            "time": "2020-11-03T13:23:06+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -8676,7 +8677,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4"
+        "php": "^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

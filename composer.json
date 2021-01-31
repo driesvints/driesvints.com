@@ -8,14 +8,8 @@
     ],
     "homepage": "https://driesvints.com",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Dries Vints",
-            "homepage": "https://driesvints.com"
-        }
-    ],
     "require": {
-        "php": "^7.4",
+        "php": "^8.0",
         "facade/ignition": "^2.5",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
