@@ -88,7 +88,8 @@
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                         + <a href="https://github.com/EventSaucePHP/LaravelEventSauce">Laravel EventSauce</a>, event sourcing for Laravel apps.<br>
                         + <a href="https://fullstackbelgium.be">Full Stack Belgium</a>, events in Belgium for web developers.<br>
-                        + <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a>, easily use SVG icons in your Laravel Blade views.
+                        + <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a>, easily use SVG icons in your Laravel Blade views.<br>
+                        + <a href="https://github.com/driesvints/vat-calculator">VatCalculator</a>, handle all the hard stuff related to EU MOSS tax/vat regulations.
                     </p>
 
                     @include('partials.sponsoring')
