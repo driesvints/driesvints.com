@@ -108,6 +108,11 @@ final class Post extends Model implements Feedable
         return $this->published_at === null || $this->published_at->isFuture();
     }
 
+    public function isUpdated(): bool
+    {
+        return $this->updated_at->subDay()->gt($this->published_at);
+    }
+
     public function scopePublished(Builder $query): Builder
     {
         return $query->where('published_at', '<=', now());

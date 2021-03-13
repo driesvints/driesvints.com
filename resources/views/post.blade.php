@@ -23,7 +23,17 @@
 
                     <p class="block text-xs uppercase text-gray-600">
                         @if ($post->published_at)
-                            Published on {{ $post->published_at->format('F j, Y') }}
+                            @if ($post->isUpdated())
+                                First published
+                            @else
+                                Published
+                            @endif
+
+                            on <strong>{{ $post->published_at->format('F j, Y') }}</strong>
+
+                            @if ($post->isUpdated())
+                                &middot; Last updated on <strong>{{ $post->updated_at->format('F j, Y') }}</strong>
+                            @endif
                         @else
                             Not yet scheduled
                         @endif
