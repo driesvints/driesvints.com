@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Post;
-use Carbon\Carbon;
 use Carbon\CarbonImmutable;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -32,7 +31,7 @@ class PostFactory extends Factory
             'created_at' => $this->faker->dateTimeBetween($publishedAt->subDays(7), $publishedAt), // Created between 7 days before publishing and the day of publication.
             'updated_at' => $this->faker->randomElement([ // Never updated, or on a day between publication date and a month later.
                 $publishedAt,
-                $this->faker->dateTimeBetween($publishedAt, $publishedAt->addDays(30))
+                $this->faker->dateTimeBetween($publishedAt, $publishedAt->addDays(30)),
             ]),
         ];
     }
