@@ -28,7 +28,7 @@
         </a>
     </li>
     <li class="inline-block mr-6 sm:mr-10">
-        <a href="https://instagram.com/driesvints" target="_blank" rel="noopener" aria-label="Instagram">
+        <a href="https://instagram.com/driesvints.photo" target="_blank" rel="noopener" aria-label="Instagram">
             <i class="enlarge fab fa-instagram"></i>
         </a>
     </li>
