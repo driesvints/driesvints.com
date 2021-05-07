@@ -2,7 +2,7 @@ version: 2
 registries:
   nova-composer:
     type: "composer-repository"
-    url: "https://nova.laravel.com"
+    url: "https://http-basic.nova.laravel.com"
     username: ${{ secrets.NOVA_USERNAME }},
     password: ${{ secrets.NOVA_PASSWORD }}
 updates:
