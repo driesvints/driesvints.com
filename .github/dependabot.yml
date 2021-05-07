@@ -1,10 +1,9 @@
 version: 2
 registries:
-  nova-composer:
-    type: "composer-repository"
-    url: "https://http-basic.nova.laravel.com"
-    username: ${{ secrets.NOVA_USERNAME }},
-    password: ${{ secrets.NOVA_PASSWORD }}
+  github-driesvints:
+    type: git
+    url: https://github.com
+    password: ${{ secrets.DEPENDABOT_GH_TOKEN }}
 updates:
   - package-ecosystem: "composer"
     directory: "/"
