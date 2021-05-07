@@ -3,6 +3,7 @@ registries:
   github-driesvints:
     type: git
     url: https://github.com
+    username: x-access-token
     password: ${{ secrets.DEPENDABOT_GH_TOKEN }}
 updates:
   - package-ecosystem: "composer"
