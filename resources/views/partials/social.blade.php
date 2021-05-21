@@ -27,14 +27,4 @@
             <i class="enlarge fab fa-youtube"></i>
         </a>
     </li>
-    <li class="inline-block mr-6 sm:mr-10">
-        <a href="https://instagram.com/driesvints" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="enlarge fab fa-instagram"></i>
-        </a>
-    </li>
-    <li class="inline-block">
-        <a href="https://www.linkedin.com/in/driesvints" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="enlarge fab fa-linkedin-in"></i>
-        </a>
-    </li>
 </ul>
