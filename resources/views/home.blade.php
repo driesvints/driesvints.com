@@ -91,8 +91,6 @@
                         + <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a>, easily use SVG icons in your Laravel Blade views.<br>
                         + <a href="https://github.com/driesvints/vat-calculator">VatCalculator</a>, handle all the hard stuff related to EU MOSS tax/vat regulations.
                     </p>
-
-                    @include('partials.sponsoring')
                 </div>
             </div>
         </div>

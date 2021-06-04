@@ -73,8 +73,6 @@
                         <i class="enlarge fab fa-linkedin-in"></i>
                     </a>
                 </p>
-
-                @include('partials.sponsoring')
             </div>
         </div>
 
