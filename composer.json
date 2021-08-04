@@ -63,7 +63,8 @@
             "@php artisan key:generate --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan nova:publish --ansi"
+            "@php artisan nova:publish --ansi",
+            "@php artisan vendor:publish --tag=nova-views --force --ansi"
         ]
     },
     "repositories": [
