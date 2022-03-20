@@ -18,9 +18,6 @@ final class Post extends Model implements Feedable
 {
     use HasFactory;
 
-    protected $dates = [
-        'published_at',
-    ];
 
     protected $attributes = [
         'content' => '',
@@ -28,6 +25,7 @@ final class Post extends Model implements Feedable
     ];
 
     protected $casts = [
+        'published_at' => 'datetime',
         'content' => 'string',
         'excerpt' => 'string',
     ];
