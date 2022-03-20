@@ -2,9 +2,7 @@
 
 namespace App\Providers;
 
-use App\Markdown;
 use Illuminate\Support\ServiceProvider;
-use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,11 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(Markdown::class, function () {
-            return new Markdown(new GithubFlavoredMarkdownConverter([
-                'allow_unsafe_links' => false,
-            ]));
-        });
+        //
     }
 
     /**
