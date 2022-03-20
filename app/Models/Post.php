@@ -18,7 +18,6 @@ final class Post extends Model implements Feedable
 {
     use HasFactory;
 
-
     protected $attributes = [
         'content' => '',
         'excerpt' => '',
