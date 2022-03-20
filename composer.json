@@ -10,22 +10,21 @@
     "license": "MIT",
     "require": {
         "php": "8.1.*",
-        "facade/ignition": "^2.5",
-        "fideloper/proxy": "^4.4",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.18",
-        "laravel/nova": "^3.15",
-        "laravel/tinker": "^2.5",
-        "league/commonmark": "^1.4",
-        "spatie/laravel-feed": "^3.0",
-        "spatie/laravel-responsecache": "^6.6",
-        "league/flysystem-aws-s3-v3": "^3.0"
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^9.5",
+        "laravel/nova": "^3.31",
+        "laravel/tinker": "^2.7",
+        "league/commonmark": "^2.2",
+        "spatie/laravel-feed": "^4.1",
+        "spatie/laravel-responsecache": "^7.2",
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "spatie/laravel-ignition": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
-        "mockery/mockery": "^1.4.2",
-        "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.5"
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.5.10"
     },
     "config": {
         "optimize-autoloader": true,
@@ -64,7 +63,8 @@
         ],
         "post-update-cmd": [
             "@php artisan nova:publish --ansi",
-            "@php artisan vendor:publish --tag=nova-views --force --ansi"
+            "@php artisan vendor:publish --tag=nova-views --force --ansi",
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ]
     },
     "repositories": [
