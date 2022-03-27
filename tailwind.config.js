@@ -1,5 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     purge: ['./resources/**/*.blade.php', './resources/**/*.js', './resources/**/*.scss'],
     theme: {
@@ -10,6 +12,8 @@ module.exports = {
             colors: {
                 primary: '#8065ee',
                 secondary: '#5845d0',
+                gray: colors.blueGray,
+                yellow: colors.yellow,
             },
             fontFamily: {
                 sans: ['Muli', ...defaultTheme.fontFamily.sans],

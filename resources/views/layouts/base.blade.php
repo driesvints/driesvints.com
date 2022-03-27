@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-100">
+<html lang="en" class="bg-gray-50">
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -38,7 +38,7 @@
 
 @include('partials.fathom')
 
-<div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">
+<div class="font-sans text-xl text-gray-600 leading-normal antialiased border-t-6 border-primary">
 {{--    <div class="bg-secondary text-white font-semibold hover:underline py-3 px-6">--}}
 {{--        <div class="wrapper text-center">--}}
 {{--            <a class="focus:underline focus:bg-transparent" href="https://blade-ui-kit.com" target="_blank" rel="noopener">--}}
