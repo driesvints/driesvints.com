@@ -9,7 +9,7 @@
                 Hi, I'm Dries
             </h1>
 
-            <p class="text-2xl sm:text-3xl leading-snug mb-8">
+            <p class="text-2xl sm:text-3xl sm:leading-snug leading-snug mb-8">
                 Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">event</a> & <a href="https://fullstackeurope.com">conference</a> organiser, <a href="https://github.com/driesvints">open-source</a> maintainer, <a href="https://www.youtube.com/watch?v=2yos8WUG5z4">speaker</a>, and <a href="{{ route('blog') }}">blogger</a>.
             </p>
 
