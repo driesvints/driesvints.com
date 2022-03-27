@@ -1,6 +1,6 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
     content: ['./resources/**/*.blade.php', './resources/**/*.js', './resources/**/*.scss'],
@@ -31,4 +31,4 @@ module.exports = {
             DEFAULT: '0 2px 5px rgba(0, 0, 0, 0.5)',
         },
     },
-}
+};
