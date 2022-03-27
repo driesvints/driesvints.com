@@ -107,9 +107,6 @@
     img {
         @apply block mx-auto shadow-lg mb-4;
     }
-    img.shadow-none {
-        @apply shadow-none;
-    }
 
     .share-links a {
         @apply text-gray-400;

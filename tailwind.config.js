@@ -12,8 +12,6 @@ module.exports = {
             colors: {
                 primary: '#8065ee',
                 secondary: '#5845d0',
-                gray: colors.blueGray,
-                yellow: colors.yellow,
             },
             fontFamily: {
                 sans: ['Muli', ...defaultTheme.fontFamily.sans],
