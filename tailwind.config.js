@@ -1,6 +1,6 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
     purge: ['./resources/**/*.blade.php', './resources/**/*.js', './resources/**/*.scss'],
@@ -35,4 +35,4 @@ module.exports = {
     variants: {
         textShadow: ['responsive'],
     },
-}
+};
