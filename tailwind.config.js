@@ -1,5 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const colors = require('tailwindcss/colors');
+
 module.exports = {
     purge: ['./resources/**/*.blade.php', './resources/**/*.js', './resources/**/*.scss'],
     theme: {
@@ -23,13 +25,12 @@ module.exports = {
             'black-opacity-40': 'rgba(0, 0, 0, 0.4)',
         }),
         textShadow: {
-            default: '0 2px 5px rgba(0, 0, 0, 0.5)',
             lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
             none: 'none',
+            DEFAULT: '0 2px 5px rgba(0, 0, 0, 0.5)',
         },
     },
     variants: {
         textShadow: ['responsive'],
     },
-    plugins: [],
 };

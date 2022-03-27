@@ -32,7 +32,7 @@
                 <h3 class="mt-8 mb-4 font-bold">{{ $year }}</h3>
             @endif
 
-            <span class="block text-xs uppercase text-gray-600">
+            <span class="block text-xs uppercase text-gray-500">
                 {{ $post->published_at->format('F j, Y') }}
             </span>
 

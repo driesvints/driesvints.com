@@ -35,7 +35,7 @@
     }
 
     blockquote {
-        @apply max-w-4xl relative mx-auto bg-gray-200 text-base font-semibold italic rounded py-6 mt-8 mb-6;
+        @apply max-w-4xl relative mx-auto bg-gray-100 text-base font-semibold italic rounded py-6 mt-8 mb-6;
     }
     blockquote::before {
         content: '“';
@@ -90,7 +90,7 @@
 
     p code,
     ul code {
-        @apply bg-gray-200 text-base py-1 px-2;
+        @apply bg-gray-100 text-base py-1 px-2;
     }
 
     pre {
@@ -102,17 +102,14 @@
     }
 
     p.image {
-        @apply max-w-4xl text-center text-sm text-gray-500 my-10 px-0;
+        @apply max-w-4xl text-center text-sm text-gray-400 my-10 px-0;
     }
     img {
         @apply block mx-auto shadow-lg mb-4;
     }
-    img.shadow-none {
-        @apply shadow-none;
-    }
 
     .share-links a {
-        @apply text-gray-500;
+        @apply text-gray-400;
     }
     .share-links a:hover {
         text-decoration: none;
