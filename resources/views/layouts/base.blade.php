@@ -36,7 +36,6 @@
 
 <script src="{{ mix('js/app.js') }}" defer></script>
 
-@include('partials.fbvideo')
 @include('partials.fathom')
 
 <div class="font-sans text-xl text-gray-700 leading-normal antialiased border-t-6 border-primary">

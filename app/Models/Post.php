@@ -96,11 +96,6 @@ final class Post extends Model implements Feedable
         ]);
     }
 
-    public function hasFacebookVideo(): bool
-    {
-        return Str::contains($this->content, 'fb-video');
-    }
-
     public function isUnpublished(): bool
     {
         return $this->published_at === null || $this->published_at->isFuture();
