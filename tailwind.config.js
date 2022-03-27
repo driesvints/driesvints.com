@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-    purge: ['./resources/**/*.blade.php', './resources/**/*.js', './resources/**/*.scss'],
+    content: ['./resources/**/*.blade.php', './resources/**/*.js', './resources/**/*.scss'],
     theme: {
         extend: {
             borderWidth: {
@@ -12,6 +12,7 @@ module.exports = {
             colors: {
                 primary: '#8065ee',
                 secondary: '#5845d0',
+                yellow: colors.amber,
             },
             fontFamily: {
                 sans: ['Muli', ...defaultTheme.fontFamily.sans],
@@ -29,8 +30,5 @@ module.exports = {
             none: 'none',
             DEFAULT: '0 2px 5px rgba(0, 0, 0, 0.5)',
         },
-    },
-    variants: {
-        textShadow: ['responsive'],
     },
 };
