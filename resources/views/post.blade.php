@@ -43,7 +43,7 @@
                                 class="ml-1" aria-label="Edit"
                                 href="{{ url("/nova/resources/posts/{$post->id}/edit") }}"
                             >
-                                <i class="fas fa-edit"></i>
+                                <x-fas-edit class="inline w-3 h-3 mb-1" />
                             </a>
                         @endauth
                     </p>
@@ -57,20 +57,21 @@
                     Like what you read? Feel free to share!
                     Make sure to <a href="https://twitter.com/driesvints" target="_blank" rel="noopener">follow me on Twitter</a> to know when my next post is out.
                 </p>
+
                 <p class="share-links mb-6">
                     <a class="text-gray-500" target="_blank" rel="noopener" aria-label="Share on Twitter"
                        href="http://twitter.com/share?text={{ urlencode('"'.$post->title.'" by @driesvints - ') }}&url={{ urlencode(route('post', $post)) }}">
-                        <i class="enlarge fab fa-twitter"></i>
+                        <x-fab-twitter class="inline w-6 h-6" />
                     </a>
 
                     <a class="ml-4 text-gray-500" target="_blank" rel="noopener" aria-label="Share on Facebook"
                        href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('post', $post)) }}&quote={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
-                        <i class="enlarge fab fa-facebook-f"></i>
+                        <x-fab-facebook-f class="inline w-6 h-6" />
                     </a>
 
                     <a class="ml-4 text-gray-500" target="_blank" rel="noopener" aria-label="Share on LinkedIn"
                        href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(route('post', $post)) }}&title={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
-                        <i class="enlarge fab fa-linkedin-in"></i>
+                        <x-fab-linkedin-in class="inline w-6 h-6" />
                     </a>
                 </p>
             </div>
@@ -85,6 +86,7 @@
                             <a href="{{ route('post', $previous) }}">{{ $previous->title }}</a>
                         @endif
                     </div>
+
                     <div class="flex-1 text-center sm:text-right px-4 py-10 pl-6 sm:py-20">
                         @if ($next)
                             <p class="uppercase text-sm mb-2">Next post &rightarrow; </p>

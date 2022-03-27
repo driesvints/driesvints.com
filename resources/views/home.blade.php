@@ -55,7 +55,7 @@
                                     <img src="{{ asset('/images/fseu.png') }}" class="inline-block max-h-full" alt="">
                                 </div>
                                 <p class="mb-6">A conference for every kind of developer</p>
-                                <p class="text-sm text-gray-600">fullstackeurope.com <i class="fas fa-external-link-alt"></i></p>
+                                <p class="text-sm text-gray-600">fullstackeurope.com <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
                             </div>
                         </a>
                     </div>
@@ -66,7 +66,7 @@
                                     <img src="{{ asset('/images/blade-ui-kit.svg') }}" class="inline-block max-h-full" alt="">
                                 </div>
                                 <p class="mb-6">Renderless components for your Laravel Blade views</p>
-                                <p class="text-sm text-gray-600">blade-ui-kit.com <i class="fas fa-external-link-alt"></i></p>
+                                <p class="text-sm text-gray-600">blade-ui-kit.com <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></i></p>
                             </div>
                         </a>
                     </div>
@@ -77,7 +77,7 @@
                                     <img src="{{ asset('/images/laravelio.png') }}" class="inline-block max-h-full"  alt="">
                                 </div>
                                 <p class="mb-6">The Laravel community platform</p>
-                                <p class="text-sm text-gray-600">laravel.io <i class="fas fa-external-link-alt"></i></p>
+                                <p class="text-sm text-gray-600">laravel.io <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
                             </div>
                         </a>
                     </div>
