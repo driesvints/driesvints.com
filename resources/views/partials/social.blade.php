@@ -8,11 +8,6 @@
     @endauth
 
     <li class="inline-block mr-6 sm:mr-10">
-        <a href="{{ route('blog') }}" aria-label="RSS Feed">
-            <x-fas-glasses class="enlarge w-6 h-6" />
-        </a>
-    </li>
-    <li class="inline-block mr-6 sm:mr-10">
         <a href="https://twitter.com/driesvints" target="_blank" rel="noopener" aria-label="Twitter">
             <x-fab-twitter class="enlarge w-6 h-6" />
         </a>
