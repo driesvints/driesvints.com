@@ -10,7 +10,7 @@
         </h1>
 
         <p class="mb-4">
-            Here on my blog I try to write about various things which keep me busy. There's lots of posts on various tech related topics but I also sometimes blog about <a href="{{ route('post', 'one-club-player') }}">sports</a>, <a href="{{ route('post', '1984') }}">books</a>, <a href="{{ route('post', 'star-wars-the-last-jedi-review') }}">movies</a> and other things.
+            Here on my blog I try to write about various things which keep me busy. There's lots of posts on various tech related topics.
         </p>
 
         <p class="mb-4">
