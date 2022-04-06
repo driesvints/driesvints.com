@@ -59,20 +59,17 @@
                 </p>
 
                 <p class="share-links mb-6">
-                    <a class="text-gray-400" target="_blank" rel="noopener" aria-label="Share on Twitter"
+                    <a target="_blank" rel="noopener" aria-label="Share on Twitter"
                        href="http://twitter.com/share?text={{ urlencode('"'.$post->title.'" by @driesvints - ') }}&url={{ urlencode(route('post', $post)) }}">
-                        <x-fab-twitter class="inline w-6 h-6" />
-                    </a>
+                        <x-fab-twitter class="inline w-6 h-6" /></a>
 
-                    <a class="ml-4 text-gray-400" target="_blank" rel="noopener" aria-label="Share on Facebook"
+                    <a class="ml-4" target="_blank" rel="noopener" aria-label="Share on Facebook"
                        href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('post', $post)) }}&quote={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
-                        <x-fab-facebook-f class="inline w-6 h-6" />
-                    </a>
+                        <x-fab-facebook-f class="inline w-6 h-6" /></a>
 
-                    <a class="ml-4 text-gray-400" target="_blank" rel="noopener" aria-label="Share on LinkedIn"
+                    <a class="ml-4" target="_blank" rel="noopener" aria-label="Share on LinkedIn"
                        href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(route('post', $post)) }}&title={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
-                        <x-fab-linkedin-in class="inline w-6 h-6" />
-                    </a>
+                        <x-fab-linkedin-in class="inline w-6 h-6" /></a>
                 </p>
             </div>
         </div>
