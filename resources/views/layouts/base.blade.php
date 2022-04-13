@@ -41,7 +41,7 @@
 <div class="font-sans text-xl text-gray-600 leading-normal antialiased border-t-6 border-primary">
     <div class="bg-secondary text-white font-semibold hover:underline py-3 px-6">
         <div class="wrapper text-center">
-            <a class="focus:underline focus:bg-transparent" href="https://full-stack-europe.com" target="_blank" rel="noopener">
+            <a class="focus:underline focus:bg-transparent" href="https://fullstackeurope.com/2022" target="_blank" rel="noopener">
                 Join me at Full Stack Europe 2022!
             </a>
         </div>
