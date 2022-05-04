@@ -74,26 +74,6 @@
             </div>
         </div>
 
-        @if ($previous || $next)
-            <div class="bg-gray-100 text-xl sm:text-2xl border-t border-gray-200 px-6">
-                <div class="max-w-4xl mx-auto flex">
-                    <div class="flex-1 text-center sm:text-left border-r border-gray-200 pr-6 py-10 sm:py-20">
-                        @if ($previous)
-                            <p class="uppercase text-sm mb-2">&leftarrow; Previous post</p>
-                            <a href="{{ route('post', $previous) }}">{{ $previous->title }}</a>
-                        @endif
-                    </div>
-
-                    <div class="flex-1 text-center sm:text-right px-4 py-10 pl-6 sm:py-20">
-                        @if ($next)
-                            <p class="uppercase text-sm mb-2">Next post &rightarrow; </p>
-                            <a href="{{ route('post', $next) }}">{{ $next->title }}</a>
-                        @endif
-                    </div>
-                </div>
-            </div>
-        @endif
-
         @include('partials.about')
     </div>
 @endsection

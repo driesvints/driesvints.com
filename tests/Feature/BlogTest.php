@@ -70,34 +70,6 @@ class BlogTest extends TestCase
     }
 
     /** @test */
-    public function visitors_can_see_a_previous_link()
-    {
-        $posts = Post::factory()->count(2)->create()->sortByDesc('published_at');
-        $post = $posts->first();
-        $previous = $posts->last();
-
-        $this->get("/blog/{$post->slug}")
-            ->assertSee($post->title)
-            ->assertSee($previous->title)
-            ->assertDontSee('Next post')
-            ->assertSee('Previous post');
-    }
-
-    /** @test */
-    public function visitors_can_see_a_next_link()
-    {
-        $posts = Post::factory()->count(2)->create()->sortByDesc('published_at');
-        $post = $posts->last();
-        $next = $posts->first();
-
-        $this->get("/blog/{$post->slug}")
-            ->assertSee($post->title)
-            ->assertSee($next->title)
-            ->assertSee('Next post')
-            ->assertDontSee('Previous post');
-    }
-
-    /** @test */
     public function it_falls_back_on_content_for_excerpt()
     {
         $post = new Post();
