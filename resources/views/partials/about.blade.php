@@ -20,7 +20,7 @@
                     </p>
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        My passions are <a href="https://github.com/driesvints">open-source</a>, building communities, and writing testable & readable code.
+                        My passions are <a href="https://github.com/driesvints">open-source</a>, building communities, and writing domain-driven web applications.
                     </p>
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">

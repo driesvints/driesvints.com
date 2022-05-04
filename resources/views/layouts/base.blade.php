@@ -30,8 +30,6 @@
     <meta property="article:published_time" content="{{ $post->published_at->format('Y-m-d') }}" />
 @endif
 
-@include('feed::links')
-
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 <script src="{{ mix('js/app.js') }}" defer></script>

@@ -14,24 +14,6 @@ class BlogTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function visitors_can_see_a_list_of_posts()
-    {
-        $posts = Post::factory()->count(5)->create();
-
-        $posts->each(fn (Post $post) => $this->get('/blog')->assertSee($post->title));
-    }
-
-    /** @test */
-    public function visitors_cannot_see_a_unpublished_posts_in_the_overview()
-    {
-        $posts = Post::factory()->count(2)->create();
-        $unpublished = Post::factory()->count(2)->unpublished()->create();
-
-        $posts->each(fn (Post $post) => $this->get('/blog')->assertSee($post->title));
-        $unpublished->each(fn (Post $post) => $this->get('/blog')->assertDontSee($post->title));
-    }
-
-    /** @test */
     public function visitors_can_view_a_single_post()
     {
         $post = Post::factory()->create();
@@ -113,28 +95,6 @@ class BlogTest extends TestCase
             ->assertSee($next->title)
             ->assertSee('Next post')
             ->assertDontSee('Previous post');
-    }
-
-    /** @test */
-    public function visitors_can_read_the_rss_feed()
-    {
-        $post = Post::factory()->create();
-
-        $this->get('/blog/feed.atom')
-            ->assertSee('The blog feed of Dries Vints')
-            ->assertSee($post->title);
-    }
-
-    /** @test */
-    public function visitors_cannot_see_unpublished_posts_in_the_feed()
-    {
-        $post = Post::factory()->create();
-        $unpublished = Post::factory()->unpublished()->create();
-
-        $this->get('/blog/feed.atom')
-            ->assertSee('The blog feed of Dries Vints')
-            ->assertSee($post->title)
-            ->assertDontSee($unpublished->title);
     }
 
     /** @test */

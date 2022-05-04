@@ -11,13 +11,13 @@
                     </div>
                 </div>
 
-                <div class="content sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-16 md:mr-0 xl:mr-24">
+                <div class="content sm:max-w-lg mx-auto text-shadow-lg font-semibold px-6 mt-32 md:mr-0 xl:mr-24">
                     {{ $slot }}
                 </div>
             </div>
         </div>
     </div>
-    <svg class="absolute z-0 left-0 bottom-0 block w-full h-8 sm:h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <svg class="absolute z-0 left-0 bottom-0 block w-full h-8 sm:h-24 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon fill="#f7fafc" points="0,100 100,0 100,100"/>
     </svg>
 </div>

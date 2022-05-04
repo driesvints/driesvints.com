@@ -10,13 +10,7 @@
             </h1>
 
             <p class="text-2xl sm:text-3xl sm:leading-snug leading-snug mb-8">
-                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">event</a> & <a href="https://fullstackeurope.com">conference</a> organiser, <a href="https://github.com/driesvints">open-source</a> maintainer, <a href="https://www.youtube.com/watch?v=2yos8WUG5z4">speaker</a>, and <a href="{{ route('blog') }}">blogger</a>.
-            </p>
-
-            <p class="mb-8">
-                <a href="{{ route('home') }}#about">
-                    More about me &rightarrow;
-                </a>
+                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">event</a> & <a href="https://fullstackeurope.com">conference</a> organiser and <a href="https://github.com/driesvints">open-source</a> maintainer.
             </p>
 
             <p class="text-xs">
@@ -26,24 +20,7 @@
     @endcomponent
 
     <div id="content">
-        <div class="max-w-3xl mx-auto px-6 py-10 sm:py-20">
-            <h2 class="text-4xl text-center sm:text-left font-bold mb-4 sm:mb-12">Latest Posts</h2>
-
-            <p class="text-base text-center font-bold sm:float-right sm:-mt-20 mb-8">
-                <a href="{{ route('blog') }}">View all &rightarrow;</a>
-            </p>
-
-            @foreach ($posts as $post)
-                <span class="block text-xs uppercase text-gray-500">
-                    {{ $post->published_at->format('F j, Y') }}
-                </span>
-                <p class="text-2xl mb-8">
-                    <a href="{{ route('post', $post) }}">{{ $post->title }}</a>
-                </p>
-            @endforeach
-        </div>
-
-        <div id="projects" class="bg-gray-100">
+        <div id="projects" style="background-color: #f7fafc">
             <div class="max-w-6xl mx-auto px-6 py-10 sm:py-20">
                 <h2 class="text-4xl text-center font-bold mb-10">Projects</h2>
 
@@ -88,7 +65,6 @@
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                         + <a href="https://fullstackbelgium.be">Full Stack Belgium</a>, events in Belgium for web developers.<br>
                         + <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a>, easily use SVG icons in your Laravel Blade views.<br>
-                        + <a href="https://github.com/driesvints/vat-calculator">VatCalculator</a>, handle all the hard stuff related to EU MOSS tax/vat regulations.
                     </p>
                 </div>
             </div>
