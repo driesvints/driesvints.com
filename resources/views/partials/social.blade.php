@@ -12,14 +12,9 @@
             <x-fab-twitter class="enlarge w-6 h-6" />
         </a>
     </li>
-    <li class="inline-block mr-6 sm:mr-10">
+    <li class="inline-block">
         <a href="https://github.com/driesvints" target="_blank" rel="noopener" aria-label="Github">
             <x-fab-github class="enlarge w-6 h-6" />
-        </a>
-    </li>
-    <li class="inline-block">
-        <a href="https://www.youtube.com/driesvints" target="_blank" rel="noopener" aria-label="Youtube">
-            <x-fab-youtube class="enlarge w-6 h-6" />
         </a>
     </li>
 </ul>
