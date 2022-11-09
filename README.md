@@ -3,8 +3,8 @@
 <a href="https://github.com/driesvints/driesvints.com/actions?query=workflow%3ATests">
     <img src="https://github.com/driesvints/driesvints.com/workflows/Tests/badge.svg" alt="Tests">
 </a>
-<a href="https://github.styleci.io/repos/12023173">
-    <img src="https://github.styleci.io/repos/12023173/shield?style=flat" alt="Code Style">
+<a href="https://github.com/driesvints/driesvints.com/actions/workflows/coding-standards.yml">
+    <img src="https://github.com/driesvints/driesvints.com/workflows/coding-standards.yml/badge.svg" alt="Coding Standards" />
 </a>
 
 The source code for my personal website.
