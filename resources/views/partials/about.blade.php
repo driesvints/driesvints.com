@@ -20,7 +20,11 @@
                     </p>
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        My passions are <a href="https://github.com/driesvints">open-source</a>, building communities, and building domain-driven web applications.
+                        I'm also the creator of <a href="https://eventy.io">Eventy</a>, a platform that connects the dots between user groups, speakers, conferences and attendees.
+                    </p>
+
+                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        My passions are <a href="https://github.com/driesvints">open-source</a>, growing communities, and building products that people love.
                     </p>
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
