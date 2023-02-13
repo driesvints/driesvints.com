@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 final class PostController
 {
