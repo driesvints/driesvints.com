@@ -76,6 +76,7 @@
                     <p class="text-sm sm:text-base text-gray-600 mb-12">
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                         + <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a>, easily use SVG icons in your Laravel Blade views.<br>
+                        + <a href="https://github.com/lmsqueezy/laravel">Lemon Squeezy for Laravel</a>, easily integrate your Laravel application with Lemon Squeezy..<br>
                     </p>
                 </div>
             </div>
