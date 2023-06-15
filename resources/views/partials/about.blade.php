@@ -29,10 +29,7 @@
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                         Together with my buddies <a href="https://twitter.com/riasvdv">Rias</a> and <a
-                            href="https://twitter.com/freekmurze">Freek</a> I organize events for <a
-                            href="https://fullstackbelgium.be">Full Stack Belgium</a> in the cities of <a
-                            href="https://meetup.com/fullstackantwerp">Antwerp</a> and <a
-                            href="https://meetup.com/fullstackghent">Ghent</a>. And we also organise <a
+                            href="https://twitter.com/freekmurze">Freek</a> I organize organise <a
                             href="https://fullstackeurope.com">Full Stack Europe</a>, the conference for the whole team.
                     </p>
                 </div>
