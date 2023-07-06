@@ -49,13 +49,13 @@
                         </a>
                     </div>
                     <div class="project md:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
-                        <a href="https://fullstackbelgium.be" target="_blank" rel="noopener">
-                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
-                                <div class="h-24 pt-2 mb-6">
-                                    <img src="{{ asset('/images/fsbe.svg') }}" class="inline-block max-h-full" alt="">
+                        <a href="https://github.com/lmsqueezy/laravel" target="_blank" rel="noopener">
+                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-6 py-8">
+                                <div class="h-24 pt-10 mb-6">
+                                    <img src="{{ asset('/images/lmsqueezy.svg') }}" class="inline-block max-h-full" alt="">
                                 </div>
-                                <p class="mb-6">Networking events in Belgium for developers</p>
-                                <p class="text-sm text-gray-500">fullstackbelgium.be <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></i></p>
+                                <p class="mb-6">Easily integrate your Laravel application with Lemon Squeezy.</p>
+                                <p class="text-sm text-gray-500">lmsqueezy/laravel <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></i></p>
                             </div>
                         </a>
                     </div>
@@ -76,7 +76,6 @@
                     <p class="text-sm sm:text-base text-gray-600 mb-12">
                         + <a href="https://github.com/driesvints/dotfiles">Dotfiles</a>, my preferred way to set up my Mac.<br>
                         + <a href="https://github.com/blade-ui-kit/blade-icons">Blade Icons</a>, easily use SVG icons in your Laravel Blade views.<br>
-                        + <a href="https://github.com/lmsqueezy/laravel">Lemon Squeezy for Laravel</a>, easily integrate your Laravel application with Lemon Squeezy.<br>
                     </p>
                 </div>
             </div>
