@@ -44,8 +44,8 @@
 <div class="font-sans text-xl text-gray-600 leading-normal antialiased border-t-6 border-primary">
     <div class="bg-secondary text-white font-semibold hover:underline py-3 px-6">
         <div class="wrapper text-center">
-            <a class="focus:underline focus:bg-transparent" href="https://eventy.io" target="_blank" rel="noopener">
-                Check out my next project, Eventy.
+            <a class="focus:underline focus:bg-transparent" href="https://fullstackeurope.com" target="_blank" rel="noopener">
+                Join me at the Full Stack Europe conference!
             </a>
         </div>
     </div>
