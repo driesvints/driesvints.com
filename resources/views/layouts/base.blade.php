@@ -45,7 +45,7 @@
     <div class="bg-secondary text-white font-semibold hover:underline py-3 px-6">
         <div class="wrapper text-center">
             <a class="focus:underline focus:bg-transparent" href="https://eventy.io" target="_blank" rel="noopener">
-                Check out Eventy, the event platform for the rest of us!
+                Check out my latest project, Eventy. The event platform for the rest of us!
             </a>
         </div>
     </div>
