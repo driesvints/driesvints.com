@@ -12,7 +12,7 @@ class HomepageTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function visitors_can_see_the_homepage()
+    public function visitors_can_see_the_homepage(): void
     {
         $response = $this->get('/');
 

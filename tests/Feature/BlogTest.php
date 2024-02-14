@@ -14,7 +14,7 @@ class BlogTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function visitors_can_view_a_single_post()
+    public function visitors_can_view_a_single_post(): void
     {
         $post = Post::factory()->create();
 
@@ -24,7 +24,7 @@ class BlogTest extends TestCase
     }
 
     /** @test */
-    public function visitors_cannot_view_unpublished_posts()
+    public function visitors_cannot_view_unpublished_posts(): void
     {
         $post = Post::factory()->unpublished()->create();
 
@@ -33,7 +33,7 @@ class BlogTest extends TestCase
     }
 
     /** @test */
-    public function visitors_cannot_view_scheduled_posts()
+    public function visitors_cannot_view_scheduled_posts(): void
     {
         $post = Post::factory()->create(['published_at' => now()->addDay()]);
 
@@ -42,7 +42,7 @@ class BlogTest extends TestCase
     }
 
     /** @test */
-    public function admins_can_view_unpublished_posts()
+    public function admins_can_view_unpublished_posts(): void
     {
         $user = User::factory()->create();
 
@@ -56,7 +56,7 @@ class BlogTest extends TestCase
     }
 
     /** @test */
-    public function admins_can_view_scheduled_posts()
+    public function admins_can_view_scheduled_posts(): void
     {
         $user = User::factory()->create();
 
@@ -70,7 +70,7 @@ class BlogTest extends TestCase
     }
 
     /** @test */
-    public function it_falls_back_on_content_for_excerpt()
+    public function it_falls_back_on_content_for_excerpt(): void
     {
         $post = new Post();
         $post->excerpt = '';
