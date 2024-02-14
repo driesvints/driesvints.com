@@ -1,5 +1,5 @@
 @extends('layouts.base', [
-    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel, organise events for Full Stack Belgium and organise the Full Stack Europe conference.',
+    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel and built projects like Eventy and Laravel.io',
 ])
 
 @section('body')
@@ -10,7 +10,7 @@
             </h1>
 
             <p class="text-2xl sm:text-3xl sm:leading-snug leading-snug mb-8">
-                Software engineer at <a href="https://laravel.com">Laravel</a>, <a href="https://fullstackbelgium.be">event</a> & <a href="https://fullstackeurope.com">conference</a> organiser and <a href="https://github.com/driesvints">open-source</a> maintainer.
+                Software engineer at <a href="https://laravel.com">Laravel</a>, creator of <a href="https://eventy.io">Eventy</a>, and <a href="https://github.com/driesvints">open-source</a> maintainer.
             </p>
 
             <p class="text-xs">
@@ -38,24 +38,24 @@
 
                 <div class="md:flex mt-12 mb-12 md:mb-16">
                     <div class="project sm:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
-                        <a href="https://fullstackeurope.com" target="_blank" rel="noopener">
+                        <a href="https://blade-ui-kit.com" target="_blank" rel="noopener">
                             <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
                                 <div class="h-24 pt-5 mb-6">
-                                    <img src="{{ asset('/images/fseu.png') }}" class="inline-block max-h-full" alt="">
+                                    <img src="{{ asset('/images/blade-ui-kit.svg') }}" class="inline-block max-h-full" alt="">
                                 </div>
-                                <p class="mb-6">A conference for every kind of developer</p>
-                                <p class="text-sm text-gray-500">fullstackeurope.com <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
+                                <p class="mb-6">A set of renderless components</p>
+                                <p class="text-sm text-gray-500">blade-ui-kit.com <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
                             </div>
                         </a>
                     </div>
                     <div class="project md:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
-                        <a href="https://fullstackbelgium.be" target="_blank" rel="noopener">
-                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
-                                <div class="h-24 pt-2 mb-6">
-                                    <img src="{{ asset('/images/fsbe.svg') }}" class="inline-block max-h-full" alt="">
+                        <a href="https://github.com/lmsqueezy/laravel" target="_blank" rel="noopener">
+                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-6 py-8">
+                                <div class="h-24 pt-10 mb-6">
+                                    <img src="{{ asset('/images/lmsqueezy.svg') }}" class="inline-block max-h-full" alt="">
                                 </div>
-                                <p class="mb-6">Networking events in Belgium for developers</p>
-                                <p class="text-sm text-gray-500">fullstackbelgium.be <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></i></p>
+                                <p class="mb-6">Easily integrate your Laravel application with Lemon Squeezy.</p>
+                                <p class="text-sm text-gray-500">lmsqueezy/laravel <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></i></p>
                             </div>
                         </a>
                     </div>
