@@ -37,15 +37,6 @@
                         @else
                             Not yet scheduled
                         @endif
-
-                        @auth
-                            <a
-                                class="ml-1" aria-label="Edit"
-                                href="{{ url("/nova/resources/posts/{$post->id}/edit") }}"
-                            >
-                                <x-fas-edit class="inline w-3 h-3 mb-1" />
-                            </a>
-                        @endauth
                     </p>
                 </div>
 
