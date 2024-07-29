@@ -11,18 +11,18 @@
     "require": {
         "php": "8.2.*",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^10.0",
-        "laravel/tinker": "^2.8",
-        "owenvoke/blade-fontawesome": "^2.0",
-        "spatie/laravel-feed": "^4.2",
-        "spatie/laravel-ignition": "^2.0",
-        "spatie/laravel-responsecache": "^7.4",
-        "symfony/http-client": "^6.2",
-        "symfony/mailgun-mailer": "^6.2"
+        "laravel/framework": "^11.5",
+        "laravel/tinker": "^2.9",
+        "owenvoke/blade-fontawesome": "^2.6",
+        "spatie/laravel-feed": "^4.4",
+        "spatie/laravel-ignition": "^2.4",
+        "spatie/laravel-responsecache": "^7.5",
+        "symfony/http-client": "^7.0",
+        "symfony/mailgun-mailer": "^7.0"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.9.1",
-        "mockery/mockery": "^1.4.4",
+        "fakerphp/faker": "^1.23",
+        "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^9.5.10"
     },
@@ -63,6 +63,6 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
