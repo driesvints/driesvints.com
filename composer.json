@@ -10,10 +10,11 @@
     "license": "MIT",
     "require": {
         "php": "8.2.*",
+        "codeat3/blade-simple-icons": "^5.14",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.0",
         "laravel/tinker": "^2.8",
-        "owenvoke/blade-fontawesome": "^2.0",
+        "owenvoke/blade-fontawesome": "^2.7",
         "spatie/laravel-feed": "^4.2",
         "spatie/laravel-ignition": "^2.0",
         "spatie/laravel-responsecache": "^7.4",
