@@ -10,11 +10,6 @@
         </a>
     </li>
     <li class="inline-block mr-6">
-        <a rel="me" href="https://phpc.social/@driesvints" target="_blank" aria-label="Mastodon">
-            <x-si-mastodon class="enlarge w-6 h-6" />
-        </a>
-    </li>
-    <li class="inline-block mr-6">
         <a href="https://github.com/driesvints" target="_blank" rel="noopener" aria-label="Github">
             <x-si-github class="enlarge w-6 h-6" />
         </a>
