@@ -72,7 +72,7 @@ class BlogTest extends TestCase
     /** @test */
     public function it_falls_back_on_content_for_excerpt(): void
     {
-        $post = new Post();
+        $post = new Post;
         $post->excerpt = '';
         $post->content = 'Hello World!';
 

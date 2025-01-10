@@ -6,9 +6,30 @@ registries:
     username: x-access-token
     password: ${{ secrets.DEPENDABOT_GH_TOKEN }}
 updates:
-  - package-ecosystem: "composer"
+  - package-ecosystem: composer
     directory: "/"
-    registries: "*"
     schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 0
+      interval: weekly
+      day: friday
+    groups:
+      php-dependencies:
+        update-types:
+        - "minor"
+        - "patch"
+    allow:
+      - dependency-type: direct
+    versioning-strategy: increase-if-necessary
+
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: friday
+    groups:
+      js-dependencies:
+        update-types:
+        - "minor"
+        - "patch"
+    allow:
+      - dependency-type: direct
+    versioning-strategy: increase-if-necessary
