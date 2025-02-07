@@ -21,22 +21,21 @@
 
     <div id="content">
         <div id="projects" style="background-color: #f7fafc">
-            <div class="max-w-6xl mx-auto px-6 py-10 sm:py-20">
+            <div class="max-w-7xl mx-auto px-6 py-10 sm:py-20">
                 <h2 class="text-4xl text-center font-bold mb-10">Projects</h2>
 
-                <div class="project max-w-xl mx-auto px-4 lg:px-8 mb-8 md:mb-0">
-                    <a href="https://eventy.io" target="_blank" rel="noopener">
-                        <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
-                            <div class="h-24 pt-5 mb-6">
-                                <img src="{{ asset('/images/eventy.svg') }}" class="inline-block max-h-full" alt="">
-                            </div>
-                            <p class="mb-6">The event platform for the rest of us</p>
-                            <p class="text-sm text-gray-500">eventy.io <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
-                        </div>
-                    </a>
-                </div>
-
                 <div class="md:flex mt-12 mb-12 md:mb-16">
+                    <div class="project sm:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
+                        <a href="https://eventy.io" target="_blank" rel="noopener">
+                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
+                                <div class="h-24 pt-5 mb-6">
+                                    <img src="{{ asset('/images/eventy.svg') }}" class="inline-block max-h-full" alt="">
+                                </div>
+                                <p class="mb-6">The event platform<br>for the rest of us</p>
+                                <p class="text-sm text-gray-500">eventy.io <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
+                            </div>
+                        </a>
+                    </div>
                     <div class="project sm:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
                         <a href="https://blade-ui-kit.com" target="_blank" rel="noopener">
                             <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
@@ -45,17 +44,6 @@
                                 </div>
                                 <p class="mb-6">A set of renderless components</p>
                                 <p class="text-sm text-gray-500">blade-ui-kit.com <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project md:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
-                        <a href="https://github.com/lmsqueezy/laravel" target="_blank" rel="noopener">
-                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-6 py-8">
-                                <div class="h-24 pt-10 mb-6">
-                                    <img src="{{ asset('/images/lmsqueezy.svg') }}" class="inline-block max-h-full" alt="">
-                                </div>
-                                <p class="mb-6">Easily integrate your Laravel application with Lemon Squeezy.</p>
-                                <p class="text-sm text-gray-500">lmsqueezy/laravel <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></i></p>
                             </div>
                         </a>
                     </div>
