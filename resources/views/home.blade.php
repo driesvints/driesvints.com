@@ -10,18 +10,18 @@
             </h1>
 
             <p class="text-2xl sm:text-3xl sm:leading-snug leading-snug mb-8">
-                Software engineer at <a href="https://laravel.com">Laravel</a>, creator of <a href="https://eventy.io">Eventy</a>, and <a href="https://github.com/driesvints">open-source</a> maintainer.
+                Software engineer at <a href="https://laravel.com">Laravel</a>, <span class="whitespace-nowrap">co-creator</span> of <a href="https://eventy.io">Eventy</a>, and maintainer of <a href="https://laravel.io">Laravel.io</a>
             </p>
 
             <p class="text-xs">
-                Photo by <a href="https://ninjaparade.ca">ninjaparade</a>
+                Photo by <a href="https://x.com/ninjaparade">Yaz Jallad</a>
             </p>
         </div>
     @endcomponent
 
     <div id="content">
         <div id="projects" style="background-color: #f7fafc">
-            <div class="max-w-7xl mx-auto px-6 py-10 sm:py-20">
+            <div class="max-w-5xl mx-auto px-6 py-10 sm:py-20">
                 <h2 class="text-4xl text-center font-bold mb-10">Projects</h2>
 
                 <div class="md:flex mt-12 mb-12 md:mb-16">
@@ -33,17 +33,6 @@
                                 </div>
                                 <p class="mb-6">The event platform<br>for the rest of us</p>
                                 <p class="text-sm text-gray-500">eventy.io <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project sm:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
-                        <a href="https://blade-ui-kit.com" target="_blank" rel="noopener">
-                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
-                                <div class="h-24 pt-5 mb-6">
-                                    <img src="{{ asset('/images/blade-ui-kit.svg') }}" class="inline-block max-h-full" alt="">
-                                </div>
-                                <p class="mb-6">A set of renderless components</p>
-                                <p class="text-sm text-gray-500">blade-ui-kit.com <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
                             </div>
                         </a>
                     </div>

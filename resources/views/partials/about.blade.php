@@ -15,12 +15,16 @@
                     </h2>
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        I'm a software engineer from Belgium. I work as one of the core team members of <a
+                        I'm a software engineer from Belgium and work as one of the core team members of <a
                             href="https://laravel.com">Laravel</a>, the popular PHP framework.
                     </p>
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        I'm also the creator of <a href="https://eventy.io">Eventy</a>, a platform that connects the dots between user groups, speakers, conferences and attendees.
+                        Together with my buddy <a href="https://rias.be">Rias</a>, we're also the creators of <a href="https://eventy.io">Eventy</a>, a platform that connects the dots between user groups, speakers, conferences and attendees.
+                    </p>
+
+                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        I'm also the maintainer of <a href="https://laravel.io">Laravel.io</a>, the Laravel community portal, where the community can ask questions, share knowledge, and connect with each other.
                     </p>
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
