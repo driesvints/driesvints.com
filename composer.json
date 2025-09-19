@@ -10,7 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "8.2.*",
-        "codeat3/blade-simple-icons": "^5.14",
+        "codeat3/blade-simple-icons": "^7.15",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^11.5",
         "laravel/tinker": "^2.9",
