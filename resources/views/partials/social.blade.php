@@ -16,7 +16,7 @@
     </li>
     <li class="inline-block">
         <a href="https://linkedin.com/in/driesvints" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <x-si-linkedin class="enlarge w-6 h-6" />
+            <x-fab-linkedin class="enlarge w-6 h-6" />
         </a>
     </li>
 </ul>
