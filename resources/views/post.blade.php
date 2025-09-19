@@ -60,7 +60,7 @@
 
                     <a class="ml-4" target="_blank" rel="noopener" aria-label="Share on LinkedIn"
                        href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(route('post', $post)) }}&title={{ urlencode('"'.$post->title.'" by Dries Vints - ') }}">
-                        <x-si-linkedin class="inline w-6 h-6" /></a>
+                        <x-fab-linkedin class="inline w-6 h-6" /></a>
                 </p>
             </div>
         </div>
