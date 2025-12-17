@@ -13,6 +13,7 @@
         "codeat3/blade-simple-icons": "^8.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^11.5",
+        "laravel/nightwatch": "^1.21",
         "laravel/tinker": "^2.9",
         "owenvoke/blade-fontawesome": "^2.7",
         "spatie/laravel-feed": "^4.4",
