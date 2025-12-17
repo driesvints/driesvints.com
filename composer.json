@@ -9,7 +9,7 @@
     "homepage": "https://driesvints.com",
     "license": "MIT",
     "require": {
-        "php": "8.2.*",
+        "php": "8.4.*",
         "codeat3/blade-simple-icons": "^8.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^11.5",
