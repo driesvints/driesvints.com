@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Middleware\DisableFloc;
 use App\Providers\AppServiceProvider;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Spatie\ResponseCache\Middlewares\CacheResponse;
+use Spatie\ResponseCache\Middlewares\DoNotCacheResponse;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withProviders()
@@ -19,14 +22,14 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->redirectUsersTo(AppServiceProvider::HOME);
 
         $middleware->web([
-            \App\Http\Middleware\DisableFloc::class,
-            \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+            DisableFloc::class,
+            CacheResponse::class,
         ]);
 
         $middleware->throttleApi();
 
         $middleware->alias([
-            'doNotCacheResponse' => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
+            'doNotCacheResponse' => DoNotCacheResponse::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
