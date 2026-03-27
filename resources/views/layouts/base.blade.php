@@ -44,8 +44,8 @@
 <div class="font-sans text-xl text-gray-600 leading-normal antialiased border-t-6 border-primary">
     <div class="bg-secondary text-white font-semibold hover:underline py-3 px-6">
         <div class="wrapper text-center">
-            <a class="focus:underline focus:bg-transparent" href="https://eventy.io" target="_blank" rel="noopener">
-                Check out my latest project, Eventy. The event platform for the rest of us!
+            <a class="focus:underline focus:bg-transparent" href="https://moneytrees.app" target="_blank" rel="noopener">
+                Check out my latest project, Moneytrees. The easiest way to stay on top of your invoices and expenses.
             </a>
         </div>
     </div>
