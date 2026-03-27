@@ -20,6 +20,10 @@
                     </p>
 
                     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        I'm also building <a href="https://moneytrees.app">Moneytrees</a>, a product focused on making it easier to stay on top of invoices and expenses.
+                    </p>
+
+                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                         Together with my buddy <a href="https://rias.be">Rias</a>, we're also the creators of <a href="https://eventy.io">Eventy</a>, a platform that connects the dots between user groups, speakers, conferences and attendees.
                     </p>
 

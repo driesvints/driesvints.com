@@ -1,5 +1,5 @@
 @extends('layouts.base', [
-    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel and built projects like Eventy and Laravel.io',
+    'metaDescription' => 'I\'m a software engineer from Antwerp, Belgium, work for Laravel and built projects like Moneytrees, Eventy and Laravel.io',
 ])
 
 @section('body')
@@ -10,7 +10,7 @@
             </h1>
 
             <p class="text-2xl sm:text-3xl sm:leading-snug leading-snug mb-8">
-                Software engineer at <a href="https://laravel.com">Laravel</a>, <span class="whitespace-nowrap">co-creator</span> of <a href="https://eventy.io">Eventy</a>, and maintainer of <a href="https://laravel.io">Laravel.io</a>
+                Software engineer at <a href="https://laravel.com">Laravel</a>, creator of <a href="https://moneytrees.app">Moneytrees</a>, <span class="whitespace-nowrap">co-creator</span> of <a href="https://eventy.io">Eventy</a>, and maintainer of <a href="https://laravel.io">Laravel.io</a>
             </p>
 
             <p class="text-xs">
@@ -25,6 +25,17 @@
                 <h2 class="text-4xl text-center font-bold mb-10">Projects</h2>
 
                 <div class="md:flex mt-12 mb-12 md:mb-16">
+                    <div class="project sm:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
+                        <a href="https://moneytrees.app" target="_blank" rel="noopener">
+                            <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
+                                <div class="h-24 pt-5 mb-6">
+                                    <img src="{{ asset('/images/moneytrees.svg') }}" class="inline-block max-h-full" alt="Moneytrees logo">
+                                </div>
+                                <p class="mb-6">The easiest way to stay on top of your invoices and expenses</p>
+                                <p class="text-sm text-gray-500">moneytrees.app <x-fas-external-link-alt class="inline w-3 h-3 mb-1" /></p>
+                            </div>
+                        </a>
+                    </div>
                     <div class="project sm:flex-1 px-4 lg:px-8 mb-8 md:mb-0">
                         <a href="https://eventy.io" target="_blank" rel="noopener">
                             <div class="bg-white enlarge text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">
