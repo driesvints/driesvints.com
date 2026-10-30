@@ -5,13 +5,13 @@
     min-height: 125px;
 }
 
-@screen md {
+@media (width >= theme(--breakpoint-md)) {
     #header .header-image {
         min-height: 600px;
     }
 }
 
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
     #header .header-image {
         min-height: 750px;
     }

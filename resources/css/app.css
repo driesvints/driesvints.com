@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i;Ubuntu+Mono');
+@import 'tailwindcss' source(none);
+@import './components/buttons.css';
+@import './components/content.css';
+@import './components/header.css';
+@import './components/posts.css';
+@import './components/projects.css';
+@import 'highlight.js/styles/dracula.css';
+@import './utilities/animations.css';
+@import './utilities/text-shadow.css';
+
+@config '../../tailwind.config.js';
+@source '../views';
+@source '../js';
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}

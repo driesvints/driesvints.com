@@ -35,7 +35,7 @@
     }
 
     blockquote {
-        @apply max-w-4xl relative mx-auto bg-gray-100 text-base font-semibold italic rounded py-6 mt-8 mb-6;
+        @apply max-w-4xl relative mx-auto bg-gray-100 text-base font-semibold italic rounded-sm py-6 mt-8 mb-6;
     }
     blockquote::before {
         content: '“';
@@ -56,7 +56,7 @@
         @apply text-base;
     }
 
-    @screen md {
+    @media (width >= theme(--breakpoint-md)) {
         blockquote {
             @apply text-xl py-10;
         }
@@ -94,7 +94,7 @@
     }
 
     pre {
-        @apply max-w-4xl mx-auto rounded px-0 my-8;
+        @apply max-w-4xl mx-auto rounded-sm px-0 my-8;
         background-color: #282a36;
     }
     pre code {
@@ -116,13 +116,13 @@
     }
 }
 
-@screen sm {
+@media (width >= theme(--breakpoint-sm)) {
     #post pre code {
         @apply text-base;
     }
 }
 
-@screen md {
+@media (width >= theme(--breakpoint-md)) {
     #post pre code {
         @apply p-12;
     }
