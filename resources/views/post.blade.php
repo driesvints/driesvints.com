@@ -12,7 +12,7 @@
             <div id="post">
                 <div class="mb-12">
                     @if ($post->isUnpublished())
-                        <p class="bg-yellow-50 text-center text-sm py-4 rounded">
+                        <p class="bg-yellow-50 text-center text-sm py-4 rounded-sm">
                             <strong>Draft:</strong> this post is not yet published.
                         </p>
                     @endif
