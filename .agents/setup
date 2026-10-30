@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+SECONDS=0
+trap 'echo "Orb setup finished after ${SECONDS}s"' EXIT
+
+echo 'Preparing PHP 8.4 and system dependencies'
+packages=(ca-certificates curl unzip xz-utils php8.4-cli php8.4-curl php8.4-mbstring php8.4-xml php8.4-zip php8.4-sqlite3)
+missing=()
+for package in "${packages[@]}"; do
+    if ! dpkg-query -W -f='${Status}' "$package" 2>/dev/null | grep -qx 'install ok installed'; then
+        missing+=("$package")
+    fi
+done
+
+if ((${#missing[@]})); then
+    if [[ ! -f /etc/apt/sources.list.d/php.list ]]; then
+        keyring=$(mktemp --suffix=.deb)
+        curl -fsSL https://packages.sury.org/debsuryorg-archive-keyring.deb -o "$keyring"
+        sudo dpkg -i "$keyring"
+        rm "$keyring"
+        . /etc/os-release
+        echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/php/ ${VERSION_CODENAME} main" | sudo tee /etc/apt/sources.list.d/php.list >/dev/null
+    fi
+    sudo apt-get update -qq
+    sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends "${missing[@]}"
+fi
+sudo update-alternatives --set php /usr/bin/php8.4
+
+if ! command -v composer >/dev/null; then
+    echo 'Installing Composer'
+    installer=$(mktemp)
+    curl -fsSL https://getcomposer.org/installer -o "$installer"
+    expected=$(curl -fsSL https://composer.github.io/installer.sig)
+    actual=$(php -r 'echo hash_file("sha384", $argv[1]);' "$installer")
+    [[ "$actual" == "$expected" ]] || { rm "$installer"; echo 'Composer installer checksum mismatch' >&2; exit 1; }
+    php "$installer" --quiet --install-dir=/tmp --filename=composer.phar
+    sudo install -m 755 /tmp/composer.phar /usr/local/bin/composer
+    rm "$installer" /tmp/composer.phar
+fi
+
+# Laravel Mix's locked dependencies are incompatible with the orb's Node 26.
+node_version=22.23.4
+if [[ "$(node --version 2>/dev/null || true)" != "v${node_version}" ]]; then
+    echo "Installing Node ${node_version} (${SECONDS}s)"
+    node_tmp=$(mktemp -d)
+    archive="node-v${node_version}-linux-x64.tar.xz"
+    curl -fsSL "https://nodejs.org/dist/v${node_version}/${archive}" -o "$node_tmp/$archive"
+    curl -fsSL "https://nodejs.org/dist/v${node_version}/SHASUMS256.txt" -o "$node_tmp/SHASUMS256.txt"
+    (cd "$node_tmp" && grep " ${archive}$" SHASUMS256.txt | sha256sum --check)
+    sudo mkdir -p /opt/orb-node
+    sudo tar -xJf "$node_tmp/$archive" -C /opt/orb-node --strip-components=1
+    for binary in node npm npx; do
+        sudo ln -sf "/opt/orb-node/bin/$binary" "/usr/local/bin/$binary"
+    done
+    rm -rf "$node_tmp"
+fi
+node --version
+npm --version
+php --version | head -n 1
+
+echo "Preparing local environment (${SECONDS}s)"
+if [[ ! -f .env ]]; then
+    cp .env.example .env
+    sed -i -e 's/^DB_CONNECTION=.*/DB_CONNECTION=sqlite/' \
+        -e "s|^DB_DATABASE=.*|DB_DATABASE=$PWD/database/database.sqlite|" .env
+fi
+
+echo "Installing locked PHP dependencies (${SECONDS}s)"
+composer install --prefer-dist --no-interaction --no-progress
+if grep -q '^APP_KEY=$' .env; then
+    php artisan key:generate --ansi
+fi
+
+echo "Installing locked frontend dependencies (${SECONDS}s)"
+npm ci --no-audit --no-fund
+echo "Building frontend assets (${SECONDS}s)"
+npm run production
+
+# Always target the disposable local database, never credentials inherited from the environment.
+echo "Preparing local SQLite database (${SECONDS}s)"
+touch database/database.sqlite
+export DB_CONNECTION=sqlite DB_DATABASE="$PWD/database/database.sqlite"
+php artisan migrate --force --no-interaction
+php -r '
+require "vendor/autoload.php";
+$app = require "bootstrap/app.php";
+$app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
+if (!App\Models\User::exists()) {
+    (new Database\Seeders\UserSeeder)->run();
+}
+if (!App\Models\Post::exists()) {
+    (new Database\Seeders\PostSeeder)->run();
+}
+'

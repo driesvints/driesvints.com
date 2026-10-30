@@ -11,3 +11,5 @@
 .phpunit.result.cache
 npm-debug.log
 auth.json
+/.amp/portals/*
+/database/database.sqlite

@@ -15,7 +15,7 @@ Visit it at [https://driesvints.com](https://driesvints.com)
 
 The following tools are required in order to start the installation.
 
-- PHP 8.2
+- PHP 8.4
 - [Composer](https://getcomposer.org/download/)
 - [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
@@ -31,6 +31,23 @@ The following tools are required in order to start the installation.
 8. Serve the website locally by running `php artisan serve`
 
 You can now visit the app in your browser by visiting [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+## Amp Orbs
+
+Amp runs `.agents/setup` when preparing an orb snapshot. It installs PHP 8.4,
+Composer, Node 22.23.4, and the locked PHP and JavaScript dependencies, then builds
+production assets. New orbs reuse the prepared snapshot instead of repeating setup.
+
+Setup creates `.env` only when missing and generates an app key only when empty.
+The default orb environment uses a local SQLite database with sample users and
+posts; rerunning setup preserves existing data. Tests use a separate in-memory
+SQLite database. No external credentials, MySQL, or Redis are required.
+
+`.agents/resume` does not reinstall dependencies or start services: SQLite,
+file-based sessions/cache, and synchronous queues require no background daemons.
+Use `php artisan test` to run the tests. To preview the site in an orb, start
+`php artisan serve --host=0.0.0.0 --port=8000` with `amp orb service start` and
+its `--portal` option.
 
 ## Commands
 
