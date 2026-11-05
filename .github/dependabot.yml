@@ -21,6 +21,8 @@ updates:
       interval: weekly
       day: friday
       time: "03:00"
+    cooldown:
+      default-days: 7
     groups:
       js-dependencies:
         update-types:
@@ -35,3 +37,5 @@ updates:
     schedule:
       interval: "weekly"
       day: friday
+    cooldown:
+      default-days: 7
