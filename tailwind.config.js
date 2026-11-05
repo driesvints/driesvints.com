@@ -1,8 +1,8 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
 
-const colors = require('tailwindcss/colors');
+import colors from 'tailwindcss/colors';
 
-module.exports = {
+export default {
     theme: {
         extend: {
             borderWidth: {

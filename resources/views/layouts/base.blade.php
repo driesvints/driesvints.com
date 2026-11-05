@@ -35,9 +35,7 @@
     <meta property="article:published_time" content="{{ $post->published_at->format('Y-m-d') }}" />
 @endif
 
-<link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
-<script src="{{ mix('js/app.js') }}" defer></script>
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 
 @include('partials.fathom')
 

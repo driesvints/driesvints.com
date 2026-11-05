@@ -9,23 +9,23 @@
     "homepage": "https://driesvints.com",
     "license": "MIT",
     "require": {
-        "php": "8.4.*",
+        "php": "~8.4.1",
         "codeat3/blade-simple-icons": "^8.0",
-        "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^11.5",
+        "guzzlehttp/guzzle": "^8.0",
+        "laravel/framework": "^13.0",
         "laravel/nightwatch": "^1.21",
         "laravel/tinker": "^3.0",
-        "owenvoke/blade-fontawesome": "^2.7",
+        "owenvoke/blade-fontawesome": "^3.0",
         "spatie/laravel-feed": "^4.4",
         "spatie/laravel-ignition": "^2.4",
-        "spatie/laravel-responsecache": "^7.5",
+        "spatie/laravel-responsecache": "^8.0",
         "symfony/http-client": "^8.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
-        "phpunit/phpunit": "^10.0"
+        "phpunit/phpunit": "^13.0"
     },
     "config": {
         "optimize-autoloader": true,
@@ -64,6 +64,6 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }

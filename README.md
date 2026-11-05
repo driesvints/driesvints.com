@@ -15,9 +15,9 @@ Visit it at [https://driesvints.com](https://driesvints.com)
 
 The following tools are required in order to start the installation.
 
-- PHP 8.4
+- PHP 8.4.1 or later in the 8.4 series
 - [Composer](https://getcomposer.org/download/)
-- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- Node.js 22.12+ and [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## Installation
 
@@ -49,6 +49,26 @@ Use `php artisan test` to run the tests. To preview the site in an orb, start
 `php artisan serve --host=0.0.0.0 --port=8000` with `amp orb service start` and
 its `--portal` option.
 
+## Laravel 13 upgrade deployment
+
+This upgrade follows the [Laravel 12](https://laravel.com/docs/12.x/upgrade) and
+[Laravel 13](https://laravel.com/docs/13.x/upgrade) upgrade guides. PHP remains on
+8.4. The application explicitly preserves the old session cookie name, PHP
+session serialization, cache/Redis prefixes, and `storage/app` local disk root
+so existing sessions, keys, and files continue to work.
+
+The assets now use Vite instead of Mix. Existing npm command names still work;
+`npm run hot` starts the Vite development server. Production builds use
+`npm ci && npm run production`. Deploy `public/build` alongside the application;
+the layout reads its manifest instead of `public/mix-manifest.json`.
+
+During the upgrade deployment, after installing Composer dependencies, run
+`php artisan optimize:clear` and `php artisan responsecache:clear` before serving
+traffic, then rebuild any configuration/route/view caches used in production.
+ResponseCache 8 uses JSON instead of PHP-serialized responses, so its old cached
+responses must not be carried across the upgrade. No new database migrations
+are introduced by this upgrade. Do not change `APP_KEY` or `SESSION_COOKIE`.
+
 ## Commands
 
 Command | Description
@@ -56,3 +76,5 @@ Command | Description
 **`php artisan test`** | Run the tests
 `php artisan migrate:fresh --seed` | Reset the database
 `npm run watch` | Watch for changes in CSS and JS files
+`npm run hot` | Start Vite with hot module replacement
+`npm run production` | Build versioned production assets in `public/build`
