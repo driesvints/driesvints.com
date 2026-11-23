@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
-use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schedule;
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote')->hourly();
+if (config('backup.enabled')) {
+    Schedule::command('backup:run --only-db')->dailyAt('02:00')->timezone('UTC')->withoutOverlapping(10);
+    Schedule::command('backup:clean')->dailyAt('02:05')->timezone('UTC')->withoutOverlapping(10);
+    Schedule::command('backup:monitor')->dailyAt('02:10')->timezone('UTC')->withoutOverlapping(10);
+}

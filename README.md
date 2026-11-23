@@ -32,44 +32,6 @@ The following tools are required in order to start the installation.
 
 You can now visit the app in your browser by visiting [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-## Amp Orbs
-
-Amp runs `.agents/setup` when preparing an orb snapshot. It installs PHP 8.5,
-Composer, Node 22.23.4, and the locked PHP and JavaScript dependencies, then builds
-production assets. New orbs reuse the prepared snapshot instead of repeating setup.
-
-Setup creates `.env` only when missing and generates an app key only when empty.
-The default orb environment uses a local SQLite database with sample users and
-posts; rerunning setup preserves existing data. Tests use a separate in-memory
-SQLite database. No external credentials, MySQL, or Redis are required.
-
-`.agents/resume` does not reinstall dependencies or start services: SQLite,
-file-based sessions/cache, and synchronous queues require no background daemons.
-Use `php artisan test` to run the tests. To preview the site in an orb, start
-`php artisan serve --host=0.0.0.0 --port=8000` with `amp orb service start` and
-its `--portal` option.
-
-## Laravel 13 upgrade deployment
-
-This upgrade follows the [Laravel 12](https://laravel.com/docs/12.x/upgrade) and
-[Laravel 13](https://laravel.com/docs/13.x/upgrade) upgrade guides. That upgrade kept
-PHP on 8.4; the application now targets PHP 8.5. The application explicitly
-preserves the old session cookie name, PHP session serialization, cache/Redis
-prefixes, and `storage/app` local disk root so existing sessions, keys, and files
-continue to work.
-
-The assets now use Vite instead of Mix. Existing npm command names still work;
-`npm run hot` starts the Vite development server. Production builds use
-`npm ci && npm run production`. Deploy `public/build` alongside the application;
-the layout reads its manifest instead of `public/mix-manifest.json`.
-
-During the upgrade deployment, after installing Composer dependencies, run
-`php artisan optimize:clear` and `php artisan responsecache:clear` before serving
-traffic, then rebuild any configuration/route/view caches used in production.
-ResponseCache 8 uses JSON instead of PHP-serialized responses, so its old cached
-responses must not be carried across the upgrade. No new database migrations
-are introduced by this upgrade. Do not change `APP_KEY` or `SESSION_COOKIE`.
-
 ## Commands
 
 Command | Description
