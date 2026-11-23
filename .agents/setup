@@ -5,8 +5,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")/.."
 SECONDS=0
 trap 'echo "Orb setup finished after ${SECONDS}s"' EXIT
 
-echo 'Preparing PHP 8.4 and system dependencies'
-packages=(ca-certificates curl unzip xz-utils php8.4-cli php8.4-curl php8.4-mbstring php8.4-xml php8.4-zip php8.4-sqlite3)
+echo 'Preparing PHP 8.5 and system dependencies'
+packages=(ca-certificates curl unzip xz-utils php8.5-cli php8.5-curl php8.5-mbstring php8.5-xml php8.5-zip php8.5-sqlite3)
 missing=()
 for package in "${packages[@]}"; do
     if ! dpkg-query -W -f='${Status}' "$package" 2>/dev/null | grep -qx 'install ok installed'; then
@@ -26,7 +26,7 @@ if ((${#missing[@]})); then
     sudo apt-get update -qq
     sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends "${missing[@]}"
 fi
-sudo update-alternatives --set php /usr/bin/php8.4
+sudo update-alternatives --set php /usr/bin/php8.5
 
 if ! command -v composer >/dev/null; then
     echo 'Installing Composer'

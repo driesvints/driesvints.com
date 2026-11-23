@@ -15,7 +15,7 @@ Visit it at [https://driesvints.com](https://driesvints.com)
 
 The following tools are required in order to start the installation.
 
-- PHP 8.4.1 or later in the 8.4 series
+- PHP 8.5 or later (before PHP 9.0)
 - [Composer](https://getcomposer.org/download/)
 - Node.js 22.12+ and [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
@@ -34,7 +34,7 @@ You can now visit the app in your browser by visiting [http://127.0.0.1:8000](ht
 
 ## Amp Orbs
 
-Amp runs `.agents/setup` when preparing an orb snapshot. It installs PHP 8.4,
+Amp runs `.agents/setup` when preparing an orb snapshot. It installs PHP 8.5,
 Composer, Node 22.23.4, and the locked PHP and JavaScript dependencies, then builds
 production assets. New orbs reuse the prepared snapshot instead of repeating setup.
 
@@ -52,10 +52,11 @@ its `--portal` option.
 ## Laravel 13 upgrade deployment
 
 This upgrade follows the [Laravel 12](https://laravel.com/docs/12.x/upgrade) and
-[Laravel 13](https://laravel.com/docs/13.x/upgrade) upgrade guides. PHP remains on
-8.4. The application explicitly preserves the old session cookie name, PHP
-session serialization, cache/Redis prefixes, and `storage/app` local disk root
-so existing sessions, keys, and files continue to work.
+[Laravel 13](https://laravel.com/docs/13.x/upgrade) upgrade guides. That upgrade kept
+PHP on 8.4; the application now targets PHP 8.5. The application explicitly
+preserves the old session cookie name, PHP session serialization, cache/Redis
+prefixes, and `storage/app` local disk root so existing sessions, keys, and files
+continue to work.
 
 The assets now use Vite instead of Mix. Existing npm command names still work;
 `npm run hot` starts the Vite development server. Production builds use
