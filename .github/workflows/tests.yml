@@ -85,4 +85,9 @@ jobs:
         if: github.ref == 'refs/heads/main'
         env:
           DEPLOY_HOOK: ${{ secrets.DEPLOY_HOOK }}
-        run: curl "${DEPLOY_HOOK}&sha=${GITHUB_SHA}"
+        run: |
+          status=$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' --request POST "$DEPLOY_HOOK")
+          if [[ "$status" != 2?? ]]; then
+            echo "::error::Cloud deploy hook returned HTTP $status"
+            exit 1
+          fi
