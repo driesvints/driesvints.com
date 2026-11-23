@@ -37,30 +37,15 @@ return [
 
     'notifications' => [
         'notifications' => [
-            BackupHasFailedNotification::class => ['mail'],
-            UnhealthyBackupWasFoundNotification::class => ['mail'],
-            CleanupHasFailedNotification::class => ['mail'],
+            BackupHasFailedNotification::class => [],
+            UnhealthyBackupWasFoundNotification::class => [],
+            CleanupHasFailedNotification::class => [],
             BackupWasSuccessfulNotification::class => [],
             HealthyBackupWasFoundNotification::class => [],
             CleanupWasSuccessfulNotification::class => [],
         ],
 
         'notifiable' => Notifiable::class,
-
-        'mail' => [
-            'to' => env('BACKUP_MAIL_TO', 'dries@vints.be'),
-            'from' => [
-                'address' => env('MAIL_FROM_ADDRESS', 'dries@driesvints.com'),
-                'name' => env('MAIL_FROM_NAME', 'Dries Vints'),
-            ],
-        ],
-
-        'slack' => [
-            'webhook_url' => '',
-            'channel' => null,
-            'username' => null,
-            'icon' => null,
-        ],
     ],
 
     'monitor_backups' => [

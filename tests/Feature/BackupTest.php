@@ -4,12 +4,32 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class BackupTest extends TestCase
 {
+    #[Test]
+    public function monitoring_reports_backup_health_without_sending_email(): void
+    {
+        config(['mail.default' => 'array']);
+        $disk = Storage::fake('backups');
+
+        $this->artisan('backup:monitor')
+            ->expectsOutputToContain('considered unhealthy')
+            ->assertExitCode(1);
+
+        $disk->put('driesvints/'.now()->format('Y-m-d-H-i-s').'.zip', 'fresh backup');
+
+        $this->artisan('backup:monitor')
+            ->expectsOutputToContain('considered healthy')
+            ->assertSuccessful();
+
+        $this->assertCount(0, Mail::mailer()->getSymfonyTransport()->messages());
+    }
+
     #[Test]
     public function cleanup_keeps_seven_days_of_cloud_backups_without_touching_other_backups(): void
     {
